@@ -4624,7 +4624,7 @@ function applyBaseCDN() {
             assetsUrl = baseUrl;
         }
         // assetsUrl = 'https://dlnil54eooeso.cloudfront.net/';
-    } else if (location.toString().toLowerCase().includes("rabbitweb.test") || location.toString().toLowerCase().includes("127.0.0.1")) {
+    } else if (location.toString().toLowerCase().includes("rabbitweb.test") || location.toString().toLowerCase().includes("rabbit-web-deploy.onrender.com") || location.toString().toLowerCase().includes("127.0.0.1")) {
         apiUrl = "https://www.rabbitseo.com/";
     } else {
         apiUrl = "https://" + location.hostname + "/";
