@@ -1,0 +1,1167 @@
+<script type="text/javascript" language="javascript" src="/assets/scripts-app/links4u.js"></script> 
+<link rel="stylesheet" href="/assets/css/styleApp.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/links4uApp.css"/>
+
+<div class="loadingBar" style="display: none">
+<div class="progress position-relative" style="height: 30px; font-size: 20px;">
+    <div class="progress-bar loading-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+    <small class="justify-content-center d-flex position-absolute w-100 boldBlue">Publishing your website... few more seconds</small>
+</div>
+</div>
+ 
+<!------------------- Top bar --------------------------------->
+<div id="couponHeader" class="sm_top_bar">
+    <div class="top_bar_con">
+        <div class="top_bar_text">
+             <p class="header-nonCountdown" >100 Listings Links & 50 Monthly Blogs Posts on the Enterprise Plan!</p> 
+            <div class="header-countdown"  style="display:none;">
+                <div>
+                  Winter Sale Special Offer <strong> 40% OFF</strong> on all annual plans  
+                   <div class="balckfridayCopy">
+                        <span class="couponCodeText">BlackFriday2023</span>
+                        <span class="balckCopyBtn coupon-upgrade"><u>Copy</u></span>
+                    </div>
+                </div>
+             
+
+                <div class="countdownTimer">
+                    <span class="countdownDays"></span> :
+                    <span class="countdownHours"></span> :
+                    <span class="countdownMinutes"></span> :
+                    <span class="countdownSeconds"></span>
+                </div>
+            </div>
+<!--            <p>Discounted Prices on ALL annual plans</p>-->
+        </div>
+        <form class="row g-0">
+<!--            <div class="col-auto">-->
+<!--            <label for="inputPassword2" class="visually-hidden">EndofSeasonSale</label>-->
+<!--            <input type="text" class="form-control" id="inputPassword2" placeholder="EndofSeasonSale" readonly>-->
+<!--            </div>-->
+            <div class="col-auto">
+            <button type="button" class="btn btn-primary call-button coupon-upgrade" onclick="$('#upgrade-tab').click()">Upgrade Now</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!------------------- Header --------------------------------->
+<div id="headerMenu" class="sm_header">
+    <nav id="header" class="navbar navbar-expand-xl navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="javascript: $('#home-tab').click()" class="">
+                <img src="/assets/images/links4u/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true" onclick="loadMonitoredLinks()">Home</button>
+                    </li>
+    
+<!--                    <li class="nav-item" role="presentation">-->
+<!--                        <button class="nav-link" id="statistic-tab" style="display: none" data-bs-toggle="tab" data-bs-target="#statistic" type="button" role="tab" aria-controls="statistic" aria-selected="false">Analytics</button>-->
+<!--                    </li>-->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="listings-tab" data-bs-toggle="tab" data-bs-target="#listings" type="button" role="tab" aria-controls="listings" aria-selected="false" style="display: none">Premium Listings</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="listings-details-tab" data-bs-toggle="tab" data-bs-target="#listings-details" type="button" role="tab" aria-controls="listings-details" aria-selected="false">Listings Details</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="blogs-tab" data-bs-toggle="tab" data-bs-target="#blogs" type="button" role="tab" aria-controls="blogs" aria-selected="false">Blog Posts</button>
+                        <!--                        <button class="nav-link" id="blogs-tab" data-bs-toggle="tab" data-bs-target="#blogs" type="button" role="tab" aria-controls="blogs" aria-selected="false" onclick="initBlogPostTitles(10)">Blog Posts</button>-->
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ideas-tab" data-bs-toggle="tab" data-bs-target="#ideas" type="button" role="tab" aria-controls="ideas" aria-selected="false">Keyword Finder</button>
+                    </li>
+					<li class="nav-item" role="presentation">
+                        <button class="nav-link" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false">FAQ</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link sm_btn" id="upgrade-tab" data-bs-toggle="tab" data-bs-target="#upgrade" type="button" role="tab" aria-controls="upgrade" aria-selected="false">Upgrade</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link sm_btn call-button pay-as-you-go-link pay-as-you-go-link ms-2" onclick="showPayAsYouGoModal();">Pay as You Go</button>
+                    </li>
+
+
+                    <li class="nav-item" role="presentation">
+                        <div class="dropdown sm_dropdown">
+                            <div class="btn btn-secondary dropdown-toggle"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/assets/images/links4u/avatar.jpg" alt="">
+                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><button class="nav-link" onclick="openContactUsModal()"><span><img src="/assets/images/links4u/phone.png"> Contact Us</span></button></li>
+                                <li> <button class="nav-link" id="settings-tab" onclick="openUpdateSettingsModal()" type="button" role="tab" aria-controls="settings" aria-selected="false"><span><img src="/assets/images/links4u/settings.png"> Settings</span></button></li>
+<!--                                <li> <button class="nav-link" id="settings-tab" onclick="showSignupScreen()" type="button" role="tab" aria-controls="settings" aria-selected="false"><span><img src="/assets/images/links4u/settings.png"> Settings</span></button></li>-->
+<!--                                <li> <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false"><span><img src="/assets/images/links4u/settings.png"> Settings</span></button></li>-->
+
+
+                                <!--                                <li><button class="nav-link"><span><img src="/assets/images/links4u/tutorials.png"> Tutorials</span></button></li>-->
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+              </div>  
+        </div>
+    </nav>
+</div>
+
+<!------------------- Body Content --------------------------------->
+<section class="body-content h-100" id="mainContent">
+    <div id="tabs" class="tab-content">
+        <div class="tab-pane active sm_home_tab" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="rabbitTable">
+<!--                <div class="container pendingTableDiv">-->
+<!--                    <div class="row table_2">-->
+<!--                        <h2 class="sm_title_3 sm_h_20">Pending Links:</h2>-->
+<!--                        <table id="monitoringLinkTablePending" class="notranslate uk-table uk-table-hover uk-table-striped hover" style="width:100%">-->
+<!--                            <tbody>-->
+<!--                            <td colspan="12" class="text-center">-->
+<!--                                <strong><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></strong>-->
+<!--                            </td>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="container">
+                    <div class="row table_1">
+                        <div class="sm_btn_right">
+                            <div class="btn-group">
+                                <button class="btn btn-outline-primary rounded" data-bs-toggle="tooltip" title="If you don't have spare time, set Auto Pilot mode to on, and we will create for you the blog posts automatically. However, if you prefer to control the topics of the blog posts and create them yourself, set Auto Pilot mode to off.">
+                                    <label><input type="checkbox" name="" id="autoPilotLinks" onchange="toggleAutoPilotLinks4u()" value="1"> Auto Pilot Mode</label>
+                                </button>
+
+                                <button type="button" class="btn btn-primary sm_btn btn_1 noMonthlyListings" onclick="$('#listings-tab').click();">Create New Listing</button>
+                                <button type="button" class="btn btn-primary sm_btn btn_2 createNewBlogPostBtnTop" onclick="$('#blogs-tab').click();">Create New Blog Post</button>
+                            </div>
+                        </div>
+
+                        <h2 class="sm_title_3 sm_h_20">Blog Posts:</h2>
+                        <table id="monitoringLinkTableBlog" class="notranslate uk-table uk-table-hover uk-table-striped hover" style="width:100%">
+                            
+                            <tbody>
+                            <td colspan="12" class="text-center">
+                                <strong><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></strong>
+                            </td>
+                            </tbody>
+                        </table>
+                        <br />
+                        <h2 class="sm_title_3 sm_h_20" style="margin-top: 20px">Local Listings:</h2>
+                        <table id="monitoringLinkTableListing" class="notranslate uk-table uk-table-hover uk-table-striped hover" style="width:100%">
+                            <tbody>
+                            <td colspan="12" class="text-center">
+                                <strong><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></strong>
+                            </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="sm_proggres_container">
+                    <div class="sm_proggres_flax">
+                        <div id="monthlyListingsSection" class="sm_proggres box1 noMonthlyListings">
+                            <h2>Listings Links Usage</h2>
+                            <div class="progress_flex sm1">
+                                <div class="progress_col col1 links_used_progress">
+                                    <p>0</p>
+                                    <p id="linksRequestUsed"></p>
+                                </div>
+                                <div class="progress_col col2">
+                                    <p><span id="linksRequestMax"></span><br> Per Month</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="guestBlogsUsedSection" class="sm_proggres box2">
+                            <h2>Blog Posts Usage</h2>
+                            <div class="progress_flex sm1">
+                                <div class="progress_col col1 blogs_used_progress">
+                                    <p>0</p>
+                                    <p id="guestBlogsUsed"></p>
+                                </div>
+                                <div class="progress_col col2">
+                                    <p><span id="guestBlogsMax"></span><br> Per Month</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img_contaner sm_aa">
+                    <img src="/assets/images/links4u/image1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane sm_home_tab sm_hooray" id="hooray" role="tabpanel" aria-labelledby="hooray-tab">
+
+            <div class="hooray_text">
+                <div class="hooray_header">
+                    <h2>HOORAY!</h2>
+                    <p>We published your site on 2 Directory Listings!</p>
+<!--                    <div class="hoo_flax">-->
+<!--                        <div class="hoo_box box1">-->
+<!--                            <div class="icon icon1">-->
+<!--                                <img src="/assets/images/links4u/k1.png" alt="">-->
+<!--                                <a id="firstLink" style="cursor: pointer" target="_blank"></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="hoo_box box2">-->
+<!--                            <div class="icon icon2">-->
+<!--                                <img src="/assets/images/links4u/k1.png" alt="">-->
+<!--                                <a id="secondLink" style="cursor: pointer" target="_blank"></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+                <div class="sm1">
+                    <p><span class="upgrade-call"><a href="javascript: $('#upgrade-tab').click()">Upgrade Now</a> to </span> Stay Ahead of Competitors: Listings, Bookmarks, Blogs!</p>
+                </div>
+            </div>
+
+            <div class="rabbitTable sm_2_thead">
+                <div class="container">
+                    <div class="row table_1 rs_new_btn_positon">
+                       
+                        <div class="sm_btn_right">
+                            <h2 class="sm_title_3 sm_h_20">Blog Post: <span class="exportBtnPosition"></span></h2>
+                            <div class="btn-group">
+                                <button class="btn btn-outline-primary rounded" data-bs-toggle="tooltip" title="If you don't have spare time, set Auto Pilot mode to on, and we will create for you the blog posts automatically. However, if you prefer to control the topics of the blog posts and create them yourself, set Auto Pilot mode to off.">
+                                    <label><input type="checkbox" name="" onchange="toggleAutoPilotLinks4u()" value="1"> Auto Pilot Mode</label>
+                                </button> 
+                                <button type="button" class="btn btn-primary sm_btn btn_2 createNewBlogPostBtnTop" onclick="$('#blogs-tab').click();">Create New Blog Post</button>
+                            </div>
+                        </div>
+<!--                        <div class="rs_new_btn_list">-->
+<!--                            <button class="btn btn-dark">-->
+<!--                                Create New Blog Post-->
+<!--                            </button>-->
+<!--                        </div>-->
+                        <div class="createNewBlogPostBtnBtm" style="display: none;">
+                             <button type="button" class="btn btn-primary sm_btn btn_2 " onclick="$('#blogs-tab').click();">Create New Blog Post</button>
+                        </div>
+                        <table id="hooraymonitoringLinkTableBlog" class="notranslate uk-table uk-table-hover uk-table-striped hover" style="width:100%">
+
+                            <tbody>
+                            <td colspan="12" class="text-center">
+                                <strong><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></strong>
+                            </td>
+                            </tbody>
+                        </table>
+                        <div class="hooraymonitoringLinkTableListing_new">
+                            <h2 class="sm_title_3 sm_h_20 mt-5">Local Listings:</h2>
+                            <table id="hooraymonitoringLinkTableListing" class="notranslate uk-table uk-table-hover uk-table-striped hover" style="width:100%">
+                                <tbody>
+                                <td colspan="12" class="text-center">
+                                    <strong><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></strong>
+                                </td>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    <div class="sm_overlay_table">
+                        <div>
+                            <h3>Get Listed in More Blogs & Directories</h3>
+                            <button type="button" class="btn btn-primary btn-next-form sm_btn upgrade-call" onclick="$('#upgrade-tab').click();">UPGRADE NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- newReviewBoxList Start -->
+                <div class="newReviewBoxList">
+                    <div class="img_contaner sm_mm_top">
+                        <img src="/assets/images/links4u/image1.png" alt=""> 
+                        <div class="homeReviews">
+                            <div class="container"> 
+                                <div class="reviewsContents"> 
+                                    <div class="myreviewsdivs"></div>
+                                    <div class="myreviewsdivs_btn">
+                                        <button name="prev" class="yellowBtn"><img src="/assets/images/icon/arrow_prev_blue.png"></button>
+                                        <button name="next" class="yellowBtn"><img src="/assets/images/icon/arrow_next_blue.png"></button>
+                                    </div>
+                                    <button class="btn btn-secondary upgradenewbtn upgrade-call btn-lg w-100" onclick="$('#upgrade-tab').click();">UPGRADE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                 <!-- newReviewBoxList end -->
+                <div class="container position-relative z-3">
+                    <div class="row ">
+                        <div class="traffic">
+                            <h3>New Backlinks can Increase your rankings - Add More Exposure</h3>
+<!--                            <h3>Increase your rankings and boost your traffic!</h3>-->
+                            <div class="row">
+                                <div class="col">
+                                    <div class="box_center text-center">
+                                        <img src="/assets/images/links4u/google.png">
+                                        <p>Google</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box_center text-center">
+                                        <img src="/assets/images/links4u/yahoo.png">
+                                        <p>Yahoo</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box_center text-center">
+                                        <img src="/assets/images/links4u/Bing.png">
+                                        <p>Bing</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box_center text-center">
+                                        <img src="/assets/images/links4u/Social.png">
+                                        <p>Social</p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box_center text-center">
+                                        <img src="/assets/images/links4u/premium_director.png">
+                                        <p>Directory listings</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+
+        <div class="tab-pane sm_home_tab" id="ideas" role="tabpanel" aria-labelledby="ideas-tab">
+            <div class="container">
+<!--                <div class="listing_header">-->
+<!--                    &lt;!&ndash; Read More Read Less Button &ndash;&gt;-->
+<!--                    <h2>Backlinks Analytics</h2>-->
+<!--                    <p>Here you can see data from the backlinks crawler about your website, the referring domains and their score, and very useful data about the links.-->
+<!--                    </p>-->
+<!--                </div>-->
+                <div class="listing_icon position-relative">
+
+                   <div class="row table_1 back_listdemo_st">
+                        <h2 class="sm_title_3 sm_h_20">Recommended Keywords:</h2>
+                        <table id="keywordIdeasTable" class="ourTable notranslate uk-table uk-table-hover uk-table-striped hover" style="width:100%">
+                            <thead class="thead-dark"></thead>
+                            <tbody>
+                            <td colspan="12" class="text-center">
+                                <strong><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></strong>
+                            </td>
+                            </tbody>
+                        </table>
+                    </div>
+                     <div class="showRecommendedKeywordsUpgrade" style="display: none;">
+                        <div>
+                            <h4>Enhance your Business with Upgraded Keyword Insights</h4>
+                            <button type="button" class="btn btn-primary btn-next-form sm_btn upgrade-call" onclick="$('#upgrade-tab').click();">UPGRADE NOW</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane sm_listings" id="listings" role="tabpanel" aria-labelledby="listings-tab">
+            <div class="listing_margin">
+                <div class="listing_bg">
+                <div id="linksBuildingForm">
+                    <div class="listing_header">
+                        <h2>Order New Listings</h2>
+                        <p>Once search engines have crawled pages on the web, they can extract<span id="smx_dots">...</span><span id="smx_more"> the content of those pages and add it to their indexes. In this way, they can decide if they feel a page is of sufficient quality to be ranked well for relevant keywords. When they're deciding this, the search engines don't just look at the content of the page — they also look at the number of links pointing to that page from external websites, and the quality of those external websites. Generally speaking, the more high-quality websites that link to you, the more likely you are to rank well in search results.</span>
+                        </p>
+                        <button id="smx_myBtn">Read more</button>
+                    </div>
+
+                    <div class="listing_icon">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/directory.png">
+                                    <p>Directory Listing</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/content_sharing.png">
+                                    <p>Content Sharing</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/social_profile.png">
+                                    <p>Social Profile</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/social_bookmarking.png">
+                                    <p>Social Bookmarking</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="listing_form">
+                        <form id="createRequestLink">
+                            <div class="sm_m_b row">
+                                <label class="col-sm-4">Landing Page
+                                    <span class="tooltip_sm">
+                                        <img src="/assets/images/links4u/tooltip.png">
+                                        <div class="right">
+                                            <div class="text-content">
+                                                <h4>What is the landing page?</h4>
+                                                <p>The page you want to point to, usually it would be your homepage, but you can also choose to promote another page in your website</p>
+                                            </div>
+                                            <i></i>
+                                        </div>
+                                    </span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input data-hj-allow name="linkHref" type="text" class="form-control form-control-lg"
+                                    placeholder="https://www.your-website.com/"/>
+                                </div>
+                            </div>
+
+                            <div class="sm_m_b row">
+                                <label class="col-sm-4">Keyword
+                                <span class="tooltip_sm">
+                                        <img src="/assets/images/links4u/tooltip.png">
+                                        <div class="right">
+                                            <div class="text-content">
+                                                <h4>What is the keyword?</h4>
+                                                <p>Many links can show more than your url, so if you want to promote a specific keyword let us know</p>
+                                            </div>
+                                            <i></i>
+                                        </div>
+                                </span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <select id="linkKeyword"
+                                            class="js-example-placeholder-single linkKeywordSelect"
+                                            name="linkKeyword"></select>
+                                </div>
+                            </div>
+
+                            <div class="sm_m_b row">
+                                <label class="col-sm-4">Comment (Optional)
+                                <span class="tooltip_sm">
+                                        <img src="/assets/images/links4u/tooltip.png">
+                                        <div class="right">
+                                            <div class="text-content">
+                                                <p>The comment is for our team, it will not be shown in your listing</p>
+                                            </div>
+                                            <i></i>
+                                        </div>
+                                </span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input data-hj-allow id="comment" name="comment" type="text" class="form-control form-control-lg" />
+                                </div>
+                            </div>
+
+                            <div class="sm_m_b row sm_number">
+                                <label class="col-sm-4">Number of links to order</label>
+                                <div class="col-sm-8">
+                                    <input data-hj-allow name="linksCount" type="number" class="form-control form-control-lg" min="1" max="10" value="1" placeholder="1" />
+                                </div>
+                            </div>
+
+                            <!-- /sm -->
+                            <div class="sm_m_b row">
+                                <label class="col-sm-4"></label>
+                                <div class="col-sm-8">
+                                    <button type="button" class="btn btn-primary btn-next-form sm_btn" onclick="submitLinkRequestForm()">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="linksBuildingSuccess" class="listing_text" style="display:none;">
+                    <div class="text-center">
+                        <h3>Your link request was <span>successfully</span> created!</h3>
+                        <p class="linkSuccessMessage"></p>
+
+                        <div class="btn-group btn_center" >
+                            <button type="button" class="btn btn-primary sm_btn btn_1" onclick="$('#linksBuildingSuccess').hide();$('#linksBuildingForm').show();">Create New Listing</button>
+                            <button type="button" class="btn btn-primary sm_btn btn_2" onclick="$('#linksBuildingSuccess').hide();$('#linksBuildingForm').show(); $('#home-tab').click();">See Links Status</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="listing_img  text-center">
+                    <img src="/assets/images/links4u/illus.png" alt="">
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane sm_listings" id="listings-details" role="tabpanel" aria-labelledby="listings-details-tab">
+            <div class="listing_margin">
+                <div id="listings-details-form" class="listing_bg">
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane sm_listings sm_blog" id="blogs" role="tabpanel" aria-labelledby="blogs-tab">
+            <div class="listing_margin">
+                <div class="listing_bg">
+                    <div id="blogLinksBuildingForm" class="newBlogList">
+                        <div class="listing_header" style="margin-bottom: 40px">
+                            <!-- Read More Read Less Button -->
+                            <h2>Blog Post Link</h2>
+                            <p>Expanding your brand and content across various websites boosts your credibility with search engines like Google. Guest blogging is valuable as it fosters industry connections, amplifies brand recognition, drives targeted traffic to your site, establishes expertise, and earns quality backlinks, benefiting your search engine visibility.</p>
+                        </div>
+
+                        <div class="listing_form">
+                            <form id="createBlogRequestLink">
+                                <input data-hj-allow type="hidden" id="orderLinkType" name="orderLinkType" value="Guest Blog" />
+                                <div class="sm_m_b row">
+                                    <label class="col-sm-2">Landing Page
+                                        <span class="tooltip_sm">
+                                            <img src="/assets/images/links4u/tooltip.png">
+                                            <div class="right">
+                                                <div class="text-content">
+                                                    <h4>What is the landing page?</h4>
+                                                    <p>The page you want to point to, usually it would be your homepage, but you can also choose to promote another page in your website</p>
+                                                </div>
+                                                <i></i>
+                                            </div>
+                                        </span>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <input data-hj-allow name="linkHref" type="text" class="form-control form-control-lg"
+                                        placeholder="https://www.your-website.com/"/>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row">
+                                    <label class="col-sm-2">Keyword
+                                        <span class="tooltip_sm">
+                                            <img src="/assets/images/links4u/tooltip.png">
+                                            <div class="right">
+                                                <div class="text-content">
+                                                    <h4>What is the keyword?</h4>
+                                                    <p>Many links can show more than your url, so if you want to promote a specific keyword let us know</p>
+                                                </div>
+                                                <i></i>
+                                            </div>
+                                    </span>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <select class="js-example-placeholder-single linkKeywordSelect"
+                                                id="blogLinkKeyword" name="blogLinkKeyword" onchange="initBlogPostTitles(10)">
+                                                </select>
+                                    </div>
+                                </div>
+                                <div class="sm_m_b row">
+                                    <label class="col-sm-2">Blog Post Title
+                                        <span class="tooltip_sm">
+                                            <img src="/assets/images/links4u/tooltip.png">
+                                            <div class="right">
+                                                <div class="text-content">
+                                                    <h4>Titles don't match?</h4>
+                                                    <p>We use smart AI model to find best titles for you according to the Keyword you entered. If titles don't match your requirements you can change the Keyword input to generate other titles.</p>
+                                                </div>
+                                                <i></i>
+                                            </div>
+                                    </span>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <span class="spinner-border text-primary"></span>
+                                        <select id="articleTitle"
+                                                class="js-example-placeholder-single"
+                                                name="title"></select>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row">
+                                    <label class="col-sm-2">Comment (Optional)
+                                        <span class="tooltip_sm">
+                                            <img src="/assets/images/links4u/tooltip.png">
+                                            <div class="right">
+                                                <div class="text-content">
+                                                    <p>The comment is for our team, it will not be shown in your blog post link</p>
+                                                </div>
+                                                <i></i>
+                                            </div>
+                                    </span>
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <input data-hj-allow name="comment" type="text" class="form-control form-control-lg"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row sm_number">
+                                    <label class="col-sm-2">Number to order</label>
+                                    <div class="col-sm-10">
+                                        <input data-hj-allow name="linksCount" type="number" class="form-control form-control-lg" min="1" max="30" value="1" placeholder="1" />
+                                    </div>
+                                </div>
+
+                                <!-- /sm -->
+                                <div class="sm_m_b row">
+    <!--                                <label class="col-sm-2"></label>-->
+                                    <div class="col-sm-12">
+                                        <button type="button" class="btn btn-primary btn-next-form sm_btn" onclick="submitBlogLinkRequestForm()">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="blogLinksBuildingSuccess" class="listing_text" style="display:none;">
+                        <div class="text-center">
+                            <h3>Your Blog Post request was  <span>successfully</span> created!</h3>
+                            <p class="linkSuccessMessage"></p>
+
+                            <div class="btn-group btn_center" >
+                                <button type="button" class="btn btn-primary sm_btn btn_1" onclick="$('#blogLinksBuildingSuccess').hide(); $('#blogLinksBuildingForm').show();">Create New Guest Blog Link</button>
+                                <button type="button" class="btn btn-primary sm_btn btn_2" onclick="$('#blogLinksBuildingSuccess').hide(); $('#blogLinksBuildingForm').show();$('#home-tab').click();">See Links Status</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="listing_icon">
+                        <div class="row">
+                            <div class="col">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/i1.png">
+                                    <p>Capture New Leads</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/i2.png">
+                                    <p>Have Quality Backlinks</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/i3.png">
+                                    <p>Develop Brand Recognition</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/i4.png">
+                                    <p>Build Authority</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="box_center text-center">
+                                    <img src="/assets/images/links4u/i5.png">
+                                    <p>Generate Brand Awareness</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="listing_img  text-center">
+                        <img src="/assets/images/links4u/Asset 1 3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane sm_upgrade_tab" id="upgrade" role="tabpanel" aria-labelledby="upgrade-tab">
+
+            <div class="container py-3 newPriceSection" id="plans">
+                <div class="card">
+                    <div class="card-body">
+                        <header class="text-center"> 
+                            <div class="d-flex flex-wrap">
+                                <div>
+                                    <h2>Plans & Pricing</h2>
+                                    <p><strong>Get Special Discount on Annual Plan</strong></p>
+                                </div>
+                                <div class="pricing_top_area ms-auto"> 
+                                    <div class="annualy_check">
+                                        <div class="anualyCheckBox active">
+                                            <input data-hj-allow onclick="toggleYearly()" type="checkbox" checked name="annullyCheck" id="annullyCheck">
+                                            <label for="annullyCheck">
+                                                <p class="monthly">Monthly</p>
+                                                <span class="checkDesign"></span>
+                                                <p class="yearly"> Yearly <span class="savepercent">SAVE 20% </span></p>
+                                            </label>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div> 
+                            
+                        </header>
+<!--                        <div class="plansSubscribeDate">-->
+<!--                            <h3 class="text-primary">PREMIUM PLAN</h3>-->
+<!--                            <p>Your subscribtion Automatically be renew on <span class="text-primary">01 January 2024</span></p>-->
+<!--                        </div>-->
+                        <main>
+                            <div class="row row-cols-1 row-cols-md-4 mb-3 text-center planRow">
+
+                            </div>
+                        </main>
+                        <!-- <p class="text-center">*Prices are in USD</p>
+                        <div class="sm_playing_big">
+                            <h2>Playing big?<br> <a href="javascript:openContactUsModal()" style="text-decoration: none;"><span>Contact us</span></a> for a Custom Plan</h2>
+                        </div> -->
+                        <div class="newPlanAccorident">
+                            <h4>Did you know?</h4>
+                            <div class="accordion" id="planKnowladge">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="planKnowladgeHeading1">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#planKnowladge1" aria-expanded="true" aria-controls="planKnowladge1">
+                                    Guest Blog Benefits
+                                  </button>
+                                </h2>
+                                <div id="planKnowladge1" class="accordion-collapse collapse show" aria-labelledby="planKnowladgeHeading1" data-bs-parent="#planKnowladge">
+                                  <div class="accordion-body">
+                                     <p class="text-primary"><strong> Improved Online Visibility:</strong></p>
+                                     <p> Inclusion in reputable directories increases the visibility of your website. Directories often have a wide audience and can serve as an additional platform for potential customers or users to discover your business.</p>
+                                     <p class="text-primary"><strong> Enhanced SEO Rankings:</strong></p>
+                                     <p> Quality directory links can positively impact your website's search engine rankings. Search engines consider backlinks as a ranking factor, and having links from authoritative directories can contribute to your site's credibility and authority.</p>
+                                     <p class="text-primary"><strong>  Targeted Traffic: </strong></p>
+                                     <p>  Some directories are niche-specific or industry-focused. Being listed in such directories can bring targeted traffic to your website from users who are specifically interested in the products or services you offer. </p>
+                                     <p class="text-primary"><strong>  Local SEO Benefits: </strong></p>
+                                     <p> Local business directories are particularly valuable for businesses targeting local markets. Listings in these directories can improve your local SEO, making it easier for users in your geographic area to find your business.</p>
+                                     <p class="text-primary"><strong> Establishing Credibility: </strong></p>
+                                     <p>  Being listed in well-respected directories can enhance your business's credibility. Users often trust directories as reliable sources of information, and your inclusion can contribute to a positive perception of your brand. </p>
+                                     <p class="text-primary"><strong> Diversification of Backlink Profile: </strong></p>
+                                     <p>  A diverse backlink profile is essential for a robust SEO strategy. Listing links add variety to your backlink profile, making it more natural and less reliant on a single source or type of link. </p>
+                                     <p class="text-primary"><strong>  Citation Building: </strong></p>
+                                     <p>  Directories often include essential business information such as name, address, phone number (NAP), and website URL. Consistent citations across directories can positively impact local SEO and contribute to your business's online reputation. </p>
+                                     <p class="text-primary"><strong> Increased Brand Exposure: </strong></p>
+                                     <p>  Being present in directories increases the exposure of your brand to a wider audience. Users who might not have found your website through conventional search methods may discover your business while browsing directories. </p>
+                                     <p class="text-primary"><strong> Cost-Effective Marketing: </strong></p>
+                                     <p> Many directories offer free listings, making them a cost-effective marketing strategy, especially for small businesses or startups with limited budgets. Even paid listings can offer good value in terms of exposure and potential leads. </p>
+                                     <p class="text-primary"><strong>  Networking Opportunities: </strong></p>
+                                     <p>  Some directories serve as platforms for networking within specific industries. Being part of these directories can provide opportunities to connect with other businesses, customers, and potential collaborators. </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="planKnowladgeHeading2">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#planKnowladge2" aria-expanded="false" aria-controls="planKnowladge2">
+                                    Premium Listings Benefits
+                                  </button>
+                                </h2>
+                                <div id="planKnowladge2" class="accordion-collapse collapse" aria-labelledby="planKnowladgeHeading2" data-bs-parent="#planKnowladge">
+                                  <div class="accordion-body">
+                                     <p class="text-primary"><strong> Improved Search Engine Rankings:</strong></p>
+                                     <p> Backlinks are a crucial factor in search engine algorithms. When reputable websites link to your blog posts, search engines interpret it as a vote of confidence in the quality and relevance of your content. This, in turn, can contribute to higher search engine rankings.</p>
+                                     <p class="text-primary"><strong> Increased Website Authority:</strong></p>
+                                     <p> Backlinks are a signal of trust and authority. When your blog posts are linked from authoritative and relevant websites, it enhances the overall authority of your website in the eyes of search engines. A higher authority is often associated with better search engine rankings.</p>
+                                     <p class="text-primary"><strong> Enhanced Visibility and Exposure: </strong></p>
+                                     <p> Quality backlinks can introduce your content to a wider audience. When other websites link to your blog posts, it can attract new visitors who discover your content through these external sources, increasing your overall online visibility. </p>
+                                     <p class="text-primary"><strong> Targeted Traffic Generation: </strong></p>
+                                     <p>  Backlinks from relevant sources can bring targeted traffic to your website. If your blog post is linked from a website in the same industry or niche, the visitors clicking through are more likely to be interested in your content, products, or services.</p>
+                                     <p class="text-primary"><strong>  Credibility and Trust Building:</strong></p>
+                                     <p>  When your blog posts are referenced and linked by reputable websites, it contributes to building credibility and trust in your brand. Users are more likely to trust content that has been endorsed or referenced by other authoritative sources.</p>
+                                     <p class="text-primary"><strong> Faster Indexing by Search Engines: </strong></p>
+                                     <p>  Backlinks can expedite the indexing process of your content. When search engine crawlers follow these links from external websites to your blog posts, it helps them discover and index your content more quickly, ensuring it appears in search results sooner. </p>
+                                     <p class="text-primary"><strong> Diversification of Backlink Profile:</strong></p>
+                                     <p>  A diverse backlink profile is essential for a well-rounded SEO strategy. Blog post backlinks complement other types of links, such as those from social media, forums, or industry-specific websites. This diversity signals to search engines that your content is valued across various platforms.</p>
+                                     <p class="text-primary"><strong> Long-Term SEO Impact: </strong></p>
+                                     <p> Unlike some short-term SEO tactics, the benefits of blog post backlinks tend to be enduring. As these links accumulate over time, your website's authority and credibility grow, contributing to sustained improvements in search engine rankings. </p>
+                                     <p class="text-primary"><strong> Networking Opportunities: </strong></p>
+                                     <p> Building backlinks often involves reaching out to other bloggers, influencers, or industry leaders. This process can lead to valuable networking opportunities, helping you establish connections within your niche or industry.</p>
+                                     <p class="text-primary"><strong> Competitive Edge:</strong></p>
+                                     <p> Acquiring high-quality backlinks can give you a competitive edge in the online landscape. If your content is consistently referenced and linked by authoritative websites, it sets your website apart and positions it as a valuable resource in your field. </p>
+                                  </div>
+                                </div>
+                              </div>
+                             
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> 
+                <div class="my-3">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <div><strong>Delete The account?</strong></div>
+                                            <div>It will Automatically stop your Subscribtion</div>
+                                        </div>
+                                        <div class="col-4">
+                                            <button type="button" class="btn btn-outline-danger w-100" onclick="deleteAccount()">Delete Account</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane sm_listings sm_settings_tab" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+            <h2 class="text-center sm_title_1">Settings</h2>
+            <div class="sm_settings">
+                <div class="listing_bg">
+                    <div id="settingsDiv" class="listing_form">
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="tab-pane sm_faq" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+            <div class="container sm_faq_con">
+                <div class="row">
+                    <h2 class="text-center sm_title_1">Frequently Asked Questions</h2>
+                    <div class="white_bg">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What's eventually the target?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  The target is to get your site ranked on SERP. Google needs to observe increased references to your website from other sites to deem it more relevant. However, receiving a quality link from a highly visited website can result in a traffic boost as well. If the linking website is relevant, there's a likelihood that the generated traffic will be relevant too, potentially leading to an uptick in leads or sales.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                   How will Links4u will help you?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   What we do at Links4u precisely involves this process: you request guest blog links and listings for your website, and we handle the creation process. Our goal is to drive more traffic to your site and improve your rankings in search engines. At this stage, all you need to do is post the request, specifying the landing page, keyword, and any additional comments you may have. We then proceed to create backlinks for you across directory listings, social bookmarks, guest blogs, and other relevant websites.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Is there any contract or commitment?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   No, you can cancel your account anytime you like. Please note, as we incur costs for the links we generate for you, refunds are not available.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                   How long does it take to see results from link building?
+                                </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    The timeline for seeing results from link building can vary based on factors such as the competitiveness of your industry, the quality of backlinks acquired, and search engine algorithms. Typically, noticeable improvements can be seen within a few months, with more significant results over time.
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                   Is there a free trial available?
+                                </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   Yes, there is a free trial available for our app. You can sign up for a free account to explore its features before deciding to subscribe.
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                  What payment methods do you accept?
+                                </button>
+                                </h2>
+                                <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   We accept payments through Wix Payments, which supports various payment methods including credit/debit cards and PayPal.
+                                </div>
+                                </div>
+                            </div>
+                             <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                 Is customer support available?
+                                </button>
+                                </h2>
+                                <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  Yes, customer support is available. You can expect timely assistance with any questions or issues you encounter.
+                                </div>
+                                </div>
+                            </div>
+                             <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                 Can I upgrade or downgrade my plan?
+                                </button>
+                                </h2>
+                                <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   Yes, you can easily upgrade or downgrade your plan through your Wix account settings. Changes to your plan will take effect immediately.
+                                </div>
+                                </div>
+                            </div>
+                             <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                  Can I cancel my subscription at any time?
+                                </button>
+                                </h2>
+                                <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                   Yes, you can cancel your subscription at any time through your account settings. There are no cancellation fees, and you will retain access to the app until the end of your current billing period.
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------- Tabs Content --------------------------------->
+    <div id="body-pd" class="mainContent">
+        <div class="container-fluid mainpage-content welcome_section">
+            <div class="sm_flex_box" id="signupDiv">
+                <div class="sm_box box1">
+                    <div class="logo"><a style="cursor: pointer"><img src="/assets/images/links4u/logo.png" alt=""></a></div>
+                    <div class="welcome_img">
+                        <img class="tablet_no" src="/assets/images/links4u/welcome_img.png" alt="">
+                        <img class="tablet_yes" src="/assets/images/links4u/tab_man.png" alt="">
+                    </div>
+                </div>
+                <div class="sm_box box2">
+                    <div class="sm_center">
+                        <div>
+                            <h2 class="text-center sm_title_1 sm_h_50">Links Building Basic Details</h2>
+                            <div id="userDetailsDiv">
+                            <form id="savePublishDetailsUser">
+                                <!-- sm -->
+                                <div class="sm_m_b row">
+                                    <label class="col-sm-3">Domain</label>
+                                    <div class="col-sm-9">
+                                        <input data-hj-allow id="domain" name="domain" type="text" class="form-control form-control-lg"
+                                        placeholder="Domain"/>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row abTesting">
+                                    <label class="col-sm-3">Company Name</label>
+                                    <div class="col-sm-9">
+                                        <input data-hj-allow id="name" name="name" type="text" class="form-control form-control-lg"
+                                        placeholder="Company Name"/>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row">
+                                    <label class="col-sm-3">Links Terms
+                                        <span class="tooltip_sm">
+                                        <img src="/assets/images/links4u/tooltip.png">
+                                        <div class="right">
+                                            <div class="text-content">
+                                                <h4>Which keywords to choose?</h4>
+                                                <p>These are words or phrases that describe either what your content is about or what your business offers. For content, they help search engines understand and rank your webpages. For a business/brand, keywords represent what people might search for to find your products or services. You can add up to 3 primary keywords here.</p>
+                                            </div>
+                                            <i></i>
+                                        </div>
+                                    </span>
+                                    </label>
+                                    <div class="col-sm-9 sm_keyword">
+                                        <select id="keywordsToPromote" name="keyword" class="keywordsToPromote linkKeywordSelectMax3 js-example-placeholder-multiple" multiple="multiple" placeholder="Keyword"></select>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row abTesting">
+                                    <label class="col-sm-3">Category</label>
+                                    <div class="col-sm-9">
+                                        <select id="categorySelect" name="category" type="text" class="categorySelect form-select form-select-lg dropdown-toggle js-example-placeholder-single " placeholder="category">
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row abTesting">
+                                    <label class="col-sm-3">Company Profile</label>
+                                    <div class="col-sm-9">
+                                        <textarea id="description" name="description" class="form-control form-control-lg"
+                                                  placeholder="Description"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row noMonthlyListings abTesting d-none">
+                                    <label class="col-sm-3">Auto Pilot
+                                        <span class="tooltip_sm">
+                                        <img src="/assets/images/links4u/tooltip.png">
+                                        <div class="right">
+                                            <div class="text-content">
+                                                <h4>What is Auto Pilot mode?</h4>
+                                                <p>It means that Links4u team will automatically create links for you based on the keywords you input, if set to 'No' you will need to use our form every month to manually order the links you like us to create for you.
+<!--                                                    Please note that Guest Blogs links will not be created in the Auto Pilot mode, you will need to order them in the app and choose the keyword you would like to promote.-->
+                                                </p>
+                                            </div>
+                                            <i></i>
+                                        </div>
+                                    </span>
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <select id="autoPilot" name="autoPilot" class="form-control form-control-lg">
+                                            <option value="true" selected>Yes</option>
+                                            <option value="false">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row abTesting">
+                                    <label class="col-sm-3">Address (optional)</label>
+                                    <div class="col-sm-9">
+                                        <input data-hj-allow id="address" name="address" type="text" class="form-control form-control-lg"
+                                               placeholder="Address"/>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row abTesting">
+                                    <label class="col-sm-3">Phone (optional)</label>
+                                    <div class="col-sm-9">
+                                        <input data-hj-allow id="phone" name="phone" type="text" class="form-control form-control-lg"
+                                               placeholder="Phone"/>
+                                    </div>
+                                </div>
+
+                                <div class="sm_m_b row abTesting">
+<!--                                    <label class="col-sm-3">Upload Logo</label>-->
+                                    <div class="col-sm-9">
+                                        <div class="drop-zone">
+                                            <form name="photo" class="text-center" id="imageUploadForm" enctype="multipart/form-data" action="saveImgUser" method="post">
+                                            <div class="drop-zone__prompt" >
+                                                <img id="logoImg" src="/assets/images/links4u/demo_img.png" alt="">
+                                                <p class="big">Choose a logo to upload</p>
+                                                <p class="small">or drag and drop here</p>
+                                            </div>
+                                            <input data-hj-allow type="file" name="pdfImage" id="pdfImage" onchange="changeImg()" class="drop-zone__input">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 sm_btn_position">
+                                    <button id="publishLinkButton" type="button" onclick="publishLink()"
+                                            class="btn btn-primary btn-next-form sm_btn">Start Publish
+                                    </button>
+                                </div>
+                                <div style="display: none; margin-top: 10px;" class="alert alert-success" role="alert">
+                                    <div class="d-flex">
+                                        <p class="my-0">Your details have been saved successfully</p>
+                                    </div>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="overlay"></div>
+
+<div class="modal fade" id="ourModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true"></div>
+<div id="modalMessage" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#modalMessage').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="modalFirstButton" type="button" class="btn btn-secondary"
+                        onclick="$('#modalMessage').modal('hide');">Close
+                </button>
+                <a id="modalConfirmBtn" style="cursor: pointer; display: none" class="btn btn-primary">Yes</a>
+                <button id="modalSecondButton" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="confirmModal" class="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Confirm</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">Are you sure you want to delete?</div>
+            <div class="modal-footer">
+                <button id="cancelButton" type="button" class="btn btn-secondary"
+                        onclick="$('#confirmModal').modal('hide');">No
+                </button>
+                <button id="confirmButton" type="button" class="btn btn-primary">Yes</button>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="deletebtn">Delete</button>
+</div>
+<div id="askReviewModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" style="top: 200px;">
+    <div class="modal-dialog" role="document" style="width: 500px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Get a free Blog Post & Be more discoverable!  <img src='/assets/images/icon/giftbox.png' class='smallIcon' />
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#askReviewModal').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Write a good review on Links4u and have a free Blog Post!
+                <br />
+                <a class="reviewLink"></a>
+                <br />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-lg pageBtn"
+                        onclick="$('#askReviewModal').modal('hide');">No, Thanks
+                </button>
+                <button type="button" onclick="submitUserAddedReview()" class="btn btn-primary btn-lg pageBtn">Submit Good Review</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade WelcomeModel" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static"></div>
+<div id="appDataModal" class="modal fade" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 70%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-truncate"></h5>
+                <span class="loader loadingBar" style=""></span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#appDataModal').modal('hide');">
+                    <img src="/assets/images/home_icon/close.png" alt="">
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="$('#appDataModal').modal('hide');">Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

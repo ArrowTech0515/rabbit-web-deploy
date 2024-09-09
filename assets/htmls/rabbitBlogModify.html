@@ -1,0 +1,181 @@
+<div class="progress_step"><span class="spinner-border text-primary"></span></div>
+<div id="modifyArticleSection" class="card dash-card" style="display: none">
+    <div class="card-body">
+        <div class="edit_title">
+            Edit Guest Blog
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-5">
+                <h3 class="dash-title" id="back_tablze" style="cursor: pointer" onclick="modifyArticleTable()"><img src="/assets/images/home_icon/material-symbols_arrow-back-ios-new-rounded.png" alt="back"> Guest Blog Settings </h3>
+            </div>
+            <div class="col-md-7 text-md-end">
+                <div class="mes_cont">
+                    Please make sure all changes in text are written well, with no spelling mistakes
+                    <a href="javascript: openModal('/assets/htmls/blogTextFormatting.html', 'How to Format your Blog Post for Maximum Impact')">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <!--            <div class="card-header">-->
+            <!--                <button class="btn btn-sm btn-outline-secondary" id="addlink_list"> <img src="/assets/images/home_icon/menu-bar__button&#45;&#45;base.png" alt="link"> Add Link </button>-->
+            <!--            </div>-->
+            <div class="card-body">
+                <div class="published_details new_box_content">
+                    <div class="final_content mt-4">
+<!--                        <h2 class="heading_title my-3"-->
+<!--                            id="finalArticleTitle"></h2>-->
+                        <div id="summernote">
+                            <div class="finalArticleText"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="published_details">
+            <button type="button"
+                    onclick="$('.hiddenFinalArticleContent').val($('#summernote').summernote('code')); submitChangeLinks(this);"
+                    style="width: 100%; height: 50px; margin-top: 20px"
+                    class="btn btn-primary   pageBtn submit-btn">
+                SAVE AND UPDATE
+            </button>
+            <div class="progress_step" style="display: none">
+                <span class="spinner-border text-primary"></span>
+                Please wait...
+            </div>
+        </div>
+
+        <form id="changeLinksModifyForm" onsubmit="return false;">
+            <input type="hidden" class="linkId" name="linkId"/>
+            <input type="hidden" class="blogUrl" name="blogUrl"/>
+            <input type="hidden" class="hiddenAddUserDetails" name="addUserDetails"/>
+            <input type="hidden" class="linkHrefArticle" name="linkHrefArticle"/>
+            <input type="hidden" name="articleImage" class="articleImage"/>
+            <input type="hidden" name="articleContentChanged" class="articleContentChanged"/>
+            <input type="hidden" name="finalArticleContent" class="hiddenFinalArticleContent"/>
+            <div class="mb-3 select2CustomForm mt-4">
+                <label for="articleCategoriesModify" class="formLable d-block">
+                Add Categories
+                    <img src="/assets/images/home_icon/material-symbols_help.png" style="height: 20px" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="hover"
+                         data-bs-placement="bottom"
+                         data-bs-content="<strong>What are guest blogs categories?</strong><br /><br />Categories are thematic folders that organize our guest blogs into easily navigable topics. Each category serves as a gateway to a curated collection of articles, providing you with a seamless way to explore content based on your interests.<br /><br /> <strong>Why are categories important?</strong><br /><br /><strong>User Navigation:</strong> Categories serve as a navigational guide for your readers. <br /><strong>SEO Optimization:</strong> Search engines value well-organized content, and categories contribute to the overall SEO of the guest blog.<br /><strong>Targeted Audience Engagement:</strong> Different readers have different interests. <br /><strong>Enhances Internal Linking:</strong> Categories provide a natural structure for internal linking. " />
+                </label>
+                <select id="articleCategoriesModify" class=" js-example-placeholder-multiple"
+                        multiple="multiple"
+                        name="categories"></select>
+            </div>
+            <div class="mb-3 select2CustomForm">
+                <label for="articleTagsModify" class="formLable d-block">
+                Add Tags
+                <img src="/assets/images/home_icon/material-symbols_help.png" style="height: 20px" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="hover"
+                     data-bs-placement="bottom"
+                     data-bs-content="<strong>What are guest blogs tags?</strong><br /><br />Tags are like digital bookmarks that provide quick insights into the key themes of our guest blogs. Think of them as the micro-labels that capture the essence of each article. <br /><br /> <strong>Why are tags imrpotant?</strong><br /><br /><strong>Content Organization:</strong> Tags serve as detailed labels for specific topics or keywords within a guest blog. <br /><strong>Enhanced Searchability:</strong> Tags improve the searchability of your content, both on the blog and through external search engines.<br /><strong>SEO Benefits:</strong> Search engines recognize and index tags, contributing to the overall SEO of your blog. When users search for specific topics, having well-chosen tags can increase the visibility of the content in search engine results, attracting a more targeted audience.<br /><strong>Consistent Branding:</strong> Tags contribute to defining the identity and branding of your company. " />
+                </label>
+                <select id="articleTagsModify"
+                        class=" js-example-placeholder-multiple"
+                        multiple="multiple"
+                name="tags"></select>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div>Choose Guest Blog Featured Image</div>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <div class="image_slider_blog mb-3">
+                                        <div class="published_details mt-3">
+                                            <div class="row">
+                                                <div class="col-md-12 d-flex align-items-end gap-3">
+                                                    <div class="form-group newSearchImageModify search_image w-100">
+                                                        <label>Add a Featured Image to your Guest Blog</label>
+                                                        <select id="imagesByKeywordSelect" class="imagesByKeyword js-example-placeholder-multiple" multiple="multiple" onchange="loadImagesByQuery($('.imagesByKeyword').val())"></select>
+<!--                                                        <input type="text" style="height: 50px" class="form-control imagesByKeyword" placeholder="Search image to add on your guest blog">-->
+                                                        <button class="btn btn-primary" onclick="loadImagesByQuery($('.imagesByKeyword').val())" type="button">Search Image</button>
+                                                    </div>
+                                                    <button onclick="openImageUploader()" class="btn btn-outline-primary text-nowrap uploadBtns ms-auto" style="height: 62px"><img src="/assets/images/upload.svg"/> Upload Image</button>
+                                                </div>
+                                            </div>
+                                            <div class="imagesSection"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="published_details">
+                        <button type="button"
+                                onclick="$('.hiddenFinalArticleContent').val($('#summernote').summernote('code')); submitChangeLinks(this);"
+                                style="width: 100%; height: 50px; margin-top: 20px"
+                                class="btn btn-primary   pageBtn submit-btn">
+                           SAVE AND UPDATE
+                        </button>
+                        <div class="progress_step" style="display: none">
+                            <span class="spinner-border text-primary"></span>
+                            Please wait...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        firstLoad = true;
+        enableTooltips();
+        initImagesByKeyword();
+        $("#addlink_list").click(function () {
+            $('.addlink_list').toggle();
+        });
+        $('#summernote').summernote({
+            placeholder: 'Guest Blog Post Content',
+            height: 420,
+            toolbar: [
+                // ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                // ['para', ['ul', 'ol', 'paragraph']],
+                // ['table', ['table']],
+                ['insert', ['link']],
+                // ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ],
+            callbacks: {
+                onChange: function(contents, $editable) {
+                    $('.articleContentChanged').val('true');
+                }
+            }
+        });
+    });
+
+    function hasUploadPermission() {
+        return mainUserDetails['extraData'] && mainUserDetails['extraData']['allowUploadImage'] && mainUserDetails['extraData']['allowUploadImage'] !== '';
+    }
+
+    function openImageUploader() {
+        // if (mainUserDetails['pricePerMonth'] > 0) {
+        if (payingUser || hasUploadPermission()) {
+            if (payingUser && (!mainUserDetails['extraData'] || !mainUserDetails['extraData']['allowUploadImage'])) {
+                refreshUserDetailsSync();
+            }
+            try {
+                console.log('openImageUploader mainUserDetails[\'extraData\'] ' + mainUserDetails['extraData'])
+                console.log('openImageUploader mainUserDetails[\'extraData\'][\'allowUploadImage\'] ' + mainUserDetails['extraData']['allowUploadImage'])
+            } catch (e) {}
+
+            if (hasUploadPermission()) {
+                openModal('/assets/htmls/rabbitUploadBlogImage.html', 'Upload Blog Image');
+            } else {
+                openModal('/assets/htmls/rabbitUploadBlogImagePermission.html', 'Request Upload Blog Image Permission');
+            }
+        } else {
+            callUpgradePage();
+        }
+    }
+</script>

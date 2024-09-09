@@ -1,0 +1,86 @@
+<div class="py-24px">
+    <h5 class="tabTitle">New Lead</h5>
+    <form id="createLeadUser">
+        <div class="mb-3">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1"
+                       onclick="$('#singleLeadDiv').toggle(); $('#bulkLeadDiv').toggle();">
+                <label class="custom-control-label" for="customSwitch1">Upload Bulk</label>
+            </div>
+        </div>
+        <div id="singleLeadDiv">
+            <div class="settingForm generalForm max-w-470">
+                <div class="mb-3">
+                    <div class="d-md-flex justify-content-between align-items-center">
+                        <label class="settingLabel">Domain</label>
+                        <input id="domain" name="domain" type="text" class="form-control" placeholder="Domain"/>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-md-flex justify-content-between align-items-center">
+                        <label class="settingLabel">Email</label>
+                        <input id="email" name="email" type="text" class="form-control" placeholder="Email"/>
+                    </div>
+                </div>
+<!--                <div class="mb-3">-->
+<!--                    <div class="d-md-flex justify-content-between align-items-center">-->
+<!--                        <label class="settingLabel">Company Name</label>-->
+<!--                        <input id="name" name="name" type="text" class="form-control" placeholder="Company Name"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <div class="d-md-flex justify-content-between align-items-center">-->
+<!--                        <label class="settingLabel">Owner Name</label>-->
+<!--                        <input id="shopOwnerName" name="shopOwnerName" type="text" class="form-control"-->
+<!--                               placeholder="Shop Owner Name"/>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <!--            <div class="mb-3">-->
+                <!--                <div class="d-md-flex justify-content-between align-items-center">-->
+                <!--                    <label class="settingLabel">Phone</label>-->
+                <!--                    <input id="phone" name="phone" type="text" class="form-control" placeholder="Phone"/>-->
+                <!--                </div>-->
+                <!--            </div>-->
+            </div>
+        </div>
+        <div id="bulkLeadDiv" style="display: none">
+            <div class="mb-3">
+                <div class="d-md-flex justify-content-between align-items-center">
+<!--                    <label class="settingLabel">Shop Owner Name</label>-->
+                    <textarea rows="10" cols="20" name="bulkLeads" type="text" class="form-control"
+                              placeholder="Copy paste from Excel multiple lines in this order: Website, Email"/>
+                </div>
+            </div>
+        </div>
+        <div class="mb-3" style="display: none">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <label class="settingLabel">Lead Type</label>
+                <select id="leadType" name="leadType"
+                        class="form-control form-select dropdown-toggle">
+                    <!--                        <option value="">Choose Lead Type</option>-->
+                    <option value="Rabbit SEO" selected>Rabbit SEO</option>
+                    <option value="Shopify">Shopify</option>
+                    <option value="Wix">Wix</option>
+                </select>
+            </div>
+        </div>
+        <div class="mt-4">
+            <button type="button" onclick="submitNewLead(this)" class="btn btn-primary mw-75px">Save</button>
+        </div>
+        <div style="margin-top: 10px;" class="alert alert-success" role="alert">
+            <div class="d-flex">
+                <p id="createNewLeadUserResult" class="my-0"></p>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+    });
+
+    function submitNewLead() {
+        const result = ajaxSubmitForm('createLeadUser');
+        $('#createNewLeadUserResult').html(result);
+    }
+</script>
+

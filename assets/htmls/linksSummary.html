@@ -1,0 +1,237 @@
+<div class="mb-5">
+    <div class="page-title d-flex align-items-center justify-content-between mb-20px">
+        <div class="d-flex align-items-center align-items-center">
+            <h3 class="dash-title mb-0" id="overviewOf"></h3>
+<!--            <a href="javascript: runIntro();" class="btn btn-outline-primary pageBtn userManual_btn"><img src="/assets/images/icon/u_manual.svg" alt="User Manual"><span>User Manual</span></a>-->
+        </div>
+    </div>
+
+    <div class="card page-card mb-4">
+        <div class="card-body pb-0">
+            <h3 class="cardTitle mb-4">General Details</h3>
+
+            <div class="row">
+                <!-- tooltips and links -->
+                <div class="col-lg-3 col-md-6 mb-44px"  data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This value indicates the number of backlinks linking to your website.">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/backlink1.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text" onclick="changeTab('linksExplorer');" style="cursor: pointer">
+                            <h4 id="backlinks" tooltip="indicates the number of backlinks"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-44px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This value indicates the number of referring pages linking to your website, (one website can link to your website from multiple pages)">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/reffer.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text" onclick="changeTab('linksExplorer');" style="cursor: pointer">
+                            <h4 id="referring_pages"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Referring Pages</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-44px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This value indicates the number of broken backlinks that are linking to your website, you should fix all of them so there will be no broken backlinks linking to you. You can easily do it by create a page with the url of that link.">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/broken-link.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text" onclick="changeTab('linksExplorer');" style="cursor: pointer">
+                            <h4 id="broken_backlinks"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Broken Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-44px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This value indicates the number of broken pages on the target that respond with 4xx or 5xx status codes.">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/broken-page.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text" onclick="changeTab('linksExplorer');" style="cursor: pointer">
+                            <h4 id="broken_pages"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Broken Pages</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-44px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This value indicates the number of referring domains linking to your website.">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/domain-registration.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text" onclick="changeTab('linksExplorer');" style="cursor: pointer">
+                            <h4 id="referring_domains"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Referring Domains</span>
+                        </div>
+                    </div>
+                </div>
+                <!--                <div class="col-lg-3 col-md-6 mb-44px">-->
+                <!--                    <div class="d-flex">-->
+                <!--                        <div class="searchicon_box">-->
+                <!--                            <img src="/assets/images/icon/domain-registration.png" alt="Image">-->
+                <!--                        </div>-->
+                <!--                        <div class="searchbox_text">-->
+                <!--                            <h4 id="referring_main_domains" tooltip=""></h4>-->
+                <!--                            <span>Referring Main Domains</span>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <div class="col-lg-3 col-md-6 mb-44px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/ranking.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text">
+                            <h4 id="targetRank"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Site Rank</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-44px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Shows how many internal links your website has, it is calculated as the sum of internal links on the pages of the specified website.">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/iebroken-link.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text">
+                            <h4 id="internal_links_count"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Internal Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-44px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Shows how many external links your website has, it is calculated as the sum of external links on the pages of the specified website.">
+                    <div class="d-flex">
+                        <div class="searchicon_box">
+                            <img src="/assets/images/icon/eebroken-link.png" alt="Image">
+                        </div>
+                        <div class="searchbox_text">
+                            <h4 id="external_links_count"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>External Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card page-card mb-4">
+        <div class="card-body pt-1">
+            <ul class="nav nav-tabs searchTab" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first" type="button" role="tab" aria-controls="first" aria-selected="true" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Indicates the types of the referring links and link count per each type">Referring Links Types</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="second-tab" data-bs-toggle="tab" data-bs-target="#second" type="button" role="tab" aria-controls="second" aria-selected="false" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Link from specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.">Referring Links Semantic Locations</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="third-tab" data-bs-toggle="tab" data-bs-target="#third" type="button" role="tab" aria-controls="third" aria-selected="false" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Indicates the link attributes of the referring links">Attributes of the Referring Links</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="linkTable">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-uppercase">Type</th>
+                                                <th class="text-uppercase">Value</th>
+                                                <th class="text-uppercase">Percent</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="linkTypesTBody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card chartCart">
+                                    <div class="card-body p-5 canvas_chart">
+                                        <div style="width: 455px;margin: 0 auto;">
+                                            <canvas id="linkTypesChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--This is not working so i commented-->  
+                                <!--<div id="linksType"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="linkTable">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-uppercase">Locations</th>
+                                                <th class="text-uppercase">Value</th>
+                                                <th class="text-uppercase">Percent</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="linkSemanticTBody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="card chartCart">
+                                    <div class="card-body p-5 canvas_chart">
+                                        <div style="width: 455px;margin: 0 auto;">
+                                            <canvas id="linkSemanticChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!--<div id="linksSemantic"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="linkTable">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-uppercase">Attribute</th>
+                                                <th class="text-uppercase">Value</th>
+                                                <th class="text-uppercase">Percent</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="linkAttrTBody"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                
+                                <div class="card chartCart">
+                                    <div class="card-body p-5 canvas_chart">
+                                        <div style="width: 455px;margin: 0 auto;">
+                                            <canvas id="linkAttrChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div id="linksAttributes"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#overviewOf').html(' <span>Links Summary</span>');
+        loadLinksSummary(true);
+    });
+</script>

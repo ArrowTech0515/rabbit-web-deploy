@@ -1,0 +1,137 @@
+<div class="mb-3">
+    <h5 class="mb-0 dropTitle">Add Keywords To Promote</h5>
+</div>
+
+<form id="keywordForm">
+    <!--    <div class="mb-3 select2CustomForm">-->
+<!--        <label for="device" class="formLable">Device</label>-->
+<!--        <select id="device" name="device" class="form-control form-select dropdown-toggle">-->
+<!--            <option value="desktop">Desktop</option>-->
+<!--            <option value="mobile">Mobile</option>-->
+<!--        </select>-->
+<!--    </div>-->
+    <div class="mb-3 select2CustomForm">
+        <label for="searchEngineSelect" class="formLable">Search Engine</label>
+        <select id="searchEngineSelect" name="newSearchEngine"
+                class="form-control form-select dropdown-toggle"></select>
+    </div>
+<!--    <div class="mb-3">-->
+<!--        <div id="keywordsLimit" class="alert alert-warning" style="display:none;"></div>-->
+<!--        <label for="keywordTerm" class="formLable">Keyword(s)</label>-->
+<!--        <textarea id="keywordTerm" name="newKeyword" class="form-control data-hj-allow" onkeydown="validateKeywordsField()"-->
+<!--                  placeholder="You can enter several keywords for the website (one in each line)."-->
+<!--                  style="height:200px"></textarea>-->
+<!--    </div>-->
+<!--    <div class="mb-3" id="keywordsSelectContDiv" style="display: none">-->
+<!--        <label for="keywordTermSelect" class="formLable">Keyword</label>-->
+<!--&lt;!&ndash;        <select id="keywordTermSelect" name="newKeyword2" class="form-control form-select dropdown-toggle js-example-placeholder-multiple"></select>&ndash;&gt;-->
+<!--        <select id="keywordTermSelect" class="form-control form-select dropdown-toggle js-example-placeholder-multiple" multiple="multiple"></select>-->
+<!--    </div>-->
+    <div class="mb-3" id="keywordsTextContDiv">
+        <div id="keywordsLimit" class="alert alert-warning" style="display:none;"></div>
+        <label for="keywordTerm" class="formLable">Keyword(s)</label>
+        <textarea id="keywordTerm" name="newKeyword" class="form-control data-hj-allow" onkeydown="validateKeywordsField()"
+                  placeholder="You can enter several keywords for the website (one in each line)."
+                  style="height:100px"></textarea>
+    </div>
+    <div class="text-end mt-4">
+        <button type="button" class="btn btn-primary btn-lg pageBtn"
+                id="addKeyword" onclick="makeButtonLoading(this); saveKeywordStep(this)">Next</button>
+    </div>
+</form>
+<div id="keywordSuggestions"></div>
+<div id="keywordSuggestionsNextButton" style="display: none" class="text-end mt-4">
+    <!--    <button class="btn btn-primary btn-lg pageBtn btn-next-form" onclick="stepperForm.next(); showRanksExplorerInfo = true;">Next</button>-->
+    <div class="text-end mt-4">
+        <button type="button" class="btn btn-primary btn-lg pageBtn"
+                onclick="makeButtonLoading(this); saveKeywordStep(this)">Next</button>
+    </div>
+</div>
+
+<span id="keywordSuggestionsLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+
+<script>
+    var showKeywordsSelect = true;
+    $(document).ready(function () {
+        // console.log('start addNewKeyword, load search engine availableSearchEngines.length ' + availableSearchEngines.length);
+        if (availableSearchEngines.length === 0) {
+            $.getJSON(getApiUrl('miniListJsonSearchEngine'), function (data) {
+                // console.log('miniListJsonSearchEngine ' + JSON.stringify(data));
+                for (let i = 0; i < data['list'].length; i++) {
+                    availableSearchEngines.push(data['list'][i]['name']);
+                }
+                createSearchEngineSelect();
+            });
+        } else {
+            createSearchEngineSelect();
+        }
+
+        loadAddKeywordsSelect();
+        ajaxSimpleLoadToDiv('/assets/htmls/ranksExplorer.html', 'keywordSuggestions');
+    });
+
+    function createSearchEngineSelect() {
+        var searchEngineSelect = $("#searchEngineSelect").select2({tokenSeparators: [',', ', ', '\n'],
+            selectOnClose: true,
+            data: availableSearchEngines,
+            width: "100%",
+        });
+        searchEngineSelect.val(searchEngine).change();
+    }
+    function saveKeywordStep(btn) {
+        $('#keywordSuggestionsLoading').show();
+        let modalIsShown = false;
+        if (($('#keywordTerm') && $('#keywordTerm').val() && $('#keywordTerm').val().length > 0) ||
+            ($('#keywordTermSelect') && $('#keywordTermSelect').val() && $('#keywordTermSelect').val().length > 0)) {
+            var json = getFormValues($('#keywordForm'))
+            // var json = $('#keywordForm').serializeArray();
+            if ($('#keywordTermSelect') && $('#keywordTermSelect').val() && $('#keywordTermSelect').val().length > 0) {
+                json = getPostParams('newSearchEngine=' + $('#searchEngineSelect').val() + '&device=' + $('#device').val() + '&newKeyword2=' + encodeURIComponent($('#keywordTermSelect').val()));
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: getApiUrl('saveNewKeywordForWebsite'),
+                data: json,
+                async: false,
+                success: function (result) {
+                    $('#keywordSuggestionsLoading').hide();
+                    $('#keywordTerm').val('');
+                    console.log('success ' + JSON.stringify(result));
+                    if (result.status === 'added') {
+                        showRanksExplorerInfo = true;
+                        refreshUsage(); // async
+                        keywordsUsed = 1;
+                    } else if (result.status === 'limit') {
+                        modalIsShown = true;
+                        showUpgradeModal(keywordsLimitUpgrade);
+                    } else {
+                        // console.log('message is ' + result.status);
+                        modalIsShown = true;
+                        showModal("Message", result.status, "Close", "");
+                    }
+                }
+            });
+        }
+        // console.log('after ajax keywordsUsed ' + keywordsUsed + ' url is ' + url);
+        releaseButtonLoading(btn);
+        if (keywordsUsed > 0) {
+            url = $('#url').val();
+            let gotoUrl = (isTestingMode() ? '/homeDev.html' : 'https://www.rabbitseo.com/home.html');
+            if (websitesUsed > 1) {
+                gotoUrl = (isTestingMode() ? '/homeDev.html' : 'https://www.rabbitseo.com/home.html') + '?url=' + url.replace("https://","").replace("http://","").replace("www.","").replace("/","");
+            }
+            console.log('gotoUrl ' + gotoUrl);
+            // const href = composeUrl(gotoUrl);
+            location.href = gotoUrl;
+            
+        } else if (!modalIsShown) {
+            showModal("Message", getTranslationWord('Enter your desired keywords, one in each line.'), getTranslationWord("Close"), "");
+        }
+    }
+</script>
+<style>
+#keywordsSelectContDiv .select2-selection.select2-selection--multiple {
+    min-height: 70px;
+}
+</style>

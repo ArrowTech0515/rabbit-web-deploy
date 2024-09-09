@@ -1,0 +1,238 @@
+<div class="progress_step"><span class="spinner-border text-primary"></span></div>
+<div id="modifyArticleSection" style="display: none;">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="published_details">
+                <div class="articleFinalImage">
+                    <img id="articleFinalImage" alt="final iamge"/>
+                </div>
+                <div class="final_content mt-4">
+                    <h2 class="heading_title my-3"
+                        id="finalArticleTitle"></h2>
+                    <div class="finalArticleText"></div>
+                </div>
+            </div>
+            <form id="modifySavePublishDetailsUser">
+                <div>
+                    <div class="select2CustomForm">
+                        <div class="published_ttle">
+                            <label for="addUserDetailsStepper"
+                                   class="published_ttle_heading">Add Publisher Details to the Article</label>
+                            <div class="form-check form-switch">
+                                <input data-hj-allow type="checkbox"
+                                       name="addUserDetails"
+                                       id="addUserDetailsStepper"
+                                       onclick="$('.userDetailsForm').toggle('fast')"
+                                       class="form-check-input">
+                                <label class="form-check-label"
+                                       for="addUserDetailsStepper">
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                        <br/>
+                        <div
+                             class="userDetailsForm row form-horizontal settingForm"
+                             style="display: none">
+
+                            <div class="row align-items-center">
+                                <!--                                                                <div class="col-md-12">-->
+                                <!--                                                                    <div class="info_box">-->
+                                <!--                                                                        Expect for the link in the article, you can add your details to the article so vistiors can read it was posted by you.-->
+                                <!--                                                                    </div>-->
+                                <!--                                                                </div>-->
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label class="settingLabel fw-bold">Domain</label>
+                                                <input data-hj-allow name="domain" type="text" class="form-control "  placeholder="Domain"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label class="settingLabel fw-bold">Company
+                                                    Name</label>
+                                                <input data-hj-allow name="name" type="text"  class="form-control "  placeholder="Company Name"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label class="settingLabel">Address
+                                                    (optional)</label>
+                                                <input data-hj-allow id="address"
+                                                       name="address" type="text"
+                                                       class="form-control "
+                                                       placeholder="Address"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <label class="settingLabel">Phone
+                                                    (optional)</label>
+                                                <input data-hj-allow id="phone"
+                                                       name="phone" type="text"
+                                                       class="form-control "
+                                                       placeholder="Phone"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <div class="form-group">
+                                                <label class="settingLabel fw-bold">Description</label>
+                                                <textarea data-hj-allow
+                                                          name="description"
+                                                          style="height: 110px;"
+                                                          class="form-control "
+                                                          placeholder="Description"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="drop-zone" onclick="changeLogo()">
+                                        <div id="logoForm" data-toggle="tooltip"
+                                             title="Logo size should be 200*100 pixel!">
+                                            <form name="photo" class="text-center"
+                                                  id="imageUploadForm"
+                                                  enctype="multipart/form-data"
+                                                  action="saveImgUser"
+                                                  method="post">
+                                                <input type='file' name="pdfImage"
+                                                       id="pdfImage"
+                                                       onchange="changeImg()"
+                                                       style="display:none;">
+                                                <img id="logoImg" class="logoImg" alt="Upload Logo"
+                                                     style="display:none; max-height: 50px"/>
+                                                <img class="uploadIcon" src="/assets/images/uplod_image.png"
+                                                     alt="upload image">
+                                                <p class="upload_text">Upload
+                                                    logo</p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image_slider_blog mb-3">
+                    <div class="published_ttle mt-3">
+                        <span class="published_ttle_heading">Add a Featured Image to the Article</span>
+                    </div>
+                    <div class="published_details">
+                        <div class="imagesSection"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="published_details">
+                <div class="sub_heading mb-4">
+                    Article Details
+                </div>
+                <div class="mb-4">
+                    <div class="heading_small">Categories</div>
+                    <span id="publishInCats"></span>
+                </div>
+                <div class="mb-4">
+                    <div class="heading_small">Tags</div>
+                    <span id="publishInTags"></span>
+                </div>
+    <!--            <div class="mb-4">-->
+    <!--                <div class="heading_small">Landing Page to Promote</div>-->
+    <!--                <span id="publishLandingPage"></span>-->
+    <!--            </div>-->
+                <div class="mb-4">
+                    <div class="heading_small">User Details</div>
+                    <span id="userDetailsAdded"></span>
+                </div>
+    <!--            <div class="mb-4">-->
+    <!--                <div class="heading_small">Words Count</div>-->
+    <!--                <span id="articleWordsCount"></span>-->
+    <!--            </div>-->
+                <div class="mb-4">
+                    <div class="heading_small">Links Count</div>
+                    <span id="articleLinksCount"></span>
+                </div>
+
+                <form id="changeLinksModifyForm">
+                    <input type="hidden" class="linkId" name="linkId" />
+                    <input type="hidden" class="blogUrl" name="blogUrl" />
+                    <input type="hidden" class="hiddenAddUserDetails" name="addUserDetails" />
+                    <input type="hidden" class="linkHrefArticle" name="linkHrefArticle" />
+                    <input type="hidden" name="articleImage" class="articleImage"/>
+                    <div class="mb-3 select2CustomForm">
+                        <label for="articleCategoriesModify" class="formLable">Article
+                            Categories</label>
+                        <select id="articleCategoriesModify"
+                                class=" js-example-placeholder-multiple"
+                                multiple="multiple" onchange="submitChangeLinks()"
+                                name="categories"></select>
+                    </div>
+                    <div class="mb-3 select2CustomForm">
+                        <label for="articleTagsModify" class="formLable">Article
+                            Tags</label>
+                        <select id="articleTagsModify"
+                                class=" js-example-placeholder-multiple"
+                                multiple="multiple" onchange="submitChangeLinks()"
+                                name="tags"></select>
+                    </div>
+
+                    <div class="mb-2 sub_heading">Add More Backlinks to your Article</div>
+                    <label class="mb-4 text-muted">Copy Paste Keywords from the article to create links</label>
+                    <div id="changeLinksForm">
+                        <div class="mb-3 form-group">
+                            <label class="settingLabel">First Keyword</label>
+                            <input data-hj-allow id="keyword1" name="keyword1"
+                                   type="text" class="form-control " onchange="submitChangeLinks()"
+                            />
+                            <button type="button"
+                                    onclick="submitChangeLinks(this)"
+                                    class="btn btn-primary mw-75px btn-sm pageBtn submit-btn">
+                                Add Link
+                            </button>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label class="settingLabel">Second Keyword</label>
+                            <input data-hj-allow id="keyword2" name="keyword2"
+                                   type="text" class="form-control " onchange="submitChangeLinks()"
+                            />
+                            <button type="button"
+                                    onclick="submitChangeLinks(this)"
+                                    class="btn btn-primary mw-75px btn-sm pageBtn submit-btn">
+                                Add Link
+                            </button>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label class="settingLabel">Third Keyword</label>
+                            <input data-hj-allow id="keyword3" name="keyword3"
+                                   type="text" class="form-control " onchange="submitChangeLinks()"
+                            />
+                            <button type="button"
+                                    onclick="submitChangeLinks(this)"
+                                    class="btn btn-primary mw-75px btn-sm pageBtn submit-btn">
+                                Add Link
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" onclick="submitArticleFinal(this)"
+                        style="width: 100%;"
+                        class="btn btn-primary pageBtn submit-btn">
+                    Publish Article Now
+                </button>
+                <div class="progress_step" style="display: none">
+                    <span class="spinner-border text-primary"></span>
+                    Please wait...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+   .select2-container--default .select2-selection--single, .select2-container .select2-selection--multiple{
+    overflow-y: auto;
+   }
+</style>

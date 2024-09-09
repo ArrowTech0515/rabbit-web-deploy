@@ -1,0 +1,360 @@
+<div class="top-history d-flex justify-content-between align-items-center mt-3 mb-3">
+    <div class="d-flex justify-content-between align-items-center">
+        <svg onclick="loadEasyFormsHtml()" width="38" height="39" style="cursor: pointer" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="1" width="37" height="37" rx="9.5" fill="white"/>
+            <rect x="0.5" y="1" width="37" height="37" rx="9.5" stroke="#D6D9DF"/>
+            <path d="M24.8333 19.5H13.1667" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 13.6667L13.1667 19.5001L19 25.3334" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="template-home-path mx-3">Home</div>
+        <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 0.5L4 3.5L1 6.5" stroke="#BCC1CB" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="template-current-path mx-3">Templates</div>
+    </div>
+    <div>
+        <button class="create-own-form" onclick="createNewForm()">Create Own Form</button>
+    </div>
+</div>
+<div class="top-header mt-4">
+    <div class="hello-user">Premium Easy Forms</div>
+    <div class="page-description">Create, edit and publish your forms.</div>
+</div>
+<div class="template-categories mt-5">
+    <div class="lfs mfw ftc">What are you looking for?</div>
+    <div class="dfw dtc sfs mt-2">Choose the form category according to your needs!</div>
+    <div class="d-flex justify-content-between align-items-center gap-3 mt-3">
+        <div class="template-category d-flex align-items-center active" onclick="change_template_category(this, 'all')">
+            <div>
+                <img class="normal" src="../assets/images/forms/template-categories/all.png" width="50" />
+                <img class="active" src="../assets/images/forms/template-categories/all-active.png" width="50" />
+            </div>
+            <div class="lfs mfw category-name">All Forms</div>
+        </div>
+        <div class="template-category d-flex align-items-center" onclick="change_template_category(this, 'visitor')">
+            <div>
+                <img class="normal" src="../assets/images/forms/template-categories/visitor.png" width="50" />
+                <img class="active" src="../assets/images/forms/template-categories/visitor-active.png" width="50" />
+            </div>
+            <div class="lfs mfw category-name">Visitor Engagement</div>
+        </div>
+        <div class="template-category d-flex align-items-center" onclick="change_template_category(this, 'maximize')">
+            <div>
+                <img class="normal" src="../assets/images/forms/template-categories/subscription.png" width="50" />
+                <img class="active" src="../assets/images/forms/template-categories/subscription-active.png" width="50" />
+            </div>
+            <div class="lfs mfw category-name">Subscriptions</div>
+        </div>
+        <div class="template-category d-flex align-items-center" onclick="change_template_category(this, 'lead')">
+            <div>
+                <img class="normal" src="../assets/images/forms/template-categories/lead.png" width="50" />
+                <img class="active" src="../assets/images/forms/template-categories/lead-active.png" width="50" />
+            </div>
+            <div class="lfs mfw category-name">Lead Generation</div>
+        </div>
+        <div class="template-category d-flex align-items-center" onclick="change_template_category(this, 'sales')">
+            <div>
+                <img class="normal" src="../assets/images/forms/template-categories/sales.png" width="50" />
+                <img class="active" src="../assets/images/forms/template-categories/sales-active.png" width="50" />
+            </div>
+            <div class="lfs mfw category-name">Sales Increase</div>
+        </div>
+    </div>
+</div>
+<div class="templates mt-5">
+    <div class="mb-4"><span class="lfs mfw ftc">Forms</span><span class="dfw dtc lfs mx-2">(20)</span></div>
+    <div class="row gap-2">
+        <div class="template-item visitor">
+            <div class="template-item--frame" onclick="loadSimpleContactForm()">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/1.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Simple Contact Form</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item pro lead">
+            <div class="template-item--frame" onclick="show_template_requst_quote()">
+                <div class="img-container">
+                    <img src="../assets/images/forms/templates/3.png" width="100%"/>
+                </div>
+                <div class="pro-badge">
+                    <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.90987 11.914L6.62239 16.5431C7.27184 17.1811 7.59651 17.5 7.99999 17.5C8.40347 17.5 8.72814 17.1811 9.37758 16.5431L14.0901 11.914C14.9186 11.1001 15.3328 10.6932 15.4601 10.1641C15.5872 9.63501 15.4019 9.08901 15.0314 7.99714L14.7328 7.11716C14.3042 5.85404 14.0899 5.22247 13.5796 4.86124C13.0694 4.5 12.3917 4.5 11.0363 4.5H4.96371C3.60827 4.5 2.93056 4.5 2.42035 4.86124C1.91012 5.22247 1.69582 5.85404 1.26719 7.11716L0.968583 7.99714C0.598059 9.08901 0.412801 9.63501 0.539962 10.1641C0.667114 10.6932 1.08137 11.1001 1.90987 11.914Z" fill="white"/>
+                    </svg>
+                    PRO
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Request a Quote</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item visitor">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/4.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Rate Us</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item lead">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/5.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Event Registration</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item sales">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img src="../assets/images/forms/templates/8.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Promotion Coupon</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item lead">
+            <div class="template-item--frame">
+                <div class="img-container">
+                    <img src="../assets/images/forms/templates/31.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Minimalistic Request a Quote </div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item pro">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img src="../assets/images/forms/templates/32.png" width="100%"/>
+                </div>
+                <div class="pro-badge">
+                    <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.90987 11.914L6.62239 16.5431C7.27184 17.1811 7.59651 17.5 7.99999 17.5C8.40347 17.5 8.72814 17.1811 9.37758 16.5431L14.0901 11.914C14.9186 11.1001 15.3328 10.6932 15.4601 10.1641C15.5872 9.63501 15.4019 9.08901 15.0314 7.99714L14.7328 7.11716C14.3042 5.85404 14.0899 5.22247 13.5796 4.86124C13.0694 4.5 12.3917 4.5 11.0363 4.5H4.96371C3.60827 4.5 2.93056 4.5 2.42035 4.86124C1.91012 5.22247 1.69582 5.85404 1.26719 7.11716L0.968583 7.99714C0.598059 9.08901 0.412801 9.63501 0.539962 10.1641C0.667114 10.6932 1.08137 11.1001 1.90987 11.914Z" fill="white"/>
+                    </svg>
+                    PRO
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Get a free Quote</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item lead">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img src="../assets/images/forms/templates/33.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Book an Appointment</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item visitor">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/41.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Post Preview</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item lead">
+            <div class="template-item--frame">
+                <div class="img-container">
+                    <img src="../assets/images/forms/templates/51.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Register to Webinar</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item maximize">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img src="../assets/images/forms/templates/2.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Newsletter Subscription</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item maximize">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img src="../assets/images/forms/templates/21.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Subscribe to Newsletter</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item maximize">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img src="../assets/images/forms/templates/23.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Simple Subscription Form</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item maximize">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/24.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Monthly Newsletter</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item sales">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/25.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Email Signup for Offer</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item maximize">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/42.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Subscribe Now</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item visitor">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/0.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Contact Us Today</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item visitor">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/13.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Get In Touch</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item visitor">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/11.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Contact Form For Restaurant</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+        <div class="template-item visitor">
+            <div class="template-item--frame">
+                <div class="img-container auto-img">
+                    <img class="auto" src="../assets/images/forms/templates/12.png" width="100%"/>
+                </div>
+            </div>
+            <div class="template-item--info mt-2 d-flex justify-content-between align-items-center">
+                <div class="template-item--info-title">Table Reservation</div>
+                <div class="preview-button">
+                    <img class="normal" src="../assets/images/forms/template-categories/eye.png" width="20" />
+                    <img class="active" src="../assets/images/forms/template-categories/eye-active.png" width="20" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

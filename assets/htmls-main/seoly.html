@@ -1,0 +1,2375 @@
+<link rel="stylesheet" href="/assets/css/seolyStyle.css" />
+<script type="text/javascript" src="/assets/scripts-app/pages.js"></script>
+<script type="text/javascript" src="/assets/scripts-app/seoly.js"></script>
+<script type="text/javascript" src="/assets/scripts-app/seolyTour.js"></script>
+<!--<button onclick="loadPayAsYouGo(5, 15)">Test</button>-->
+<div id="launchOffer" class="top-head" style="display: none">
+    <div class="flex-launche-offer">
+        <div class="launhe-off">
+            <div class="header-nonCountdown"><strong>Special Offer :</strong> <span>Discounted Prices on all Plans</span></div>
+            <div class="header-countdown" style="display: none">
+                Don't Let This Opportunity Pass You By! <span>Elevate Your SEO - 40% Discount on All Annual Plans</span> with Our Black Friday Code
+                <div class="balckfridayCopy">
+                    <span class="couponCodeText"></span>
+                    <span class="balckCopyBtn coupon-upgrade"><img src="/assets/images/copyBlack.png" alt="copyBlack"/></span>
+                </div>
+                <div class="countdownTimer">
+                    <span class="countdownDays"></span> :
+                    <span class="countdownHours"></span> :
+                    <span class="countdownMinutes"></span> :
+                    <span class="countdownSeconds"></span>
+                </div>
+            </div>
+        </div>
+        <div class="btn-upgrade coupon-upgrade" style="cursor: pointer">
+            <a style="cursor: pointer"> <img src="/assets/images/seoly/black-arrow-up.jpeg" alt="">
+                Upgrade</a>
+        </div>
+    </div>
+</div>
+<div id="upgradeOffer" class="top-head" style="display: none">
+    <div class="flex-launche-offer">
+        <div class="launhe-off">
+            <strong>Get More from SEOly :</strong> <span>Special Links Building Offer on the Booster package</span>
+        </div>
+        <div class="btn-upgrade" style="cursor: pointer" onclick="$('#upgrade-tab').click()">
+            <a style="cursor: pointer"> <img src="/assets/images/seoly/black-arrow-up.jpeg" alt="">
+                Apply Now</a>
+        </div>
+    </div>
+</div>
+<span class="loader loadingBar" style=""></span>
+<datalist id="ourKeywords" style="display: none"></datalist>
+<div id="headerMenu" style="display:none;" class="sm_header">
+    <nav id="header" class="navbar navbar-expand-xl navbar-light
+                bg-light">
+        <div class="container-fluid">
+            <!--                <div class="row custom-mt">-->
+            <!--                    <div class="col-2">-->
+            <!--                    </div>-->
+            <a href="javascript: $('#onPage-tab').click()" class="">
+                <img src="/assets/seoly/app-logo.png" alt="">
+            </a>
+            <!--                    <div class="col-lg-10 col-sm-12" style="text-align:right">-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle
+                                navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: none !important;">
+                <ul class="nav navbar-nav mb-2 mb-lg-0" id="myTab" role="tablist">
+                    <!--                            <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0" id="myTab" role="tablist">-->
+                    <li class="nav-item" role="presentation" class="with-logo">
+                        <button class="nav-link active" id="onPage-tab" data-bs-toggle="tab"
+                                data-bs-target="#onPage" type="button" role="tab" aria-controls="onPage"
+                                aria-selected="true">On-Page SEO
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation" class="with-logo">
+                        <button class="nav-link" id="offPage-tab" data-bs-toggle="tab" data-bs-target="#offPage"
+                                type="button" role="tab" aria-controls="offPpage" aria-selected="false">Off-Page SEO
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation" class="with-logo">
+                        <button class="nav-link" id="ranks-tab" data-bs-toggle="tab" data-bs-target="#ranks"
+                                type="button" role="tab" aria-controls="ranks" aria-selected="false">Keywords
+                        </button>
+                    </li>
+                     <li class="nav-item" role="presentation">
+                        <button class="nav-link sm_btn btn btn-primary" id="upgrade-tab" data-bs-toggle="tab"
+                                data-bs-target="#upgrade" type="button" role="tab" aria-controls="upgrade"
+                                aria-selected="false">Plans</button>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0" id="myTab2" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="#contactusLink" type="button" role="tab"
+                                onclick="javascript:openContactUsModal()">Contact Us
+                        </button>
+                    </li>
+                    <!--                            <li class="nav-item" role="presentation">-->
+                    <!--                                <button class="nav-link"-->
+                    <!--                                        data-bs-toggle="tab"-->
+                    <!--                                        data-bs-target="#ranks"-->
+                    <!--                                        type="button" role="tab"-->
+                    <!--                                        aria-controls="ranks"-->
+                    <!--                                        aria-selected="false">Settings-->
+                    <!--                                </button>-->
+                    <!--                            </li>-->
+                   
+                    <li class="nav-item" role="presentation">
+                        <button id="tutorial" class="nav-link sm_btn nice-button" type="button"
+                                onclick="initTour();">Tutorial</button>
+                    </li>
+                    <!--                            <li>-->
+                    <!--                                <button class="nav-link"-->
+                    <!--                                        data-bs-toggle="tab"-->
+                    <!--                                        data-bs-target="#ranks"-->
+                    <!--                                        type="button" role="tab"-->
+                    <!--                                        aria-controls="ranks"-->
+                    <!--                                        aria-selected="false">-->
+                    <!--                                    <img id="userFlag"-->
+                    <!--                                         class="img-fluid" alt="">-->
+                    <!--                                </button>-->
+                    <!--                            </li>-->
+
+                    <!-- <li class="nav-item" role="presentation">
+                        <div class="dropdown sm_dropdown">
+                            <div class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="/assets/images/seoly/avatar.jpg" alt="">
+                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li>
+                                    <button class="nav-link" onclick="openContactUsModal()"><span><img
+                                                src="/assets/images/seoly/phone.png"> Contact Us</span></button>
+                                </li>
+                                <li>
+                                    <button class="nav-link" id="settings-tab" data-bs-toggle="tab"
+                                        data-bs-target="#settings" type="button" role="tab"
+                                        aria-controls="settings" aria-selected="false"><span><img
+                                                src="/assets/images/seoly/settings.png"> Settings</span>
+                                    </button>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+            <!--                    </div>-->
+            <!--                </div>-->
+        </div>
+    </nav>
+</div>
+
+<section class="body-content h-100" id="mainContent">
+    <div id="tabs" class="tab-content" style="display: none">
+        <div class="tab-pane active" id="onPage" role="tabpanel" aria-labelledby="onPage-tab">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 col-custom0" >
+                    <img style="width: 100px" class="loading" src="/assets/images/loader.gif" />
+                    <div class="list-group list-group-numbered" id="pagesUl" role="tablist">
+
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-12 col-custom1">
+                    <div class="tab-content sm_box box2" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="site-overview" role="tabpanel"
+                             aria-labelledby="list-site-overview">
+
+                            <div class="title_top_inp row">
+                                <div class="col-xl-5 col-lg-12">
+                                    <div class="site siteTitle">Website Stats</div>
+                                </div>
+                                <div class="col-xl-7 col-lg-12">
+                                    <div class="dropdown siteInpDrop">
+                                        <input data-hj-allow id="pageUrl" type="text" placeholder="" required>
+                                        <a href="javascript:addNewLandingPage();" class="btn btn-primary pageBtn"
+                                           id="landingDropdown"><i class="fas fa-plus"></i><span></span></a>
+                                        <a class="btn btn-primary pageBtn rescan"
+                                           href="javascript: rescanAllPages()">Rescan
+                                            All Pages</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row tests-counts-seoly">
+                                <div class="col-lg-4 col-sm-12">
+                                    <div id="pagesCountCont" class="main-page pg-count-of-test-count"
+                                         data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                                         data-bs-placement="bottom" data-bs-content=" ">
+                                        <span>Pages Count:</span>
+                                        <div id="pagesCount" class="all-same"></div>
+                                        <!--                                            <div id="pagesMsg"></div>-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <div id="sumSevereCont" class="main-page" data-bs-container="body"
+                                         data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom"
+                                         data-bs-content=" ">
+                                        <span>Severe Issues:</span>
+                                        <div id="sumSevere" class="all-same"></div>
+                                    </div>
+                                </div>
+                                <!--                                    <div class="col-lg-4 col-sm-12">-->
+                                <!--                                        <div id="sumSuccessCont" class="main-page"-->
+                                <!--                                             data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="">-->
+                                <!--                                            <span>Successful Tests:</span>-->
+                                <!--                                            <div id="sumSuccess" class="all-same"></div>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <div class="col-lg-4 col-sm-12">
+                                    <div id="sumWarningsCont" class="main-page" data-bs-container="body"
+                                         data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom"
+                                         data-bs-content=" ">
+                                        <span>Warnings:</span>
+                                        <div id="sumWarnings" class="all-same"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row main-tabs site-ov-main scorRow">
+                                <div class="col-lg-2 col-sm-12 ov-left">
+                                    <div class="main-overall">
+                                        <a style="cursor: pointer" style="cursor: default" data-toggle="tooltip"
+                                           data-placement="right"
+                                           title="Your Overall Website Optimization Score - it's important to optimize all your website pages to get high rankings in Google ">Overall
+                                            SEO
+                                            Score</a>
+                                        <div class="progress-loader">
+                                            <div class="percent">
+                                                <svg viewBox="0 0 140 140">
+                                                    <circle class="bg" cx="57" cy="57" r="52"></circle>
+                                                    <circle class="progress" cx="57" cy="57" r="52"></circle>
+                                                </svg>
+                                                <div id="overallScore" class="number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="col-lg-10 col-sm-12 ov-right
+                                            site-overview-head">
+                                    <div class="count row">
+                                        <div class="col-xl-4 col-lg-6 col-sm-12">
+                                            <div class="main-page title-issue ">
+                                                <img src="/assets/images/seoly/title-issue.svg" alt="">
+                                                <div class="ti-inner">
+                                                    <span>Title Issues:</span>
+                                                    <div id="sumTitleIssues" class="all-same"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-sm-12 ">
+                                            <div class="main-page title-issue">
+                                                <img src="/assets/images/seoly/meta-desk-tag.svg" alt="">
+                                                <div class="ti-inner">
+                                                        <span>Meta
+                                                            Description Tag
+                                                            Issues:</span>
+                                                    <div id="sumMetaDescIssues" class="all-same"></div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-sm-12 ">
+                                            <div class="main-page title-issue">
+                                                <img src="/assets/images/seoly/keyword-opt.svg" alt="">
+                                                <div class="ti-inner">
+                                                        <span>Keyword
+                                                            Optimization
+                                                            Issues:</span>
+                                                    <div id="sumKeywordsIssues" class="all-same"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-sm-12 ">
+                                            <div class="main-page title-issue">
+                                                <img src="/assets/images/seoly/bar.svg" alt="">
+                                                <div class="ti-inner">
+                                                        <span>Site
+                                                            Content
+                                                            (words):</span>
+                                                    <div id="sumWords" class="all-same"></div>
+                                                    <div id="sumWordsMsg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-sm-12 ">
+                                           <div class="main-page title-issue">
+                                                <img src="/assets/images/seoly/h1-tg.svg" alt="">
+                                                <div class="ti-inner">
+                                                    <span>Page Heading Issues:</span>
+                                                    <div id="sumH1Issues" class="all-same"></div>
+                                                </div>
+                                           </div>
+                                        </div>
+                                        <div class=" col-xl-4 col-lg-6 col-sm-12 ">
+                                            <div class="main-page title-issue">
+                                                <img src="/assets/images/seoly/key-density.svg" alt="">
+                                                <div class="ti-inner">
+                                                        <span>Keyword
+                                                            Density Issues:</span>
+                                                    <div id="sumKeywordDensity" class="all-same"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-12" id="topSevereIssues_onPageSEO">
+                                        <div class="server">
+                                            <div class="d-flex
+                                                            near-warn">
+                                                <h1>Top Severe Issues</h1>
+                                                <!--                                                <span>50</span>-->
+                                            </div>
+                                            <div id="fewSevere" class="warning-area">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--                                        <div class="upgradeBlock" style="display: none">-->
+                                    <!--                                            <h3>Upgrade to View</h3>-->
+                                    <!--                                            <button type="button">Upgrade</button>-->
+                                    <!--                                        </div>-->
+                                    <div class="col-lg-6 col-sm-12" id="topWarnings_onPageSEO">
+                                        <div class="server">
+                                            <div class="d-flex
+                                                            near-warn">
+                                                <h1>Top Warnings</h1>
+                                                <!--                                                <span>50</span>-->
+                                            </div>
+                                            <div id="fewWarnings" class="warning-area">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--                                        <div class="upgradeBlock" style="display: none">-->
+                                    <!--                                            <h3>Upgrade to View</h3>-->
+                                    <!--                                            <button type="button">Upgrade</button>-->
+                                    <!--                                        </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="offPage" role="tabpanel" aria-labelledby="offPage-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-1 col-sm-12">
+
+                        <div class="list-group off-page-side" id="list-tab" role="tablist">
+                            <a class="list-group-item
+                                        list-group-item-action active" id="publish-link-list" data-bs-toggle="list"
+                               href="#publish-link" role="tab" aria-controls="publish-link">
+                                <div class="img-bg"><img src="/assets/images/publish-or-update.svg" alt="">
+                                </div>
+                                <span class="publishOrUpdate">Publish Website</span>
+                            </a>
+<!--                            <a class="list-group-item list-group-item-action" id="new-link-list" data-bs-toggle="list" onclick="initBlogPostTitles(12)"-->
+                            <a class="list-group-item list-group-item-action" id="new-link-list" data-bs-toggle="list" onclick="initBlogPostTitles(12)"
+                               href="#new-link" role="tab" aria-controls="new-link">
+                                <div class="img-bg"><img src="/assets/images/seoly/newlinks.svg" alt=""></div>
+                                New Links
+                            </a>
+                            <a class="list-group-item
+                                        list-group-item-action" id="my-links-list" data-bs-toggle="list"
+                               href="#my-links" role="tab" aria-controls="my-links">
+                                <div class="img-bg"><img src="/assets/images/my-links.svg" alt=""></div>
+                                My
+                                Links
+                            </a>
+                            <a class="list-group-item
+                                        list-group-item-action" id="backlinks-crawler-list" data-bs-toggle="list"
+                               href="#backlinks-crawler" role="tab" aria-controls="backlinks-crawler">
+                                <div class="img-bg"><img src="/assets/images/my-links.svg" alt=""></div>
+                                Site Statistics
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <div class="tab-content" id="nav-offpage-tabContent">
+                            <div class="tab-pane fade show active" id="publish-link" role="tabpanel"
+                                 aria-labelledby="publish-link-list">
+                                <h2 class="publishOrUpdate">Publish Website</h2>
+                                <form id="savePublishDetailsUser" class="pt-2">
+                                    <!--                                        <div class="steps">-->
+                                    <!--                                            <span>Step 1</span>-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <h4>Website Details</h4>-->
+
+                                    <!--                                        <div class="porgress">-->
+                                    <!--                                            <img src="/assets/images/Progress-Bar.svg" alt="progrees" class="img-fluid">-->
+                                    <!--                                        </div>-->
+                                    <!-- <div class="" style="background:
+                                        linear-gradient(180deg,#9A61F8
+                                        0%, #5E2FBA 100%);width:
+                                        100%"></div> -->
+                                    <!-- sm -->
+                                    <!-- row start -->
+                                    <div class="tablListSeoly">
+                                        <div class="tablListSeolyItem">
+                                            <div class="tablListSeolyItemLeft"> 
+                                                <div class="nav" id="nav-tab" role="tablist">
+                                                    <a href="javascript:;"  class="active" id="seolyTabsCompanyDetails-tab" data-bs-toggle="tab" data-bs-target="#seolyTabsCompanyDetails" role="tab" aria-controls="seolyTabsCompanyDetails" aria-selected="true">Company Details <i class="fa-solid fa-arrow-right"></i> </a>
+                                                    <a href="javascript:;"  class="" id="seolyTabsBusinessDescription-tab" data-bs-toggle="tab" data-bs-target="#seolyTabsBusinessDescription" role="tab" aria-controls="seolyTabsBusinessDescription" aria-selected="true">Business Description <i class="fa-solid fa-arrow-right"></i> </a>
+                                                    <a href="javascript:;"  class="" id="seolyTabsGallery-tab" data-bs-toggle="tab" data-bs-target="#seolyTabsGallery" role="tab" aria-controls="seolyTabsGallery" aria-selected="true">Gallery <i class="fa-solid fa-arrow-right"></i> </a>
+                                                    <a href="javascript:;"  class="" id="seolyTabsSocialMedia-tab" data-bs-toggle="tab" data-bs-target="#seolyTabsSocialMedia" role="tab" aria-controls="seolyTabsSocialMedia" aria-selected="true">Social Media <i class="fa-solid fa-arrow-right"></i> </a>
+                                                </div>
+                                            </div>
+                                            <div class="tablListSeolyItemRight">
+                                                <div class="tab-content" id="nav-tabContent">
+                                                    <div class="tab-pane fade show active" id="seolyTabsCompanyDetails" role="tabpanel" aria-labelledby="seolyTabsCompanyDetails-tab" tabindex="0">
+                                                        <div class="seolyCompanyDetailsBox">
+                                                            <div class="seolyCompanyDetailsBoxLeft"> 
+                                                                <div class="sm_m_b  uplogo1">  
+                                                                          
+                                                                    <div class="drop-zone" onclick="changeLogo()">
+                                                                        <div id="logoForm" data-toggle="tooltip" title="Upload your Logo here">
+                                                                            <form name="photo" class="text-center" id="imageUploadForm" enctype="multipart/form-data"
+                                                                                    action="saveImgUser" method="post">
+ 
+                                                                                <input data-hj-allow type="file" name="pdfImage"
+                                                                                           id="pdfImage" onchange="changeImg()"
+                                                                                           class="drop-zone__input">
+                                                                                <img id="logoImg" alt="Upload Logo" style="display:none"/>
+                                                                                
+                                                                                <i class="fa-solid fa-camera-retro f-5 text-primary"  id="logoIcon"></i>
+                                                                                <p class="big" id="logoP"> Upload your Logo </p>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="upload-guide mt-2">
+                                                                        <ul>
+                                                                            <li> Do not include any person mage
+                                                                            </li>
+                                                                            
+                                                                            <li> Only use your business logo
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="seolyCompanyDetailsBoxRight">
+                     
+                    
+                                                                    <div class="sm_m_b  form-group">
+                                                                        <label>Company
+                                                                            Name</label>
+                                                                        <div>
+                                                                            <input data-hj-allow id="name" name="name" type="text"
+                                                                                   class="form-control " placeholder="Company
+                                                                                        Name" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sm_m_b form-group">
+                                                                        <label>Domain</label>
+                                                                        <div>
+                                                                            <input data-hj-allow id="domain" name="domain" type="text"
+                                                                                   class="form-control " placeholder="Domain" />
+                                                                        </div>
+                                                                    </div>
+                                                                
+                    
+                                                                <div class="sm_m_b  form-group">
+                                                                    <label>SEO Keywords</label>
+                                                                    <div class="sm_keyword">
+                                                                        <select id="keywordsToPromote" name="keyword" class="linkKeywordSelect
+                                                                                    js-example-placeholder-multiple" multiple="multiple"
+                                                                                placeholder="Keyword"></select>
+                                                                    </div>
+                                                                </div>
+                    
+                                                                <div class="inwraper">
+                                                                    <div class="sm_m_b  form-group">
+                                                                        <label>Classification</label>
+                                                                        <div>
+                                                                            <select id="categorySelect" name="category" type="text" class="categorySelect
+                                                                                        form-select
+                                                                                        form-select-lg
+                                                                                        dropdown-toggle
+                                                                                        js-example-placeholder-single" placeholder="category">
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                    
+                                                                    <div class="sm_m_b form-group">
+                                                                        <label class="grid-label"> Location
+                                                                               </label>
+                                                                        <div>
+                                                                            <select id="bizCountry" name="bizCountry"
+                                                                                    class="countrySelect form-select form-select-lg dropdown-toggle js-example-placeholder-single">
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                    
+                                                                    <div class="sm_m_b form-group">
+                                                                        <label class="grid-label"> Address </label>
+                                                                        <div>
+                                                                            <input data-hj-allow id="address" name="address" type="text"
+                                                                                   class="form-control
+                                                                                        " placeholder="Address" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sm_m_b form-group">
+                                                                        <label class="grid-label"> Phone </label>
+                                                                        <div>
+                                                                            <input data-hj-allow id="phone" name="phone" type="text"
+                                                                                   class="form-control
+                                                                                        " placeholder="Phone" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="sm_m_b form-group">
+                                                                        <label class="grid-label"> Add Youtube Video
+                                                                          </label>
+                                                                        <div>
+                                                                            <input id="youtubeMarketingVideo" name="youtubeMarketingVideo" type="text" class="form-control form-control-lg"
+                                                                            placeholder="https://www.youtube.com/marketing-video"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="tab-pane fade" id="seolyTabsBusinessDescription" role="tabpanel" aria-labelledby="seolyTabsBusinessDescription-tab" tabindex="0">
+                                                        
+                                                        <div class="sm_m_b form-group">
+                                                            <label>Contact Us Page</label>
+                                                            <input id="contactUsPage" name="contactUsPage" type="text" class="form-control  "
+                                                                   placeholder="https://www.your-domain/contact-us"/>
+                                                        </div>
+                                                        <div class="sm_m_b form-group">
+                                                            <label>Blog Page</label>
+                                                            <input id="blogPage" name="blogPage" type="text" class="form-control "
+                                                                    placeholder="https://www.your-domain/blog"/>
+                                                        </div>
+                                                        
+                                                        <div class="sm_m_b form-group">
+                                                            <label>SEO Tags
+                                                                <img src="/assets/images/home_icon/information.png" height="16" alt="" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                                                                     data-bs-placement="bottom" data-bs-content="SEO tags are preset keywords or categories, such as beauty, fashion, or clothes, used in listings or guest posts to categorize and enhance visibility on search engines, making them more relevant to users seeking related content or businesses">
+                                                            </label>
+                                                            <select id="articleTags" name="tags" class="js-example-placeholder-multiple" multiple="multiple"></select>
+                                                        </div>
+                                                        <div class="sm_m_b  form-group">
+                                                            <label> About the Company </label>
+                                                            <div>
+                                                                    <textarea rows="6" id="description" name="description" class="form-control
+                                                                            "
+                                                                              placeholder="Description"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="sm_m_b  form-group">
+                                                            <label> Business Hours </label>
+                                                            <textarea rows="6" id="businessHours" name="businessHours" class="form-control "
+                                                                      placeholder="Monday-Friday: 9:00 AM - 6:00 PM Please note that these hours are subject to change, and it's always a good idea to check for any updates or special holiday hours. We look forward to serving you during our regular business hours!"></textarea>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="tab-pane fade" id="seolyTabsGallery" role="tabpanel" aria-labelledby="seolyTabsGallery-tab" tabindex="0">
+                                                        <div class="imagesUploadPublishList mb-3">
+                                                            <div class="imagesUploadPublish">
+                                                                
+                                                                <form class="text-center" id="uploadGalleryImgUser" enctype="multipart/form-data" method="post" style="display: none">
+                                                                    <input type='file' name="userImage" id="userImage" onchange="uploadImageGallery('uploadGalleryImgUser')" hidden>
+                                                                </form>
+                                                            </div>
+                                                       </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="seolyTabsSocialMedia" role="tabpanel" aria-labelledby="seolyTabsSocialMedia-tab" tabindex="0">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="sm_m_b  form-group">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <div>
+                                                                            <img src="/assets/images/newicon/facebook_purpal.png" height="22" width="22" />
+                                                                        </div>
+                                                                        <div  class="w-100">
+                                                                            <label> Facebook Page</label>
+                                                                            <input id="facebook" name="facebook" type="text" class="form-control form-control-lg"
+                                                                            placeholder="https://www.facebook.com/company-name"/>
+                                                                        </div>
+                                                                    </div> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="sm_m_b  form-group">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <div>
+                                                                            <img src="/assets/images/newicon/instagram_purpal.png" height="22" width="22" />
+                                                                        </div>
+                                                                        <div class="w-100">
+                                                                            <label> Instagram </label>
+                                                                            <input id="instagram" name="instagram" type="text" class="form-control form-control-lg" 
+                                                                             placeholder="https://www.instagram.com/company-name/"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="sm_m_b  form-group">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <div>
+                                                                            <img src="/assets/images/newicon/youtube_purpal.png" height="22" width="22" />
+                                                                        </div>
+                                                                        <div class=" w-100">
+                                                                            <label>  Youtube Channel </label>
+                                                                            <input id="youtube" name="youtube" type="text" class="form-control form-control-lg" 
+                                                                             placeholder="https://www.youtube.com/@company-name"/>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="sm_m_b  form-group">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <div>
+                                                                            <img src="/assets/images/newicon/twitter_purpal.png" height="22" width="22" />
+                                                                        </div>
+                                                                        <div class=" w-100">
+                                                                            <label>  Twitter  </label>
+                                                                            <input id="twitter" name="twitter" type="text" class="form-control form-control-lg" placeholder="https://www.twitter.com/company-name">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                        
+                                                      
+                                                    </div>
+                                                     <!-- row end -->
+                                                    <div class="m-4 sm_btn_position">
+                                                        <button type="button" onclick="publishLink()" class="f-width-btn btn btn-primary
+                                                                    btn-next-form sm_btn" id="publishMyWebsite"
+                                                                style="width: 100%;margin-bottom: 20px;">SAVE BUSINESS PROFILE
+                                                        </button>
+                                                        <span class="loader loadingBar" style=""></span>
+                                                    </div>
+                                                    <div style="display: none;
+                                                                margin-top: 10px;" class="alert
+                                                                alert-success" role="alert">
+                                                        <div class="d-flex">
+                                                            <p class="my-0">Your details
+                                                                have been saved
+                                                                successfully
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="new-link" role="tabpanel"
+                                 aria-labelledby="new-link-list">
+                                <br />
+                                <div class="row avaialable-credeits">
+                                    <div class="col-lg-6 col-sm-12">
+                                        <h2>Order New Link</h2>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="credits-avail">Available
+                                            Credits
+                                            <strong><span id="availableCredits"></span></strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="listing_form">
+                                    <form id="createRequestLink">
+                                        <div class="row">
+                                            <div class="col-lg-4
+                                                        col-sm-12">
+                                                <label class="">Landing Page
+                                                    <span class="tooltip_sm">
+                                                            <img src="/assets/images/links4u/tooltip.png">
+                                                            <div class="right">
+                                                                <div class="text-content">
+                                                                    <h4>What
+                                                                        is
+                                                                        the
+                                                                        landing
+                                                                        page?</h4>
+                                                                    <p>The
+                                                                        page
+                                                                        you
+                                                                        want
+                                                                        to
+                                                                        point
+                                                                        to,
+                                                                        usually
+                                                                        it
+                                                                        would
+                                                                        be
+                                                                        your
+                                                                        homepage,
+                                                                        but
+                                                                        you
+                                                                        can
+                                                                        also
+                                                                        choose
+                                                                        to
+                                                                        promote
+                                                                        another
+                                                                        page
+                                                                        in
+                                                                        your
+                                                                        website</p>
+                                                                </div>
+                                                                <i></i>
+                                                            </div>
+                                                        </span>
+                                                </label>
+                                                <input data-hj-allow id="linkHref" name="linkHref" type="text"
+                                                       class="form-control
+                                                            form-control-lg" placeholder="" />
+                                            </div>
+                                            <div class="col-lg-4
+                                                        col-sm-12">
+                                                <label class="link-type">Link
+                                                    Type
+                                                    <span class="tooltip_sm">
+                                                            <img src="/assets/images/links4u/tooltip.png">
+                                                            <div class="right">
+                                                                <div class="text-content">
+                                                                    <h4>What
+                                                                        is
+                                                                        the
+                                                                        Link
+                                                                        Type?</h4>
+                                                                    <p>The
+                                                                        website
+                                                                        where
+                                                                        we
+                                                                        should
+                                                                        create
+                                                                        the
+                                                                        link
+                                                                        for
+                                                                        you...
+                                                                    </p>
+                                                                </div>
+                                                                <i></i>
+                                                            </div>
+                                                        </span>
+                                                </label>
+                                                <select id="linkType" onchange="changeLinkType()" class="form-control
+                                                            form-control-lg" name="orderLinkType">
+                                                    <option value="Premium Listing">Directory Listing <div
+                                                            class="creditsCount">(1 Credit)</div>
+                                                    </option>
+                                                    <option value="Article" selected>Enterprise Guest Blog <div class="creditsCount">(4 Credits)</div>
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="sm_m_b row">
+                                                <div class="col-sm-12">
+                                                    <label class="mt-3
+                                                            grid-label">
+                                                            <span>Keyword to Promote <span class="tooltip_sm">
+                                                                    <img src="/assets/images/links4u/tooltip.png">
+                                                                    <div class="right">
+                                                                        <div class="text-content">
+                                                                            <h4>What is the keyword?</h4>
+                                                                            <p>Many links can show more than your url,
+                                                                                so if you want to promote a specific
+                                                                                keyword let us know</p>
+                                                                        </div>
+                                                                        <i></i>
+                                                                    </div>
+                                                                </span></span>
+                                                        <span>One Keyword Only</span>
+                                                    </label>
+                                                    <select id="blogLinkKeyword" name="linkKeyword" onchange="initBlogPostTitles(12)" class="form-control
+                                                            form-select
+                                                            dropdown-toggle
+                                                            js-example-placeholder-single
+                                                            myKeywordSelect"></select>
+                                                    <div class="spinner-border
+                                                                    ms-auto" role="status" aria-hidden="true" style="display:
+                                                                    none;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="sm_m_b row articleTitleDiv">
+                                                <div class="col-sm-12">
+                                                    <label class="mt-3
+                                                            grid-label">
+                                                            <span>Guest Blog Title <span class="tooltip_sm">
+                                                                    <img src="/assets/images/links4u/tooltip.png">
+                                                                    <div class="right">
+                                                                        <div class="text-content">
+                                                                            <h4>What is the guest blog title?</h4>
+                                                                            <p>Using smart AI models we generate few titles that should match your domain and the keyword you're trying to promote, choose the most suitable title for you and we will try to generate a post accordingly.</p>
+                                                                        </div>
+                                                                        <i></i>
+                                                                    </div>
+                                                                </span></span>
+                                                    </label>
+                                                    <select id="articleTitle" name="title" class="form-control
+                                                            form-select
+                                                            dropdown-toggle
+                                                            js-example-placeholder-single"></select>
+                                                </div>
+                                            </div>
+<!--                                            <div class="sm_m_b row">-->
+<!--                                                <div class="col-sm-12">-->
+<!--                                                    <label class="grid-label">-->
+<!--                                                            <span>Comment <span class="tooltip_sm">-->
+<!--                                                                    <img src="/assets/images/links4u/tooltip.png">-->
+<!--                                                                    <div class="right">-->
+<!--                                                                        <div class="text-content">-->
+<!--                                                                            <p>The comment is for our team, it will not be shown in your listing</p>-->
+<!--                                                                        </div>-->
+<!--                                                                        <i></i>-->
+<!--                                                                    </div>-->
+<!--                                                                </span></span>-->
+<!--                                                        <span>(Optional)</span>-->
+<!--                                                    </label>-->
+<!--                                                    <input data-hj-allow id="comment" name="comment" type="text"-->
+<!--                                                           class="form-control-->
+<!--                                                            form-control-lg" placeholder="" />-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+
+                                            <div class="sm_m_b row
+                                                    sm_number">
+                                                <div class="col-sm-12">
+                                                    <label class="">Number of links to order</label>
+                                                    <input data-hj-allow name="linksCount" type="number" class="form-control
+                                                            form-control-lg" min="1" max="7" value="1"
+                                                           placeholder="1" />
+                                                </div>
+                                            </div>
+                                            <div class="sm_m_b row">
+                                                <div class="col-sm-12">
+                                                    <button type="button" id="submitNewLinkBtn" class="btn
+                                                            btn-primary
+                                                            btn-next-form
+                                                            sm_btn" onclick="submitLinkRequestForm()">
+                                                        Submit New Link
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="my-links" role="tabpanel"
+                                 aria-labelledby="my-links-list">
+                                <ul class="list-style-none actionkey_ul keywordk_title">
+                                    <li class="actionkey_li firstTitle">
+                                        <h2 class="tab-custom-title">My Published Links</h2>
+                                    </li>
+                                    <li class="actionkey_li">
+                                        <button class="nav-link sm_btn nice-button" type="button"
+                                                onclick="$('#new-link-list')[0].click();">Create New Link</button>
+                                    </li>
+                                </ul>
+                                <div class="rabbitTable">
+                                    <table id="monitoringLinkTableLive" class="table align-middle
+                                                border-bottom-0 hover" style="width:100%">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td colspan="12" class="text-center">
+                                                <strong>
+                                                    <div class="spinner-border
+                                                                    ms-auto" role="status" aria-hidden="true" style="display:
+                                                                    none;"></div>
+                                                </strong>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- <div class="rabbitTable" id="my-link-inner">
+                            <table id="monitoringLinkTableLive"
+                                class="table align-middle border-bottom-0 hover" style="width:100%">
+                                <thead class="my-link-tbhead">
+                                    <tr>
+                                        <th>Domain Name</th>
+                                        <th>Link</th>
+                                        <th>Type</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="12" class="text-center">
+                                            <strong>
+                                                <div class="spinner-border ms-auto" role="status"
+                                                    aria-hidden="true" style="display: none;"></div>
+                                            </strong>
+                                        </td>
+                                        <td>Onlinebusinesses.site/business ..</td>
+                                        <td>www.hortonshauling.org</td>
+                                        <td>Premium Listing</td>
+                                        <td><span class="status"><img src="/assets/images/status.svg" alt=""></span>
+                                            Online</td>
+                                        <td>
+                                            <a style="cursor: pointer" class="action-date"> 20th October, 2021
+                                                <img src="/assets/images/dots.svg" /></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> -->
+                            </div>
+                            <div class="tab-pane fade" id="backlinks-crawler" role="tabpanel"
+                                 aria-labelledby="backlinks-crawler-list">
+                                <div class="card page-card mb-4">
+                                    <div class="card-body pb-0">
+                                        <!-- <h3 class="cardTitle mb-4">General Details</h3> -->
+                                        <div class="row">
+                                            <div class="col-lg-2
+                                                        col-sm-6">
+
+                                                <div class="col-lg-12
+                                                            col-md-12 mb-44px
+                                                            for-bg-color-1" id="backlinks_siteStatics"
+                                                     data-bs-container="body" data-bs-toggle="popover"
+                                                     data-bs-trigger="hover" data-bs-placement="bottom"
+                                                     data-bs-content="This value indicates the number of backlinks linking to your website.">
+                                                    <div class="d-flex">
+                                                        <div class="searchicon_box">
+                                                            <img src="/assets/images/icon/backlink1.svg" alt="Image">
+                                                        </div>
+                                                        <div class="searchbox_text">
+                                                            <h4 id="backlinks" tooltip="indicates
+                                                                        the
+                                                                        number
+                                                                        of
+                                                                        backlinks">
+                                                                <div class="spinner-border
+                                                                            ms-auto" role="status" aria-hidden="true">
+                                                                </div>
+                                                            </h4>
+                                                            <span>Backlinks</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!--col-2-->
+                                            <div iv class="col-lg-2
+                                                        col-sm-6">
+
+                                                <div class="col-lg-12
+                                                            col-md-12 mb-44px
+                                                            for-bg-color-2" id="referringpages_siteStatics"
+                                                     data-bs-container="body" data-bs-toggle="popover"
+                                                     data-bs-trigger="hover" data-bs-placement="bottom"
+                                                     data-bs-content="This
+                                                            value indicates the
+                                                            number of referring
+                                                            pages linking to
+                                                            your website, (one
+                                                            website can link to
+                                                            your website from
+                                                            multiple pages)">
+                                                    <div class="d-flex">
+                                                        <div class="searchicon_box">
+                                                            <img src="/assets/images/icon/refering.svg" alt="Image">
+                                                        </div>
+                                                        <div class="searchbox_text">
+                                                            <h4 id="referring_pages">
+                                                                <div class="spinner-border
+                                                                            ms-auto" role="status" aria-hidden="true">
+                                                                </div>
+                                                            </h4>
+                                                            <span>Referring
+                                                                    Pages</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--col-2-->
+                                            <div class="col-lg-8
+                                                        col-sm-12">
+
+                                                <div class="row">
+                                                    <div class="col-lg-4
+                                                                col-sm-6">
+
+                                                        <div id="referringDomains_siteStatics" class="col-lg-12
+                                                                    col-md-6
+                                                                    mb-44px
+                                                                    for-white-bg" data-bs-container="body"
+                                                             data-bs-toggle="popover" data-bs-trigger="hover"
+                                                             data-bs-placement="bottom" data-bs-content="This
+                                                                    value
+                                                                    indicates
+                                                                    the number
+                                                                    of referring
+                                                                    domains
+                                                                    linking to
+                                                                    your
+                                                                    website.">
+                                                            <div class="d-flex">
+                                                                <div class="searchicon_box">
+                                                                    <img src="/assets/images/icon/refering-domain.svg"
+                                                                         alt="Image">
+                                                                </div>
+                                                                <div class="searchbox_text">
+                                                                    <h4 id="referring_domains">
+                                                                        <div class="spinner-border
+                                                                                    ms-auto" role="status"
+                                                                             aria-hidden="true"></div>
+                                                                    </h4>
+                                                                    <span>Referring
+                                                                            Domains</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4
+                                                                col-sm-6">
+                                                        <div id="brokenBacklinks_siteStatics" class="col-lg-12
+                                                                    col-md-6
+                                                                    mb-44px
+                                                                    for-white-bg" data-bs-container="body"
+                                                             data-bs-toggle="popover" data-bs-trigger="hover"
+                                                             data-bs-placement="bottom" data-bs-content="This
+                                                                    value
+                                                                    indicates
+                                                                    the number
+                                                                    of broken
+                                                                    backlinks
+                                                                    that are
+                                                                    linking to
+                                                                    your
+                                                                    website, you
+                                                                    should fix
+                                                                    all of them
+                                                                    so there
+                                                                    will be no
+                                                                    broken
+                                                                    backlinks
+                                                                    linking to
+                                                                    you. You can
+                                                                    easily do it
+                                                                    by create a
+                                                                    page with
+                                                                    the url of
+                                                                    that link.">
+                                                            <div class="d-flex">
+                                                                <div class="searchicon_box">
+                                                                    <img src="/assets/images/icon/broken-link.svg"
+                                                                         alt="Image">
+                                                                </div>
+                                                                <div class="searchbox_text">
+                                                                    <h4 id="broken_backlinks">
+                                                                        <div class="spinner-border
+                                                                                    ms-auto" role="status"
+                                                                             aria-hidden="true"></div>
+                                                                    </h4>
+                                                                    <span>Broken
+                                                                            Backlinks</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4
+                                                                col-sm-6">
+                                                        <div id="brokenPages_siteStatics" class="col-lg-12
+                                                                    col-md-6
+                                                                    mb-44px
+                                                                    for-white-bg" data-bs-container="body"
+                                                             data-bs-toggle="popover" data-bs-trigger="hover"
+                                                             data-bs-placement="bottom" data-bs-content="This
+                                                                    value
+                                                                    indicates
+                                                                    the number
+                                                                    of broken
+                                                                    pages on the
+                                                                    target that
+                                                                    respond with
+                                                                    4xx or 5xx
+                                                                    status
+                                                                    codes.">
+                                                            <div class="d-flex">
+                                                                <div class="searchicon_box">
+                                                                    <img src="/assets/images/icon/broken-pages.svg"
+                                                                         alt="Image">
+                                                                </div>
+                                                                <div class="searchbox_text">
+                                                                    <h4 id="broken_pages">
+                                                                        <div class="spinner-border
+                                                                                    ms-auto" role="status"
+                                                                             aria-hidden="true"></div>
+                                                                    </h4>
+                                                                    <span>Broken
+                                                                            Pages</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4
+                                                                col-sm-6">
+                                                        <div id="siteRank_siteStatics" class="col-lg-12
+                                                                    col-md-6
+                                                                    mb-44px
+                                                                    for-white-bg" data-bs-container="body"
+                                                             data-bs-toggle="popover" data-bs-trigger="hover"
+                                                             data-bs-placement="bottom" data-bs-content="Website
+                                                                    Rank (Page
+                                                                    Rank) is
+                                                                    Google’s
+                                                                    algorithm
+                                                                    designed to
+                                                                    measure the
+                                                                    importance
+                                                                    of a webpage
+                                                                    based on the
+                                                                    quality and
+                                                                    quantity of
+                                                                    webpages
+                                                                    that refer
+                                                                    to it. Pages
+                                                                    that have
+                                                                    high
+                                                                    PageRank
+                                                                    (i.e., a
+                                                                    large number
+                                                                    of quality
+                                                                    backlinks)
+                                                                    are
+                                                                    perceived as
+                                                                    more
+                                                                    authoritative
+                                                                    by Google
+                                                                    and rank
+                                                                    better than
+                                                                    those with
+                                                                    lower
+                                                                    PageRank.">
+                                                            <div class="d-flex">
+                                                                <div class="searchicon_box">
+                                                                    <img src="/assets/images/icon/site-rank.svg"
+                                                                         alt="Image">
+                                                                </div>
+                                                                <div class="searchbox_text">
+                                                                    <h4 id="targetRank">
+                                                                        <div class="spinner-border
+                                                                                    ms-auto" role="status"
+                                                                             aria-hidden="true"></div>
+                                                                    </h4>
+                                                                    <span>Site
+                                                                            Rank</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4
+                                                                col-sm-6">
+                                                        <div id="internalBacklinks_siteStatics" class="col-lg-12
+                                                                    col-md-6
+                                                                    mb-44px
+                                                                    for-white-bg" data-bs-container="body"
+                                                             data-bs-toggle="popover" data-bs-trigger="hover"
+                                                             data-bs-placement="bottom" data-bs-content="Shows
+                                                                    how many
+                                                                    internal
+                                                                    links your
+                                                                    website has,
+                                                                    it is
+                                                                    calculated
+                                                                    as the sum
+                                                                    of internal
+                                                                    links on the
+                                                                    pages of the
+                                                                    specified
+                                                                    website.">
+                                                            <div class="d-flex">
+                                                                <div class="searchicon_box">
+                                                                    <img src="/assets/images/icon/internal-link.svg"
+                                                                         alt="Image">
+                                                                </div>
+                                                                <div class="searchbox_text">
+                                                                    <h4 id="internal_links_count">
+                                                                        <div class="spinner-border
+                                                                                    ms-auto" role="status"
+                                                                             aria-hidden="true"></div>
+                                                                    </h4>
+                                                                    <span>Internal
+                                                                            Backlinks</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4
+                                                                col-sm-6">
+                                                        <div id="externalBacklinks_siteStatics" class="col-lg-12
+                                                                    col-md-6
+                                                                    mb-44px
+                                                                    for-white-bg" data-bs-container="body"
+                                                             data-bs-toggle="popover" data-bs-trigger="hover"
+                                                             data-bs-placement="bottom" data-bs-content="Shows
+                                                                    how many
+                                                                    external
+                                                                    links your
+                                                                    website has,
+                                                                    it is
+                                                                    calculated
+                                                                    as the sum
+                                                                    of external
+                                                                    links on the
+                                                                    pages of the
+                                                                    specified
+                                                                    website.">
+                                                            <div class="d-flex">
+                                                                <div class="searchicon_box">
+                                                                    <img src="/assets/images/icon/external-backlink.svg
+                                                                                " alt="Image">
+                                                                </div>
+                                                                <div class="searchbox_text">
+                                                                    <h4 id="external_links_count">
+                                                                        <div class="spinner-border
+                                                                                    ms-auto" role="status"
+                                                                             aria-hidden="true"></div>
+                                                                    </h4>
+                                                                    <span>External
+                                                                            Backlinks</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!--row-->
+                                            </div>
+                                            <!--col-8-->
+                                        </div>
+                                        <!---row-->
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <h2 class="site-st-link-head">Backlinks</h2>
+                                            </div>
+                                            <div class="col-lg-8 col-sm-12">
+                                                <div class="export-btn export-btn-2 ">
+                                                    <div class="row">
+                                                        <!--                                                            <div class="col-lg-4">-->
+                                                        <!--                                                                <select class="form-select-->
+                                                        <!--                                                                        form-select-lg" id="choose-cols"-->
+                                                        <!--                                                                    name="choose-cols">-->
+                                                        <!--                                                                    <option value="0">Choose-->
+                                                        <!--                                                                        Columns-->
+                                                        <!--                                                                    </option>-->
+                                                        <!--                                                                </select>-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                            <div class="col-lg-4">-->
+                                                        <!--                                                                <button class="xlsButton"><img src="/assets/images/export-icon.svg">Export To Excel</button>-->
+                                                        <!--                                                            </div>-->
+                                                        <!--                                                            <div class="col-lg-4">-->
+                                                        <!--                                                                <input data-hj-allow type="text" class="crawlerLinksTableSearch" placeholder="Search...">-->
+                                                        <!--                                                            </div>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rabbitTable upgradeBlock_box">
+                                            <table id="linksList" class="table
+                                                        align-middle
+                                                        border-bottom-0 hover" style="width:100%">
+                                                <thead class="thead-dark"></thead>
+                                                <tbody>
+                                                <td colspan="12" class="text-center">
+                                                    <strong>
+                                                        <div class="spinner-border
+                                                                        ms-auto" role="status" aria-hidden="true">
+                                                        </div>
+                                                    </strong>
+                                                </td>
+                                                </tbody>
+                                            </table>
+                                            <div class="upgradeBlock" style="display: none">
+                                                <button type="button"><img src="/assets/seoly/up-arrow.svg"
+                                                                           alt="up-arrow">Upgrade to View</button>
+                                            </div>
+
+                                            <!--                                                <div class="upgradeBlock" style="display: none">-->
+                                            <!--                                                    <h3>Upgrade to see YOUR-->
+                                            <!--                                                        WEBSITE LINKS here</h3>-->
+                                            <!--                                                    <button type="button">Upgrade-->
+                                            <!--                                                        to Premium-->
+                                            <!--                                                    </button>-->
+                                            <!--                                                </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="ranks" role="tabpanel" aria-labelledby="ranks-tab">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-1 col-sm-12 keywordLeftMenubar">
+                        <!-- 28 -->
+                        <div class="list-group" id="list-keywords-tab" role="tablist">
+                            <a class="list-group-item
+                                        list-group-item-action active" id="my-keywords-list" data-bs-toggle="list"
+                               href="#my-keywords" role="tab" aria-controls="my-keywords">
+                                <div class="img-bg"><img src="/assets/images/ranked-keyword2.svg" alt=""></div>
+                                My
+                                Keywords
+                            </a>
+                            <a class="list-group-item
+                                        list-group-item-action" id="ranked-keywords-list" data-bs-toggle="list"
+                               href="#ranked-keywords" role="tab" aria-controls="ranked-keywords">
+                                <div class="img-bg"><img src="/assets/images/my-keywords2.svg" alt=""></div>
+                                Ranked Keywords
+                            </a>
+                            <a class="list-group-item
+                                        list-group-item-action" id="suggested-keywords-list" data-bs-toggle="list"
+                               href="#suggested-keywords" role="tab" aria-controls="suggested-keywords">
+                                <div class="img-bg"><img src="/assets/images/key.svg" alt=""></div>
+                                Trending
+                                Keywords
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-11 col-sm-12 keywordLeftContainer">
+                        <div class="tab-content" id="nav-ranks-tabContent">
+                            <div class="tab-pane fade show active" id="my-keywords" role="tabpanel"
+                                 aria-labelledby="my-keywords-list">
+                                <div>
+                                    <ul class="list-style-none actionkey_ul keywordk_title">
+                                        <li class="actionkey_li firstTitle">
+                                            <h2>My Keywords</h2>
+                                        </li>
+                                        <!--                                            <li class="actionkey_li">-->
+                                        <!--                                                <a href="javascript:;" title="XLS" id="xlsButton" class="ks_buttn-->
+                                        <!--                                                        d-inline-block">-->
+                                        <!--                                                    <img src="/assets/images/icon/xls.svg" alt="XLS" />-->
+                                        <!--                                                </a>-->
+                                        <!--                                            </li>-->
+                                        <!--                                            <li class="actionkey_li">-->
+                                        <!--                                                <div class="keywordSearch">-->
+                                        <!--                                                    <img src="/assets/images/icon/search.svg" alt="Search" />-->
+                                        <!--                                                    <input data-hj-allow type="text" class="form-control" id="keywordSearch"-->
+                                        <!--                                                        placeholder="Search..." />-->
+                                        <!--                                                </div>-->
+                                        <!--                                            </li>-->
+                                        <li class="actionkey_li kewWordDrop">
+                                            <div class="dropdown" data-intro="Add New
+                                                        Keywords to your list,
+                                                        we track them daily so
+                                                        you can see the progress
+                                                        of your website. You can
+                                                        choose which search
+                                                        engine and search type
+                                                        like desktop / mobile">
+                                                <a href="javascript:;" class="btn btn-primary pageBtn" style="padding: 21px;
+                                                    padding-left: 24px;
+                                                    padding-right: 24px;" id="keywordsDropdown"
+                                                   data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                        class="fas fa-plus"></i></a>
+                                                <div class="customeDropdown dropdown-menu
+                                                            dropdown-menu-end
+                                                            form_dropdown mt-2
+                                                            mb-2 shadow
+                                                            border-0" aria-labelledby="keywordsDropdown">
+                                                    <div class="text-right">
+                                                        <a href="javascript:;" class="close" title="Close"
+                                                           data-bs-dismiss="modal" aria-label="Close">
+                                                            <img src="/assets/images/icon/remove.png" alt="Close">
+                                                        </a>
+                                                    </div>
+                                                    <form id="keywordForm">
+                                                        <div class="mb-3">
+                                                            <h5 class="mb-0
+                                                                        dropTitle">Add
+                                                                New
+                                                                Keyword</h5>
+                                                        </div>
+                                                        <div class="mb-3
+                                                                    select2CustomForm">
+                                                            <label for="searchEngineSelect" class="formLable">Search
+                                                                Engine</label>
+                                                            <select id="searchEngineSelect" name="newSearchEngine"
+                                                                    class="searchEngineSelect form-control form-select dropdown-toggle"></select>
+                                                        </div>
+                                                        <div class="mb-3
+                                                                    select2CustomForm">
+                                                            <label for="device" class="formLable">Device</label>
+                                                            <select id="device" name="device" class="form-control
+                                                                        form-select
+                                                                        dropdown-toggle">
+                                                                <option value="desktop">Desktop
+                                                                </option>
+                                                                <option value="mobile">Mobile
+                                                                </option>
+                                                                <!--                                                <option value="Both">Both</option>-->
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-3" id="keywordsSelectContDiv">
+                                                            <label for="keywordTermSelect"
+                                                                   class="formLable">Keywords</label>
+                                                            <select id="keywordTermSelect" class="linkKeywordSelect
+                                                                        form-control
+                                                                        form-select
+                                                                        dropdown-toggle
+                                                                        js-example-placeholder-multiple"
+                                                                    multiple="multiple"></select>
+                                                        </div>
+                                                        <div class="text-end
+                                                                    mt-4">
+                                                            <button type="button" class="btn
+                                                                        btn-primary
+                                                                        btn-lg
+                                                                        pageBtn
+                                                                        w-100" id="addKeyword"
+                                                                    onclick="saveKeyword()">Add
+                                                                Keywords
+                                                            </button>
+                                                        </div>
+                                                        <div id="keywordsAddedDiv" style="display:
+                                                                    none" class="alert
+                                                                    alert-success
+                                                                    landingSuccess" role="alert">
+                                                            <div class="d-flex">
+                                                                <p class="my-0">Your
+                                                                    Keywords
+                                                                    were
+                                                                    added
+                                                                    successfully,
+                                                                    usually
+                                                                    it
+                                                                    takes
+                                                                    between
+                                                                    10-40
+                                                                    seconds
+                                                                    until
+                                                                    you
+                                                                    can
+                                                                    see
+                                                                    live
+                                                                    results!</p>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="actionkey_li">
+                                            <div class="addhideColumn
+                                                        dropdown">
+                                                <!--                                        <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown"-->
+                                                <!--                                           aria-expanded="false"><h3 class="cardTitle mb-0">Columns<i-->
+                                                <!--                                                class="fas fa-chevron-down"></i></h3></a>-->
+                                                <!--                                        <form id="saveColHideShowForm" class="dropdown-menu py-3 showHideColsMenu"-->
+                                                <!--                                              aria-labelledby="addhideColumn">-->
+                                                <!--                                            <div id="refreshLoading" style="display: none" class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+                                                <!--                                            <div class="container">-->
+                                                <!--                                                <div class="row" style="width: 1100px">-->
+                                                <!--                                                    <div class="col-md-2">-->
+                                                <!--                                                        <ul id="showHideCols">-->
+                                                <!--                                                            <li><span class="boldBlue">General</span></li>-->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                    <div class="col-md-3">-->
+                                                <!--                                                        <ul id="showHideColsKeyword">-->
+                                                <!--                                                            <li><span class="boldBlue">Keyword</span></li>-->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                    <div class="col-md-3">-->
+                                                <!--                                                        <ul id="showHideColsLandingPage">-->
+                                                <!--                                                            <li><span class="boldBlue">Landing Page</span></li>-->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                    <div class="col-md-2">-->
+                                                <!--                                                        <ul id="showHideColsLastDays">-->
+                                                <!--                                                            <li><span class="boldBlue">Last Days</span></li>-->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                    <div class="col-md-2">-->
+                                                <!--                                                        <ul id="showHideColsLastYear">-->
+                                                <!--                                                            <li><span class="boldBlue">Last Year</span></li>-->
+                                                <!--                                                        </ul>-->
+                                                <!--                                                    </div>-->
+                                                <!--                                                </div>-->
+                                                <!--                                            </div>-->
+                                                <!--                                            <div class="text-end px-3">-->
+                                                <!--                                                <button type="button" onclick="saveColHideShow('keywordsTable')" class="btn btn-primary pageBtn">Save for next time</button>-->
+                                                <!--                                            </div>-->
+                                                <!--                                        </form>-->
+                                            </div>
+                                        </li>
+                                        <li class="actionkey_li">
+                                            <div class="row avaialable-credeits">
+                                                <div>
+                                                    <div class="keywords-credits credits-avail"
+                                                         style="min-width: 350px">
+                                                        <div class="progress">
+                                                            <div class="progress-bar" role="progressbar"
+                                                                 aria-valuenow="25" aria-valuemin="0"
+                                                                 aria-valuemax="100">
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between"
+                                                             id="keyword_usage"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="rabbitTable mb-4 ">
+                                    <table class="table notranslate
+                                                hover" id="keywordsTable" style="width: 100%;
+                                                margin-top:20px">
+                                        <thead id="keywordsTableHeader" class="text-primary
+                                                    thead-dark" data-intro="You can choose
+                                                    which columns to show, for
+                                                    example you can choose to
+                                                    see if landing page of the
+                                                    given keyword contains the
+                                                    keyword etc.">
+                                        </thead>
+                                        <tbody data-intro="Click on the
+                                                    keyword to see more details,
+                                                    you can see the top 100
+                                                    results, and also you can
+                                                    track your progress and see
+                                                    the previous ranks you had.
+                                                    You can also find Related
+                                                    Keywords and add them to
+                                                    your list">
+                                        <tr>
+                                            <td>
+                                                <div class="spinner-border
+                                                                ms-auto" role="status" aria-hidden="true">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ranked-keywords" role="tabpanel"
+                                 aria-labelledby="ranked-keywords-list">
+                                <ul class="list-style-none actionkey_ul keywordk_title">
+                                    <li class="actionkey_li firstTitle">
+                                        <h2 class="tab-custom-title">Ranked Keywords</h2>
+                                    </li>
+                                </ul>
+                                <div class="rabbitTable">
+                                    <table id="rankedKeywords" class="table align-middle
+                                                border-bottom-0 hover" style="width:100%">
+                                        <thead class="thead-dark">
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td colspan="10" class="text-center">
+                                                <div class="spinner-border
+                                                                ms-auto" role="status" aria-hidden="true">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+<!--                                    <div class="upgradeBlock" style="display: none">-->
+<!--                                        <h3>Upgrade to see more results</h3>-->
+<!--                                        <p>To view more results, you-->
+<!--                                            must upgrade <br>-->
+<!--                                            your current subscription</p>-->
+<!--                                        <button type="button">Upgrade to-->
+<!--                                            Premium-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="suggested-keywords" role="tabpanel"
+                                 aria-labelledby="suggested-keywords-list">
+                                <h2 class="tab-custom-title">Trending Keywords Research</h2>
+                                <div class="rabbitTable">
+                                    <table id="keywordIdeasTable" class="table align-middle
+                                                border-bottom-0 hover" style="width:100%">
+                                        <thead id="keywordIdeasTableHeader" class="text-primary
+                                                    thead-dark">
+                                        </thead>
+                                        <tbody>
+                                        <td colspan="12" class="text-center">
+                                            <strong>
+                                                <div class="spinner-border
+                                                                ms-auto" role="status" aria-hidden="true">
+                                                </div>
+                                            </strong>
+                                        </td>
+                                        </tbody>
+                                    </table>
+                                    <div class="upgradeBlock" style="display: none">
+                                        <h3>Upgrade to find the perfect
+                                            keywords for your website</h3>
+                                        <button type="button">Upgrade
+                                            Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="competitors" role="tabpanel"
+                                 aria-labelledby="competitors-list">
+                                <h2 class="tab-custom-title">My Competitors</h2>
+                                <br />
+                                <select name="keywordIdsList" class="keywordIdsList
+                                                            form-control
+                                                            form-select js-example-placeholder-multiple
+                                                            dropdown-toggle" multiple="multiple"></select>
+                                <button class="nav-link" type="button"
+                                        onclick="selectAll('.keywordIdsList', false)">Clear All</button>
+                                <button class="nav-link sm_btn nice-button" type="button"
+                                        onclick="showCompetitors()">Find Competitors</button>
+                                <div id="compsList">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane sm_upgrade_tab" id="upgrade" role="tabpanel" aria-labelledby="upgrade-tab">
+            <div class="container py-3 newPriceSection" id="plans">
+                <div class="card mb-3">
+                    <div class="card-body"> 
+<!--                        <div class="row">-->
+<!--                            <div class="col-md-7">-->
+<!--                                <div class="card extraCard">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <div class="row align-items-center">-->
+<!--                                            <div class="col-8">-->
+<!--                                                <div class="d-flex align-items-center flex-wrab gap-2">-->
+<!--                                                    <strong>noorilmi.com</strong> -->
+<!--                                                    <span class="outline_badge"> Premium Plan</span>  -->
+<!--                                                </div>-->
+<!--                                                <div>-->
+<!--                                                    Your subscribtion will be renew on <span class="text-primary">01 January 2024</span>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="col-4">-->
+<!--                                                <button class="btn rounded-pill btn-outline-secondary w-100">Unsubscribe</button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                     
+                        <div class="planNewCustom">
+                            <div class="row g-0">
+                                <div class="col-md-2">
+                                    <div class="bg-new">
+                                         <div class="pricing_top_area">
+                                            <div class="annualy_check ">
+                                                <div class="anualyCheckBox active">
+                                                    <input data-hj-allow onclick="toggleYearly()" checked type="checkbox" name="annullyCheck"
+                                                           id="annullyCheck">
+                                                    <label for="annullyCheck">
+                                                        <p class="monthly">Monthly</p>
+                                                        <span class="checkDesign"></span>
+                                                        <p class="yearly"> Yearly <span class="savepercent">SAVE 23%
+                                                                </span>
+                                                        </p>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customRow fw-bold text-center">
+                                        Keyword
+                                    </div>
+                                    <div class="customRow fw-bold text-center">
+                                        Page Optimization
+                                    </div>
+                                    <div class="customRow fw-bold text-center">
+                                        OFF Page SEO
+                                    </div>
+                                    <div class="customRow fw-bold text-center">
+                                        Hot Keyword Research
+                                    </div>
+                                    <div class="customRow fw-bold text-center">
+                                        Backlink Explorer
+                                    </div>
+                                   
+                                </div>
+                                <div class="col">
+                                    <main>
+                                        <div class="row row-cols-1 g-0 row-cols-md-4 mb-0
+                                                    text-center planRow">
+
+                                        </div>
+                                    </main> 
+                                </div>
+                            </div>
+                        </div>
+                       <!--  <header class="text-center">
+                            <h2>Plans & Pricing</h2>
+
+                            <div class="pricing_top_area">
+                                <div class="annualy_check ">
+                                    <div class="anualyCheckBox  mb-4">
+                                        <input data-hj-allow onclick="toggleYearly()" type="checkbox" name="annullyCheck"
+                                               id="annullyCheck">
+                                        <label for="annullyCheck">
+                                            <p class="monthly">Monthly</p>
+                                            <span class="checkDesign"></span>
+                                            <p class="yearly"> Yearly <span class="savepercent">SAVE 50%
+                                                    </span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </header> -->
+                        
+
+                        <div class="card border-0 mb-3">
+                            <div class="card-body">
+                                <div class="text-primary"><strong>Hot Keyword research</strong></div>
+                                <div>Involves identifying currently trending or popular keywords that are generating a high volume of searches or online interest</div>
+                            </div>
+                        </div>
+                        <div class="card border-0 mb-3">
+                            <div class="card-body">
+                                <div class="text-primary"><strong>Backlink Explorer</strong></div>
+                                <div>Tool that helps identify and analyze the links pointing to a specific website or webpage. It provides information about where these links come from, their quality, anchor text, and helps understand a site's link profile for SEO purposes.</div>
+                            </div>
+                        </div>
+                        <div class="card border-0 mb-3">
+                            <div class="card-body">
+                                <div class="text-primary"><strong>Page Optimization</strong></div>
+                                <div>It includes optimizing content, meta tags, images, URLs, and other elements to enhance user experience and make the page more appealing to both search engines and users.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <p class="text-center">*Prices are in USD</p>
+                <div class="sm_playing_big">
+                    <h2>Playing big?<br> <a href="javascript:openContactUsModal()"
+                                            style="text-decoration: none;"><span>Contact
+                                    us</span></a>
+                        for a Custom Plan</h2>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card extraCard mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div><strong>Contact US</strong></div>
+                                        <div>Have an Question about The Features or Pricing & Plan?</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="javascript:openContactUsModal()" class="btn btn-primary rounded-pill w-100">
+                                            Contact US
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card extraCard mb-3">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <div><strong>Cancel your membership?</strong></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-outline-secondary rounded-pill w-100" onclick="deleteAccount()">
+                                           Remove Account
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane sm_listings sm_settings_tab" id="settings" role="tabpanel"
+             aria-labelledby="settings-tab">
+            <h2 class="text-center sm_title_1">Settings</h2>
+            <div class="sm_settings">
+                <div class="listing_bg">
+                    <div id="settingsDiv" class="listing_form">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="body-pd" class="mainContent">
+            <div class="container mainpage-content welcome_section">
+                <div class="sm_flex_box" id="signupDiv" style="display:
+                        none">
+                    <div class="sm_box box2">
+                        <div class="sm_center">
+                            <div class="welcome-seoonly">
+                                <h2 class="sm_title_1 sm_h_50">Welcome to
+                                    SEOly</h2>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <form id="onboardingKeywordForWebsite">
+                                            <!-- sm -->
+                                            <div class="sm_m_b row">
+                                                <label class="col-sm-3">Domain</label>
+                                                <div class="col-sm-9">
+                                                    <input data-hj-allow id="url" name="url" type="text" class="form-control
+                                                            form-control-lg" placeholder="Enter Your Domain" />
+                                                </div>
+                                            </div>
+
+                                            <div class="sm_m_b row">
+                                                <label class="col-sm-3">Keywords to Promote</label>
+                                                <div class="col-sm-9
+                                                        sm_keyword">
+                                                    <select id="newKeyword" name="multiKeywords" class="form-control
+                                                            form-select
+                                                            dropdown-toggle
+                                                            js-example-placeholder-multiple
+                                                            linkKeywordSelectMax3" multiple="multiple"></select>
+                                                </div>
+                                            </div>
+
+                                            <div class="sm_m_b row">
+                                                <label class="col-sm-3">Search
+                                                    Engine</label>
+                                                <div class="col-sm-9
+                                                        sm_keyword">
+                                                    <select name="newSearchEngine" class="searchEngineSelect
+                                                            form-control
+                                                            form-select
+                                                            dropdown-toggle"></select>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4
+                                                    sm_btn_position">
+                                                <button type="button" onclick="submitOnboarding()" class="btn btn-primary
+                                                        btn-next-form sm_btn">Submit
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="frame-img">
+                                            <img src="/assets/images/seoly/Frame.svg" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+<div class="overlay"></div>
+
+<div class="modal fade" id="ourModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true"></div>
+<div id="askReviewModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" style="top: 200px;">
+    <div class="modal-dialog" role="document" style="width: 500px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Get a free article with link & Boost your traffic! <img src='/assets/images/icon/giftbox.png'
+                                                                                   class='smallIcon' />
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#askReviewModal').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Write us a good review and have a free Article with link!
+                <br />
+                <a class="reviewLink"></a>
+                <br />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-lg pageBtn"
+                        onclick="$('#askReviewModal').modal('hide');">No, Thanks
+                </button>
+                <button type="button" onclick="submitUserAddedReview()"
+                        class="btn btn-primary btn-lg pageBtn">Submit Good Review</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="appDataModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 80%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--                    <h5 class="modal-title"></h5>-->
+                <span class="loader loadingBar" style=""></span>
+                <button type="button" class="close" onclick="$('#appDataModal').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="$('#appDataModal').modal('hide');">Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modalMessage" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#modalMessage').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="modalFirstButton" type="button" class="btn
+                            btn-secondary" onclick="$('#modalMessage').modal('hide');">Close
+                </button>
+                <a id="modalConfirmBtn" style="cursor: pointer; display: none" class="btn btn-primary">Yes</a>
+                <button id="modalSecondButton" type="button" class="btn
+                            btn-primary">Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal js-loading-bar fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="modalLoadingProgressBar" style="display: none">
+                    <h5 class="align-items-center modalLoadingTitle"></h5>
+                    <div id="percentProgress" class="progress">
+                        <div class="progress-bar progress-bar-striped" style="min-width: 20px;"></div>
+                    </div>
+                    <div id="nonPercentProgress" class="progress">
+                        <div class="progress-bar progress-bar-striped
+                                    progress-bar-animated" role="progressbar" aria-label="Animated striped example"
+                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                    <br />
+                    <h5 class="align-items-center modalLoadingText"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="confirmModal" class="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Confirm</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">Are you sure you want to delete?</div>
+            <div class="modal-footer">
+                <button id="cancelButton" type="button" class="btn
+                            btn-secondary" onclick="$('#confirmModal').modal('hide');">No
+                </button>
+                <button id="confirmButton" type="button" class="btn
+                            btn-primary">Yes
+                </button>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="deletebtn">Delete</button>
+</div>
+<div id="pageOverviewTemplate" style="display: none">
+    <div class="d-flex flex-column">
+        <div class="row">
+            <div id="pageUrlLink" class="mt-3 col-9"></div>
+            <div class="test-page col-3 d-flex justify-content-md-end justify-content-around">
+                <a id="removePage" style="cursor: pointer" class="btn btn-primary pageBtn
+                        addnewkeyBtn d-flex align-items-center"><i class="fa-solid fa-trash"></i></a>
+                <a id="testPageAgain" style="cursor: pointer" class="testPageAgain btn btn-primary pageBtn addnewkeyBtn">Rescan
+                    Page</a>
+            </div>
+        </div>
+        <div class="pageTitle page-title-two"></div>
+    </div>
+    <div class="row main-tabs site-ov-main scorRow">
+        <div class="col-lg-2 col-md-12 col-sm-12 ov-left">
+            <div class="main-overall">
+                Page SEO Score
+                <div class="progress-loader pg-score">
+                    <div class="percent">
+                        <svg viewBox="0 0 140 140">
+                            <circle class="bg" cx="57" cy="57" r="52"></circle>
+                            <circle class="progress" cx="57" cy="57" r="52"></circle>
+                        </svg>
+                        <div id="pageScore"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="col-lg-10 col-md-12 col-sm-12 ov-right">
+            <div class="row sever">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="main-page d-flex sever-check" style="padding-left: 5px;">
+                        <img src="/assets/images/Layer 2.svg" alt="">
+                        <span>Successful Tests</span>
+                        <div id="successTest"></div>
+                    </div>
+                    <br />
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="main-page d-flex warnings-one
+                                sever-check" style="padding-left: 5px;">
+                        <img src="/assets/images/Exclude1.svg" alt="">
+                        <span style="font-size: 14px;">Severe</span>
+                        <div id="severeIssues"></div>
+                        <!--                            <div id="severeIssues" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content=" "></div>-->
+                        <br />
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="main-page d-flex warnings-two
+                                sever-check" style="padding-left: 5px;">
+                        <img src="/assets/images/Exclude2.svg" alt="">
+                        <span style="font-size: 14px;">Warnings</span>
+                        <div id="warnings"
+                             style="margin-left: 19px;
+                                    background: linear-gradient(180deg, rgb(154 97 248 / 15%) 0%, rgb(94 47 186 / 15%) 100%);"></div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="keyword off-page-keyhoston" style="margin-top:96px; position: relative;">
+                <select style="min-width: 80px;"
+                        class="keywordsSelectForLandingPages js-example-placeholder-single form-select dropdown-toggle"></select>
+            </div>
+        </div>
+    </div>
+    <span class="loader loadingBar" style=""></span>
+    <div id="pageTitleSection" class="upgradeBlock_box" style="background: #fff;padding: 18px 15px 30px
+                20px;border-radius: 20px;border: 1px solid #F5F4F4;">
+        <!-- <h5>(Page title section - 2 items)</h5> -->
+
+        <div class="pg-wrapper">
+            <h4 class="page-title d-flex" style="font-size: 15px;color:
+                        #fff;">
+                <img src="/assets/images/Group 48912 (3).svg" alt="" style="margin-right: 20px;">
+                <span class="descript"> Page Title <span class="pipe">|</span>
+                    </span>
+                <div>
+                        <span class="wrapOverflow">
+                            <span class="overflowRow overflowWidth" style="">
+                                <div class="pageTitle"></div>
+                            </span>
+                            <span class='overflowTooltip'>
+                                <div class="pageTitle"></div>
+                            </span>
+                        </span>
+                </div>
+
+            </h4>
+            <a style="cursor: pointer" target="_blank" class="howToChangeLink"></a>
+        </div>
+        <div id="titleLength" class="alert">
+                <span>
+                    <div class="main-keyword d-flex" style="">
+
+                        <div class="msgIcon"></div>
+                        <div class="msgType"></div>
+                        <h5><span>- Title Length</span></h5>
+                    </div>
+                    <div class="msgContent"></div>
+                </span>
+        </div>
+        <div id="keywordInTitle" class="alert">
+                <span>
+                    <div class="main-keyword d-flex">
+                        <div class="msgIcon"></div>
+                        <div class="msgType"></div>
+                        <h5><span>- Title with Keyword</span></h5>
+                    </div>
+                    <div class="msgContent"></div>
+                </span>
+        </div>
+        <div class="upgradeBlock" style="display: none">
+            <button type="button"><img src="/assets/seoly/up-arrow.svg" alt="up-arrow"> Upgrade to View</button>
+        </div>
+    </div>
+    <br />
+    <div id="contentSection">
+        <div class="row">
+            <div class="col-xl-6 col-lg-12 col-sm-12 mb-xl-0 mb-lg-3">
+                <div id="wordsCount" class="alert with-info upgradeBlock_box">
+                        <span>
+
+                            <h5><span><img src="/assets/images/Group 48912 (2).svg" alt="" style="margin-right: 20px;">Words
+                                    Count</span>
+                                <a style="cursor: pointer" target="_blank" class="howToChangeLink"></a>
+                            </h5>
+                            <!--                                <div class="upgrade-ico"><img-->
+                            <!--                                        src="/assets/images/upgrade.svg" alt=""></div>-->
+                            <!--                                &lt;!&ndash; for showing upgrade image &ndash;&gt;-->
+                            <!--                                <div class="wrapper-for-upg"> &lt;!&ndash; it's a wrapper-for update div just use this wrapper and above div to show the upgrade button &ndash;&gt;-->
+                            <div class="main-keyword d-flex" style="margin: 18px 0 15px;">
+
+                                <div class="msgIcon" style="margin-right: 31px;"></div>
+                                <div class="msgType"></div>
+                            </div>
+                            <div class="msgContent"></div>
+                            <!--                                </div> &lt;!&ndash; wrapper end&ndash;&gt;-->
+                        </span>
+                    <div class="upgradeBlock columBtn" style="display: none">
+                        <button type="button"><img src="/assets/seoly/up-arrow.svg" alt="up-arrow"> Upgrade to
+                            View</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-6 col-lg-12 col-sm-12">
+                <div id="keywordDensity" class="alert with-info upgradeBlock_box">
+                        <span>
+                            <h5><span><img src="/assets/images/Group 48912 (1).svg" alt="" style="margin-right: 20px;">Keyword
+                                    Density</span>
+                                <a style="cursor: pointer" target="_blank" class="howToChangeLink"></a>
+                            </h5>
+
+                            <div class="main-keyword d-flex" style="margin:
+                                    18px 0 15px;">
+                                <div class="msgIcon" style="margin-right: 31px;"></div>
+                                <div class="msgType"></div>
+                            </div>
+                            <div class="msgContent"></div>
+                        </span>
+                    <div class="upgradeBlock columBtn" style="display: none">
+                        <button type="button"><img src="/assets/seoly/up-arrow.svg" alt="up-arrow"> Upgrade to
+                            View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="metaDescSection" class="upgradeBlock_box" style="background: #fff;padding: 18px 15px 30px
+                20px;border-radius: 20px;border: 1px solid #F5F4F4;">
+        <div class="pg-wrapper">
+            <h4 class="d-flex" style="font-size: 15px;color: #fff;"><img src="/assets/images/Group 48912 (5).svg" alt=""
+                                                                         style="margin-right: 20px;"><span class="descript">Meta
+                        Description</span>
+                <div><span class="wrapOverflow">
+                            <span class="overflowRow overflowWidth" style="display: none;">
+                                <div class="metaDescContent"></div>
+                            </span>
+                            <span class='overflowTooltip'>
+                                <div class="metaDescContent"></div>
+                            </span>
+                        </span></div>
+            </h4>
+            <a style="cursor: pointer" target="_blank" class="howToChangeLink"></a>
+        </div>
+        <div id="metaDescLength" class="alert">
+                <span>
+                    <div class="main-keyword d-flex">
+                        <div class="msgIcon" style="margin-right:
+                                    30px;"></div>
+                        <div class="msgType"></div>
+                        <h5><span>- Meta Description Length</span></h5>
+                    </div>
+                    <div class="msgContent"></div>
+                </span>
+        </div>
+        <div id="keywordInMetaDesc" class="alert">
+                <span>
+                    <div class="main-keyword d-flex">
+                        <div class="msgIcon" style="margin-right:
+                                    30px;"></div>
+                        <div class="msgType"></div>
+                        <h5><span>- Meta Description with Keyword</span></h5>
+                    </div>
+                    <div class="msgContent"></div>
+                </span>
+        </div>
+
+        <div class="upgradeBlock" style="display: none">
+            <button type="button"><img src="/assets/seoly/up-arrow.svg" alt="up-arrow"> Upgrade to View</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-xl-6 col-lg-12 mb-xl-3 mb-lg-3">
+                    <div id="h1Section" class="upgradeBlock_box">
+                        <div class="pg-wrapper add-meta-tgs head1">
+                            <h4>
+                                <img src=" images/Group 48912 (4).svg" alt="" style="margin-right: 20px;">
+                                <div class="descript">
+                                    <h3>Page Heading Messages</h3>
+                                    <div>
+                                            <span class="wrapOverflow">
+                                                <span class="overflowRow overflowWidth" style="width: 200px;">
+                                                    <div class="h1Content"></div>
+                                                </span>
+                                                <span class='overflowTooltip'>
+                                                    <div class="h1Content"></div>
+                                                </span>
+                                            </span>
+                                    </div>
+                                </div>
+                            </h4>
+                            <a style="cursor: pointer" target="_blank" class="howToChangeLink"></a>
+                        </div>
+                        <div id="h1Length" class="alert">
+                                <span>
+                                    <div class="main-keyword d-flex">
+
+                                        <div class="msgIcon" style="margin-right: 32px;"></div>
+                                        <div class="msgType"></div>
+                                        <h5><span>- Page Heading Length</span></h5>
+                                    </div>
+                                    <div class="msgContent"></div>
+                                </span>
+                        </div>
+                        <!--                            <div id="h1Count" class="alert">-->
+                        <!--                                <span>-->
+                        <!--                                    <div class="main-keyword d-flex">-->
+
+                        <!--                                        <div class="msgIcon" style="margin-right: 32px;"></div>-->
+                        <!--                                        <div class="msgType"></div>-->
+                        <!--                                        <h5><span>- H1 Tag Count</span></h5>-->
+                        <!--                                    </div>-->
+                        <!--                                    <div class="msgContent"></div>-->
+                        <!--                                </span>-->
+                        <!--                            </div>-->
+                        <div id="keywordInH1" class="alert">
+                                <span>
+                                    <div class="main-keyword d-flex">
+                                        <div class="msgIcon" style="margin-right: 32px;"></div>
+                                        <div class="msgType"></div>
+                                        <h5><span>- Keyword in Page Heading</span></h5>
+                                    </div>
+                                    <div class="msgContent"></div>
+                                </span>
+                        </div>
+                        <div id="h2Exists" class="alert">
+                                <span>
+                                    <div class="main-keyword d-flex">
+
+                                        <div class="msgIcon" style="margin-right: 32px;"></div>
+                                        <div class="msgType"></div>
+                                        <h5><span>- H2 Tag Existence</span></h5>
+                                    </div>
+                                    <div class="msgContent"></div>
+                                </span>
+                        </div>
+                        <div class="upgradeBlock columBtn" style="display: none">
+                            <button type="button"><img src="/assets/seoly/up-arrow.svg" alt="up-arrow"> Upgrade to
+                                View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12 mb-xl-3 mb-lg-3">
+                    <div id="additionalMetaSection" class="upgradeBlock_box">
+                        <div class="pg-wrapper add-meta-tgs">
+                            <h4><img src="/assets/images/Group 48912 (5).svg" alt="" style="margin-right: 20px;">Additional
+                                Meta
+                                Tags
+                            </h4>
+                            <a style="cursor: pointer" target="_blank" class="howToChangeLink"></a>
+                        </div>
+                        <!--                            <div id="metaKeywords" class="alert">-->
+                        <!--                                <span>-->
+                        <!--                                    <div class="main-keyword d-flex">-->
+
+                        <!--                                        <div class="msgIcon" style="margin-right: 32px;"></div>-->
+                        <!--                                        <div class="msgType"></div>-->
+                        <!--                                        <h5><span>- Meta Keywords Tag</span></h5>-->
+                        <!--                                    </div>-->
+                        <!--                                    <div class="msgContent"></div>-->
+                        <!--                                </span>-->
+                        <!--                            </div>-->
+                        <div id="metaOgSiteName" class="alert">
+                                <span>
+                                    <div class="main-keyword d-flex">
+
+                                        <div class="msgIcon" style="margin-right: 32px;"></div>
+                                        <div class="msgType"></div>
+                                        <h5><span>- Meta Site Name Tag</span></h5>
+                                    </div>
+                                    <div class="msgContent"></div>
+                                </span>
+                        </div>
+                        <div id="metaOgSiteUrl" class="alert">
+                                <span>
+                                    <div class="main-keyword d-flex">
+
+                                        <div class="msgIcon" style="margin-right: 32px;"></div>
+                                        <div class="msgType"></div>
+                                        <h5><span>- Meta Site Url Tag</span></h5>
+                                    </div>
+                                    <div class="msgContent"></div>
+                                </span>
+                        </div>
+                        <div class="upgradeBlock columBtn" style="display: none">
+                            <button type="button"><img src="/assets/seoly/up-arrow.svg" alt="up-arrow"> Upgrade to
+                                View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+<!--            <div class="col-12">-->
+<!--                <div class="col-12" style="background: #fff;padding: 18px 15px 30px-->
+<!--                            20px;border-radius: 20px;border: 1px solid #F5F4F4;">-->
+<!--                    <span>Page Content:</span>-->
+<!--                    <div id="pageContent"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+    <div class="full-width-rescan-bottom fullWIdthReScan">
+        <div class="full-width-rescan-bottom-real-div" style="cursor: pointer">
+            <a style="cursor: pointer" onclick="window.scrollTo(0, 0);" class="testPageAgain">Rescan This Page</a>
+        </div>
+        <div style="width:95%;height:20px;"></div>
+    </div>
+</div>
+<div style="display: none" id="keywordSuggestions"></div>
+<div class="modal fade SeolyseoModel" id="paymentModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+</div>
+<script>
+  function showGalleryFromJson(json) {
+        console.log('GalleryImages ' + JSON.stringify(json));
+        var totalItems = 10;
+        $('.imageItem').hide();
+        if (json && json['obj']) {
+            const myArray = json['obj'].split(",");
+            totalItems = totalItems - myArray.length ;
+            console.log('showGalleryFromJson myArray ' + myArray)
+            if (myArray.length > 0) {
+                for (const image of myArray) {
+                    console.log('showGalleryFromJson curr image ' + image);
+                    if (image && image.length > 1) {
+                        $('.imagesUploadPublishList').append('<div class="imagesUploadPublish imageItem"  onclick="deleteImage(\'' + image + '\')">' +
+                            '<div class="uploadGalleryNoimg"><img src="https://dlnil54eooeso.cloudfront.net/gallery/' + image + '.png" ' +
+                            'style="height: 105px;"/>  </div> <button type="button" class="btn btn-sm btn-outline-danger my-2">  <i class="fas fa-trash-alt"></i> <span>Remove </span></button></div>');
+                    }
+                }
+            }
+        }
+        $('.uploadGalleryImgNew').remove();
+            for(var j=0;j<totalItems; j++)
+            { 
+            $('.imagesUploadPublishList').append('<div class="uploadGalleryImgNew" style="cursor: pointer" onclick="$(\'#uploadGalleryImgUser input#userImage\').click()"> <div class="uploadGalleryNoimg"> <img src="assets/images/newicon/farme_logo.png" class="noimage" alt="noimage" /> </div> <button type="button" class="btn btn-sm btn-outline-primary my-2">  <img src="assets/images/newicon/uploadImage.png" height="22"  width="22"/> <span>Upload </span></button> </div>');
+        }
+    }
+    function showImageGallery() { 
+        $.getJSON(getApiUrl('getMyJsonGalleryUser'), function (json) {
+            showGalleryFromJson(json);
+        });
+    }
+</script>

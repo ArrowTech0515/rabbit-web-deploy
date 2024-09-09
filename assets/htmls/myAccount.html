@@ -1,0 +1,368 @@
+<div id="settingModalContent" class="modal" style="display:block; background: rgba(0, 0, 0, 0.5); z-index: 1000;"> 
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Settings</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="$('#settingModalContent').remove();">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-0">
+                    <div class="card page-card mb-4">
+                        <div class="card-body p-0">
+                            <ul class="nav nav-tabs searchTab" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="first-tab" data-bs-toggle="tab"
+                                       data-bs-target="#first" type="button" role="tab" aria-controls="first"
+                                       aria-selected="true"><img src="/assets/images/home_icon/icon_web.png" height="20">
+                                        <span>General</span></a>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#five"
+                                       type="button" role="tab" aria-controls="five" aria-selected="false"><img
+                                            src="/assets/images/home_icon/icon_notice.png" height="20"> <span>Notifications</span></a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="six-tab" data-bs-toggle="tab" data-bs-target="#six"
+                                       type="button" role="tab" aria-controls="six" aria-selected="false"> <img
+                                            src="/assets/images/home_icon/icon_user.png" height="20"> <span>Credentials</span></a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="first" role="tabpanel"
+                                     aria-labelledby="first-tab">
+                                    <div class="pt-3">
+                                        <h5 class="tabTitle">Information</h5>
+                                        <form id="updateAccountDetailsUser">
+
+                                            <div class="settingForm generalForm max-w-470">
+
+                                                <div class="mb-2 form-group">
+                                                    <label class="settingLabel">Domain</label>
+                                                    <input id="wixUrl" name="wixUrl" type="text" class="form-control w-100"
+                                                           placeholder="Domain"/>
+                                                </div>
+                                                <div class="mb-2 form-group">
+                                                    <label class="settingLabel">Company Name</label>
+                                                    <input id="name" name="name" type="text" class="form-control w-100"
+                                                           placeholder="Company Name"/>
+                                                </div>
+                                                <div class="mb-2 form-group">
+                                                    <label class="settingLabel">First Name</label>
+                                                    <input id="firstName" name="firstName" type="text"
+                                                           class="form-control w-100" placeholder="First Name"/>
+
+                                                </div>
+                                                <div class="mb-2 form-group">
+                                                    <label class="settingLabel">Last Name</label>
+                                                    <input id="lastName" name="lastName" type="text"
+                                                           class="form-control w-100" placeholder="Last Name"/>
+                                                </div>
+                                                <div class="mb-2 form-group">
+                                                    <label class="settingLabel">Phone</label>
+                                                    <input id="phone" name="phone" type="text"
+                                                           class="form-control w-100" placeholder="Phone"/>
+                                                </div>
+                                                <div id="searchEngineDiv" class="mb-2 form-group">
+                                                    <label class="settingLabel">Search Engine
+                                                    <img src="/assets/images/home_icon/material-symbols_help.png"
+                                                         style="height: 18px;"
+                                                         class="searchEngineDivHelp"
+                                                         alt="help">
+                                                    </label>
+                                                    <select name="newSearchEngine"
+                                                            class="searchEngineSelect form-control w-100 form-select dropdown-toggle"></select>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4">
+                                                <button type="button" onclick="saveFormAndRefreshDetails(this)"
+                                                        class="btn btn-primary w-100">Save
+                                                </button>
+                                            </div>
+                                            <div style="display: none; margin-top: 10px;" class="alert alert-success"
+                                                 role="alert">
+                                                <div class="d-flex">
+                                                    <p class="my-0">Your details have been saved successfully</p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+                                    <div class="py-24px">
+                                        <h5 class="tabTitle">Display Settings</h5>
+                                        <form id="addUserExtraDataGeneric">
+                                            <div class="settingForm generalForm max-w-470">
+                                                <div class="mb-3 select2CustomForm">
+                                                    <label for="tableView" class="formLable">Tables</label>
+                                                    <select id="tableView" name="tableView"
+                                                            class="form-control form-select dropdown-toggle">
+                                                        <option value="comfort">Comfort View</option>
+                                                        <option value="compact">Compact View</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3 select2CustomForm">
+                                                    <label for="tooltips" class="formLable" data-bs-container="body"
+                                                           data-bs-toggle="popover" data-bs-trigger="hover"
+                                                           data-bs-placement="top" data-bs-content="This is a tooltip">Tooltips</label>
+                                                    <select id="tooltips" name="tooltips"
+                                                            class="form-control form-select dropdown-toggle">
+                                                        <option value="show">Show Tooltips</option>
+                                                        <option value="hide">Hide Tooltips</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3 select2CustomForm">
+                                                    <label for="showDetailsBelowTable" class="formLable"
+                                                           data-bs-container="body" data-bs-toggle="popover"
+                                                           data-bs-trigger="hover" data-bs-placement="top"
+                                                           data-bs-content="Show the details of the row (for example landing pages overview) below the table or below that row">Show
+                                                        row details below table</label>
+                                                    <select id="showDetailsBelowTable" name="showDetailsBelowTable"
+                                                            class="form-control form-select dropdown-toggle">
+                                                        <option value="true">Yes</option>
+                                                        <option value="false">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mt-4">
+                                                <button type="button" onclick="saveDisplaySettings()"
+                                                        class="btn btn-primary w-100">Save
+                                                </button>
+                                            </div>
+                                            <div style="display: none; margin-top: 10px;" class="alert alert-success"
+                                                 role="alert">
+                                                <div class="d-flex">
+                                                    <p class="my-0">Your details have been saved successfully</p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
+                                    <div class="pt-4 notiForm min-h-424">
+                                        <form id="updateDailyEmailUserEmailNotification">
+                                            <h6 class="mb-2 align-items-center d-flex gap-3">Notification
+<!--                                                <div class="switch_check">-->
+<!--                                                    <div class="switchCheckBox">-->
+<!--                                                        <input type="checkbox" name="NotificationSwitch"-->
+<!--                                                               id="NotificationSwitch">-->
+<!--                                                        <label for="NotificationSwitch">-->
+<!--                                                            <span class="switchDesign"></span>-->
+<!--                                                        </label>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                            </h6>
+                                            <div class="mb-3">
+                                                <label>Email for receiving notifications</label>
+                                                <input type="text" id="extraEmails" name="extraEmails"
+                                                       class="form-control w-100" placeholder="name@example.com">
+                                            </div>
+                                            <hr/>
+                                            <h6>Backlinks</h6>
+                                            <div class="mb-2">
+                                                <div class="form-check d-flex align-items-center">
+                                                    <input class="form-check-input" type="checkbox" id="emailNewLink"
+                                                           name="emailNewLink">
+                                                    <label class="form-check-label mb-0 d-flex align-items-center selectText" for="emailNewLink">Email New Listings / Blog Posts Links that were created
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-4">
+                                                <div class="form-check d-flex align-items-center">
+                                                    <input class="form-check-input" type="checkbox" id="weeklyLinksMail"
+                                                           name="weeklyLinksMail">
+                                                    <label class="form-check-label mb-0 d-flex align-items-center selectText"
+                                                           for="weeklyLinksMail">Email All Links Together Once a Week
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <h6>Rankings</h6>
+
+                                            <div class="mb-2">
+                                                <div class="form-check d-flex align-items-center mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="emailFreqOn"
+                                                           name="emailFreqOn">
+                                                    <label class="form-check-label mb-0 d-flex align-items-center selectText"
+                                                           for="emailFreq">Email Rankings (days a week) <br/>
+                                                    </label>
+
+                                                </div>
+                                                <input type="number" name="emailFreq" id="emailFreq"
+                                                       class="form-control w-60px" value="5" min="0" max="7">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <div class="form-check d-flex align-items-center">
+                                                    <input class="form-check-input" type="checkbox"
+                                                           id="dailyEmailAllRanks" name="dailyEmailAllRanks[]">
+                                                    <label class="form-check-label mb-0 d-flex align-items-center selectText"  for="dailyEmailAllRanks">Email all rankings, not only changes from last day
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label class="form-check-label mb-0 d-flex align-items-center selectText">Or notify me:</label>
+                                                <div class="form-check d-flex align-items-center ps-0">
+                                                    <label class="form-check-label mb-0 d-flex align-items-center selectText" for="notifyUpLimit">
+                                                        On <span class="text-success d-inline-block px-2">UP</span> <span>of at least</span> <input type="number" name="notifyUpLimit" id="notifyUpLimit" class="form-control w-60px" value="5" min="1" max="100"> <span>positions</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="form-check d-flex align-items-center ps-0">
+                                                    <!--                <input class="form-check-input" type="checkbox" value="">-->
+                                                    <label class="form-check-label mb-0 d-flex align-items-center selectText" for="notifyDownLimit">
+                                                        On <span class="text-danger d-inline-block px-2">DOWN</span> <span>of at least</span> <input type="number" name="notifyDownLimit" id="notifyDownLimit" class="form-control w-60px"  value="5" min="1" max="100"> <span>positions</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <button type="button" onclick="saveFormAndRefreshDetails(this);"
+                                                    class="btn btn-primary w-100">Save
+                                            </button>
+
+                                            <div style="display: none; margin-top: 10px;" class="alert alert-success"
+                                                 role="alert">
+                                                <div class="d-flex">
+                                                    <p class="my-0">Your email settings have been saved successfully</p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="six-tab">
+                                    <div class="pt-4">
+                                        <div class="settingForm generalForm max-w-800">
+                                            <p class="externalUserNote text-muted">
+                                                Instead of using Wix/Shopify dashboard, you can login directly on <a
+                                                    href="https://www.rabbitseo.com" target="_blank">https://www.rabbitseo.com</a>
+                                                with the following credentials:
+                                            </p>
+                                            <form id="updateAccountCredentialsUser">
+                                                <div class="mb-2 form-group">
+                                                    <label class="settingLabel">Email</label>
+                                                    <input id="email" name="email" type="text"
+                                                           class="form-control w-100" placeholder="Email"/>
+                                                </div>
+                                                <div class="mb-3 form-group">
+                                                    <label class="settingLabel">Current Password</label>
+                                                    <input name="oldPassword" type="password" class="form-control w-100"
+                                                           placeholder="Current Password"/>
+                                                </div>
+                                                <div class="mb-3 form-group">
+                                                    <label class="settingLabel">New Password</label>
+                                                    <input name="password" type="password" class="form-control w-100"
+                                                           placeholder="New Password"/>
+
+                                                </div>
+                                                <div class="mb-3 form-group">
+                                                    <label class="settingLabel">Confirm Password</label>
+                                                    <input name="confirmPassword" type="password"
+                                                           class="form-control w-100" placeholder="Confirm Password"/>
+
+                                                </div>
+
+                                                <div class="mt-4">
+                                                    <button type="button" onclick="saveFormAndRefreshDetails(this)"
+                                                            class="btn btn-primary w-100">Save
+                                                    </button>
+                                                </div>
+                                                <div style="display: none; margin-top: 10px;"
+                                                     class="alert alert-success" role="alert">
+                                                    <div class="d-flex">
+                                                        <p class="my-0">Your login credentials have been saved
+                                                            successfully</p>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="cancelAccountSetting">
+                                                <h5 class="tabTitle">How to cancel my account?</h5>
+                                                <div id="cancelAccountDiv"></div>
+                                                <div id="cancelAccountDivBrowser" style="display: none"><span>We will be sad to see you leaving, but if you wish to cancel your account with us, click delete</span> <br/> <br/>
+                                                    <a href="javascript: deleteAccount()"
+                                                       class="btn btn-danger btn-sm py-2">Delete Account</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function getAccountSettings() {
+        addTooltipToSelector('.searchEngineDivHelp', 'Choose your default search engine, please note it will not affect your existing keywords.')
+        initAccountDetails();
+        initDisplaySettings();
+        $('.checkbox').click(function () {
+            $(this).val() == "false" ? $(this).val("true") : $(this).val("false");
+        });
+        fillForm('#updateDailyEmailUserEmailNotification', mainUserDetails);
+        $('#emailFreq').val(mainUserDetails['emailFreq']);
+        $('#emailFreqOn').prop("checked", $('#emailFreq').val() > 0)
+        $('#emailNewLink').prop("checked", mainUserDetails['emailNewLink']);
+        $('#weeklyLinksMail').prop("checked", mainUserDetails['weeklyLinksMail']);
+        $('#notifyUpLimit').val(mainUserDetails['notifyUpLimit']);
+        $('#notifyDownLimit').val(mainUserDetails['notifyDownLimit']);
+        
+        if (appDomainName === 'Rabbit SEO') {
+            $('#extraEmails').val(mainUserDetails.email);
+            $('.externalUserNote').hide();
+        } else {
+            $('#extraEmails').val(mainUserDetails.extraEmails);
+            $('.externalUserNote').show();
+        }
+        $('.logoAnchur').click(function () {
+            $('#logoInput').click();
+        });
+        console.log('mainUserDetails ' + JSON.stringify(mainUserDetails));
+        // $('#name').val(mainUserDetails.name);
+        // $('#firstName').val(mainUserDetails.firstName != mainUserDetails.name ? mainUserDetails.firstName : '');
+        // $('#lastName').val(mainUserDetails.lastName != mainUserDetails.name ? mainUserDetails.lastName : '');
+        // $('#phone').val(mainUserDetails.phone);
+        // $('#email').val(mainUserDetails.email);
+        fillForm('#updateAccountDetailsUser', mainUserDetails);
+
+        console.log('availableSearchEngines ' + availableSearchEngines);
+        var searchEngineSelect = $(".searchEngineSelect").select2({
+            dropdownParent: $('#settingModalContent'),
+            tokenSeparators: [',', ', ', '\n'],
+            selectOnClose: true,
+            data: availableSearchEngines,
+            width: "100%",
+        });
+        console.log('searchEngineSelect ' + searchEngineSelect);
+
+        searchEngineSelect.val(searchEngine).change();
+
+        $(".select-tag").select2({
+            tokenSeparators: [',', ', ', '\n'],
+            selectOnClose: true,
+            dropdownParent: $("#settingModal"),
+            tags: true,
+            width: '100%',
+            tokenSeparators: [',', ' ']
+        });
+
+        $(".account_dropdown").click(function (e) {
+            e.stopPropagation();
+        });
+
+    }
+
+    $(document).ready(function () {
+        getAccountSettings();
+    });
+</script>
+</div>
+
+
+
+

@@ -1,0 +1,326 @@
+<div id="keywordSuggestionsDiv" class="card page-card mb-4">
+    <div class="card-body">
+        <div class="d-md-flex justify-content-between">
+            <div class="d-flex align-items-center mb-20px">
+                <h3 class="cardTitle mb-0">Keyword Ideas</h3>
+                <span class="listedItem" id="listedItemsCount"></span>
+            </div>
+            <div id="exportOptions" class="mb-20px">
+                <ul class="list-style-none actionkey_ul">
+                    <li class="actionkey_li hideOnboarding">
+                        <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li hideOnboarding">
+                        <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li hideOnboarding">
+                        <a href="javascript:;" title="PDF" class="pdfButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li hideOnboarding">
+                        <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                            <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li">
+                        <div class="keywordSearch">
+                            <img src="/assets/images/icon/search.svg" alt="Search"/>
+                            <input type="text" class="form-control tableSearch" placeholder="Search..."/>
+                        </div>
+                    </li>
+                    <li class="actionkey_li">
+                        <button type="button" class="btn btn-primary btn-lg pageBtn stepperFormNext" style="display: none" onclick="stepperForm.next()">Next</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rabbitTable">
+            <table id="rankedKeywords" class="table align-middle border-bottom-0 hover" style="width:100%">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="10" class="text-center">
+                            <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+                <h3>Upgrade to see more results</h3>
+                <p>To view more results, you must upgrade <br>
+                    your current subscription</p>
+                <button type="button">Upgrade to Premium</button>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg pageBtn stepperFormNext" style="display: none; margin-top: 10px;" onclick="stepperForm.next()">Next</button>
+    </div>
+</div>
+<div id="ranksExplorerInfo" style="display: none" class="card page-card mb-4">
+    <div class="card-body pt-2">
+        <ul class="nav nav-tabs searchTab" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="organic-tab" data-bs-toggle="tab" data-bs-target="#organic" type="button" role="tab" aria-controls="organic" aria-selected="true">Organic Search</button>
+            </li>
+<!--            <li class="nav-item" role="presentation">-->
+<!--                <button class="nav-link" id="paid-tab" data-bs-toggle="tab" data-bs-target="#paid" type="button" role="tab" aria-controls="paid" aria-selected="false">Paid Search</button>-->
+<!--            </li>-->
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="organic" role="tabpanel" aria-labelledby="organic-tab">
+                <div class="pt-5">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="row">
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-flex">
+                                        <div class="searchicon_box">
+                                            <img src="/assets/images/icon/stat_up.png" alt="Image">
+                                        </div>
+                                        <div class="searchbox_text">
+                                            <h4 id="top1" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This values indicates the number of organic searches where the domain ranks #1 (for all the keywords the website is ranked for, not just those you are tracking)"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                            <span>Keywords In First Position</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-flex">
+                                        <div class="searchicon_box">
+                                            <img src="/assets/images/icon/stat_round.png" alt="Image">
+                                        </div>
+                                        <div class="searchbox_text">
+                                            <h4 id="etv" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Estimated Organic Traffic is an estimation of website traffic that can be driven by the group of keywords your website is ranked for. The metric displays the approximate number of monthly visits the keywords can lead to your website (this doesn't include traffic from other sources, only organic traffic). ETV is calculated by multiplying a keyword’s search volume by the click-through rate coefficient of a search result"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                            <span>Estimated Organic Traffic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-flex">
+                                        <div class="searchicon_box">
+                                            <img src="/assets/images/icon/topkeywords.png" alt="Image">
+                                        </div>
+                                        <div class="searchbox_text">
+                                            <h4 id="top3"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                            <span>Keywords in Top 3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-flex">
+                                        <div class="searchicon_box">
+                                            <img src="/assets/images/icon/top10keywords.png" alt="Image">
+                                        </div>
+                                        <div class="searchbox_text">
+                                            <h4 id="top10"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                            <span>Keywords in Top 10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-flex">
+                                        <div class="searchicon_box">
+                                            <img src="/assets/images/icon/newrank.png" alt="Image">
+                                        </div>
+                                        <div class="searchbox_text">
+                                            <h4 id="is_new" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This indicates the number of new ranked elements, how many new ranked elements were found for this domain in the past month or so."><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                            <span>New Ranks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-inline-block">
+                                        <div class="d-flex">
+                                            <div class="searchicon_box">
+                                                <img src="/assets/images/icon/rank_up.png" alt="Image">
+                                            </div>
+                                            <div class="searchbox_text">
+                                                <h4 id="is_up" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This indicates how many ranked elements of this domain went up in Google Search in the past month or so."><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                                <span>Ranks went Up</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-flex">
+                                        <div class="searchicon_box">
+                                            <img src="/assets/images/icon/rank_down.png" alt="Image">
+                                        </div>
+                                        <div class="searchbox_text">
+                                            <h4 id="is_down" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This indicates how many ranked elements of this domain went down in Google Search in the past month or so."><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                            <span>Ranks went Down</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-44px">
+                                    <div class="d-flex">
+                                        <div class="searchicon_box">
+                                            <img src="/assets/images/icon/lost.png" alt="Image">
+                                        </div>
+                                        <div class="searchbox_text">
+                                            <h4 id="is_lost" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This indicates how many ranked elements of this domain were previously presented in google, but weren’t found during the last check in the past month or so."><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                            <span>Lost Ranks</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <h3 class="cardTitle mb-3" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This chart shows how many keywords are ranked for this website in each group of position.">Ranking Distribution</h3>
+                            <canvas id="organic_chBar" class="notranslate" height="150px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--            <div class="tab-pane fade" id="paid" role="tabpanel" aria-labelledby="paid-tab">-->
+<!--                <div class="pt-5">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-xl-6">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <div class="searchicon_box">-->
+<!--                                            <img src="/assets/images/icon/stat_up.png" alt="Image">-->
+<!--                                        </div>-->
+<!--                                        <div class="searchbox_text">-->
+<!--                                            <h4 id="paid_top1"></h4>-->
+<!--                                            <span>Keywords In First Position</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <div class="searchicon_box">-->
+<!--                                            <img src="/assets/images/icon/stat_round.png" alt="Image">-->
+<!--                                        </div>-->
+<!--                                        <div class="searchbox_text">-->
+<!--                                            <h4 id="paid_etv"></h4>-->
+<!--                                            <span>Estimated Organic Traffic</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <div class="searchicon_box">-->
+<!--                                            <img src="/assets/images/icon/topkeywords.png" alt="Image">-->
+<!--                                        </div>-->
+<!--                                        <div class="searchbox_text">-->
+<!--                                            <h4 id="paid_top3"></h4>-->
+<!--                                            <span>Keywords in Top 3</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <div class="searchicon_box">-->
+<!--                                            <img src="/assets/images/icon/top10keywords.png" alt="Image">-->
+<!--                                        </div>-->
+<!--                                        <div class="searchbox_text">-->
+<!--                                            <h4 id="paid_top10"></h4>-->
+<!--                                            <span>Keywords in Top 10</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <div class="searchicon_box">-->
+<!--                                            <img src="/assets/images/icon/newrank.png" alt="Image">-->
+<!--                                        </div>-->
+<!--                                        <div class="searchbox_text">-->
+<!--                                            <h4 id="paid_is_new"></h4>-->
+<!--                                            <span>New Ranks</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-inline-block">-->
+<!--                                        <div>-->
+<!--                                            <div class="searchicon_box">-->
+<!--                                                <img src="/assets/images/icon/rank_up.png" alt="Image">-->
+<!--                                            </div>-->
+<!--                                            <div class="searchbox_text">-->
+<!--                                                <h4 id="paid_is_up"></h4>-->
+<!--                                                <span>Ranks went Up</span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <div class="searchicon_box">-->
+<!--                                            <img src="/assets/images/icon/rank_down.png" alt="Image">-->
+<!--                                        </div>-->
+<!--                                        <div class="searchbox_text">-->
+<!--                                            <h4 id="paid_is_down"></h4>-->
+<!--                                            <span>Ranks went Down</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-44px">-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <div class="searchicon_box">-->
+<!--                                            <img src="/assets/images/icon/lost.png" alt="Image">-->
+<!--                                        </div>-->
+<!--                                        <div class="searchbox_text">-->
+<!--                                            <h4 id="paid_is_lost"></h4>-->
+<!--                                            <span>Lost Ranks</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-xl-6">-->
+<!--                            <h3 class="cardTitle mb-3">Ranking Distribution</h3>-->
+<!--                            <canvas id="paid_chBar" width="100%" height="40"></canvas>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var table = $('#keywordTable').DataTable({
+        "bInfo": false,
+        "bFilter": false,
+        "order": [],
+        "columnDefs": [{
+                "targets": 'no-sort',
+                "orderable": false,
+            }],
+        dom: 'frtlip',
+    });
+
+    $('#keywordTable tbody').on('click', 'td:first-child', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row(tr);
+
+        if (row.child.isShown()) {
+            // This row is already open - close it.
+            row.child.hide();
+            tr.removeClass('shown');
+        } else {
+            // Open row.
+            row.child('<div class="card page-card key-child-card">\n\
+                 <div class="card-body mh-200">   \
+                <div class="d-flex">Search Volume Per Month</div>\n\
+                    </div>\n\
+                    </div>\n\
+                ', 'childClass').show();
+            tr.addClass('shown');
+        }
+    });
+
+
+    var xValues;
+    var yValues;
+    $(document).ready(function () {
+       loadRanksExplorer();
+    });
+</script>

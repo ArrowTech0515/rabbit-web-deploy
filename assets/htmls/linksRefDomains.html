@@ -1,0 +1,53 @@
+<table id="linksRefDomains" class="notranslate uk-table uk-table-hover uk-table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Domain</th>
+            <th>Backlinks</th>
+            <th>First Seen</th>
+            <th>Rank</th>
+            <th>Referring Domain</th>
+            <th>Referring Ips</th>
+            <th>Referring MainDomains</th>
+            <th>Referring Pages</th>
+            <th>Referring Subnets</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td colspan="15" class="text-center">
+            <strong>Loading...</strong>
+        </td>
+    </tbody>
+</table>
+                        
+
+<script>
+    $(document).ready(function() {
+        $.getJSON(getApiUrl('getMyJsonCompDataGeneric?api=WebsiteLinksRefDomains&url=' + $('#inputSearchWebsite').val()), function(json) {
+            hasAlertToShow(json);
+            json = JSON.parse(json["data"]);
+            json = json['items'];
+            var html = '';
+            for (var i = 0; i < json.length; i++) {
+                html += 
+                '<tr>' +
+                    '<td>' + (i + 1) + '</td>' +
+                    '<td>' + json[i]["domain"] + '</td>' +
+                    '<td>' + nFormatter(json[i]["backlinks"],2) + '</td>' +
+                    '<td>' + getFormattedDate(json[i]["first_seen"]) + '</td>' +
+                    '<td>' + nFormatter(json[i]["rank"],2) + '</td>' +
+                    '<td>' + json[i]["referring_domains"] + '</td>' +
+                    '<td>' + json[i]["referring_ips"] + '</td>' +
+                    '<td>' + json[i]["referring_main_domains"] + '</td>' +                  
+                    '<td>' + json[i]["referring_pages"] + '</td>' +
+                    '<td>' + json[i]["referring_subnets"] + '</td>' +
+                    '<td>' + json[i]["type"] + '</td>' +
+                '</tr>';
+            }
+            $('#linksRefDomains tbody').html(html);
+            var linksRefDomains = $('#linksRefDomains').DataTable({destroy: true,}); 
+        });        
+    })
+
+</script>

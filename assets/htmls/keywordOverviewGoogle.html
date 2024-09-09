@@ -1,0 +1,39 @@
+<div class="pt-4 mh-360">
+    <div class="row justify-content-between">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <div class="mb-3">
+                            <select class="form-select selectDropdown" id="googleDateSelect" style="display: none"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="googleView">
+                <div class="wrapper"></div>
+            </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $.getJSON(getApiUrl('getMyJsonSerpResultDatesKeyword?id=' + keywordRowData.keywordId), function (json) {
+            hasAlertToShow(json);
+            json = json['map2'];
+            var html = '';
+            var i = 0;
+            for (const key in json) {
+                html += '<option value="' + json[key] + '" ' + (i == 1 ? 'selected' : '') + '>' + key.substr(key.indexOf('Task') + 4) + '</option>';
+                i++;
+            }
+            if (i > 0) {
+                $('select#googleDateSelect').html(html);
+                $('select#googleDateSelect').show();
+            }
+            organicGoogleResult(keywordRowData.keywordId);
+        });
+        $('select#googleDateSelect').change(function () {
+            organicGoogleResult(keywordRowData.keywordId);
+        })
+    });
+</script>
+

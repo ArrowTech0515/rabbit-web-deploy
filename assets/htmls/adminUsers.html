@@ -1,0 +1,185 @@
+<div class="d-lg-flex justify-content-between mb-20px">
+    <div class="d-flex align-items-center">
+    </div>
+    <div>
+        <ul class="list-style-none actionkey_ul">
+            <li class="actionkey_li">
+                <div class="keywordSearch">
+                    <img src="/assets/images/icon/search.svg" alt="Search"/>
+                    <input type="text" class="form-control tableSearch" placeholder="Search..."/>
+                </div>
+            </li>
+            <li class="actionkey_li">
+                <div class="addhideColumn dropdown">
+                    <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown"
+                       aria-expanded="false"><h3 class="cardTitle mb-0">Columns<i
+                            class="fas fa-chevron-down"></i></h3></a>
+
+                    <form id="saveColHideFormUser" class="dropdown-menu py-3" aria-labelledby="addhideColumn">
+                        <ul id="showHideColsusersTable" class="showHideColsMenu">
+                        </ul>
+                        <div class="text-end px-3">
+                            <button type="button" onclick="saveColHideShow(getFormDValues(saveColHideFormUser), 'usersTable')" class="btn btn-primary pageBtn">Save for next time</button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--Total rows: <div class="tableCount" />-->
+<div class="rabbitTable">
+        <table id="usersTable" class="table align-middle border-bottom-0 hover compact" style="width:100%">
+            <thead class="thead-dark"></thead>
+            <tbody>
+            <td colspan="12" class="text-center">
+            </td>
+            </tbody>
+        </table>
+    </div>
+<br />
+<div id="appStat"></div>
+
+<script>
+    $(document).ready(function () {
+        ajaxLoadToDiv(isTestingMode() ? '/jsp/SuperAdmin/stat.jsp' : 'https://admin.rabbitseo.com/jsp/SuperAdmin/stat.jsp', 'appStat');
+        findUsers();
+    });
+
+    function findUsers() {
+        usersTable = $('#usersTable').DataTable({
+            "scrollCollapse": true,
+            "serverSide": true,
+            "ordering": true,
+            "searching": true,
+            "ajax": function ( data, callback, settings ) {
+                setTimeout( function () {
+                    let query = getSearchAndOrder(data, 'wixUrl');
+                    const url = apiUrl + 'jsonUser?start=' + data.start + '&rows=' + Math.min(100,data.length) + query;
+                    console.log('url is ' + url)
+                    $.getJSON(url, function (json) {
+                        console.log('json is ' + JSON.stringify(json))
+                        $('.tableCount').html(json['records']);
+                        // console.log('result is ' + JSON.stringify(json['list']))
+                        callback( {
+                            "draw": data.draw,
+                            "data": json['list'],
+                            "recordsTotal": json['records'],
+                            "recordsFiltered": json['recordsFiltered']
+                        });
+                    });
+                }, 50 );
+            },
+            "scroller": {
+                "loadingIndicator": true,
+                "trace": true
+            },
+            "deferRender": true,
+            "dom": "rtiS",
+            "scrollY": "500px",
+            fixedHeader: true,
+            rowId: 'id',
+            order: [[4, 'desc']],
+            "columns": [
+                // {
+                //     "data": "email", "defaultContent": "", "title": "Email",
+                //     render: function (data, type, row) {
+                //         if (type === 'display' || type === 'filter') {
+                //             return data.indexOf('@') !== -1 ? data : row.extraEmails;
+                //         } else {
+                //             return data;
+                //         }
+                //     }
+                // },
+                {"data": "id", "name": "id", "defaultContent": "", "title": "Id",},
+                {"data": "name", "name": "name", "defaultContent": "", "title": "Name", render: $.fn.dataTable.render.ellipsis(20)},
+                {"data": "actualEmail", "name": "actualEmail", "defaultContent": "", "title": "Email", render: $.fn.dataTable.render.ellipsis(20)},
+                {"data": "wixUrl", "name": "wixUrl", "defaultContent": "", "title": "Domain", render: $.fn.dataTable.render.ellipsis(30)},
+                // {"data": "wixUrl", "defaultContent": "", "title": "Domain", render: $.fn.dataTable.render.ellipsis(10)},
+                {"data": "dateCreated", "name": "dateCreated", "defaultContent": "", "title": "Created",},
+                {"data": "lastLogin", "name": "lastLogin", "defaultContent": "", "title": "Login",},
+                {"data": "appDomainName", "name": "appDomainName", "defaultContent": "", "title": "AppDomain",},
+                {"data": "country", "name": "country", "defaultContent": "", "title": "Country", render: $.fn.dataTable.render.ellipsis(20)},
+                {"data": "keywordsUsed", "name": "keywordsUsed", "defaultContent": "", "title": "K.<br> Used",},
+                {"data": "linksUsed", "name": "linksUsed", "defaultContent": "", "title": "L.<br> Used",},
+                {"data": "keywordsMax", "name": "keywordsMax", "defaultContent": "", "title": "K.<br> Max",},
+                {"data": "researchUsed", "name": "researchUsed", "defaultContent": "", "title": "R. <br> Used",},
+                {"data": "linksRequestUsed", "name": "linksRequestUsed", "defaultContent": "", "title": "L.<br>Used",},
+                {"data": "linksRequestMax", "name": "linksRequestMax", "defaultContent": "", "title": "L.<br>Max",},
+                {"data": "guestBlogsUsed", "name": "guestBlogsUsed", "defaultContent": "", "title": "B.<br>Used",},
+                {"data": "guestBlogsMax", "name": "guestBlogsMax", "defaultContent": "", "title": "B.<br>Max",},
+                {"data": "creditsUsed", "name": "creditsUsed", "defaultContent": "", "title": "C.<br>Used",},
+                {"data": "creditsMax", "name": "creditsMax", "defaultContent": "", "title": "C.<br>Max",},
+                {"data": "loginCount30", "name": "loginCount30", "defaultContent": "", "title": "Login<br> 30",},
+                {"data": "pricePerMonth", "name": "pricePerMonth", "defaultContent": "", "title": "Price",},
+                {"data": "pricePerYear", "name": "pricePerYear", "defaultContent": "", "title": "Y. Price",},
+                {"data": "firstPaymentDate", "name": "firstPaymentDate", "defaultContent": "", "title": "First<br> Payment"},
+                {"data": "lastPaymentDate", "name": "lastPaymentDate", "defaultContent": "", "title": "Last<br> Payment"},
+                {"data": "whereToPublish", "name": "whereToPublish", "defaultContent": "", "title": "Publish", },
+                {"data": "isAbtesting", "name": "wixKeyword", "defaultContent": "", "title": "AB Testing" },
+                {"data": "wixKeyword", "name": "wixKeyword", "defaultContent": "", "title": "Keyword", render: $.fn.dataTable.render.ellipsis(20)},
+                {"data": "websiteRanks", "name": "websiteRanks", "defaultContent": "", "title": "Ranks",},
+                {"data": "websiteLinks", "name": "websiteLinks", "defaultContent": "", "title": "Links",},
+                {"data": "countLandingPages", "name": "countLandingPages", "defaultContent": "", "title": "Pages",},
+                {"data": "websitesUsed", "name": "websitesUsed", "defaultContent": "", "title": "Websites",},
+                {"data": "extraData", "name": "extraData", "defaultContent": "", "title": "Extra<br> Data", render: $.fn.dataTable.render.ellipsis(10)},
+            ],
+            destroy: true,
+            "language": {
+                "emptyTable": "No users found"
+            },
+            info: true,
+            "bFilter": true,
+            columnDefs: [{
+                // "searchable": false,
+                // targets: [0,1,2],
+                // render: $.fn.dataTable.render.ellipsis(10)
+            }],
+            "initComplete": function (settings, json) {
+                adjustExportButtons('keywordSearch', usersTable);
+                thBreakLine = true;
+                initShowHideColumns('usersTable', usersTable);
+                enableTooltips();
+                console.log('initComplete users')
+                $('#usersTable tbody').on('click', 'td', function () {
+                    // $('#usersTable tbody tr').on('click', 'td:first-child', function () {
+                    console.log('tbody click')
+                    var tr = $(this).closest('tr');
+                    var row = usersTable.row(tr);
+
+                    if (row.child.isShown()) {
+                        // This row is already open - close it.
+                        row.child.hide();
+                        tr.removeClass('shown');
+                    } else {
+                        // Open row.
+                        let data = row.data();
+                        let html = createUserActionsHtml(data);
+                        row.child(html, 'childClass').show();
+                        tr.addClass('shown');
+                    }
+                });
+            }
+        });
+        $('.dataTables_scrollBody').css('height', '700px');
+    }
+</script>
+<style type="text/css">
+    #usersTable userActions a {
+        margin: 10px;
+    }
+
+    #usersTable tbody tr {
+        cursor: pointer;
+    }
+    td {
+         max-width: 200px;
+    }
+      td {
+          max-width: 400px !important;
+          overflow: unset;
+          /*text-overflow: ellipsis;*/
+          white-space: nowrap;
+          font-size: 13px;
+      }
+</style>

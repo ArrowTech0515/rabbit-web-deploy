@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Account Onboarding</h3>
+            <div id="stepperForm" class="bs-stepper">
+                <div class="bs-stepper-header" role="tablist">
+                    <div class="step" data-target="#onboarding-form-1">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger1"
+                                aria-controls="onboarding-form-1">
+                            <span class="bs-stepper-circle">
+                                <span class="fas fa-map-marked" aria-hidden="true"></span></span>
+                            <span class="bs-stepper-label">Add Keywords</span>
+                        </button>
+                    </div>
+<!--                    <div id="linksBuilderLine" class="bs-stepper-line"></div>-->
+<!--                    <div id="linksBuilderStep" class="step" data-target="#onboarding-form-2">-->
+<!--                        <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger2"-->
+<!--                                aria-controls="onboarding-form-2">-->
+<!--                            <span class="bs-stepper-circle"><span class="fas fa-save" aria-hidden="true"></span>-->
+<!--                            </span>-->
+<!--                            <span class="bs-stepper-label">Create Backlinks</span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+                    <div class="bs-stepper-line"></div>
+                    <div class="step" data-target="#onboarding-form-2">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger2"
+                                aria-controls="onboarding-form-2">
+                            <span class="bs-stepper-circle"><span class="fas fa-save" aria-hidden="true"></span>
+                            </span>
+                            <span class="bs-stepper-label">Done</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bs-stepper-content">
+                    <div id="onboarding-form-0" role="tabpanel" class="bs-stepper-pane fade"
+                         aria-labelledby="stepperFormTrigger0">
+                    </div>
+                    <div id="onboarding-form-1" role="tabpanel" class="bs-stepper-pane fade"
+                         aria-labelledby="stepperFormTrigger1">
+                    </div>
+<!--                    <div id="onboarding-form-2" role="tabpanel" class="bs-stepper-pane fade"-->
+<!--                         aria-labelledby="stepperFormTrigger2">-->
+<!--                        <div class="d-flex">-->
+<!--                            <p class="my-0"><b>Let's start creating backlinks & publish your website!</b><br>-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                        <br />-->
+<!--                        <div id="publishLinkBody" />-->
+<!--                        <button type="button" class="btn btn-primary btn-lg pageBtn"-->
+<!--                                onclick="publishLinkInRabbit();">Next</button>-->
+<!--                    </div>-->
+                    <div id="onboarding-form-2" role="tabpanel" class="bs-stepper-pane fade text-center"
+                         aria-labelledby="stepperFormTrigger2">
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        <br />-->
+<!--                        <a id="connectAnalyticsLinks" class="btn btn-primary btn-lg pageBtn" target="_blank">Connect Google Analytics (optional)</a>-->
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+<!--                        <button type="submit" class="btn btn-primary" onclick="showOrHideDemoAccountButton(); websiteSelect2.val(availableWebsites[0]).change(); window.scrollTo(0, 0); $('#accountDiv').show();">Skip</button>-->
+                        <button type="submit" class="btn btn-primary btn-lg pageBtn" onclick="location.href=(isTestingMode() ? '/homeDev.html' : '/home.html');">Start Using Rabbit SEO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        inOnboardingNow = true;
+        $('#upgradeContainer').hide();
+        if (!mainUserDetails || websitesUsed === 0) {
+            ajaxSimpleLoadToDiv('/assets/htmls/onboardingFull.html', 'onboarding-form-1');
+        } else {
+            $('#accountDiv').hide();
+            $('#demoAccountButton').hide();
+            ajaxSimpleLoadToDiv('/assets/htmls/addNewKeyword.html', 'onboarding-form-1');
+        }
+        console.log('in onboardingAccount isWebsiteOwner ' + isWebsiteOwner)
+        $('#publishButton').hide();
+
+        $.getJSON(getApiUrl(analytics_url + '?viewType=keyword'), function (json) {
+            $('#connectAnalyticsLinks').attr("href", json.data);
+        });
+
+        var stepperFormEl = document.querySelector('#stepperForm')
+        stepperForm = new Stepper(stepperFormEl, {
+            animation: true,
+            linear: false
+        })
+
+        var btnNextList = [].slice.call(document.querySelectorAll('.btn-next-form'))
+        btnNextList.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                stepperForm.next()
+            })
+        })
+    })
+</script>

@@ -1,0 +1,216 @@
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"></script>
+<div class="col-md-6 offset-md-3">
+                            <div id="accountForm" style="display: none" class="signup-form">
+                                <form id="createAccountGuest" class="mx-1 mx-md-4">
+                                    <div id="confirmDiv" style="display: none">
+                                        <h4 class="mb-5 text-secondary">An e-mail has been sent containing a unique
+                                            link. Please click on it to activate your account.</h4>
+                                    </div>
+
+                                    <div class="row" id="accountFormDiv">
+                                        <h4 class="mb-3 text-secondary">Create Your Account</h4>
+
+                                        <div class="mb-3 col-md-6">
+                                            <label>First Name<span class="text-danger"></span></label>
+                                            <input type="text" name="firstName" class="form-control"
+                                                   placeholder="Enter First Name">
+                                        </div>
+
+                                        <div class="mb-3 col-md-6">
+                                            <label>Last Name<span class="text-danger"></span></label>
+                                            <input type="text" name="lastName" class="form-control"
+                                                   placeholder="Enter Last Name">
+                                        </div>
+
+                                        <div class="mb-3 col-md-12">
+                                            <label>Email<span class="text-danger">*</span></label>
+                                            <input type="email" name="email" class="form-control"
+                                                   placeholder="Enter Password">
+                                        </div>
+                                        <div class="mb-3 col-md-12">
+                                            <label>Password<span class="text-danger">*</span></label>
+                                            <input type="password" name="password" class="form-control"
+                                                   placeholder="Enter Password">
+                                        </div>
+                                        <div class="mb-3 col-md-12">
+                                            <label>Website Url<span class="text-danger">*</span></label>
+                                            <input name="url" class="form-control"
+                                                   placeholder="Enter your website url">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary float-end g-recaptcha" type="submit"
+                                                    data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                    data-callback='signup' data-action='submit' onclick="signup(this)">
+                                                Signup Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p id="loginNow" class="text-center mt-3 text-secondary">If you have an account, Please <a href="javascript: showLogin()">Login Now</a></p>
+                                </form>
+                                <form id="ajaxLoginGuest" style="display:none;" class="mx-1 mx-md-4">
+                                    <div class="row">
+                                        <h4 class="mb-3 text-secondary">Login</h4>
+                                        <div class="mb-3 col-md-12">
+                                            <label>Email<span class="text-danger">*</span></label>
+                                            <input type="email" name="email" class="form-control"
+                                                   placeholder="Enter Password">
+                                        </div>
+                                        <div class="mb-3 col-md-12">
+                                            <label>Password<span class="text-danger">*</span></label>
+                                            <input type="password" name="password" class="form-control"
+                                                   placeholder="Enter Password">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary float-end g-recaptcha" type="submit"
+                                                    data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                    data-callback='login' data-action='submit'>
+                                                Login
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div style="display: none; margin-top: 10px;" class="alert alert-success" role="alert">
+                                        <div class="d-flex">
+                                            <p class="my-0">Wrong Username or Password</p>
+                                        </div>
+                                    </div>
+                                    <input hidden="true" name="action" value="login">
+                                    <p class="text-center mt-3 text-secondary"><a href="javascript: showForgotPassword()">Forgot my password</a></p>
+                                    <p class="text-center mt-3 text-secondary">If you don't have an account, <a href="javascript: showSignup()">Sign Up Now</a></p>
+                                </form>
+                                <form id="ajaxForgotPasswordGuest" style="display:none;" class="mx-1 mx-md-4">
+                                    <div class="row">
+                                        <h4 class="mb-3 text-secondary">Forgot My Password</h4>
+                                        <div class="mb-3 col-md-12">
+                                            <label>Email<span class="text-danger">*</span></label>
+                                            <input type="email" name="email" class="form-control"
+                                                   placeholder="Enter Password">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary float-end g-recaptcha" type="submit"
+                                                    data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                    data-callback='forgot' data-action='submit'>
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div style="display: none; margin-top: 10px;" class="alert alert-success" role="alert">
+                                        <div class="d-flex">
+                                            <p class="my-0"></p>
+                                        </div>
+                                    </div>
+                                    <p class="text-center mt-3 text-secondary">If you don't have an account, <a href="javascript: showSignup()">Sign Up Now</a></p>
+                                </form>
+                            </div>
+                            <div id="websiteForm" style="display: none" class="signup-form">
+                                <form id="onboardingUser" class="mx-1 mx-md-4">
+                                    <h4 class="mb-5 text-secondary">Your Website Details</h4>
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <label for="url">Website Url
+                                                <span class="text-danger font-weight-bold">*</span></label>
+                                            <input id="url" name="url" class="form-control"
+                                                   placeholder="Enter Website Url" required>
+                                        </div>
+<!--                                        <div class="mb-3">-->
+<!--                                            <label for="inputWebsite">Website Nickname (Optional)</label>-->
+<!--                                            <input id="inputWebsite" name="name" class="form-control"-->
+<!--                                                   placeholder="Enter Website Nickname">-->
+<!--                                        </div>-->
+                                        <div class="mb-3 select2CustomForm">
+                                            <!--                            <div class="mb-3 select2CustomForm" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="For large websites it is better to choose the website location otherwise you can get the same keywords in different locations">-->
+                                            <label for="countrySelect">Location</label>
+                                            <select id="countrySelect" name="countryName"
+                                                    class="form-control form-select dropdown-toggle"></select>
+                                        </div>
+                                        <div class="text-end mt-4">
+                                            <button class="btn btn-primary btn-lg pageBtn" type="button"
+                                                    onclick="saveWebsite(this)">Next
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+<script>
+    $(document).ready(function () {
+        $('#demoAccountButton').hide();
+        if (!mainUserDetails) {
+            $('#accountForm').show();
+        } else {
+            $('#websiteForm').show();
+            if (appDomainName === 'Rabbit SEO') {
+                $('#extraEmails').val(mainUserDetails.email);
+            } else {
+                $('#extraEmails').val(mainUserDetails.extraEmails);
+            }
+            
+            var countrySelect = $('#countrySelect').select2({tokenSeparators: [',', ', ', '\n'],
+                selectOnClose: true,
+                data: availableCountries,
+                width: "100%",
+            });
+            let countryName = mainUserDetails["countryName"];
+            // console.log("countryName " + countryName);
+            countrySelect.val(countryName).change();
+        }
+    });
+
+    function signup(btn) {
+        console.log('start signup');
+        let saveSuccess = saveOnBoardingForm($('#createAccountGuest'), btn);
+        console.log('saveSuccess ' + saveSuccess);
+        if (saveSuccess) {
+            $('#confirmDiv').show();
+            $('#accountFormDiv').hide();
+            $('#loginNow').hide();
+        }
+    }
+
+    var url;
+
+    function saveWebsite(btn) {
+        makeButtonLoading(btn);
+        let saveSuccess = saveOnBoardingForm($('#onboardingUser'));
+        if (saveSuccess) {
+            url = $('#url').val();
+            // console.log('success next step');
+            var newOption = new Option(url, url, true, true);
+            websiteSelect2.append(newOption);
+            websiteSelect2.val(url);
+            ajaxSimpleLoadToDiv('/assets/htmls/addNewKeyword.html', 'onboarding-form-2');
+            stepperForm.next();
+        } else {
+            console.log('error');
+        }
+        releaseButtonLoading(btn);
+    }
+    function showLogin() {
+        $('#createAccountGuest').hide();
+        $('#ajaxLoginGuest').show();
+    }
+    function showSignup() {
+        $('#createAccountGuest').show();
+        $('#ajaxLoginGuest').hide();
+        $('#ajaxForgotPasswordGuest').hide();
+    }
+    function showForgotPassword() {
+        $('#createAccountGuest').hide();
+        $('#ajaxLoginGuest').hide();
+        $('#ajaxForgotPasswordGuest').show();
+    }
+    function login() {
+        const status = ajaxSubmitForm('ajaxLoginGuest');
+        console.log('login ' + status);
+        if (status === "app") {
+            homeReady();
+        } else {
+            let responseDiv = '#ajaxLoginGuest div.alert-success';
+            $(responseDiv).show();
+        }
+    }
+    function forgot() {
+        const status = ajaxSubmitForm('ajaxForgotPasswordGuest');
+        console.log('forgot ' + status);
+        showModal("Message", status, "Close", "");
+    }
+</script>

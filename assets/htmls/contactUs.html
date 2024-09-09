@@ -1,0 +1,49 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="plansLabel">Contact Us</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" onclick="$('#ourModal').modal('hide')"></button>
+        </div>
+        <div class="modal-body">
+            <h4 class="text-center fw-bold text-success" id="returnMessage"></h4>
+            <p class="text-center"> Please fill in the form below and we will try to get back to you as soon as possible.</p>
+
+            <div class="partner-form">
+                <form id="contactUsGeneric" method="POST">
+                    <div class="form-row">
+                        <div class="col mb-3">
+                            <label><span>Your Name</span>* </label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your name">
+                        </div>
+                        <div class="col  mb-3">
+                            <label><span>Your Email</span>*</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message Content</label>
+                        <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <br/>
+                    <div class="text-right">
+                        <button class="btn btn-primary w-100" type="button" onclick="saveForm(this)" data-dismiss="modal">
+                            Submit
+                        </button>
+                    </div>
+                    <div style="display: none; margin-top: 10px;" class="alert alert-success" role="alert">
+                        <div class="d-flex">
+                            <p class="my-0">Your message was successfully sent</p>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#name').val(mainUserDetails["firstName"]);
+        $('#email').val(mainUserDetails["email"]);
+    });
+</script>

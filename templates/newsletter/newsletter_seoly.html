@@ -1,0 +1,129 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <title>
+  </title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <title>SEOly - Your Complete SEO Solution</title>
+ <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; color: #202939">
+	<table style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; border: none;" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td  style="background: #ffffff; padding: 16px; text-align: center;"><img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/seoly/logo.png" alt="" title=""/></td>
+				 
+			</tr>
+			<tr style="width: 600px">
+				<td colspan="5">
+					<img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/seoly/banner.png" alt="" style="width: 100%" title="">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5"  style="background: linear-gradient(93deg, #5F30BB 21.17%, #E042D0 103.87%); position: relative; top: -5px; padding:30px 15px; ">
+					<div style="width: 100%; max-width: 390px; margin: 0 auto; text-align: center;">
+						<p style="margin: 0; font-size: 20px; color: #ffffff">
+							<#if userName??>
+							Dear <b>${userName}
+							</b>
+							</#if>
+						</p>
+						<p style="margin: 0; font-size: 14px; color: #ffffff">As the holiday season approaches, we're excited to announce our biggest sale of the year -
+							SEOly Black Friday Sale! This is your chance to unlock the power of our SEO booster app
+							and transform <a style="margin: 0; font-size: 14px; color: #ffffff" href="${userDomain}" target="_blank">${userDomain}</a> online presence at an incredible price.</p>
+						<br/>
+						<p style="margin: 0; margin-top: 10px; font-size: 14px; color: #ffffff">
+							<b>Use Our Special Discount Code</b>
+						</p>
+						<h3 style="margin: 0; margin-bottom: 20px; font-size: 24px; font-weight: bold; color: #FDF516">${promoCode}</h3>
+						<#if user?? && user.activationCode??>
+						<a href="${appUrl}emailClickGuest?subscriberId=<#if subscriberId??>${subscriberId?c}</#if>&name=${template}&url=${appUrl}activationLoginGuest%3FactivationCode%3D${user.activationCode}%26source%3D${template}${appDomain.name}&userId=${user.id?c}" title="Login"
+						   style="background: #F337CF; border: 1px solid #FFF; padding: 6px 20px; font-weight: bold; border-radius: 8px; display: inline-block; text-decoration: none; color: #ffffff; min-width: 200px; ">Open SEOly</a>
+						<#else>
+						<a href="${appUrl}emailClickGuest?name=${template}&url=${url}&subscriberId=${subscriberId?c}" title="Login"
+						   style="background: #F337CF; border: 1px solid #FFF; padding: 6px 20px; font-weight: bold; border-radius: 8px; display: inline-block; text-decoration: none; color: #ffffff; min-width: 200px; ">Open SEOly</a>
+					</#if>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5"  style="background: #ffffff; padding:29px 16px 44px 16px;">
+					<h3 style="margin: 0; margin-bottom: 20px; padding: 0; font-size: 20px; color: #5F30BB; text-align: center; "> Our Features </h3>
+					<table style="width:100%" border="0" cellspacing="10" cellpadding="0">
+						<tbody>
+							<tr>
+								<td style="width: 100px; text-align: center;">
+									<img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/seoly/b1.png"  alt="" title=""/>
+								</td>
+								<td>
+									<p style="margin: 0; font-size: 16px; color: #202939"><b>On-Page SEO</b></p>
+									<p style="margin: 0; font-size: 14px; color: #202939">SEOly analyzes your landing pages and gives you tips on how to optimize your title, meta tags, content, images, and more. You can also use SEOly to create SEO-friendly URLs and sitemaps.</p>
+								</td>
+							</tr>
+							<tr>
+								
+								<td>
+									<p style="margin: 0; font-size: 16px; color: #202939"><b>OFF-Page SEO</b></p>
+									<p style="margin: 0; font-size: 14px; color: #202939">SEOly helps you boost your online reputation and authority by finding and managing guest blogging and directory listing opportunities</p>
+								</td>
+								<td style="width: 100px; text-align: center;">
+									<img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/seoly/b2.png"  alt="" title=""/>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 100px; text-align: center;">
+									<img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/seoly/b3.png"  alt="" title=""/>
+								</td>
+								<td>
+									<p style="margin: 0; font-size: 16px; color: #202939"><b>Keywords</b></p>
+									<p style="margin: 0; font-size: 14px; color: #202939">SEOly helps you discover the most profitable keywords for your niche, based on your competitors, search volume, and difficulty. You can also track your keyword rankings and performance over time.</p>
+								</td>
+							</tr>
+						  
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		 
+			 
+			<tr>
+				<td colspan="5" style=" background: linear-gradient(93deg, #5F30BB 21.17%, #E042D0 103.87%); padding:53px 14px; text-align: center;">
+					<div style="max-width: 400px; margin: auto;">
+						 <p style="margin: 0; font-size: 14px; margin-bottom: 20px; color: #ffffff">
+					 	<b>Don’t miss this opportunity to supercharge your SEO with SEOly. Get started today and see the magic for yourself.</b>
+						 </p>
+						<#if user?? && user.activationCode??>
+						<a href="${appUrl}emailClickGuest?subscriberId=<#if subscriberId??>${subscriberId?c}</#if>&name=${template}&url=${appUrl}activationLoginGuest%3FactivationCode%3D${user.activationCode}%26source%3D${template}${appDomain.name}&userId=${user.id?c}" title="Login"
+						   style="background: #F337CF; border: 1px solid #FFF; padding: 6px 20px; font-weight: bold; border-radius: 8px; display: inline-block; text-decoration: none; color: #ffffff; min-width: 200px; ">Open SEOly</a>
+						<#else>
+						<a href="${appUrl}emailClickGuest?name=${template}&url=${url}&subscriberId=${subscriberId?c}" title="Login"
+						   style="background: #F337CF; border: 1px solid #FFF; padding: 6px 20px; font-weight: bold; border-radius: 8px; display: inline-block; text-decoration: none; color: #ffffff; min-width: 200px; ">Open SEOly</a>
+					</#if>
+
+						 <p style="margin: 0; margin-top: 20px; font-size: 14px; color: #ffffff">Thank you for choosing SEOly,</p>
+						 <p style="margin: 0; font-size: 14px; color: #ffffff">SEOly Team</p>
+						 <p style="margin: 0; font-size: 14px; color: #ffffff">If you wish to unsubscribe click <a style="margin: 0; font-size: 14px; color: #ffffff" href="${appUrl}unsubscribeSeolyGuest?name=${template}&email=${userEmail}"> here</a> </p>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<#include "../include/openMail.ftl"/>
+</body>
+</html>

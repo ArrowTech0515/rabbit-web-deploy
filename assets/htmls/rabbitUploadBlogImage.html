@@ -1,0 +1,53 @@
+<style type="text/css">
+    div#appDataModal .modal-dialog{
+        max-width: 600px !important;
+    }
+</style>
+<div class="paymentBlogModalBox">
+    <div class="formUpload form-flex-col d-md-flex  justify-content-between align-items-center sm_m_b">
+        <div class="drop-zone w-100" style="height: 100px;" onclick="userImage.click()">
+            <div data-toggle="tooltip" title="Logo size should be 200*100 pixel!">
+                <form name="photo" class="text-center" id="uploadBlogImgLink"
+                      enctype="multipart/form-data" method="post">
+                    <input type='file' name="userImage" id="userImage" onchange="uploadImage('uploadBlogImgLink')"
+                           hidden> 
+                    <p id="logoP" class="fs-6 mb-0"><img src="assets/images/uploadcloud.png"/> Upload Guest Blog Image</p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="uploadBlogImgLinkResult" style="display:none;"></div>
+    <div class="paymentBlogModalBoxNotice">
+        <p><img src="assets/images/warning-fill.png" alt="icon" />  Image resolution should be (Max 1080px x 1080px)</p>
+        <p><img src="assets/images/warning-fill.png" alt="icon" /> Images must be with appropriate content (no violence, porn etc)</p>
+        <p><img src="assets/images/warning-fill.png" alt="icon" /> Images must no include any ads or brand logo</p>
+        <div class="text-dark">If image doesn't meet the requirement we will have to change the image.</div>
+    </div>
+</div>
+<script>
+    function uploadImage(form) {
+        console.log('start uploadImage');
+
+        var formData = new FormData();
+        formData.append("userImage", userImage.files[0]);
+        formData.append("sessionId", mainUserDetails['sessionId']);
+
+        $.ajax({
+            url: apiUrl + form,
+            method: 'POST',
+            data: formData,
+            contentType: false,
+            cache: false,
+            processData: false,
+            beforeSend: function () {
+                $('.uploadBlogImgLinkResult').show();
+                $('.uploadBlogImgLinkResult').html('Loading......');
+            },
+            success: function (data) {
+                closeAppModal();
+                fadeModal('Success', 'Your Image was successfully uploaded');
+            }
+        });
+    }
+</script>

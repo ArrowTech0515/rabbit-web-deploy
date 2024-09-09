@@ -1,0 +1,32 @@
+<div class="pt-4 mh-360">
+    <div class="row justify-content-between">
+        <div class="col">
+            <div class="table-responsive tabTable">
+                <table class="table" style="display: block; width:100%; max-height: 400px; overflow-y: scroll;">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th width="400px">Url</th>
+                        <th>Position</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody class="myPerformanceTbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        if (payingUser) {
+            $.getJSON(getApiUrl("jsonByKeywordForWebsiteWebsiteGooglePosition?id=" + keywordId), function (json) {
+                loadKeywordOverviewPerformance(json);
+            });
+        } else {
+            loadKeywordOverviewPerformance(JSON.parse('{"data":null,"list":[{"id":26219826,"position":21,"dateCreated":"12/29/2022","url":"https://your-website.com/collections/gaming-mobel"},{"id":26187852,"position":25,"dateCreated":"12/25/2022","url":"https://your-website.com/collections/gaming-mobel"},{"id":26170055,"position":22,"dateCreated":"12/21/2022","url":"https://your-website.com/collections/gaming-mobel"},{"id":26159009,"position":32,"dateCreated":"12/18/2022","url":"https://your-website.com/collections/gaming-mobel"},{"id":26142321,"position":40,"dateCreated":"12/14/2022","url":"https://your-website.com/collections/gaming-mobel"},{"id":26130370,"position":44,"dateCreated":"12/11/2022","url":"https://your-website.com/collections/gaming-mobel"},{"id":26116787,"position":21,"dateCreated":"12/07/2022","url":"https://your-website.com/collections/gaming-mobel"},{"id":26113054,"position":19,"dateCreated":"12/06/2022","url":"https://your-website.com/collections/gaming-mobel"}],"list2":null,"map":null,"map2":null,"obj":null,"page":0,"records":0,"rows":0,"sidx":"dateCreated","sord":"desc","status":"success","total":0}'));
+        }
+    });
+</script>
+

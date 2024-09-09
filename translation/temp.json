@@ -1,0 +1,1911 @@
+[
+  {
+    "o": "test",
+    "t": "test"
+  },
+  {
+    "o": "Demo Account",
+    "t": "חשבון דוגמא"
+  },
+  {
+    "o": "Dashboard",
+    "t": "לוח בקרה"
+  },
+  {
+    "o": "My Keywords",
+    "t": "הביטויים שלי"
+  },
+  {
+    "o": "Landing Pages",
+    "t": "דפי נחיתה"
+  },
+  {
+    "o": "Competitors",
+    "t": "מתחרים"
+  },
+  {
+    "o": "Backlinks",
+    "t": "קישורים"
+  },
+  {
+    "o": "Links Summary",
+    "t": "סיכום קישורים"
+  },
+  {
+    "o": "Links History",
+    "t": "היסטוריית קישורים"
+  },
+  {
+    "o": "Links Explorer",
+    "t": "כל הקישורים"
+  },
+  {
+    "o": "Links Intersection",
+    "t": "מרגל קישורים"
+  },
+  {
+    "o": "Spy Links",
+    "t": "מרגל קישורים"
+  },
+  {
+    "o": "Links Monitoring",
+    "t": "מעקב קישורים"
+  },
+  {
+    "o": "Google Analytics",
+    "t": "גוגל אנליטיקס"
+  },
+  {
+    "o": "Report",
+    "t": "דוח PDF"
+  },
+  {
+    "o": "PDF Report",
+    "t": "דוח PDF"
+  },
+  {
+    "o": "No results, sorry",
+    "t": "מצטערים, אין תוצאות"
+  },
+  {
+    "o": "My Websites",
+    "t": "כל האתרים"
+  },
+  {
+    "o": "Ranks went up",
+    "t": "מיקומים שעלו"
+  },
+  {
+    "o": "Ranks went down",
+    "t": "מיקומים שירדו"
+  },
+  {
+    "o": "Average Position",
+    "t": "מיקום ממוצע"
+  },
+  {
+    "o": "Change Percent",
+    "t": "אחוז שינוי"
+  },
+  {
+    "o": "Average Rank Last Days",
+    "t": "מיקום ממוצע בימים האחרונים"
+  },
+  {
+    "o": "Average Rank Last Months",
+    "t": "מיקום ממוצע בחודשים האחרונים"
+  },
+  {
+    "o": "Indicates how many keywords the given website is ranked for",
+    "t": "מציין כמה ביטויים מדורג האתר הנתון"
+  },
+  {
+    "o": "Indicates how many keywords have daily tracking for the given website",
+    "t": "מציין לכמה ביטויים יש מעקב יומי עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates average position (of the daily tracked keywords) for the given website",
+    "t": "מציין מיקום ממוצע (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates yesterday average position (of the daily tracked keywords) for the given website",
+    "t": "מציין את המיקום הממוצע אתמול (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates last week average position (of the daily tracked keywords) for the given website",
+    "t": "מציין את המיקום הממוצע בשבוע שעבר (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates last month average position (of the daily tracked keywords) for the given website",
+    "t": "מציין את המיקום הממוצע בחודש שעבר (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many ranks went up since yesterday for the given website",
+    "t": "מציין כמה ביטויים עלו מאתמול עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many ranks went down since yesterday for the given website",
+    "t": "מציין כמה ביטויים ירדו מאתמול עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many ranks went up since last change for the given website",
+    "t": "מציין כמה ביטויים עלו מאז השינוי האחרון עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many landing pages are tracked for the given website",
+    "t": "מציין כמה דפי נחיתה נמצאים במעקב עבור האתר הנתון"
+  },
+  {
+    "o": "Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+    "t": "אתר דירוג (Page Rank) הוא האלגוריתם של גוגל שנועד למדוד את החשיבות של דף אינטרנט על סמך האיכות והכמות של דפי האינטרנט המקשרים אליו. דפים בעלי PageRank גבוה (כלומר, מספר רב של קישורים איכותיים) נתפסים כסמכותיים יותר על ידי גוגל ומדורגים טוב יותר מאלה עם דירוג דף נמוך יותר."
+  },
+  {
+    "o": "Indicates how many backlinks are linking for the given website",
+    "t": "מציין כמה קישורים יש לאתר הנתון"
+  },
+  {
+    "o": "Indicates how many backlinks are being monitored for the given website",
+    "t": "מציין כמה קישורים במעקב עבור האתר הנתון"
+  },
+  {
+    "o": "Save for next time",
+    "t": "שמור שינויים"
+  },
+  {
+    "o": "Copy",
+    "t": "העתק"
+  },
+  {
+    "o": "Excel",
+    "t": "אקסל"
+  },
+  {
+    "o": "Print",
+    "t": "הדפס"
+  },
+  {
+    "o": "Total Keywords",
+    "t": "סה\"כ ביטויים"
+  },
+  {
+    "o": "Tracked Keywords",
+    "t": "ביטויים במעקב"
+  },
+  {
+    "o": "Avg Position",
+    "t": "מיקום ממוצע"
+  },
+  {
+    "o": "Ranks Up",
+    "t": "ביטויים שעלו"
+  },
+  {
+    "o": "Ranks Down",
+    "t": "ביטויים שירדו"
+  },
+  {
+    "o": "Page Rank",
+    "t": "דירוג דף"
+  },
+  {
+    "o": "Loading...",
+    "t": "טוען..."
+  },
+  {
+    "o": "Edit Website",
+    "t": "ערוך אתר"
+  },
+  {
+    "o": "Website Name* ",
+    "t": "שם האתר*"
+  },
+  {
+    "o": "Website Url*",
+    "t": "כתובת אתר*"
+  },
+  {
+    "o": "Website Classification",
+    "t": "סיווג אתרים"
+  },
+  {
+    "o": "Country",
+    "t": "מדינה"
+  },
+  {
+    "o": "Keywords",
+    "t": "ביטויים"
+  },
+  {
+    "o": "Close",
+    "t": "סגור"
+  },
+  {
+    "o": "Website Name ",
+    "t": "שם האתר"
+  },
+  {
+    "o": "Project Manager",
+    "t": "מנהל פרוייקט"
+  },
+  {
+    "o": "Update",
+    "t": "עדכן"
+  },
+  {
+    "o": "Upgrade",
+    "t": "שדרוג"
+  },
+  {
+    "o": "SEO Tutorial",
+    "t": "מדריך SEO"
+  },
+  {
+    "o": "Contact Us",
+    "t": "צור קשר"
+  },
+  {
+    "o": "Terms & Condition",
+    "t": "Terms & Condition"
+  },
+  {
+    "o": "English",
+    "t": "אנגלית"
+  },
+  {
+    "o": "Copyright © 2013 RabbitSEO . All Rights Reserved.",
+    "t": "זכויות יוצרים © 2013 Rabbit SEO. כל הזכויות שמורות."
+  },
+  {
+    "o": "Close\n                ",
+    "t": "סגור\n                "
+  },
+  {
+    "o": "Yes",
+    "t": "כן"
+  },
+  {
+    "o": "Save changes",
+    "t": "שמור שינויים"
+  },
+  {
+    "o": "Confirm",
+    "t": "לְאַשֵׁר"
+  },
+  {
+    "o": "Are you sure you want to delete?",
+    "t": "אתה בטוח שאתה רוצה למחוק?"
+  },
+  {
+    "o": "No\n                ",
+    "t": "לא\n                "
+  },
+  {
+    "o": "Ranked Keywords",
+    "t": "ביטויים מומלצים"
+  },
+  {
+    "o": "This value indicates the number of backlinks linking to your website.",
+    "t": "ערך זה מציין את מספר הקישורים הנכנסים המקשרים לאתר שלך."
+  },
+  {
+    "o": "Total Backlinks",
+    "t": "סה\"כ קישורים"
+  },
+  {
+    "o": "This value indicates the number of referring domains linking to your website.",
+    "t": "ערך זה מציין את מספר הדומיינים המקשרים המקשרים לאתר שלך."
+  },
+  {
+    "o": "This value indicates the number of broken backlinks that are linking to your website, you should fix all of them so there will be no broken backlinks linking to you. You can easily do it by create a page with the url of that link.",
+    "t": "ערך זה מציין את מספר הקישורים הנכנסים השבורים המקשרים לאתר שלך, עליך לתקן את כולם כך שלא יהיו קישורים שבורים המקשרים אליך. אתה יכול לעשות זאת בקלות על ידי יצירת דף עם כתובת האתר של הקישור."
+  },
+  {
+    "o": "Broken Backlinks",
+    "t": "קישורים שבורים"
+  },
+  {
+    "o": "Facebook Likes",
+    "t": "לייקים בפייסבוק"
+  },
+  {
+    "o": "Website Rank",
+    "t": "דירוג אתר"
+  },
+  {
+    "o": "We're checking for your rankings and competitors, it can take up to 30 seconds",
+    "t": "אנחנו בודקים את המיקומים והמתחרים שלך, זה יכול לקחת עד 30 שניות"
+  },
+  {
+    "o": "Keyword in Track",
+    "t": "ביטויים במעקב"
+  },
+  {
+    "o": "Ranks Up since Yesterday",
+    "t": "מדורג למעלה מאז אתמול"
+  },
+  {
+    "o": "Ranks Down since Yesterday",
+    "t": "מדורג למטה מאז אתמול"
+  },
+  {
+    "o": "Keyword in Top 3",
+    "t": "ביטויים בטופ 3"
+  },
+  {
+    "o": "Keyword in Top 10",
+    "t": "ביטויים בטופ 10"
+  },
+  {
+    "o": "Average Position Last Week",
+    "t": "מיקום ממוצע בשבוע שעבר"
+  },
+  {
+    "o": "Average Position Last Year",
+    "t": "מיקום ממוצע בשנה האחרונה"
+  },
+  {
+    "o": "Average Position Last Month",
+    "t": "מיקום ממוצע בחודש שעבר"
+  },
+  {
+    "o": "My Top Competitors Visibility",
+    "t": "נראות המתחרים המובילים שלי"
+  },
+  {
+    "o": "Show more",
+    "t": "הצג עוד"
+  },
+  {
+    "o": "Average Visits Per Day",
+    "t": "ממוצע ביקורים ליום"
+  },
+  {
+    "o": "Visit Last Month",
+    "t": "בקר בחודש שעבר"
+  },
+  {
+    "o": "Average Time On Site",
+    "t": "זמן ממוצע באתר"
+  },
+  {
+    "o": "Average Bonuce Rate",
+    "t": "שיעור החזר ממוצע"
+  },
+  {
+    "o": "Average Page Views",
+    "t": "ממוצע צפיות בדף"
+  },
+  {
+    "o": "Websites",
+    "t": "אתרי אינטרנט"
+  },
+  {
+    "o": "Researches",
+    "t": "מחקרים"
+  },
+  {
+    "o": "Overview",
+    "t": "סקירה כללית"
+  },
+  {
+    "o": "Keyword Suggestions",
+    "t": "הצעות לביטויים"
+  },
+  {
+    "o": "Keyword",
+    "t": "ביטוי"
+  },
+  {
+    "o": "Url",
+    "t": "כתובת אתר"
+  },
+  {
+    "o": "Indicates the (approximate) number of monthly searches for the given keyword on google",
+    "t": "מציין את המספר (המשוער) של חיפושים חודשיים עבור מילת המפתח הנתונה בגוגל"
+  },
+  {
+    "o": "Search Volume",
+    "t": "נפח חיפוש"
+  },
+  {
+    "o": "Indicates the Estimated Organic monthly Traffic to the domain calculated as the product of CTR (click-through-rate) and search volume values of the returned keyword",
+    "t": "מציין את התנועה החודשית האורגנית המשוערת לדומיין המחושבת כתוצר של ערכי קליקים (שיעור קליקים) ונפח חיפוש של מילת המפתח המוחזרת"
+  },
+  {
+    "o": "Indicates the chance of getting in top-10 organic results for a keyword on a logarithmic scale from 0 to 100, where 1 is easy and 100 is extremely hard",
+    "t": "מציין את הסיכוי להגיע ל-10 התוצאות האורגניות המובילות עבור ביטוי בסולם לוגריתמי מ-0 עד 100, כאשר 1 קל ו-100 קשה ביותר"
+  },
+  {
+    "o": "Difficulty",
+    "t": "קושי"
+  },
+  {
+    "o": "Indicates the relative amount of competition associated with the given keyword",
+    "t": "מציין את כמות התחרות היחסית הקשורה למילת המפתח הנתונה"
+  },
+  {
+    "o": "Competition",
+    "t": "תחרות"
+  },
+  {
+    "o": "Indicates the average cost per click (USD) historically paid for the given keyword",
+    "t": "מציין את העלות הממוצעת לקליק (USD) ששולם בעבר עבור מילת המפתח הנתונה"
+  },
+  {
+    "o": "Indicates the number of search results returned for the given keyword",
+    "t": "מציין את מספר תוצאות החיפוש שהוחזרו עבור מילת המפתח הנתונה"
+  },
+  {
+    "o": "Results",
+    "t": "תוצאות"
+  },
+  {
+    "o": "Rank",
+    "t": "מיקום"
+  },
+  {
+    "o": "Add",
+    "t": "הוסף"
+  },
+  {
+    "o": "Upgrade to see more results",
+    "t": "שדרג כדי לראות תוצאות נוספות"
+  },
+  {
+    "o": "Upgrade to Premium",
+    "t": "שדרג לפרימיום"
+  },
+  {
+    "o": "Organic Search",
+    "t": "חיפוש אורגני - מידע כללי על האתר"
+  },
+  {
+    "o": "This values indicates the number of organic searches where the domain ranks #1 (for all the keywords the website is ranked for, not just those you are tracking)",
+    "t": "ערכים אלה מציינים את מספר החיפושים האורגניים שבהם הדומיין מדורג במקום הראשון (עבור כל מילות המפתח שעבורן מדורג האתר, לא רק אלו שאתה עוקב אחריהם)"
+  },
+  {
+    "o": "Keywords In First Position",
+    "t": "ביטויים במיקום ראשון"
+  },
+  {
+    "o": "Keywords in First Position",
+    "t": "ביטויים במיקום ראשון"
+  },
+  {
+    "o": "Keyword in First Page",
+    "t": "ביטויים בעמוד ראשון"
+  },
+  {
+    "o": "Website Average Ranking",
+    "t": "מיקום ממוצע של האתר"
+  },
+  {
+    "o": "Estimated Organic Traffic is an estimation of website traffic that can be driven by the group of keywords your website is ranked for. The metric displays the approximate number of monthly visits the keywords can lead to your website (this doesn't include traffic from other sources, only organic traffic). ETV is calculated by multiplying a keyword’s search volume by the click-through rate coefficient of a search result",
+    "t": "תנועה אורגנית משוערת היא אומדן של תעבורת האתר שניתן להניע על ידי קבוצת מילות המפתח שעבורן מדורג האתר שלך. המדד מציג את המספר המשוער של ביקורים חודשיים שמילות המפתח יכולות להוביל לאתר שלך (זה לא כולל תנועה ממקורות אחרים, רק תנועה אורגנית). ETV מחושב על ידי הכפלת נפח החיפוש של ביטוי במקדם שיעור הקליקים של תוצאת חיפוש"
+  },
+  {
+    "o": "Estimated Organic Traffic",
+    "t": "תנועה אורגנית משוערת"
+  },
+  {
+    "o": "Keywords in Top 3",
+    "t": "ביטויים ב-3 המובילים"
+  },
+  {
+    "o": "Keywords in Top 10",
+    "t": "ביטויים בטופ 10"
+  },
+  {
+    "o": "Current Website Status",
+    "t": "סטטוס האתר כרגע"
+  },
+  {
+    "o": "Website Status Week Ago",
+    "t": "סטטוס האתר לפני שבוע"
+  },
+  {
+    "o": "Website Status Month Ago",
+    "t": "סטטוס האתר לפני חודש"
+  },
+  {
+    "o": "Initial Website Status",
+    "t": "סטטוס האתר בהתחלה"
+  },
+  {
+    "o": "of Keywords are in the top 5 results",
+    "t": "מהביטויים בטופ 5"
+  },
+  {
+    "o": "of Keywords are in the top 10 results",
+    "t": "מהביטויים בטופ 10"
+  },
+  {
+    "o": "of Keywords are in the top 20 results",
+    "t": "מהביטויים בטופ 20"
+  },
+  {
+    "o": "This indicates the number of new ranked elements, how many new ranked elements were found for this domain in the past month or so.",
+    "t": "זה מציין את מספר האלמנטים המדורגים החדשים, כמה אלמנטים מדורגים חדשים נמצאו עבור דומיין זה בחודש האחרון בערך."
+  },
+  {
+    "o": "New Ranks",
+    "t": "ביטויים חדשות"
+  },
+  {
+    "o": "This indicates how many ranked elements of this domain went up in Google Search in the past month or so.",
+    "t": "זה מציין כמה רכיבים מדורגים של דומיין זה עלו בחיפוש Google בחודש האחרון בערך."
+  },
+  {
+    "o": "Ranks went Up",
+    "t": "מיקומים עלו"
+  },
+  {
+    "o": "This indicates how many ranked elements of this domain went down in Google Search in the past month or so.",
+    "t": "זה מציין כמה רכיבים מדורגים של דומיין זה ירדו בחיפוש Google בחודש האחרון בערך."
+  },
+  {
+    "o": "Ranks went Down",
+    "t": "מיקומים שירדו"
+  },
+  {
+    "o": "This indicates how many ranked elements of this domain were previously presented in google, but weren’t found during the last check in the past month or so.",
+    "t": "זה מציין כמה רכיבים מדורגים של דומיין זה הוצגו בעבר ב-Google, אך לא נמצאו במהלך הבדיקה האחרונה בחודש האחרון בערך."
+  },
+  {
+    "o": "Lost Ranks",
+    "t": "ביטויים שאבדו"
+  },
+  {
+    "o": "This chart shows how many keywords are ranked for this website in each group of position.",
+    "t": "תרשים זה מראה כמה ביטויים מדורגות עבור אתר זה בכל קבוצת מיקום."
+  },
+  {
+    "o": "Ranking Distribution",
+    "t": "התפלגות מיקומים"
+  },
+  {
+    "o": "Monitored Keywords",
+    "t": "ביטויים במעקב"
+  },
+  {
+    "o": "Keywords in top 3",
+    "t": "ביטויים ב-3 ראשונים"
+  },
+  {
+    "o": "This value indicates the number of ranks that went up since yesterday",
+    "t": "ערך זה מציין את מספר מיקומים שעלו מאז אתמול"
+  },
+  {
+    "o": "This value indicates the number of ranks that went down since yesterday",
+    "t": "ערך זה מציין את מספר מיקומים שירדו מאתמול"
+  },
+  {
+    "o": "This value indicates the average position of your live ranks",
+    "t": "ערך זה מציין את המיקום הממוצע של הדירוגים החיים שלך"
+  },
+  {
+    "o": "General",
+    "t": "כללי"
+  },
+  {
+    "o": "The page in your website that google links when someone search for this keyword",
+    "t": "הדף באתר שלך שמקשר בגוגל כאשר מישהו מחפש את מילת המפתח הזו"
+  },
+  {
+    "o": "The search engine of the given keyword, you can have multiple keywords with different search engines. To change the search engine - you should delete the keyword and create a new keyword with the required search engine",
+    "t": "מנוע החיפוש של מילת המפתח הנתונה, אתה יכול לקבל ביטויים מרובות עם מנועי חיפוש שונים. לשינוי מנוע החיפוש - יש למחוק את מילת המפתח וליצור ביטוי חדשה עם מנוע החיפוש הנדרש"
+  },
+  {
+    "o": "Which device the given keyword is being searched on - Desktop or Mobile",
+    "t": "באיזה מכשיר מתבצעת חיפוש של מילת המפתח הנתונה - שולחני או נייד"
+  },
+  {
+    "o": "Indicates the initial monitored rank of the given keyword, very useful for reports and tracking progress",
+    "t": "מציין את הדירוג הראשוני המנוטר של מילת המפתח הנתונה, שימושי מאוד עבור דוחות ומעקב אחר התקדמות"
+  },
+  {
+    "o": "Indicates the best monitored rank that was captured for the given keyword",
+    "t": "מציין את הדירוג המנוטר הטוב ביותר שנלכד עבור מילת המפתח הנתונה"
+  },
+  {
+    "o": "Indicates the previous monitored rank of the given keyword",
+    "t": "מציין את הדירוג המנוטר הקודם של מילת המפתח הנתונה"
+  },
+  {
+    "o": "Indicates the (approximate) number of monthly searches for the given keyword on the search engine",
+    "t": "מציין את המספר (המשוער) של חיפושים חודשיים עבור מילת המפתח הנתונה במנוע החיפוש"
+  },
+  {
+    "o": "Landing Page",
+    "t": "דף נחיתה"
+  },
+  {
+    "o": "Last Days",
+    "t": "ימים אחרונים"
+  },
+  {
+    "o": "Indicates the rank a week ago of the given keyword",
+    "t": "מציין את הדירוג לפני שבוע של מילת המפתח הנתונה"
+  },
+  {
+    "o": "Last Year",
+    "t": "שנה שעברה"
+  },
+  {
+    "o": "Indicates the rank one year ago of the given keyword, very useful for reports and tracking progress",
+    "t": "מציין את הדירוג לפני שנה של מילת המפתח הנתונה, שימושי מאוד עבור דוחות ומעקב אחר התקדמות"
+  },
+  {
+    "o": "Add New Keyword",
+    "t": "הוסף ביטוי חדש"
+  },
+  {
+    "o": "Search Engine",
+    "t": "מנוע חיפוש"
+  },
+  {
+    "o": "Device",
+    "t": "התקן"
+  },
+  {
+    "o": "Desktop",
+    "t": "שולחן עבודה"
+  },
+  {
+    "o": "Mobile",
+    "t": "נייד"
+  },
+  {
+    "o": "Keyword(s)",
+    "t": "ביטויים"
+  },
+  {
+    "o": "Add Keywords\n                                            ",
+    "t": "הוסף ביטויים\n                                            "
+  },
+  {
+    "o": "Your Keywords were added successfully, usually it takes between 10-40 seconds until you can see live results!",
+    "t": "מילות המפתח שלך נוספו בהצלחה, בדרך כלל זה לוקח בין 10-40 שניות עד שאתה יכול לראות תוצאות חיות!"
+  },
+  {
+    "o": "Page Url",
+    "t": "כתובת עמוד"
+  },
+  {
+    "o": "Live Rank",
+    "t": "מיקום נוכחי"
+  },
+  {
+    "o": "No keywords found, create your first keyword now",
+    "t": "לא נמצאו ביטויים, צור את מילת המפתח הראשונה שלך עכשיו"
+  },
+  {
+    "o": "This shows the overall score of your tracked landing pages, we test your pages title, H1 tag, keyword density, page content etc. To improve your rankings at search engines you should make sure your pages are optimized.",
+    "t": "זה מציג את הציון הכולל של דפי הנחיתה שלך במעקב, אנו בודקים את כותרת הדפים שלך, תג H1, צפיפות מילת המפתח, תוכן הדף וכו'. כדי לשפר את הדירוג שלך במנועי חיפוש, עליך לוודא שהדפים שלך מותאמים."
+  },
+  {
+    "o": "Indicates how many times the give keywords appears in the content of the landing page",
+    "t": "מציין כמה פעמים הביטוי מופיע בתוכן העמוד"
+  },
+  {
+    "o": "Overall Score",
+    "t": "ציון כולל"
+  },
+  {
+    "o": "This shows the number of warnings we found on your pages that you should fix, after fixing them you can click refresh and let RabbitSEO test the pages again.",
+    "t": "זה מראה את מספר האזהרות שמצאנו בדפים שלך שכדאי לתקן, לאחר שתתקן אותן תוכל ללחוץ על רענון ולתת ל-Rabbit SEO לבדוק שוב את הדפים."
+  },
+  {
+    "o": "Total Warnings",
+    "t": "סך אזהרות"
+  },
+  {
+    "o": "broken backlinks",
+    "t": "קישורים שבורים"
+  },
+  {
+    "o": "Add New Landing Page",
+    "t": "הוסף דף נחיתה חדש"
+  },
+  {
+    "o": "You can enter several URLs (one in each line).                                        ",
+    "t": "ניתן להזין מספר כתובות URL (אחת בכל שורה).                                        "
+  },
+  {
+    "o": "rescan",
+    "t": "לסרוק מחדש"
+  },
+  {
+    "o": "Add New Page                                            ",
+    "t": "הוסף דף חדש                                            "
+  },
+  {
+    "o": "Page",
+    "t": "עמוד"
+  },
+  {
+    "o": "Shows the title of the given page, page title is very important for SEO, make sure you choose a title that contains the right keyword.",
+    "t": "מציג את הכותרת של העמוד הנתון, כותרת העמוד חשובה מאוד לקידום אתרים, הקפידו לבחור כותרת שמכילה את מילת המפתח הנכונה."
+  },
+  {
+    "o": "Title",
+    "t": "כותרת"
+  },
+  {
+    "o": "Shows how many words the given page has, search engines love content - all your pages should have content, even your contact us page",
+    "t": "מראה כמה מילים יש בדף הנתון, מנועי החיפוש אוהבים תוכן - כל הדפים שלך צריכים לכלול תוכן, אפילו דף יצירת הקשר שלך"
+  },
+  {
+    "o": "Words",
+    "t": "מילים"
+  },
+  {
+    "o": "Shows how many internal links (to YOUR website) the given page has.",
+    "t": "מראה כמה קישורים פנימיים (לאתר האינטרנט שלך) יש לדף הנתון."
+  },
+  {
+    "o": "In. links",
+    "t": "קישורים פנימיים"
+  },
+  {
+    "o": "Shows how many external links (to OTHER websites) the given page has.",
+    "t": "מראה כמה קישורים חיצוניים (לאתרים אחרים) יש לדף הנתון."
+  },
+  {
+    "o": "Ext. links",
+    "t": "קישורים חיצוניים"
+  },
+  {
+    "o": "Shows the keyword you would like to optimize this page for, it is important to choose the right keyword for each page.",
+    "t": "מציג את מילת המפתח שברצונך לבצע עבורה אופטימיזציה של עמוד זה, חשוב לבחור את מילת המפתח הנכונה לכל עמוד."
+  },
+  {
+    "o": "The score of your page, the better it is, the higher you can rank :)",
+    "t": "הציון של הדף שלך, ככל שהוא טוב יותר, כך תוכל לדרג גבוה יותר :)"
+  },
+  {
+    "o": "Score",
+    "t": "ציון"
+  },
+  {
+    "o": "Shows how many issues we found for the given page.",
+    "t": "מראה כמה בעיות מצאנו עבור הדף הנתון."
+  },
+  {
+    "o": "Issues",
+    "t": "נושאים"
+  },
+  {
+    "o": "You can enter several URLs (one in each line)",
+    "t": "ניתן להזין מספר כתובות URL (אחת בכל שורה)"
+  },
+  {
+    "o": "Save",
+    "t": "שמור"
+  },
+  {
+    "o": "Back to Competitors",
+    "t": "חזרה למתחרים"
+  },
+  {
+    "o": "Domain",
+    "t": "תְחוּם"
+  },
+  {
+    "o": "Average Rank",
+    "t": "דירוג ממוצע"
+  },
+  {
+    "o": "Weighted Average",
+    "t": "ממוצע משוקלל"
+  },
+  {
+    "o": "In Top 20",
+    "t": "בטופ 20"
+  },
+  {
+    "o": "In Top 10",
+    "t": "בטופ 10"
+  },
+  {
+    "o": "Current Status",
+    "t": "סטטוס נוכחי"
+  },
+  {
+    "o": "Month Ago",
+    "t": "לפני חודש"
+  },
+  {
+    "o": "In Top 5",
+    "t": "בטופ 5"
+  },
+  {
+    "o": "Keywords in top 20",
+    "t": "ביטויים בטופ 20"
+  },
+  {
+    "o": "Keywords in top 10",
+    "t": "ביטויים בטופ 10"
+  },
+  {
+    "o": "Keywords in top 5",
+    "t": "ביטויים בטופ 5"
+  },
+  {
+    "o": "Keywords in First Position",
+    "t": "ביטויים במיקום הראשון"
+  },
+  {
+    "o": "In Top 3",
+    "t": "בטופ 3"
+  },
+  {
+    "o": "In Top 1",
+    "t": "בטופ 1"
+  },
+  {
+    "o": "General Details",
+    "t": "פרטים כלליים"
+  },
+  {
+    "o": "This value indicates the number of referring pages linking to your website, (one website can link to your website from multiple pages)",
+    "t": "ערך זה מציין את מספר הדפים מקשרים המקשרים לאתר שלך, (אתר אחד יכול לקשר לאתר שלך ממספר דפים)"
+  },
+  {
+    "o": "Referring Pages",
+    "t": "דפים מקשרים"
+  },
+  {
+    "o": "This value indicates the number of broken pages on the target that respond with 4xx or 5xx status codes.",
+    "t": "ערך זה מציין את מספר הדפים השבורים ביעד המגיבים עם קודי סטטוס 4xx או 5xx."
+  },
+  {
+    "o": "Broken Pages",
+    "t": "דפים שבורים"
+  },
+  {
+    "o": "Site Rank",
+    "t": "דירוג אתר"
+  },
+  {
+    "o": "Shows how many internal links your website has, it is calculated as the sum of internal links on the pages of the specified website.",
+    "t": "מראה כמה קישורים פנימיים יש לאתר שלך, זה מחושב כסכום הקישורים הפנימיים בדפי האתר שצוין."
+  },
+  {
+    "o": "Internal Backlinks",
+    "t": "קישורים פנימיים"
+  },
+  {
+    "o": "Shows how many external links your website has, it is calculated as the sum of external links on the pages of the specified website.",
+    "t": "מראה כמה קישורים חיצוניים יש לאתר שלך, זה מחושב כסכום הקישורים החיצוניים בדפי האתר שצוין."
+  },
+  {
+    "o": "External Backlinks",
+    "t": "קישורים חיצוניים"
+  },
+  {
+    "o": "Indicates the types of the referring links and link count per each type",
+    "t": "מציין את סוגי הקישורים והכמות לכל סוג"
+  },
+  {
+    "o": "Referring Links Types",
+    "t": "סוג הקישור"
+  },
+  {
+    "o": "Link from specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.",
+    "t": "קישור מציין תוכן עצמאי, כמו איורים, דיאגרמות, תמונות, רשימות קוד וכו'."
+  },
+  {
+    "o": "Referring Links Semantic Locations",
+    "t": "מיקום הקישורים"
+  },
+  {
+    "o": "Indicates the link attributes of the referring links",
+    "t": "מציין את תכונות הקישור של הקישורים"
+  },
+  {
+    "o": "Attributes of the Referring Links",
+    "t": "תכונות של הקישורים"
+  },
+  {
+    "o": "Type",
+    "t": "סוג"
+  },
+  {
+    "o": "Value",
+    "t": "ערך"
+  },
+  {
+    "o": "Percent",
+    "t": "אחוז"
+  },
+  {
+    "o": "Locations",
+    "t": "מיקומים"
+  },
+  {
+    "o": "Attribute",
+    "t": "מאפיין"
+  },
+  {
+    "o": "Summary",
+    "t": "סיכום"
+  },
+  {
+    "o": "New Links",
+    "t": "קישורים חדשים"
+  },
+  {
+    "o": "Links Issues",
+    "t": "בעיות קישורים"
+  },
+  {
+    "o": "Top Level Domain",
+    "t": "דומיין ברמה העליונה"
+  },
+  {
+    "o": "Types",
+    "t": "סוגים"
+  },
+  {
+    "o": "Onpage",
+    "t": "בעמוד"
+  },
+  {
+    "o": "Referring Domains",
+    "t": "דומיינים מקשרים"
+  },
+  {
+    "o": "Tooltip",
+    "t": "טיפים לכלי עבודה"
+  },
+  {
+    "o": "New Backlinks",
+    "t": "קישורים חדשים"
+  },
+  {
+    "o": "New Referring Domains",
+    "t": "דומיינים מקשרים חדשים"
+  },
+  {
+    "o": "Lost backlinks",
+    "t": "קישורים אבודים"
+  },
+  {
+    "o": "Broken backlinks",
+    "t": "קישורים שבורים"
+  },
+  {
+    "o": "Broken pages",
+    "t": "דפים שבורים"
+  },
+  {
+    "o": "com",
+    "t": "com"
+  },
+  {
+    "o": "org",
+    "t": "org"
+  },
+  {
+    "o": "net",
+    "t": "net"
+  },
+  {
+    "o": "Anchor ",
+    "t": "ביטוי"
+  },
+  {
+    "o": "Canonical",
+    "t": "קנוני"
+  },
+  {
+    "o": "Article",
+    "t": "מאמר"
+  },
+  {
+    "o": "Main",
+    "t": "ראשי"
+  },
+  {
+    "o": "Footer",
+    "t": "כותרת תחתונה"
+  },
+  {
+    "o": "Internal Links Count",
+    "t": "קישורים פנימיים"
+  },
+  {
+    "o": "External Links Count",
+    "t": "קישורים חיצוניים"
+  },
+  {
+    "o": "Upgrade to see YOUR WEBSITE here",
+    "t": "שדרג כדי לראות את האתר שלך כאן"
+  },
+  {
+    "o": "Upgrade to Business",
+    "t": "שדרג עכשיו"
+  },
+  {
+    "o": "Backlinks List",
+    "t": "רשימת קישורים"
+  },
+  {
+    "o": "Backlinks By Keywords",
+    "t": "קישורים לפי ביטויים"
+  },
+  {
+    "o": "Backlinks By Pages",
+    "t": "קישורים לפי דפים"
+  },
+  {
+    "o": "Find Mutual Referring Domains",
+    "t": "מצא דומיינים מקשרים משותפים"
+  },
+  {
+    "o": "Url From",
+    "t": "כתובת אתר מאת"
+  },
+  {
+    "o": "Url To",
+    "t": "כתובת אתר אל"
+  },
+  {
+    "o": "TLD From",
+    "t": "TLD מאת"
+  },
+  {
+    "o": "Anchor",
+    "t": "לְעַגֵן"
+  },
+  {
+    "o": "Page From Rank",
+    "t": "עמוד מתוך דרגה"
+  },
+  {
+    "o": "Page From Title",
+    "t": "עמוד מתוך כותרת"
+  },
+  {
+    "o": "Item Type",
+    "t": "סוג פריט"
+  },
+  {
+    "o": "Group Count",
+    "t": "ספירת קבוצות"
+  },
+  {
+    "o": "First Seen",
+    "t": "נראה לראשונה"
+  },
+  {
+    "o": "Last Seen",
+    "t": "נראה לאחרונה"
+  },
+  {
+    "o": "Add Link",
+    "t": "הוסף קישור"
+  },
+  {
+    "o": "Comments",
+    "t": "הערות"
+  },
+  {
+    "o": "Email",
+    "t": "אימייל"
+  },
+  {
+    "o": "Href",
+    "t": "Href"
+  },
+  {
+    "o": "Phone",
+    "t": "מספר טלפון"
+  },
+  {
+    "o": "Subject",
+    "t": "נושא"
+  },
+  {
+    "o": "Cost",
+    "t": "מחיר"
+  },
+  {
+    "o": "My Monitored Backlinks",
+    "t": "קישורים במעקב"
+  },
+  {
+    "o": "Website",
+    "t": "אתר"
+  },
+  {
+    "o": "Track",
+    "t": "מעקב"
+  },
+  {
+    "o": "Enabled",
+    "t": "מופעל"
+  },
+  {
+    "o": "Follow",
+    "t": "מעקב"
+  },
+  {
+    "o": "Date Created",
+    "t": "תאריך יצירה"
+  },
+  {
+    "o": "Last Checked",
+    "t": "נבדק לאחרונה"
+  },
+  {
+    "o": "Visits",
+    "t": "ביקורים"
+  },
+  {
+    "o": "Medium",
+    "t": "מדיום"
+  },
+  {
+    "o": "Source",
+    "t": "מקור"
+  },
+  {
+    "o": "Browser",
+    "t": "דפדפן"
+  },
+  {
+    "o": "Last Month",
+    "t": "חודש שעבר"
+  },
+  {
+    "o": "Last calendar month",
+    "t": "חודש קלנדרי אחרון"
+  },
+  {
+    "o": "Last 3 Months",
+    "t": "3 חודשים אחרונים"
+  },
+  {
+    "o": "Last 6 Months",
+    "t": "6 החודשים האחרונים"
+  },
+  {
+    "o": "Avg Time on Site",
+    "t": "זמן ממוצע באתר"
+  },
+  {
+    "o": "Bounce Rate",
+    "t": "אחוז נטישה"
+  },
+  {
+    "o": "Page Views",
+    "t": "צפיות בדף"
+  },
+  {
+    "o": "Ranks",
+    "t": "מיקומים"
+  },
+  {
+    "o": "Images",
+    "t": "תמונות"
+  },
+  {
+    "o": "Internal Links",
+    "t": "קישורים פנימיים"
+  },
+  {
+    "o": "External Links",
+    "t": "קישורים חיצוניים"
+  },
+  {
+    "o": "SEO Report",
+    "t": "דוח SEO"
+  },
+  {
+    "o": "Your Logo",
+    "t": "הלוגו שלך"
+  },
+  {
+    "o": "Upload logo clicking here",
+    "t": "העלה לוגו"
+  },
+  {
+    "o": "Contact Details",
+    "t": "פרטי יצירת קשר"
+  },
+  {
+    "o": "Cover Title",
+    "t": "כותרת הדוח"
+  },
+  {
+    "o": "You can change title here",
+    "t": "אתה יכול לשנות כותרת כאן"
+  },
+  {
+    "o": "Choose sections to export in your Report",
+    "t": "בחר תכנים לייצא בדוח שלך"
+  },
+  {
+    "o": "Executive Summary",
+    "t": "תקציר מנהלים"
+  },
+  {
+    "o": "Section title",
+    "t": "כותרת לתוכן זה"
+  },
+  {
+    "o": "General Website Info:",
+    "t": "מידע כללי על האתר:"
+  },
+  {
+    "o": "Tracking Information:",
+    "t": "מעקב אחרי מידע:"
+  },
+  {
+    "o": "Add Status Detail",
+    "t": "הוסף פרטי סטטוס"
+  },
+  {
+    "o": "Website Current Status",
+    "t": "סטטוס נוכחי של האתר"
+  },
+  {
+    "o": "One Month Ago",
+    "t": "לפני חודש"
+  },
+  {
+    "o": "Initial Status",
+    "t": "מצב ראשוני"
+  },
+  {
+    "o": "Options:",
+    "t": "אפשרויות:"
+  },
+  {
+    "o": "URL",
+    "t": "כתובת אתר"
+  },
+  {
+    "o": "Initial Position",
+    "t": "מיקום התחלתי"
+  },
+  {
+    "o": "6 Months Ago",
+    "t": "לפני 6 חודשים"
+  },
+  {
+    "o": "3 Months Ago",
+    "t": "לפני 3 חודשים"
+  },
+  {
+    "o": "Best Rank",
+    "t": "מיקום שיא"
+  },
+  {
+    "o": "Keywords Suggestions (Extra Keywords)",
+    "t": "הצעות לביטויים (ביטויים נוספים)"
+  },
+  {
+    "o": "Google Analytics Data",
+    "t": "נתוני גוגל אנליטיקס"
+  },
+  {
+    "o": "Date Range:",
+    "t": "טווח תאריכים:"
+  },
+  {
+    "o": "OnPage",
+    "t": "בעמוד"
+  },
+  {
+    "o": "Create PDF",
+    "t": "צור PDF"
+  },
+  {
+    "o": "My Monitoring Result",
+    "t": "המעקב שלי"
+  },
+  {
+    "o": "My Top Competitors",
+    "t": "המתחרים שלי"
+  },
+  {
+    "o": "Settings",
+    "t": "הגדרות"
+  },
+  {
+    "o": "Plans",
+    "t": "מחירים"
+  },
+  {
+    "o": "Log Out",
+    "t": "התנתק"
+  },
+  {
+    "o": "Indicates how many keywords the given website is ranked for",
+    "t": "מציין כמה מילות מפתח מדורג האתר הנתון"
+  },
+  {
+    "o": "Indicates how many keywords have daily tracking for the given website",
+    "t": "מציין לכמה מילות מפתח יש מעקב יומי עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates average position (of the daily tracked keywords) for the given website",
+    "t": "מציין מיקום ממוצע (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates yesterday average position (of the daily tracked keywords) for the given website",
+    "t": "מציין את המיקום הממוצע אתמול (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates last week average position (of the daily tracked keywords) for the given website",
+    "t": "מציין את המיקום הממוצע בשבוע שעבר (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates last month average position (of the daily tracked keywords) for the given website",
+    "t": "מציין את המיקום הממוצע בחודש שעבר (של מילות המפתח היומיות במעקב) עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many ranks went up since yesterday for the given website",
+    "t": "מציין כמה דרגות עלו מאתמול עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many ranks went down since yesterday for the given website",
+    "t": "מציין כמה דרגות ירדו מאתמול עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many ranks went up since last change for the given website",
+    "t": "מציין כמה דרגות עלו מאז השינוי האחרון עבור האתר הנתון"
+  },
+  {
+    "o": "Indicates how many landing pages are tracked for the given website",
+    "t": "מציין כמה דפי נחיתה נמצאים במעקב עבור האתר הנתון"
+  },
+  {
+    "o": "Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+    "t": "אתר דירוג (Page Rank) הוא האלגוריתם של גוגל שנועד למדוד את החשיבות של דף אינטרנט על סמך האיכות והכמות של דפי האינטרנט המפנים אליו. דפים בעלי PageRank גבוה (כלומר, מספר רב של קישורים איכותיים) נתפסים כסמכותיים יותר על ידי גוגל ומדורגים טוב יותר מאלה עם דירוג דף נמוך יותר."
+  },
+  {
+    "o": "Indicates how many backlinks are linking for the given website",
+    "t": "מציין כמה קישורים מקשרים לאתר הנתון"
+  },
+  {
+    "o": "Indicates how many backlinks are being monitored for the given website",
+    "t": "מציין כמה קישורים במעקב עבור האתר הנתון"
+  },
+  {
+    "o": "Save for next time",
+    "t": "שמור לפעם הבאה"
+  },
+  {
+    "o": "PDF",
+    "t": "PDF"
+  },
+  {
+    "o": "Name",
+    "t": "שם"
+  },
+  {
+    "o": "Delete",
+    "t": "מחיקה"
+  },
+  {
+    "o": "Edit Website",
+    "t": "עריכה"
+  },
+  {
+    "o": "Website Name* ",
+    "t": "שם האתר*"
+  },
+  {
+    "o": "Website Url*",
+    "t": "כתובת אתר*"
+  },
+  {
+    "o": "Website Classification",
+    "t": "סיווג אתרים"
+  },
+  {
+    "o": "Country",
+    "t": "מדינה"
+  },
+  {
+    "o": "Close",
+    "t": "סגור"
+  },
+  {
+    "o": "Website Name ",
+    "t": "שם האתר"
+  },
+  {
+    "o": "Project Manager",
+    "t": "מנהל פרוייקט"
+  },
+  {
+    "o": "Update",
+    "t": "עדכון"
+  },
+  {
+    "o": "Upgrade",
+    "t": "שדרוג"
+  },
+  {
+    "o": "SEO Tutorial",
+    "t": "מדריך SEO"
+  },
+  {
+    "o": "Contact Us",
+    "t": "צור קשר"
+  },
+  {
+    "o": "English",
+    "t": "אנגלית"
+  },
+  {
+    "o": "Copyright © 2013 RabbitSEO . All Rights Reserved.",
+    "t": "זכויות יוצרים © 2013 ארנב SEO. כל הזכויות שמורות."
+  },
+  {
+    "o": "Close\n                ",
+    "t": "סגור\n                "
+  },
+  {
+    "o": "Yes",
+    "t": "כן"
+  },
+  {
+    "o": "Save changes",
+    "t": "שמור שינויים"
+  },
+  {
+    "o": "Confirm",
+    "t": "אישור"
+  },
+  {
+    "o": "Are you sure you want to delete?",
+    "t": "אתה בטוח שאתה רוצה למחוק?"
+  },
+  {
+    "o": "No\n                ",
+    "t": "לא\n                "
+  },
+  {
+    "o": "Account",
+    "t": "חשבון"
+  },
+  {
+    "o": "General",
+    "t": "כללי"
+  },
+  {
+    "o": "Notifications",
+    "t": "התראות"
+  },
+  {
+    "o": "Login",
+    "t": "התחבר"
+  },
+  {
+    "o": "Websites",
+    "t": "אתרים"
+  },
+  {
+    "o": "Researches",
+    "t": "מחקרים"
+  },
+  {
+    "o": "Upgrade Now",
+    "t": "שדרג עכשיו"
+  },
+  {
+    "o": "Compare plans",
+    "t": "תוכניות"
+  },
+  {
+    "o": "Starter",
+    "t": "Starter"
+  },
+  {
+    "o": "Premium",
+    "t": "Premium"
+  },
+  {
+    "o": "Business",
+    "t": "Business"
+  },
+  {
+    "o": "Enterprise",
+    "t": "Enterprise"
+  },
+  {
+    "o": "Landing Pages Optimization",
+    "t": "אופטימיזציה של דפי נחיתה"
+  },
+  {
+    "o": "Google Analytics Integration",
+    "t": "אינטגרציה של גוגל אנליטיקס"
+  },
+  {
+    "o": "White Label Reports",
+    "t": "White Label Reports"
+  },
+  {
+    "o": "API Access",
+    "t": "גישת API"
+  },
+  {
+    "o": "Available Researches (up to 500 results per research):",
+    "t": "מחקרים זמינים (עד 500 תוצאות לכל מחקר):"
+  },
+  {
+    "o": "Keywords Research",
+    "t": "מחקר מילות מפתח"
+  },
+  {
+    "o": "Traffic Explorer (Similar Web)",
+    "t": "Traffic Explorer (אינטרנט דומה)"
+  },
+  {
+    "o": "Related Keywords",
+    "t": "מילות מפתח קשורות"
+  },
+  {
+    "o": "Top Traffic Pages",
+    "t": "דפי תנועה מובילים"
+  },
+  {
+    "o": "Competitors Analysis",
+    "t": "ניתוח מתחרים"
+  },
+  {
+    "o": "Keywords Gap",
+    "t": "פער מילות מפתח"
+  },
+  {
+    "o": "Backlinks Summary",
+    "t": "סיכום קישורים"
+  },
+  {
+    "o": "Backlinks Explorer",
+    "t": "סייר קישורים"
+  },
+  {
+    "o": "Limited",
+    "t": "מוגבל"
+  },
+  {
+    "o": "Spy Backlinks",
+    "t": "ריגול קישורים"
+  },
+  {
+    "o": "Backlinks History",
+    "t": "היסטוריית קישורים"
+  },
+  {
+    "o": "Avg Position Yesterday",
+    "t": "מיקום ממוצע אתמול"
+  },
+  {
+    "o": "Avg Position Last Week",
+    "t": "מיקום ממוצע בשבוע שעבר"
+  },
+  {
+    "o": "Avg Position Last Month",
+    "t": "מיקום ממוצע בחודש שעבר"
+  },
+  {
+    "o": "Initial Rank",
+    "t": "מיקום ראשוני"
+  },
+  {
+    "o": "Days Ago 2",
+    "t": "לפני יומיים"
+  },
+  {
+    "o": "Yesterday",
+    "t": "אתמול"
+  },
+  {
+    "o": "Columns",
+    "t": "עמודות"
+  },
+  {
+    "o": "Hello",
+    "t": "היי"
+  },
+  {
+    "o": "Add New Website",
+    "t": "הוסף אתר חדש"
+  },
+  {
+    "o": "All Websites",
+    "t": "כל האתרים"
+  },
+  {
+    "o": "Website Details",
+    "t": "פרטי האתר"
+  },
+  {
+    "o": "Website Url",
+    "t": "כתובת האתר"
+  },
+  {
+    "o": "Enter Website Url",
+    "t": "הזן כתובת האתר"
+  },
+  {
+    "o": "Website Nickname (Optional)",
+    "t": "כינוי לאתר (לא חובה)"
+  },
+  {
+    "o": "Enter Website Nickname",
+    "t": "הזן כינוי לאתר"
+  },
+  {
+    "o": "Location",
+    "t": "מיקום"
+  },
+  {
+    "o": "Next",
+    "t": "שלב הבא"
+  },
+  {
+    "o": "Enter your desired keywords, one in each line. You can add up to ",
+    "t": "הזן את הביטויים שלך, ביטוי אחד בכל שורה, תוכל להזין עד "
+  },
+  {
+    "o": "Please choose keywords for your website.",
+    "t": "נא בחר ביטויים עבור האתר שלך"
+  },
+  {
+    "o": "Close",
+    "t": "סגור"
+  },
+  {
+    "o": "keywords",
+    "t": "ביטויים"
+  },
+  {
+    "o": "Website Onboarding",
+    "t": "הוספת אתר"
+  },
+  {
+    "o": "User Manual",
+    "t": "הדרכה בדף"
+  },
+  {
+    "o": "Listed Competitors",
+    "t": "מתחרים מוצגים"
+  },
+  {
+    "o": "Website Visits Last Month",
+    "t": "ביקורים באתר בחודש האחרון"
+  },
+  {
+    "o": "Display Settings",
+    "t": "הגדרות תצוגה"
+  },
+  {
+    "o": "Menu",
+    "t": "תפריט"
+  },
+  {
+    "o": "Tables",
+    "t": "טבלאות"
+  },
+  {
+    "o": "Information",
+    "t": "מידע"
+  },
+  {
+    "o": "Company Name",
+    "t": "שם חברה"
+  },
+  {
+    "o": "First Name",
+    "t": "שם פרטי"
+  },
+  {
+    "o": "Email Notifications of Rankings Changes",
+    "t": "התראות באימייל על שינויים במיקומים"
+  },
+  {
+    "o": "Email Rankings (days a week)",
+    "t": "שלח לי אימייל (מספר פעמים בשבוע)"
+  },
+  {
+    "o": "Last Name",
+    "t": "שם משפחה"
+  },
+  {
+    "o": "Email all rankings, not only changes from last day",
+    "t": "שלח לי כל המיקומים, לא רק אלו שהשתנו"
+  },
+  {
+    "o": "Or notify me:",
+    "t": "או שלח לי התראה על:"
+  },
+  {
+    "o": "Login Details",
+    "t": "פרטי התחברות"
+  },
+  {
+    "o": "Current Password",
+    "t": "סיסמא נוכחית"
+  },
+  {
+    "o": "New Password",
+    "t": "סיסמא חדשה"
+  },
+  {
+    "o": "Confirm Password",
+    "t": "אימות סיסמא"
+  },
+  {
+    "o": "Website SEO Report for ",
+    "t": "דוח קידום אתרים לאתר "
+  },
+  {
+    "o": "Keywords List",
+    "t": "רשימת ביטויים"
+  },
+  {
+    "o": "Keywords that went up last month",
+    "t": "ביטויים שעלו בחודש האחרון"
+  },
+  {
+    "o": "Keywords Suggestions (Extra Keywords)",
+    "t": "ביטויים נוספים שהאתר נמצא בהם"
+  },
+  {
+    "o": "Links History",
+    "t": "היסטוריית קישורים"
+  },
+  {
+    "o": "Last Year Chart",
+    "t": "גרף חודשים"
+  },
+  {
+    "o": "Search Volume History",
+    "t": "גרף נפח חיפוש"
+  },
+  {
+    "o": "January",
+    "t": "ינואר"
+  },
+  {
+    "o": "February",
+    "t": "פברואר"
+  },
+  {
+    "o": "March",
+    "t": "מרץ"
+  },
+  {
+    "o": "April",
+    "t": "אפריל"
+  },
+  {
+    "o": "May",
+    "t": "מאי"
+  },
+  {
+    "o": "June",
+    "t": "יוני"
+  },
+  {
+    "o": "July",
+    "t": "יולי"
+  },
+  {
+    "o": "August",
+    "t": "אוגוסט"
+  },
+  {
+    "o": "September",
+    "t": "ספטמבר"
+  },
+  {
+    "o": "October",
+    "t": "אוקטובר"
+  },
+  {
+    "o": "Novermber",
+    "t": "נובמבר"
+  },
+  {
+    "o": "December",
+    "t": "דצמבר"
+  },
+  {
+    "o": "Sunday",
+    "t": "יום ראשון"
+  },
+  {
+    "o": "Monday",
+    "t": "יום שני"
+  },
+  {
+    "o": "Tuesday",
+    "t": "יום שלישי"
+  },
+  {
+    "o": "Wednesday",
+    "t": "יום רביעי"
+  },
+  {
+    "o": "Thursday",
+    "t": "יום חמישי"
+  },
+  {
+    "o": "Friday",
+    "t": "יום שישי"
+  },
+  {
+    "o": "Saturday",
+    "t": "יום שבת"
+  },
+  {
+    "o": "Last Week Chart",
+    "t": "גרף שבוע אחרון"
+  },
+  {
+    "o": "Listed Keywords",
+    "t": "ביטויים מוצגים"
+  },
+  {
+    "o": "Total Keywords",
+    "t": "סה\"כ ביטויים"
+  },
+  {
+    "o": "Total",
+    "t": "סה\"כ"
+  },
+  {
+    "o": "We found only few landing pages for your website, you should create more pages in your website for higher rankings in Google",
+    "t": "מצאנו מעט מאוד דפים באתר שלך, כדאי להוסיף עוד דפים עם תוכן כדי להקבל תוצאות טובות בגוגל"
+  },
+  {
+    "o": "Warning - No Landing Pages",
+    "t": "אזהרה - לא נמצאו דפי נחיתה"
+  },
+  {
+    "o": "Add New Keywords to your list, we track them daily so you can see the progress of your website. You can choose which search engine and search type like desktop / mobile",
+    "t": "הוספת ביטויים חדשים לרשימה שלך, המערכת עוקבת אחר הביטויים האלו באופן יומי."
+  },
+  {
+    "o": "Keyword was added, you can see it in My Keywords tab",
+    "t": "הביטוי נוסף בהצלחה, תוכל לראות אותו בטאב הביטויים"
+  },
+  {
+    "o": "You can choose which columns to show, for example you can choose to see if landing page of the given keyword contains the keyword etc.",
+    "t": ""
+  },
+  {
+    "o": "Click on the keyword to see more details, you can see the top 100 results, and also you can track your progress and see the previous ranks you had. You can also find Related Keywords and add them to your list",
+    "t": ""
+  },
+  {
+    "o": "Add new Landing Pages to your list, if you added more pages to your website you can manually add those pages here, or you can also choose to rescan your website again and let us find the landing pages of your website.",
+    "t": ""
+  },
+  {
+    "o": "Click on each Landing Page in the grid to see more details about the page, below you can see also tips and hints how to improve your landing pages, those recommendations are calculated in real time so you can also refresh the page test it again",
+    "t": ""
+  },
+  {
+    "o": "Here you can see the overall score of your website, it is calculated by the number of warnings we found on your landing pages. By getting high score your website can get higher ranks in Google and then of course more traffic",
+    "t": ""
+  },
+  {
+    "o": "Warning - Only Few Landing Pages Found",
+    "t": "אזהרה - נמצאו מעט דפי נחיתה"
+  },
+  {
+    "o": "Keywords Found",
+    "t": "ביטויים נמצאו"
+  }
+
+]

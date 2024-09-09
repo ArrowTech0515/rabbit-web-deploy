@@ -1,0 +1,301 @@
+<div class="mb-5" id="MyKeywords" data-title="My Keywords" data-intro="That is the Keywords grid - you can see a list of the keywords you're tracking, the current ranks (and past ranks) and other relevant data for the keywords, usually it takes between 10-40 seconds to get the initial results of the live ranks">
+    <div id="keywordsFirstRow" class="row keyfirstRow dashfirstRow">
+        <div class="page-title d-flex align-items-center justify-content-between col-12 mb-3">
+            <div class="d-flex align-items-center align-items-center">
+                <h3 class="dash-title mb-0"><span>My Keywords</span></h3>
+                <!--                        <a href="javascript: $('#keywordsResearchDiv').toggle(1000);" class="btn btn-outline-primary pageBtn userManual_btn"><img-->
+                <!--                                src="/assets/images/icon/u_manual.svg" alt="Keywords Guide"><span>Keywords Guide</span></a>-->
+                <a href="javascript: runIntro();" class="btn btn-outline-primary pageBtn userManual_btn"><img
+                        src="/assets/images/icon/u_manual.svg" alt="Tour"><span>User Manual</span></a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/home_icon/lock2.png" class="dashcardIcon" alt="Rank"/>
+                        <div>
+                            <h4 id="trackedKeywords" class="keywordsTableCount"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Keywords</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/home_icon/top3.png" class="dashcardIcon" alt="Keywords"/>
+                        <div>
+                            <h4 id="trackedRanksInTop"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Keywords in top 10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/home_icon/rank_up.png" class="dashcardIcon" alt="Keywords"/>
+                        <div>
+                            <!--                        <div class="excludeIntroJs" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="This value indicates the number of ranks that went up since yesterday">-->
+                            <h4 id="trackedKeywordsUp"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Ranks went Up</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/home_icon/rank_down.png" class="dashcardIcon" alt="Keywords"/>
+                        <div>
+                            <!--                        <div class="excludeIntroJs" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="This value indicates the number of ranks that went down since yesterday">-->
+                            <h4 id="trackedKeywordsDown"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Ranks went Down</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/home_icon/stat_up_yellow.png" class="dashcardIcon" alt="Position"/>
+                        <div>
+                            <!--                        <div class="excludeIntroJs" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="This value indicates the average position of your live ranks">-->
+                            <h4 id="trackedKeywordsAvgPos"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Average Position</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        <div class="col">-->
+        <!--            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Tooltip">-->
+        <!--                <div class="card-body">-->
+        <!--                    <div class="d-flex align-items-center">-->
+        <!--                        <img src="/assets/images/icon/pie-chart.png" class="dashcardIcon" alt="Percent"/>-->
+        <!--                        <div>-->
+        <!--                            <h4 id="trackedRanksInFirstPage"></h4>-->
+        <!--                            <span>Change Percent</span>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div> -->
+        <!--        </div>-->
+    </div>
+
+    <div class="card page-card mb-4">
+        <div class="card-body">
+            <div class="d-lg-flex justify-content-between mb-20px" data-intro="First step is to go through a Keyword Research in the dashboard tab. Keyword research provides valuable insight into the queries that your target audience is actually searching on Google. The insight that you can get into these actual search terms can help inform content strategy as well as your larger marketing strategy.<br /><br />People use keywords to find solutions when conducting research online. So if your content is successful in getting in front of our audience as they conduct searches, you stand to gain more traffic. Therefore, you should be targeting those searches.<br /><br />You likely have a few keywords in mind that you would like to rank for. These will be things like your products, services, or other topics your website addresses, and they are great seed keywords for your research, so start there!">
+                <!--            <div class="d-lg-flex justify-content-between mb-20px" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="First step is to go through a Keyword Research in the dashboard tab. Keyword research provides valuable insight into the queries that your target audience is actually searching on Google. The insight that you can get into these actual search terms can help inform content strategy as well as your larger marketing strategy.<br /><br />People use keywords to find solutions when conducting research online. So if your content is successful in getting in front of our audience as they conduct searches, you stand to gain more traffic. Therefore, you should be targeting those searches.<br /><br />You likely have a few keywords in mind that you would like to rank for. These will be things like your products, services, or other topics your website addresses, and they are great seed keywords for your research, so start there!">-->
+                <!--                                        <div class="page-title d-flex align-items-center justify-content-between">-->
+                <!--                                            <div class="d-flex align-items-center align-items-center">-->
+                <!--                                                <a href="javascript:;" class="btn btn-primary pageBtn addnewkeyBtn" id="addNewKeywordsBtn" data-toggle=dropdown data-bs-toggle="dropdown" aria-expanded="false"></a>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <div class="spinner-border ms-auto" role="status" style="display: none" aria-hidden="true"></div>
+                <div id="keywordsExport" data-intro="Export your data to Excel, PDF, or copy to clipboard etc.">
+                    <div class="dropdown" data-intro="Add New Keywords to your list, we track them daily so you can see the progress of your website. You can choose which search engine and search type like desktop / mobile. <br /><br />In the process of discovering relevant keywords for your content, you will likely notice that the search volume of those keywords varies greatly. While you definitely want to target terms that your audience is searching for, in some cases, it may be more advantageous to target terms with lower search volume because they're far less competitive. <br /><br />Since both high- and low-competition keywords can be advantageous for your website, learning more about search volume can help you prioritize keywords and pick the ones that will give your website the biggest strategic advantage. <br />Long-tail keywords are longer and more specific keyword phrases that visitors are more likely to use when they’re closer to a point-of-purchase or when they’re using voice search. Most long-tail keywords have lower search volume than short or “head” keywords. They’re a little bit counter-intuitive, at first, but they can be hugely valuable if you know how to use them.<br />Long-tail keywords are longer and more specific keyword phrases that visitors are more likely to use when they’re closer to a point-of-purchase or when they’re using voice search. Most long-tail keywords have lower search volume than short or “head” keywords. They’re a little bit counter-intuitive, at first, but they can be hugely valuable if you know how to use them.">
+                        <a href="javascript:;" class="btn btn-primary pageBtn addnewkeyBtn" id="addNewKeywordsBtn" data-toggle=dropdown
+                           data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-plus"></i> <span>Add New Keywords</span></a>
+                        <div class="dropdown-menu dropdown-menu-end form_dropdown mt-2 mb-2 shadow border-0"
+                             aria-labelledby="addNewKeywordsBtn" style="width: 700px;">
+                            <div class="text-right">
+                                <a href="javascript:;" class="close" title="Close" data-bs-dismiss="modal"
+                                   aria-label="Close">
+                                    <img src="/assets/images/icon/remove.png" alt="Close">
+                                </a>
+                            </div>
+                            <form id="keywordForm">
+                                <div class="mb-3">
+                                    <h5 class="mb-0 dropTitle">Add New Keywords</h5>
+                                </div>
+                                <div class="mb-3 select2CustomForm">
+                                    <label for="searchEngineSelect" class="formLable">Search Engine</label>
+                                    <select id="searchEngineSelect" name="newSearchEngine"
+                                            class="form-control form-select dropdown-toggle"></select>
+                                </div>
+                                <div class="mb-3 select2CustomForm">
+                                    <label for="device" class="formLable">Device</label>
+                                    <select id="device" name="device" class="form-control form-select dropdown-toggle">
+                                        <option value="desktop">Desktop</option>
+                                        <option value="mobile">Mobile</option>
+                                        <!--                                                <option value="Both">Both</option>-->
+                                    </select>
+                                </div>
+                                <div class="mb-3" id="keywordsSelectContDiv">
+                                    <label for="keywordTermSelect" class="formLable">Keywords</label>
+                                    <select id="keywordTermSelect" class="form-control form-select dropdown-toggle js-example-placeholder-multiple" multiple="multiple"></select>
+                                </div>
+                                <!--                                                            <div class="mb-3" id="keywordsTextContDiv">-->
+                                <!--                                                                <div id="keywordsLimit" class="alert alert-warning" style="display:none;"></div>-->
+                                <!--                                                                <label for="keywordTerm" class="formLable">Keyword(s)</label>-->
+                                <!--                                                                <textarea id="keywordTerm" name="newKeyword" class="form-control data-hj-allow" onkeydown="validateKeywordsField()"-->
+                                <!--                                                                          placeholder="You can enter several keywords for the website (one in each line)."-->
+                                <!--                                                                          style="height:100px"></textarea>-->
+                                <!--                                                            </div>-->
+                                <div class="text-end mt-4">
+                                    <button type="button" class="btn btn-primary btn-lg pageBtn w-100"
+                                            onclick="saveKeyword()">Add Keywords
+                                    </button>
+                                </div>
+                                <div id="keywordsAddedDiv" style="display: none"
+                                     class="alert alert-success landingSuccess" role="alert">
+                                    <div class="d-flex">
+                                        <p class="my-0">Your Keywords were added successfully, usually it takes between 10-40 seconds until you can see live results!</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="list-style-none actionkey_ul">
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PDF" class="pdfButton ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                                <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                            </a>
+                        </li>
+                        <!--                        <li class="actionkey_li">-->
+                        <!--                            <a href="javascript: makeAjaxCallPopupResult('emailReportKeywordForWebsite')" title="EMAIL" id="emailButton" class="ks_buttn d-inline-block">-->
+                        <!--                                <img src="/assets/images/icon/print.svg" alt="Email"/>-->
+                        <!--                            </a>-->
+                        <!--                        </li>-->
+                        <!-- <li class="actionkey_li">
+                            <div class="keywordSearch">
+                                <img src="/assets/images/icon/search.svg" alt="Search"/>
+                                <input data-hj-allow type="text" class="form-control tableSearch" placeholder="Search..."/>
+                            </div>
+                        </li> -->
+                        <li class="actionkey_li">
+                            <div class="keywordSearch landingpageKew">
+                                <input data-hj-allow type="text" class="tableSearch form-control" placeholder="Search..."/>
+                                <img src="/assets/images/icon/search.svg" alt="Search"/>
+                            </div>
+                        </li>
+
+                        <!-- <li class="actionkey_li"> -->
+
+                        <!--                            <a href="javascript:;" class="btn btn-primary pageBtn addnewkeyBtn" data-bs-toggle="modal"
+                                                       data-bs-target="#newKeyword"><i class="fas fa-plus"></i> Add New Keyword</a>-->
+                        <!-- </li> -->
+                        <li class="actionkey_li">
+                            <div class="addhideColumn dropdown" data-intro="You can choose which columns to show or to hide for each keyword, choose between the keywords general data such as search volume, competition, CPC etc, or historical ranking that we keep for you, or information about the landing page that the keyword is leading to, etc">
+                                <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <h3 class="cardTitle mb-0"> <img src="/assets/images/home_icon/chart2.png" alt=""> Columns<i class="fas fa-chevron-down"></i></h3>
+                                </a>
+
+                                <form id="saveColHideShowFormKeyword" class="dropdown-menu py-3 showHideColsMenu"
+                                      aria-labelledby="addhideColumn">
+                                    <div id="refreshLoading" style="display: none" class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                    <div class="container">
+                                        <div class="row" style="width: 1100px">
+                                            <div class="col-md-2">
+                                                <ul id="showHideColskeywordsTable">
+                                                    <li><span class="boldBlue">General</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul id="showHideColskeywordsTableKeyword">
+                                                    <li><span class="boldBlue">Keyword</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul id="showHideColskeywordsTableLandingPage">
+                                                    <li><span class="boldBlue">Landing Page</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul id="showHideColskeywordsTableLastDays">
+                                                    <li><span class="boldBlue">Last Days</span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <ul id="showHideColskeywordsTableLastYear">
+                                                    <li><span class="boldBlue">Last Year</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-end px-3">
+                                        <button type="button" onclick="saveColHideShow(getFormDValues(saveColHideShowFormKeyword), 'keywordsTable')" class="btn btn-primary pageBtn">Save for next time</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="keywordsLoadingProgressBar" style="display: none">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>
+                <br />
+                <h5 class="text-center text-muted">We're checking for your rankings and competitors, it can take up to 60 seconds</h5>
+            </div>
+            <div class="rabbitTable mb-4">
+                <table class="table notranslate hover" id="keywordsTable" style="width: 100%;">
+                    <thead id="keywordsTableHeader" class="text-primary thead-dark" data-intro="You can choose which columns to show, for example you can choose to see if landing page of the given keyword contains the keyword etc."></thead>
+                    <tbody data-intro="Click on the keyword to see more details, you can see the top 100 results, and also you can track your progress and see the previous ranks you had. You can also find Related Keywords and add them to your list"><tr><td><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></td></tr></tbody>
+                </table>
+            </div>
+            <div id="keywordsOverviewDiv"></div>
+            <div class="text-center createNewButtonDiv" style="display: none; margin-top: 40px;">
+                <button type="button" class="my-trigger-btn btn btn-primary pageBtn addwebsitebtn mw-125px" onclick="$('#addNewKeywordsBtn').dropdown('toggle');">Add New Keywords</button>
+                <script type="text/javascript">
+                    $('.my-trigger-btn').on('click', function (e) {
+                        e.stopPropagation();
+                        $(this).next('.dropdown').find('[data-toggle=dropdown]').dropdown('toggle');
+                    });
+                </script>
+            </div>
+            <div id="competitiveKeywordsWarningDiv" class="alert alert-warning landingWarning" style="display: none" role="alert">
+                <b>Warning - Very Competitive Keywords</b>
+                <p class="my-0">
+                    We recognize that you added very competitive keywords. We recommend choosing less competitive keywords to get better results,
+                    <a href="javascript: $('#longTailKeywords').toggle(1000)">read more</a>
+                <div id="longTailKeywords" style="display: none">
+                    Long-tail keywords are longer and more specific keyword phrases that visitors are more likely to use when they’re closer to a point-of-purchase or when they’re using voice search. Most long-tail keywords have lower search volume than short or “head” keywords. They’re a little bit counter-intuitive, at first, but they can be hugely valuable if you know how to use them.
+                    <br />
+                    For example: if you’re a company that sells classic furniture, the chances are that your pages are going to appear near the top of an organic search for “furniture” are not very high, because there’s too much competition (this is particularly true if you’re a smaller company or a startup). But if you specialize in, say, contemporary art-deco furniture, then keywords like “contemporary Art Deco-influenced semi-circle lounge” are going to reliably find those consumers looking for exactly that product.
+                    <br />
+                    Obviously, you’re going to draw less traffic with a long-tail keyword than you would with a more common one, but the traffic you do draw will be better: more focused, more committed, and more desirous of your services.
+                    <br />
+                    Long-tail keywords are valuable for businesses who want their content to rank in organic Google searches, but they’re potentially even more valuable for advertisers running paid search marketing campaigns.
+                    <br/>
+                    <b>Ideas for new keywords:</b> You can get ideas for more keywords using our Related Keywords too, choose one of your keywords in the grid and then choose Related Keywords tab. Another great source of long-tail keywords comes from your competitors, click on the competitors tab and then choose one of your competitors, see what keywords they're using and how they get their traffic.
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log('keywords.html calling initKeywords')
+        initKeywords();
+    });
+</script>

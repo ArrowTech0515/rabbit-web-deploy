@@ -1,0 +1,707 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly.min.js"></script>
+        <div class="mb-5">
+            <div class="page-title d-flex align-items-center justify-content-between mb-20px">
+                <div class="d-flex align-items-center align-items-center">
+                    <h3 class="dash-title mb-0">Google Analytics</h3>
+                    <a href="javascript: runIntro();" class="btn btn-outline-primary pageBtn userManual_btn"><img src="/assets/images/icon/u_manual.svg" alt="User Manual"><span>User Manual</span></a>
+                </div>
+            </div>
+            <div class="card page-card mb-4" data-intro="Integrate your google analytics account with RabbitSEO so we can track the behaviour of the visitors on the websites, import more interesting keywords...">
+                <div class="card-body pt-1">
+                    <ul class="nav nav-pills rabit-nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-Visits-tab" data-bs-toggle="pill"
+                               href="#pills-Visits" role="tab" aria-controls="pills-Visits" aria-selected="true">Visits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-Keywords-tab" data-bs-toggle="pill"
+                               href="#pills-Keywords" role="tab" aria-controls="pills-Keywords"
+                               aria-selected="false">Keywords</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-Medium-tab" data-bs-toggle="pill" href="#pills-Medium"
+                               role="tab" aria-controls="pills-Medium" aria-selected="false">Medium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-Source-tab" data-bs-toggle="pill" href="#pills-Source"
+                               role="tab" aria-controls="pills-Source" aria-selected="false">Source</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-Browser-tab" data-bs-toggle="pill" href="#pills-Browser"
+                               role="tab" aria-controls="pills-Browser" aria-selected="false">Browser</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-Type-tab" data-bs-toggle="pill" href="#pills-Type"
+                               role="tab" aria-controls="pills-Type" aria-selected="false">Type</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-Mobile-tab" data-bs-toggle="pill" href="#pills-Mobile"
+                               role="tab" aria-controls="pills-Mobile" aria-selected="false">Mobile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-Country-tab" data-bs-toggle="pill" href="#pills-Country"
+                               role="tab" aria-controls="pills-Country" aria-selected="false">Country</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-Visits" role="tabpanel" aria-labelledby="pills-Visits-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer" id="?numberOfMonths=1">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer" id="?numberOfMonths=1">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer" id="?numberOfMonths=3">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer" id="?numberOfMonths=6">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer" id="?numberOfMonths=12">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <div class="text-end">
+                                    <ul class="chartBadgeRight">
+                                        <li><span class="lineBadge" style="background-color: #336CFB"></span> Website Visits</li>
+                                    </ul>
+                                </div>
+                                <div style="height: 400px">
+                                    <canvas id="chart_visits" height="350"></canvas>
+                                </div>
+                            </div>
+                            <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-Keywords" role="tabpanel" aria-labelledby="pills-Keywords-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="rabbitTable table-responsive" id="table_keywords">
+                                        <table class="table last hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Visits</th>
+                                                    <th scope="col">Avg Time on Site</th>
+                                                    <th scope="col">Bounce Rate</th>
+                                                    <th scope="col">Page Views</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <td colspan="6" class="text-center">
+                                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                            </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="card chartCart">
+                                        <div class="card-body p-5">
+                                            <div style="width: 455px;margin: 0 auto;">
+                                                <div id="chart_keywords"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-Medium" role="tabpanel" aria-labelledby="pills-Medium-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="rabbitTable table-responsive" id="table_medium">
+                                        <table class="table last notranslate hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Visits</th>
+                                                    <th scope="col">Avg Time on Site</th>
+                                                    <th scope="col">Bounce Rate</th>
+                                                    <th scope="col">Page Views</th>
+                                                    <th scope="col">Ranks</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <td colspan="6" class="text-center">
+                                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                            </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart_medium"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-Source" role="tabpanel" aria-labelledby="pills-Source-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    
+                                    <div class="rabbitTable table-responsive" id="table_source">
+                                        <table class="table last hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Visits</th>
+                                                    <th scope="col">Avg Time on Site</th>
+                                                    <th scope="col">Bounce Rate</th>
+                                                    <th scope="col">Page Views</th>
+                                                    <th scope="col">Rank</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <td colspan="6" class="text-center">
+                                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                            </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart_source"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-Browser" role="tabpanel" aria-labelledby="pills-Browser-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    
+                                    <div class="rabbitTable table-responsive" id="table_browser">
+                                        <table class="table last hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Visits</th>
+                                                    <th scope="col">Avg Time on Site</th>
+                                                    <th scope="col">Bounce Rate</th>
+                                                    <th scope="col">Page Views</th>
+                                                    <th scope="col">Rank</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <td colspan="7" class="text-center">
+                                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                            </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart_browser"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-Type" role="tabpanel" aria-labelledby="pills-Type-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="rabbitTable table-responsive" id="table_type">
+                                        <table class="table last hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Visits</th>
+                                                    <th scope="col">Avg Time on Site</th>
+                                                    <th scope="col">Bounce Rate</th>
+                                                    <th scope="col">Page Views</th>
+                                                    <th scope="col">Rank</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <td colspan="7" class="text-center">
+                                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                            </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart_type"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-Mobile" role="tabpanel" aria-labelledby="pills-Mobile-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="rabbitTable table-responsive" id="table_mobile">
+                                        <table class="table last hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Visits</th>
+                                                    <th scope="col">Avg Time on Site</th>
+                                                    <th scope="col">Bounce Rate</th>
+                                                    <th scope="col">Page Views</th>
+                                                    <th scope="col">Rank</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <td colspan="7" class="text-center">
+                                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                            </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart_mobile"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-Country" role="tabpanel" aria-labelledby="pills-Country-tab">
+                            <div class="dropdown daterangeDrop mb-3">
+                                <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                    Date Range <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="cursor: pointer">Last Month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last calendar month</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 3 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last 6 Months</a>
+                                    <a class="dropdown-item" style="cursor: pointer">Last Year</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="rabbitTable table-responsive" id="table_country">
+                                        <table class="table last hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Visits</th>
+                                                    <th scope="col">Avg Time on Site</th>
+                                                    <th scope="col">Bounce Rate</th>
+                                                    <th scope="col">Page Views</th>
+                                                    <th scope="col">Rank</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <td colspan="7" class="text-center">
+                                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                            </td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="chart_country"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+    $(document).ready(function(){
+        $('.nav-pills a').on('shown.bs.tab', function(event){;
+            drawChart($(event.target).text());           
+        });
+        $.getJSON(apiUrl + analyticsVisits_url, function(json) {
+            if (json.status == null) {
+                json = json["map2"];
+                var xValues = [];
+                var yValues = [];
+                for (const key in json) {
+                    if (Object.hasOwnProperty.call(json, key)) {
+                        xValues.push(getFormattedDate(Number(key)));
+                        yValues.push(json[key]);
+                    }
+                }
+                new Chart("chart_visits", {
+                    type: "line",
+                    data: {
+                        labels: xValues,
+                        datasets: [
+                            {
+                                label: "Website Visits",
+                                fill: false,
+                                lineTension: 0,
+                                borderColor: "#336CFB",
+                                data: yValues,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }
+                        ]
+                    },
+                    options: {
+                        plugins: {
+                            legend: {
+                              display: false
+                            }
+                          },
+                         responsive: true,
+                         maintainAspectRatio: false,
+                        // scales: {
+                        //     yAxes: [
+                        //         {ticks: {min: 6, max:16}}
+                        //     ],
+                        // }
+                    }
+                });
+            } else {
+                $("div#pills-Visits div:eq(2)").html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connet your Google Analytics Account</a>');
+            }
+            $('.spinner-border').hide();
+        })      
+        $('div.dropdown-menu a').click(function() {            
+            drawChart($('ul.nav-pills a.active').text(), $(this).attr('id'));
+        })
+    })
+    
+    function drawChart(type, numberMonth='') {
+        switch (type) {
+            case 'Keywords':
+                $.getJSON(apiUrl + analytics_url + '?viewType=keyword'+numberMonth, function(json) {
+                    if(json.status == null) {
+                        var tableHtml = '';
+                        var xArray = [];
+                        var yArray = [];
+                        var json = json['list'];
+                        var layout = {title:"Website visits by Keywords"};
+                        for (let i = 0; i < json.length; i++) {
+                            tableHtml += 
+                                '<tr>' + 
+                                '<th scope="row">'+(i+1)+'</th>' + 
+                                '<td>'+json[i]['name']+'</td>' +
+                                '<td>'+json[i]['visits']+'</td>' +
+                                '<td>'+json[i]['avgTimeOnSite']+'</td>' +
+                                '<td>'+json[i]['visitBounceRate']+'</td>' +
+                                '<td>'+json[i]['pageViewsPerVisit']+'</td>' +
+                                '</tr>';
+                            xArray.push(json[i]['name']);
+                            yArray.push(json[i]['visits']);               
+                        }
+                        var data = [
+                            {labels:xArray, values:yArray, type:"pie"}
+                        ];
+                        $('div#table_keywords tbody').html(tableHtml);
+                        Plotly.newPlot("chart_keywords", data, layout);
+                    } else {
+                        $('div#table_keywords tbody td').html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>');
+                    }       
+                }) 
+                break;       
+            case 'Medium':
+                $.getJSON(apiUrl + analytics_url + '?viewType=medium'+numberMonth, function(json) {
+                    if(json.status == null) {
+                        var tableHtml = '';
+                        var xArray = [];
+                        var yArray = [];
+                        var json = json['list'];
+                        var layout = {title:"Website visits by Medium"};
+                        for (let i = 0; i < json.length; i++) {
+                            tableHtml += 
+                                '<tr>' + 
+                                '<th scope="row">'+(i+1)+'</th>' + 
+                                '<td>'+json[i]['name']+'</td>' +
+                                '<td>'+json[i]['visits']+'</td>' +
+                                '<td>'+json[i]['avgTimeOnSite']+'</td>' +
+                                '<td>'+json[i]['visitBounceRate']+'</td>' +
+                                '<td>'+json[i]['pageViewsPerVisit']+'</td>' +
+                                '</tr>';
+                            xArray.push(json[i]['name']);
+                            yArray.push(json[i]['visits']);               
+                        }
+                        var data = [
+                            {labels:xArray, values:yArray, type:"pie"}
+                        ];
+                        $('div#table_medium tbody').html(tableHtml);
+                        Plotly.newPlot("chart_medium", data, layout);
+                    } else {
+                        $('div#table_medium tbody td').html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>');
+                    }       
+                })
+                break;
+            case 'Source':
+                $.getJSON(apiUrl + analytics_url + '?viewType=source'+numberMonth, function(json) {
+                    if(json.status == null) {
+                        var tableHtml = '';
+                        var xArray = [];
+                        var yArray = [];
+                        var json = json['list'];
+                        var layout = {title:"Website visits by Source"};
+                        for (let i = 0; i < json.length; i++) {
+                            tableHtml += 
+                                '<tr>' + 
+                                '<th scope="row">'+(i+1)+'</th>' + 
+                                '<td>'+json[i]['name']+'</td>' +
+                                '<td>'+json[i]['visits']+'</td>' +
+                                '<td>'+json[i]['avgTimeOnSite']+'</td>' +
+                                '<td>'+json[i]['visitBounceRate']+'</td>' +
+                                '<td>'+json[i]['pageViewsPerVisit']+'</td>' +
+                                '</tr>';
+                            xArray.push(json[i]['name']);
+                            yArray.push(json[i]['visits']);               
+                        }
+                        var data = [
+                            {labels:xArray, values:yArray, type:"pie"}
+                        ];
+                        $('div#table_source tbody').html(tableHtml);
+                        Plotly.newPlot("chart_source", data, layout);
+                    } else {
+                        $('div#table_source tbody td').html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>');
+                    }       
+                })
+                break;
+            case 'Browser':
+                $.getJSON(apiUrl + analytics_url + '?viewType=browser'+numberMonth, function(json) {
+                    if(json.status == null) {
+                        var tableHtml = '';
+                        var xArray = [];
+                        var yArray = [];
+                        var json = json['list'];
+                        var layout = {title:"Website visits by Browser"};
+                        for (let i = 0; i < json.length; i++) {
+                            tableHtml += 
+                                '<tr>' + 
+                                '<th scope="row">'+(i+1)+'</th>' + 
+                                '<td>'+json[i]['name']+'</td>' +
+                                '<td>'+json[i]['visits']+'</td>' +
+                                '<td>'+json[i]['avgTimeOnSite']+'</td>' +
+                                '<td>'+json[i]['visitBounceRate']+'</td>' +
+                                '<td>'+json[i]['pageViewsPerVisit']+'</td>' +
+                                '</tr>';
+                            xArray.push(json[i]['name']);
+                            yArray.push(json[i]['visits']);               
+                        }
+                        var data = [
+                            {labels:xArray, values:yArray, type:"pie"}
+                        ];
+                        $('div#table_browser tbody').html(tableHtml);
+                        Plotly.newPlot("chart_browser", data, layout);
+                    } else {
+                        $('div#table_browser tbody td').html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>');
+                    }       
+                })
+                break;
+            case 'Type':
+                $.getJSON(apiUrl + analytics_url + '?viewType=visitorType'+numberMonth, function(json) {
+                    if(json.status == null) {
+                        var tableHtml = '';
+                        var xArray = [];
+                        var yArray = [];
+                        var json = json['list'];
+                        var layout = {title:"Website visits by Visitor Type"};
+                        for (let i = 0; i < json.length; i++) {
+                            tableHtml += 
+                                '<tr>' + 
+                                '<th scope="row">'+(i+1)+'</th>' + 
+                                '<td>'+json[i]['name']+'</td>' +
+                                '<td>'+json[i]['visits']+'</td>' +
+                                '<td>'+json[i]['avgTimeOnSite']+'</td>' +
+                                '<td>'+json[i]['visitBounceRate']+'</td>' +
+                                '<td>'+json[i]['pageViewsPerVisit']+'</td>' +
+                                '</tr>';
+                            xArray.push(json[i]['name']);
+                            yArray.push(json[i]['visits']);               
+                        }
+                        var data = [
+                            {labels:xArray, values:yArray, type:"pie"}
+                        ];
+                        $('div#table_type tbody').html(tableHtml);
+                        Plotly.newPlot("chart_type", data, layout);
+                    } else {
+                        $('div#table_type tbody td').html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>');
+                    }       
+                })
+                break;
+            case 'Mobile':
+                $.getJSON(apiUrl + analytics_url + '?viewType=isMobile'+numberMonth, function(json) {
+                    if(json.status == null) {
+                        var tableHtml = '';
+                        var xArray = [];
+                        var yArray = [];
+                        var json = json['list'];
+                        var layout = {title:"Website visits by Mobile"};
+                        for (let i = 0; i < json.length; i++) {
+                            tableHtml += 
+                                '<tr>' + 
+                                '<th scope="row">'+(i+1)+'</th>' + 
+                                '<td>'+json[i]['name']+'</td>' +
+                                '<td>'+json[i]['visits']+'</td>' +
+                                '<td>'+json[i]['avgTimeOnSite']+'</td>' +
+                                '<td>'+json[i]['visitBounceRate']+'</td>' +
+                                '<td>'+json[i]['pageViewsPerVisit']+'</td>' +
+                                '</tr>';
+                            xArray.push(json[i]['name']);
+                            yArray.push(json[i]['visits']);               
+                        }
+                        var data = [
+                            {labels:xArray, values:yArray, type:"pie"}
+                        ];
+                        $('div#table_mobile tbody').html(tableHtml);
+                        Plotly.newPlot("chart_mobile", data, layout);
+                    } else {
+                        $('div#table_mobile tbody td').html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>');
+                    }       
+                })
+                break;
+            case 'Country':
+                $.getJSON(apiUrl + analytics_url + '?viewType=country'+numberMonth, function(json) {
+                    if(json.status == null) {
+                        var tableHtml = '';
+                        var xArray = [];
+                        var yArray = [];
+                        var json = json['list'];
+                        var layout = {title:"Website visits by Country"};
+                        for (let i = 0; i < json.length; i++) {
+                            tableHtml += 
+                                '<tr>' + 
+                                '<th scope="row">'+(i+1)+'</th>' + 
+                                '<td>'+json[i]['name']+'</td>' +
+                                '<td>'+json[i]['visits']+'</td>' +
+                                '<td>'+json[i]['avgTimeOnSite']+'</td>' +
+                                '<td>'+json[i]['visitBounceRate']+'</td>' +
+                                '<td>'+json[i]['pageViewsPerVisit']+'</td>' +
+                                '</tr>';
+                            xArray.push(json[i]['name']);
+                            yArray.push(json[i]['visits']);               
+                        }
+                        var data = [
+                            {labels:xArray, values:yArray, type:"pie"}
+                        ];
+                        $('div#table_country tbody').html(tableHtml);
+                        Plotly.newPlot("chart_country", data, layout);
+                    } else {
+                        $('div#table_country tbody td').html('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>');
+                    }       
+                })
+                break;
+            default:
+                // $.getJSON(apiUrl + analyticsVisits_url+numberMonth, function(json) {
+                //     if (json.status == null) {
+                //         json = json["map2"];
+                //         var xValues = [];
+                //         var yValues = [];
+                //         for (const key in json) {
+                //             if (Object.hasOwnProperty.call(json, key)) {
+                //             xValues.push(getFormattedDate(Number(key)));
+                //             yValues.push(json[key]);
+                //             }
+                //         }
+                //         new Chart("chart_visits", {
+                //             type: "line",
+                //             data: {
+                //                 labels: xValues,
+                //                 datasets: [
+                //                     {
+                //                         fill: false,
+                //                         lineTension: 0,
+                //                         backgroundColor: "rgba(0,0,255,1.0)",
+                //                         borderColor: "rgba(0,0,255,0.1)",
+                //                         data: yValues
+                //                     }
+                //                 ]
+                //             },
+                //             options: {
+                //                 legend: {display: false},
+                //                 // scales: {
+                //                 //     yAxes: [
+                //                 //         {ticks: {min: 6, max:16}}
+                //                 //     ],
+                //                 // }
+                //             }
+                //         });
+                //     } else {
+                //         $("div#pills-Visits div:eq(2)").prepend('<a class="btn btn-primary" href="'+json.data+'" target="_blank">Connect your Google Analytics Account</a>')
+                //     }
+                // })
+                //
+                // break;                
+        }        
+    }
+    
+</script>

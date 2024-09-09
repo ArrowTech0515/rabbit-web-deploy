@@ -1,0 +1,800 @@
+<div class="mb-5">
+    <div class="page-title d-flex align-items-center justify-content-between mb-20px">
+        <div class="d-flex align-items-center align-items-center">
+            <h3 class="dash-title mb-0" id="overviewOf"></h3>
+<!--            <a href="javascript: runIntro();" class="btn btn-outline-primary pageBtn userManual_btn"><img src="/assets/images/icon/u_manual.svg" alt="User Manual"><span>User Manual</span></a>-->
+        </div>
+    </div>
+
+    <div class="card page-card mb-4">
+        <div class="card-body pt-1">
+            <ul class="nav nav-tabs searchTab" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first" type="button" role="tab" aria-controls="first" aria-selected="true">Summary</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="second-tab" data-bs-toggle="tab" data-bs-target="#second" type="button" role="tab" aria-controls="second" aria-selected="false">New Links</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="third-tab" data-bs-toggle="tab" data-bs-target="#third" type="button" role="tab" aria-controls="third" aria-selected="false">Links Issues</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="fourth-tab" data-bs-toggle="tab" data-bs-target="#fourth" type="button" role="tab" aria-controls="fourth" aria-selected="false">Top Level Domain</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="five-tab" data-bs-toggle="tab" data-bs-target="#five" type="button" role="tab" aria-controls="five" aria-selected="false">Types</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="six-tab" data-bs-toggle="tab" data-bs-target="#six" type="button" role="tab" aria-controls="six" aria-selected="false">Locations</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="seven-tab" data-bs-toggle="tab" data-bs-target="#seven" type="button" role="tab" aria-controls="seven" aria-selected="false">Onpage</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row lhRow">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/bluelink.png" class="dashcardIcon" alt="Backlinks">
+                                            <div>
+                                                <h4 id="totalBacklinks"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                                <span>Total Backlinks</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/domain.png" class="dashcardIcon" alt="Referring">
+                                            <div>
+                                                <h4 id="referringDomains"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                                <span>Referring Domains</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                                            <div>
+                                                <h4 id="websiteRank"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                                                <span>Website Rank</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="cardTitle">Summary</h3>
+                        <div class="text-end">
+                            <ul class="chartBadgeRight">
+                                <li><span class="lineBadge" style="background-color: #336CFB"></span> total backlinks</li>
+                                <li><span class="lineBadge" style="background-color: #16D090"></span> referring domains</li>
+                                <li><span class="barBadge"></span> website rank</li>
+                            </ul>
+                        </div>
+                        <div style="height: 300px">
+                            <canvas id="summary" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row lhRow">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/bluelink.png" class="dashcardIcon" alt="Backlinks">
+                                            <div>
+                                                <h4 id="newBacklinks"></h4>
+                                                <span>New Backlinks</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/domain.png" class="dashcardIcon" alt="Referring">
+                                            <div>
+                                                <h4 id="newReferringDomains"></h4>
+                                                <span>New Referring Domains</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="cardTitle">New Links</h3>
+                        <div class="text-end">
+                            <ul class="chartBadgeRight">
+                                <li><span class="lineBadge" style="background-color: #336CFB"></span> New Backlinks</li>
+                                <li><span class="lineBadge" style="background-color: #16D090"></span> New Referring Domains</li>
+                            </ul>
+                        </div>
+                        <div style="height: 300px">
+                            <canvas id="newLinks" height="250"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row lhRow">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/lost_link.png" class="dashcardIcon" alt="Backlinks">
+                                            <div>
+                                                <h4 id="lostBacklinks"></h4>
+                                                <span>Lost backlinks</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/broken-link.png" class="dashcardIcon" alt="Referring">
+                                            <div>
+                                                <h4 id="brokenBacklinks"></h4>
+                                                <span>Broken backlinks</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/broken-pagey.png" class="dashcardIcon" alt="Website">
+                                            <div>
+                                                <h4 id="brokenPages"></h4>
+                                                <span>Broken pages</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="cardTitle">Links Issues</h3>
+                        <div class="text-end">
+                            <ul class="chartBadgeRight">
+                                <li><span class="lineBadge" style="background-color: #FF6760"></span> Lost Backlinks</li>
+                                <li><span class="lineBadge" style="background-color: #336CFB"></span> Broken Backlinks</li>
+                                <li><span class="lineBadge" style="background-color: #16D090"></span> Broken Pages</li>
+                            </ul>
+                        </div>
+                        <div style="height: 300px">
+                            <canvas id="linksIssues" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row lhRow">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/com.png" class="dashcardIcon" alt="Backlinks">
+                                            <div>
+                                                <h4 id="com"></h4>
+                                                <span>com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/org.png" class="dashcardIcon" alt="Referring">
+                                            <div>
+                                                <h4 id="org"></h4>
+                                                <span>org</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/net.png" class="dashcardIcon" alt="Website">
+                                            <div>
+                                                <h4 id="net"></h4>
+                                                <span>net</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="cardTitle">Top Level Domain</h3>
+                        <div class="text-end">
+                            <ul class="chartBadgeRight">
+                                <li><span class="lineBadge" style="background-color: #336CFB"></span> com</li>
+                                <li><span class="lineBadge" style="background-color: #16D090"></span> org</li>
+                                <li><span class="lineBadge" style="background-color: #FAC032"></span> net</li>
+                                <li><span class="lineBadge" style="background-color: #FF6760"></span> co.il</li>
+                            </ul>
+                        </div>
+                        <div style="height: 300px">
+                            <canvas id="topLevelDomain" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row lhRow">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/anchor.png" class="dashcardIcon" alt="Backlinks">
+                                            <div>
+                                                <h4 id="anchor"></h4>
+                                                <span>Anchor </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/demostration.png" class="dashcardIcon" alt="Referring">
+                                            <div>
+                                                <h4 id="canonical"></h4>
+                                                <span>Canonical</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="cardTitle">Types</h3>
+                        <div class="text-end">
+                            <ul class="chartBadgeRight">
+                                <li><span class="lineBadge" style="background-color: #FF6760"></span> anchor</li>
+                                <li><span class="lineBadge" style="background-color: #336CFB"></span> canonical</li>
+                                <li><span class="lineBadge" style="background-color: #FAC032"></span> redirect</li>
+                                <li><span class="lineBadge" style="background-color: #16D090"></span> alternate</li>
+                            </ul>
+                        </div>
+                        <div style="height: 300px">
+                            <canvas id="types" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="six-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row lhRow">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/article.png" class="dashcardIcon" alt="Backlinks">
+                                            <div>
+                                                <h4 id="article"></h4>
+                                                <span>Article</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/main.png" class="dashcardIcon" alt="Referring">
+                                            <div>
+                                                <h4 id="main"></h4>
+                                                <span>Main</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/footer.png" class="dashcardIcon" alt="Website">
+                                            <div>
+                                                <h4 id="footer"></h4>
+                                                <span>Footer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="cardTitle">Locations</h3>
+                        <div class="text-end">
+                            <ul class="chartBadgeRight">
+                                <li><span class="lineBadge" style="background-color: #FF6760"></span> article</li>
+                                <li><span class="lineBadge" style="background-color: #336CFB"></span> footer</li>
+                                <li><span class="lineBadge" style="background-color: #FAC032"></span> aside</li>
+                                <li><span class="lineBadge" style="background-color: #16D090"></span> main</li>
+                            </ul>
+                        </div>
+                        <div style="height: 300px">
+                            <canvas id="locations" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="seven" role="tabpanel" aria-labelledby="seven-tab">
+                    <div class="pt-3 mh-360">
+                        <div class="row lhRow">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/onpage-link.png" class="dashcardIcon" alt="Backlinks">
+                                            <div>
+                                                <h4 id="internalLinksCount">200,000</h4>
+                                                <span>Internal Links Count</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="card dash-card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <img src="/assets/images/icon/onpage-link_black.png" class="dashcardIcon" alt="Referring">
+                                            <div>
+                                                <h4 id="externalLinksCount"></h4>
+                                                <span>External Links Count</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="cardTitle">Onpage</h3>
+                        <ul class="chartBadgeRight">
+                            <li><span class="lineBadge" style="background-color: #FF6760"></span> Internal Links Count</li>
+                            <li><span class="lineBadge" style="background-color: #212529"></span> External Links Count</li>
+                        </ul>
+                        <div style="height: 300px">
+                            <canvas id="onPage" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+            <h3>Upgrade to see your backlinks here</h3>
+            <p>Currently you see a demo of amazon, upgrade now to <br>
+                see results of your website</p>
+            <button type="button">Upgrade to Business</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        let websiteUrl = $('#inputSearchWebsite').val();
+        if (!payingUser) {
+            websiteUrl = "amazon.com";
+            $('.upgradeBlock').attr("onclick", upgradeLink);
+            $('.upgradeBlock').show();
+            $('.mh-360').css('opacity', 0.3);
+            $('.tab-pane').addClass('ignoreme');
+            // showUpgradeModal('Backlinks History is available for Business users, would you like to upgrade to see backlinks data and more?');
+        } else {
+            // $('#overviewOf').html(websiteUrl + ' <span>Links History</span>');
+            $('#overviewOf').html(' <span>Links History</span>');
+            $.getJSON(getApiUrl('getMyJsonCompDataGeneric?api=WebsiteLinksHistory&url=' + websiteUrl), function (json) {
+                // console.log('WebsiteLinksHistory ' + JSON.stringify(json));
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json["data"]);
+                    console.log(json);
+                    json = json['items'];
+                    var xValues = []
+                    var totalBacklinks = []
+                    var referringDomains = []
+                    var websiteRank = []
+                    var newBacklinks = []
+                    var newReferringDomains = []
+                    var lostBacklinks = []
+                    var brokenBacklinks = []
+                    var brokenPages = []
+                    var com = []
+                    var org = []
+                    var net = []
+                    var co_il = []
+                    var anchor = []
+                    var canonical = []
+                    var redirect = []
+                    var alternate = []
+                    var article = []
+                    var footer = []
+                    var aside = []
+                    var main = []
+                    var internalLinksCount = []
+                    var externalLinksCount = []
+
+                    for (var i = 0; i < json.length; i++) {
+                        xValues.push(json[i]['date'].slice(0, 7))
+                        totalBacklinks.push(json[i]['backlinks'])
+                        referringDomains.push(json[i]['referring_domains'])
+                        websiteRank.push(json[i]['rank'])
+                        newBacklinks.push(json[i]['new_backlinks'])
+                        newReferringDomains.push(json[i]['new_referring_domains'])
+                        lostBacklinks.push(json[i]['lost_backlinks'])
+                        brokenBacklinks.push(json[i]['broken_backlinks'])
+                        brokenPages.push(json[i]['broken_pages'])
+                        com.push(json[i]['referring_links_tld']['com'])
+                        org.push(json[i]['referring_links_tld']['org'])
+                        net.push(json[i]['referring_links_tld']['net'])
+                        co_il.push(json[i]['referring_links_tld']['co'])
+                        anchor.push(json[i]['referring_links_types']['anchor'])
+                        canonical.push(json[i]['referring_links_types']['canonical'])
+                        redirect.push(json[i]['referring_links_types']['redirect'])
+                        alternate.push(json[i]['referring_links_types']['alternate'])
+                        article.push(json[i]['referring_links_semantic_locations']['article'])
+                        footer.push(json[i]['referring_links_semantic_locations']['footer'])
+                        aside.push(json[i]['referring_links_semantic_locations']['aside'])
+                        main.push(json[i]['referring_links_semantic_locations']['main'])
+                        internalLinksCount.push(json[i]['internal_links_count'])
+                        externalLinksCount.push(json[i]['external_links_count'])
+                    }
+                    $('#totalBacklinks').text(nFormatter(Math.max.apply(null, totalBacklinks)), 2);
+                    $('#referringDomains').text(nFormatter(Math.max.apply(null, referringDomains)), 2);
+                    $('#websiteRank').text(nFormatter(Math.max.apply(null, websiteRank)), 2);
+                    $('#newBacklinks').text(nFormatter(Math.max.apply(null, newBacklinks)), 2);
+                    $('#newReferringDomains').text(nFormatter(Math.max.apply(null, newReferringDomains)), 2);
+                    $('#lostBacklinks').text(nFormatter(Math.max.apply(null, lostBacklinks)), 2);
+                    $('#brokenBacklinks').text(nFormatter(Math.max.apply(null, brokenBacklinks)), 2);
+                    $('#brokenPages').text(nFormatter(Math.max.apply(null, brokenPages)), 2);
+                    $('#com').text(nFormatter(Math.max.apply(null, com)), 2);
+                    $('#org').text(nFormatter(Math.max.apply(null, org)), 2);
+                    $('#net').text(nFormatter(Math.max.apply(null, net)), 2);
+                    $('#co_il').text(nFormatter(Math.max.apply(null, co_il)), 2);
+                    $('#anchor').text(nFormatter(Math.max.apply(null, anchor)), 2);
+                    $('#canonical').text(nFormatter(Math.max.apply(null, canonical)), 2);
+                    $('#redirect').text(nFormatter(Math.max.apply(null, redirect)), 2);
+                    $('#alternate').text(nFormatter(Math.max.apply(null, alternate)), 2);
+                    $('#article').text(nFormatter(Math.max.apply(null, article)), 2);
+                    $('#footer').text(nFormatter(Math.max.apply(null, footer)), 2);
+                    $('#aside').text(nFormatter(Math.max.apply(null, aside)), 2);
+                    $('#main').text(nFormatter(Math.max.apply(null, main)), 2);
+                    $('#internalLinksCount').text(nFormatter(Math.max.apply(null, internalLinksCount)), 2);
+                    $('#externalLinksCount').text(nFormatter(Math.max.apply(null, externalLinksCount)), 2);
+
+                    new Chart("summary", {
+
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                type: 'line',
+                                label: 'total backlinks',
+                                data: totalBacklinks,
+                                borderColor: "#336CFB",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                type: 'line',
+                                label: 'referring domains',
+                                data: referringDomains,
+                                borderColor: "#16D090",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                type: 'bar',
+                                label: 'website rank',
+                                data: websiteRank,
+                                borderColor: "#EFAD0A",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            legend: {
+                                display: false
+                            }
+                        }
+                    });
+                    new Chart("newLinks", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                label: 'new backlinks',
+                                data: newBacklinks,
+                                borderColor: "#336CFB",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'new referring domains',
+                                data: newReferringDomains,
+                                borderColor: "#16D090",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            legend: {display: true}
+                        }
+                    });
+                    new Chart("linksIssues", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                label: 'lost backlinks',
+                                data: lostBacklinks,
+                                borderColor: "#FF6760",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'broken Backlinks',
+                                data: brokenBacklinks,
+                                borderColor: "#336CFB",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'broken pages',
+                                data: brokenPages,
+                                borderColor: "#16D090",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            legend: {display: true}
+                        }
+                    });
+                    new Chart("topLevelDomain", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                label: 'com',
+                                data: com,
+                                borderColor: "#336CFB",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'org',
+                                data: org,
+                                borderColor: "#16D090",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'net',
+                                data: net,
+                                borderColor: "#FAC032",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'co',
+                                data: co_il,
+                                borderColor: "#FF6760",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            legend: {display: true}
+                        }
+                    });
+                    new Chart("types", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                label: 'anchor',
+                                data: anchor,
+                                borderColor: "#FF6760",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'canonical',
+                                data: canonical,
+                                borderColor: "#336CFB",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'redirect',
+                                data: redirect,
+                                borderColor: "#FAC032",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'alternate',
+                                data: alternate,
+                                borderColor: "#16D090",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            legend: {display: true}
+                        }
+                    });
+                    new Chart("locations", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                label: 'article',
+                                data: article,
+                                borderColor: "#FF6760",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'footer',
+                                data: footer,
+                                borderColor: "#336CFB",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'aside',
+                                data: aside,
+                                borderColor: "#FAC032",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'main',
+                                data: main,
+                                borderColor: "#16D090",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            legend: {display: true}
+                        }
+                    });
+                    new Chart("onPage", {
+                        type: "line",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                label: 'internal Links Count',
+                                data: internalLinksCount,
+                                borderColor: "#212529",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }, {
+                                label: 'external Links Count',
+                                data: externalLinksCount,
+                                borderColor: "#FF6760",
+                                fill: false,
+                                lineTension: 0.4,
+                                pointRadius: 0,
+                                pointHoverRadius: 4,
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            legend: {display: true}
+                        }
+                    });
+                } else if (isFreeUser()) {
+                    showUpgradeModal(genericUpgradeMsg);
+                }
+            });
+        }
+    });
+</script>

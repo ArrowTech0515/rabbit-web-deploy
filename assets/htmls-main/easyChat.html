@@ -1,0 +1,2493 @@
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+  rel="stylesheet">
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- custom css -->
+<link rel="stylesheet" href="/assets/css/easyChat.css" />
+
+<!-- js part -->
+<script type="text/javascript" src="/assets/scripts-app/widgets.js"></script>
+<script type="text/javascript" src="/assets/embed/easyChatEmbed.js"></script>
+<script type="text/javascript" src="/assets/scripts-app/easyChat.js"></script>
+
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+<!-- select2 -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<div>
+
+  <!-- premium alert -->
+  <div class="w-100 d-flex justify-content-center align-items-center c-top-premium">
+    <p class="text-1-bold text-white">Get more unique features of EasyChat with the premium plan!</p>
+    <div class="bg-white">
+      <button class="btn btn-white text-nowrap">UPGRADE NOW</button>
+    </div>
+  </div>
+
+  <!-- home page -->
+  <div id="homePage" class="d-flex w-100">
+
+    <!-- side bar -->
+    <nav class="c-sidebar position-sticky top-0 d-md-flex d-none flex-column justify-content-between">
+      <div>
+        <div class="c-sidebar-logo d-flex gap-3" onclick="gotoDashboard()">
+          <img src="../assets/images/easychatty/Logo.png" alt="Logo">
+          <p class="c-sidebar-logo-title">EasyChat</p>
+        </div>
+        <div style="height: 114px;"></div>
+        <div class="d-flex flex-column" style="gap: 12px;">
+          <div class="c-sidebar-menu-item active position-relative w-100" id="menuItemDashboard" onclick="gotoDashboard()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_dashboard_active.png');"></div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_dashboard.png');"></div>
+            <p class="c-sidebar-menu-item-text">Dashboard</p>
+          </div>
+          <div class="c-sidebar-menu-item position-relative w-100" id="menuItemInsights" onclick="gotoInsights()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_insights_active.png');"></div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_insights.png');"></div>
+            <p class="c-sidebar-menu-item-text">Insights</p>
+          </div>
+          <div class="c-sidebar-menu-item position-relative w-100" id="menuItemSettings" onclick="gotoSettings()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_settings_active.png');"></div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_settings.png');"></div>
+            <p class="c-sidebar-menu-item-text">Settings</p>
+          </div>
+          <div class="c-sidebar-menu-item position-relative w-100" id="menuItemHelp" onclick="gotoHelp()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_help_active.png');"></div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_help.png');"></div>
+            <p class="c-sidebar-menu-item-text">Help</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin-left: 50px;">
+
+        <!-- rate experience -->
+        <div class="c-sidebar-rateus w-100">
+          <div class="d-flex justify-content-between align-items-start gap-2">
+            <p class="text-2-regular text-white text-break">Rate Your <b>EasyChat</b> Experience</p>
+            <img src="../assets/images/easychatty/experience_arrow.png" alt="Arrow">
+          </div>
+          <div class="d-flex" style="margin-top: 10px;">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+          </div>
+        </div>
+
+        <!-- account -->
+        <div style="margin-top: 40px;">
+          <p class="text-3-regular sec-text">Account</p>
+          <div class="c-sidebar-account position-relative">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center" style="gap: 12px">
+                <div class="c-sidebar-account-avatar active">
+                  <img src="../assets/images/easychatty/default_avatar.png" alt="Avatar" id="avatarImageSidebar">
+                  <div class="c-sidebar-account-avatar-alert"></div>
+                </div>
+                <div>
+                  <p class="text-1-bold" style="color: #1C2028;">Alex Plakhov</p>
+                  <p class="text-3-regular" style="color: #828B9D;">User</p>
+                </div>
+              </div>
+              <div class="c-sidebar-account-details main-text">
+                &#x22EE;
+              </div>
+            </div>
+            <div class="c-sidebar-account-popover">
+              <div class="c-sidebar-account-popover-item active d-flex">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.01339 1.93994C5.80673 1.93994 4.01339 3.73327 4.01339 5.93994V7.86661C4.01339 8.27327 3.84006 8.89327 3.63339 9.23994L2.86673 10.5133C2.39339 11.2999 2.72006 12.1733 3.58673 12.4666C6.46006 13.4266 9.56006 13.4266 12.4334 12.4666C13.2401 12.1999 13.5934 11.2466 13.1534 10.5133L12.3867 9.23994C12.1867 8.89327 12.0134 8.27327 12.0134 7.86661V5.93994C12.0134 3.73994 10.2134 1.93994 8.01339 1.93994Z"
+                    stroke="#434A63" stroke-miterlimit="10" stroke-linecap="round" />
+                  <path
+                    d="M9.2467 2.13333C9.04003 2.07333 8.8267 2.02667 8.6067 2C7.9667 1.92 7.35336 1.96667 6.78003 2.13333C6.97336 1.64 7.45336 1.29333 8.01336 1.29333C8.57336 1.29333 9.05336 1.64 9.2467 2.13333Z"
+                    stroke="#434A63" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10.0133 12.7067C10.0133 13.8067 9.11331 14.7067 8.01331 14.7067C7.46664 14.7067 6.95997 14.48 6.59997 14.12C6.23997 13.76 6.01331 13.2533 6.01331 12.7067"
+                    stroke="#434A63" stroke-miterlimit="10" />
+                </svg>
+                <p class="text-3-regular main-text-2 ms-2">Notifications</p>
+                <div class="c-sidebar-account-popover-item-notification active">2</div>
+              </div>
+              <div class="c-sidebar-account-popover-item d-flex">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.93335 5.04003C6.14002 2.64003 7.37335 1.66003 10.0733 1.66003H10.16C13.14 1.66003 14.3334 2.85337 14.3334 5.83337V10.18C14.3334 13.16 13.14 14.3534 10.16 14.3534H10.0733C7.39335 14.3534 6.16002 13.3867 5.94002 11.0267"
+                    stroke="#E82A4C" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M10 8H2.41333" stroke="#E82A4C" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3.89996 5.76672L1.66663 8.00006L3.89996 10.2334" stroke="#E82A4C" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <p class="text-3-regular main-text-2 ms-2">Log Out</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- created channels -->
+        <div style="margin-top: 22px;">
+          <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+          <div class="d-flex justify-content-between" style="margin-top: 6px;">
+            <p class="text-4-regular" style="color: #1C2028;">Created Channels: <b>05 / 10</b></p>
+            <div class="c-sidebar-channel-count-info position-relative">
+              <div class="c-dashboard-chart-block-info d-flex align-items-center justify-content-center sec-text position-relative">&#33;</div>
+              <div class="c-sidebar-channel-count-info-box bg-white">
+                The number of Channels you have created in the current Plan. To increase the number of Channels you can create, upgrade your current plan 
+                <span style="color: #59BBF8; cursor: pointer;">here</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- log out -->
+        <div class="d-flex" style="margin-top: 20px; gap: 10px; cursor: pointer;">
+          <img src="../assets/images/easychatty/log_out.png" alt="Logout">
+          <p class="text-3-bold red">Log Out</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main content -->
+    <div class="flex-grow-1 w-100 overflow-hidden">
+
+      <!-- mobile topbar -->
+      <div class="c-content d-flex d-md-none justify-content-between">
+        <div class="c-sidebar-mobile-logo d-flex align-items-center gap-2">
+          <img src="../assets/images/easychatty/Logo.png" alt="Logo">
+          <p>EasyChat</p>
+        </div>
+        <div style="cursor: pointer;" onclick="showMobileSidebar()">
+          <img src="../assets/images/easychatty/menu.png" alt="Menu">
+        </div>
+      </div>
+
+      <!-- dashboard -->
+      <div class="c-content" id="mainContentDashboard">
+  
+        <!-- title -->
+        <div class="d-flex flex-lg-row justify-content-lg-between flex-sm-column justify-content-sm-start gap-2 pb-md-4 pb-2">
+          <div>
+            <p class="text-content-1">Dashboard</p>
+            <p class="text-2-regular sec-text mt-1 text-nowrap"><b>Hi Alex!</b> Create, edit, and customize</p>
+            <p class="text-2-regular sec-text mt-1">your chat channels.</p>
+          </div>
+          <div class="d-md-flex d-none gap-4 flex-md-row flex-sm-column">
+            <div class="position-relative">
+              <button type="button" class="btn btn-white" onclick="showIntegrationCode()">
+                <img class="me-2" src="../assets/images/easychatty/code-square.png" alt="add">
+                <span class="blue-new-accent-1">Code to integration</span>
+              </button>
+            </div>
+            <button class="btn btn-primary" onclick="gotoCreateChannel()">
+              <img class="me-2" src="../assets/images/easychatty/add-square.png" alt="add">
+              Create Channel
+            </button>
+          </div>
+        </div>
+  
+        <!-- overview -->
+        <div class="d-flex flex-xl-row flex-wrap justify-content-xl-between flex-column justify-content-start gap-4 py-md-3 py-2">
+          <div>
+            <p class="text-content-2">Overview</p>
+            <p class="text-2-regular sec-text">See views and conversions statistics for your channels</p>
+          </div>
+          <div class="d-md-flex d-none flex-wrap justify-content-between gap-4">
+            <div style="width: 200px;">
+              <select id="dashboardViewSelect">
+                <option value="0" selected>Last Day</option>
+                <option value="1">Last Week</option>
+                <option value="2">City</option>
+                <option value="3">Country</option>
+              </select>
+            </div>
+            <div class="d-flex flex-wrap p-1 gap-1" style="border-radius: 14px; background: #DCE0EA33; height: 49px;" id="dashboardDeviceSelect">
+              <div class="c-devices-group-pad-item active" onclick="selectDashboardDevice('1')">All devices</div>
+              <div class="c-devices-group-pad-item" onclick="selectDashboardDevice('2')">Desktop</div>
+              <div class="c-devices-group-pad-item" onclick="selectDashboardDevice('3')">Mobile</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- premium alert -->
+        <div class="alert alert-info d-flex d-flex align-items-start gap-2 my-md-3 my-2">
+          <img src="../assets/images/easychatty/info-circle.png" alt="info" style="width: 16px; height: 16px; margin-top: 2px;">
+          <div>
+            <p class="text-2-bold blue-new-accent-1">You are currently using the demo version of this product.</p>
+            <p class="text-3-regular blue-new-accent-1 mt-2">
+              Please note that some features may be limited in this mode. To unlock the full experience and access all functionalities, consider upgrading to the full version.
+            </p>
+          </div>
+        </div>
+
+        <!-- select group -->
+        <div class="d-md-none d-flex py-md-3 py-2" style="gap: 10px">
+          <select id="dashboardMobileViewSelect">
+            <option value="0" selected>Last Day</option>
+            <option value="1">Last Week</option>
+            <option value="2">City</option>
+            <option value="3">Country</option>
+          </select>
+          <select id="dashboardMobileDeviceSelect">
+            <option value="1" selected>All devices</option>
+            <option value="2">Desktop</option>
+            <option value="3">Mobile</option>
+          </select>
+        </div>
+  
+        <!-- two charts -->
+        <div class="d-flex flex-xl-row flex-column gap-md-2 gap-3 mt-4">
+          <div class="w-100 c-content-block">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p class="text-3-regular sec-text">Total</p>
+                <p class="text-1-bold">Visitors</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center rounded-circle sec-text"
+                  style="width: 20px; height: 20px; font-size: 14px; cursor: pointer;">
+                &quest;
+              </div>
+            </div>
+            <div class="mt-md-4 mt-3 d-flex flex-row justify-content-between align-items-end">
+              <div class="c-dashboard-chart-block up d-flex align-items-center gap-2" style="height: fit-content;">
+                <img src="../assets/images/easychatty/trend-up.png" alt="trending up" class="up">
+                <img src="../assets/images/easychatty/trend-down.png" alt="trending down" class="down">
+                <p class="text-3-regular"><b>0</b> today</p>
+                <div class="c-dashboard-chart-block-info d-flex align-items-center justify-content-center sec-text"
+                            data-bs-toggle="tooltip" data-bs-custom-class="c-white-tooltip"
+                            data-bs-title="This top tooltip is themed via CSS variables.">&#33;</div>
+              </div>
+              <div class="c-dashboard-chart-block-number" id="dashboardTotalVisit">0</div>
+            </div>
+            <div class="mt-md-4 mt-3">
+              <div class="w-100"><canvas id="dashboardVisitChart" class="w-100 h-auto"></canvas></div>
+            </div>
+          </div>
+          <div class="w-100 c-content-block">
+            <div class="d-flex justify-content-between">
+              <div>
+                <p class="text-3-regular sec-text">Total</p>
+                <p class="text-1-bold">Unique Clicks</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center rounded-circle border sec-text"
+                  style="width: 20px; height: 20px; font-size: 14px; cursor: pointer;">
+                &quest;
+              </div>
+            </div>
+            <div class="mt-md-4 mt-3 d-flex flex-row justify-content-between align-items-end">
+              <div class="c-dashboard-chart-block d-flex align-items-center gap-2" style="height: fit-content;">
+                <img src="../assets/images/easychatty/trend-up.png" alt="trending up" class="up">
+                <img src="../assets/images/easychatty/trend-down.png" alt="trending down" class="down">
+                <p class="text-3-regular"><b>0</b> today</p>
+                <div class="c-dashboard-chart-block-info d-flex align-items-center justify-content-center sec-text"
+                            data-bs-toggle="tooltip" data-bs-custom-class="c-white-tooltip"
+                            data-bs-title="This top tooltip is themed via CSS variables.">&#33;</div>
+              </div>
+              <div class="c-dashboard-chart-block-number" id="dashboardTotalClick">0</div>
+            </div>
+            <div class="mt-md-4 mt-3">
+              <div class="w-100"><canvas id="dashboardClickChart" class="w-100 h-auto"></canvas></div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- last table -->
+        <div class="c-content-block mt-3 mb-4" style="width: 100%; overflow-x: auto;">
+          <p class="text-content-3">My Channels.</p>
+          <p class="mt-1 mb-4 text-2 sec-text d-md-block d-none">Manage your Channels.</p>
+          
+          <div class="d-xl-block d-none bg-white table-responsive" style="padding: 30px; border-radius: 20px; background: #FFFFFF66; box-shadow: 0px 40px 80px 0px rgba(57, 73, 98, 0.04);" >
+              <table id="dashboardTable" class="display" style="background: #FFFFFF66;">
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Date Created</th>
+                        <th>Status</th>
+                        <th>Visitors</th>
+                        <th>Clicks</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+          </div>
+
+          <!-- for mobile -->
+          <div id="dashboardTableMobile" class="d-xl-none d-flex flex-column" style="padding: 20px; gap: 20px"></div>
+        </div>
+
+        <!-- create button (mobile responsive) -->
+        <div class="d-md-none d-block position-fixed bottom-0 start-0 end-0" style="padding: 20px 40px;">
+          <button class="btn btn-primary w-100" onclick="gotoCreateChannel()">
+            <img class="me-2" src="../assets/images/easychatty/add-square.png" alt="add">
+            Create Channel
+          </button>
+        </div>
+      </div>
+  
+      <!-- insights -->
+      <div class="c-content d-none" id="mainContentInsights">
+  
+        <!-- title -->
+        <div class="d-flex flex-lg-row justify-content-lg-between flex-sm-column justify-content-sm-start gap-2 mb-md-4 mb-3">
+          <div>
+            <p class="text-content-1">Insights</p>
+            <p class="text-2-regular sec-text mt-1">Statistics that will help you improve</p>
+            <p class="text-2-regular sec-text mt-1">the performance of your business.</p>
+          </div>
+          <div class="d-md-block d-none">
+            <button class="btn btn-primary" onclick="gotoCreateChannel()">
+              <img class="me-2" src="../assets/images/easychatty/add-square.png" alt="add">
+              Create Channel
+            </button>
+          </div>
+        </div>
+  
+        <!-- premium alert -->
+        <div class="alert alert-info d-flex d-flex align-items-start gap-2 my-md-3 my-2">
+          <img src="../assets/images/easychatty/info-circle.png" alt="info" style="width: 16px; height: 16px; margin-top: 2px;">
+          <div>
+            <p class="text-2-bold blue-new-accent-1">You are currently using the demo version of this product.</p>
+            <p class="text-3-regular blue-new-accent-1 mt-2">
+              Please note that some features may be limited in this mode. To unlock the full experience and access all functionalities, consider upgrading to the full version.
+            </p>
+          </div>
+        </div>
+
+        <!-- select channels -->
+        <div class="d-flex flex-xl-row flex-column gap-xl-5 gap-2 mb-2">
+          <div class="flex-grow-1 w-100">
+            <select id="insightsWidgetSelect">
+              <option value="All" data-image="../assets/images/easychatty/icon_checklist.png">All Channels</option>
+            </select>
+          </div>
+          <div class="d-flex flex-lg-row flex-md-column flex-row flex-xs-wrap gap-xl-5 gap-2 justify-content-xl-start justify-content-lg-between">
+            <div class="flex-grow-1" style="min-width: 157px;">
+              <select class="form-select blue-new-accent-1" id="insightsViewSelect">
+                <option value="0">Last Day</option>
+                <option value="1">Last Week</option>
+                <option value="2">City</option>
+                <option value="3">Country</option>
+              </select>
+            </div>
+            <div class="d-md-flex d-none flex-row p-1 gap-1" style="border-radius: 14px; background: #DCE0EA33; height: 49px; width: fit-content;" id="insightsDeviceSelect">
+              <div class="c-devices-group-pad-item active"  onclick="selectInsightsDevice('1')">All devices</div>
+              <div class="c-devices-group-pad-item" onclick="selectInsightsDevice('2')">Desktop</div>
+              <div class="c-devices-group-pad-item" onclick="selectInsightsDevice('3')">Mobile</div>
+            </div>
+            <div class="d-md-none d-block flex-grow-1" style="min-width: 157px;">
+              <select id="insightsMobileDeviceSelect">
+                <option value="1">All devices</option>
+                <option value="2">Desktop</option>
+                <option value="3">Mobile</option>
+              </select>
+            </div>
+          </div>
+        </div>
+  
+        <!-- summary -->
+        <div class="c-insight-summary">
+          <div class="text-content-3">Summary</div>
+          <div class="sec-text mt-3" id="insightSummary"></div>
+        </div>
+
+        <!-- first chart -->
+        <div class="mt-3 c-content-block">
+          <div class="text-content-3">Total result for the selected period.</div>
+          <div class="text-2-regular sec-text">Here you can view the total number of visitors and clicks </div>
+          <div class="text-2-regular sec-text">according to the period you have chosen.</div>
+          <div class="mt-3 w-100">
+            <canvas id="insightsTopChart" class="w-100 h-auto"></canvas>
+          </div>
+          <div class="d-flex gap-3 justify-content-end ms-4">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="insightsTopVisitSwitch" />
+              <label class="form-check-label" for="insightsTopVisitSwitch">Visitors</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="insightsTopClickSwitch" checked />
+              <label class="form-check-label" for="insightsTopClickSwitch">Clicks</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="insightsTopUniqueClickSwitch" checked />
+              <label class="form-check-label" for="insightsTopUniqueClickSwitch">Unique Clicks</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3 d-flex flex-lg-row flex-column gap-2">
+          <div class="c-content-block w-100">
+            <div class="text-content-3">Hours Of Day</div>
+            <div class="text-2-regular sec-text">In this graph, you can see on which of the days of the </div>
+            <div class="text-2-regular sec-text">week your channels are most active.</div>
+            <div class="mt-3 w-100">
+              <canvas id="insightsChart2" class="w-100 h-auto"></canvas>
+            </div>
+            <div class="d-flex gap-3 mt-2 justify-content-end">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopVisitSwitch" />
+                <label class="form-check-label" for="insightsTopVisitSwitch">Visitors</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopClickSwitch" checked />
+                <label class="form-check-label" for="insightsTopClickSwitch">Clicks</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopUniqueClickSwitch" checked />
+                <label class="form-check-label" for="insightsTopUniqueClickSwitch">Unique Clicks</label>
+              </div>
+            </div>
+          </div>
+          <div class="c-content-block w-100">
+            <div class="text-content-3">Days Of Week</div>
+            <div class="text-2-regular sec-text">In this graph, you can see on which of the days of the</div>
+            <div class="text-2-regular sec-text">week your channels are most active.</div>
+            <div class="mt-3 w-100">
+              <canvas id="insightsChart3" class="w-100 h-auto"></canvas>
+            </div>
+            <div class="d-flex gap-3 mt-2 justify-content-end">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopVisitSwitch" />
+                <label class="form-check-label" for="insightsTopVisitSwitch">Visitors</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopClickSwitch" checked />
+                <label class="form-check-label" for="insightsTopClickSwitch">Clicks</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopUniqueClickSwitch" checked />
+                <label class="form-check-label" for="insightsTopUniqueClickSwitch">Unique Clicks</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3 mb-4 d-flex flex-lg-row flex-column gap-2">
+          <div class="c-content-block w-100">
+            <div class="text-content-3">Countries</div>
+            <div class="text-2-regular sec-text">This graph shows which countries you have the most</div>
+            <div class="text-2-regular sec-text">visitors from.</div>
+            <div class="d-flex mt-2 gap-3 justify-content-end">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopVisitSwitch" />
+                <label class="form-check-label" for="insightsTopVisitSwitch">Visitors</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopClickSwitch" checked />
+                <label class="form-check-label" for="insightsTopClickSwitch">Clicks</label>
+              </div>
+            </div>
+            <div class="mt-3 w-100">
+              <canvas id="insightsChart4" class="w-100 h-auto"></canvas>
+            </div>
+          </div>
+          <div class="c-content-block w-100">
+            <div class="text-content-3">Cities</div>
+            <div class="text-2-regular sec-text">This graph shows which cities you have the most</div>
+            <div class="text-2-regular sec-text">visitors from.</div>
+            <div class="d-flex mt-2 gap-3 justify-content-end">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopVisitSwitch" />
+                <label class="form-check-label" for="insightsTopVisitSwitch">Visitors</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="insightsTopClickSwitch" checked />
+                <label class="form-check-label" for="insightsTopClickSwitch">Clicks</label>
+              </div>
+            </div>
+            <div class="mt-3 w-100">
+              <canvas id="insightsChart5" class="w-100 h-auto"></canvas>
+            </div>
+          </div>
+          <div class="c-content-block w-100">
+            <div class="text-content-3">Devices</div>
+            <div class="text-2-regular sec-text">The graph shows from which device the </div>
+            <div class="text-2-regular sec-text">most visitors.</div>
+            <div class="mt-3 w-100">
+              <canvas id="insightsChart6" class="w-100 h-auto"></canvas>
+            </div>
+          </div>
+        </div>
+      
+        <!-- create button (mobile responsive) -->
+        <div class="d-md-none d-block position-fixed bottom-0 start-0 end-0" style="padding: 20px 40px;">
+          <button class="btn btn-primary w-100" onclick="gotoCreateChannel()">
+            <img class="me-2" src="../assets/images/easychatty/add-square.png" alt="add">
+            Create Channel
+          </button>
+        </div>
+      </div>
+  
+      <!-- settings -->
+      <div class="c-content d-none" id="mainContentSettings">
+
+        <!-- title -->
+        <div class="d-flex flex-lg-row justify-content-lg-between flex-sm-column justify-content-sm-start gap-2">
+          <div>
+            <p class="text-content-1">Settings</p>
+            <p class="text-2-regular sec-text mt-1">Set up personal, payment and other information.</p>
+          </div>
+          <div class="d-md-block d-none">
+            <button class="btn btn-primary" onclick="gotoCreateChannel()">
+              <img class="me-2" src="../assets/images/easychatty/add-square.png" alt="add">
+              Create Channel
+            </button>
+          </div>
+        </div>
+
+        <!-- main block -->
+        <div class="c-content-block mt-md-4 mt-3 mb-4">
+
+          <!-- mobile nav bar -->
+          <nav class="d-lg-none d-flex" style="gap: 20px; margin-bottom: 40px;">
+            <p id="settingsNavMobileProfile" class="text-1-bold c-settings-mobile-nav-active" onclick="gotoSettingsProfile()">Profile</p>
+            <p id="settingsNavMobileBilling" class="text-1 sec-text" onclick="gotoSettingsBilling()">Billing</p>
+          </nav>
+
+          <div class="d-flex">
+            <nav class="d-lg-block d-none" style="padding: 50px;">
+              <p id="settingsNavProfile" class="text-1-bold" onclick="gotoSettingsProfile()">Profile</p>
+              <p id="settingsNavBilling" class="text-1 sec-text" onclick="gotoSettingsBilling()">Billing</p>
+            </nav>
+            <form id="settingsDetailProfile" class="c-settings-block flex-grow-1">
+              <p class="text-1-bold mb-4">Profile</p>
+              <p class="text-2-bold">Avatar</p>
+              <div class="d-flex align-items-end mt-2">
+                <div class="rounded-circle bg-gray" style="width: 100px; height: 100px;">
+                  <img class="rounded-circle" width="100px" height="100px" src="../assets/images/easychatty/default_avatar.png" alt="Avatar" id="avatarImage">
+                </div>
+                <button type="button" class="btn btn-secondary ms-3" style="height: 38px" onclick="settingsUploadAvatar()">Change Avatar</button>
+                <input type='file' name="fileInput" id="fileInput" class="d-none" onchange="">
+              </div>
+              
+              <!-- your name -->
+              <div class="pb-3 pt-3">
+                <label for="firstName" class="form-label text-2-bold main-text">Your Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter Your Name">
+              </div>
+
+              <!-- email and phone number -->
+              <div class="d-flex gap-2 flex-wrap">
+                <div class="flex-grow-1">
+                  <div class="pb-3 pt-3">
+                    <label for="email" class="form-label text-2-bold main-text">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" />
+                  </div>
+                </div>
+                <div class="flex-grow-1">
+                  <div class="pb-3 pt-3">
+                    <label for="tel" class="form-label text-2-bold main-text">Phone Number</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="Enter Phone Number" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- domain and company name -->
+              <div class="d-flex gap-2 flex-wrap">
+                <div class="flex-grow-1">
+                  <div class="pb-3 pt-3">
+                    <label for="domain" class="form-label text-2-bold main-text">Domain</label>
+                    <input type="text" class="form-control" id="domain" name="domain" placeholder="Domain Url">
+                  </div>
+                </div>
+                <div class="flex-grow-1">
+                  <div class="pb-3 pt-3">
+                    <label for="text" class="form-label text-2-bold main-text">Company Name</label>
+                    <input type="text" class="form-control" id="company" name="company" placeholder="Enter Company Name" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- password -->
+              <div class="pb-3 pt-3">
+                <label for="settingsPassword" class="form-label text-2-bold main-text">Password:</label>
+                <div class="d-flex gap-2 flex-md-row flex-column">
+                  <div class="flex-grow-1 pe-1">
+                    <input type="password" class="form-control" id="settingsPassword" placeholder="Enter Password" name="email">
+                  </div>
+                  <button class="btn btn-white">Change Password</button>
+                </div>
+              </div>
+
+              <!-- notification -->
+              <div class="pt-3 pb-5">
+                <label class="form-label text-2-bold main-text">Notification:</label>
+                <div class="form-check form-switch d-flex justify-content-between p-0">
+                  <label class="form-check-label" for="NotificationSwitch">Receive Notification</label>
+                  <input class="form-check-input" type="checkbox" id="NotificationSwitch" name="NotificationSwitch" checked />
+                </div>
+              </div>
+
+              <!-- button group -->
+              <div class="d-flex flex-wrap justify-content-between gap-2 pt-3">
+                <div>
+                  <button class="btn btn-red">Delete My Account</button>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                  <button class="btn btn-white">Cancel</button>
+                  <button class="btn btn-primary" onclick="saveFormAndRefreshDetails(this)">Save Changes</button>
+                </div>
+              </div>
+            </form>
+            <div id="settingsDetailBilling" class="c-settings-block flex-grow-1 d-none">
+              <p class="text-1-bold">Billing</p>
+              <p class="text-2-bold mt-4">Current Plan</p>
+              <p class="text-2-bold main-text-2 mt-4">Your account is currently on the Free plan. Renews on Sep 09, 2024.</p>
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <button class="btn btn-primary">All Plans</button>
+                <button class="btn btn-white sec-text">Manage Subscription</button>
+              </div>
+              <div style="height: 30px;"></div>
+              <p class="text-2-bold d-none">Invoices</p>
+              <div>
+                <table></table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- create button (mobile responsive) -->
+        <div class="d-md-none d-block position-fixed bottom-0 start-0 end-0" style="padding: 20px 40px;">
+          <button class="btn btn-primary w-100" onclick="gotoCreateChannel()">
+            <img class="me-2" src="../assets/images/easychatty/add-square.png" alt="add">
+            Create Channel
+          </button>
+        </div>
+      </div>
+  
+      <!-- help -->
+      <div class="c-content d-none" id="mainContentHelp">
+        <div class="d-flex justify-content-between">
+          <div>
+            <p class="text-content-1">Help</p>
+            <p class="text-2-regular sec-text mt-1">You can find help here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- create channel -->
+  <div id="createChannelPage" class="d-flex d-none w-100">
+
+    <!-- side bar -->
+    <nav class="c-channels-sidebar position-sticky top-0 d-md-flex d-none flex-column justify-content-between">
+      <div>
+        <div class="c-sidebar-logo d-flex gap-3 p-0" onclick="gotoDashboard()">
+          <img src="../assets/images/easychatty/Logo.png" alt="Logo">
+          <p class="c-sidebar-logo-title">EasyChat</p>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="accordion accordion-flush" id="accordionNav">
+          <div class="accordion-item">
+            <div class="accordion-header position-relative" id="accordionChannelsSelectHeader" data-bs-toggle="collapse" data-bs-target="#accordionChannelsSelect" aria-expanded="true" aria-controls="accordionSelectChannels" onclick="gotoCustomizeChannel(0)">
+              <div class="accordion-header-content-active">
+                <div class="d-flex">
+                  <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_select_channels.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+                  <p class="text-1-bold" style="line-height: 36px; margin-left: 10px;">Select Channels</p>
+                </div>
+                <div>
+                  <i class="material-icons" style="line-height: 36px">keyboard_arrow_up</i>
+                </div>
+              </div>
+              <div class="accordion-header-content">
+                <div class="d-flex">
+                  <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/menu_dashboard.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+                  <p class="text-1-bold main-text-2" style="line-height: 36px; margin-left: 10px;">Select Channels</p>
+                </div>
+                <div>
+                  <i class="material-icons" style="line-height: 36px">&#xe313;</i>
+                </div>
+              </div>
+            </div>
+            <div id="accordionChannelsSelect" class="accordion-collapse collapse show" aria-labelledby="accordionChannelsSelectHeader" data-bs-parent="#accordionNav">
+              <div style="padding: 10px 20px;">
+                <div class="pb-2">
+                  <label for="inputChannelName" class="form-label text-3-bold main-text-2">Channel Name</label>
+                  <input type="text" class="form-control" placeholder="channel name" id="inputChannelName" >
+                  <label for="inputDomain" class="form-label mt-1 text-3-bold main-text-2">Domain</label>
+                  <input type="text" class="form-control" placeholder="www.example.com" id="inputDomain" >
+                </div>
+                <div class="alert alert-info d-flex align-items-start mb-2">
+                  <img src="../assets/images/easychatty/info-circle.png" alt="info">
+                  <p class="text-3-regular blue-new-accent-1 ms-2" style="width: max-content;">
+                    Select a contact channels and configure it on the right side.
+                  </p>
+                  <div class="btn-close ms-2" style="font-size: 10px;" data-bs-dismiss="alert"></div>
+                </div>
+
+                <!-- channel list -->
+                <div class="d-flex flex-column" style="padding: 10px 20px; gap: 6px;">
+
+                  <!-- whatsapp -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconWhatsapp" onclick="selectChannel('Whatsapp')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Whatsapp.png" alt="Whatsapp" />
+                      <p class="text-2-bold">WhatsApp</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- contactform -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconContactForm"onclick="selectChannel('ContactForm')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_ContactForm.png" alt="Whatsapp" />
+                      <p class="text-2-bold">Contact Form</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- telegram -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconTelegram"onclick="selectChannel('Telegram')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Telegram.png" alt="Whatsapp" />
+                      <p class="text-2-bold">Telegram</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Viber -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconViber"onclick="selectChannel('Viber')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Viber.png" alt="Whatsapp" />
+                      <p class="text-2-bold">Viber</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- messenger -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconMessenger"onclick="selectChannel('Messenger')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Messenger.png" alt="Whatsapp" />
+                      <p class="text-2-bold">Messenger</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconEmail"onclick="selectChannel('Email')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Email.png" alt="Whatsapp" />
+                      <p class="text-2-bold">Email</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconPhone"onclick="selectChannel('Phone')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Phone.png" alt="Phone" />
+                      <p class="text-2-bold">Phone Number</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- SMS -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconSMS"onclick="selectChannel('SMS')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_SMS.png" alt="SMS" />
+                      <p class="text-2-bold">SMS</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Instagram -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconInstagram"onclick="selectChannel('Instagram')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Instagram.png" alt="Instagram" />
+                      <p class="text-2-bold">Instagram</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Linkedin -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconLinkedin"onclick="selectChannel('Linkedin')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Linkedin.png" alt="Linkedin" />
+                      <p class="text-2-bold">LinkedIn</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Facebook -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconFacebook"onclick="selectChannel('Facebook')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Facebook.png" alt="Facebook" />
+                      <p class="text-2-bold">Facebook</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Wechat -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconWechat"onclick="selectChannel('Wechat')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Wechat.png" alt="Wechat" />
+                      <p class="text-2-bold">WeChat</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Snapchat -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconSnapchat"onclick="selectChannel('Snapchat')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Snapchat.png" alt="Snapchat" />
+                      <p class="text-2-bold">Snap Chat</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Line -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconLine"onclick="selectChannel('Line')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Line.png" alt="Line" />
+                      <p class="text-2-bold">Line</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Twitter -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconTwitter"onclick="selectChannel('Twitter')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Twitter.png" alt="Twitter" />
+                      <p class="text-2-bold">X (Twitter)</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- Waze -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconWaze"onclick="selectChannel('Waze')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Waze.png" alt="Waze" />
+                      <p class="text-2-bold">Waze</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- slack -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconSlack"onclick="selectChannel('Slack')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Slack.png" alt="Slack" />
+                      <p class="text-2-bold">Slack</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+
+                  <!-- discord -->
+                  <div class="c-add-channels-item" id="sidebarChannelIconDiscord"onclick="selectChannel('Discord')">
+                    <div class="d-flex align-items-center" style="gap: 10px">
+                      <img class="icon" src="../assets/images/easychatty/icon_Discord.png" alt="Discord" />
+                      <p class="text-2-bold">Discord</p>
+                    </div>
+                    <div class="c-add-channels-item-status"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header position-relative collapsed" id="accordionChannelsCustomizeHeader" data-bs-toggle="collapse" data-bs-target="#accordionChannelsCustomize" aria-expanded="false" aria-controls="accordionSelectChannels"  onclick="gotoCustomizeChannel(1)">
+              <div class="accordion-header-content-active position-absolute top-0 left-0 bottom-0 right-0">
+                <div class="d-flex">
+                  <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_customize_active.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+                  <p class="text-1-bold" style="line-height: 36px; margin-left: 10px;">Customization</p>
+                </div>
+                <div>
+                  <i class="material-icons" style="line-height: 36px">keyboard_arrow_up</i>
+                </div>
+              </div>
+              <div class="accordion-header-content position-absolute top-0 left-0 bottom-0 right-0">
+                <div class="d-flex">
+                  <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_customize.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+                  <p class="text-1-bold main-text-2" style="line-height: 36px; margin-left: 10px;">Customization</p>
+                </div>
+                <div>
+                  <i class="material-icons" style="line-height: 36px">&#xe313;</i>
+                </div>
+              </div>
+            </div>
+            <div id="accordionChannelsCustomize" class="accordion-collapse collapse" aria-labelledby="accordionChannelsCustomizeHeader" data-bs-parent="#accordionNav">
+              <div style="padding: 10px 20px;">
+                <div class="alert alert-info d-flex align-items-start mt-2">
+                  <img src="../assets/images/easychatty/info-circle.png" alt="info">
+                  <p class="text-3-regular blue-new-accent-1 ms-2" style="width: max-content;">
+                    Adjust the location, type, appearance and other parameters of your channel in the block on the right.
+                  </p>
+                  <div class="btn-close ms-2" style="font-size: 10px;" data-bs-dismiss="alert"></div>
+                </div>
+                <div class="c-channel-setting-nav">
+                  <p class="text-2-bold active mb-2" id="channelCustomizeNavType"><i class="material-icons me-1 text-orange">fiber_manual_record</i>Choose Channel Type</p>
+                  <p class="text-2-bold sec-text" id="channelCustomizeNavDesign"><i class="material-icons me-1">fiber_manual_record</i>Customise Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- account -->
+        <div style="margin-top: 40px;">
+          <p class="text-3-regular sec-text">Account</p>
+          <div class="c-sidebar-account position-relative">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center" style="gap: 12px">
+                <div class="c-sidebar-account-avatar active">
+                  <img src="../assets/images/easychatty/default_avatar.png" alt="Avatar" id="avatarImageSidebar">
+                  <div class="c-sidebar-account-avatar-alert"></div>
+                </div>
+                <div>
+                  <p class="text-1-bold" style="color: #1C2028;">Alex Plakhov</p>
+                  <p class="text-3-regular" style="color: #828B9D;">User</p>
+                </div>
+              </div>
+              <div class="c-sidebar-account-details main-text">
+                &#x22EE;
+              </div>
+            </div>
+            <div class="c-sidebar-account-popover">
+              <div class="c-sidebar-account-popover-item active d-flex">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.01339 1.93994C5.80673 1.93994 4.01339 3.73327 4.01339 5.93994V7.86661C4.01339 8.27327 3.84006 8.89327 3.63339 9.23994L2.86673 10.5133C2.39339 11.2999 2.72006 12.1733 3.58673 12.4666C6.46006 13.4266 9.56006 13.4266 12.4334 12.4666C13.2401 12.1999 13.5934 11.2466 13.1534 10.5133L12.3867 9.23994C12.1867 8.89327 12.0134 8.27327 12.0134 7.86661V5.93994C12.0134 3.73994 10.2134 1.93994 8.01339 1.93994Z"
+                    stroke="#434A63" stroke-miterlimit="10" stroke-linecap="round" />
+                  <path
+                    d="M9.2467 2.13333C9.04003 2.07333 8.8267 2.02667 8.6067 2C7.9667 1.92 7.35336 1.96667 6.78003 2.13333C6.97336 1.64 7.45336 1.29333 8.01336 1.29333C8.57336 1.29333 9.05336 1.64 9.2467 2.13333Z"
+                    stroke="#434A63" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10.0133 12.7067C10.0133 13.8067 9.11331 14.7067 8.01331 14.7067C7.46664 14.7067 6.95997 14.48 6.59997 14.12C6.23997 13.76 6.01331 13.2533 6.01331 12.7067"
+                    stroke="#434A63" stroke-miterlimit="10" />
+                </svg>
+                <p class="text-3-regular main-text-2 ms-2">Notifications</p>
+                <div class="c-sidebar-account-popover-item-notification active">2</div>
+              </div>
+              <div class="c-sidebar-account-popover-item d-flex">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.93335 5.04003C6.14002 2.64003 7.37335 1.66003 10.0733 1.66003H10.16C13.14 1.66003 14.3334 2.85337 14.3334 5.83337V10.18C14.3334 13.16 13.14 14.3534 10.16 14.3534H10.0733C7.39335 14.3534 6.16002 13.3867 5.94002 11.0267"
+                    stroke="#E82A4C" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M10 8H2.41333" stroke="#E82A4C" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3.89996 5.76672L1.66663 8.00006L3.89996 10.2334" stroke="#E82A4C" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <p class="text-3-regular main-text-2 ms-2">Log Out</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- created channels -->
+        <div style="margin-top: 22px;">
+          <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+          <div class="d-flex justify-content-between" style="margin-top: 6px;">
+            <p class="text-4-regular" style="color: #1C2028;">Created Channels: <b>05 / 10</b></p>
+            <div class="c-sidebar-channel-count-info position-relative">
+              <div class="c-dashboard-chart-block-info d-flex align-items-center justify-content-center sec-text position-relative">&#33;</div>
+              <div class="c-sidebar-channel-count-info-box bg-white">
+                The number of Channels you have created in the current Plan. To increase the number of Channels you can create, upgrade your current plan 
+                <span style="color: #59BBF8; cursor: pointer;">here</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- log out -->
+        <div class="d-flex" style="margin-top: 20px; gap: 10px; cursor: pointer;">
+          <img src="../assets/images/easychatty/log_out.png" alt="Logout">
+          <p class="text-3-bold red">Log Out</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- select channel -->
+    <div class="c-content w-100">
+
+      <!-- mobile topbar -->
+      <div class="d-flex d-md-none justify-content-between">
+        <div class="c-sidebar-mobile-logo d-flex align-items-center gap-2" onclick="gotoDashboard()">
+          <img src="../assets/images/easychatty/Logo.png" alt="Logo">
+          <p>EasyChat</p>
+        </div>
+        <div style="cursor: pointer;" onclick="showMobileSecondSidebar()">
+          <img src="../assets/images/easychatty/menu.png" alt="Menu">
+        </div>
+      </div>
+
+      <!-- mobile save button group -->
+      <div class="d-md-none d-flex flex-row flex-wrap position-sticky top-0" style="gap: 10px; margin-top: 20px;">
+        <div class="flex-grow-1">
+          <button class="btn btn-white gap-2 w-100" onclick="channelsSave(0)">
+            <img src="../assets/images/easychatty/draft.png" alt="draft">
+            Save Draft</button>
+        </div>
+        <div class=" flex-grow-1">
+          <button class="btn btn-primary gap-2 w-100" onclick="channelsSave(1)">
+            <img src="../assets/images/easychatty/rocket.png" alt="publish">
+            Publish Channel</button>
+        </div>
+      </div>
+
+      <!-- header and breadcrumb -->
+      <div class="d-md-flex d-none flex-xl-row justify-content-xl-between flex-lg-column justify-content-lg-start gap-2">
+        <div class="d-flex">
+          <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.2222 15.6667L12.8889 21M12.8889 21L18.2222 26.3333M12.8889 21H27.1111M36 21C36 29.8366 28.8366 37 20 37C11.1634 37 4 29.8366 4 21C4 12.1634 11.1634 5 20 5C28.8366 5 36 12.1634 36 21Z" stroke="#C5CCDC" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>             
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="javascript:void(0);" onclick="gotoDashboard()" class="third-text">Home</a></li>
+              <li class="breadcrumb-item"><a href="#" class="sec-text">Create Channel</a></li>
+            </ol>
+          </nav>
+        </div>
+        <!-- button group -->
+        <div class="d-flex gap-3 flex-lg-row flex-md-column">
+          <button class="btn btn-white gap-2" onclick="channelsSave(0)">
+            <img src="../assets/images/easychatty/draft.png" alt="draft">
+            Save Draft</button>
+          <button class="btn btn-primary gap-2" onclick="channelsSave(1)">
+            <img src="../assets/images/easychatty/rocket.png" alt="publish">
+            Publish Channel</button>
+        </div>
+      </div>
+
+      <!-- page title -->
+      <div class="d-md-block d-none" style="margin-top: 40px;">
+        <p id="gotoCreateChannelTitle" class="text-content-1"><span class="text-orange">
+          Add Channel</span> to Your Website!</p>
+        <p class="text-2-regular sec-text">Create, edit, and customize your channel.</p>
+      </div>
+
+      <!-- main layout -->
+      <div class="d-flex flex-xl-row flex-column gap-4 mt-4">
+
+        <!-- left panel -->
+        <div id="customizationPageLeftPanel" class="w-100">
+
+          <!-- channel add -->
+          <div id="createChannelAddPanel" class="">
+            <div class="btn-question text-1-bold main-text" style="--button-text: 'Added Channels'; height: 38px;"></div>
+
+            <div id="addedChannelsPanel"></div>
+
+            <!-- normal -->
+            <template id="channelBlockNormal">
+              <div class="c-channel-block">
+                <!-- title -->
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex gap-2">
+                    <img id="channelIconNormal" src="../assets/images/easychatty/icon_Normal.png" alt="Normal">
+                    <div id="channelTitleNormal" class="btn-question text-1-bold me-3 main-text" style="--button-text: 'Normal';"></div>
+                  </div>
+                  <img src="../assets/images/easychatty/trash.svg" alt="trash" id="trashChannelNormal" onclick="removeChannel(this)" style="cursor: pointer;">
+                </div>
+                <input id="channelUsernameNormal" type="text" class="form-control mt-3" placeholder="User name" oninput="inputContactInfo(this)">
+                <div class="mt-4">
+                  <div class="d-flex justify-content-between collapse-header collapsed c-show-hide-collapse" data-bs-toggle="collapse" data-bs-target="#channelDetailNormal" aria-expanded="true" aria-controls="channelDetailNormal" style="cursor: pointer;">
+                    <div class="text-2-bold main-text">Show Settings</div>
+                  </div>                
+                  <div class="collapse pt-2" id="channelDetailNormal">
+                    <div class="d-flex justify-content-between  mt-2">
+                      <label for="iconColorNormal" class="text-3-bold main-text-2">Icon Background</label>
+                      <input type="color" id="iconColorNormal" value="#0A66C2" class="" style="width: 20px; height: 20px; padding: 0" oninput="changeChatIconColor(this)">
+                    </div>
+                    <div class="form-check form-switch d-flex justify-content-between align-items-center mt-2" style="padding-left: 0 !important;">
+                      <label class="form-check-label text-3-bold main-text-2" for="iconShowonDesktopNormal">Show on Desktop devices</label>
+                      <input class="form-check-input" type="checkbox" id="iconShowonDesktopNormal" checked oninput="changeChatDesktop(this)">
+                    </div>
+                    <div class="form-check form-switch d-flex justify-content-between align-items-center  mt-2" style="padding-left: 0 !important;">
+                      <label class="form-check-label text-3-bold main-text-2" for="iconShowonMobileNormal">Show on Mobile devices</label>
+                      <input class="form-check-input" type="checkbox" id="iconShowonMobileNormal" checked oninput="changeChatMobile(this)">
+                    </div>
+                    <div class="mt-2">
+                      <label for="iconHoverTextNormal" class="form-label text-3-bold main-text-2">Hover Text</label>
+                      <input type="text" class="form-control text-3-bold" id="iconHoverTextNormal" value="Normal" placeholder="Enter new hover text." oninput="changeChatIconHoverText(this)">
+                    </div>
+                    <div class="mt-2">
+                      <label for="iconHoverTextOnCloseNormal" class="form-label text-3-bold main-text-2">Hover Text on Close button</label>
+                      <input type="text" class="form-control text-3-bold" id="iconHoverTextOnCloseNormal" value="Close" placeholder="Enter new hover text." oninput="changeChatIconHoverTextOnClose(this)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+
+            <div id="channelBlockWhatsapp" class="d-none">
+              <!-- Whatsapp -->
+              <div class="c-channel-block">
+                <!-- title -->
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex gap-2">
+                    <img src="../assets/images/easychatty/icon_Whatsapp.png" alt="Whatsapp">
+                    <div class="btn-question text-1-bold me-3 main-text" style="--button-text: 'Whatsapp';"></div>
+                  </div>
+                  <img src="../assets/images/easychatty/trash.svg" alt="trash" id="trashChannelWhatsapp" onclick="removeChannel(this)" style="cursor: pointer;">
+                </div>
+
+                <!-- phone number -->                
+                <div class="c-phone-number-input-container mt-3">
+                  <div class="c-phone-number-input-selected-pad d-flex">
+                    <div class="d-flex align-items-center gap-2" style="cursor: pointer;" onclick="showPhoneNumberList()">
+                      <span class="iconify" data-icon="flag:gb-4x3"></span>
+                      <strong>+44</strong>
+                      <i class="material-icons lh-1">keyboard_arrow_down</i>
+                    </div>
+                    <input type="tel" name="tel" class="form-control ms-2" value="+44 " placeholder="Phone Number ( e.g.: ( ___ ) ___ - ____ )" oninput="inputContactInfo(this)" id="channelUsernameWhatsapp">
+                  </div>
+                  <div class="options">
+                    <input type="text" class="c-phone-number-search-box form-control" placeholder="Search Country Name" oninput="phoneNumberSearchCountry()">
+                    <ol></ol>
+                  </div>
+                </div>
+
+                <!-- show more -->
+                <div class="mt-3">
+                  <div class="d-flex justify-content-between collapse-header collapsed c-show-hide-collapse" data-bs-toggle="collapse" data-bs-target="#channelWhatsappDetail" aria-expanded="true" aria-controls="channelWhatsappDetail" style="cursor: pointer;">
+                    <div class="text-2-bold main-text">Show Settings</div>
+                  </div>                
+                  <div class="collapse mt-3" id="channelWhatsappDetail">
+
+                    <!-- whatsapp channel type -->
+                    <div class="text-3-bold main-text-2">Whatsapp Channel Type</div>
+                    <div class="d-flex flex-lg-row flex-md-column gap-3 my-3">
+                      <div class="w-100">
+                        <div class="c-channel-icon-preview-block active" id="whatsappType0" onclick="selectWhatsappType(0)">
+                          <img src="../assets/images/easychatty/Whatsapp_type_0.png" />
+                        </div>
+                      </div>
+                      <div class="w-100">
+                        <div class="c-channel-icon-preview-block" id="whatsappType1" onclick="selectWhatsappType(1)">
+                          <img src="../assets/images/easychatty/Whatsapp_type_1.png" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- heading -->
+                    <div class="bg-white" style="border-radius: 20px; padding: 30px">
+                      <div>
+                        <label for="whatsappHeading" class="form-label text-3-bold main-text-2">Heading</label>
+                        <input type="text" class="form-control text-3-bold" id="whatsappHeading" value="Whatsapp Chat." placeholder="Whatsapp Chat.">
+                      </div>
+                      <div class="mt-2">
+                        <label for="whatsappUsername" class="form-label text-3-bold main-text-2">Username</label>
+                        <input type="text" class="form-control text-3-bold" id="whatsappUsername" value="Admin" placeholder="Admin.">
+                      </div>
+
+                      <div class="mt-3">
+                        <div class="form-check form-switch d-flex justify-content-between align-items-center ps-0">
+                          <label class="form-check-label text-3-bold main-text-2" for="whatsappProfileImageEnable">Profile Image</label>
+                          <input class="form-check-input" type="checkbox" id="whatsappProfileImageEnable" name="darkmode" value="yes" checked>
+                        </div>
+
+                        <div class="c-upload-drop-zone mt-3" id="whatsappProfileImageDrop">
+                          Drap your files here or browse.
+                        </div>
+                      </div>  
+                      <div>
+                        <label for="whatsappInputPlaceholder" class="form-label text-3-bold main-text-2">Input Placeholder</label>
+                        <input type="text" class="form-control text-3-bold" id="whatsappInputPlaceholder" value="Write Your Message." placeholder="Write Your Message.">
+                      </div>
+                    </div>
+
+                    <div class="form-check form-switch d-flex justify-content-between align-items-center mt-3 ps-0">
+                      <label class="form-check-label text-3-bold main-text-2" for="whatsappCustomImageEnable">Custom Image</label>
+                      <input class="form-check-input" type="checkbox" id="whatsappCustomImageEnable" name="darkmode" value="yes" checked>
+                    </div>
+
+                    <div class="c-upload-drop-zone mt-2" id="whatsappProfileImageDrop">
+                      Drap your files here or browse.
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-2">
+                      <label for="iconColorWhatsapp" class="text-3-bold main-text-2">Icon Background</label>
+                      <input type="color" id="iconColorWhatsapp" value="#0A66C2" class="" style="width: 20px; height: 20px; padding: 0" oninput="changeChatIconColor(this)">
+                    </div>
+                    <div class="form-check form-switch d-flex justify-content-between align-items-center mt-2" style="padding-left: 0 !important;">
+                      <label class="form-check-label text-3-bold main-text-2" for="iconShowonDesktopWhatsapp">Show on Desktop devices</label>
+                      <input class="form-check-input" type="checkbox" id="iconShowonDesktopWhatsapp" checked oninput="changeChatDesktop(this)">
+                    </div>
+                    <div class="form-check form-switch d-flex justify-content-between align-items-center  mt-2" style="padding-left: 0 !important;">
+                      <label class="form-check-label text-3-bold main-text-2" for="iconShowonMobileWhatsapp">Show on Mobile devices</label>
+                      <input class="form-check-input" type="checkbox" id="iconShowonMobileWhatsapp" checked oninput="changeChatMobile(this)">
+                    </div>
+                    <div class="mt-2">
+                      <label for="iconHoverTextWhatsapp" class="form-label text-3-bold main-text-2">Hover Text</label>
+                      <input type="text" class="form-control text-3-bold" id="iconHoverTextWhatsapp" value="Whatsapp" placeholder="Enter new hover text." oninput="changeChatIconHoverText(this)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <template id="channelBlockContactForm">
+              <!-- contact us -->
+              <div class="c-channel-block">
+              
+                <!-- title -->
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex gap-2">
+                    <img src="../assets/images/easychatty/icon_ContactForm.png" alt="ContactForm">
+                    <div class="btn-question text-1-bold me-3 main-text" style="--button-text: 'Contact Form';"></div>
+                  </div>
+                  <img src="../assets/images/easychatty/trash.svg" alt="trash" id="trashChannelContactForm" onclick="removeChannel(this)" style="cursor: pointer;">
+                </div>
+
+                <div class="mt-3">
+                  <input type="email" class="form-control" placeholder="Sent to your@gmail.com" id="channelUsernameContactForm" oninput="inputContactInfo(this)">
+                </div>
+
+                <div class="mt-3 c-channel-block-inside-block">
+                  <!-- full name -->
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <p class="text-3-bold main-text-2">Full Name</p>
+                      </div>
+                      <div class="d-flex gap-3">
+                        <div class="form-check form-switch d-flex align-items-center flex-directions-reverse gap-2" style="width: 90px;">
+                          <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormFullNameRequired" />
+                          <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormFullNameRequired">Required</label>
+                        </div>
+                      
+                        <div class="form-check form-switch d-flex align-items-center flex-directions-reverse gap-2" style="width: 65px;">
+                          <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormFullNameHide" />
+                          <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormFullNameHide">Hide</label>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="mt-1">
+                      <input type="text" class="form-control" placeholder="e.g.John Smirth">
+                    </div>
+                  </div>
+
+                  <!-- email -->
+                  <div class="mt-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <p class="text-3-bold main-text-2">Email</p>
+                      </div>
+                      <div class="d-flex gap-3">
+                        <div class="form-check form-switch" style="width: 90px;">
+                          <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormEmailRequired" />
+                          <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormEmailRequired">Required</label>
+                        </div>
+                      
+                        <div class="form-check form-switch" style="width: 65px;">
+                          <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormEmailHide" />
+                          <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormEmailHide">Hide</label>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="mt-1">
+                      <input type="email" class="form-control" placeholder="e.g.your@mail.com">
+                    </div>
+                  </div>
+
+                  <!-- message -->
+                  <div class="mt-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div>
+                        <p class="text-3-bold main-text-2">Message</p>
+                      </div>
+                      <div class="d-flex gap-3">
+                        <div class="form-check form-switch" style="width: 90px;">
+                          <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormMessageRequired" />
+                          <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormMessageRequired">Required</label>
+                        </div>
+                      
+                        <div class="form-check form-switch" style="width: 65px;">
+                          <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormMessageHide" />
+                          <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormMessageHide">Hide</label>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="mt-1">
+                      <input type="text" class="form-control" placeholder="e.g.John Smirth">
+                    </div>
+                  </div>
+
+                  <!-- add more button -->
+                  <div class="mt-2" style="padding-top: 20px;">
+                    <button class="btn btn-white d-flex justify-content-center align-items-center w-100 style="height: 49px; border-radius: 10px; border: 1px solid #DCE0EA; cursor: pointer;">
+                      <i class="material-icons me-3 main-text">add</i>
+                      <p class="text-2-bold main-text">Add Fields</p>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- show more -->
+                <div class="mt-3">
+                  <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMore" aria-expanded="true" aria-controls="addChannelContactFormShowMore" style="cursor: pointer;">
+                    <div class="text-2-bold main-text">Show Settings</div>
+                  </div>                
+                  <div class="collapse" id="addChannelContactFormShowMore">
+
+                    <!-- form -->
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center collapse-header collapsed pt-3" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMoreForm" aria-expanded="true" aria-controls="addChannelContactFormShowMoreForm" style="cursor: pointer;">
+                        <div class="text-2-bold main-text-2">Form</div>
+                      </div>                
+                      <div class="collapse" id="addChannelContactFormShowMoreForm">
+                        <div class="mt-2 d-flex justify-content-between align-items-center">
+                          <div class="mt-2">
+                            <p class="text-3-bold main-text-2">Title</p>
+                          </div>
+                          <div class="d-flex gap-3 mt-2">
+                            <div class="d-flex">
+                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Background</label>
+                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+                            </div>
+                          
+                            <div class="d-flex">
+                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Text</label>
+                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#ffffff" style="width: 20px; height: 20px; padding: 0">
+                            </div>
+
+                            <div class="d-flex">
+                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Close Icon</label>
+                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#ffffff" style="width: 20px; height: 20px; padding: 0">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="mt-2">
+                          <input type="text" class="form-control" placeholder="Contact Us Today">
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                          <div>
+                            <p class="text-3-bold main-text-2">Button Text</p>
+                          </div>
+                          <div class="d-flex gap-3">
+                            <div class="d-flex">
+                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Background</label>
+                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+                            </div>
+                          
+                            <div class="d-flex">
+                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Text</label>
+                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#ffffff" style="width: 20px; height: 20px; padding: 0">
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div class="mt-2">
+                          <input type="text" class="form-control" placeholder="Submit">
+                        </div>
+
+                        <!-- advanced form settings -->
+                        <div class="d-flex justify-content-between align-items-center collapse-header collapsed pt-3" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMoreFormAdvancedSetting" aria-expanded="true" aria-controls="addChannelContactFormShowMoreFormAdvancedSetting" style="cursor: pointer;">
+                          <div class="text-2-bold main-text">Advanced Form Settings</div>
+                        </div>                
+                        <div class="collapse" id="addChannelContactFormShowMoreFormAdvancedSetting">
+                          
+                          <div class="form-check form-switch d-flex justify-content-between align-items-center mt-1 ps-0">
+                            <label class="form-check-label text-3-bold main-text-2" for="mySwitch">Close Form after Submission</label>
+                            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                          </div>
+
+                          <div class="mt-2">
+                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="typeNumber">Close After</label>
+                          </div>
+                          <div data-mdb-input-init class="form-outline">
+                            <input type="number" id="typeNumber" class="form-control" />
+                          </div>
+
+                          <div class="form-check form-switch d-flex justify-content-between align-items-center mt-1 ps-0">
+                            <label class="form-check-label text-3-bold main-text-2" for="mySwitch">Redirect Customers</label>
+                            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                          </div>
+
+                          <div class="mt-2">
+                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="typeNumber">Redirect to</label>
+                            <input type="url" class="form-control" placeholder="rabittseo.com">
+                          </div>
+
+                          <div class="mt-2">
+                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="typeNumber">Thank you message</label>
+                            <input type="url" class="form-control" placeholder="Thank you for submission">
+                          </div>
+
+                          <div class="d-flex flex-md-row flex-column gap-2 mt-3">
+                            <div class="flex-grow-1">
+                              <label for="customRange" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Title Size';"></label>
+                              <input type="range" class="form-range" id="customRange">
+                            </div>
+                            <div class="flex-grow-1">
+                              <label for="customRange" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Field Size';"></label>
+                              <input type="range" class="form-range" id="customRange">
+                            </div>
+                            <div class="flex-grow-1">
+                              <label for="customRange" class="form-label text-3-bold main-text-2">Button Size</label>
+                              <input type="range" class="form-range" id="customRange">
+                            </div>
+                          </div>
+
+                          <div class="form-check form-switch d-flex justify-content-between align-items-center mt-1 ps-0">
+                            <label class="form-check-label text-3-bold main-text-2" for="mySwitch">Captcha</label>
+                            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- channel -->
+                    <div class="mt-3">
+                      <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMoreChannel" aria-expanded="true" aria-controls="addChannelContactFormShowMoreChannel" style="cursor: pointer;">
+                        <p class="text-2-bold main-text-2">Channel</p>
+                      </div>
+                      <div class="collapse" id="addChannelContactFormShowMoreChannel">
+                        <div class="mt-3 d-flex justify-content-between ps-0">
+                          <label for="settingsEmail123" class="form-label text-3-bold main-text-2">Icon Background</label>
+                          <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+                        </div>
+    
+                        <div class="d-flex justify-content-between form-switch align-items-center mt-2 ps-0">
+                          <label for="settingsEmail123" class="form-label text-3-bold main-text-2">Show on Desktop Devices</label>
+                          <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                        </div>
+    
+                        <div class="d-flex justify-content-between form-switch align-items-center mt-2 ps-0">
+                          <label for="settingsEmail123" class="form-label text-3-bold main-text-2">Show on Mobile Devices</label>
+                          <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                        </div>
+    
+                        <div class="mt-2">
+                          <label for="settingsEmail" class="form-label text-3-bold main-text-2">Hover Text</label>
+                          <input type="text" class="form-control text-3-bold" id="settingsEmail" value="Close" placeholder="Contact Us">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- advanced position(premium) -->
+                    <div class="mt-3">
+                      <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMoreAdvanced" aria-expanded="true" aria-controls="addChannelContactFormShowMoreAdvanced" style="cursor: pointer;">
+                        <div class="btn-premium text-2-bold main-text" style="--button-text: 'Advanced Settings'"></div>
+                      </div>
+                      <div class="collapse" id="addChannelContactFormShowMoreAdvanced">
+                        <div class="d-flex justify-content-between form-switch align-items-center mt-1 ps-0">
+                          <label for="customRange" class="form-check-label text-3-bold main-text-2">Custom Image</label>
+                          <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                        </div>
+                        <div class="c-upload-drop-zone mt-3" id="drop-zone">
+                          Drap your files here or browse.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+          
+          <!-- channel customize -->
+          <div id="createChannelCustomizePanel" class="d-none">
+            
+            <!-- channel type -->
+            <div id="channelTypePage">
+              <div class="btn-question text-1-bold main-text" style="--button-text: 'Channel Type'; height: 38px;"></div>
+
+              <!-- button type -->
+              <div class="c-channel-block">
+                <!-- preview boxes -->
+                <div class="text-2-bold main-text">Button Type</div>
+                <div class="d-flex flex-wrap gap-2 my-2">
+                  <div class="flex-grow-1 c-channel-icon-preview-block active">
+                    <img src="../assets/images/easychatty/contactus_0.png" />
+                  </div>
+                  <div class="flex-grow-1 c-channel-icon-preview-block">
+                    <img src="../assets/images/easychatty/contactus_1.png" />
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 my-2">
+                  <div class="flex-grow-1 c-channel-icon-preview-block">
+                    <img src="../assets/images/easychatty/contactus_2.png" />
+                  </div>
+                  <div class="flex-grow-1 c-channel-icon-preview-block">
+                    <img src="../assets/images/easychatty/contactus_3.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- channel design -->
+            <div id="channelDesignPage" class="d-none">
+              <div class="btn-question text-1-bold main-text" style="--button-text: 'Bottom/Top Space'; height: 38px;"></div>  
+
+              <div class="c-channel-block">
+                <!-- preview boxes -->
+                <div class="text-2-bold main-text">Position</div>
+                <div class="d-flex flex-wrap gap-2 my-2">
+                  <div class="flex-grow-1" onclick="setWidgetPosition(0)">
+                    <div class="text-3-bold main-text-2" style="margin-left: 5px;">Bottom Right Corner</div>
+                    <div class="c-channel-icon-preview-block position active" id="position0">
+                      <img src="../assets/images/easychatty/contactus_bottom_right_active.png" />
+                      <img src="../assets/images/easychatty/contactus_bottom_right.png" />
+                    </div>
+                  </div>
+                  <div class="flex-grow-1" onclick="setWidgetPosition(1)">
+                    <div class="text-3-bold main-text-2" style="margin-left: 5px;">Bottom Left Corner</div>
+                    <div class="c-channel-icon-preview-block position" id="position1">
+                      <img src="../assets/images/easychatty/contactus_bottom_left_active.png" />
+                      <img src="../assets/images/easychatty/contactus_bottom_left.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 my-2">
+                  <div class="flex-grow-1" onclick="setWidgetPosition(2)">
+                    <div class="text-3-bold main-text-2" style="margin-left: 5px;">Top Right Corner</div>
+                    <div class="c-channel-icon-preview-block position" id="position2">
+                      <img src="../assets/images/easychatty/contactus_top_right_active.png" />
+                      <img src="../assets/images/easychatty/contactus_top_right.png" />
+                    </div>
+                  </div>
+                  <div class="flex-grow-1" onclick="setWidgetPosition(3)">
+                    <div class="text-3-bold main-text-2" style="margin-left: 5px;">Top Left Corner</div>
+                    <div class="c-channel-icon-preview-block position" id="position3">
+                      <img src="../assets/images/easychatty/contactus_top_left_active.png" />
+                      <img src="../assets/images/easychatty/contactus_top_left.png" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- advanced position(premium) -->
+                <div class="mt-3">
+                  <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#designAdvancededPosition" aria-expanded="true" aria-controls="designAdvancededPosition" style="cursor: pointer;">
+                    <div class="btn-premium text-2-bold main-text" style="--button-text: 'Advanced Position Settings'"></div>
+                  </div>                
+                  <div class="collapse mt-3" id="designAdvancededPosition">
+                    <div class="row align-items-end" style="margin: 0 20px !important;">
+                      <div class="col-12 col-md-4 px-2">
+                        <label for="advancedPos0" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Bottom/Top Space';"></label>
+                        <input type="range" class="form-range" id="advancedPos0">
+                      </div>
+                      <div class="col-12 col-md-4 px-2">
+                        <label for="advancedPos1" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Side Space';"></label>
+                        <input type="range" class="form-range" id="advancedPos1">
+                      </div>
+                      <div class="col-12 col-md-4 px-2">
+                        <label for="advancedPos2" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Channel Size';"></label>
+                        <input type="range" class="form-range" id="advancedPos2">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- background color -->
+                <div class="mt-3 d-flex justify-content-between">
+                  <label for="settingsEmail123" class="form-label text-2-bold main-text">Background Colour</label>
+                  <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+                </div>
+
+                <!-- call to action text -->
+                <div class="mt-3">
+                  <div class="d-flex justify-content-between form-switch align-items-center ps-0">
+                    <label for="" class="form-check-label btn-exclamation text-2-bold main-text" style="--button-text: 'Call to Action Text';"></label>
+                    <input class="form-check-input" type="checkbox" id="mySwitch" checked>
+                  </div>
+                  <div class="mt-2">
+                    <label for="" class="form-label text-3-bold sec-text">Text</label>
+                    <input type="text" class="form-control text-2-bold main-text" id="settingsEmail" placeholder="Contact Us.">
+                  </div>
+                  <div class="mt-2">
+                    <label for="" class="form-label text-3-bold sec-text">Hover Text on Close button</label>
+                    <select class="form-select">
+                      <option selected>Inter</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+                    <label for="" class="form-check-label btn-exclamation text-3-bold sec-text" style="--button-text: 'Text Colour';"></label>
+                    <input class="form-control" type="color" id="mySwitch" value="#434A63" checked>
+                  </div>
+                  <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+                    <label for="" class="form-check-label btn-exclamation text-3-bold sec-text" style="--button-text: 'Background Colour';"></label>
+                    <input class="form-control" type="color" id="mySwitch" value="#ffffff" checked>
+                  </div>
+                </div>
+
+                <!-- Stroke -->
+                <div class="mt-3">
+                  <div class="d-flex justify-content-between form-switch align-items-center ps-0">
+                    <label for="customRange" class="form-check-label btn-exclamation text-2-bold main-text" style="--button-text: 'Stroke';"></label>
+                    <input class="form-check-input" type="checkbox" id="mySwitch" checked>
+                  </div>
+                  <div class="text-3-bold sec-text mt-3">Type</div>
+                  <div class="d-flex c-design-stroke-type">
+                    <div class="flex-grow-1 bg-white" onclick="setStrokeType(0)">
+                      <div style="height: 1px; border: 1px solid;"></div>
+                    </div>
+                    <div class="flex-grow-1" onclick="setStrokeType(1)">
+                      <div style="height: 1px; border: 1px dashed;"></div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+                    <label for="" class="text-3-bold sec-text">Colour</label>
+                    <input class="form-control" type="color" id="mySwitch" value="#ffffff" checked>
+                  </div>
+                  <div>
+                    <label for="customRange" class="form-label text-3-bold sec-text">Thickness</label>
+                    <input type="range" class="form-range" id="customRange">
+                  </div>
+                </div>
+
+                <!-- icon -->
+                <div class="mt-3">
+                  <div class="text-2-bold">Icon</div>
+                  <div class="d-flex c-design-icon">
+                    <div class="flex-grow-1 d-flex justify-content-center align-items-center bg-white" onclick="setCustomIcon(0)">
+                      <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4622 0.467925C13.5698 -0.155975 16.7904 -0.155975 19.898 0.467926L20.548 0.598437C23.2298 1.13685 25.5609 2.49676 27.2035 4.37979C27.4717 4.68715 27.3815 5.13033 27.0273 5.35502L17.2123 11.5814C15.9921 12.3555 14.368 12.3555 13.1478 11.5814L3.33281 5.35503C2.97862 5.13034 2.88848 4.68716 3.15661 4.3798C4.79926 2.49677 7.13035 1.13685 9.81212 0.598438L10.4622 0.467925ZM2.35129 7.3459C1.94029 7.08518 1.36737 7.23465 1.21177 7.66688C1.12487 7.90828 1.04713 8.1536 0.978913 8.40252C0.196482 11.2575 0.196482 14.2425 0.978913 17.0975C2.05042 21.0072 5.47204 24.0302 9.81211 24.9016L10.4622 25.0321C13.5698 25.656 16.7904 25.656 19.898 25.0321L20.548 24.9016C24.8881 24.0302 28.3097 21.0072 29.3812 17.0975C30.1637 14.2425 30.1637 11.2575 29.3812 8.40253C29.313 8.1536 29.2353 7.90827 29.1484 7.66686C28.9928 7.23463 28.4199 7.08516 28.0089 7.34589L18.5672 13.3354C16.5335 14.6256 13.8266 14.6256 11.7929 13.3354L2.35129 7.3459Z" fill="#10487F"/>
+                      </svg>                        
+                    </div>
+                    <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(1)">
+                      <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7998 4.71014C9.58525 5.66296 6.27828 8.90193 5.26367 13.0708C4.70887 15.3503 4.71394 17.749 5.26874 20.0285C6.29921 24.2625 9.33042 27.7862 13.3968 29.4281L13.574 29.4997C15.3337 30.2102 17.3494 29.3545 18.0715 27.6111C18.2702 27.1312 18.7434 26.8129 19.2662 26.8129H20.8583C25.1884 26.8129 28.9552 23.8707 29.9716 19.6946C30.4763 17.6208 30.4763 15.4576 29.9716 13.3838L29.8383 12.8362C28.8586 8.81107 25.6656 5.68372 21.5963 4.76374L21.0246 4.6345C18.757 4.12183 16.4021 4.12183 14.1344 4.6345L13.7998 4.71014ZM12.6445 11.8528C12.0994 11.8528 11.6575 12.2912 11.6575 12.8321C11.6575 13.3729 12.0994 13.8113 12.6445 13.8113H21.692C22.2371 13.8113 22.679 13.3729 22.679 12.8321C22.679 12.2912 22.2371 11.8528 21.692 11.8528H12.6445ZM14.2895 16.749C13.7444 16.749 13.3025 17.1875 13.3025 17.7283C13.3025 18.2691 13.7444 18.7075 14.2895 18.7075H20.047C20.5921 18.7075 21.034 18.2691 21.034 17.7283C21.034 17.1875 20.5921 16.749 20.047 16.749H14.2895Z" fill="#C5CCDC"/>
+                      </svg>                        
+                    </div>
+                    <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(2)">
+                      <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.672 20.9525V15.2858C25.672 10.7667 23.4054 8.5 18.8862 8.5H9.81954C9.4512 8.5 9.09704 8.51418 8.75704 8.55668C4.9462 8.88251 3.03369 11.135 3.03369 15.2858V20.9525C3.03369 26.6192 5.30037 27.7383 9.81954 27.7383H10.3862C10.6979 27.7383 11.1087 27.9508 11.2928 28.1917L12.9929 30.4583C13.7437 31.4642 14.962 31.4642 15.7129 30.4583L17.4129 28.1917C17.6253 27.9083 17.9654 27.7383 18.3195 27.7383H18.8862C23.037 27.7383 25.2895 25.84 25.6154 22.015C25.6579 21.675 25.672 21.3208 25.672 20.9525ZM9.40837 19.8333C8.61503 19.8333 7.9917 19.1958 7.9917 18.4167C7.9917 17.6375 8.6292 17 9.40837 17C10.1875 17 10.825 17.6375 10.825 18.4167C10.825 19.1958 10.1875 19.8333 9.40837 19.8333ZM12.936 18.4167C12.936 19.1958 13.5594 19.8333 14.3527 19.8333C15.146 19.8333 15.7694 19.1958 15.7694 18.4167C15.7694 17.6375 15.1319 17 14.3527 17C13.5735 17 12.936 17.6375 12.936 18.4167ZM17.8945 18.4167C17.8945 19.1958 18.5179 19.8333 19.3112 19.8333C20.0904 19.8333 20.7279 19.1958 20.7279 18.4167C20.7279 17.6375 20.0904 17 19.3112 17C18.532 17 17.8945 17.6375 17.8945 18.4167Z" fill="#C5CCDC"/>
+                        <path d="M32.7002 7.72157V13.3346C32.7002 17.4601 30.9216 19.6773 27.3777 20C27.4172 19.6632 27.4304 19.3124 27.4304 18.9476V13.3346C27.2002 8.5 24.2002 7 21.1199 6.613H12.6883C12.3457 6.613 12.0164 6.62704 11.7002 6.66914C12.0032 2.8944 14.0979 1 17.958 1H26.3896C30.5923 1 32.7002 3.24521 32.7002 7.72157Z" fill="#C5CCDC"/>
+                      </svg>                        
+                    </div>
+                    <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(3)">
+                      <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.6333 9.90266V18.3743V19.791C3.6333 23.6868 6.80663 26.846 10.7166 26.846H12.8416C13.2383 26.846 13.7483 27.101 13.975 27.4127L16.1 30.2318C17.035 31.4785 18.565 31.4785 19.5 30.2318L21.625 27.4127C21.8941 27.0585 22.3191 26.846 22.7583 26.846H24.8833C28.7933 26.846 31.9666 23.6868 31.9666 19.791V9.90266C31.9666 5.99266 28.7933 2.8335 24.8833 2.8335H10.7166C6.80663 2.8335 3.6333 5.99266 3.6333 9.90266ZM12.133 16.9998C11.3396 16.9998 10.7163 16.3623 10.7163 15.5832C10.7163 14.804 11.3538 14.1665 12.133 14.1665C12.9121 14.1665 13.5496 14.804 13.5496 15.5832C13.5496 16.3623 12.9263 16.9998 12.133 16.9998ZM16.3833 15.5832C16.3833 16.3623 17.0066 16.9998 17.8 16.9998C18.5933 16.9998 19.2166 16.3623 19.2166 15.5832C19.2166 14.804 18.5791 14.1665 17.8 14.1665C17.0208 14.1665 16.3833 14.804 16.3833 15.5832ZM22.0498 15.5832C22.0498 16.3623 22.6731 16.9998 23.4665 16.9998C24.2598 16.9998 24.8831 16.3623 24.8831 15.5832C24.8831 14.804 24.2456 14.1665 23.4665 14.1665C22.6873 14.1665 22.0498 14.804 22.0498 15.5832Z" fill="#C5CCDC"/>
+                      </svg>                        
+                    </div>
+                    <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(4)">
+                      <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7334 2.8335H23.0667C28.7334 2.8335 31.5667 5.66683 31.5667 11.3335V22.6668C31.5667 28.3335 28.7334 31.1668 23.0667 31.1668H4.65007C3.8709 31.1668 3.2334 30.5293 3.2334 29.7502V11.3335C3.2334 5.66683 6.06673 2.8335 11.7334 2.8335ZM24.4831 12.396H10.3164C9.73557 12.396 9.25391 12.8777 9.25391 13.4585C9.25391 14.0393 9.73557 14.521 10.3164 14.521H24.4831C25.0639 14.521 25.5456 14.0393 25.5456 13.4585C25.5456 12.8777 25.0639 12.396 24.4831 12.396ZM20.2331 19.4795H10.3164C9.73557 19.4795 9.25391 19.9612 9.25391 20.542C9.25391 21.1228 9.73557 21.6045 10.3164 21.6045H20.2331C20.8139 21.6045 21.2956 21.1228 21.2956 20.542C21.2956 19.9612 20.8139 19.4795 20.2331 19.4795Z" fill="#C5CCDC"/>
+                      </svg>                        
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+                    <label for="" class="text-3-bold sec-text">Colour</label>
+                    <input class="form-control" type="color" id="mySwitch" value="#ffffff" checked>
+                  </div>
+                </div>
+
+                <!-- advanced position(premium) -->
+                <div class="mt-3">
+                  <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#designAdvancededPosition" aria-expanded="true" aria-controls="designAdvancededPosition" style="cursor: pointer;">
+                    <div class="btn-premium text-2-bold main-text" style="--button-text: 'Advanced Position Settings'"></div>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between form-switch align-items-center mt-3 ps-0">
+                      <label for="customRange" class="form-check-label text-3-bold main-text-2">Custom Image</label>
+                      <input class="form-check-input" type="checkbox" id="mySwitch" checked>
+                    </div>
+                    <div class="c-upload-drop-zone mt-3" id="drop-zone">
+                      Drap your files here or browse.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- save button group -->
+          <div class="d-md-flex d-none gap-3 flex-lg-row flex-md-column mt-4">
+            <button class="btn btn-white gap-2" onclick="channelsSave(0)">
+              <img src="../assets/images/easychatty/draft.png" alt="draft">
+              Save Draft</button>
+            <button class="btn btn-primary gap-2" onclick="channelsSave(1)">
+              <img src="../assets/images/easychatty/rocket.png" alt="publish">
+              Publish Channel</button>
+          </div>
+
+        </div>
+
+        <!-- preview -->
+        <div id="customizationPagePreview" class="w-100 d-md-block d-none">
+          <div class="d-flex justify-content-between flex-wrap gap-lg-4 gap-2">
+            <div class="btn-question text-1-bold main-text" style="--button-text: 'Preview';"></div>
+            <div class="d-flex flex-lg-row justify-content-lg-between flex-md-column justify-content-md-start gap-2">
+              <div class="d-flex c-preview-device-container">
+                <div class="c-preview-device-container-item blue-new-accent-1" id="setPreviewModeDesktop" onclick="setPreviewDevice(0)">
+                  <i class="material-icons">desktop_windows</i>
+                </div>
+                <div class="c-preview-device-container-item" id="setPreviewModeMobile" onclick="setPreviewDevice(1)">
+                  <i class="material-icons">phone_android</i>
+                </div>
+              </div>
+              <div class="c-preview-fullscreen blue-new-accent-1" onclick="setPreviewDevice(2)">
+                <i class="material-icons">fullscreen</i>
+                <p class="blue-new-accent-1">View full screen</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-channel-block d-flex justify-content-center position-sticky" style="padding: 20px; top: -20px;">
+            <div class="position-relative w-100 d-flex justify-content-center" id="sitePreviewContainer">
+              <object id="sitePreview" data="https://www.rabbitseo.com" width="100%">
+              </object>
+              <div class='c-chatbuttons-container9102938194756 c-position-bottom-right'></div>
+            </div>
+            <template id="channelIconHiddenWrapper">
+              <div class="d-flex align-items-center justify-content-center" id="liveChannelIconNormal"
+                  data-bs-toggle="tooltip" title="Normal" onclick="linkWithCommunicationApp(this)" style="width: 30px; height: 30px; border-radius: 999px; cursor: pointer;">
+                <img src="../assets/images/easychatty/icon_Normal_core.png" alt="Normal" style="width: 50%; height: auto;">
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile bottom menu -->
+    <div class="d-md-none d-flex justify-content-around position-fixed bottom-0 start-0 end-0 bg-white" style="padding: 20px;">
+      <div class="c-channels-mobile-bottom-menu-item d-flex align-items-center active" id="mobileBottomBarChannels" onclick="showMobileChannels()">
+        <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_select_channels.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+        <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/menu_dashboard.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+        <p>Channels</p>
+      </div>
+      <div class="c-channels-mobile-bottom-menu-item d-flex align-items-center" id="mobileBottomBarCustomization" onclick="showMobileCustomization()">
+        <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_customize_active.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+        <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_customize.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+        <p>Customization</p>
+      </div>
+      <div class="c-channels-mobile-bottom-menu-item d-flex align-items-center" id="mobileBottomBarPreview" onclick="showMobilePreview()">
+        <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_preview_active.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+        <div style="width: 36px; height: 36px; background-image: url('../assets/images/easychatty/icon_preview.png'); background-repeat: no-repeat; background-position: center; background-size: 24px;"></div>
+        <p>Preview</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- publish/save success modal -->
+<div class="modal fade" id="saveChannelModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body bg-white" style="border-radius: 36px; width: 568px">
+        <div class="d-flex justify-content-end">
+          <p class="rounded-circle border m-3 lh-1 text-center" 
+            style="width: 20px; height: 20px; font-size: 16px; cursor: pointer;" 
+            onclick="$('#saveChannelModal').modal('hide')">&times;</p>
+        </div>
+        <div class="d-flex justify-content-center px-4">
+          <img src="../assets/images/easychatty/publish.png" alt="publish">
+        </div>
+        <div>
+          <div style="font-size: 20px; font-weight: 800; text-align: center; margin-top: 20px;">
+            Your Channel Published Now!
+          </div>
+          <div class="text-2-regular text-center mt-2 mx-auto" style="width: 360px;">You can view statistics and manage or edit your channel in your dashboard.</div>
+        </div>
+        <div class="d-flex justify-content-center" style="padding: 40px 0; gap: 10px">
+          <button class="btn btn-white" onclick="gotoCreateChannel(); $('#saveChannelModal').modal('hide');">Create New Channel</button>
+          <button class="btn btn-primary" onclick="gotoHomePage(); $('#saveChannelModal').modal('hide')">Go to Dashboard</button>
+        </div>
+        <div class="d-flex align-items-center m-auto" style="max-width: 425px; border-radius: 15px; padding: 8px 11px; background: linear-gradient(96.56deg, #FFBA33 0%, #FE6366 100%); gap: 16px;">
+          <div>
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+          </div>
+          <p class="text-2-regular text-white">Rate Your <b>EasyChat</b> Experience</p>
+          <img src="../assets/images/easychatty/experience_arrow.png" alt="Arrow">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- code integration modal -->
+<div class="modal fade" id="integrationCodeModal" tabindex="-1" aria-labelledby="publishSuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 900px;">
+    <div class="modal-content border-0 bg-transparent">
+      <div class="modal-body d-flex flex-column gap-2 bg-white" style="border-radius: 20px; box-shadow: 0px 29px 80px 0px #0B131A0A; padding: 34px 36px;">
+        <div class="alert alert-info d-flex justify-content-between align-items-start mt-2">
+          <div class="d-flex align-items-start">
+            <img src="../assets/images/easychatty/info-circle.png" alt="info">
+            <p class="text-3-regular blue-new-accent-1 ms-2">
+              Use this code to manually add the Blog to your site.
+            </p>
+          </div>
+          <div class="btn-close ms-2" style="font-size: 10px;" data-bs-dismiss="alert"></div>
+        </div>
+        <div class="d-flex gap-2 flex-md-row flex-column">
+          <div class="text-2-regular c-integration-code px-2 flex-grow-1 text-break">
+            &lt;script id='script-seorush' src='https://link_to_code_here' async='true'&gt;&lt;/script&gt;
+          </div>
+          <div class="c-integration-code-copy d-flex gap-2 align-items-center justify-content-center btn position-relative w-auto"
+               onclick="integrationCodeCopy()" onmouseout="revertCopyTooltip()">
+            <img src="../assets/images/easychatty/copy.png" alt="copy">
+            <span class="text-2 text-white">Copy</span>
+            <span class="position-absolute right-0 c-integration-code-copy-tooltip" id="codeIntegrationCopyToolTip">Copy</span>
+          </div>
+        </div>        
+        <p class="text-3-regular sec-text mt-2 text-start ps-2">Copy the code and paste it in each page of your site before (above) the &lt;/head&gt; tag.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- mobile sidebar modal(first) -->
+<div class="modal fade side" id="mobileSidebarModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog m-0 position-fixed end-0 bg-white pe-auto" role="document">
+    <nav class="c-sidebar d-flex flex-column justify-content-between">
+      <div class="d-flex flex-column">
+        <div class="d-flex justify-content-end" style="cursor: pointer;" data-bs-dismiss="modal">
+          <img src="../assets/images/easychatty/close.png" alt="close">
+        </div>
+        <div class="c-sidebar-mobile-integration d-flex align-items-center gap-2" data-bs-dismiss="modal" onclick="showIntegrationCode()">
+          <img src="../assets/images/easychatty/code-square.png" alt="add">
+          <span class="blue-new-accent-1 text-2-600">Code to integration</span>
+        </div>
+        <div class="d-flex flex-column" style="gap: 12px; margin-top: 57px;">
+          <div class="c-sidebar-menu-item active position-relative w-100" id="mobileMenuItemDashboard" onclick="gotoDashboard()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_dashboard_active.png');"></div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_dashboard.png');"></div>
+            <p class="c-sidebar-menu-item-text">Dashboard</p>
+          </div>
+          <div class="c-sidebar-menu-item position-relative w-100" id="mobileMenuItemInsights" onclick="gotoInsights()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_insights_active.png');">
+
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_insights.png');">
+
+            </div>
+            <p class="c-sidebar-menu-item-text">Insights</p>
+          </div>
+          <div class="c-sidebar-menu-item position-relative w-100" id="mobileMenuItemSettings" onclick="gotoSettings()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_settings_active.png');"></div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_settings.png');"></div>
+            <p class="c-sidebar-menu-item-text">Settings</p>
+          </div>
+          <div class="c-sidebar-menu-item position-relative w-100" id="mobileMenuItemHelp" onclick="gotoHelp()">
+            <div class="c-sidebar-menu-item-leftbar position-absolute start-0">
+              <img src="../assets/images/easychatty/menu_active.png" alt="Active">
+            </div>
+            <div class="bg-image c-sidebar-menu-item-icon-active" style="background-image: url('../assets/images/easychatty/menu_help_active.png');"></div>
+            <div class="bg-image c-sidebar-menu-item-icon" style="background-image: url('../assets/images/easychatty/menu_help.png');"></div>
+            <p class="c-sidebar-menu-item-text">Help</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin-left: 20px;">
+
+        <!-- rate experience -->
+        <div class="c-sidebar-rateus w-100">
+          <div class="d-flex justify-content-between align-items-start gap-2">
+            <p class="text-2-regular text-white text-break">Rate Your <b>EasyChat</b> Experience</p>
+            <img src="../assets/images/easychatty/experience_arrow.png" alt="Arrow">
+          </div>
+          <div class="d-flex" style="margin-top: 10px;">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+            <img src="../assets/images/easychatty/golden_star.png" alt="Star">
+          </div>
+        </div>
+
+        <!-- account -->
+        <div style="margin-top: 20px;">
+          <p class="text-3-regular sec-text">Account</p>
+          <div class="c-sidebar-account position-relative">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center" style="gap: 12px">
+                <div class="c-sidebar-account-avatar active">
+                  <img src="../assets/images/easychatty/default_avatar.png" alt="Avatar" id="avatarImageSidebar" class="w-100 h-auto">
+                  <div class="c-sidebar-account-avatar-alert"></div>
+                </div>
+                <div>
+                  <p class="text-1-bold" style="color: #1C2028;">Alex Plakhov</p>
+                  <p class="text-3-regular" style="color: #828B9D;">User</p>
+                </div>
+              </div>
+              <div class="c-sidebar-account-details main-text">
+                &#x22EE;
+              </div>
+            </div>
+            <div class="c-sidebar-account-popover">
+              <div class="c-sidebar-account-popover-item active d-flex">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.01339 1.93994C5.80673 1.93994 4.01339 3.73327 4.01339 5.93994V7.86661C4.01339 8.27327 3.84006 8.89327 3.63339 9.23994L2.86673 10.5133C2.39339 11.2999 2.72006 12.1733 3.58673 12.4666C6.46006 13.4266 9.56006 13.4266 12.4334 12.4666C13.2401 12.1999 13.5934 11.2466 13.1534 10.5133L12.3867 9.23994C12.1867 8.89327 12.0134 8.27327 12.0134 7.86661V5.93994C12.0134 3.73994 10.2134 1.93994 8.01339 1.93994Z"
+                    stroke="#434A63" stroke-miterlimit="10" stroke-linecap="round" />
+                  <path
+                    d="M9.2467 2.13333C9.04003 2.07333 8.8267 2.02667 8.6067 2C7.9667 1.92 7.35336 1.96667 6.78003 2.13333C6.97336 1.64 7.45336 1.29333 8.01336 1.29333C8.57336 1.29333 9.05336 1.64 9.2467 2.13333Z"
+                    stroke="#434A63" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M10.0133 12.7067C10.0133 13.8067 9.11331 14.7067 8.01331 14.7067C7.46664 14.7067 6.95997 14.48 6.59997 14.12C6.23997 13.76 6.01331 13.2533 6.01331 12.7067"
+                    stroke="#434A63" stroke-miterlimit="10" />
+                </svg>
+                <p class="text-3-regular main-text-2 ms-2">Notifications</p>
+                <div class="c-sidebar-account-popover-item-notification active">2</div>
+              </div>
+              <div class="c-sidebar-account-popover-item d-flex">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.93335 5.04003C6.14002 2.64003 7.37335 1.66003 10.0733 1.66003H10.16C13.14 1.66003 14.3334 2.85337 14.3334 5.83337V10.18C14.3334 13.16 13.14 14.3534 10.16 14.3534H10.0733C7.39335 14.3534 6.16002 13.3867 5.94002 11.0267"
+                    stroke="#E82A4C" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M10 8H2.41333" stroke="#E82A4C" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3.89996 5.76672L1.66663 8.00006L3.89996 10.2334" stroke="#E82A4C" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <p class="text-3-regular main-text-2 ms-2">Log Out</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- created channels -->
+        <div style="margin-top: 10px;">
+          <div class="progress" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+          <div class="d-flex justify-content-between" style="margin-top: 6px;">
+            <p class="text-4-regular" style="color: #1C2028;">Created Channels: <b>05 / 10</b></p>
+            <div class="c-sidebar-channel-count-info position-relative">
+              <div class="c-dashboard-chart-block-info d-flex align-items-center justify-content-center sec-text position-relative">&#33;</div>
+              <div class="c-sidebar-channel-count-info-box bg-white">
+                The number of Channels you have created in the current Plan. To increase the number of Channels you can create, upgrade your current plan 
+                <span style="color: #59BBF8; cursor: pointer;">here</span>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- log out -->
+        <div class="d-flex" style="margin-top: 10px; gap: 10px; cursor: pointer;">
+          <img src="../assets/images/easychatty/log_out.png" alt="Logout">
+          <p class="text-3-bold red">Log Out</p>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- mobile sidebar modal(select channels) -->
+<div class="modal fade side" id="mobileSecondSidebarModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog m-0 position-fixed start-0 bg-white pe-auto" role="document">
+    <nav class="c-channels-sidebar d-flex flex-column">
+
+      <!-- select channels and exit -->
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="text-1-bold">Select Channels</p>
+        <img src="../assets/images/easychatty/close.png" alt="close" style="cursor: pointer;" data-bs-dismiss="modal">
+      </div>
+      
+      <!-- channel name and domain -->
+      <div class="pb-2" style="margin-top: 40px;">
+        <label for="inputChannelName" class="form-label text-3-bold main-text-2">Channel Name</label>
+        <input type="text" class="form-control" placeholder="channel name" id="inputChannelName" >
+        <label for="inputDomain" class="form-label mt-2 text-3-bold main-text-2">Domain</label>
+        <input type="text" class="form-control" placeholder="www.example.com" id="inputDomain" >
+      </div>
+      <div class="alert alert-info d-flex align-items-start mb-2">
+        <img src="../assets/images/easychatty/info-circle.png" alt="info">
+        <p class="text-3-regular blue-new-accent-1 ms-2" style="width: max-content;">
+          Select a contact channels and configure it on the right side.
+        </p>
+        <div class="btn-close ms-2" style="font-size: 10px;" data-bs-dismiss="alert"></div>
+      </div>
+
+      <!-- channel list -->
+      <div class="d-flex flex-column" style="padding: 10px 20px; gap: 6px;">
+
+        <!-- whatsapp -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconWhatsapp" onclick="selectChannel('Whatsapp')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Whatsapp.png" alt="Whatsapp" />
+            <p class="text-2-bold">WhatsApp</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- contactform -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconContactForm"onclick="selectChannel('ContactForm')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_ContactForm.png" alt="Whatsapp" />
+            <p class="text-2-bold">Contact Form</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- telegram -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconTelegram"onclick="selectChannel('Telegram')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Telegram.png" alt="Whatsapp" />
+            <p class="text-2-bold">Telegram</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Viber -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconViber"onclick="selectChannel('Viber')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Viber.png" alt="Whatsapp" />
+            <p class="text-2-bold">Viber</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- messenger -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconMessenger"onclick="selectChannel('Messenger')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Messenger.png" alt="Whatsapp" />
+            <p class="text-2-bold">Messenger</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconEmail"onclick="selectChannel('Email')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Email.png" alt="Whatsapp" />
+            <p class="text-2-bold">Email</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconPhone"onclick="selectChannel('Phone')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Phone.png" alt="Phone" />
+            <p class="text-2-bold">Phone Number</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- SMS -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconSMS"onclick="selectChannel('SMS')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_SMS.png" alt="SMS" />
+            <p class="text-2-bold">SMS</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Instagram -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconInstagram"onclick="selectChannel('Instagram')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Instagram.png" alt="Instagram" />
+            <p class="text-2-bold">Instagram</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Linkedin -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconLinkedin"onclick="selectChannel('Linkedin')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Linkedin.png" alt="Linkedin" />
+            <p class="text-2-bold">LinkedIn</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Facebook -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconFacebook"onclick="selectChannel('Facebook')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Facebook.png" alt="Facebook" />
+            <p class="text-2-bold">Facebook</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Wechat -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconWechat"onclick="selectChannel('Wechat')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Wechat.png" alt="Wechat" />
+            <p class="text-2-bold">WeChat</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Snapchat -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconSnapchat"onclick="selectChannel('Snapchat')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Snapchat.png" alt="Snapchat" />
+            <p class="text-2-bold">Snap Chat</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Line -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconLine"onclick="selectChannel('Line')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Line.png" alt="Line" />
+            <p class="text-2-bold">Line</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Twitter -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconTwitter"onclick="selectChannel('Twitter')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Twitter.png" alt="Twitter" />
+            <p class="text-2-bold">X (Twitter)</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- Waze -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconWaze"onclick="selectChannel('Waze')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Waze.png" alt="Waze" />
+            <p class="text-2-bold">Waze</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- slack -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconSlack"onclick="selectChannel('Slack')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Slack.png" alt="Slack" />
+            <p class="text-2-bold">Slack</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+
+        <!-- discord -->
+        <div class="c-add-channels-item" id="mobileSidebarChannelIconDiscord"onclick="selectChannel('Discord')">
+          <div class="d-flex align-items-center" style="gap: 10px">
+            <img class="icon" src="../assets/images/easychatty/icon_Discord.png" alt="Discord" />
+            <p class="text-2-bold">Discord</p>
+          </div>
+          <div class="c-add-channels-item-status"></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- mobile sidebar modal(customize channels) -->
+<div class="modal fade side" id="mobileThirdSidebarModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog m-0 position-fixed start-0 bg-white pe-auto" role="document">
+    <nav class="c-channels-sidebar d-flex flex-column">
+
+      <!-- select channels and exit -->
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="text-1-bold">Customization</p>
+        <img src="../assets/images/easychatty/close.png" alt="close" style="cursor: pointer;" data-bs-dismiss="modal">
+      </div>
+      
+      <!-- alert -->
+      <div class="alert alert-info d-flex align-items-start" style="margin-top: 40px;">
+        <img src="../assets/images/easychatty/info-circle.png" alt="info">
+        <p class="text-3-regular blue-new-accent-1 ms-2" style="width: max-content;">
+          Adjust the location, type, appearance and other parameters of your channel in the block on the right.
+        </p>
+        <div class="btn-close ms-2" style="font-size: 10px;" data-bs-dismiss="alert"></div>
+      </div>
+
+      <div class="c-channel-setting-nav">
+        <p class="text-2-bold active mb-2" id="mobileChannelCustomizeNavType" onclick="showMobileChannelType(0)"><i class="material-icons me-1">fiber_manual_record</i>Choose Channel Type</p>
+        <p class="text-2-bold" id="mobileChannelCustomizeNavDesign" onclick="showMobileChannelType(1)"><i class="material-icons me-1">fiber_manual_record</i>Customise Design</p>
+      </div>
+
+      <!-- channel type -->
+      <div id="mobileShowChannelTypes">
+        <div class="text-2-bold main-text">Button Type</div>
+        <div class="d-flex flex-column" style="margin-top: 20px; gap: 10px;">
+          <div class="flex-grow-1 c-channel-icon-preview-block active">
+            <img src="../assets/images/easychatty/contactus_0.png" />
+          </div>
+          <div class="flex-grow-1 c-channel-icon-preview-block">
+            <img src="../assets/images/easychatty/contactus_1.png" />
+          </div>
+          <div class="flex-grow-1 c-channel-icon-preview-block">
+            <img src="../assets/images/easychatty/contactus_2.png" />
+          </div>
+          <div class="flex-grow-1 c-channel-icon-preview-block">
+            <img src="../assets/images/easychatty/contactus_3.png" />
+          </div>
+        </div>
+      </div>
+
+      <!-- customize design -->
+      <div class="d-none" id="mobileShowChannelDesign">
+        <!-- preview boxes -->
+        <div class="text-2-bold main-text">Position</div>
+        <div class="d-flex flex-column" style="margin-top: 16px; gap: 10px;">
+          <div class="flex-grow-1" onclick="setWidgetPosition(0)">
+            <div class="text-3-bold main-text-2" style="margin-left: 5px;">Bottom Right Corner</div>
+            <div class="c-channel-icon-preview-block position active" id="positionMobile0">
+              <img src="../assets/images/easychatty/contactus_bottom_right_active.png" />
+              <img src="../assets/images/easychatty/contactus_bottom_right.png" />
+            </div>
+          </div>
+          <div class="flex-grow-1" onclick="setWidgetPosition(1)">
+            <div class="text-3-bold main-text-2" style="margin-left: 5px;">Bottom Left Corner</div>
+            <div class="c-channel-icon-preview-block position" id="positionMobile1">
+              <img src="../assets/images/easychatty/contactus_bottom_left_active.png" />
+              <img src="../assets/images/easychatty/contactus_bottom_left.png" />
+            </div>
+          </div>
+          <div class="flex-grow-1" onclick="setWidgetPosition(2)">
+            <div class="text-3-bold main-text-2" style="margin-left: 5px;">Top Right Corner</div>
+            <div class="c-channel-icon-preview-block position" id="positionMobile2">
+              <img src="../assets/images/easychatty/contactus_top_right_active.png" />
+              <img src="../assets/images/easychatty/contactus_top_right.png" />
+            </div>
+          </div>
+          <div class="flex-grow-1" onclick="setWidgetPosition(3)">
+            <div class="text-3-bold main-text-2" style="margin-left: 5px;">Top Left Corner</div>
+            <div class="c-channel-icon-preview-block position" id="positionMobile3">
+              <img src="../assets/images/easychatty/contactus_top_left_active.png" />
+              <img src="../assets/images/easychatty/contactus_top_left.png" />
+            </div>
+          </div>
+        </div>
+
+        <!-- advanced position settings -->
+        <div class="d-flex flex-column" style="margin-top: 16px; gap: 10px;">
+          <div>
+            <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#designAdvancededPosition" aria-expanded="true" aria-controls="designAdvancededPosition" style="cursor: pointer;">
+              <div class="btn-premium text-2-bold main-text" style="--button-text: 'Advanced Position Settings'"></div>
+            </div>                
+            <div class="collapse mt-3" id="designAdvancededPosition">
+              <div class="row align-items-end" style="margin: 0 20px !important;">
+                <div class="col-12 col-md-4 px-2">
+                  <label for="mobileAdvancedPos0" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Bottom/Top Space';"></label>
+                  <input type="range" class="form-range" id="mobileAdvancedPos0">
+                </div>
+                <div class="col-12 col-md-4 px-2">
+                  <label for="mobileAdvancedPos1" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Side Space';"></label>
+                  <input type="range" class="form-range" id="mobileAdvancedPos1">
+                </div>
+                <div class="col-12 col-md-4 px-2">
+                  <label for="mobileAdvancedPos2" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Channel Size';"></label>
+                  <input type="range" class="form-range" id="mobileAdvancedPos2">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- background color -->
+          <div class="d-flex justify-content-between">
+            <label for="settingsEmail123" class="form-label text-2-bold main-text">Background Colour</label>
+            <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+          </div>
+
+          <!-- call to action text -->
+          <div class="">
+            <div class="d-flex justify-content-between form-switch align-items-center ps-0">
+              <label for="" class="form-check-label btn-exclamation text-2-bold main-text" style="--button-text: 'Call to Action Text';"></label>
+              <input class="form-check-input" type="checkbox" id="mySwitch" checked>
+            </div>
+            <div class="mt-2">
+              <label for="" class="form-label text-3-bold sec-text">Text</label>
+              <input type="text" class="form-control text-2-bold main-text" id="settingsEmail" placeholder="Contact Us.">
+            </div>
+            <div class="mt-2">
+              <label for="" class="form-label text-3-bold sec-text">Hover Text on Close button</label>
+              <select class="form-select">
+                <option selected>Inter</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+              <label for="" class="form-check-label btn-exclamation text-3-bold sec-text" style="--button-text: 'Text Colour';"></label>
+              <input class="form-control" type="color" id="mySwitch" value="#434A63" checked>
+            </div>
+            <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+              <label for="" class="form-check-label btn-exclamation text-3-bold sec-text" style="--button-text: 'Background Colour';"></label>
+              <input class="form-control" type="color" id="mySwitch" value="#ffffff" checked>
+            </div>
+          </div>
+
+          <!-- Stroke -->
+          <div class="">
+            <div class="d-flex justify-content-between form-switch align-items-center ps-0">
+              <label for="customRange" class="form-check-label btn-exclamation text-2-bold main-text" style="--button-text: 'Stroke';"></label>
+              <input class="form-check-input" type="checkbox" id="mySwitch" checked>
+            </div>
+            <div class="text-3-bold sec-text mt-3">Type</div>
+            <div class="d-flex c-design-stroke-type">
+              <div class="flex-grow-1 bg-white" onclick="setStrokeType(0)">
+                <div style="height: 1px; border: 1px solid;"></div>
+              </div>
+              <div class="flex-grow-1" onclick="setStrokeType(1)">
+                <div style="height: 1px; border: 1px dashed;"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+              <label for="" class="text-3-bold sec-text">Colour</label>
+              <input class="form-control" type="color" id="mySwitch" value="#ffffff" checked>
+            </div>
+            <div>
+              <label for="customRange" class="form-label text-3-bold sec-text">Thickness</label>
+              <input type="range" class="form-range" id="customRange">
+            </div>
+          </div>
+
+          <!-- icon -->
+          <div class="">
+            <div class="text-2-bold">Icon</div>
+            <div class="d-flex c-design-icon">
+              <div class="flex-grow-1 d-flex justify-content-center align-items-center bg-white" onclick="setCustomIcon(0)">
+                <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4622 0.467925C13.5698 -0.155975 16.7904 -0.155975 19.898 0.467926L20.548 0.598437C23.2298 1.13685 25.5609 2.49676 27.2035 4.37979C27.4717 4.68715 27.3815 5.13033 27.0273 5.35502L17.2123 11.5814C15.9921 12.3555 14.368 12.3555 13.1478 11.5814L3.33281 5.35503C2.97862 5.13034 2.88848 4.68716 3.15661 4.3798C4.79926 2.49677 7.13035 1.13685 9.81212 0.598438L10.4622 0.467925ZM2.35129 7.3459C1.94029 7.08518 1.36737 7.23465 1.21177 7.66688C1.12487 7.90828 1.04713 8.1536 0.978913 8.40252C0.196482 11.2575 0.196482 14.2425 0.978913 17.0975C2.05042 21.0072 5.47204 24.0302 9.81211 24.9016L10.4622 25.0321C13.5698 25.656 16.7904 25.656 19.898 25.0321L20.548 24.9016C24.8881 24.0302 28.3097 21.0072 29.3812 17.0975C30.1637 14.2425 30.1637 11.2575 29.3812 8.40253C29.313 8.1536 29.2353 7.90827 29.1484 7.66686C28.9928 7.23463 28.4199 7.08516 28.0089 7.34589L18.5672 13.3354C16.5335 14.6256 13.8266 14.6256 11.7929 13.3354L2.35129 7.3459Z" fill="#10487F"/>
+                </svg>                        
+              </div>
+              <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(1)">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7998 4.71014C9.58525 5.66296 6.27828 8.90193 5.26367 13.0708C4.70887 15.3503 4.71394 17.749 5.26874 20.0285C6.29921 24.2625 9.33042 27.7862 13.3968 29.4281L13.574 29.4997C15.3337 30.2102 17.3494 29.3545 18.0715 27.6111C18.2702 27.1312 18.7434 26.8129 19.2662 26.8129H20.8583C25.1884 26.8129 28.9552 23.8707 29.9716 19.6946C30.4763 17.6208 30.4763 15.4576 29.9716 13.3838L29.8383 12.8362C28.8586 8.81107 25.6656 5.68372 21.5963 4.76374L21.0246 4.6345C18.757 4.12183 16.4021 4.12183 14.1344 4.6345L13.7998 4.71014ZM12.6445 11.8528C12.0994 11.8528 11.6575 12.2912 11.6575 12.8321C11.6575 13.3729 12.0994 13.8113 12.6445 13.8113H21.692C22.2371 13.8113 22.679 13.3729 22.679 12.8321C22.679 12.2912 22.2371 11.8528 21.692 11.8528H12.6445ZM14.2895 16.749C13.7444 16.749 13.3025 17.1875 13.3025 17.7283C13.3025 18.2691 13.7444 18.7075 14.2895 18.7075H20.047C20.5921 18.7075 21.034 18.2691 21.034 17.7283C21.034 17.1875 20.5921 16.749 20.047 16.749H14.2895Z" fill="#C5CCDC"/>
+                </svg>                        
+              </div>
+              <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(2)">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.672 20.9525V15.2858C25.672 10.7667 23.4054 8.5 18.8862 8.5H9.81954C9.4512 8.5 9.09704 8.51418 8.75704 8.55668C4.9462 8.88251 3.03369 11.135 3.03369 15.2858V20.9525C3.03369 26.6192 5.30037 27.7383 9.81954 27.7383H10.3862C10.6979 27.7383 11.1087 27.9508 11.2928 28.1917L12.9929 30.4583C13.7437 31.4642 14.962 31.4642 15.7129 30.4583L17.4129 28.1917C17.6253 27.9083 17.9654 27.7383 18.3195 27.7383H18.8862C23.037 27.7383 25.2895 25.84 25.6154 22.015C25.6579 21.675 25.672 21.3208 25.672 20.9525ZM9.40837 19.8333C8.61503 19.8333 7.9917 19.1958 7.9917 18.4167C7.9917 17.6375 8.6292 17 9.40837 17C10.1875 17 10.825 17.6375 10.825 18.4167C10.825 19.1958 10.1875 19.8333 9.40837 19.8333ZM12.936 18.4167C12.936 19.1958 13.5594 19.8333 14.3527 19.8333C15.146 19.8333 15.7694 19.1958 15.7694 18.4167C15.7694 17.6375 15.1319 17 14.3527 17C13.5735 17 12.936 17.6375 12.936 18.4167ZM17.8945 18.4167C17.8945 19.1958 18.5179 19.8333 19.3112 19.8333C20.0904 19.8333 20.7279 19.1958 20.7279 18.4167C20.7279 17.6375 20.0904 17 19.3112 17C18.532 17 17.8945 17.6375 17.8945 18.4167Z" fill="#C5CCDC"/>
+                  <path d="M32.7002 7.72157V13.3346C32.7002 17.4601 30.9216 19.6773 27.3777 20C27.4172 19.6632 27.4304 19.3124 27.4304 18.9476V13.3346C27.2002 8.5 24.2002 7 21.1199 6.613H12.6883C12.3457 6.613 12.0164 6.62704 11.7002 6.66914C12.0032 2.8944 14.0979 1 17.958 1H26.3896C30.5923 1 32.7002 3.24521 32.7002 7.72157Z" fill="#C5CCDC"/>
+                </svg>                        
+              </div>
+              <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(3)">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.6333 9.90266V18.3743V19.791C3.6333 23.6868 6.80663 26.846 10.7166 26.846H12.8416C13.2383 26.846 13.7483 27.101 13.975 27.4127L16.1 30.2318C17.035 31.4785 18.565 31.4785 19.5 30.2318L21.625 27.4127C21.8941 27.0585 22.3191 26.846 22.7583 26.846H24.8833C28.7933 26.846 31.9666 23.6868 31.9666 19.791V9.90266C31.9666 5.99266 28.7933 2.8335 24.8833 2.8335H10.7166C6.80663 2.8335 3.6333 5.99266 3.6333 9.90266ZM12.133 16.9998C11.3396 16.9998 10.7163 16.3623 10.7163 15.5832C10.7163 14.804 11.3538 14.1665 12.133 14.1665C12.9121 14.1665 13.5496 14.804 13.5496 15.5832C13.5496 16.3623 12.9263 16.9998 12.133 16.9998ZM16.3833 15.5832C16.3833 16.3623 17.0066 16.9998 17.8 16.9998C18.5933 16.9998 19.2166 16.3623 19.2166 15.5832C19.2166 14.804 18.5791 14.1665 17.8 14.1665C17.0208 14.1665 16.3833 14.804 16.3833 15.5832ZM22.0498 15.5832C22.0498 16.3623 22.6731 16.9998 23.4665 16.9998C24.2598 16.9998 24.8831 16.3623 24.8831 15.5832C24.8831 14.804 24.2456 14.1665 23.4665 14.1665C22.6873 14.1665 22.0498 14.804 22.0498 15.5832Z" fill="#C5CCDC"/>
+                </svg>                        
+              </div>
+              <div class="flex-grow-1 d-flex justify-content-center align-items-center" onclick="setCustomIcon(4)">
+                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7334 2.8335H23.0667C28.7334 2.8335 31.5667 5.66683 31.5667 11.3335V22.6668C31.5667 28.3335 28.7334 31.1668 23.0667 31.1668H4.65007C3.8709 31.1668 3.2334 30.5293 3.2334 29.7502V11.3335C3.2334 5.66683 6.06673 2.8335 11.7334 2.8335ZM24.4831 12.396H10.3164C9.73557 12.396 9.25391 12.8777 9.25391 13.4585C9.25391 14.0393 9.73557 14.521 10.3164 14.521H24.4831C25.0639 14.521 25.5456 14.0393 25.5456 13.4585C25.5456 12.8777 25.0639 12.396 24.4831 12.396ZM20.2331 19.4795H10.3164C9.73557 19.4795 9.25391 19.9612 9.25391 20.542C9.25391 21.1228 9.73557 21.6045 10.3164 21.6045H20.2331C20.8139 21.6045 21.2956 21.1228 21.2956 20.542C21.2956 19.9612 20.8139 19.4795 20.2331 19.4795Z" fill="#C5CCDC"/>
+                </svg>                        
+              </div>
+            </div>
+            <div class="d-flex justify-content-between form-check form-switch align-items-center mt-2 ps-0">
+              <label for="" class="text-3-bold sec-text">Colour</label>
+              <input class="form-control" type="color" id="mySwitch" value="#ffffff" checked>
+            </div>
+          </div>
+
+          <!-- advanced position(premium) -->
+          <div class="">
+            <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#designAdvancededPosition" aria-expanded="true" aria-controls="designAdvancededPosition" style="cursor: pointer;">
+              <div class="btn-premium text-2-bold main-text" style="--button-text: 'Advanced Position Settings'"></div>
+            </div>
+            <div>
+              <div class="d-flex justify-content-between form-switch align-items-center mt-3 ps-0">
+                <label for="customRange" class="form-check-label text-3-bold main-text-2">Custom Image</label>
+                <input class="form-check-input" type="checkbox" id="mySwitch" checked>
+              </div>
+              <div class="c-upload-drop-zone mt-3" id="drop-zone">
+                Drap your files here or browse.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div class="modal fade" id="contactusSubmitModal" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content position-relative" style="border-radius: 20px;">
+
+      <!-- Modal Header -->
+      <div class="modal-header w-100 d-flex justify-content-between" 
+        style="background: #3988D7; padding: 30px 40px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+        <p class="text-modal-title text-white">Contact Us Today!</p>
+        <img src="../assets/images/easychatty/close-circle.png" alt="close" style="cursor: pointer;" data-bs-dismiss="modal">
+      </div>
+
+      <!-- Modal body -->
+      <form class="modal-body d-flex flex-column" style="gap: 10px; padding: 40px; margin-bottom: 68px;" onsubmit="submitContactUs(event)">
+        
+        <!-- your name -->
+        <div>
+          <label for="contactUsName" class="form-label text-3-bold main-text">Your Name</label>
+          <input type="text" class="form-control" id="contactUsName" placeholder="Enter Your Name" required>
+        </div>
+
+        <!-- email -->
+        <div>
+          <label for="contactUsEmail" class="form-label text-3-bold main-text">Email</label>
+          <input type="email" class="form-control" id="contactUsEmail" placeholder="Enter Your Email Address" required>
+        </div>
+
+        <!-- message -->
+        <div>
+          <label for="nacontactUsMessage" class="form-label text-3-bold main-text">Message</label>
+          <input type="text" class="form-control" id="nacontactUsMessage" placeholder="Enter Your Message" required>
+        </div>
+
+        <!-- submit button -->
+        <div style="padding-top: 40px;">
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
+      </form>
+
+      <!-- icon -->
+      <img src="../assets/images/easychatty/icon_ContactForm.png" alt="contact-us" class="position-absolute bottom-0 end-0">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="contactusSubmitSuccessModal" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content position-relative" style="border-radius: 20px;">
+
+      <!-- Modal Header -->
+      <div class="modal-header w-100 d-flex justify-content-end bg-white border-0" 
+        style="padding: 30px 40px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+        <img src="../assets/images/easychatty/close.png" alt="close" style="cursor: pointer;" data-bs-dismiss="modal">
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body d-flex flex-column" style="gap: 10px; padding: 40px; margin-bottom: 68px;">
+        
+        <div class="d-flex">
+          <img src="../assets/images/easychatty/thank_you.png" alt="thank-you">
+        </div>
+
+        <!-- submit button -->
+        <div style="padding-top: 40px;">
+          <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+      <!-- icon -->
+      <img src="../assets/images/easychatty/icon_ContactForm.png" alt="contact-us" class="position-absolute bottom-0 end-0">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/priyashpatil/phone-input-by-country@0.0.1/cpi.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

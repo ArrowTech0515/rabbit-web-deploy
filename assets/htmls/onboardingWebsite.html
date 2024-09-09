@@ -1,0 +1,119 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <h3>Website Onboarding</h3>
+            <div id="stepperForm" class="bs-stepper">
+                <div class="bs-stepper-header" role="tablist">
+                    <div class="step" data-target="#test-form-1">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger1"
+                                aria-controls="test-form-1">
+                            <span class="bs-stepper-circle">
+                                <span class="fas fa-user" aria-hidden="true"></span>
+                            </span>
+                            <span class="bs-stepper-label">Website Details</span>
+                        </button>
+                    </div>
+                    <div class="bs-stepper-line"></div>
+                    <div class="step" data-target="#test-form-2">
+                        <button type="button" class="step-trigger" role="tab" id="stepperFormTrigger2"
+                                aria-controls="test-form-2">
+                            <span class="bs-stepper-circle">
+                                <span class="fas fa-map-marked" aria-hidden="true"></span></span>
+                            <span class="bs-stepper-label">Keywords</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bs-stepper-content">
+                    <div id="test-form-1" role="tabpanel" class="bs-stepper-pane fade"
+                         aria-labelledby="stepperFormTrigger1">
+                        <form id="onboardingUser" class="needs-validation" onSubmit="return false" novalidate>
+                            <div class="mb-3">
+                                <label for="url">Website Url
+                                    <span class="text-danger font-weight-bold">*</span></label>
+                                <input id="url" name="url" class="form-control"
+                                       placeholder="Enter Website Url" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputWebsite">Website Nickname (Optional)</label>
+                                <input id="inputWebsite" name="name" class="form-control"
+                                       placeholder="Enter Website Nickname">
+                            </div>
+                            <div class="mb-3 select2CustomForm" style="display: none">
+<!--                            <div class="mb-3 select2CustomForm" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="For large websites it is better to choose the website location otherwise you can get the same keywords in different locations">-->
+                                <label for="countrySelect">Location</label>
+                                <select id="countrySelect" name="countryName"
+                                        class="form-control form-select dropdown-toggle"></select>
+                            </div>
+                            <div class="text-end mt-4">
+                                <button class="btn btn-primary btn-lg pageBtn" onclick="saveFirstStep()">Next</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="test-form-2" role="tabpanel" class="bs-stepper-pane fade"
+                         aria-labelledby="stepperFormTrigger2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var countrySelect = $('#countrySelect').select2({tokenSeparators: [',', ', ', '\n'],
+            selectOnClose: true,
+            data: availableCountries,
+            width: "100%",
+        });
+        let countryName = mainUserDetails["countryName"];
+        // console.log("countryName " + countryName);
+        countrySelect.val(countryName).change();
+        
+        let value = $("#inputSearchWebsite").val();
+        if (value != getTranslationWord("Add New Website")) {
+            $('#url').val(value);
+            $('#inputWebsite').val(value);
+        }
+
+        var stepperFormEl = document.querySelector('#stepperForm')
+        stepperForm = new Stepper(stepperFormEl, {
+            animation: true
+        })
+
+        var btnNextList = [].slice.call(document.querySelectorAll('.btn-next-form'))
+        if (btnNextList) {
+            btnNextList.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    stepperForm.next()
+                })
+            })
+        }
+    })
+
+    var url;
+    function saveFirstStep() {
+        if ($('#url').val() !== '') {
+            let saveSuccess = saveOnBoardingForm($('#onboardingUser'));
+            if (saveSuccess) {
+                url = $('#url').val();
+                addNewWebsite = true;
+                console.log('success next step');
+                if (websiteSelect2) {
+                    const addNew = getTranslationWord("Add New Website");
+                    $("#inputSearchWebsite option[value='" + addNew + "']").remove();
+                    var newOption = new Option(url, url, true, true);
+                    websiteSelect2.append(newOption);
+                    websiteSelect2.val(url);
+                    newOption = new Option(addNew, addNew, false, false);
+                    websiteSelect2.append(newOption);
+                }
+                ajaxSimpleLoadToDiv('/assets/htmls/addNewKeyword.html', 'test-form-2');
+                stepperForm.next();
+                finalStep = true;
+            } else {
+                console.log('error');
+            }
+        } else {
+            showModal("Message", getTranslationWord("Enter Website Url"), getTranslationWord("Close"), "");
+        }
+    }
+</script>

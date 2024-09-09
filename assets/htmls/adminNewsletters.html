@@ -1,0 +1,318 @@
+<div class="d-lg-flex justify-content-between mb-20px">
+    <div class="d-flex align-items-center">
+    </div>
+    <div>
+        <ul class="list-style-none actionkey_ul">
+            <li class="actionkey_li">
+                <div class="keywordSearch">
+                    <img src="/assets/images/icon/search.svg" alt="Search"/>
+                    <input type="text" class="form-control tableSearch" placeholder="Search..."/>
+                </div>
+            </li>
+            <li class="actionkey_li">
+                <div class="addhideColumn dropdown">
+                    <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown"
+                       aria-expanded="false"><h3 class="cardTitle mb-0">Columns<i
+                            class="fas fa-chevron-down"></i></h3></a>
+
+                    <form id="saveColHideFormNewsletter" class="dropdown-menu py-3" aria-labelledby="addhideColumn">
+                        <ul id="showHideColsnewslettersTable" class="showHideColsMenu">
+                        </ul>
+                        <div class="text-end px-3">
+                            <button type="button"
+                                    onclick="saveColHideShow(getFormDValues(saveColHideFormNewsletter), 'newslettersTable')"
+                                    class="btn btn-primary pageBtn">Save for next time
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li class="actionkey_li">
+                <div class="">
+                    <button type="button" class="btn btn-outline-primary pageBtn"
+                            onclick="openModal('/assets/htmls/adminCreateNewsletter.html', 'Create Newsletter');">
+                        Create Newsletter <img src="/assets/images/home_icon/udate-detail.png"
+                                            alt="">
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="rabbitTable">
+    <table id="newslettersTable" class="table align-middle border-bottom-0 hover compact" style="width:100%">
+        <thead class="thead-dark"></thead>
+        <tbody>
+        <td colspan="12" class="text-center">
+        </td>
+        </tbody>
+    </table>
+</div>
+<br/>
+<div id="appStat"></div>
+
+<script>
+    $(document).ready(function () {
+        if (false) {
+            findNewsletters();
+        } else {
+            findNewslettersNoScroller();
+        }
+    });
+
+    function getNewsletterColumns() {
+        return [
+            // {"data": "id", "name": "id", "defaultContent": "", "title": "Id",},
+            {
+                "data": "name",
+                "name": "name",
+                "defaultContent": "",
+                "title": "Name",
+                // render: $.fn.dataTable.render.ellipsis(20)
+            },
+            {"data": "dateCreated", "name": "dateCreated", "defaultContent": "", "title": "Created",},
+            {"data": "appDomainName", "name": "appDomainName", "defaultContent": "", "title": "AppDomain",},
+            {"data": "totalSent", "name": "totalSent", "defaultContent": "", "title": "Sent",},
+            {
+                "data": "uniqueOpen", "name": "uniqueOpen", "defaultContent": "", "title": "Open",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return renderScoreHtml(data, row['totalSent']);
+                    } else {
+                        return Math.ceil(data * 100 / row['totalSent']);
+                    }
+                }
+            },
+            {
+                "data": "uniqueClick", "name": "uniqueClick", "defaultContent": "", "title": "Clicks",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return renderScoreHtml(data, row['totalSent']);
+                    } else {
+                        return Math.ceil(data * 100 / row['totalSent']);
+                    }
+                }
+            },
+            {
+                "data": "installCounter", "name": "installCounter", "defaultContent": "", "title": "Installs",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return renderScoreHtml(data, row['totalSent']);
+                    } else {
+                        return Math.ceil(data * 100 / row['totalSent']);
+                    }
+                }
+            },
+            {
+                "data": "loginCounter", "name": "uniqueClick", "defaultContent": "", "title": "Login",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return renderScoreHtml(data, row['totalSent']);
+                    } else {
+                        return Math.ceil(data * 100 / row['totalSent']);
+                    }
+                }
+            },
+            {
+                "data": "unsubscribeCount", "name": "unsubscribeCount", "defaultContent": "", "title": "Unsubscribe",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return renderScoreHtml(data, row['totalSent']);
+                    } else {
+                        return Math.ceil(data * 100 / row['totalSent']);
+                    }
+                }
+            },
+            {
+                "data": "upgrades", "name": "upgrades", "defaultContent": "", "title": "Upgrades",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return renderScoreHtml(data, row['totalSent']);
+                    } else {
+                        return Math.ceil(data * 100 / row['totalSent']);
+                    }
+                }
+            },
+            {
+                "data": "downgrades", "name": "downgrades", "defaultContent": "", "title": "downgrades",
+                render: function (data, type, row) {
+                    if (type === 'display') {
+                        return renderScoreHtml(data, row['totalSent']);
+                    } else {
+                        return Math.ceil(data * 100 / row['totalSent']);
+                    }
+                }
+            },
+            {"data": "fromName", "name": "fromName", "defaultContent": "", "title": "From",},
+            {"data": "subject", "name": "subject", "defaultContent": "", "title": "Subject",},
+        ];
+    }
+
+    function findNewslettersNoScroller() {
+        $.getJSON(apiUrl + 'jsonNewsletter', function (json) {
+            json = json.list;
+            
+            console.log('jsonNewsletter ' + JSON.stringify(json));
+            newslettersTable = $('#newslettersTable').DataTable({
+                "datatype": "json",
+                "data": json,
+                rowId: 'id',
+                "columns": getNewsletterColumns(),
+                destroy: true,
+                scrollY: false,
+                scrollX: false,
+                fixedHeader: true,
+                deferRender: true,
+                paging: false,
+                autoWidth: true,
+                order: [[1, 'desc']],
+                "language": {
+                    "emptyTable": "No Newsletters found"
+                },
+                info: true,
+                "bFilter": true,
+                columnDefs: [{
+                    // "searchable": false,
+                    // targets: [0,1,2],
+                    // render: $.fn.dataTable.render.ellipsis(10)
+                }],
+                "initComplete": function (settings, json) {
+                    adjustExportButtons('keywordSearch', newslettersTable);
+                    thBreakLine = true;
+                    initShowHideColumns('newslettersTable', newslettersTable);
+                    enableTooltips();
+                    $('#newslettersTable tbody').on('click', 'td', function () {
+                        // $('#newslettersTable tbody tr').on('click', 'td:first-child', function () {
+                        console.log('tbody click')
+                        var tr = $(this).closest('tr');
+                        var row = newslettersTable.row(tr);
+
+                        if (row.child.isShown()) {
+                            // This row is already open - close it.
+                            row.child.hide();
+                            tr.removeClass('shown');
+                        } else {
+                            // Open row.
+                            let data = row.data();
+                            let html = 'Fill data';
+                            row.child(html, 'childClass').show();
+                            tr.addClass('shown');
+                        }
+                    });
+                }
+            });
+        });
+    }
+    function findNewsletters() {
+        console.log('start findNewsletters')
+        newslettersTable = $('#newslettersTable').DataTable({
+            "scrollCollapse": true,
+            "serverSide": true,
+            "ordering": true,
+            "searching": true,
+            "ajax": function (data, callback, settings) {
+                setTimeout(function () {
+                    let query = getSearchAndOrder(data, 'wixUrl');
+                    const url = apiUrl + 'jsonNewsletter?start=' + data.start + '&rows=' + Math.min(100, data.length) + query;
+                    console.log('url is ' + url)
+                    $.getJSON(url, function (json) {
+                        console.log('json is ' + JSON.stringify(json))
+                        $('.tableCount').html(json['records']);
+                        // console.log('result is ' + JSON.stringify(json['list']))
+                        callback({
+                            "draw": data.draw,
+                            "data": json['list'],
+                            "recordsTotal": json['records'],
+                            "recordsFiltered": json['recordsFiltered']
+                        });
+                    });
+                }, 50);
+            },
+            "scroller": {
+                "loadingIndicator": true,
+                "trace": true
+            },
+            "deferRender": true,
+            "dom": "rtiS",
+            "scrollY": "500px",
+            fixedHeader: true,
+            rowId: 'id',
+            order: [[1, 'desc']],
+            "columns": getNewsletterColumns(),
+            destroy: true,
+            "language": {
+                "emptyTable": "No Newsletters found"
+            },
+            info: true,
+            "bFilter": true,
+            columnDefs: [{
+                // "searchable": false,
+                // targets: [0,1,2],
+                // render: $.fn.dataTable.render.ellipsis(10)
+            }],
+            "initComplete": function (settings, json) {
+                adjustExportButtons('keywordSearch', newslettersTable);
+                thBreakLine = true;
+                initShowHideColumns('newslettersTable', newslettersTable);
+                enableTooltips();
+                $('#newslettersTable tbody').on('click', 'td', function () {
+                    // $('#newslettersTable tbody tr').on('click', 'td:first-child', function () {
+                    console.log('tbody click')
+                    var tr = $(this).closest('tr');
+                    var row = newslettersTable.row(tr);
+
+                    if (row.child.isShown()) {
+                        // This row is already open - close it.
+                        row.child.hide();
+                        tr.removeClass('shown');
+                    } else {
+                        // Open row.
+                        let data = row.data();
+                        let html = 'Fill data';
+                        row.child(html, 'childClass').show();
+                        tr.addClass('shown');
+                    }
+                });
+            }
+        });
+        $('.dataTables_scrollBody').css('height', '700px');
+    }
+    function renderScoreHtml(data, outOf) {
+        if (data) {
+            console.log('renderScoreHtml data ' + data)
+            let progressBarClass = "text-success";
+            if (data < 10) {
+                progressBarClass = "text-danger";
+            } else if (data < 50) {
+                progressBarClass = "text-warning";
+                // progressBarClass = "bg-secondary";
+            }
+
+            const width = data < 30 ? 30 : data;
+            let score = Math.ceil(data * 100 / outOf);
+            console.log('renderScoreHtml score ' + score);
+            let scoreHtml = '<div style="" class="' + progressBarClass + '">' + score + '% (' + data + ')</div>';
+            // let scoreHtml = '<div style="color: #ffffdd" class="' + progressBarClass + '">' + score + '% (' + data + ')</div>';
+            return scoreHtml;
+        } else {
+            return '';
+        }
+    }
+</script>
+<style type="text/css">
+    #newslettersTable a {
+        margin: 10px;
+    }
+
+    #newslettersTable tbody tr {
+        cursor: pointer;
+    }
+
+    td {
+        max-width: 400px !important;
+        overflow: unset;
+        text-overflow: unset;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+</style>

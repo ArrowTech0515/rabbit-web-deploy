@@ -1,0 +1,124 @@
+<div class="progress_step"><span class="spinner-border text-primary"></span></div>
+<div id="modifyArticleSection" class=" dash-card" style="display: none">
+    <form id="changeLinksModifyForm" onsubmit="return false;" class="card">
+        <input type="hidden" class="linkId" name="linkId"/>
+        <input type="hidden" class="blogUrl" name="blogUrl"/>
+        <input type="hidden" class="hiddenAddUserDetails" name="addUserDetails"/>
+        <input type="hidden" class="linkHrefArticle" name="linkHrefArticle"/>
+        <input type="hidden" name="articleImage" class="articleImage"/>
+        <input type="hidden" name="articleContentChanged" class="articleContentChanged"/>
+        <input type="hidden" name="finalArticleContent" class="hiddenFinalArticleContent"/>
+        <!--        <div class="edit_title">-->
+        <!--            Edit Blog Post-->
+        <!--        </div>-->
+        <div class="card-body m-3 mt-0">
+
+       <div class="card bg-white mb-3"> 
+           <div class="card-body"> 
+               <h3 class="dash-title" id="back_tablze" style="cursor: pointer" onclick="modifyArticleTable()"> 
+                                           <img src="/assets/images/home_icon/material-symbols_arrow-back-ios-new-rounded-blue.png" alt="back"> Blog Post Settings  
+               </h3>  
+               <div class="row"> 
+                   <div class="col-md-12"> 
+                       <div class="image_slider_blog mb-3"> 
+                           <div class="published_details mt-3"> 
+                               <div class="row"> 
+                                   <div class="col-md-12"> 
+                                       <div class="form-group search_image"> 
+                                          <label>Add a Featured Image to your Blog Post</label> 
+                                           <input type="text" class="form-control imagesByKeyword" 
+                                                  placeholder="Search image to add on your blog post"> 
+                                           <button class="btn" 
+                                                   onclick="loadImagesByQuery($('.imagesByKeyword').val())" type="button"><img src="assets/links4u/search.png"></button> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+
+                                <div class="imagesSection"></div> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" select2CustomForm">
+                                <label for="articleCategoriesModify" class="formLable d-block">Add Categories</label>
+                                <select id="articleCategoriesModify" class=" js-example-placeholder-multiple"
+                                        multiple="multiple" name="categories"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class=" select2CustomForm">
+                                <label for="articleTagsModify" class="formLable d-block">Add Tags</label>
+                                <select id="articleTagsModify" class=" js-example-placeholder-multiple"
+                                        multiple="multiple"
+                                        name="tags"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="published_details new_box_content">
+                        <div class="final_content mt-4">
+                            <div id="summernote">
+                                <div class="finalArticleText"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="published_details text-center mb-3">
+            <button type="button"
+                    onclick="$('.hiddenFinalArticleContent').val($('#summernote').summernote('code')); submitChangeLinks(this);"
+                    style="width: 100%;"
+                    class="btn btn-primary   pageBtn submit-btn">
+                SAVE AND PUBLISH
+            </button>
+            <div class="progress_step" style="display: none">
+                <span class="spinner-border text-primary"></span>
+                Please wait...
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#addlink_list").click(function () {
+            $('.addlink_list').toggle();
+        });
+        $('#summernote').summernote({
+            placeholder: 'Blog Post Content',
+            height: 420,
+            toolbar: [
+                // ['style', ['style']],
+                // ['font', ['bold', 'underline', 'clear']],
+                // ['color', ['color']],
+                // ['para', ['ul', 'ol', 'paragraph']],
+                // ['table', ['table']],
+                ['link'],
+                // ['insert', ['link', 'picture', 'video']],
+                // ['insert', ['link', 'picture', 'video']],
+                // ['view', ['fullscreen', 'codeview', 'help']]
+            ],
+            callbacks: {
+                onChange: function (contents, $editable) {
+                    $('.articleContentChanged').val('true');
+                }
+            }
+        });
+    });
+
+</script>

@@ -1,0 +1,368 @@
+<script type="text/javascript" src="/assets/scripts-app/admin.js"></script>
+
+<div class="mb-5">
+    <div class="card page-card mb-4">
+        <div class="page-title d-flex align-items-center justify-content-between mb-20px">
+            <div class="d-flex align-items-center align-items-center">
+                <h3 class="cardTitle mb-0">Backlinks Request</h3>
+                <a href="javascript: $('#buildLinkUploadDiv').toggle(1000);" class="btn btn-outline-primary pageBtn"><img
+                        src="/assets/images/icon/u_manual.svg" alt="Upload Links"><span>Upload Links</span></a>
+                <a href="javascript: ajaxLoadToDiv('/assets/htmls/linksBuilderUpload.html', 'tabData');" class="btn btn-outline-primary pageBtn"><img
+                        src="/assets/images/icon/u_manual.svg" alt="Upload Links"><span>Refresh</span></a>
+            </div>
+        </div>
+        <div id="buildLinkUploadDiv" class="py-24px" style="max-width: 700px; display: none">
+            <form id="buildLink">
+                <div class="mb-3">
+                    <label for="urls" class="formLable">Urls of links</label>
+                    <textarea id="urls" name="urls" class="form-control data-hj-allow"
+                              placeholder="You can enter several urls of the pages the contains the links in the table below (one in each line)."
+                              style="height:200px"></textarea>
+                </div>
+                <div class="">
+                    <button type="button" onclick="submitLinkBuildForm()" class="btn btn-primary mw-75px">Upload Links</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <ul class="list-style-none actionkey_ul">
+                <li class="actionkey_li">
+                    <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                        <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                    </a>
+                </li>
+                <li class="actionkey_li">
+                    <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                        <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                    </a>
+                </li>
+                <li class="actionkey_li">
+                    <a href="javascript:;" title="PDF" class="pdfButton ks_buttn d-inline-block">
+                        <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                    </a>
+                </li>
+                <li class="actionkey_li">
+                    <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                        <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                    </a>
+                </li>
+                <li class="actionkey_li">
+                    <div class="keywordSearch">
+                        <img src="/assets/images/icon/search.svg" alt="Search"/>
+                        <input type="text" class="tableSearch form-control" placeholder="Search..."/>
+                    </div>
+                </li>
+                <li class="actionkey_li">
+                    <div class="addhideColumn dropdown">
+                        <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown"
+                           aria-expanded="false"><h3 class="cardTitle mb-0">Columns<i
+                                class="fas fa-chevron-down"></i></h3></a>
+
+                        <form id="saveColHideShowForm" class="dropdown-menu py-3" aria-labelledby="addhideColumn">
+                            <ul id="showHideCols" class="showHideColsMenu">
+                            </ul>
+                            <div class="text-end px-3">
+                                <button type="button" onclick="saveColHideShow('monitoringLinksTable')"
+                                        class="btn btn-primary pageBtn">Save for next time
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </li>
+                <li class="actionkey_li">
+                    <div class="keywordSearch">
+                        <div>
+                            <div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="toggleCompleted()">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Completed Links</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="rabbitTable">
+        <table id="monitoringLinkTable" class="notranslate uk-table uk-table-hover uk-table-striped hover"
+               style="width:100%">
+            <tbody>
+            <td colspan="12" class="text-center">
+                <strong>
+                    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                </strong>
+            </td>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="alert alert-secondary likspyAlert builderUsage" role="alert">
+    <div class="row">
+        <div class="col-6 linksByDay">Links Last Month:<br /></div>
+        <div class="col-6 linksByMonth">Links Last Year:<br /></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        console.log('start getMyJsonBuilderUsageLink');
+
+        $.getJSON(apiUrl + '/getMyJsonBuilderUsageLink', function (data) {
+            console.log('getMyJsonBuilderUsageLink json ' + JSON.stringify(data));
+            if (data['obj']) {
+                var array = data['obj']['daysList'];
+                var newHTML = [];
+                for (var i = 0; i < array.length; i++) {
+                    newHTML.push('<span>' + array[i][0] + ' - ' + array[i][1] + ' links</span><br />');
+                }
+                $(".linksByDay").append(newHTML.join(""));
+
+                array = data['obj']['monthsList'];
+                newHTML = [];
+                for (var i = 0; i < array.length; i++) {
+                    newHTML.push('<span>' + array[i][0] + ' - ' + array[i][1] + ' links</span><br />');
+                }
+                $(".linksByMonth").append(newHTML.join(""));
+            }
+
+        });
+        loadMonitoredLinks();
+    });
+
+    function submitLinkBuildForm() {
+        const result = ajaxSubmitForm('buildLink');
+        console.log('result' + result);
+        handleResult(result);
+    }
+    function handleResult(result) {
+        showModal("Message", result, "Close", "");
+        loadMonitoredLinks();
+        refreshUserDetails();
+        setCompletedValues();
+    }
+    function uploadLink(curr) {
+        // console.log("curr " + curr);
+        const url = $("#" + curr).val();
+        const data = 'currLink=' + curr.replace('url','') + '&urls=' + encodeURIComponent(url);
+        console.log('data ' + data);
+        $.ajax({
+            type: 'POST',
+            url: apiUrl + 'buildLink',
+            data: data,
+            success: function (json) {
+                console.log('success ' + JSON.stringify(json));
+                handleResult(json.status);
+            },
+            async: false
+        });
+    }
+    var jsonUrl = 'jsonByAwaitingLink';
+    function toggleCompleted() {
+        if (jsonUrl === 'jsonByAwaitingLink') {
+            jsonUrl = 'jsonByLiveLink';
+        } else {
+            jsonUrl = 'jsonByAwaitingLink';
+        }
+        loadMonitoredLinks();
+    }
+
+    function setCompletedValues() {
+        $('#linksCount').html(mainUserDetails['linksRequestUsed']);
+        $('#guestBlogsCount').html(mainUserDetails['guestBlogsUsed']);
+        const amountBlogs = parseInt(mainUserDetails['guestBlogsUsed']) * 5;
+        const amountLinks = parseInt(mainUserDetails['linksRequestUsed']) * 0.5;
+        $('#amountToPay').html('$' + (amountLinks + amountBlogs));
+    }
+
+    function loadMonitoredLinks() {
+        if (linksList) {
+            linksList.destroy();
+        }
+        $.getJSON(apiUrl + jsonUrl + '?url=' + $('#inputSearchWebsite').val(), function (json) {
+            // console.log('jsonLink is ' + JSON.stringify(json));
+            if (!hasAlertToShow(json)) {
+                var listLength = json['list'].length;
+                linksList = $('#monitoringLinkTable').DataTable({
+                    "datatype": "json",
+                    "data": json['list'],
+                    rowId: 'id',
+                    "columns": [
+                        {
+                            "data": "href",
+                            "name": "href",
+                            "title": "Href",
+                            "defaultContent": "",
+                            'visible': true,
+                            render: function (data, type, row) { return getFormattedExternalUrl(data);}
+                        },
+                        {
+                            "data": "keywordName",
+                            "name": "keywordName",
+                            "title": "Keyword",
+                            "defaultContent": "",
+                            'visible': true,
+                        },
+                        {
+                            "data": "dateCreated",
+                            "name": "dateCreated",
+                            "title": "Date",
+                            "defaultContent": "",
+                            'visible': false,
+                            render: function (data, type, row) {
+                                return getFormattedDate(data);
+                            }
+                        },
+                        {
+                            "data": "linkStatus",
+                            "name": "linkStatus",
+                            "title": "Status",
+                            "defaultContent": "",
+                            'visible': false,
+                        },
+                        // {
+                        //     "data": "orderLinkType",
+                        //     "name": "orderLinkType",
+                        //     "title": "Type",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        //     render: function (data, type, row) {
+                        //         return (data === 'Guest Blog' ? '<span class="bold" style="color: orangered">Guest Blog</span>' : data);
+                        //     }
+                        // },
+                        {
+                            "data": "domain",
+                            "name": "domain",
+                            "title": "Domain",
+                            "defaultContent": "",
+                            'visible': false,
+                        },
+                        // {
+                        //     "data": "businessName",
+                        //     "name": "businessName",
+                        //     "title": "Business Name",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        // },
+                        {
+                            "name": "listingDetails",
+                            "title": "Listing Details",
+                            "defaultContent": "",
+                            'visible': true,
+                            render: function (data, type, row) {
+                                return getFormattedUrl('https://theamericanreporters.com/listings?domain=' + minifyDomainUrl(row['href']));
+                            }
+                        },
+                        // {
+                        //     "data": "email",
+                        //     "name": "email",
+                        //     "title": "Email",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        // },
+                        // {
+                        //     "data": "category",
+                        //     "name": "category",
+                        //     "title": "Category",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        // },
+                        // {
+                        //     "data": "description",
+                        //     "name": "description",
+                        //     "title": "Description",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        // },
+                        // {
+                        //     "data": "location",
+                        //     "name": "location",
+                        //     "title": "Location",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        // },
+                        // {
+                        //     "data": "address",
+                        //     "name": "address",
+                        //     "title": "Address",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        // },
+                        // {
+                        //     "data": "highQuality",
+                        //     "name": "highQuality",
+                        //     "title": "Quality Link",
+                        //     "defaultContent": "",
+                        //     'visible': false,
+                        //     render: function (data, type, row) {
+                        //         if (type === 'display' || type === 'filter') {
+                        //             return formatCheckedOrUnChecked(data);
+                        //         }
+                        //     }
+                        // },
+                        // {
+                        //     "data": "userId",
+                        //     "name": "userId",
+                        //     "title": "Image",
+                        //     "defaultContent": "",
+                        //     'visible': true,
+                        //     render: function (data, type, row) {
+                        //         if (type === 'display' || type === 'filter') {
+                        //             return data ? ("<a href=/UserLogo?pdfImage=true&id=" + data + " download='image" + data + ".jpg'>Download</a>") : "";
+                        //         }
+                        //     }
+                        // },
+                        {
+                            "data": "comment",
+                            "name": "comment",
+                            "title": "Comment",
+                            "defaultContent": "",
+                            'visible': true,
+                        },
+                        {
+                            "data": "pageUrl",
+                            "name": "pageUrl",
+                            "title": "Page Url",
+                            "defaultContent": "",
+                            'visible': true,
+                            render: function (data, type, row) {
+                                if (jsonUrl === 'jsonByAwaitingLink') {
+                                    return '<input id="url' + row.id + '" class="form-control" type="text" placeholder="Page Url"><a href="javascript: uploadLink(\'url' + row.id + '\')">Submit Page</a>';
+                                } else {
+                                    return getFormattedExternalUrl(data);
+                                }
+                            }
+                        },
+                    ],
+                    // "order": [[1, "asc"]],
+                    destroy: true,
+                    buttons: ['copy', 'excel', 'print', {
+                        extend: 'pdfHtml5', orientation: 'landscape', pageSize: 'LEGAL'
+                    }],
+                    "dom": '<"dt-buttons"Bf><"clear">firtlp',
+                    info: false,
+                    "bFilter": true,
+                    fixedHeader: true,
+                    deferRender: true,
+                    paging: listLength > 100,
+                    scrollY: 700,
+                    scrollCollapse: true,
+                    scroller: listLength > 100,
+                    "aoColumnDefs": [{
+                        "searchable": false,
+                        "targets": [0]
+                    }],
+                    "initComplete": function (settings, json) {
+                    }
+                });
+                initShowHideColumns('monitoringLinksTable', linksList);
+                adjustExportButtons('tableSearch', linksList);
+            } else {
+                $('#link tbody').html("Create your first link now");
+            }
+            setCompletedValues();
+        });
+    }
+</script>

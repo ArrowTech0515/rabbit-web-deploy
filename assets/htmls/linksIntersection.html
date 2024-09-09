@@ -1,0 +1,187 @@
+<div class="mb-5">
+    <div class="page-title d-flex align-items-center justify-content-between mb-20px">
+        <div class="d-flex align-items-center align-items-center">
+            <h3 class="dash-title mb-0">Spy Links</h3>
+        </div>
+    </div>
+    <div class="alert alert-primary likspyAlert" role="alert">
+        <div class="d-flex">
+            <div class="warningBox">
+                <img src="/assets/images/icon/alertque.png" alt="Primary">
+            </div>
+            <p class="my-0">INSTRUCTIONS <br>
+                Choose one or more competitors and find mutual backlinks that they have and you don't have
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class=" select2Custom mb-3">
+                <select id="competitorsInput" class="js-example-basic-multiple" style="width:500px" name="states[]"
+                        multiple="multiple">
+                </select>
+            </div>
+            <div class="text-center mb-3">
+                <a href="javascript:loadDomainIntersection()" class="btn btn-primary pageBtn">Find Mutual Referring
+                    Domains</a>
+                <!--                <a href="javascript:loadPageIntersection()" class="btn btn-primary pageBtn">Find Mutual Referring Pages</a>-->
+            </div>
+        </div>
+    </div>
+    <div class="card page-card mb-4">
+        <div class="card-body">
+            <div class="rabbitTable min-h-424">
+                <table id="domainIntersection" class="table table-hovered display hover" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Domain</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <br>
+                <table id="pageIntersection" style="display: none;">
+                    <tbody>
+                    <td colspan="15" class="text-center">
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                    </td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $.getJSON(getApiUrl('getMyJsonCompDataGeneric?api=CompetitorDomains&url=' + $('#inputSearchWebsite').val()), function (json) {
+            hasAlertToShow(json);
+            json = JSON.parse(json['data']);
+            json = json['items']
+            competitors = json
+            var data = []
+            if (json.length) {
+                for (let i = 0; i < json.length; i++) {
+                    if (json[i]['domain'] != $('#inputSearchWebsite').val()) {
+                        data.push({
+                            id: json[i]['domain'],
+                            text: json[i]['domain'] + "(" + json[i]['sum_position'] + " ranks)"
+                        })
+                    }
+                }
+            }
+            $('.js-example-basic-multiple').select2({tokenSeparators: [',', ', ', '\n'],
+                selectOnClose: true,
+                tags: true,
+                data: data
+            });
+        });
+    });
+
+    function loadDomainIntersection() {
+        if (payingUser == true && (trialUser == true || packageName != 'Premium')) {
+            $('table#domainIntersection').show()
+            $('table#pageIntersection').hide()
+            var targets = $('#competitorsInput').val();
+            var html = ''
+            //$.getJSON("https://www.rabbitseo.com/getMyJsonCompDataGeneric?api=WebsiteLinksIntersection&url=amazon.com&targets=nike.com,fifa.com", function(json) {
+            $.getJSON(getApiUrl('getMyJsonCompDataGeneric?api=WebsiteLinksIntersection&url=' + $('#inputSearchWebsite').val() + '&targets=' + targets), function (json) {
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json.data)
+                    var html = ''
+                    json = json.items
+                    linksIntersections = json
+                    for (let i = 0; i < json.length; i++) {
+                        html += '<tr>' +
+                            '<td  class="dt-control" onclick="showSubGrid()">' + (i + 1) + '</td>' +
+                            '<td>' + json[i][1]['target'] + '</td>' +
+                            '<td>+</td>' +
+                            '</tr>'
+                    }
+                    $('table#domainIntersection tbody').html(html)
+                    $('#domainIntersection').DataTable()
+                } else {
+                    $('#domainIntersection').DataTable()
+                }
+            })
+        } else {
+            showUpgradeModal('Spy Backlinks is available for Business users, would you like to upgrade to see backlinks data and more?');
+        }
+
+    }
+
+    function showSubGrid() {
+        var domainIntersection = $('#domainIntersection').DataTable();
+        var tr = $(event.target).closest('tr');
+        var row = domainIntersection.row(tr);
+
+        if (row.child.isShown()) {
+            row.child.hide();
+            tr.removeClass('shown');
+        } else {
+            subGrid(row);
+            tr.addClass('shown');
+        }
+    };
+
+    function subGrid(row) {
+        var d = row.data();
+        var html = '<table id="childIntersection" class="uk-table uk-table-hover uk-table-striped notranslate" style="width:100%">' +
+            '<thead>' +
+            '<tr>' +
+            '<th></th>' +
+            '<th>Target</th>' +
+            '<th>Backlinks</th>' +
+            '<th>Broken Backlinks</th>' +
+            '<th>Broken Pages</th>' +
+            '<th>Rank</th>' +
+            '<th>Domains</th>' +
+            '<th>Ips</th>' +
+            '<th>Main Domains</th>' +
+            '<th>Pages</th>' +
+            '<th>Subnets</th>' +
+            '</tr>' +
+            '</thead>';
+        var json = linksIntersections[d[0] - 1]
+        for (var i = 0; i < Object.keys(json).length; i++) {
+            console.log(i);
+            html += '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + json[i + 1]['target'] + '</td>' +
+                '<td>' + json[i + 1]['backlinks'] + '</td>' +
+                '<td>' + json[i + 1]['broken_backlinks'] + '</td>' +
+                '<td>' + json[i + 1]['broken_pages'] + '</td>' +
+                '<td>' + json[i + 1]['rank'] + '</td>' +
+                '<td>' + json[i + 1]['referring_domains'] + '</td>' +
+                '<td>' + json[i + 1]['referring_ips'] + '</td>' +
+                '<td>' + json[i + 1]['referring_main_domains'] + '</td>' +
+                '<td>' + json[i + 1]['referring_pages'] + '</td>' +
+                '<td>' + json[i + 1]['referring_subnets'] + '</td>' +
+                '</tr>'
+        }
+        html += '</table>';
+        row.child(html, 'childClass').show()
+    }
+
+    function loadPageIntersection() {
+        $('table#domainIntersection').hide()
+        $('table#pageIntersection').show()
+        var targets = $('#competitorsInput').val();
+        // call api https://www.rabbitseo.com/getMyJsonCompDataGeneric?api=WebsitePageLinksIntersection&url=amazon.com&targets= + val
+        // display results in datatable grid
+        $.getJSON(getApiUrl('getMyJsonCompDataGeneric?api=WebsitePageLinksIntersection&url=' + $('#inputSearchWebsite').val() + '&targets=' + targets), function (json) {
+            // console.log(json);
+            if (!hasAlertToShow(json)) {
+
+            }
+        })
+        $.getJSON(getApiUrl('/getMyJsonCompDataGeneric?api=WebsitePageLinksIntersection&url=amazon.com&targets=nike.com,fifa.com'), function (json) {
+            console.log(json);
+            //json = JSON.parse(json.data)
+
+        })
+    }
+</script>

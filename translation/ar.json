@@ -1,0 +1,2820 @@
+[
+  {
+  "o":"test",
+   "t":"امتحان"
+},
+{
+  "o":"Demo Account",
+   "t":"الحساب التجريبي"
+},
+{
+  "o":"Dashboard",
+   "t":"لوحة القيادة"
+},
+{
+  "o":"My Keywords",
+   "t":"كلماتي الرئيسية"
+},
+{
+  "o":"Landing Pages",
+   "t":"الصفحات المقصودة"
+},
+{
+  "o":"Competitors",
+   "t":"المنافسين"
+},
+{
+  "o":"Backlinks",
+   "t":"الروابط الخلفية"
+},
+{
+  "o":"Links Summary",
+   "t":"ملخص الروابط"
+},
+{
+  "o":"Links History",
+   "t":"تاريخ الروابط"
+},
+{
+  "o":"Links Explorer",
+   "t":"مستكشف الروابط"
+},
+{
+  "o":"Links Intersection",
+   "t":"تقاطع الروابط"
+},
+{
+  "o":"Spy Links",
+   "t":"روابط تجسس"
+},
+{
+  "o":"Links Monitoring",
+   "t":"مراقبة الروابط"
+},
+{
+  "o":"Google Analytics",
+   "t":"تحليلات كوكل"
+},
+{
+  "o":"Report",
+   "t":"تقرير"
+},
+{
+  "o":"PDF Report",
+   "t":"تقرير بصيغة PDF"
+},
+{
+  "o":"No results, sorry",
+   "t":"لا توجد نتائج، آسف"
+},
+{
+  "o":"My Websites",
+   "t":"مواقعي الإلكترونية"
+},
+{
+  "o":"Ranks went up",
+   "t":"ارتفعت الرتب"
+},
+{
+  "o":"Ranks went down",
+   "t":"انخفضت الرتب"
+},
+{
+  "o":"Average Position",
+   "t":"متوسط الموقف"
+},
+{
+  "o":"Change Percent",
+   "t":"تغيير النسبة المئوية"
+},
+{
+  "o":"Average Rank Last Days",
+   "t":"متوسط الرتبة الأيام الأخيرة"
+},
+{
+  "o":"Average Rank Last Months",
+   "t":"متوسط الرتبة الأشهر الأخيرة"
+},
+{
+  "o":"Indicates how many keywords the given website is ranked for",
+   "t":"يشير إلى عدد الكلمات الرئيسية التي تم تصنيف موقع الويب المحدد لها"
+},
+{
+  "o":"Indicates how many keywords have daily tracking for the given website",
+   "t":"يشير إلى عدد الكلمات الرئيسية التي لها تتبع يومي لموقع الويب المحدد"
+},
+{
+  "o":"Indicates average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الإعلان (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates yesterday average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الأمس (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates last week average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الأسبوع الماضي (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates last month average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الشهر الماضي (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many ranks went up since yesterday for the given website",
+   "t":"يشير إلى عدد الرتب التي ارتفعت منذ الأمس لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many ranks went down since yesterday for the given website",
+   "t":"يشير إلى عدد الرتب التي انخفضت منذ الأمس لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many ranks went up since last change for the given website",
+   "t":"يشير إلى عدد الرتب التي ارتفعت منذ آخر تغيير لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many landing pages are tracked for the given website",
+   "t":"يشير إلى عدد الصفحات المقصودة التي يتم تتبعها لموقع الويب المحدد"
+},
+{
+  "o":"Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+   "t":"تصنيف موقع الويب (تصنيف الصفحة) هو خوارزمية Google المصممة لقياس أهمية صفحة الويب بناءً على جودة وكمية صفحات الويب التي تشير إليها. الصفحات التي تحتوي على نظام تصنيف صفحات مرتفع (أي عدد كبير من الروابط الخلفية عالية الجودة) ينظر إليها Google على أنها أكثر موثوقية ويتم تصنيفها بشكل أفضل من الصفحات ذات نظام تصنيف صفحات أقل."
+},
+{
+  "o":"Indicates how many backlinks are linking for the given website",
+   "t":"يشير إلى عدد الروابط الخلفية المرتبطة بموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many backlinks are being monitored for the given website",
+   "t":"يشير إلى عدد الروابط الخلفية التي تتم مراقبتها لموقع الويب المحدد"
+},
+{
+  "o":"Save for next time",
+   "t":"حفظ في المرة القادمة"
+},
+{
+  "o":"Copy",
+   "t":"ينسخ"
+},
+{
+  "o":"Excel",
+   "t":"اكسل"
+},
+{
+  "o":"Print",
+   "t":"مطبعة"
+},
+{
+  "o":"Total Keywords",
+   "t":"إجمالي الكلمات الرئيسية"
+},
+{
+  "o":"Tracked Keywords",
+   "t":"الكلمات الرئيسية المتعقبة"
+},
+{
+  "o":"Avg Position",
+   "t":"متوسط الموضع"
+},
+{
+  "o":"Ranks Up",
+   "t":"صفوف أعلى"
+},
+{
+  "o":"Ranks Down",
+   "t":"صفوف أسفل"
+},
+{
+  "o":"Page Rank",
+   "t":"رتبة صفحة"
+},
+{
+  "o":"Loading...",
+   "t":"تحميل..."
+},
+{
+  "o":"Edit Website",
+   "t":"تحرير الموقع"
+},
+{
+  "o":"Website Name*",
+   "t":"اسم الموقع*"
+},
+{
+  "o":"Website Url*",
+   "t":"رابط الموقع*"
+},
+{
+  "o":"Website Classification",
+   "t":"تصنيف الموقع"
+},
+{
+  "o":"Country",
+   "t":"دولة"
+},
+{
+  "o":"Keywords",
+   "t":"الكلمات الدالة"
+},
+{
+  "o":"Close",
+   "t":"يغلق"
+},
+{
+  "o":"Website Name",
+   "t":"اسم الموقع"
+},
+{
+  "o":"Project Manager",
+   "t":"مدير المشروع"
+},
+{
+  "o":"Update",
+   "t":"تحديث"
+},
+{
+  "o":"Upgrade",
+   "t":"يرقي"
+},
+{
+  "o":"SEO Tutorial",
+   "t":"دروس تحسين محركات البحث"
+},
+{
+  "o":"Contact Us",
+   "t":"اتصل بنا"
+},
+{
+  "o":"Terms & Condition",
+   "t":"الشروط والأحكام"
+},
+{
+  "o":"English",
+   "t":"إنجليزي"
+},
+{
+  "o":"Copyright © 2013 RabbitSEO . All Rights Reserved.",
+   "t":"حقوق الطبع والنشر © 2013 رابيتسيو. كل الحقوق محفوظة."
+},
+{
+  "o":"Close\n",
+   "t":"يغلق\n"
+},
+{
+  "o":"Yes",
+   "t":"نعم"
+},
+{
+  "o":"Save changes",
+   "t":"حفظ التغييرات"
+},
+{
+  "o":"Confirm",
+   "t":"يتأكد"
+},
+{
+  "o":"Are you sure you want to delete?",
+   "t":"هل أنت متأكد أنك تريد حذف؟"
+},
+{
+  "o":"No\n",
+   "t":"لا\n"
+},
+{
+  "o":"Ranked Keywords",
+   "t":"الكلمات الرئيسية المرتبة"
+},
+{
+  "o":"This value indicates the number of backlinks linking to your website.",
+   "t":"تشير هذه القيمة إلى عدد الروابط الخلفية المرتبطة بموقعك على الويب."
+},
+{
+  "o":"Total Backlinks",
+   "t":"إجمالي الروابط الخلفية"
+},
+{
+  "o":"This value indicates the number of referring domains linking to your website.",
+   "t":"تشير هذه القيمة إلى عدد النطاقات المرجعية المرتبطة بموقعك على الويب."
+},
+{
+  "o":"This value indicates the number of broken backlinks that are linking to your website, you should fix all of them so there will be no broken backlinks linking to you. You can easily do it by create a page with the url of that link.",
+   "t":"تشير هذه القيمة إلى عدد الروابط الخلفية المعطلة التي ترتبط بموقعك على الويب، ويجب عليك إصلاحها جميعًا حتى لا تكون هناك روابط خلفية معطلة مرتبطة بك. يمكنك القيام بذلك بسهولة عن طريق إنشاء صفحة تحتوي على عنوان url لهذا الرابط."
+},
+{
+  "o":"Broken Backlinks",
+   "t":"الروابط الخلفية المعطلة"
+},
+{
+  "o":"Facebook Likes",
+   "t":"اعجابات الفيسبوك"
+},
+{
+  "o":"Website Rank",
+   "t":"رتبة الموقع"
+},
+{
+  "o":"We're checking for your rankings and competitors, it can take up to 30 seconds",
+   "t":"نحن نتحقق من تصنيفاتك ومنافسيك، وقد يستغرق الأمر ما يصل إلى 30 ثانية"
+},
+{
+  "o":"Keyword in Track",
+   "t":"الكلمة الرئيسية في المسار"
+},
+{
+  "o":"Ranks Up since Yesterday",
+   "t":"الرتب مرتفعة منذ الأمس"
+},
+{
+  "o":"Ranks Down since Yesterday",
+   "t":"تراجع الرتب منذ الأمس"
+},
+{
+  "o":"Keyword in Top 3",
+   "t":"الكلمة الرئيسية في أعلى 3"
+},
+{
+  "o":"Keyword in Top 10",
+   "t":"الكلمة الرئيسية في أعلى 10"
+},
+{
+  "o":"Average Position Last Week",
+   "t":"متوسط موضع الإعلان الأسبوع الماضي"
+},
+{
+  "o":"Average Position Last Year",
+   "t":"متوسط موضع العام الماضي"
+},
+{
+  "o":"Average Position Last Month",
+   "t":"متوسط موضع الإعلان الشهر الماضي"
+},
+{
+  "o":"My Top Competitors Visibility",
+   "t":"رؤية كبار المنافسين"
+},
+{
+  "o":"Show more",
+   "t":"أظهر المزيد"
+},
+{
+  "o":"Average Visits Per Day",
+   "t":"متوسط الزيارات في اليوم"
+},
+{
+  "o":"Visit Last Month",
+   "t":"زيارة الشهر الماضي"
+},
+{
+  "o":"Average Time On Site",
+   "t":"متوسط الوقت في الموقع"
+},
+{
+  "o":"Average Bonuce Rate",
+   "t":"متوسط معدل الارتداد"
+},
+{
+  "o":"Average Page Views",
+   "t":"متوسط مشاهدات الصفحة"
+},
+{
+  "o":"Websites",
+   "t":"المواقع الإلكترونية"
+},
+{
+  "o":"Researches",
+   "t":"الأبحاث"
+},
+{
+  "o":"Overview",
+   "t":"ملخص"
+},
+{
+  "o":"Keyword Suggestions",
+   "t":"اقتراحات الكلمات الرئيسية"
+},
+{
+  "o":"Keyword",
+   "t":"الكلمة الرئيسية"
+},
+{
+  "o":"Url",
+   "t":"عنوان URL"
+},
+{
+  "o":"Indicates the (approximate) number of monthly searches for the given keyword on google",
+   "t":"يشير إلى العدد (التقريبي) لعمليات البحث الشهرية للكلمة الرئيسية المحددة على جوجل"
+},
+{
+  "o":"Search Volume",
+   "t":"حجم البحث"
+},
+{
+  "o":"Indicates the Estimated Organic monthly Traffic to the domain calculated as the product of CTR (click-through-rate) and search volume values of the returned keyword",
+   "t":"يشير إلى حركة المرور العضوية الشهرية المقدرة إلى المجال المحسوبة كمنتج لنسبة النقر إلى الظهور (نسبة النقر إلى الظهور) وقيم حجم البحث للكلمة الرئيسية التي تم إرجاعها"
+},
+{
+  "o":"Indicates the chance of getting in top-10 organic results for a keyword on a logarithmic scale from 0 to 100, where 1 is easy and 100 is extremely hard",
+   "t":"يشير إلى فرصة الحصول على أفضل 10 نتائج عضوية لكلمة رئيسية على مقياس لوغاريتمي من 0 إلى 100، حيث 1 سهل و100 صعب للغاية"
+},
+{
+  "o":"Difficulty",
+   "t":"صعوبة"
+},
+{
+  "o":"Indicates the relative amount of competition associated with the given keyword",
+   "t":"يشير إلى المقدار النسبي للمنافسة المرتبطة بالكلمة الرئيسية المحددة"
+},
+{
+  "o":"Competition",
+   "t":"مسابقة"
+},
+{
+  "o":"Indicates the average cost per click (USD) historically paid for the given keyword",
+   "t":"يشير إلى متوسط تكلفة النقرة (بالدولار الأمريكي) المدفوعة تاريخيًا للكلمة الرئيسية المحددة"
+},
+{
+  "o":"Indicates the number of search results returned for the given keyword",
+   "t":"يشير إلى عدد نتائج البحث التي تم إرجاعها للكلمة الرئيسية المحددة"
+},
+{
+  "o":"Results",
+   "t":"نتائج"
+},
+{
+  "o":"Rank",
+   "t":"رتبة"
+},
+{
+  "o":"Add",
+   "t":"يضيف"
+},
+{
+  "o":"Upgrade to see more results",
+   "t":"قم بالترقية لرؤية المزيد من النتائج"
+},
+{
+  "o":"Upgrade to Premium",
+   "t":"الترقية إلى المميزة"
+},
+{
+  "o":"Organic Search",
+   "t":"البحث العضوي"
+},
+{
+  "o":"This values indicates the number of organic searches where the domain ranks #1 (for all the keywords the website is ranked for, not just those you are tracking)",
+   "t":"تشير هذه القيم إلى عدد عمليات البحث العضوية التي يحتل فيها النطاق المرتبة الأولى (لجميع الكلمات الرئيسية التي تم تصنيف موقع الويب لها، وليس فقط تلك التي تقوم بتتبعها)"
+},
+{
+  "o":"Keywords In First Position",
+   "t":"الكلمات الرئيسية في المركز الأول"
+},
+{
+  "o":"Keywords in First Position",
+   "t":"الكلمات الرئيسية في المركز الأول"
+},
+{
+  "o":"Keyword in First Page",
+   "t":"الكلمة الرئيسية في الصفحة الأولى"
+},
+{
+  "o":"Website Average Ranking",
+   "t":"متوسط تصنيف الموقع"
+},
+{
+  "o":"Estimated Organic Traffic is an estimation of website traffic that can be driven by the group of keywords your website is ranked for. The metric displays the approximate number of monthly visits the keywords can lead to your website (this doesn't include traffic from other sources, only organic traffic). ETV is calculated by multiplying a keyword’s search volume by the click-through rate coefficient of a search result",
+   "t":"إن حركة المرور العضوية المقدرة هي تقدير لحركة مرور موقع الويب التي يمكن أن تكون مدفوعة بمجموعة الكلمات الرئيسية التي تم تصنيف موقع الويب الخاص بك عليها. يعرض المقياس العدد التقريبي للزيارات الشهرية التي يمكن أن تؤديها الكلمات الرئيسية إلى موقع الويب الخاص بك (وهذا لا يشمل الزيارات من مصادر أخرى، بل الزيارات العضوية فقط). يتم حساب ETV عن طريق ضرب حجم بحث الكلمة الرئيسية في معامل نسبة النقر إلى الظهور لنتيجة البحث"
+},
+{
+  "o":"Estimated Organic Traffic",
+   "t":"حركة المرور العضوية المقدرة"
+},
+{
+  "o":"Keywords in Top 3",
+   "t":"الكلمات الرئيسية في أعلى 3"
+},
+{
+  "o":"Keywords in Top 10",
+   "t":"الكلمات الرئيسية في أعلى 10"
+},
+{
+  "o":"Current Website Status",
+   "t":"حالة الموقع الحالية"
+},
+{
+  "o":"Website Status Week Ago",
+   "t":"حالة موقع الويب منذ أسبوع"
+},
+{
+  "o":"Website Status Month Ago",
+   "t":"حالة الموقع منذ شهر"
+},
+{
+  "o":"Initial Website Status",
+   "t":"الحالة الأولية للموقع"
+},
+{
+  "o":"of Keywords are in the top 5 results",
+   "t":"من الكلمات الرئيسية في أعلى 5 نتائج"
+},
+{
+  "o":"of Keywords are in the top 10 results",
+   "t":"من الكلمات الرئيسية في أعلى 10 نتائج"
+},
+{
+  "o":"of Keywords are in the top 20 results",
+   "t":"من الكلمات الرئيسية موجودة في أعلى 20 نتيجة"
+},
+{
+  "o":"This indicates the number of new ranked elements, how many new ranked elements were found for this domain in the past month or so.",
+   "t":"يشير هذا إلى عدد العناصر المصنفة الجديدة، وعدد العناصر المصنفة الجديدة التي تم العثور عليها لهذا المجال في الشهر الماضي أو نحو ذلك."
+},
+{
+  "o":"New Ranks",
+   "t":"صفوف جديدة"
+},
+{
+  "o":"This indicates how many ranked elements of this domain went up in Google Search in the past month or so.",
+   "t":"يشير هذا إلى عدد العناصر المصنفة لهذا النطاق التي ظهرت في بحث Google في الشهر الماضي أو نحو ذلك."
+},
+{
+  "o":"Ranks went Up",
+   "t":"ارتفعت الرتب"
+},
+{
+  "o":"This indicates how many ranked elements of this domain went down in Google Search in the past month or so.",
+   "t":"يشير هذا إلى عدد العناصر المصنفة لهذا النطاق التي ظهرت في بحث Google خلال الشهر الماضي أو نحو ذلك."
+},
+{
+  "o":"Ranks went Down",
+   "t":"نزلت الرتب"
+},
+{
+  "o":"This indicates how many ranked elements of this domain were previously presented in google, but weren’t found during the last check in the past month or so.",
+   "t":"يشير هذا إلى عدد العناصر المصنفة لهذا النطاق التي تم تقديمها مسبقًا في Google، ولكن لم يتم العثور عليها أثناء عملية التحقق الأخيرة في الشهر الماضي أو نحو ذلك."
+},
+{
+  "o":"Lost Ranks",
+   "t":"الرتب المفقودة"
+},
+{
+  "o":"This chart shows how many keywords are ranked for this website in each group of position.",
+   "t":"يوضح هذا الرسم البياني عدد الكلمات الرئيسية التي تم تصنيفها لهذا الموقع في كل مجموعة من المواضع."
+},
+{
+  "o":"Ranking Distribution",
+   "t":"توزيع الترتيب"
+},
+{
+  "o":"Monitored Keywords",
+   "t":"الكلمات الرئيسية المراقبة"
+},
+{
+  "o":"Keywords in top 3",
+   "t":"الكلمات الرئيسية في أعلى 3"
+},
+{
+  "o":"This value indicates the number of ranks that went up since yesterday",
+   "t":"تشير هذه القيمة إلى عدد الرتب التي ارتفعت منذ الأمس"
+},
+{
+  "o":"This value indicates the number of ranks that went down since yesterday",
+   "t":"تشير هذه القيمة إلى عدد الرتب التي انخفضت منذ الأمس"
+},
+{
+  "o":"This value indicates the average position of your live ranks",
+   "t":"تشير هذه القيمة إلى متوسط موضع رتبك المباشرة"
+},
+{
+  "o":"General",
+   "t":"عام"
+},
+{
+  "o":"The page in your website that google links when someone search for this keyword",
+   "t":"الصفحة الموجودة في موقع الويب الخاص بك والتي يرتبط بها Google عندما يبحث شخص ما عن هذه الكلمة الرئيسية"
+},
+{
+  "o":"The search engine of the given keyword, you can have multiple keywords with different search engines. To change the search engine - you should delete the keyword and create a new keyword with the required search engine",
+   "t":"محرك البحث الخاص بالكلمة الرئيسية المحددة، يمكن أن يكون لديك كلمات رئيسية متعددة مع محركات بحث مختلفة. لتغيير محرك البحث - يجب عليك حذف الكلمة الأساسية وإنشاء كلمة رئيسية جديدة باستخدام محرك البحث المطلوب"
+},
+{
+  "o":"Which device the given keyword is being searched on - Desktop or Mobile",
+   "t":"الجهاز الذي يتم البحث عليه عن الكلمة الرئيسية المحددة - سطح المكتب أو الهاتف المحمول"
+},
+{
+  "o":"Indicates the initial monitored rank of the given keyword, very useful for reports and tracking progress",
+   "t":"يشير إلى الترتيب الأولي الذي تم رصده للكلمة الرئيسية المحددة، وهو مفيد جدًا للتقارير وتتبع التقدم"
+},
+{
+  "o":"Indicates the best monitored rank that was captured for the given keyword",
+   "t":"يشير إلى أفضل تصنيف تم رصده للكلمة الرئيسية المحددة"
+},
+{
+  "o":"Indicates the previous monitored rank of the given keyword",
+   "t":"يشير إلى الترتيب السابق الذي تمت مراقبته للكلمة الرئيسية المحددة"
+},
+{
+  "o":"Indicates the (approximate) number of monthly searches for the given keyword on the search engine",
+   "t":"يشير إلى العدد (التقريبي) لعمليات البحث الشهرية للكلمة الرئيسية المحددة في محرك البحث"
+},
+{
+  "o":"Landing Page",
+   "t":"الصفحة المقصودة"
+},
+{
+  "o":"Last Days",
+   "t":"الأيام الأخيرة"
+},
+{
+  "o":"Indicates the rank a week ago of the given keyword",
+   "t":"يشير إلى الترتيب قبل أسبوع للكلمة الرئيسية المحددة"
+},
+{
+  "o":"Last Year",
+   "t":"العام الماضي"
+},
+{
+  "o":"Indicates the rank one year ago of the given keyword, very useful for reports and tracking progress",
+   "t":"يشير إلى الترتيب قبل عام واحد للكلمة الرئيسية المحددة، وهو مفيد جدًا للتقارير وتتبع التقدم"
+},
+{
+  "o":"Add New Keyword",
+   "t":"إضافة كلمة رئيسية جديدة"
+},
+{
+  "o":"Search Engine",
+   "t":"محرك البحث"
+},
+{
+  "o":"Device",
+   "t":"جهاز"
+},
+{
+  "o":"Desktop",
+   "t":"سطح المكتب"
+},
+{
+  "o":"Mobile",
+   "t":"متحرك"
+},
+{
+  "o":"Keyword(s)",
+   "t":"الكلمات الدالة)"
+},
+{
+  "o":"Add Keywords\n",
+   "t":"أضف الكلمات الرئيسية\n"
+},
+{
+  "o":"Your Keywords were added successfully, usually it takes between 10-40 seconds until you can see live results!",
+   "t":"تمت إضافة كلماتك الرئيسية بنجاح، وعادةً ما يستغرق الأمر ما بين 10 إلى 40 ثانية حتى تتمكن من رؤية النتائج المباشرة!"
+},
+{
+  "o":"Page Url",
+   "t":"رابط الصفحة"
+},
+{
+  "o":"Live Rank",
+   "t":"الرتبة الحية"
+},
+{
+  "o":"No keywords found, create your first keyword now",
+   "t":"لم يتم العثور على كلمات رئيسية، أنشئ كلمتك الرئيسية الأولى الآن"
+},
+{
+  "o":"This shows the overall score of your tracked landing pages, we test your pages title, H1 tag, keyword density, page content etc. To improve your rankings at search engines you should make sure your pages are optimized.",
+   "t":"يوضح هذا النتيجة الإجمالية للصفحات المقصودة التي يتم تتبعها، ونقوم باختبار عنوان صفحاتك وعلامة H1 وكثافة الكلمات الرئيسية ومحتوى الصفحة وما إلى ذلك. لتحسين تصنيفاتك في محركات البحث، يجب عليك التأكد من تحسين صفحاتك."
+},
+{
+  "o":"Indicates how many times the give keywords appears in the content of the landing page",
+   "t":"يشير إلى عدد مرات ظهور الكلمات الرئيسية في محتوى الصفحة المقصودة"
+},
+{
+  "o":"Overall Score",
+   "t":"المجموع النهائي"
+},
+{
+  "o":"This shows the number of warnings we found on your pages that you should fix, after fixing them you can click refresh and let RabbitSEO test the pages again.",
+   "t":"يوضح هذا عدد التحذيرات التي وجدناها على صفحاتك والتي يجب عليك إصلاحها، بعد إصلاحها يمكنك النقر فوق تحديث والسماح لـ RabbitSEO باختبار الصفحات مرة أخرى."
+},
+{
+  "o":"Total Warnings",
+   "t":"إجمالي التحذيرات"
+},
+{
+  "o":"broken backlinks",
+   "t":"الروابط الخلفية المعطلة"
+},
+{
+  "o":"Add New Landing Page",
+   "t":"إضافة صفحة مقصودة جديدة"
+},
+{
+  "o":"You can enter several URLs (one in each line).",
+   "t":"يمكنك إدخال عدة عناوين URL (واحد في كل سطر)."
+},
+{
+  "o":"rescan",
+   "t":"إعادة المسح"
+},
+{
+  "o":"Add New Page",
+   "t":"إضافة صفحة جديدة"
+},
+{
+  "o":"Page",
+   "t":"صفحة"
+},
+{
+  "o":"Shows the title of the given page, page title is very important for SEO, make sure you choose a title that contains the right keyword.",
+   "t":"يظهر عنوان الصفحة المحددة، عنوان الصفحة مهم جدًا لتحسين محركات البحث، تأكد من اختيار عنوان يحتوي على الكلمة الرئيسية الصحيحة."
+},
+{
+  "o":"Title",
+   "t":"عنوان"
+},
+{
+  "o":"Shows how many words the given page has, search engines love content - all your pages should have content, even your contact us page",
+   "t":"يعرض عدد الكلمات التي تحتوي عليها الصفحة المحددة، ومحركات البحث تحب المحتوى - يجب أن تحتوي جميع صفحاتك على محتوى، حتى صفحة اتصل بنا"
+},
+{
+  "o":"Words",
+   "t":"كلمات"
+},
+{
+  "o":"Shows how many internal links (to YOUR website) the given page has.",
+   "t":"يعرض عدد الروابط الداخلية (إلى موقع الويب الخاص بك) الموجودة في الصفحة المحددة."
+},
+{
+  "o":"In. links",
+   "t":"في. الروابط"
+},
+{
+  "o":"Shows how many external links (to OTHER websites) the given page has.",
+   "t":"يعرض عدد الروابط الخارجية (لمواقع الويب الأخرى) الموجودة في الصفحة المحددة."
+},
+{
+  "o":"Ext. links",
+   "t":"تحويلة. الروابط"
+},
+{
+  "o":"Shows the keyword you would like to optimize this page for, it is important to choose the right keyword for each page.",
+   "t":"يعرض الكلمة الرئيسية التي ترغب في تحسين هذه الصفحة لها، ومن المهم اختيار الكلمة الأساسية المناسبة لكل صفحة."
+},
+{
+  "o":"The score of your page, the better it is, the higher you can rank :)",
+   "t":"نتيجة صفحتك، كلما كانت أفضل، كلما كان تصنيفك أعلى :)"
+},
+{
+  "o":"Score",
+   "t":"نتيجة"
+},
+{
+  "o":"Shows how many issues we found for the given page.",
+   "t":"يعرض عدد المشكلات التي وجدناها في الصفحة المحددة."
+},
+{
+  "o":"Issues",
+   "t":"مشاكل"
+},
+{
+  "o":"You can enter several URLs (one in each line)",
+   "t":"يمكنك إدخال عدة عناوين URL (واحد في كل سطر)"
+},
+{
+  "o":"Save",
+   "t":"يحفظ"
+},
+{
+  "o":"Back to Competitors",
+   "t":"العودة إلى المنافسين"
+},
+{
+  "o":"Domain",
+   "t":"اِختِصاص"
+},
+{
+  "o":"Average Rank",
+   "t":"متوسط الرتبة"
+},
+{
+  "o":"Weighted Average",
+   "t":""
+},
+{
+  "o":"In Top 20",
+   "t":"في أعلى 20"
+},
+{
+  "o":"In Top 10",
+   "t":"في أعلى 10"
+},
+{
+  "o":"Current Status",
+   "t":"الحالة الحالية"
+},
+{
+  "o":"Month Ago",
+   "t":"منذ شهر"
+},
+{
+  "o":"In Top 5",
+   "t":"في أعلى 5"
+},
+{
+  "o":"Keywords in top 20",
+   "t":"الكلمات الرئيسية في أعلى 20"
+},
+{
+  "o":"Keywords in top 10",
+   "t":"الكلمات الرئيسية في أعلى 10"
+},
+{
+  "o":"Keywords in top 5",
+   "t":"الكلمات الرئيسية في أعلى 5"
+},
+{
+  "o":"Keywords in First Position",
+   "t":"الكلمات الرئيسية في المركز الأول"
+},
+{
+  "o":"In Top 3",
+   "t":"في أعلى 3"
+},
+{
+  "o":"In Top 1",
+   "t":"في أعلى 1"
+},
+{
+  "o":"General Details",
+   "t":"تفاصيل عامة"
+},
+{
+  "o":"This value indicates the number of referring pages linking to your website, (one website can link to your website from multiple pages)",
+   "t":"تشير هذه القيمة إلى عدد الصفحات المرجعية المرتبطة بموقعك على الويب (يمكن لموقع ويب واحد الارتباط بموقعك على الويب من صفحات متعددة)"
+},
+{
+  "o":"Referring Pages",
+   "t":"الصفحات المرجعية"
+},
+{
+  "o":"This value indicates the number of broken pages on the target that respond with 4xx or 5xx status codes.",
+   "t":"تشير هذه القيمة إلى عدد الصفحات المعطلة على الهدف والتي تستجيب برموز الحالة 4xx أو 5xx."
+},
+{
+  "o":"Broken Pages",
+   "t":"الصفحات المكسورة"
+},
+{
+  "o":"Site Rank",
+   "t":"رتبة الموقع"
+},
+{
+  "o":"Shows how many internal links your website has, it is calculated as the sum of internal links on the pages of the specified website.",
+   "t":"يوضح عدد الروابط الداخلية لموقعك على الويب، ويتم حسابها كمجموع الروابط الداخلية على صفحات الموقع المحدد."
+},
+{
+  "o":"Internal Backlinks",
+   "t":"الروابط الخلفية الداخلية"
+},
+{
+  "o":"Shows how many external links your website has, it is calculated as the sum of external links on the pages of the specified website.",
+   "t":"يوضح عدد الروابط الخارجية الموجودة بموقعك على الويب، ويتم حسابها كمجموع الروابط الخارجية على صفحات الموقع المحدد."
+},
+{
+  "o":"External Backlinks",
+   "t":"خلفية الخارجية"
+},
+{
+  "o":"Indicates the types of the referring links and link count per each type",
+   "t":"يشير إلى أنواع الروابط المرجعية وعدد الروابط لكل نوع"
+},
+{
+  "o":"Referring Links Types",
+   "t":"أنواع الروابط المرجعية"
+},
+{
+  "o":"Link from specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.",
+   "t":"الرابط من يحدد محتوى قائم بذاته، مثل الرسوم التوضيحية والرسوم البيانية والصور وقوائم التعليمات البرمجية، وما إلى ذلك."
+},
+{
+  "o":"Referring Links Semantic Locations",
+   "t":"إحالة الروابط المواقع الدلالية"
+},
+{
+  "o":"Indicates the link attributes of the referring links",
+   "t":"يشير إلى سمات الارتباط للارتباطات المرجعية"
+},
+{
+  "o":"Attributes of the Referring Links",
+   "t":"خصائص الروابط المرجعية"
+},
+{
+  "o":"Type",
+   "t":"يكتب"
+},
+{
+  "o":"Value",
+   "t":"قيمة"
+},
+{
+  "o":"Percent",
+   "t":"نسبه مئويه"
+},
+{
+  "o":"Locations",
+   "t":"المواقع"
+},
+{
+  "o":"Attribute",
+   "t":"يصف"
+},
+{
+  "o":"Summary",
+   "t":"ملخص"
+},
+{
+  "o":"New Links",
+   "t":"روابط جديدة"
+},
+{
+  "o":"Links Issues",
+   "t":"مشاكل الروابط"
+},
+{
+  "o":"Top Level Domain",
+   "t":"نطاق المستوى الأعلى"
+},
+{
+  "o":"Types",
+   "t":"أنواع"
+},
+{
+  "o":"Onpage",
+   "t":"على الصفحة"
+},
+{
+  "o":"Referring Domains",
+   "t":"أسماء النطاق"
+},
+{
+  "o":"Tooltip",
+   "t":"تلميح"
+},
+{
+  "o":"New Backlinks",
+   "t":"روابط خلفية جديدة"
+},
+{
+  "o":"New Referring Domains",
+   "t":"مجالات الإحالة الجديدة"
+},
+{
+  "o":"Lost backlinks",
+   "t":"الروابط الخلفية المفقودة"
+},
+{
+  "o":"Broken backlinks",
+   "t":"الروابط الخلفية المعطلة"
+},
+{
+  "o":"Broken pages",
+   "t":"صفحات مكسورة"
+},
+{
+  "o":"com",
+   "t":"com"
+},
+{
+  "o":"org",
+   "t":""
+},
+{
+  "o":"net",
+   "t":""
+},
+{
+  "o":"Anchor",
+   "t":"مِرسَاة"
+},
+{
+  "o":"Canonical",
+   "t":"العنوان الأساسي"
+},
+{
+  "o":"Article",
+   "t":"شرط"
+},
+{
+  "o":"Main",
+   "t":"رئيسي"
+},
+{
+  "o":"Footer",
+   "t":"تذييل"
+},
+{
+  "o":"Internal Links Count",
+   "t":"عدد الروابط الداخلية"
+},
+{
+  "o":"External Links Count",
+   "t":"عدد الروابط الخارجية"
+},
+{
+  "o":"Upgrade to see YOUR WEBSITE here",
+   "t":"قم بالترقية لرؤية موقع الويب الخاص بك هنا"
+},
+{
+  "o":"Upgrade to Business",
+   "t":"الترقية إلى الأعمال"
+},
+{
+  "o":"Backlinks List",
+   "t":"قائمة الروابط الخلفية"
+},
+{
+  "o":"Backlinks By Keywords",
+   "t":"الروابط الخلفية حسب الكلمات الرئيسية"
+},
+{
+  "o":"Backlinks By Pages",
+   "t":"الروابط الخلفية حسب الصفحات"
+},
+{
+  "o":"Find Mutual Referring Domains",
+   "t":"البحث عن مجالات الإحالة المتبادلة"
+},
+{
+  "o":"Url From",
+   "t":"عنوان URL من"
+},
+{
+  "o":"Url To",
+   "t":"عنوان URL إلى"
+},
+{
+  "o":"TLD From",
+   "t":"نطاق المستوى الأعلى من"
+},
+{
+  "o":"Anchor",
+   "t":"مِرسَاة"
+},
+{
+  "o":"Page From Rank",
+   "t":"صفحة من الرتبة"
+},
+{
+  "o":"Page From Title",
+   "t":"صفحة من العنوان"
+},
+{
+  "o":"Item Type",
+   "t":"نوع العنصر"
+},
+{
+  "o":"Group Count",
+   "t":"عدد المجموعة"
+},
+{
+  "o":"First Seen",
+   "t":"الروية الأولى"
+},
+{
+  "o":"Last Seen",
+   "t":"اخر ظهور"
+},
+{
+  "o":"Add Link",
+   "t":"إضافة رابط"
+},
+{
+  "o":"Comments",
+   "t":"تعليقات"
+},
+{
+  "o":"Email",
+   "t":"بريد إلكتروني"
+},
+{
+  "o":"Href",
+   "t":"هريف"
+},
+{
+  "o":"Phone",
+   "t":"هاتف"
+},
+{
+  "o":"Subject",
+   "t":"موضوع"
+},
+{
+  "o":"Cost",
+   "t":"يكلف"
+},
+{
+  "o":"My Monitored Backlinks",
+   "t":"الروابط الخلفية المراقبة الخاصة بي"
+},
+{
+  "o":"Website",
+   "t":"موقع إلكتروني"
+},
+{
+  "o":"Track",
+   "t":"مسار"
+},
+{
+  "o":"Enabled",
+   "t":"ممكّن"
+},
+{
+  "o":"Follow",
+   "t":"يتبع"
+},
+{
+  "o":"Date Created",
+   "t":"تاريخ الإنشاء"
+},
+{
+  "o":"Last Checked",
+   "t":"آخر فحص"
+},
+{
+  "o":"Visits",
+   "t":"الزيارات"
+},
+{
+  "o":"Medium",
+   "t":"واسطة"
+},
+{
+  "o":"Source",
+   "t":"مصدر"
+},
+{
+  "o":"Browser",
+   "t":"المتصفح"
+},
+{
+  "o":"Last Month",
+   "t":"الشهر الماضي"
+},
+{
+  "o":"Last calendar month",
+   "t":"الشهر التقويمي الأخير"
+},
+{
+  "o":"Last 3 Months",
+   "t":"آخر 3 أشهر"
+},
+{
+  "o":"Last 6 Months",
+   "t":"آخر 6 أشهر"
+},
+{
+  "o":"Avg Time on Site",
+   "t":"متوسط الوقت في الموقع"
+},
+{
+  "o":"Bounce Rate",
+   "t":"معدل الارتداد"
+},
+{
+  "o":"Page Views",
+   "t":"مشاهدات الصفحة"
+},
+{
+  "o":"Ranks",
+   "t":"صفوف"
+},
+{
+  "o":"Images",
+   "t":"الصور"
+},
+{
+  "o":"Internal Links",
+   "t":"الروابط الداخلية"
+},
+{
+  "o":"External Links",
+   "t":"روابط خارجية"
+},
+{
+  "o":"SEO Report",
+   "t":"تقرير تحسين محركات البحث"
+},
+{
+  "o":"Your Logo",
+   "t":"شعارك"
+},
+{
+  "o":"Upload logo clicking here",
+   "t":"تحميل الشعار بالضغط هنا"
+},
+{
+  "o":"Contact Details",
+   "t":"بيانات المتصل"
+},
+{
+  "o":"Cover Title",
+   "t":"عنوان الغلاف"
+},
+{
+  "o":"You can change title here",
+   "t":"يمكنك تغيير العنوان هنا"
+},
+{
+  "o":"Choose sections to export in your Report",
+   "t":"اختر الأقسام التي تريد تصديرها في تقريرك"
+},
+{
+  "o":"Executive Summary",
+   "t":"ملخص تنفيذي"
+},
+{
+  "o":"Section title",
+   "t":"عنوان القسم"
+},
+{
+  "o":"General Website Info:",
+   "t":"معلومات الموقع العامة:"
+},
+{
+  "o":"Tracking Information:",
+   "t":"معلومات التتبع:"
+},
+{
+  "o":"Add Status Detail",
+   "t":"إضافة تفاصيل الحالة"
+},
+{
+  "o":"Website Current Status",
+   "t":"الوضع الحالي للموقع"
+},
+{
+  "o":"One Month Ago",
+   "t":"قبل شهر"
+},
+{
+  "o":"Initial Status",
+   "t":"الحالة الأولية"
+},
+{
+  "o":"Options:",
+   "t":"خيارات"
+},
+{
+  "o":"URL",
+   "t":"عنوان URL"
+},
+{
+  "o":"Initial Position",
+   "t":"الوضعية الأولية"
+},
+{
+  "o":"6 Months Ago",
+   "t":"قبل 6 أشهر"
+},
+{
+  "o":"3 Months Ago",
+   "t":"قبل 3 أشهر"
+},
+{
+  "o":"Best Rank",
+   "t":"أفضل مرتبة"
+},
+{
+  "o":"Keywords Suggestions (Extra Keywords)",
+   "t":"اقتراحات الكلمات الرئيسية (كلمات رئيسية إضافية)"
+},
+{
+  "o":"Google Analytics Data",
+   "t":"بيانات تحليلات جوجل"
+},
+{
+  "o":"Date Range:",
+   "t":"نطاق الموعد:"
+},
+{
+  "o":"OnPage",
+   "t":"على الصفحة"
+},
+{
+  "o":"Create PDF",
+   "t":"إنشاء قوات الدفاع الشعبي"
+},
+{
+  "o":"My Monitoring Result",
+   "t":"نتيجة الرصد الخاصة بي"
+},
+{
+  "o":"My Top Competitors",
+   "t":"أفضل المنافسين لي"
+},
+{
+  "o":"Settings",
+   "t":"إعدادات"
+},
+{
+  "o":"Plans",
+   "t":"الخطط"
+},
+{
+  "o":"Log Out",
+   "t":"تسجيل خروج"
+},
+{
+  "o":"Indicates how many keywords the given website is ranked for",
+   "t":"يشير إلى عدد الكلمات الرئيسية التي تم تصنيف موقع الويب المحدد لها"
+},
+{
+  "o":"Indicates how many keywords have daily tracking for the given website",
+   "t":"يشير إلى عدد الكلمات الرئيسية التي لها تتبع يومي لموقع الويب المحدد"
+},
+{
+  "o":"Indicates average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الإعلان (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates yesterday average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الأمس (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates last week average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الأمس (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates last month average position (of the daily tracked keywords) for the given website",
+   "t":"يشير إلى متوسط موضع الشهر الماضي (للكلمات الرئيسية التي يتم تتبعها يوميًا) لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many ranks went up since yesterday for the given website",
+   "t":"يشير إلى عدد الرتب التي ارتفعت منذ الأمس لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many ranks went down since yesterday for the given website",
+   "t":"يشير إلى عدد الرتب التي انخفضت منذ الأمس لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many ranks went up since last change for the given website",
+   "t":"يشير إلى عدد الرتب التي ارتفعت منذ آخر تغيير لموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many landing pages are tracked for the given website",
+   "t":"يشير إلى عدد الصفحات المقصودة التي يتم تتبعها لموقع الويب المحدد"
+},
+{
+  "o":"Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+   "t":"تصنيف موقع الويب (تصنيف الصفحة) هو خوارزمية Google المصممة لقياس أهمية صفحة الويب بناءً على جودة وكمية صفحات الويب التي تشير إليها. الصفحات التي تحتوي على نظام تصنيف صفحات مرتفع (أي عدد كبير من الروابط الخلفية عالية الجودة) ينظر إليها Google على أنها أكثر موثوقية ويتم تصنيفها بشكل أفضل من تلك التي تتمتع بنظام تصنيف صفحات أقل."
+},
+{
+  "o":"Indicates how many backlinks are linking for the given website",
+   "t":"يشير إلى عدد الروابط الخلفية المرتبطة بموقع الويب المحدد"
+},
+{
+  "o":"Indicates how many backlinks are being monitored for the given website",
+   "t":"يشير إلى عدد الروابط الخلفية التي تتم مراقبتها لموقع الويب المحدد"
+},
+{
+  "o":"Save for next time",
+   "t":"حفظ في المرة القادمة"
+},
+{
+  "o":"PDF",
+   "t":"بي دي إف"
+},
+{
+  "o":"Name",
+   "t":"اسم"
+},
+{
+  "o":"Delete",
+   "t":"يمسح"
+},
+{
+  "o":"Edit Website",
+   "t":"تحرير الموقع"
+},
+{
+  "o":"Website Name*",
+   "t":""
+},
+{
+  "o":"Website Url*",
+   "t":"اسم الموقع*"
+},
+{
+  "o":"Website Classification",
+   "t":"تصنيف الموقع"
+},
+{
+  "o":"Country",
+   "t":"دولة"
+},
+{
+  "o":"Close",
+   "t":"يغلق"
+},
+{
+  "o":"Website Name",
+   "t":"اسم الموقع"
+},
+{
+  "o":"Project Manager",
+   "t":"مدير المشروع"
+},
+{
+  "o":"Update",
+   "t":"تحديث"
+},
+{
+  "o":"Upgrade",
+   "t":"يرقي"
+},
+{
+  "o":"SEO Tutorial",
+   "t":"دروس تحسين محركات البحث"
+},
+{
+  "o":"Contact Us",
+   "t":"اتصل بنا"
+},
+{
+  "o":"English",
+   "t":"إنجليزي"
+},
+{
+  "o":"Copyright © 2013 RabbitSEO . All Rights Reserved.",
+   "t":"حقوق الطبع والنشر © 2013 رابيتسيو. كل الحقوق محفوظة."
+},
+{
+  "o":"Close\n",
+   "t":"إغلاق\n"
+},
+{
+  "o":"Yes",
+   "t":"نعم"
+},
+{
+  "o":"Save changes",
+   "t":"حفظ التغييرات"
+},
+{
+  "o":"Confirm",
+   "t":"يتأكد"
+},
+{
+  "o":"Are you sure you want to delete?",
+   "t":"هل أنت متأكد أنك تريد حذف؟"
+},
+{
+  "o":"No\n",
+   "t":"لا\n"
+},
+{
+  "o":"Account",
+   "t":"حساب"
+},
+{
+  "o":"General",
+   "t":"عام"
+},
+{
+  "o":"Notifications",
+   "t":"إشعارات"
+},
+{
+  "o":"Login",
+   "t":"تسجيل الدخول"
+},
+{
+  "o":"Websites",
+   "t":"المواقع الإلكترونية"
+},
+{
+  "o":"Researches",
+   "t":"الأبحاث"
+},
+{
+  "o":"Upgrade Now",
+   "t":"تحديث الآن"
+},
+{
+  "o":"Compare plans",
+   "t":"قارن الخطط"
+},
+{
+  "o":"Starter",
+   "t":"بداية"
+},
+{
+  "o":"Premium",
+   "t":"غالي"
+},
+{
+  "o":"Business",
+   "t":"عمل"
+},
+{
+  "o":"Enterprise",
+   "t":"مَشرُوع"
+},
+{
+  "o":"Landing Pages Optimization",
+   "t":"تحسين الصفحات المقصودة"
+},
+{
+  "o":"Google Analytics Integration",
+   "t":"التكامل مع تحليلات جوجل"
+},
+{
+  "o":"White Label Reports",
+   "t":"تقارير العلامة البيضاء"
+},
+{
+  "o":"API Access",
+   "t":"الوصول إلى واجهة برمجة التطبيقات"
+},
+{
+  "o":"Available Researches (up to 500 results per research):",
+   "t":"الأبحاث المتاحة (حتى 500 نتيجة لكل بحث):"
+},
+{
+  "o":"Keywords Research",
+   "t":"بحوث الكلمات الرئيسية"
+},
+{
+  "o":"Traffic Explorer (Similar Web)",
+   "t":"مستكشف حركة المرور (الويب المشابه)"
+},
+{
+  "o":"Related Keywords",
+   "t":"كلمات ذات صلة"
+},
+{
+  "o":"Top Traffic Pages",
+   "t":"أعلى صفحات المرور"
+},
+{
+  "o":"Competitors Analysis",
+   "t":"تحليل المنافسين"
+},
+{
+  "o":"Keywords Gap",
+   "t":"فجوة الكلمات الرئيسية"
+},
+{
+  "o":"Backlinks Summary",
+   "t":"ملخص الروابط الخلفية"
+},
+{
+  "o":"Backlinks Explorer",
+   "t":"مستكشف الروابط الخلفية"
+},
+{
+  "o":"Limited",
+   "t":"محدود"
+},
+{
+  "o":"Spy Backlinks",
+   "t":"الروابط الخلفية للتجسس"
+},
+{
+  "o":"Backlinks History",
+   "t":"تاريخ الروابط الخلفية"
+},
+{
+  "o":"Avg Position Yesterday",
+   "t":"متوسط المركز أمس"
+},
+{
+  "o":"Avg Position Last Week",
+   "t":"متوسط موضع الإعلان في الأسبوع الماضي"
+},
+{
+  "o":"Avg Position Last Month",
+   "t":"متوسط موضع الإعلان الشهر الماضي"
+},
+{
+  "o":"Initial Rank",
+   "t":"الرتبة الأولية"
+},
+{
+  "o":"Days Ago 2",
+   "t":"منذ أيام 2"
+},
+{
+  "o":"Yesterday",
+   "t":"أمس"
+},
+{
+  "o":"Columns",
+   "t":"أعمدة"
+},
+{
+  "o":"Hello",
+   "t":"مرحبًا"
+},
+{
+  "o":"Add New Website",
+   "t":"إضافة موقع جديد"
+},
+{
+  "o":"All Websites",
+   "t":"جميع المواقع"
+},
+{
+  "o":"Website Details",
+   "t":"تفاصيل الموقع"
+},
+{
+  "o":"Website Url",
+   "t":"رابط الموقع"
+},
+{
+  "o":"Enter Website Url",
+   "t":"أدخل عنوان URL لموقع الويب"
+},
+{
+  "o":"Website Nickname (Optional)",
+   "t":"الاسم المستعار للموقع الإلكتروني (اختياري)"
+},
+{
+  "o":"Enter Website Nickname",
+   "t":"أدخل الاسم المستعار للموقع"
+},
+{
+  "o":"Location",
+   "t":"موقع"
+},
+{
+  "o":"Next",
+   "t":"التالي"
+},
+{
+  "o":"Enter your desired keywords, one in each line. You can add up to",
+   "t":"أدخل الكلمات الرئيسية المطلوبة، واحدة في كل سطر. يمكنك إضافة ما يصل إلى"
+},
+{
+  "o":"Please choose keywords for your website.",
+   "t":"الرجاء اختيار الكلمات الرئيسية لموقع الويب الخاص بك."
+},
+{
+  "o":"Close",
+   "t":"يغلق"
+},
+{
+  "o":"keywords",
+   "t":"الكلمات الدالة"
+},
+{
+  "o":"Website Onboarding",
+   "t":"تأهيل موقع الويب"
+},
+{
+  "o":"User Manual",
+   "t":"دليل الاستخدام"
+},
+{
+  "o":"Listed Competitors",
+   "t":"المنافسين المدرجة"
+},
+{
+  "o":"Website Visits Last Month",
+   "t":"زيارات الموقع الشهر الماضي"
+},
+{
+  "o":"Display Settings",
+   "t":"اعدادات العرض"
+},
+{
+  "o":"Menu",
+   "t":"قائمة طعام"
+},
+{
+  "o":"Tables",
+   "t":"الجداول"
+},
+{
+  "o":"Information",
+   "t":"معلومة"
+},
+{
+  "o":"Company Name",
+   "t":"اسم الشركة"
+},
+{
+  "o":"First Name",
+   "t":"الاسم الأول"
+},
+{
+  "o":"Email Notifications of Rankings Changes",
+   "t":"إشعارات البريد الإلكتروني لتغييرات التصنيف"
+},
+{
+  "o":"Email Rankings (days a week)",
+   "t":"تصنيفات البريد الإلكتروني (أيام في الأسبوع)"
+},
+{
+  "o":"Last Name",
+   "t":"اسم العائلة"
+},
+{
+  "o":"Email all rankings, not only changes from last day",
+   "t":"أرسل جميع التصنيفات بالبريد الإلكتروني، وليس فقط التغييرات من اليوم الماضي"
+},
+{
+  "o":"Or notify me:",
+   "t":"أو أعلمني:"
+},
+{
+  "o":"Login Details",
+   "t":"تفاصيل تسجيل الدخول"
+},
+{
+  "o":"Current Password",
+   "t":"كلمة السر الحالية"
+},
+{
+  "o":"New Password",
+   "t":"كلمة المرور الجديدة"
+},
+{
+  "o":"Confirm Password",
+   "t":"تأكيد كلمة المرور"
+},
+{
+  "o":"Website SEO Report for",
+   "t":"تقرير تحسين محركات البحث لموقع الويب لـ"
+},
+{
+  "o":"Keywords List",
+   "t":"قائمة الكلمات الرئيسية"
+},
+{
+  "o":"Keywords that went up last month",
+   "t":"الكلمات الرئيسية التي ارتفعت الشهر الماضي"
+},
+{
+  "o":"Keywords Suggestions (Extra Keywords)",
+   "t":"اقتراحات الكلمات الرئيسية (كلمات رئيسية إضافية)"
+},
+{
+  "o":"Links History",
+   "t":"تاريخ الروابط"
+},
+{
+  "o":"Last Year Chart",
+   "t":"مخطط العام الماضي"
+},
+{
+  "o":"Search Volume History",
+   "t":"سجل حجم البحث"
+},
+{
+  "o":"January",
+   "t":"يناير"
+},
+{
+  "o":"February",
+   "t":"شهر فبراير"
+},
+{
+  "o":"March",
+   "t":"يمشي"
+},
+{
+  "o":"April",
+   "t":"أبريل"
+},
+{
+  "o":"May",
+   "t":"يمكن"
+},
+{
+  "o":"June",
+   "t":"يونيو"
+},
+{
+  "o":"July",
+   "t":"يوليو"
+},
+{
+  "o":"August",
+   "t":"أغسطس"
+},
+{
+  "o":"September",
+   "t":"سبتمبر"
+},
+{
+  "o":"October",
+   "t":"اكتوبر"
+},
+{
+  "o":"Novermber",
+   "t":"شهر نوفمبر"
+},
+{
+  "o":"December",
+   "t":"ديسمبر"
+},
+{
+  "o":"Sunday",
+   "t":"الأحد"
+},
+{
+  "o":"Monday",
+   "t":"الاثنين"
+},
+{
+  "o":"Tuesday",
+   "t":"يوم الثلاثاء"
+},
+{
+  "o":"Wednesday",
+   "t":"الأربعاء"
+},
+{
+  "o":"Thursday",
+   "t":"يوم الخميس"
+},
+{
+  "o":"Friday",
+   "t":"جمعة"
+},
+{
+  "o":"Saturday",
+   "t":"السبت"
+},
+{
+  "o":"Last Week Chart",
+   "t":"الرسم البياني للأسبوع الماضي"
+},
+{
+  "o":"Listed Keywords",
+   "t":"الكلمات الرئيسية المدرجة"
+},
+{
+  "o":"Total Keywords",
+   "t":"إجمالي الكلمات الرئيسية"
+},
+{
+  "o":"Total",
+   "t":"المجموع"
+},
+{
+  "o":"We found only few landing pages for your website, you should create more pages in your website for higher rankings in Google",
+   "t":"لم نجد سوى عدد قليل من الصفحات المقصودة لموقعك على الويب، ويجب عليك إنشاء المزيد من الصفحات في موقع الويب الخاص بك للحصول على تصنيفات أعلى في Google"
+},
+{
+  "o":"Warning - No Landing Pages",
+   "t":"تحذير - لا توجد صفحات مقصودة"
+},
+{
+  "o":"Add New Keywords to your list, we track them daily so you can see the progress of your website. You can choose which search engine and search type like desktop / mobile",
+   "t":"أضف كلمات رئيسية جديدة إلى قائمتك، ونقوم بتتبعها يوميًا حتى تتمكن من رؤية التقدم المحرز في موقع الويب الخاص بك. يمكنك اختيار محرك البحث ونوع البحث مثل سطح المكتب / الهاتف المحمول"
+},
+{
+  "o":"Keyword was added, you can see it in My Keywords tab",
+   "t":"تمت إضافة الكلمة الرئيسية، ويمكنك رؤيتها في علامة التبويب 'كلماتي الرئيسية'."
+},
+{
+  "o":"You can choose which columns to show, for example you can choose to see if landing page of the given keyword contains the keyword etc.",
+   "t":"يمكنك اختيار الأعمدة التي سيتم عرضها، على سبيل المثال يمكنك اختيار معرفة ما إذا كانت الصفحة المقصودة للكلمة الرئيسية المحددة تحتوي على الكلمة الرئيسية وما إلى ذلك."
+},
+{
+  "o":"Click on the keyword to see more details, you can see the top 100 results, and also you can track your progress and see the previous ranks you had. You can also find Related Keywords and add them to your list",
+   "t":"انقر على الكلمة الرئيسية لرؤية المزيد من التفاصيل، ويمكنك رؤية أفضل 100 نتيجة، ويمكنك أيضًا متابعة تقدمك ومعرفة التصنيفات السابقة التي حصلت عليها. يمكنك أيضًا العثور على الكلمات الرئيسية ذات الصلة وإضافتها إلى قائمتك"
+},
+{
+  "o":"Add new Landing Pages to your list, if you added more pages to your website you can manually add those pages here, or you can also choose to rescan your website again and let us find the landing pages of your website.",
+   "t":"أضف صفحات مقصودة جديدة إلى قائمتك، إذا أضفت المزيد من الصفحات إلى موقع الويب الخاص بك، فيمكنك إضافة هذه الصفحات يدويًا هنا، أو يمكنك أيضًا اختيار إعادة فحص موقع الويب الخاص بك مرة أخرى والسماح لنا بالعثور على الصفحات المقصودة لموقع الويب الخاص بك."
+},
+{
+  "o":"Click on each Landing Page in the grid to see more details about the page, below you can see also tips and hints how to improve your landing pages, those recommendations are calculated in real time so you can also refresh the page test it again",
+   "t":"انقر على كل صفحة مقصودة في الشبكة لرؤية المزيد من التفاصيل حول الصفحة، أدناه يمكنك أيضًا الاطلاع على نصائح وتلميحات حول كيفية تحسين صفحاتك المقصودة، ويتم حساب هذه التوصيات في الوقت الفعلي حتى تتمكن أيضًا من تحديث الصفحة واختبارها مرة أخرى"
+},
+{
+  "o":"Here you can see the overall score of your website, it is calculated by the number of warnings we found on your landing pages. By getting high score your website can get higher ranks in Google and then of course more traffic",
+   "t":"هنا يمكنك رؤية النتيجة الإجمالية لموقعك على الويب، ويتم حسابها من خلال عدد التحذيرات التي وجدناها على صفحاتك المقصودة. من خلال الحصول على درجة عالية، يمكن لموقع الويب الخاص بك الحصول على تصنيفات أعلى في Google ومن ثم المزيد من الزيارات بالطبع"
+},
+{
+  "o":"Warning - Only Few Landing Pages Found",
+   "t":"تحذير - تم العثور على عدد قليل فقط من الصفحات المقصودة"
+},
+{
+  "o":"Keywords Found",
+   "t":"الكلمات الرئيسية التي تم العثور عليها"
+ },
+{  
+    "o": "Links Building", 
+    "t":"بناء الروابط"
+
+        }
+    , 
+ { 
+    "o": "Extra Backlinks", 
+    "t":"روابط خلفية إضافية"
+
+         },  
+  { 
+    
+    "o": "Get",
+    "t":"يحصل"  
+  }, 
+    {
+    
+    "o": "Monthly Backlinks with our new",
+    "t":"الروابط الخلفية الشهرية مع موقعنا الجديد" 
+  }, 
+    {
+    
+    "o": "Best", 
+    "t":"أفضل" 
+  }, 
+    {
+    
+    "o": "Order Premium Backlinks",
+    "t":"اطلب روابط خلفية مميزة" 
+  },
+  {
+    
+   "o": "Load Keywords Ideas",
+    "t":"تحميل أفكار الكلمات الرئيسية" 
+  },
+  {
+    "o": "We couldn't find any landing pages for your website, you can try to manually add new pages or",
+    "t":"لم نتمكن من العثور على أي صفحات مقصودة لموقعك على الويب، يمكنك محاولة إضافة صفحات جديدة يدويًا أو" 
+  },
+  {
+    "o": "Message",
+    "t":"رسالة" 
+  },
+  {
+    "o": "We are now scanning your website again, results should be ready in one minute approximately.",
+    "t":"نقوم الآن بفحص موقع الويب الخاص بك مرة أخرى، ومن المفترض أن تكون النتائج جاهزة خلال دقيقة واحدة تقريبًا."
+
+         },
+  {
+    "o": "Links Created",
+    "t":"تم إنشاء الروابط" 
+  },
+  {
+    "o": "mo",
+    "t":"شهر"
+
+       },
+  {
+    "o": "Premium Member",
+    "t":"قسط الأعضاء"
+
+     },
+  {
+    "o": "No Landing Pages found",
+    "t":"لم يتم العثور على صفحات مقصودة"
+
+     },
+  {
+    "o": "My Links",
+    "t":"الروابط الخاصة بي"
+
+     },
+  {
+    "o": "Optimization Score",
+    "t":"نقاط التحسين"
+
+     },
+  {
+    "o": "Failed Tests",
+    "t":"اختبارات فاشلة"
+
+     },
+  {
+    "o": "Successful Tests",
+    "t":"الاختبارات الناجحة"
+
+     },
+  {
+    "o": "You can enter several URLs (one in each line).",
+    "t":"يمكنك إدخال عدة عناوين URL (واحد في كل سطر)."
+
+     },
+  {
+    "o": "If you added new pages, we can",
+    "t":"إذا أضفت صفحات جديدة، يمكننا ذلك" 
+  },
+  {
+    "o": "your website again",
+    "t":"موقع الويب الخاص بك مرة أخرى"
+
+     },
+  {
+    "o": "My Recent Backlinks",
+    "t":"الروابط الخلفية الأخيرة الخاصة بي"
+
+     },
+  {
+    "o": "Welcome to Rabbit SEO",
+    "t":"مرحبًا بك في موقع Rabbit SEO"
+
+     },
+  {
+    "o": "Terms",
+    "t":"شروط"
+
+     },
+  {
+    "o": "Condition",
+    "t":"حالة"
+
+     },
+  {
+    "o": "My Backlinks",
+    "t":"الروابط الخلفية الخاصة بي" 
+  },
+  {
+    "o": "Guest Blogs",
+    "t":"منشورات المدونة" 
+  },
+  {
+    "o": "Premium Listings",
+    "t":"قوائم مميزة" 
+  },
+  {
+    "o": "Managed Service",
+    "t":"الخدمات المدارة" 
+  },
+  {
+    "o": "Update Details",
+    "t":"تحديث التفاصيل" 
+  },
+  {
+    "o": "Monitor Link",
+    "t":"رابط المراقبة" 
+  },
+  {
+    "o": "Publish Premium Listings",
+    "t":"طلب قوائم مميزة" 
+  },
+  {
+    "o": "Publish Exclusive Guest Blog",
+    "t":"اطلب مشاركة مدونة حصرية" 
+  },
+  {
+    "o": "No data available in table",
+    "t":"لا توجد بيانات متاحة في الجدول" 
+  },
+  {
+    "o": "Edit / Share",
+    "t":"تحرير / مشاركة" 
+  },
+  {
+    "o": "Created On",
+    "t":"تم إنشاؤها على" 
+  },
+  {
+    "o": "Live",
+    "t":"يعيش" 
+  },
+  {
+    "o": "Href",
+    "t":"هريف" 
+  },
+  {
+    "o": "My Website Details",
+    "t":"تفاصيل موقع الويب الخاص بي" 
+  },
+  {
+    "o": "Keywords to Promote",
+    "t":"الكلمات الرئيسية للترويج" 
+  },
+  {
+    "o": "Category",
+    "t":"فئة" 
+  },
+  {
+    "o": "Description",
+    "t":"وصف" 
+  },
+  {
+    "o": "Address (optional)",
+    "t":"العنوان (اختياري)" 
+  },
+  {
+    "o": "Phone (optional)",
+    "t":"الهاتف اختياري)" 
+  },
+  {
+    "o": "Upload logo",
+    "t":"تحميل الشعار" 
+  },
+  {
+    "o": "Submit",
+    "t":"يُقدِّم" 
+  },
+  {
+    "o": "Page Url",
+    "t":"رابط الصفحة"
+
+     },
+  {
+    "o": "Contact Name",
+    "t":"اسم جهة الاتصال"
+
+     },
+  {
+    "o": "Order Premium Links",
+    "t":"اطلب روابط مميزة"
+
+     },
+  {
+    "o": "Keyword to Promote",
+    "t":"الكلمة الرئيسية للترويج"
+
+     },
+  {
+    "o": "Enter a keyword",
+    "t":"أدخل كلمة رئيسية"
+
+     },
+  {
+    "o": "Language",
+    "t":"لغة"
+
+     },
+  {
+    "o": "Guest Blog Title (based on your domain and 'Keyword to Promote')",
+    "t":"عنوان مشاركة المدونة (استنادًا إلى نطاقك و'الكلمة الرئيسية المراد الترويج لها' )"
+
+     },
+  {
+    "o": "Landing Page to Promote",
+    "t":"الصفحة المقصودة للترويج"
+
+     },
+  {
+    "o": "Number of guest blogs to create",
+    "t":"عدد مشاركات المدونة المطلوب إنشاؤها"
+
+     },
+  {
+    "o": "You have",
+    "t":"لديك"
+
+     },
+  {
+    "o": "links left this month",
+    "t":"الروابط تركت هذا الشهر"
+
+     },
+  {
+    "o": "Please Note",
+    "t":"يرجى الملاحظة"
+
+     },
+  {
+    "o": "Please Note: One Guest Blog is equivalent to 4 Links.",
+    "t":"يرجى ملاحظة: مشاركة مدونة واحدة تعادل 4 روابط."
+
+     },
+  {
+    "o": "Show Advanced Settings",
+    "t":"أظهر الاعدادات المتقدمة"
+
+     },
+  {
+    "o": "Choose Blog / News Site (Optional)",
+    "t":"اختر مدونة / موقع أخبار (اختياري)"
+
+     },
+  {
+    "o": "How many words in the post (approximately)?",
+    "t":"كم عدد الكلمات في المشاركة (تقريبًا)؟"
+
+     },
+  {
+    "o": "Add Publisher Details Section in the Guest Blog",
+    "t":"أضف قسم تفاصيل الناشر في منشور المدونة"
+
+     },
+  {
+    "o": "On",
+    "t":"على"
+
+     },
+  {
+    "o": "Publish Date",
+    "t":"تاريخ النشر"
+
+     },
+  {
+    "o": "Submit Guest Blog Order",
+    "t":"إرسال طلب نشر المدونة"
+
+     },
+  {
+    "o": "Competition Level",
+    "t":"مستوى المنافسة"
+
+     },
+  {
+    "o": "Search Volume",
+    "t":"حجم البحث"
+
+     },
+  {
+    "o": "Number of links to create",
+    "t":"عدد الروابط المراد إنشاؤها"
+
+     },
+  {
+    "o": "Submit Premium Links Order",
+    "t":"إرسال طلب الروابط المميزة"
+
+     },
+  {
+    "o": "Add New Keywords",
+    "t":"إضافة كلمات رئيسية جديدة"
+
+     },
+  {
+    "o": "Last Week",
+    "t":"الأسبوع الماضي"
+
+     },
+  {
+    "o": "Words Count",
+    "t":"عدد الكلمات"
+
+     },
+  {
+    "o": "Page Title",
+    "t":"عنوان الصفحة"
+
+     },
+  {
+    "o": "Keyword Density",
+    "t":"كثافة الكلمات الرئيسية"
+
+     },
+  {
+    "o": "Title Contains Keyword",
+    "t":"العنوان يحتوي على كلمة رئيسية"
+
+     },
+  {
+    "o": "Title Length",
+    "t":"طول العنوان"
+
+     },
+  {
+    "o": "November",
+    "t":"شهر نوفمبر"
+
+     },
+  {
+    "o": "Last Rank",
+    "t":"المرتبة الأخيرة"
+
+     },
+  {
+    "o": "H1 Contains Keyword",
+    "t":"يحتوي H1 على كلمة أساسية"
+
+     },
+  {
+    "o": "H2 Count",
+    "t":"عدد H2"
+
+     },
+  {
+    "o": "Compact View",
+    "t":"عرض مدمج"
+
+     },
+  {
+    "o": "Comfort View",
+    "t":"عرض الراحة"
+
+     },
+  {
+    "o": "Enter keywords you want to promote",
+    "t":"أدخل الكلمات الرئيسية التي تريد الترويج لها"
+  },
+  {
+    "o": "Filter by Keywords",
+    "t":"تصفية حسب الكلمات الرئيسية"
+  },
+  {
+    "o": "Table View",
+    "t":"عرض جدول"
+  },
+  {
+    "o": "Filter Competitors by Keywords",
+    "t":"تصفية المنافسين حسب الكلمات الرئيسية"
+  },
+  {
+    "o": "Find Competitors",
+    "t":"البحث عن المنافسين" 
+ },
+  {
+    "o": "Clear All",
+    "t":"امسح الكل" 
+ },
+  {
+    "o": "My Competitors",
+    "t":"المنافسون لي"
+
+  }, 
+  {
+    "o": "Competitor Backlinks",
+    "t":"الروابط الخلفية للمنافسين"
+
+         }, 
+  {
+    "o": "Referring Domain Rank",
+    "t":"الإشارة إلى رتبة المجال"
+
+     },
+  {
+    "o": "Referring Page Rank",
+    "t":"اشارة رتبة الصفحة"
+
+     },
+  {
+    "o": "Domain Rank",
+    "t":"رتبة المجال"
+
+     },
+  {
+    "o": "Listed Backlinks",
+    "t":"الروابط الخلفية المدرجة"
+
+     },
+  {
+    "o": "Search...",
+    "t":"يبحث..."
+
+     },
+  {
+    "o": "Domain From",
+    "t":"المجال من"
+
+     },
+  {
+    "o": "Upgrade to see your backlinks here",
+    "t":"قم بالترقية لرؤية الروابط الخلفية الخاصة بك هنا"
+
+     },
+  {
+    "o": "Currently you see a demo of amazon, upgrade now to",
+    "t":"حاليًا ترى عرضًا تجريبيًا لأمازون، قم بالترقية الآن إلى"
+
+     },
+  {
+    "o": "see results of your website",
+    "t":"رؤية نتائج موقع الويب الخاص بك"
+
+     },
+  {
+    "o": "Broken Links",
+    "t":"كسر الروابط"
+
+     },
+  {
+    "o": "Connet your Google Analytics Account",
+    "t":"قم بتوصيل حسابك في Google Analytics"
+
+     },
+  {
+    "o": "See what you get in each product and its plans.",
+    "t":"تعرف على ما تحصل عليه في كل منتج وخططه."
+
+     },
+  {
+    "o": "Choose Plan",
+    "t":"اختر الخطة"
+
+     },
+  {
+    "o": "1200 Keywords",
+    "t":"1200 كلمة رئيسية"
+
+     },
+  {
+    "o": "We will be sad to see you leaving but if you wish to cancel your account with us, click delete",
+    "t":"سنكون حزينين لرؤيتك تغادر ولكن إذا كنت ترغب في إلغاء حسابك معنا، فانقر فوق حذف"
+
+     },
+  {
+    "o": "How to cancel my account?",
+    "t":"كيف ألغي حسابي؟"
+
+     },
+  {
+    "o": "Delete Account",
+    "t":"حذف الحساب"
+
+     },
+  {
+    "o": "Notification",
+    "t":"إشعار"
+
+     },
+  {
+    "o": "Email for receiving notifications",
+    "t":"البريد الإلكتروني لتلقي الإخطارات"
+
+     },
+  {
+    "o": "Email New Listings / Guest Blogs Links that were created",
+    "t":"أرسل قوائم جديدة / روابط منشورات المدونة التي تم إنشاؤها بالبريد الإلكتروني"
+
+     },
+  {
+    "o": "Rankings",
+    "t":"التصنيفات"
+
+     },
+  {
+    "o": "Email All Links Together Once a Week",
+    "t":"إرسال كافة الروابط معًا بالبريد الإلكتروني مرة واحدة في الأسبوع"
+
+     },
+  {
+    "o": "of at least",
+    "t":"على الأقل"
+
+     },
+  {
+    "o": "UP",
+    "t":"أعلى"
+
+     },
+  {
+    "o": "DOWN",
+    "t":"تحت"
+
+     },
+  {
+    "o": "positions",
+    "t":"المواقف"
+
+     },
+  {
+    "o": "Free Member",
+    "t":"عضو مجاني"
+
+     },
+  {
+    "o": "Please fill in the form below and we will try to get back to you as soon as possible.",
+    "t":"يرجى ملء النموذج أدناه وسنحاول الرد عليك في أقرب وقت ممكن."
+
+     },
+  {
+    "o": "What is SEO?",
+    "t":"ما هو تحسين محركات البحث؟"
+
+     },
+  {
+    "o": "Why we do it?",
+    "t":"لماذا نفعل ذلك؟"
+
+     },
+  {
+    "o": "Search Engines",
+    "t":"محركات البحث"
+
+     },
+  {
+    "o": "Links",
+    "t":"روابط"
+
+     },
+  {
+    "o": "Common Mistakes",
+    "t":"الأخطاء الشائعة"
+
+     },
+  {
+    "o": "SEO Stands for Search Engine Optimization. It is all about optimizing a website for search engines and some would say it is the art of ranking in the search engines. It is basically the process of designing and developing a web site to rank well in search engine results. You can think of it as the technical part of online marketing since helps to promote your website but… it also needs some technical knowledge and skills. Anyway, don’t you worry because it’s not rocket science :)",
+    "t":"SEO لتقف على تحسين محرك البحث. الأمر كله يتعلق بتحسين موقع الويب لمحركات البحث وقد يقول البعض إنه فن التصنيف في محركات البحث. إنها في الأساس عملية تصميم وتطوير موقع ويب ليحتل مرتبة جيدة في نتائج محرك البحث. يمكنك اعتباره الجزء الفني من التسويق عبر الإنترنت لأنه يساعد في الترويج لموقع الويب الخاص بك ولكنه... يحتاج أيضًا إلى بعض المعرفة والمهارات التقنية. على أية حال، لا تقلق لأنه ليس علم الصواريخ :)"
+
+     },
+  {
+    "o": "So we are referring to the collection of techniques that allow our website to get more traffic from search engines (Google, Yahoo, Microsoft etc).",
+    "t":"لذلك نحن نشير إلى مجموعة التقنيات التي تسمح لموقعنا بالحصول على المزيد من الزيارات من محركات البحث (جوجل، وياهو، ومايكروسوفت وغيرها)."
+
+     },
+  {
+    "o": "SEO can be divided into two main areas: off-page SEO – this is the work we do externally from our website and on-page SEO – these are the changes we make on our website.",
+    "t":"يمكن تقسيم تحسين محركات البحث إلى مجالين رئيسيين: تحسين محركات البحث خارج الصفحة – هذا هو العمل الذي نقوم به خارجيًا من موقعنا على الويب وتحسين محركات البحث على الصفحة – هذه هي التغييرات التي نجريها على موقعنا."
+
+     },
+  {
+    "o": "And just to make sure we are all on the same page … when we say SEO we don’t mean purchasing the number #1 sponsored link through Google Adwords. Purchasing sponsored links is more in the area of PPC (Pay Per Click). SEO is also not ranking #1 for our company's name - search engines are usually smart enough to give you the first rank for your company name by default (it might take some time to scan your website though).",
+    "t":"وفقط للتأكد من أننا جميعًا في نفس الصفحة … عندما نقول تحسين محركات البحث، فإننا لا نعني شراء الرابط الإعلاني رقم 1 من خلال Google Adwords. يعد شراء الروابط الدعائية أكثر في مجال PPC (الدفع لكل نقرة). كما أن تحسين محركات البحث (SEO) لا يحتل المرتبة الأولى بالنسبة لاسم شركتنا - عادةً ما تكون محركات البحث ذكية بما يكفي لتمنحك المرتبة الأولى لاسم شركتك افتراضيًا (على الرغم من ذلك، قد يستغرق الأمر بعض الوقت لفحص موقع الويب الخاص بك)."
+
+     },
+  {
+    "o": "We are using SEO to improve the volume and quality of traffic to our website from search engines. SEO is a very important technique for any website willing to get more traffic.",
+    "t":"نحن نستخدم تحسين محركات البحث (SEO) لتحسين حجم وجودة حركة المرور إلى موقعنا من محركات البحث. يعد تحسين محركات البحث (SEO) تقنية مهمة جدًا لأي موقع ويب يرغب في الحصول على المزيد من الزيارات."
+
+     },
+  {
+    "o": "With everyone using the internet to obtain information, SEO became a very important part in the last years to attract visitors to our website through search engines. Ideally, with SEO we want our website to appear higher in search engines results for certain keywords (that are related to the topic of your website) which will result in a higher volume and quality of visitors.",
+    "t":"مع استخدام الجميع للإنترنت للحصول على المعلومات، أصبح تحسين محركات البحث (SEO) جزءًا مهمًا جدًا في السنوات الأخيرة لجذب الزوار إلى موقعنا عبر محركات البحث. من الناحية المثالية، من خلال تحسين محركات البحث (SEO)، نريد أن يظهر موقعنا على الويب في أعلى نتائج محركات البحث لكلمات رئيسية معينة (ذات صلة بموضوع موقع الويب الخاص بك) مما سيؤدي إلى زيادة حجم وجودة الزوار."
+
+     },
+  {
+    "o": "If we want to do SEO right, there are many factors to think about. It is import to understand how search engines work and how they look at our website. Then we need to change our website for the keywords we want to rank well by changing the content and titles. Afterwards we need start applying backlinks strategies and keep track of our progress by using monitoring changes. This manual is a great start for learning SEO and following the recommendations can help you get higher rankings and more quality traffic to your website!",
+    "t":"إذا أردنا القيام بتحسين محركات البحث بشكل صحيح، فهناك العديد من العوامل التي يجب التفكير فيها. من المهم أن نفهم كيفية عمل محركات البحث وكيف تنظر إلى موقعنا. ثم نحتاج إلى تغيير موقعنا الإلكتروني للكلمات الرئيسية التي نريد تصنيفها جيدًا عن طريق تغيير المحتوى والعناوين. بعد ذلك نحتاج إلى البدء في تطبيق إستراتيجيات الروابط الخلفية ومتابعة تقدمنا باستخدام مراقبة التغييرات. يعد هذا الدليل بداية رائعة لتعلم تحسين محركات البحث (SEO) ويمكن أن يساعدك اتباع التوصيات في الحصول على تصنيفات أعلى وزيادة جودة حركة المرور إلى موقع الويب الخاص بك!"
+
+     },
+  {
+    "o": "It is important to remember that search engines are not humans but text-driven computers. Search engines do not care about how our website looks but more on the content it has. The main processes of search engines are crawling, indexing, and retrieving process.",
+    "t":"من المهم أن تتذكر أن محركات البحث ليست بشرية، بل هي أجهزة كمبيوتر تعتمد على النصوص. لا تهتم محركات البحث بالشكل الذي يبدو عليه موقعنا، بل تهتم أكثر بالمحتوى الذي يحتوي عليه. العمليات الرئيسية لمحركات البحث هي عملية الزحف والفهرسة والاسترجاع."
+
+     },
+  {
+    "o": "Crawling",
+    "t":"زحف"
+
+     },
+  {
+    "o": "the websites are crawled by the search engine crawlers (Google bot in the case of Google). This means the crawler will look at the text on a website and looks for links to different pages from that website.",
+    "t":"يتم الزحف إلى مواقع الويب بواسطة برامج زحف محركات البحث (Google bot في حالة Google). وهذا يعني أن الزاحف سوف ينظر إلى النص الموجود على موقع الويب ويبحث عن روابط لصفحات مختلفة من موقع الويب هذا."
+
+     },
+  {
+    "o": "Indexing",
+    "t":"الفهرسة"
+
+     },
+  {
+    "o": "creating index for all the fetched web pages and keeping them in a database from where it can later be fetched. Essentially, the process of indexing is identifying the words and expressions that best describe the page and assigning the page to particular keywords. This is also why it is important we decide which keywords we want to promote and optimize our website for.",
+    "t":"إنشاء فهرس لجميع صفحات الويب التي تم جلبها والاحتفاظ بها في قاعدة بيانات يمكن جلبها منها لاحقًا. في الأساس، تتمثل عملية الفهرسة في تحديد الكلمات والتعبيرات التي تصف الصفحة بشكل أفضل وتخصيص الصفحة لكلمات رئيسية معينة. ولهذا السبب أيضًا، من المهم أن نقرر الكلمات الرئيسية التي نريد الترويج لموقعنا الإلكتروني وتحسينه لها."
+
+     },
+  {
+    "o": "Retrieving Process",
+    "t":"عملية الاسترجاع"
+
+     },
+  {
+    "o": "when a search engine user looks for keywords their search strings will be matched to the index database and the search engine will return a list of best-matching pages (websites). We can have million or even billion of pages will be matched to the search string and that is why the search engine calculates which pages are the most relevant for our search.",
+    "t":"عندما يبحث مستخدم محرك البحث عن كلمات رئيسية، ستتم مطابقة سلاسل البحث الخاصة به مع قاعدة بيانات الفهرس وسيقوم محرك البحث بإرجاع قائمة بالصفحات الأكثر تطابقًا (مواقع الويب). يمكن أن يكون لدينا مليون أو حتى مليار صفحة ستتم مطابقتها لسلسلة البحث، ولهذا السبب يقوم محرك البحث بحساب الصفحات الأكثر صلة ببحثنا."
+
+     },
+  {
+    "o": "Before we can start optimizing our website for the search engines, we first need to know which keywords (terms) we want to target. We might want to choose 3 or 4 keywords we would like our website to rank well for. We usually refer to Google as the search engine because if you can rank well there, you'll probably rank well on the other search engines too. These keywords can be either broad or specific, but you'll want to study them before, mostly the local search volume and the competition. This research can be done with Google Keywords Tool. You can enter a term that relates to your website, e.g. flowers delivery and then see other related keywords. Obviously, we want to take those with lower competitions but with a nice amount of local searches as those can be the “quick wins”. You can monitor your keywords in the Rankings tab!",
+    "t":"قبل أن نتمكن من البدء في تحسين موقعنا لمحركات البحث، نحتاج أولاً إلى معرفة الكلمات الرئيسية (المصطلحات) التي نريد استهدافها. قد نرغب في اختيار 3 أو 4 كلمات رئيسية نود أن يحصل موقعنا على تصنيف جيد لها. نشير عادةً إلى Google باعتباره محرك البحث لأنه إذا تمكنت من الحصول على تصنيف جيد هناك، فمن المحتمل أن تحصل على تصنيف جيد في محركات البحث الأخرى أيضًا. يمكن أن تكون هذه الكلمات الرئيسية واسعة النطاق أو محددة، ولكنك ستحتاج إلى دراستها من قبل، خاصة حجم البحث المحلي والمنافسة. يمكن إجراء هذا البحث باستخدام أداة الكلمات الرئيسية من Google. يمكنك إدخال مصطلح يتعلق بموقعك على الويب، على سبيل المثال. تسليم الزهور ومن ثم الاطلاع على الكلمات الرئيسية الأخرى ذات الصلة. من الواضح أننا نريد أن نأخذ تلك التي لديها منافسات أقل ولكن مع قدر كبير من عمليات البحث المحلية حيث يمكن أن تكون تلك 'المكاسب السريعة' . يمكنك مراقبة كلماتك الرئيسية في علامة التبويب 'التصنيفات'!"
+
+     },
+  {
+    "o": "Choosing the right keywords is very important also for the next steps as “Content is the King”. Content is probably the biggest driving force to high ranking. It is extremely important to have a descent amount of quality content containing our keywords and relevant text for our keywords. Trust the search engines that they will know if you just “plant” your keywords in a text which is not related to it. It’s obvious that users love fresh content, but search engines do as well. Generally, when a website is frequently updated, this increases the probability that the search engines will revisit the site sooner.",
+    "t":"يعد اختيار الكلمات الرئيسية المناسبة أمرًا مهمًا أيضًا للخطوات التالية مثل 'المحتوى هو الملك'. من المحتمل أن يكون المحتوى هو القوة الدافعة الأكبر للوصول إلى مرتبة عالية. من المهم للغاية أن يكون لديك قدر مناسب من المحتوى عالي الجودة الذي يحتوي على كلماتنا الرئيسية والنص ذي الصلة بكلماتنا الرئيسية. ثق في محركات البحث بأنها ستعرف ما إذا كنت قد 'زرعت'' كلماتك الرئيسية في نص لا علاقة له به. من الواضح أن المستخدمين يحبون المحتوى الجديد، ولكن محركات البحث تفعل ذلك أيضًا. بشكل عام، عندما يتم تحديث موقع ويب بشكل متكرر، فإن هذا يزيد من احتمال قيام محركات البحث بإعادة زيارة الموقع في وقت أقرب."
+
+     },
+  {
+    "o": "Linking is a very important part of our SEO. This is part of the off-page SEO. Websites need to be linked to if they want to be found on the internet and gain traffic. When a website is newly created it can take some time to be indexed in the search engines. Having links to from other websites makes this process much faster but of course it has to be balanced and not too many links and too fast. Search engines think the more websites linking to your webpage, the more important your webpage will be. It is also very important to get quality backlinks as it improves the importance of your website. There are 3 types of links:",
+    "t":"يعد الارتباط جزءًا مهمًا جدًا من تحسين محركات البحث لدينا. هذا جزء من تحسين محركات البحث خارج الصفحة. يجب أن تكون مواقع الويب مرتبطة إذا كانت ترغب في العثور عليها على الإنترنت والحصول على حركة المرور. عندما يتم إنشاء موقع ويب حديثًا، قد يستغرق الأمر بعض الوقت حتى يتم فهرسته في محركات البحث. إن وجود روابط من مواقع ويب أخرى يجعل هذه العملية أسرع بكثير ولكن بالطبع يجب أن تكون متوازنة ولا تحتوي على الكثير من الروابط وبسرعة كبيرة. تعتقد محركات البحث أنه كلما زاد عدد مواقع الويب المرتبطة بصفحة الويب الخاصة بك، زادت أهمية صفحتك على الويب. من المهم أيضًا الحصول على روابط خلفية عالية الجودة لأنها تزيد من أهمية موقع الويب الخاص بك. هناك 3 أنواع من الروابط:"
+
+     },
+  {
+    "o": "Inbound links",
+    "t":"روابط متداخلة"
+
+     },
+  {
+    "o": "When an external website links to our page.",
+    "t":"عندما يرتبط موقع خارجي بصفحتنا."
+
+     },
+  {
+    "o": "Outbound links",
+    "t":"الروابط الصادرة"
+
+     },
+  {
+    "o": "When linking from our website to another page.",
+    "t":"عند الارتباط من موقعنا إلى صفحة أخرى."
+
+     },
+  {
+    "o": "Internal links",
+    "t":"الروابط الداخلية"
+
+     },
+  {
+    "o": "When linking within our website to all the pages.",
+    "t":"عند الارتباط داخل موقعنا بجميع الصفحات."
+
+     },
+  {
+    "o": "Web site Crawler will go to a site again and again whose ranking in Search Engine is high. You can verify this fact by putting your site on a high rank site. If your site link is available on a high rank web site then you have 99.99% chances that you site will be indexed with-in 24Hrs.",
+    "t":"سينتقل متتبع موقع الويب مرارًا وتكرارًا إلى موقع يكون ترتيبه في محرك البحث مرتفعًا. يمكنك التحقق من هذه الحقيقة عن طريق وضع موقعك على موقع عالي التصنيف. إذا كان رابط موقعك متاحًا على موقع ويب عالي التصنيف، فلديك فرص بنسبة 99.99% في فهرسة موقعك خلال 24 ساعة."
+
+     },
+  {
+    "o": "What can we do to improve?",
+    "t":"ماذا يمكننا أن نفعل لتحسين؟"
+
+     },
+  {
+    "o": "Submit your site in popular search engines manually. Don't go for automated submission.",
+    "t":"قم بإرسال موقعك في محركات البحث المشهورة يدويًا. لا تذهب للتقديم الآلي."
+
+     },
+  {
+    "o": "Provide high quality content - people will naturally link to your site if you have what they want and couldn’t find it elsewhere.",
+    "t":"توفير محتوى عالي الجودة - سيرتبط الأشخاص بشكل طبيعي بموقعك إذا كان لديك ما يريدون ولم يتمكنوا من العثور عليه في أي مكان آخر."
+
+     },
+  {
+    "o": "If you have personal relations with other webmasters, try to leverage it. Put your site link on their sites. One way links often count for more than reciprocal links.",
+    "t":"إذا كانت لديك علاقات شخصية مع مشرفي المواقع الآخرين، فحاول الاستفادة منها. ضع رابط موقعك على مواقعهم. غالبًا ما يتم احتساب الروابط ذات الاتجاه الواحد لأكثر من الروابط المتبادلة."
+
+     },
+  {
+    "o": "Try to find Link Exchange Program. Find websites that are doing the same business and contact them for links exchange.",
+    "t":"حاول العثور على برنامج Link Exchange. ابحث عن مواقع الويب التي تقوم بها وتواصل معهم لتبادل الروابط."
+
+     },
+  {
+    "o": "A landing page, sometimes called a destination page, is the web page that visitors arrive at after they click the link on a search engine results page. A landing page can be the first page of a website that was advertised on the search engine results page, or from one of the natural results from the search query. This page generally displays logical information, usually something that pertains directly to the keywords searched, or has the keywords directly on the page.",
+    "t":"الصفحة المقصودة، والتي تسمى أحيانًا الصفحة الوجهة، هي صفحة الويب التي يصل إليها الزائرون بعد النقر فوق الرابط الموجود في صفحة نتائج محرك البحث. يمكن أن تكون الصفحة المقصودة هي الصفحة الأولى لموقع ويب تم الإعلان عنه في صفحة نتائج محرك البحث، أو من إحدى النتائج الطبيعية من استعلام البحث. تعرض هذه الصفحة بشكل عام معلومات منطقية، وعادة ما تكون تلك المعلومات ذات صلة مباشرة بالكلمات الأساسية التي تم البحث عنها، أو تحتوي على الكلمات الأساسية مباشرة على الصفحة."
+
+     },
+  {
+    "o": "It is very important to optimize your landing pages for 2 reasons: first, optimized landing page are likely to get higher ranking by the search engines. Second, attractive landing pages are likely to lead to conversion by your potential customers. These conversion may differ from one website to another – you probably know what means a “success” in your website. It can be someone that left his details in the contact us form, someone who bought a product, someone who left a comment to your article etc.",
+    "t":"من المهم جدًا تحسين صفحاتك المقصودة لسببين: أولاً، من المرجح أن تحصل الصفحة المقصودة المحسنة على تصنيف أعلى من قبل محركات البحث. ثانيًا، من المرجح أن تؤدي الصفحات المقصودة الجذابة إلى تحويل العملاء المحتملين. قد تختلف هذه التحويلات من موقع إلى آخر – ربما تعرف ما يعنيه “النجاح” في موقع الويب الخاص بك. يمكن أن يكون شخصًا ترك تفاصيله في نموذج الاتصال بنا، أو شخصًا اشترى منتجًا، أو شخصًا ترك تعليقًا على مقالتك وما إلى ذلك."
+
+     },
+  {
+    "o": "By creating specific pages for different marketing channels, you’ll be able to customize your marketing message, which will provide revenue lifts. There are plenty of tutorials out there how to optimize and design landing pages so go ahead and try them.",
+    "t":"من خلال إنشاء صفحات محددة لقنوات تسويقية مختلفة، ستتمكن من تخصيص رسالتك التسويقية، مما سيوفر زيادة في الإيرادات. هناك الكثير من البرامج التعليمية المتاحة حول كيفية تحسين الصفحات المقصودة وتصميمها، لذا تابع تجربتها."
+
+     },
+  {
+    "o": "As in every other type of business, it is always good (to some extent) to learn who are our competitors, what do they do and offer, how their web pages look like … and in the case of online marketing also make some co-operations with them. We can learn a lot and also get more traffic by working with them:",
+    "t":"كما هو الحال في أي نوع آخر من الأعمال، من الجيد دائمًا (إلى حد ما) معرفة من هم منافسونا، وماذا يفعلون ويقدمون، وكيف تبدو صفحات الويب الخاصة بهم... وفي حالة التسويق عبر الإنترنت، قم أيضًا ببعض التعاون العمليات معهم. يمكننا أن نتعلم الكثير ونحصل أيضًا على المزيد من الزيارات من خلال العمل معهم:"
+
+     },
+  {
+    "o": "As we stated before, back links are very important to generate traffic. If we address our competitors and suggest some sort of links exchange, we can get a high quality back link to our website. It is high quality because our competitor is in the same field as we do so the search engine see that as a relevant link.",
+    "t":"كما ذكرنا من قبل، الروابط الخلفية مهمة جدًا لتوليد حركة المرور. إذا خاطبنا منافسينا واقترحنا نوعًا من تبادل الروابط، فيمكننا الحصول على رابط خلفي عالي الجودة لموقعنا على الويب. إنها ذات جودة عالية لأن منافسنا موجود في نفس المجال الذي نعمل فيه، لذا يرى محرك البحث ذلك كرابط ذي صلة."
+
+     },
+  {
+    "o": "It is also important to see where are our competitors ranked for the same keywords we are promoting and also to see maybe other keywords they are promoting and we haven’t thought about.",
+    "t":"من المهم أيضًا معرفة مكان تصنيف منافسينا لنفس الكلمات الرئيسية التي نروج لها وأيضًا معرفة الكلمات الرئيسية الأخرى التي يروجون لها والتي لم نفكر فيها."
+
+     },
+  {
+    "o": "Once your website is already up and running, it is very important to monitor the traffic and see how to optimize it. Google analytics provides you with lots of rich data about the activity in your website and also some details about the customers. You can see which keywords brought him to your website and try to optimize those keywords.",
+    "t":"بمجرد أن يتم تشغيل موقع الويب الخاص بك بالفعل، من المهم جدًا مراقبة حركة المرور ومعرفة كيفية تحسينها. توفر لك Google Analytics الكثير من البيانات الغنية حول النشاط في موقع الويب الخاص بك وكذلك بعض التفاصيل حول العملاء. يمكنك معرفة الكلمات الرئيسية التي جلبته إلى موقع الويب الخاص بك ومحاولة تحسين تلك الكلمات الرئيسية."
+
+     },
+  {
+    "o": "Common Misktakes",
+    "t":"الأخطاء الشائعة"
+
+     },
+  {
+    "o": "Targeting the wrong keywords",
+    "t":"استهداف الكلمات الرئيسية الخاطئة"
+
+     },
+  {
+    "o": "This is probably most common mistake. We might find the right keywords that describe our web page, but the users use other keywords (for instance, we decided to promote the keyword ‘flowers shop’ but users would search for ‘flowers delivery’. We must think like the user does, and see what keywords are used more than others.",
+    "t":"ربما يكون هذا هو الخطأ الأكثر شيوعًا. قد نجد الكلمات الرئيسية الصحيحة التي تصف صفحة الويب الخاصة بنا، لكن المستخدمين يستخدمون كلمات رئيسية أخرى (على سبيل المثال، قررنا الترويج للكلمة الرئيسية 'متجر زهور'  ولكن المستخدمين سيبحثون عن 'توصيل الزهور'. يجب أن نفكر كما يفعل المستخدم، ومعرفة الكلمات الرئيسية المستخدمة أكثر من غيرها."
+
+     },
+  {
+    "o": "Lack of keywords in the content",
+    "t":"عدم وجود كلمات رئيسية في المحتوى"
+
+     },
+  {
+    "o": "Once we found the keywords we want to promote, we have to make sure we embed them in the content of our website, especially in the title of the pages. We could write articles and have these keywords in them for instance.",
+    "t":"بمجرد العثور على الكلمات الرئيسية التي نريد الترويج لها، يتعين علينا التأكد من تضمينها في محتوى موقعنا، وخاصة في عناوين الصفحات. يمكننا كتابة المقالات ووضع هذه الكلمات الرئيسية فيها على سبيل المثال."
+
+     },
+  {
+    "o": "Irrelevant backlinks",
+    "t":"الروابط الخلفية غير ذات الصلة"
+
+     },
+  {
+    "o": "it is very important to have other websites linking to our website but we have to make sure we get high quality links. For example, if we have a flowers delivery shop and we get a link from cars website it is not as ideal as to get a link from a gifts website (as flowers are somehow related to gifts).",
+    "t":"من المهم جدًا أن يكون لدينا مواقع أخرى مرتبطة بموقعنا ولكن علينا التأكد من حصولنا على روابط عالية الجودة. على سبيل المثال، إذا كان لدينا متجر لتوصيل الزهور وحصلنا على رابط من موقع ويب خاص بالسيارات، فليس من المثالي الحصول على رابط من موقع ويب للهدايا (لأن الزهور مرتبطة بطريقة أو بأخرى بالهدايا)."
+
+     },
+  {
+    "o": "Spamming our keywords",
+    "t":"إرسال رسائل غير مرغوب فيها إلى كلماتنا الرئيسية"
+
+     },
+  {
+    "o": "of course we need to embed the keywords we want to promote in our website, but we have to do it in a fashionly way and not to spam our website with that keyword too much.",
+    "t":"بالطبع نحتاج إلى تضمين الكلمات الرئيسية التي نريد الترويج لها في موقعنا على الويب، ولكن يتعين علينا القيام بذلك بطريقة عصرية وعدم إرسال بريد عشوائي إلى موقعنا بهذه الكلمة الرئيسية كثيرًا."
+
+       },
+  {
+    "o": "Share your Guest Blog",
+    "t":"شارك مشاركة مدونتك"
+
+     } ,
+  {
+    "o": "Boost TRAFFIC",
+    "t":"تعزيز حركة المرور"
+
+       },
+  {
+    "o": "Get new Backlinks & Optimize your Landing Pages",
+    "t":"احصل على روابط خلفية جديدة وقم بتحسين صفحاتك المقصودة"
+
+       },
+  {
+    "o": "Monthly Backlinks with our new 'Best' Package",
+    "t":"روابط خلفية شهرية مع الحزمة 'الأفضل' الجديدة لدينا"
+
+       },
+  {
+    "o": "The keywords you want to promote - you can add more keyword in 'My Keywords' tab, and you can use the table below to find the best keywords for your website.",
+    "t":"الكلمات الرئيسية التي تريد الترويج لها - يمكنك إضافة المزيد من الكلمات الرئيسية في علامة التبويب 'كلماتي الرئيسية'، ويمكنك استخدام الجدول أدناه للعثور على أفضل الكلمات الرئيسية لموقعك على الويب."
+
+       },
+  {
+    "o": "Average Referring Domain Rank",
+    "t":"متوسط تصنيف مجال الإحالة"
+
+       },
+  {
+    "o": "Average Referring Page Rank",
+    "t":"متوسط تصنيف صفحة الإحالة"
+
+       } ,
+  {
+    "o": "Listed Broken Backlinks",
+    "t":"الروابط الخلفية المكسورة المدرجة"
+
+       },
+  {
+    "o": "Total Anchors",
+    "t":"إجمالي المراسي"
+
+       },
+  {
+    "o": "Listed Anchors",
+    "t":"المراسي المدرجة"
+
+       },
+  {
+    "o": "Backlinks from Top 5 Anchors",
+    "t":"روابط خلفية من أفضل 5 مراسي"
+
+       },
+  {
+    "o": "Average Referring Domain Rank from Top 5",
+    "t":"متوسط تصنيف نطاق الإحالة من أعلى 5"
+
+       },
+  {
+    "o": "Listed Linked Pages",
+    "t":"الصفحات المرتبطة المدرجة"
+
+       },
+  {
+    "o": "Total Linked Pages",
+    "t":"إجمالي الصفحات المرتبطة"
+
+       },
+  {
+    "o": "Backlinks to Top 5 Pages",
+    "t":"روابط خلفية لأعلى 5 صفحات"
+
+       },
+  {
+    "o": "Referring Domains Rank to Top 5 Pages",
+    "t":"إحالة تصنيف المجالات إلى أعلى 5 صفحات"
+
+       },
+  {
+    "o": "Referring MainDomains",
+    "t":"في اشارة الى المجالات الرئيسية"
+
+       },
+  {
+    "o": "Referring Subnets",
+    "t":"في اشارة الشبكات الفرعية"
+
+       },
+  {
+    "o": "Referring Domain",
+    "t":"الإشارة إلى المجال"
+
+       }
+]

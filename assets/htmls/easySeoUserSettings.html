@@ -1,0 +1,104 @@
+<form id="savePublishDetailsUserModal">
+<div class="modal-dialog modal-dialog-centered modal-lg " role="document">
+    <div class="modal-content"> 
+        <img src="/assets/images/icon/close.png" class="remove_model" style="height: 25px" data-bs-dismiss="modal" alt="Remove">
+        <div class="modal-body py-4">
+            <div class="published_details mt-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-9 col-12 form-group mb-3">
+                        <button type="button" class="btn btn-secondary d-flex align-items-center w-100 py-1 fs-14">
+                            Automatic Posting
+                            <div class="form-check form-switch d-inline-flex ms-auto">
+                                <input data-hj-allow="" type="checkbox" name="addUserDetails" id="autoPilot" onclick="toggleAutoPilot()" class="form-check-input">
+                                <label class="form-check-label" for="autoPilot">
+                                    On
+                                </label>
+                            </div>
+                        </button>
+                        <div class="tool_tipcustom">
+                          <i class="zmdi zmdi-help" data-bs-toggle="tooltip" data-bs-placement="right" title="Choose if you want manual article publishments or automatic (by us)."></i>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group select2CustomForm">
+                            <label for="blogKeywords" class="formLable">Keywords for Automatic Articles Publishment</label>
+                            <select id="blogKeywords" class="js-example-placeholder-multiple" multiple="multiple" name="blogLinkKeyword" disabled="disabled"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="published_details mt-4 mb-4">
+               <div class="row toggleEmbedDetails">
+                    <div class="col-lg-6 col-md-9 col-12 form-group mb-3">
+                        <button type="button" class="btn btn-secondary d-flex align-items-center w-100 py-1 fs-14">
+                            Add My Details to Each Article
+                            <div class="form-check form-switch d-inline-flex ms-auto">
+                                <input data-hj-allow="" type="checkbox" name="toggleEmbedDetails" id="toggleEmbedDetails" onclick="toggleAddUserDetails(this)" class="form-check-input">
+                                <label class="form-check-label" for="toggleEmbedDetails">
+                                    On
+                                </label>
+                            </div>
+                        </button>
+                        <div class="tool_tipcustom">
+                          <i class="zmdi zmdi-help" data-bs-toggle="tooltip" data-bs-placement="right" title="Choose if you want to add your details to each article at the end in 'Posted By' section"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-12 mb-3"> 
+                                <div class="form-group">
+                                    <label class="settingLabel fw-bold">Domain</label>
+                                    <input data-hj-allow name="domain" type="text" class="form-control " placeholder="Domain" disabled="disabled" />
+                                </div> 
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3">
+                                <div class="form-group">
+                                    <label class="settingLabel fw-bold">Company Name</label>
+                                    <input data-hj-allow name="name" type="text" class="form-control " placeholder="Company Name" disabled="disabled"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3">
+                                <div class="form-group">
+                                    <label class="settingLabel">Address (optional)</label>
+                                    <input data-hj-allow id="address" name="address"  type="text" class="form-control " placeholder="Address" disabled="disabled"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3">
+                                <div class="form-group">
+                                    <label class="settingLabel">Phone (optional)</label>
+                                    <input data-hj-allow id="phone" name="phone" type="text" class="form-control "  placeholder="Phone" disabled="disabled"/>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <div class="form-group">
+                                    <label class="settingLabel fw-bold">Description</label>
+                                    <textarea data-hj-allow name="description" style="height: 70px;" class="form-control "  placeholder="Description" disabled="disabled"></textarea>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+<!--                    <div class="col-md-12">-->
+<!--                        <div class="drop-zone" onclick="changeLogo()">-->
+<!--                            <div id="logoForm" data-toggle="tooltip" title="Logo size should be 200*100 pixel!">-->
+<!--                                <form name="photo" class="text-center" id="imageUploadForm" enctype="multipart/form-data"-->
+<!--                                      action="saveImgUser" method="post">-->
+<!--                                    <input type='file' name="pdfImage" id="pdfImage" onchange="changeImg()" style="display:none;" >-->
+<!--                                    <img id="logoImg" alt="Upload Logo" style="display:none"/>-->
+<!--                                    <img src="/assets/images/uplod_image.png" alt="upload image">-->
+<!--                                    -->
+<!--                                    <p class="upload_text">Upload logo</p>-->
+<!--                                </form>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div> 
+            </div>
+            <button type="button" onclick="submitUserDetailsModal(this)" class="btn btn-primary w-100">SAVE</button>
+            <div class="progress_step" style="display:none;">
+                <span class="spinner-border text-primary"></span>
+                Saving your details...
+            </div>
+        </div>
+    </div>
+</div>
+</form>

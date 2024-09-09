@@ -1,0 +1,2832 @@
+[
+	{
+	"o":"test",
+	"t":"test"
+	},
+	{
+	"o":"Demo Account",
+	"t":"Conto demo"
+	},
+	{
+	"o":"Dashboard",
+	"t":"Pannello"
+	},
+	{
+	"o":"My Keywords",
+	"t":"Le mie parole chiave"
+	},
+	{
+	"o":"Landing Pages",
+	"t":"Pagine di destinazione"
+	},
+	{
+	"o":"Competitors",
+	"t":"Concorrenti"
+	},
+	{
+	"o":"Backlinks",
+	"t":"Backlink"
+	},
+	{
+	"o":"Links Summary",
+	"t":"Riepilogo collegamenti"
+	},
+	{
+	"o":"Links History",
+	"t":"Storia dei collegamenti"
+	},
+	{
+	"o":"Links Explorer",
+	"t":"Esplora collegamenti"
+	},
+	{
+	"o":"Links Intersection",
+	"t":"Collegamenti Intersezione"
+	},
+	{
+	"o":"Spy Links",
+	"t":"Collegamenti spia"
+	},
+	{
+	"o":"Links Monitoring",
+	"t":"Monitoraggio dei collegamenti"
+	},
+	{
+	"o":"Google Analytics",
+	"t":"statistiche di Google"
+	},
+	{
+	"o":"Report",
+	"t":"Rapporto"
+	},
+	{
+	"o":"PDF Report",
+	"t":"Rapporto PDF"
+	},
+	{
+	"o":"No results, sorry",
+	"t":"Nessun risultato, mi dispiace"
+	},
+	{
+	"o":"My Websites",
+	"t":"I miei siti web"
+	},
+	{
+	"o":"Ranks went up",
+	"t":"I ranghi sono aumentati"
+	},
+	{
+	"o":"Ranks went down",
+	"t":"I ranghi sono scesi"
+	},
+	{
+	"o":"Average Position",
+	"t":"Posizione media"
+	},
+	{
+	"o":"Change Percent",
+	"t":"Cambia percentuale"
+	},
+	{
+	"o":"Average Rank Last Days",
+	"t":"Classifica media degli ultimi giorni"
+	},
+	{
+	"o":"Average Rank Last Months",
+	"t":"Classifica media degli ultimi mesi"
+	},
+	{
+	"o":"Indicates how many keywords the given website is ranked for",
+	"t":"Indica per quante parole chiave è classificato il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many keywords have daily tracking for the given website",
+	"t":"Indica quante parole chiave hanno il monitoraggio giornaliero per un determinato sito web"
+	},
+	{
+	"o":"Indicates average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media (delle parole chiave tracciate giornalmente) per un determinato sito web"
+	},
+	{
+	"o":"Indicates yesterday average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media di ieri (delle parole chiave tracciate quotidianamente) per il sito Web specificato"
+	},
+	{
+	"o":"Indicates last week average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media dell'ultima settimana (delle parole chiave tracciate quotidianamente) per il sito Web specificato"
+	},
+	{
+	"o":"Indicates last month average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media dell'ultimo mese (delle parole chiave tracciate quotidianamente) per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many ranks went up since yesterday for the given website",
+	"t":"Indica quanti ranghi sono aumentati da ieri per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many ranks went down since yesterday for the given website",
+	"t":"Indica quanti ranghi sono scesi da ieri per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many ranks went up since last change for the given website",
+	"t":"Indica quanti ranghi sono aumentati dall'ultima modifica per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many landing pages are tracked for the given website",
+	"t":"Indica quante pagine di destinazione vengono tracciate per il sito Web specificato"
+	},
+	{
+	"o":"Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+	"t":"Website Rank (Page Rank) è l'algoritmo di Google progettato per misurare l'importanza di una pagina web in base alla qualità e alla quantità delle pagine web che ad essa fanno riferimento. Le pagine che hanno un PageRank alto (cioè un gran numero di backlink di qualità) sono percepite come più autorevoli da Google e si classificano meglio di quelle con un PageRank più basso."
+	},
+	{
+	"o":"Indicates how many backlinks are linking for the given website",
+	"t":"Indica quanti backlink stanno collegando per un determinato sito web"
+	},
+	{
+	"o":"Indicates how many backlinks are being monitored for the given website",
+	"t":"Indica quanti backlink vengono monitorati per un determinato sito web"
+	},
+	{
+	"o":"Save for next time",
+	"t":"Risparmia per la prossima volta"
+	},
+	{
+	"o":"Copy",
+	"t":"copia"
+	},
+	{
+	"o":"Excel",
+	"t":"Eccellere"
+	},
+	{
+	"o":"Print",
+	"t":"Stampa"
+	},
+	{
+	"o":"Total Keywords",
+	"t":"Parole chiave totali"
+	},
+	{
+	"o":"Tracked Keywords",
+	"t":"Parole chiave tracciate"
+	},
+	{
+	"o":"Avg Position",
+	"t":"Posizione media"
+	},
+	{
+	"o":"Ranks Up",
+	"t":"Si classifica"
+	},
+	{
+	"o":"Ranks Down",
+	"t":"Classifica in basso"
+	},
+	{
+	"o":"Page Rank",
+	"t":"Rank di pagina"
+	},
+	{
+	"o":"Loading...",
+	"t":"Caricamento in corso..."
+	},
+	{
+	"o":"Edit Website",
+	"t":"Modifica sito web"
+	},
+	{
+	"o":"Website Name* ",
+	"t":"Nome del sito web*"
+	},
+	{
+	"o":"Website Url*",
+	"t":"URL del sito*"
+	},
+	{
+	"o":"Website Classification",
+	"t":"Classificazione del sito web"
+	},
+	{
+	"o":"Country",
+	"t":"Paese"
+	},
+	{
+	"o":"Keywords",
+	"t":"Parole chiave"
+	},
+	{
+	"o":"Close",
+	"t":"Chiudere"
+	},
+	{
+	"o":"Website Name ",
+	"t":"Nome del sito web"
+	},
+	{
+	"o":"Project Manager",
+	"t":"Responsabile del progetto"
+	},
+	{
+	"o":"Update",
+	"t":"Aggiornare"
+	},
+	{
+	"o":"Upgrade",
+	"t":"Aggiornamento"
+	},
+	{
+	"o":"SEO Tutorial",
+	"t":"Esercitazione SEO"
+	},
+	{
+	"o":"Contact Us",
+	"t":"Contattaci"
+	},
+	{
+	"o":"Terms & Condition",
+	"t":"Termini e condizioni"
+	},
+	{
+	"o":"English",
+	"t":"inglese"
+	},
+	{
+	"o":"Copyright © 2013 RabbitSEO . All Rights Reserved.",
+	"t":"Copyright © 2013 RabbitSEO. Tutti i diritti riservati."
+	},
+	{
+	"o":"Close\n                ",
+	"t":"Chiudere\n                "
+	},
+	{
+	"o":"Yes",
+	"t":"sì"
+	},
+	{
+	"o":"Save changes",
+	"t":"Salvare le modifiche"
+	},
+	{
+	"o":"Confirm",
+	"t":"Confermare"
+	},
+	{
+	"o":"Are you sure you want to delete?",
+	"t":"Sei sicuro di voler eliminare?"
+	},
+	{
+	"o":"No\n",
+	"t":"NO\n "
+	},
+	{
+	"o":"Ranked Keywords",
+	"t":"Parole chiave classificate"
+	},
+	{
+	"o":"This value indicates the number of backlinks linking to your website.",
+	"t":"Questo valore indica il numero di backlink che collegano al tuo sito web."
+	},
+	{
+	"o":"Total Backlinks",
+	"t":"Backlink totali"
+	},
+	{
+	"o":"This value indicates the number of referring domains linking to your website.",
+	"t":"Questo valore indica il numero di domini di riferimento che si collegano al tuo sito web."
+	},
+	{
+	"o":"This value indicates the number of broken backlinks that are linking to your website, you should fix all of them so there will be no broken backlinks linking to you. You can easily do it by create a page with the url of that link.",
+	"t":"Questo valore indica il numero di backlink interrotti che si collegano al tuo sito web, dovresti risolverli tutti in modo che non ci siano backlink interrotti che collegano a te. Puoi farlo facilmente creando una pagina con l'URL di quel link."
+	},
+	{
+	"o":"Broken Backlinks",
+	"t":"Backlink interrotti"
+	},
+	{
+	"o":"Facebook Likes",
+	"t":"Mi piace di Facebook"
+	},
+	{
+	"o":"Website Rank",
+	"t":"Classifica del sito web"
+	},
+	{
+	"o":"We're checking for your rankings and competitors, it can take up to 30 seconds",
+	"t":"Stiamo controllando le tue classifiche e i tuoi concorrenti, possono volerci fino a 30 secondi"
+	},
+	{
+	"o":"Keyword in Track",
+	"t":"Parola chiave in traccia"
+	},
+	{
+	"o":"Ranks Up since Yesterday",
+	"t":"In rialzo rispetto a ieri"
+	},
+	{
+	"o":"Ranks Down since Yesterday",
+	"t":"Classifica in calo rispetto a ieri"
+	},
+	{
+	"o":"Keyword in Top 3",
+	"t":"Parola chiave nelle prime 3 posizioni"
+	},
+	{
+	"o":"Keyword in Top 10",
+	"t":"Parola chiave nella Top 10"
+	},
+	{
+	"o":"Average Position Last Week",
+	"t":"Posizione media la scorsa settimana"
+	},
+	{
+	"o":"Average Position Last Year",
+	"t":"Posizione media lo scorso anno"
+	},
+	{
+	"o":"Average Position Last Month",
+	"t":"Posizione media il mese scorso"
+	},
+	{
+	"o":"My Top Competitors Visibility",
+	"t":"Visibilità dei miei principali concorrenti"
+	},
+	{
+	"o":"Show more",
+	"t":"Mostra di più"
+	},
+	{
+	"o":"Average Visits Per Day",
+	"t":"Visite medie al giorno"
+	},
+	{
+	"o":"Visit Last Month",
+	"t":"Visita il mese scorso"
+	},
+	{
+	"o":"Average Time On Site",
+	"t":"Tempo medio sul posto"
+	},
+	{
+	"o":"Average Bonuce Rate",
+	"t":"Frequenza di rimbalzo media"
+	},
+	{
+	"o":"Average Page Views",
+	"t":"Visualizzazioni di pagina medie"
+	},
+	{
+	"o":"Websites",
+	"t":"Siti web"
+	},
+	{
+	"o":"Researches",
+	"t":"Ricerche"
+	},
+	{
+	"o":"Overview",
+	"t":"Panoramica"
+	},
+	{
+	"o":"Keyword Suggestions",
+	"t":"Suggerimenti per le parole chiave"
+	},
+	{
+	"o":"Keyword",
+	"t":"Parola chiave"
+	},
+	{
+	"o":"Url",
+	"t":"Url"
+	},
+	{
+	"o":"Indicates the (approximate) number of monthly searches for the given keyword on google",
+	"t":"Indica il numero (approssimativo) di ricerche mensili per la determinata parola chiave su google"
+	},
+	{
+	"o":"Search Volume",
+	"t":"Volume di ricerca"
+	},
+	{
+	"o":"Indicates the Estimated Organic monthly Traffic to the domain calculated as the product of CTR (click-through-rate) and search volume values of the returned keyword",
+	"t":"Indica il Traffico organico mensile stimato verso il dominio calcolato come prodotto tra i valori di CTR (click-through-rate) e volume di ricerca della parola chiave restituita"
+	},
+	{
+	"o":"Indicates the chance of getting in top-10 organic results for a keyword on a logarithmic scale from 0 to 100, where 1 is easy and 100 is extremely hard",
+	"t":"Indica la possibilità di entrare nei primi 10 risultati organici per una parola chiave su una scala logaritmica da 0 a 100, dove 1 significa facile e 100 è estremamente difficile"
+	},
+	{
+	"o":"Difficulty",
+	"t":"Difficoltà"
+	},
+	{
+	"o":"Indicates the relative amount of competition associated with the given keyword",
+	"t":"Indica la quantità relativa di concorrenza associata alla parola chiave specificata"
+	},
+	{
+	"o":"Competition",
+	"t":"concorrenza"
+	},
+	{
+	"o":"Indicates the average cost per click (USD) historically paid for the given keyword",
+	"t":"Indica il costo medio per clic (USD) storicamente pagato per una determinata parola chiave"
+	},
+	{
+	"o":"Indicates the number of search results returned for the given keyword",
+	"t":"Indica il numero di risultati di ricerca restituiti per la parola chiave specificata"
+	},
+	{
+	"o":"Results",
+	"t":"Risultati"
+	},
+	{
+	"o":"Rank",
+	"t":"Rango"
+	},
+	{
+	"o":"Add",
+	"t":"Aggiungere"
+	},
+	{
+	"o":"Upgrade to see more results",
+	"t":"Aggiorna per vedere più risultati"
+	},
+	{
+	"o":"Upgrade to Premium",
+	"t":"Passa a Premium"
+	},
+	{
+	"o":"Organic Search",
+	"t":"ricerca organica"
+	},
+	{
+	"o":"This values indicates the number of organic searches where the domain ranks #1 (for all the keywords the website is ranked for, not just those you are tracking)",
+	"t":"Questo valore indica il numero di ricerche organiche in cui il dominio si posiziona al primo posto (per tutte le parole chiave per cui è classificato il sito web, non solo per quelle che stai monitorando)"
+	},
+	{
+	"o":"Keywords In First Position",
+	"t":"Parole chiave in prima posizione"
+	},
+	{
+	"o":"Keywords in First Position",
+	"t":"Parole chiave in prima posizione"
+	},
+	{
+	"o":"Keyword in First Page",
+	"t":"Parola chiave in prima pagina"
+	},
+	{
+	"o":"Website Average Ranking",
+	"t":"Classifica media del sito web"
+	},
+	{
+	"o":"Estimated Organic Traffic is an estimation of website traffic that can be driven by the group of keywords your website is ranked for. The metric displays the approximate number of monthly visits the keywords can lead to your website (this doesn't include traffic from other sources, only organic traffic). ETV is calculated by multiplying a keyword’s search volume by the click-through rate coefficient of a search result",
+	"t":"Il traffico organico stimato è una stima del traffico del sito web che può essere generato dal gruppo di parole chiave per cui è classificato il tuo sito web. La metrica mostra il numero approssimativo di visite mensili che le parole chiave possono portare al tuo sito web (questo non include il traffico proveniente da altre fonti, solo il traffico organico). L’ETV viene calcolato moltiplicando il volume di ricerca di una parola chiave per il coefficiente di percentuale di clic di un risultato di ricerca"
+	},
+	{
+	"o":"Estimated Organic Traffic",
+	"t":"Traffico organico stimato"
+	},
+	{
+	"o":"Keywords in Top 3",
+	"t":"Parole chiave nelle prime 3 posizioni"
+	},
+	{
+	"o":"Keywords in Top 10",
+	"t":"Parole chiave nella top 10"
+	},
+	{
+	"o":"Current Website Status",
+	"t":"Stato attuale del sito web"
+	},
+	{
+	"o":"Website Status Week Ago",
+	"t":"Stato del sito web settimana fa"
+	},
+	{
+	"o":"Website Status Month Ago",
+	"t":"Stato del sito web un mese fa"
+	},
+	{
+	"o":"Initial Website Status",
+	"t":"Stato iniziale del sito web"
+	},
+	{
+	"o":"of Keywords are in the top 5 results",
+	"t":"delle parole chiave sono tra i primi 5 risultati"
+	},
+	{
+	"o":"of Keywords are in the top 10 results",
+	"t":"delle parole chiave sono tra i primi 10 risultati"
+	},
+	{
+	"o":"of Keywords are in the top 20 results",
+	"t":"delle parole chiave sono tra i primi 20 risultati"
+	},
+	{
+	"o":"This indicates the number of new ranked elements, how many new ranked elements were found for this domain in the past month or so.",
+	"t":"Ciò indica il numero di nuovi elementi classificati, quanti nuovi elementi classificati sono stati trovati per questo dominio nell'ultimo mese circa."
+	},
+	{
+	"o":"New Ranks",
+	"t":"Nuovi ranghi"
+	},
+	{
+	"o":"This indicates how many ranked elements of this domain went up in Google Search in the past month or so.",
+	"t":"Ciò indica quanti elementi classificati di questo dominio sono aumentati nella Ricerca Google nell'ultimo mese circa."
+	},
+	{
+	"o":"Ranks went Up",
+	"t":"I gradi sono saliti"
+	},
+	{
+	"o":"This indicates how many ranked elements of this domain went down in Google Search in the past month or so.",
+	"t":"Ciò indica quanti elementi classificati di questo dominio sono diminuiti nella Ricerca Google nell'ultimo mese circa."
+	},
+	{
+	"o":"Ranks went Down",
+	"t":"I ranghi sono scesi"
+	},
+	{
+	"o":"This indicates how many ranked elements of this domain were previously presented in google, but weren’t found during the last check in the past month or so.",
+	"t":"Ciò indica quanti elementi classificati di questo dominio sono stati precedentemente presentati su Google, ma non sono stati trovati durante l'ultimo controllo nell'ultimo mese circa."
+	},
+	{
+	"o":"Lost Ranks",
+	"t":"Gradi perduti"
+	},
+	{
+	"o":"This chart shows how many keywords are ranked for this website in each group of position.",
+	"t":"Questo grafico mostra quante parole chiave sono classificate per questo sito Web in ciascun gruppo di posizione."
+	},
+	{
+	"o":"Ranking Distribution",
+	"t":"Distribuzione della classifica"
+	},
+	{
+	"o":"Monitored Keywords",
+	"t":"Parole chiave monitorate"
+	},
+	{
+	"o":"Keywords in top 3",
+	"t":"Parole chiave tra le prime 3"
+	},
+	{
+	"o":"This value indicates the number of ranks that went up since yesterday",
+	"t":"Questo valore indica il numero di gradi che sono saliti da ieri"
+	},
+	{
+	"o":"This value indicates the number of ranks that went down since yesterday",
+	"t":"Questo valore indica il numero di ranghi che sono scesi da ieri"
+	},
+	{
+	"o":"This value indicates the average position of your live ranks",
+	"t":"Questo valore indica la posizione media dei tuoi ranghi live"
+	},
+	{
+	"o":"General",
+	"t":"Generale"
+	},
+	{
+	"o":"The page in your website that google links when someone search for this keyword",
+	"t":"La pagina del tuo sito web a cui Google collega quando qualcuno cerca questa parola chiave"
+	},
+	{
+	"o":"The search engine of the given keyword, you can have multiple keywords with different search engines. To change the search engine - you should delete the keyword and create a new keyword with the required search engine",
+	"t":"Utilizzando il motore di ricerca per una determinata parola chiave, è possibile avere più parole chiave con diversi motori di ricerca. Per cambiare il motore di ricerca, dovresti eliminare la parola chiave e creare una nuova parola chiave con il motore di ricerca richiesto"
+	},
+	{
+	"o":"Which device the given keyword is being searched on - Desktop or Mobile",
+	"t":"Su quale dispositivo viene cercata la parola chiave specificata: desktop o mobile"
+	},
+	{
+	"o":"Indicates the initial monitored rank of the given keyword, very useful for reports and tracking progress",
+	"t":"Indica il rango monitorato iniziale della parola chiave specificata, molto utile per i report e per monitorare i progressi"
+	},
+	{
+	"o":"Indicates the best monitored rank that was captured for the given keyword",
+	"t":"Indica il miglior ranking monitorato acquisito per la parola chiave specificata"
+	},
+	{
+	"o":"Indicates the previous monitored rank of the given keyword",
+	"t":"Indica il rango monitorato precedente della parola chiave specificata"
+	},
+	{
+	"o":"Indicates the (approximate) number of monthly searches for the given keyword on the search engine",
+	"t":"Indica il numero (approssimativo) di ricerche mensili per la determinata parola chiave sul motore di ricerca"
+	},
+	{
+	"o":"Landing Page",
+	"t":"Pagina di destinazione"
+	},
+	{
+	"o":"Last Days",
+	"t":"Gli ultimi giorni"
+	},
+	{
+	"o":"Indicates the rank a week ago of the given keyword",
+	"t":"Indica il posizionamento una settimana fa della parola chiave specificata"
+	},
+	{
+	"o":"Last Year",
+	"t":"L'anno scorso"
+	},
+	{
+	"o":"Indicates the rank one year ago of the given keyword, very useful for reports and tracking progress",
+	"t":"Indica il posizionamento un anno fa della parola chiave specificata, molto utile per report e monitoraggio dei progressi"
+	},
+	{
+	"o":"Add New Keyword",
+	"t":"Aggiungi nuova parola chiave"
+	},
+	{
+	"o":"Search Engine",
+	"t":"Motore di ricerca"
+	},
+	{
+	"o":"Device",
+	"t":"Dispositivo"
+	},
+	{
+	"o":"Desktop",
+	"t":"Desktop"
+	},
+	{
+	"o":"Mobile",
+	"t":"Mobile"
+	},
+	{
+	"o":"Keyword(s)",
+	"t":"Parole chiave"
+	},
+	{
+	"o":"Add Keywords\n",
+	"t":"Aggiungi parole chiave\n"
+	},
+	{
+	"o":"Your Keywords were added successfully, usually it takes between 10-40 seconds until you can see live results!",
+	"t":"Le tue parole chiave sono state aggiunte correttamente, in genere sono necessari dai 10 ai 40 secondi prima di poter visualizzare i risultati in tempo reale!"
+	},
+	{
+	"o":"Page Url",
+	"t":"URL della pagina"
+	},
+	{
+	"o":"Live Rank",
+	"t":"Classifica in tempo reale"
+	},
+	{
+	"o":"No keywords found, create your first keyword now",
+	"t":"Nessuna parola chiave trovata, crea la tua prima parola chiave adesso"
+	},
+	{
+	"o":"This shows the overall score of your tracked landing pages, we test your pages title, H1 tag, keyword density, page content etc. To improve your rankings at search engines you should make sure your pages are optimized.",
+	"t":"Questo mostra il punteggio complessivo delle tue pagine di destinazione monitorate, testiamo il titolo delle tue pagine, il tag H1, la densità delle parole chiave, il contenuto della pagina ecc. Per migliorare il tuo posizionamento nei motori di ricerca dovresti assicurarti che le tue pagine siano ottimizzate."
+	},
+	{
+	"o":"Indicates how many times the give keywords appears in the content of the landing page",
+	"t":"Indica quante volte le parole chiave fornite compaiono nel contenuto della pagina di destinazione"
+	},
+	{
+	"o":"Overall Score",
+	"t":"Punteggio totale"
+	},
+	{
+	"o":"This shows the number of warnings we found on your pages that you should fix, after fixing them you can click refresh and let RabbitSEO test the pages again.",
+	"t":"Questo mostra il numero di avvisi che abbiamo trovato sulle tue pagine che dovresti correggere, dopo averli corretti puoi fare clic su Aggiorna e lasciare che RabbitSEO testi nuovamente le pagine."
+	},
+	{
+	"o":"Total Warnings",
+	"t":"Avvertimenti totali"
+	},
+	{
+	"o":"broken backlinks",
+	"t":"backlink interrotti"
+	},
+	{
+	"o":"Add New Landing Page",
+	"t":"Aggiungi nuova pagina di destinazione"
+	},
+	{
+	"o":"You can enter several URLs (one in each line).",
+	"t":"Puoi inserire più URL (uno per riga)."
+	},
+	{
+	"o":"rescan",
+	"t":"ripetere la scansione"
+	},
+	{
+	"o":"Add New Page",
+	"t":"Aggiungi nuova pagina"
+	},
+	{
+	"o":"Page",
+	"t":"Pagina"
+	},
+	{
+	"o":"Shows the title of the given page, page title is very important for SEO, make sure you choose a title that contains the right keyword.",
+	"t":"Mostra il titolo della pagina specificata, il titolo della pagina è molto importante per il SEO, assicurati di scegliere un titolo che contenga la parola chiave giusta."
+	},
+	{
+	"o":"Title",
+	"t":"Titolo"
+	},
+	{
+	"o":"Shows how many words the given page has, search engines love content - all your pages should have content, even your contact us page",
+	"t":"Mostra quante parole ha la pagina specificata, i motori di ricerca amano i contenuti: tutte le tue pagine dovrebbero avere contenuti, anche la tua pagina di contatto"
+	},
+	{
+	"o":"Words",
+	"t":"Parole"
+	},
+	{
+	"o":"Shows how many internal links (to YOUR website) the given page has.",
+	"t":"Mostra quanti collegamenti interni (al TUO sito web) ha la pagina specificata."
+	},
+	{
+	"o":"In. links",
+	"t":"In. collegamenti"
+	},
+	{
+	"o":"Shows how many external links (to OTHER websites) the given page has.",
+	"t":"Mostra quanti collegamenti esterni (ad ALTRI siti Web) ha la pagina specificata."
+	},
+	{
+	"o":"Ext. links",
+	"t":"Est. collegamenti"
+	},
+	{
+	"o":"Shows the keyword you would like to optimize this page for, it is important to choose the right keyword for each page.",
+	"t":"Mostra la parola chiave per cui desideri ottimizzare questa pagina, è importante scegliere la parola chiave giusta per ogni pagina."
+	},
+	{
+	"o":"The score of your page, the better it is, the higher you can rank :)",
+	"t":"Il punteggio della tua pagina, migliore è, più alto sarà il tuo posizionamento :)"
+	},
+	{
+	"o":"Score",
+	"t":"Punto"
+	},
+	{
+	"o":"Shows how many issues we found for the given page.",
+	"t":"Mostra quanti problemi abbiamo riscontrato per la pagina specificata."
+	},
+	{
+	"o":"Issues",
+	"t":"Problemi"
+	},
+	{
+	"o":"You can enter several URLs (one in each line)",
+	"t":"Puoi inserire più URL (uno in ogni riga)"
+	},
+	{
+	"o":"Save",
+	"t":"Salva"
+	},
+	{
+	"o":"Back to Competitors",
+	"t":"Torniamo ai concorrenti"
+	},
+	{
+	"o":"Domain",
+	"t":"Dominio"
+	},
+	{
+	"o":"Average Rank",
+	"t":"Classifica media"
+	},
+	{
+	"o":"Weighted Average",
+	"t":"Media ponderata"
+	},
+	{
+	"o":"In Top 20",
+	"t":"Nella Top 20"
+	},
+	{
+	"o":"In Top 10",
+	"t":"Nella Top 10"
+	},
+	{
+	"o":"Current Status",
+	"t":"Stato attuale"
+	},
+	{
+	"o":"Month Ago",
+	"t":"Un mese fa"
+	},
+	{
+	"o":"In Top 5",
+	"t":"Nella Top 5"
+	},
+	{
+	"o":"Keywords in top 20",
+	"t":"Parole chiave tra le prime 20"
+	},
+	{
+	"o":"Keywords in top 10",
+	"t":"Parole chiave tra le prime 10"
+	},
+	{
+	"o":"Keywords in top 5",
+	"t":"Parole chiave tra le prime 5"
+	},
+	{
+	"o":"Keywords in First Position",
+	"t":"Parole chiave in prima posizione"
+	},
+	{
+	"o":"In Top 3",
+	"t":"Nella Top 3"
+	},
+	{
+	"o":"In Top 1",
+	"t":"Nella prima posizione"
+	},
+	{
+	"o":"General Details",
+	"t":"Dettagli generali"
+	},
+	{
+	"o":"This value indicates the number of referring pages linking to your website, (one website can link to your website from multiple pages)",
+	"t":"Questo valore indica il numero di pagine di riferimento che si collegano al tuo sito web (un sito web può collegarsi al tuo sito web da più pagine)"
+	},
+	{
+	"o":"Referring Pages",
+	"t":"Pagine di riferimento"
+	},
+	{
+	"o":"This value indicates the number of broken pages on the target that respond with 4xx or 5xx status codes.",
+	"t":"Questo valore indica il numero di pagine interrotte sulla destinazione che rispondono con codici di stato 4xx o 5xx."
+	},
+	{
+	"o":"Broken Pages",
+	"t":"Pagine rotte"
+	},
+	{
+	"o":"Site Rank",
+	"t":"Classifica del sito"
+	},
+	{
+	"o":"Shows how many internal links your website has, it is calculated as the sum of internal links on the pages of the specified website.",
+	"t":"Mostra quanti collegamenti interni ha il tuo sito Web, viene calcolato come la somma dei collegamenti interni sulle pagine del sito Web specificato."
+	},
+	{
+	"o":"Internal Backlinks",
+	"t":"Backlink interni"
+	},
+	{
+	"o":"Shows how many external links your website has, it is calculated as the sum of external links on the pages of the specified website.",
+	"t":"Mostra quanti collegamenti esterni ha il tuo sito web, viene calcolato come la somma dei collegamenti esterni sulle pagine del sito web specificato."
+	},
+	{
+	"o":"External Backlinks",
+	"t":"Backlink esterni"
+	},
+	{
+	"o":"Indicates the types of the referring links and link count per each type",
+	"t":"Indica i tipi di collegamenti di riferimento e il numero di collegamenti per ciascun tipo"
+	},
+	{
+	"o":"Referring Links Types",
+	"t":"Tipi di collegamenti di riferimento"
+	},
+	{
+	"o":"Link from specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.",
+	"t":"Il collegamento da specifica contenuti autonomi, come illustrazioni, diagrammi, foto, elenchi di codici, ecc."
+	},
+	{
+	"o":"Referring Links Semantic Locations",
+	"t":"Posizioni semantiche dei link di riferimento"
+	},
+	{
+	"o":"Indicates the link attributes of the referring links",
+	"t":"Indica gli attributi dei collegamenti di riferimento"
+	},
+	{
+	"o":"Attributes of the Referring Links",
+	"t":"Attributi dei link di riferimento"
+	},
+	{
+	"o":"Type",
+	"t":"Tipa"
+	},
+	{
+	"o":"Value",
+	"t":"Valore"
+	},
+	{
+	"o":"Percent",
+	"t":"Per cento"
+	},
+	{
+	"o":"Locations",
+	"t":"Posizioni"
+	},
+	{
+	"o":"Attribute",
+	"t":"Attributo"
+	},
+	{
+	"o":"Summary",
+	"t":"Riepilogo"
+	},
+	{
+	"o":"New Links",
+	"t":"Nuovi collegamenti"
+	},
+	{
+	"o":"Links Issues",
+	"t":"Problemi di collegamenti"
+	},
+	{
+	"o":"Top Level Domain",
+	"t":"Dominio di primo livello"
+	},
+	{
+	"o":"Types",
+	"t":"Tipi"
+	},
+	{
+	"o":"Onpage",
+	"t":"Alla pagina"
+	},
+	{
+	"o":"Referring Domains",
+	"t":"Domini di riferimento"
+	},
+	{
+	"o":"Tooltip",
+	"t":"Descrizione comando"
+	},
+	{
+	"o":"New Backlinks",
+	"t":"Nuovi backlink"
+	},
+	{
+	"o":"New Referring Domains",
+	"t":"Nuovi domini di riferimento"
+	},
+	{
+	"o":"Lost backlinks",
+	"t":"Backlink persi"
+	},
+	{
+	"o":"Broken backlinks",
+	"t":"Backlink interrotti"
+	},
+	{
+	"o":"Broken pages",
+	"t":"Pagine rotte"
+	},
+	{
+	"o":"com",
+	"t":"com"
+	},
+	{
+	"o":"org",
+	"t":"org"
+	},
+	{
+	"o":"net",
+	"t":"net"
+	},
+	{
+	"o":"Anchor",
+	"t":"Ancora"
+	},
+	{
+	"o":"Canonical",
+	"t":"Canonico"
+	},
+	{
+	"o":"Article",
+	"t":"Articolo"
+	},
+	{
+	"o":"Main",
+	"t":"Principale"
+	},
+	{
+	"o":"Footer",
+	"t":"Piè di pagina"
+	},
+	{
+	"o":"Internal Links Count",
+	"t":"Conteggio dei collegamenti interni"
+	},
+	{
+	"o":"External Links Count",
+	"t":"Conteggio dei collegamenti esterni"
+	},
+	{
+	"o":"Upgrade to see YOUR WEBSITE here",
+	"t":"Esegui l'upgrade per vedere il TUO SITO WEB qui"
+	},
+	{
+	"o":"Upgrade to Business",
+	"t":"Passa a Business"
+	},
+	{
+	"o":"Backlinks List",
+	"t":"Elenco dei backlink"
+	},
+	{
+	"o":"Backlinks By Keywords",
+	"t":"Backlink per parole chiave"
+	},
+	{
+	"o":"Backlinks By Pages",
+	"t":"Backlink per pagine"
+	},
+	{
+	"o":"Find Mutual Referring Domains",
+	"t":"Trova domini di riferimento reciproci"
+	},
+	{
+	"o":"Url From",
+	"t":"URL da"
+	},
+	{
+	"o":"Url To",
+	"t":"URL a"
+	},
+	{
+	"o":"TLD From",
+	"t":"TLD da"
+	},
+	{
+	"o":"Anchor",
+	"t":"Ancora"
+	},
+	{
+	"o":"Page From Rank",
+	"t":"Pagina dal ranking"
+	},
+	{
+	"o":"Page From Title",
+	"t":"Pagina dal titolo"
+	},
+	{
+	"o":"Item Type",
+	"t":"Tipo di elemento"
+	},
+	{
+	"o":"Group Count",
+	"t":"Conteggio del gruppo"
+	},
+	{
+	"o":"First Seen",
+	"t":"Visto per la prima volta"
+	},
+	{
+	"o":"Last Seen",
+	"t":"Ultima visualizzazione"
+	},
+	{
+	"o":"Add Link",
+	"t":"Aggiungi collegamento"
+	},
+	{
+	"o":"Comments",
+	"t":"Commenti"
+	},
+	{
+	"o":"Email",
+	"t":"E-mail"
+	},
+	{
+	"o":"Href",
+	"t":"Quif"
+	},
+	{
+	"o":"Phone",
+	"t":"Telefono"
+	},
+	{
+	"o":"Subject",
+	"t":"Soggetta"
+	},
+	{
+	"o":"Cost",
+	"t":"Costo"
+	},
+	{
+	"o":"My Monitored Backlinks",
+	"t":"I miei backlink monitorati"
+	},
+	{
+	"o":"Website",
+	"t":"Sito web"
+	},
+	{
+	"o":"Track",
+	"t":"Traccia"
+	},
+	{
+	"o":"Enabled",
+	"t":"Abilitata"
+	},
+	{
+	"o":"Follow",
+	"t":"Seguire"
+	},
+	{
+	"o":"Date Created",
+	"t":"data di creazione"
+	},
+	{
+	"o":"Last Checked",
+	"t":"Ultimo controllo"
+	},
+	{
+	"o":"Visits",
+	"t":"Visite"
+	},
+	{
+	"o":"Medium",
+	"t":"medio"
+	},
+	{
+	"o":"Source",
+	"t":"Fonte"
+	},
+	{
+	"o":"Browser",
+	"t":"Navigatore"
+	},
+	{
+	"o":"Last Month",
+	"t":"Lo scorso mese"
+	},
+	{
+	"o":"Last calendar month",
+	"t":"Lo scorso mese di calendario"
+	},
+	{
+	"o":"Last 3 Months",
+	"t":"Ultimi 3 mesi"
+	},
+	{
+	"o":"Last 6 Months",
+	"t":"Ultimi 6 mesi"
+	},
+	{
+	"o":"Avg Time on Site",
+	"t":"Tempo medio sul sito"
+	},
+	{
+	"o":"Bounce Rate",
+	"t":"Frequenza di rimbalzo"
+	},
+	{
+	"o":"Page Views",
+	"t":"Visualizzazioni di pagina"
+	},
+	{
+	"o":"Ranks",
+	"t":"Gradi"
+	},
+	{
+	"o":"Images",
+	"t":"immagini"
+	},
+	{
+	"o":"Internal Links",
+	"t":"Collegamenti interni"
+	},
+	{
+	"o":"External Links",
+	"t":"Link esterno"
+	},
+	{
+	"o":"SEO Report",
+	"t":"Rapporto SEO"
+	},
+	{
+	"o":"Your Logo",
+	"t":"Il tuo logo"
+	},
+	{
+	"o":"Upload logo clicking here",
+	"t":"Carica il logo cliccando qui"
+	},
+	{
+	"o":"Contact Details",
+	"t":"Dettagli del contatto"
+	},
+	{
+	"o":"Cover Title",
+	"t":"Titolo della copertina"
+	},
+	{
+	"o":"You can change title here",
+	"t":"Puoi cambiare il titolo qui"
+	},
+	{
+	"o":"Choose sections to export in your Report",
+	"t":"Scegli le sezioni da esportare nel tuo report"
+	},
+	{
+	"o":"Executive Summary",
+	"t":"Sintesi"
+	},
+	{
+	"o":"Section title",
+	"t":"Titolo della sezione"
+	},
+	{
+	"o":"General Website Info:",
+	"t":"Informazioni generali sul sito web:"
+	},
+	{
+	"o":"Tracking Information:",
+	"t":"Informazioni sul monitoraggio:"
+	},
+	{
+	"o":"Add Status Detail",
+	"t":"Aggiungi dettagli sullo stato"
+	},
+	{
+	"o":"Website Current Status",
+	"t":"Stato attuale del sito web"
+	},
+	{
+	"o":"One Month Ago",
+	"t":"Un mese fa"
+	},
+	{
+	"o":"Initial Status",
+	"t":"Stato iniziale"
+	},
+	{
+	"o":"Options:",
+	"t":"Opzioni:"
+	},
+	{
+	"o":"URL",
+	"t":"URL"
+	},
+	{
+	"o":"Initial Position",
+	"t":"Posizione iniziale"
+	},
+	{
+	"o":"6 Months Ago",
+	"t":"6 mesi fa"
+	},
+	{
+	"o":"3 Months Ago",
+	"t":"3 mesi fa"
+	},
+	{
+	"o":"Best Rank",
+	"t":"Migliore classifica"
+	},
+	{
+	"o":"Keywords Suggestions (Extra Keywords)",
+	"t":"Suggerimenti per le parole chiave (parole chiave aggiuntive)"
+	},
+	{
+	"o":"Google Analytics Data",
+	"t":"Dati di Google Analytics"
+	},
+	{
+	"o":"Date Range:",
+	"t":"Intervallo di date:"
+	},
+	{
+	"o":"OnPage",
+	"t":"Alla pagina"
+	},
+	{
+	"o":"Create PDF",
+	"t":"Crea PDF"
+	},
+	{
+	"o":"My Monitoring Result",
+	"t":"Il mio risultato del monitoraggio"
+	},
+	{
+	"o":"My Top Competitors",
+	"t":"I miei migliori concorrenti"
+	},
+	{
+	"o":"Settings",
+	"t":"Impostazioni"
+	},
+	{
+	"o":"Plans",
+	"t":"Piani"
+	},
+	{
+	"o":"Log Out",
+	"t":"Disconnettersi"
+	},
+	{
+	"o":"Indicates how many keywords the given website is ranked for",
+	"t":"Indica per quante parole chiave è classificato il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many keywords have daily tracking for the given website",
+	"t":"Indica quante parole chiave hanno un monitoraggio giornaliero per il sito Web specificato"
+	},
+	{
+	"o":"Indicates average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media (delle parole chiave tracciate quotidianamente) per il sito Web specificato"
+	},
+	{
+	"o":"Indicates yesterday average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media di ieri (delle parole chiave tracciate quotidianamente) per il sito Web specificato"
+	},
+	{
+	"o":"Indicates last week average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media della settimana scorsa (delle parole chiave tracciate quotidianamente) per il sito Web specificato"
+	},
+	{
+	"o":"Indicates last month average position (of the daily tracked keywords) for the given website",
+	"t":"Indica la posizione media dell'ultimo mese (delle parole chiave tracciate quotidianamente) per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many ranks went up since yesterday for the given website",
+	"t":"Indica quanti ranking sono aumentati da ieri per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many ranks went down since yesterday for the given website",
+	"t":"Indica quanti ranking sono diminuiti da ieri per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many ranks went up since last change for the given website",
+	"t":"Indica quanti gradi sono aumentati dall'ultima modifica per il sito Web specificato"
+	},
+	{
+	"o":"Indicates how many landing pages are tracked for the given website",
+	"t":"Indica quante pagine di destinazione vengono monitorate per un determinato sito web"
+	},
+	{
+	"o":"Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+	"t":"Il Website Rank (Page Rank) è l’algoritmo di Google progettato per misurare l’importanza di una pagina web in base alla qualità e alla quantità delle pagine web che ad essa fanno riferimento. Le pagine che hanno un PageRank elevato (ovvero un gran numero di backlink di qualità) sono percepite come più autorevoli da Google e si posizionano meglio di quelle con un PageRank inferiore."
+	},
+	{
+	"o":"Indicates how many backlinks are linking for the given website",
+	"t":"Indica quanti backlink si collegano al sito Web specificato"
+	},
+	{
+	"o":"Indicates how many backlinks are being monitored for the given website",
+	"t":"Indica quanti backlink vengono monitorati per un determinato sito web"
+	},
+	{
+	"o":"Save for next time",
+	"t":"Risparmia per la prossima volta"
+	},
+	{
+	"o":"PDF",
+	"t":"PDF"
+	},
+	{
+	"o":"Name",
+	"t":"Nome"
+	},
+	{
+	"o":"Delete",
+	"t":"Eliminare"
+	},
+	{
+	"o":"Edit Website",
+	"t":"Modifica sito web"
+	},
+	{
+	"o":"Website Name*",
+	"t":"Nome del sito web*"
+	},
+	{
+	"o":"Website Url*",
+	"t":"URL del sito*"
+	},
+	{
+	"o":"Website Classification",
+	"t":"Classificazione del sito web"
+	},
+	{
+	"o":"Country",
+	"t":"Paese"
+	},
+	{
+	"o":"Close",
+	"t":"Vicina"
+	},
+	{
+	"o":"Website Name",
+	"t":"Nome del sito web"
+	},
+	{
+	"o":"Project Manager",
+	"t":"Responsabile del progetto"
+	},
+	{
+	"o":"Update",
+	"t":"Aggiornamento"
+	},
+	{
+	"o":"Upgrade",
+	"t":"Aggiornamento"
+	},
+	{
+	"o":"SEO Tutorial",
+	"t":"Tutorial SEO"
+	},
+	{
+	"o":"Contact Us",
+	"t":"Contattaci"
+	},
+	{
+	"o":"English",
+	"t":"Inglese"
+	},
+	{
+	"o":"Copyright © 2013 RabbitSEO . All Rights Reserved.",
+	"t":"Copyright © 2013 RabbitSEO. Tutti i diritti riservati."
+	},
+	{
+	"o":"Close\n",
+	"t":"Vicina\n"
+	},
+	{
+	"o":"Yes",
+	"t":"SÌ"
+	},
+	{
+	"o":"Save changes",
+	"t":"Salvare le modifiche"
+	},
+	{
+	"o":"Confirm",
+	"t":"Confermare"
+	},
+	{
+	"o":"Are you sure you want to delete?",
+	"t":"Sei sicuro di voler eliminare?"
+	},
+	{
+	"o":"No\n",
+	"t":"NO\n"
+	},
+	{
+	"o":"Account",
+	"t":"Account"
+	},
+	{
+	"o":"General",
+	"t":"Generale"
+	},
+	{
+	"o":"Notifications",
+	"t":"Notifiche"
+	},
+	{
+	"o":"Login",
+	"t":"Login"
+	},
+	{
+	"o":"Websites",
+	"t":"Siti web"
+	},
+	{
+	"o":"Researches",
+	"t":"Ricerche"
+	},
+	{
+	"o":"Upgrade Now",
+	"t":"Aggiorna ora"
+	},
+	{
+	"o":"Compare plans",
+	"t":"Confronta i piani"
+	},
+	{
+	"o":"Starter",
+	"t":"Antipasto"
+	},
+	{
+	"o":"Premium",
+	"t":"Premio"
+	},
+	{
+	"o":"Business",
+	"t":"Attività commerciale"
+	},
+	{
+	"o":"Enterprise",
+	"t":"Impresa"
+	},
+	{
+	"o":"Landing Pages Optimization",
+	"t":"Ottimizzazione delle pagine di destinazione"
+	},
+	{
+	"o":"Google Analytics Integration",
+	"t":"Integrazione di Google Analytics"
+	},
+	{
+	"o":"White Label Reports",
+	"t":"Rapporti etichetta bianca"
+	},
+	{
+	"o":"API Access",
+	"t":"Accesso all'API"
+	},
+	{
+	"o":"Available Researches (up to 500 results per research):",
+	"t":"Ricerche disponibili (fino a 500 risultati per ricerca):"
+	},
+	{
+	"o":"Keywords Research",
+	"t":"Ricerca sulle parole chiave"
+	},
+	{
+	"o":"Traffic Explorer (Similar Web)",
+	"t":"Esplora traffico (Web simile)"
+	},
+	{
+	"o":"Related Keywords",
+	"t":"Parole chiave correlate"
+	},
+	{
+	"o":"Top Traffic Pages",
+	"t":"Pagine con traffico maggiore"
+	},
+	{
+	"o":"Competitors Analysis",
+	"t":"Analisi dei concorrenti"
+	},
+	{
+	"o":"Keywords Gap",
+	"t":"Divario di parole chiave"
+	},
+	{
+	"o":"Backlinks Summary",
+	"t":"Riepilogo dei backlink"
+	},
+	{
+	"o":"Backlinks Explorer",
+	"t":"Esplora backlink"
+	},
+	{
+	"o":"Limited",
+	"t":"Limitata"
+	},
+	{
+	"o":"Spy Backlinks",
+	"t":"Backlink spia"
+	},
+	{
+	"o":"Backlinks History",
+	"t":"Cronologia dei backlink"
+	},
+	{
+	"o":"Avg Position Yesterday",
+	"t":"Posizione media ieri"
+	},
+	{
+	"o":"Avg Position Last Week",
+	"t":"Posizione media la scorsa settimana"
+	},
+	{
+	"o":"Avg Position Last Month",
+	"t":"Posizione media il mese scorso"
+	},
+	{
+	"o":"Initial Rank",
+	"t":"Grado iniziale"
+	},
+	{
+	"o":"Days Ago 2",
+	"t":"Giorni fa 2"
+	},
+	{
+	"o":"Yesterday",
+	"t":"Ieri"
+	},
+	{
+	"o":"Columns",
+	"t":"Colonne"
+	},
+	{
+	"o":"Hello",
+	"t":"Ciao"
+	},
+	{
+	"o":"Add New Website",
+	"t":"Aggiungi nuovo sito web"
+	},
+	{
+	"o":"All Websites",
+	"t":"Tutti i siti web"
+	},
+	{
+	"o":"Website Details",
+	"t":"Dettagli del sito web"
+	},
+	{
+	"o":"Website Url",
+	"t":"URL del sito"
+	},
+	{
+	"o":"Enter Website Url",
+	"t":"Inserisci l'URL del sito web"
+	},
+	{
+	"o":"Website Nickname (Optional)",
+	"t":"Soprannome del sito web (facoltativo)"
+	},
+	{
+	"o":"Enter Website Nickname",
+	"t":"Inserisci il soprannome del sito web"
+	},
+	{
+	"o":"Location",
+	"t":"Posizione"
+	},
+	{
+	"o":"Next",
+	"t":"Prossima"
+	},
+	{
+	"o":"Enter your desired keywords, one in each line. You can add up to ",
+	"t":"Inserisci le parole chiave desiderate, una in ogni riga. Puoi aggiungere fino a"
+	},
+	{
+	"o":"Please choose keywords for your website.",
+	"t":"Scegli le parole chiave per il tuo sito web."
+	},
+	{
+	"o":"Close",
+	"t":"Vicina"
+	},
+	{
+	"o":"keywords",
+	"t":"parole chiave"
+	},
+	{
+	"o":"Website Onboarding",
+	"t":"Onboarding del sito web"
+	},
+	{
+	"o":"User Manual",
+	"t":"Manuale d'uso"
+	},
+	{
+	"o":"Listed Competitors",
+	"t":"Concorrenti elencati"
+	},
+	{
+	"o":"Website Visits Last Month",
+	"t":"Visite al sito web il mese scorso"
+	},
+	{
+	"o":"Display Settings",
+	"t":"Impostazioni di visualizzazione"
+	},
+	{
+	"o":"Menu",
+	"t":"Menù"
+	},
+	{
+	"o":"Tables",
+	"t":"Tabelle"
+	},
+	{
+	"o":"Information",
+	"t":"Informazione"
+	},
+	{
+	"o":"Company Name",
+	"t":"Nome della ditta"
+	},
+	{
+	"o":"First Name",
+	"t":"Nome di battesimo"
+	},
+	{
+	"o":"Email Notifications of Rankings Changes",
+	"t":"Notifiche e-mail delle modifiche alle classifiche"
+	},
+	{
+	"o":"Email Rankings (days a week)",
+	"t":"Classifiche e-mail (giorni alla settimana)"
+	},
+	{
+	"o":"Last Name",
+	"t":"Cognome"
+	},
+	{
+	"o":"Email all rankings, not only changes from last day",
+	"t":"Invia via email tutte le classifiche, non solo le modifiche rispetto all'ultimo giorno"
+	},
+	{
+	"o":"Or notify me:",
+	"t":"Oppure avvisami:"
+	},
+	{
+	"o":"Login Details",
+	"t":"dettagli del login"
+	},
+	{
+	"o":"Current Password",
+	"t":"password attuale"
+	},
+	{
+	"o":"New Password",
+	"t":"nuova password"
+	},
+	{
+	"o":"Confirm Password",
+	"t":"Conferma password"
+	},
+	{
+	"o":"Website SEO Report for",
+	"t":"Rapporto SEO del sito web per"
+	},
+	{
+	"o":"Keywords List",
+	"t":"Elenco parole chiave"
+	},
+	{
+	"o":"Keywords that went up last month",
+	"t":"Parole chiave che sono aumentate il mese scorso"
+	},
+	{
+	"o":"Keywords Suggestions (Extra Keywords)",
+	"t":"Suggerimenti per le parole chiave (parole chiave aggiuntive)"
+	},
+	{
+	"o":"Links History",
+	"t":"Storia dei collegamenti"
+	},
+	{
+	"o":"Last Year Chart",
+	"t":"Grafico dell'anno scorso"
+	},
+	{
+	"o":"Search Volume History",
+	"t":"Cerca nella cronologia dei volumi"
+	},
+	{
+	"o":"January",
+	"t":"Gennaio"
+	},
+	{
+	"o":"February",
+	"t":"Febbraio"
+	},
+	{
+	"o":"March",
+	"t":"Marzo"
+	},
+	{
+	"o":"April",
+	"t":"aprile"
+	},
+	{
+	"o":"May",
+	"t":"Maggio"
+	},
+	{
+	"o":"June",
+	"t":"Giugno"
+	},
+	{
+	"o":"July",
+	"t":"Luglio"
+	},
+	{
+	"o":"August",
+	"t":"agosto"
+	},
+	{
+	"o":"September",
+	"t":"settembre"
+	},
+	{
+	"o":"October",
+	"t":"ottobre"
+	},
+	{
+	"o":"Novermber",
+	"t":"novembre"
+	},
+	{
+	"o":"December",
+	"t":"Dicembre"
+	},
+	{
+	"o":"Sunday",
+	"t":"Domenica"
+	},
+	{
+	"o":"Monday",
+	"t":"Lunedi"
+	},
+	{
+	"o":"Tuesday",
+	"t":"Martedì"
+	},
+	{
+	"o":"Wednesday",
+	"t":"Mercoledì"
+	},
+	{
+	"o":"Thursday",
+	"t":"Giovedì"
+	},
+	{
+	"o":"Friday",
+	"t":"Venerdì"
+	},
+	{
+	"o":"Saturday",
+	"t":"Sabato"
+	},
+	{
+	"o":"Last Week Chart",
+	"t":"Grafico della settimana scorsa"
+	},
+	{
+	"o":"Listed Keywords",
+	"t":"Parole chiave elencate"
+	},
+	{
+	"o":"Total Keywords",
+	"t":"Parole chiave totali"
+	},
+	{
+	"o":"Total",
+	"t":"Totale"
+	},
+	{
+	"o":"We found only few landing pages for your website, you should create more pages in your website for higher rankings in Google",
+	"t":"Abbiamo trovato solo poche pagine di destinazione per il tuo sito web, dovresti creare più pagine nel tuo sito web per un posizionamento più elevato su Google"
+	},
+	{
+	"o":"Warning - No Landing Pages",
+	"t":"Avviso: nessuna pagina di destinazione"
+	},
+	{
+	"o":"Add New Keywords to your list, we track them daily so you can see the progress of your website. You can choose which search engine and search type like desktop / mobile",
+	"t":"Aggiungi nuove parole chiave al tuo elenco, le monitoriamo quotidianamente in modo che tu possa vedere l'avanzamento del tuo sito web. Puoi scegliere quale motore di ricerca e tipo di ricerca come desktop/mobile"
+	},
+	{
+	"o":"Keyword was added, you can see it in My Keywords tab",
+	"t":"La parola chiave è stata aggiunta, puoi visualizzarla nella scheda Le mie parole chiave"
+	},
+	{
+	"o":"You can choose which columns to show, for example you can choose to see if landing page of the given keyword contains the keyword etc.",
+	"t":"Puoi scegliere quali colonne mostrare, ad esempio puoi scegliere di vedere se la pagina di destinazione della parola chiave specificata contiene la parola chiave, ecc."
+	},
+	{
+	"o":"Click on the keyword to see more details, you can see the top 100 results, and also you can track your progress and see the previous ranks you had. You can also find Related Keywords and add them to your list",
+	"t":"Fai clic sulla parola chiave per visualizzare maggiori dettagli, puoi vedere i primi 100 risultati e puoi anche tenere traccia dei tuoi progressi e vedere le posizioni precedenti che avevi. Puoi anche trovare parole chiave correlate e aggiungerle al tuo elenco"
+	},
+	{
+	"o":"Add new Landing Pages to your list, if you added more pages to your website you can manually add those pages here, or you can also choose to rescan your website again and let us find the landing pages of your website.",
+	"t":"Aggiungi nuove pagine di destinazione al tuo elenco, se hai aggiunto più pagine al tuo sito web puoi aggiungerle manualmente qui oppure puoi anche scegliere di eseguire nuovamente la scansione del tuo sito web e farci trovare le pagine di destinazione del tuo sito web."
+	},
+	{
+	"o":"Click on each Landing Page in the grid to see more details about the page, below you can see also tips and hints how to improve your landing pages, those recommendations are calculated in real time so you can also refresh the page test it again",
+	"t":"Fai clic su ciascuna pagina di destinazione nella griglia per vedere maggiori dettagli sulla pagina, di seguito puoi vedere anche suggerimenti e suggerimenti su come migliorare le tue pagine di destinazione, questi consigli vengono calcolati in tempo reale in modo da poter anche aggiornare la pagina testarla di nuovo"
+	},
+	{
+	"o":"Here you can see the overall score of your website, it is calculated by the number of warnings we found on your landing pages. By getting high score your website can get higher ranks in Google and then of course more traffic",
+	"t":"Qui puoi vedere il punteggio complessivo del tuo sito web, calcolato in base al numero di avvisi che abbiamo trovato sulle tue pagine di destinazione. Ottenendo un punteggio elevato, il tuo sito web può ottenere un posizionamento più elevato su Google e quindi, ovviamente, più traffico"
+	},
+	{
+	"o":"Warning - Only Few Landing Pages Found",
+	"t":"Avviso: sono state trovate solo poche pagine di destinazione"
+	},
+	{
+	"o":"Keywords Found",
+	"t":"Parole chiave trovate"
+	},
+ 
+ {  
+    "o": "Links Building", 
+    	"t": "Costruzione di collegamenti"
+    }
+    , 
+	  { 
+    "o": "Extra Backlinks", 
+   	"t": "Backlink aggiuntivi"
+     },  
+  {	
+    
+    "o": "Get",
+   	"t": "Ottenere"
+
+	}, 
+	  {
+    
+    "o": "Monthly Backlinks with our new",
+   	"t": "Backlink mensili con il nostro nuovo"
+
+	}, 
+	  {
+    
+    "o": "Best", 
+   	"t": "Migliore"
+
+	}, 
+	  {
+    
+   	"o": "Order Premium Backlinks",
+   	"t": "Ordina backlink premium"
+
+	},
+  {
+    
+   "o": "Load Keywords Ideas",
+   	"t": "Carica idee per parole chiave"
+
+	},
+  {
+    "o": "We couldn't find any landing pages for your website, you can try to manually add new pages or",
+   	"t": "Non siamo riusciti a trovare pagine di destinazione per il tuo sito web, puoi provare ad aggiungere manualmente nuove pagine oppure"
+
+	},
+  {
+    "o": "Message",
+   	"t": "Messaggio"
+
+	},
+  {
+    "o": "We are now scanning your website again, results should be ready in one minute approximately.",
+   	"t": "Stiamo nuovamente scansionando il tuo sito web, i risultati dovrebbero essere pronti in circa un minuto."
+     },
+  {
+    "o": "Links Created",
+   	"t": "Collegamenti creati"
+
+	},
+  {
+    "o": "mo",
+   	"t": "mo"
+   },
+  {
+    "o": "Premium Member",
+   	"t": "Membro Premium"
+
+	},
+  {
+    "o": "No Landing Pages found",
+   	"t": "Nessuna pagina di destinazione trovata"
+
+	},
+  {
+    "o": "My Links",
+   	"t": "I miei collegamenti"
+
+	},
+  {
+    "o": "Optimization Score",
+   	"t": "Punteggio di ottimizzazione"
+
+	},
+  {
+    "o": "Failed Tests",
+   	"t": "Test falliti"
+
+	},
+  {
+    "o": "Successful Tests",
+   	"t": "Test di successo"
+
+	},
+  {
+    "o": "You can enter several URLs (one in each line).",
+   	"t": "Puoi inserire più URL (uno per riga)."
+
+	},
+  {
+    "o": "If you added new pages, we can",
+   	"t": "Se hai aggiunto nuove pagine, possiamo farlo"
+
+	},
+  {
+    "o": "your website again",
+   	"t": "nuovamente il tuo sito web"
+
+	},
+  {
+    "o": "My Recent Backlinks",
+   	"t": "I miei backlink recenti"
+
+	},
+  {
+    "o": "Welcome to Rabbit SEO",
+   	"t": "Benvenuto in Rabbit SEO"
+
+	},
+  {
+    "o": "Terms",
+   	"t": "Termini"
+
+	},
+  {
+    "o": "Condition",
+   	"t": "Condizione"
+
+	},
+  {
+    "o": "My Backlinks",
+   	"t": "I miei backlink"
+
+	},
+  {
+    "o": "Guest Blogs",
+   	"t": "I post del blog"
+
+	},
+  {
+    "o": "Premium Listings",
+   	"t": "Elenchi premium"
+
+	},
+  {
+    "o": "Managed Service",
+   	"t": "Servizio gestito"
+
+	},
+  {
+    "o": "Update Details",
+   	"t": "Aggiorna dettagli"
+
+	},
+  {
+    "o": "Monitor Link",
+   	"t": "Monitorare il collegamento"
+
+	},
+  {
+    "o": "Publish Premium Listings",
+   	"t": "Ordina elenchi premium"
+
+	},
+  {
+    "o": "Publish Exclusive Guest Blog",
+   	"t": "Ordina post esclusivi sul blog"
+
+	},
+  {
+    "o": "No data available in table",
+   	"t": "Nessun dato disponibile nella tabella"
+
+	},
+  {
+    "o": "Edit / Share",
+   	"t": "Modifica/Condividi"
+
+	},
+  {
+    "o": "Created On",
+   	"t": "Creato"
+
+	},
+  {
+    "o": "Live",
+   	"t": "Vivere"
+
+	},
+  {
+    "o": "Href",
+   	"t": "Quif"
+
+	},
+  {
+    "o": "My Website Details",
+   	"t": "Dettagli del mio sito web"
+
+	},
+  {
+    "o": "Keywords to Promote",
+   	"t": "Parole chiave da promuovere"
+
+	},
+  {
+    "o": "Category",
+   	"t": "Categoria"
+
+	},
+  {
+    "o": "Description",
+   	"t": "Descrizione"
+
+	},
+  {
+    "o": "Address (optional)",
+   	"t": "Indirizzo (facoltativo)"
+
+	},
+  {
+    "o": "Phone (optional)",
+   	"t": "Telefono (facoltativo)"
+
+	},
+  {
+    "o": "Upload logo",
+   	"t": "Carica il logo"
+
+	},
+  {
+    "o": "Submit",
+   	"t": "Invia"
+
+	},
+  {
+    "o": "Page Url",
+   	"t": "URL della pagina"
+
+	},
+  {
+    "o": "Contact Name",
+   	"t": "Nome del contatto"
+
+	},
+  {
+    "o": "Order Premium Links",
+   	"t": "Ordina collegamenti premium"
+
+	},
+  {
+    "o": "Keyword to Promote",
+   	"t": "Parola chiave da promuovere"
+
+	},
+  {
+    "o": "Enter a keyword",
+   	"t": "Inserisci una parola chiave"
+
+	},
+  {
+    "o": "Language",
+   	"t": "Lingua"
+
+	},
+  {
+    "o": "Guest Blog Title (based on your domain and 'Keyword to Promote')",
+   	"t": "Titolo del post del blog (basato sul tuo dominio e sulla 'Parola chiave da promuovere')"
+
+	},
+  {
+    "o": "Landing Page to Promote",
+   	"t": "Pagina di destinazione da promuovere"
+
+	},
+  {
+    "o": "Number of guest blogs to create",
+   	"t": "Pagina di destinazione da promuovere"
+
+	},
+  {
+    "o": "You have",
+   	"t": "Hai"
+
+	},
+  {
+    "o": "links left this month",
+   	"t": "link lasciati questo mese"
+
+	},
+  {
+    "o": "Please Note",
+   	"t": "Notare che"
+
+	},
+  {
+    "o": "Please Note: One Guest Blog is equivalent to 4 Links.",
+   	"t": "Nota: un post sul blog equivale a 4 collegamenti."
+
+	},
+  {
+    "o": "Show Advanced Settings",
+   	"t": "Mostra impostazioni avanzate"
+
+	},
+  {
+    "o": "Choose Blog / News Site (Optional)",
+   	"t": "Scegli blog/sito di notizie (facoltativo)"
+
+	},
+  {
+    "o": "How many words in the post (approximately)?",
+   	"t": "Quante parole nel post (circa)?"
+
+	},
+  {
+    "o": "Add Publisher Details Section in the Guest Blog",
+   	"t": "Aggiungi la sezione Dettagli editore nel post del blog"
+
+	},
+  {
+    "o": "On",
+   	"t": "SU"
+
+	},
+  {
+    "o": "Publish Date",
+   	"t": "Data di pubblicazione"
+
+	},
+  {
+    "o": "Submit Guest Blog Order",
+   	"t": "Invia l'ordine dei post sul blog"
+
+	},
+  {
+    "o": "Competition Level",
+   	"t": "Livello di competizione"
+
+	},
+  {
+    "o": "Search Volume",
+   	"t": "Volume di ricerca"
+
+	},
+  {
+    "o": "Number of links to create",
+   	"t": "Numero di collegamenti da creare"
+
+	},
+  {
+    "o": "Submit Premium Links Order",
+   	"t": "Invia l'ordine dei link premium"
+
+	},
+  {
+    "o": "Add New Keywords",
+   	"t": "Aggiungi nuove parole chiave"
+
+	},
+  {
+    "o": "Last Week",
+   	"t": "La settimana scorsa"
+
+	},
+  {
+    "o": "Words Count",
+   	"t": "Le parole contano"
+
+	},
+  {
+    "o": "Page Title",
+   	"t": "Titolo della pagina"
+
+	},
+  {
+    "o": "Keyword Density",
+   	"t": "Densità di parole chiave"
+
+	},
+  {
+    "o": "Title Contains Keyword",
+   	"t": "Il titolo contiene la parola chiave"
+
+	},
+  {
+    "o": "Title Length",
+   	"t": "Lunghezza del titolo"
+
+	},
+  {
+    "o": "November",
+   	"t": "novembre"
+
+	},
+  {
+    "o": "Last Rank",
+   	"t": "Ultimo rango"
+
+	},
+  {
+    "o": "H1 Contains Keyword",
+   	"t": "H1 contiene la parola chiave"
+
+	},
+  {
+    "o": "H2 Count",
+   	"t": "Conteggio H2"
+
+	},
+  {
+    "o": "Compact View",
+   	"t": "Vista compatta"
+
+	},
+  {
+    "o": "Comfort View",
+   	"t": "Vista Comoda"
+
+	},
+  {
+    "o": "Enter keywords you want to promote",
+   	"t": "Inserisci le parole chiave che desideri promuovere"
+
+	},
+  {
+    "o": "Filter by Keywords",
+   	"t": "Filtra per parole chiave"
+
+	},
+  {
+    "o": "Table View",
+   	"t": "Visualizzazione tabella"
+
+	},
+  {
+    "o": "Filter Competitors by Keywords",
+   	"t": "Filtra i concorrenti per parole chiave"
+
+	},
+  {
+    "o": "Find Competitors",
+   	"t": "Trova concorrenti"
+
+	},
+  {
+    "o": "Clear All",
+   	"t": "Cancella tutto"
+
+	},
+  {
+    "o": "My Competitors",
+   	"t": "I miei concorrenti"
+     }, 
+  {
+    "o": "Competitor Backlinks",
+   	"t": "Backlink della concorrenza"
+     }, 
+  {
+    "o": "Referring Domain Rank",
+   	"t": "Rango del dominio di riferimento"
+
+	},
+  {
+    "o": "Referring Page Rank",
+   	"t": "Ranking della pagina di riferimento"
+
+	},
+  {
+    "o": "Domain Rank",
+   	"t": "Rango del dominio"
+
+	},
+  {
+    "o": "Listed Backlinks",
+   	"t": "Backlink elencati"
+
+	},
+  {
+    "o": "Search...",
+   	"t": "Ricerca..."
+
+	},
+  {
+    "o": "Domain From",
+   	"t": "Dominio da"
+
+	},
+  {
+    "o": "Upgrade to see your backlinks here",
+   	"t": "Esegui l'upgrade per vedere i tuoi backlink qui"
+
+	},
+  {
+    "o": "Currently you see a demo of amazon, upgrade now to",
+   	"t": "Attualmente vedi una demo di Amazon, aggiorna ora a"
+
+	},
+  {
+    "o": "see results of your website",
+   	"t": "vedere i risultati del tuo sito web"
+
+	},
+  {
+    "o": "Broken Links",
+   	"t": "Collegamenti interrotti"
+
+	},
+  {
+    "o": "Connet your Google Analytics Account",
+   	"t": "Collega il tuo account Google Analytics"
+
+	},
+  {
+    "o": "See what you get in each product and its plans.",
+   	"t": "Scopri cosa ottieni in ogni prodotto e nei suoi piani."
+
+	},
+  {
+    "o": "Choose Plan",
+   	"t": "Scegli Piano"
+
+	},
+  {
+    "o": "1200 Keywords",
+   	"t": "1200 parole chiave"
+
+	},
+  {
+    "o": "We will be sad to see you leaving but if you wish to cancel your account with us, click delete",
+   	"t": "Saremo tristi di vederti partire, ma se desideri cancellare il tuo account con noi, fai clic su Elimina"
+
+	},
+  {
+    "o": "How to cancel my account?",
+   	"t": "Come cancellare il mio account?"
+
+	},
+  {
+    "o": "Delete Account",
+   	"t": "Eliminare l'account"
+
+	},
+  {
+    "o": "Notification",
+   	"t": "Notifica"
+
+	},
+  {
+    "o": "Email for receiving notifications",
+   	"t": "E-mail per ricevere notifiche"
+
+	},
+  {
+    "o": "Email New Listings / Guest Blogs Links that were created",
+   	"t": "Invia tramite e-mail nuove inserzioni/post di blog Collegamenti creati"
+
+	},
+  {
+    "o": "Rankings",
+   	"t": "Classifiche"
+
+	},
+  {
+    "o": "Email All Links Together Once a Week",
+   	"t": "Invia tramite e-mail tutti i collegamenti una volta alla settimana"
+
+	},
+  {
+    "o": "of at least",
+   	"t": "di almeno"
+
+	},
+  {
+    "o": "UP",
+   	"t": "SU"
+
+	},
+  {
+    "o": "DOWN",
+   	"t": "GIÙ"
+
+	},
+  {
+    "o": "positions",
+   	"t": "posizioni"
+
+	},
+  {
+    "o": "Free Member",
+   	"t": "Membro gratuito"
+
+	},
+  {
+    "o": "Please fill in the form below and we will try to get back to you as soon as possible.",
+   	"t": "Compila il modulo sottostante e cercheremo di risponderti il prima possibile."
+
+	},
+  {
+    "o": "What is SEO?",
+   	"t": "Cos'è la SEO?"
+
+	},
+  {
+    "o": "Why we do it?",
+   	"t": "Perché lo facciamo?"
+
+	},
+  {
+    "o": "Search Engines",
+   	"t": "Motori di ricerca"
+
+	},
+  {
+    "o": "Links",
+   	"t": "Collegamenti"
+
+	},
+  {
+    "o": "Common Mistakes",
+   	"t": "Errori comuni"
+
+	},
+  {
+    "o": "SEO Stands for Search Engine Optimization. It is all about optimizing a website for search engines and some would say it is the art of ranking in the search engines. It is basically the process of designing and developing a web site to rank well in search engine results. You can think of it as the technical part of online marketing since helps to promote your website but… it also needs some technical knowledge and skills. Anyway, don’t you worry because it’s not rocket science :)",
+   	"t": "SEO sta per ottimizzazione dei motori di ricerca. Si tratta di ottimizzare un sito web per i motori di ricerca e alcuni direbbero che è l'arte di posizionarsi nei motori di ricerca. Fondamentalmente è il processo di progettazione e sviluppo di un sito web per posizionarsi bene nei risultati dei motori di ricerca. Puoi considerarlo come la parte tecnica del marketing online poiché aiuta a promuovere il tuo sito web ma... richiede anche alcune conoscenze e competenze tecniche. Ad ogni modo, non preoccuparti perché non è scienza missilistica :)"
+
+	},
+  {
+    "o": "So we are referring to the collection of techniques that allow our website to get more traffic from search engines (Google, Yahoo, Microsoft etc).",
+   	"t": "Ci riferiamo quindi all'insieme di tecniche che permettono al nostro sito web di ottenere più traffico dai motori di ricerca (Google, Yahoo, Microsoft ecc.)."
+
+	},
+  {
+    "o": "SEO can be divided into two main areas: off-page SEO – this is the work we do externally from our website and on-page SEO – these are the changes we make on our website.",
+   	"t": "La SEO può essere divisa in due aree principali: SEO off-page – questo è il lavoro che svolgiamo esternamente al nostro sito web e SEO on-page – queste sono le modifiche che apportiamo sul nostro sito web."
+
+	},
+  {
+    "o": "And just to make sure we are all on the same page … when we say SEO we don’t mean purchasing the number #1 sponsored link through Google Adwords. Purchasing sponsored links is more in the area of PPC (Pay Per Click). SEO is also not ranking #1 for our company's name - search engines are usually smart enough to give you the first rank for your company name by default (it might take some time to scan your website though).",
+   	"t": "E giusto per essere sicuri che siamo tutti sulla stessa lunghezza d’onda… quando diciamo SEO non intendiamo l’acquisto del link sponsorizzato numero 1 tramite Google Adwords. L'acquisto di link sponsorizzati rientra più nell'area del PPC (Pay Per Click). Inoltre, la SEO non è al primo posto per il nome della nostra azienda: i motori di ricerca sono solitamente abbastanza intelligenti da darti il primo posto per il nome della tua azienda per impostazione predefinita (potrebbe tuttavia volerci un po' di tempo per scansionare il tuo sito web)."
+
+	},
+  {
+    "o": "We are using SEO to improve the volume and quality of traffic to our website from search engines. SEO is a very important technique for any website willing to get more traffic.",
+   	"t": "Utilizziamo la SEO per migliorare il volume e la qualità del traffico verso il nostro sito web dai motori di ricerca. La SEO è una tecnica molto importante per qualsiasi sito web che desideri ottenere più traffico."
+
+	},
+  {
+    "o": "With everyone using the internet to obtain information, SEO became a very important part in the last years to attract visitors to our website through search engines. Ideally, with SEO we want our website to appear higher in search engines results for certain keywords (that are related to the topic of your website) which will result in a higher volume and quality of visitors.",
+   	"t": "Dato che tutti utilizzano Internet per ottenere informazioni, la SEO è diventata una parte molto importante negli ultimi anni per attirare visitatori sul nostro sito Web attraverso i motori di ricerca. Idealmente, con la SEO vogliamo che il nostro sito web appaia più in alto nei risultati dei motori di ricerca per determinate parole chiave (correlate all'argomento del tuo sito web), il che si tradurrà in un volume e una qualità più elevati di visitatori."
+
+	},
+  {
+    "o": "If we want to do SEO right, there are many factors to think about. It is import to understand how search engines work and how they look at our website. Then we need to change our website for the keywords we want to rank well by changing the content and titles. Afterwards we need start applying backlinks strategies and keep track of our progress by using monitoring changes. This manual is a great start for learning SEO and following the recommendations can help you get higher rankings and more quality traffic to your website!",
+   	"t": "Se vogliamo fare bene la SEO, ci sono molti fattori a cui pensare. È importante capire come funzionano i motori di ricerca e come guardano il nostro sito web. Quindi dobbiamo modificare il nostro sito Web per le parole chiave che vogliamo posizionare bene modificando il contenuto e i titoli. Successivamente dobbiamo iniziare ad applicare strategie di backlink e tenere traccia dei nostri progressi utilizzando il monitoraggio delle modifiche. Questo manuale è un ottimo inizio per imparare la SEO e seguire i consigli può aiutarti a ottenere posizionamenti più alti e più traffico di qualità sul tuo sito web!"
+
+	},
+  {
+    "o": "It is important to remember that search engines are not humans but text-driven computers. Search engines do not care about how our website looks but more on the content it has. The main processes of search engines are crawling, indexing, and retrieving process.",
+   	"t": "È importante ricordare che i motori di ricerca non sono esseri umani ma computer gestiti da testo. I motori di ricerca non si preoccupano dell’aspetto del nostro sito web ma più del contenuto che ha. I processi principali dei motori di ricerca sono il processo di scansione, indicizzazione e recupero."
+
+	},
+  {
+    "o": "Crawling",
+   	"t": "Strisciando"
+
+	},
+  {
+    "o": "the websites are crawled by the search engine crawlers (Google bot in the case of Google). This means the crawler will look at the text on a website and looks for links to different pages from that website.",
+   	"t": "i siti web vengono sottoposti a scansione dai crawler dei motori di ricerca (Google bot nel caso di Google). Ciò significa che il crawler esaminerà il testo su un sito Web e cercherà collegamenti a pagine diverse di quel sito Web."
+
+	},
+  {
+    "o": "Indexing",
+   	"t": "Indicizzazione"
+
+	},
+  {
+    "o": "creating index for all the fetched web pages and keeping them in a database from where it can later be fetched. Essentially, the process of indexing is identifying the words and expressions that best describe the page and assigning the page to particular keywords. This is also why it is important we decide which keywords we want to promote and optimize our website for.",
+   	"t": "creando un indice per tutte le pagine Web recuperate e conservandole in un database da dove possono essere successivamente recuperate. Essenzialmente, il processo di indicizzazione consiste nell'identificare le parole e le espressioni che meglio descrivono la pagina e nell'assegnare la pagina a particolari parole chiave. Questo è anche il motivo per cui è importante decidere per quali parole chiave vogliamo promuovere e ottimizzare il nostro sito web."
+
+	},
+  {
+    "o": "Retrieving Process",
+   	"t": "Processo di recupero"
+
+	},
+  {
+    "o": "when a search engine user looks for keywords their search strings will be matched to the index database and the search engine will return a list of best-matching pages (websites). We can have million or even billion of pages will be matched to the search string and that is why the search engine calculates which pages are the most relevant for our search.",
+   	"t": "quando un utente di un motore di ricerca cerca parole chiave, le sue stringhe di ricerca verranno abbinate al database dell'indice e il motore di ricerca restituirà un elenco delle pagine (siti Web) con la migliore corrispondenza. Possiamo avere milioni o addirittura miliardi di pagine che verranno abbinate alla stringa di ricerca ed è per questo che il motore di ricerca calcola quali pagine sono più rilevanti per la nostra ricerca."
+
+	},
+  {
+    "o": "Before we can start optimizing our website for the search engines, we first need to know which keywords (terms) we want to target. We might want to choose 3 or 4 keywords we would like our website to rank well for. We usually refer to Google as the search engine because if you can rank well there, you'll probably rank well on the other search engines too. These keywords can be either broad or specific, but you'll want to study them before, mostly the local search volume and the competition. This research can be done with Google Keywords Tool. You can enter a term that relates to your website, e.g. flowers delivery and then see other related keywords. Obviously, we want to take those with lower competitions but with a nice amount of local searches as those can be the “quick wins”. You can monitor your keywords in the Rankings tab!",
+   	"t": "Prima di poter iniziare a ottimizzare il nostro sito web per i motori di ricerca, dobbiamo prima sapere quali parole chiave (termini) vogliamo scegliere come target. Potremmo scegliere 3 o 4 parole chiave per le quali vorremmo che il nostro sito web si posizionasse bene. Di solito ci riferiamo a Google come al motore di ricerca perché se riesci a posizionarti bene lì, probabilmente ti classificherai bene anche sugli altri motori di ricerca. Queste parole chiave possono essere generiche o specifiche, ma ti consigliamo di studiarle prima, soprattutto il volume di ricerca locale e la concorrenza. Questa ricerca può essere effettuata con lo Strumento Parole Chiave di Google. Puoi inserire un termine correlato al tuo sito web, ad es. consegna fiori e quindi visualizzare altre parole chiave correlate. Ovviamente, vogliamo prendere quelli con una concorrenza inferiore ma con una buona quantità di ricerche locali poiché queste possono essere le “vittorie rapide”. Puoi monitorare le tue parole chiave nella scheda Classifiche!"
+
+	},
+  {
+    "o": "Choosing the right keywords is very important also for the next steps as “Content is the King”. Content is probably the biggest driving force to high ranking. It is extremely important to have a descent amount of quality content containing our keywords and relevant text for our keywords. Trust the search engines that they will know if you just “plant” your keywords in a text which is not related to it. It’s obvious that users love fresh content, but search engines do as well. Generally, when a website is frequently updated, this increases the probability that the search engines will revisit the site sooner.",
+   	"t": "Scegliere le parole chiave giuste è molto importante anche per i passi successivi in quanto “Il contenuto è il re”. Il contenuto è probabilmente la più grande forza trainante per un posizionamento elevato. È estremamente importante avere una quantità discreta di contenuti di qualità contenenti le nostre parole chiave e testo pertinente per le nostre parole chiave. Abbi fiducia nei motori di ricerca che sapranno se semplicemente “pianti” le tue parole chiave in un testo che non è correlato ad esso. È ovvio che gli utenti amano i contenuti nuovi, ma lo stesso vale per i motori di ricerca. In genere, quando un sito Web viene aggiornato frequentemente, ciò aumenta la probabilità che i motori di ricerca visitino nuovamente il sito prima."
+
+	},
+  {
+    "o": "Linking is a very important part of our SEO. This is part of the off-page SEO. Websites need to be linked to if they want to be found on the internet and gain traffic. When a website is newly created it can take some time to be indexed in the search engines. Having links to from other websites makes this process much faster but of course it has to be balanced and not too many links and too fast. Search engines think the more websites linking to your webpage, the more important your webpage will be. It is also very important to get quality backlinks as it improves the importance of your website. There are 3 types of links:",
+   	"t": "Il collegamento è una parte molto importante del nostro SEO. Questo fa parte del SEO off-page. I siti web devono essere collegati se vogliono essere trovati su Internet e guadagnare traffico. Quando un sito web è appena creato può richiedere del tempo per essere indicizzato nei motori di ricerca. Avere collegamenti ad altri siti Web rende questo processo molto più veloce ma ovviamente deve essere bilanciato e non troppi collegamenti e troppo veloci. I motori di ricerca pensano che più siti web si collegano alla tua pagina web, più importante sarà la tua pagina web. È anche molto importante ottenere backlink di qualità poiché migliora l’importanza del tuo sito web. Esistono 3 tipi di collegamenti:"
+
+	},
+  {
+    "o": "Inbound links",
+   	"t": "Collegamenti in entrata"
+
+	},
+  {
+    "o": "When an external website links to our page.",
+   	"t": "Quando un sito web esterno si collega alla nostra pagina."
+
+	},
+  {
+    "o": "Outbound links",
+   	"t": "Collegamenti in uscita"
+
+	},
+  {
+    "o": "When linking from our website to another page.",
+   	"t": "Quando ci si collega dal nostro sito Web a un'altra pagina."
+
+	},
+  {
+    "o": "Internal links",
+   	"t": "Collegamenti interni"
+
+	},
+  {
+    "o": "When linking within our website to all the pages.",
+   	"t": "Quando ci si collega all'interno del nostro sito Web a tutte le pagine."
+
+	},
+  {
+    "o": "Web site Crawler will go to a site again and again whose ranking in Search Engine is high. You can verify this fact by putting your site on a high rank site. If your site link is available on a high rank web site then you have 99.99% chances that you site will be indexed with-in 24Hrs.",
+   	"t": "Il crawler del sito Web visiterà ripetutamente un sito il cui posizionamento nel motore di ricerca è elevato. Puoi verificare questo fatto inserendo il tuo sito in un sito di alto rango. Se il collegamento al tuo sito è disponibile su un sito Web di alto livello, hai il 99,99% di probabilità che il tuo sito venga indicizzato entro 24 ore."
+
+	},
+  {
+    "o": "What can we do to improve?",
+   	"t": "Cosa possiamo fare per migliorare?"
+
+	},
+  {
+    "o": "Submit your site in popular search engines manually. Don't go for automated submission.",
+   	"t": "Segnala manualmente il tuo sito nei motori di ricerca più diffusi. Non optare per l'invio automatico."
+
+	},
+  {
+    "o": "Provide high quality content - people will naturally link to your site if you have what they want and couldn’t find it elsewhere.",
+   	"t": "Fornisci contenuti di alta qualità: le persone si collegheranno naturalmente al tuo sito se hai ciò che desiderano e non riescono a trovarlo altrove."
+
+	},
+  {
+    "o": "If you have personal relations with other webmasters, try to leverage it. Put your site link on their sites. One way links often count for more than reciprocal links.",
+   	"t": "Se hai rapporti personali con altri webmaster, prova a sfruttarlo. Metti il link del tuo sito sui loro siti. I collegamenti unidirezionali spesso contano più dei collegamenti reciproci."
+
+	},
+  {
+    "o": "Try to find Link Exchange Program. Find websites that are doing the same business and contact them for links exchange.",
+   	"t": "Prova a trovare il Programma di scambio link. Trova siti Web che svolgono la stessa attività e contattali per lo scambio di collegamenti."
+
+	},
+  {
+    "o": "A landing page, sometimes called a destination page, is the web page that visitors arrive at after they click the link on a search engine results page. A landing page can be the first page of a website that was advertised on the search engine results page, or from one of the natural results from the search query. This page generally displays logical information, usually something that pertains directly to the keywords searched, or has the keywords directly on the page.",
+   	"t": "Una pagina di destinazione, a volte chiamata pagina di destinazione, è la pagina web a cui arrivano i visitatori dopo aver fatto clic sul collegamento nella pagina dei risultati di un motore di ricerca. Una pagina di destinazione può essere la prima pagina di un sito web pubblicizzato nella pagina dei risultati del motore di ricerca o da uno dei risultati naturali della query di ricerca. Questa pagina generalmente visualizza informazioni logiche, solitamente qualcosa che riguarda direttamente le parole chiave cercate o che contiene le parole chiave direttamente sulla pagina."
+
+	},
+  {
+    "o": "It is very important to optimize your landing pages for 2 reasons: first, optimized landing page are likely to get higher ranking by the search engines. Second, attractive landing pages are likely to lead to conversion by your potential customers. These conversion may differ from one website to another – you probably know what means a “success” in your website. It can be someone that left his details in the contact us form, someone who bought a product, someone who left a comment to your article etc.",
+   	"t": "Una pagina di destinazione, a volte chiamata pagina di destinazione, è la pagina web a cui arrivano i visitatori dopo aver fatto clic sul collegamento nella pagina dei risultati di un motore di ricerca. Una pagina di destinazione può essere la prima pagina di un sito web pubblicizzato nella pagina dei risultati del motore di ricerca o da uno dei risultati naturali della query di ricerca. Questa pagina generalmente visualizza informazioni logiche, solitamente qualcosa che riguarda direttamente le parole chiave cercate o che contiene le parole chiave direttamente sulla pagina."
+
+	},
+  {
+    "o": "By creating specific pages for different marketing channels, you’ll be able to customize your marketing message, which will provide revenue lifts. There are plenty of tutorials out there how to optimize and design landing pages so go ahead and try them.",
+   	"t": "Creando pagine specifiche per diversi canali di marketing, sarai in grado di personalizzare il tuo messaggio di marketing, che aumenterà le entrate. Ci sono molti tutorial là fuori su come ottimizzare e progettare le pagine di destinazione, quindi vai avanti e provali."
+
+	},
+  {
+    "o": "As in every other type of business, it is always good (to some extent) to learn who are our competitors, what do they do and offer, how their web pages look like … and in the case of online marketing also make some co-operations with them. We can learn a lot and also get more traffic by working with them:",
+   	"t": "Come in ogni altro tipo di attività, è sempre bene (in una certa misura) sapere chi sono i nostri concorrenti, cosa fanno e cosa offrono, come appaiono le loro pagine web… e nel caso del marketing online anche fare qualche co- operazioni con loro. Possiamo imparare molto e anche ottenere più traffico lavorando con loro:"
+
+	},
+  {
+    "o": "As we stated before, back links are very important to generate traffic. If we address our competitors and suggest some sort of links exchange, we can get a high quality back link to our website. It is high quality because our competitor is in the same field as we do so the search engine see that as a relevant link.",
+   	"t": "Come abbiamo affermato prima, i collegamenti a ritroso sono molto importanti per generare traffico. Se ci rivolgiamo ai nostri concorrenti e suggeriamo una sorta di scambio di link, possiamo ottenere un link di ritorno di alta qualità al nostro sito web. È di alta qualità perché il nostro concorrente opera nel nostro stesso campo, quindi il motore di ricerca lo vede come un collegamento pertinente."
+
+	},
+  {
+    "o": "It is also important to see where are our competitors ranked for the same keywords we are promoting and also to see maybe other keywords they are promoting and we haven’t thought about.",
+   	"t": "È anche importante vedere dove sono classificati i nostri concorrenti per le stesse parole chiave che stiamo promuovendo e anche vedere forse altre parole chiave che stanno promuovendo e a cui non abbiamo pensato."
+
+	},
+  {
+    "o": "Once your website is already up and running, it is very important to monitor the traffic and see how to optimize it. Google analytics provides you with lots of rich data about the activity in your website and also some details about the customers. You can see which keywords brought him to your website and try to optimize those keywords.",
+   	"t": "Una volta che il tuo sito web è già attivo e funzionante, è molto importante monitorare il traffico e vedere come ottimizzarlo. Google Analytics ti fornisce molti dati dettagliati sull'attività nel tuo sito web e anche alcuni dettagli sui clienti. Puoi vedere quali parole chiave lo hanno portato al tuo sito web e provare a ottimizzare quelle parole chiave."
+
+	},
+  {
+    "o": "Common Misktakes",
+   	"t": "Errori comuni"
+
+	},
+  {
+    "o": "Targeting the wrong keywords",
+   	"t": "Targeting per le parole chiave sbagliate"
+
+	},
+  {
+    "o": "This is probably most common mistake. We might find the right keywords that describe our web page, but the users use other keywords (for instance, we decided to promote the keyword ‘flowers shop’ but users would search for ‘flowers delivery’. We must think like the user does, and see what keywords are used more than others.",
+   	"t": "Questo è probabilmente l'errore più comune. Potremmo trovare le parole chiave giuste che descrivono la nostra pagina web, ma gli utenti utilizzano altre parole chiave (ad esempio, abbiamo deciso di promuovere la parola chiave 'negozio di fiori' ma gli utenti cercherebbero "consegna fiori". Dobbiamo pensare come fa l'utente, e vedere quali parole chiave vengono utilizzate più di altre."
+
+	},
+  {
+    "o": "Lack of keywords in the content",
+   	"t": "Mancanza di parole chiave nel contenuto"
+
+	},
+  {
+    "o": "Once we found the keywords we want to promote, we have to make sure we embed them in the content of our website, especially in the title of the pages. We could write articles and have these keywords in them for instance.",
+   	"t": "Una volta trovate le parole chiave che vogliamo promuovere, dobbiamo assicurarci di incorporarle nei contenuti del nostro sito web, soprattutto nel titolo delle pagine. Potremmo scrivere articoli e inserire queste parole chiave, ad esempio."
+
+	},
+  {
+    "o": "Irrelevant backlinks",
+   	"t": "Backlink irrilevanti"
+
+	},
+  {
+    "o": "it is very important to have other websites linking to our website but we have to make sure we get high quality links. For example, if we have a flowers delivery shop and we get a link from cars website it is not as ideal as to get a link from a gifts website (as flowers are somehow related to gifts).",
+   	"t": "è molto importante avere altri siti Web collegati al nostro sito Web, ma dobbiamo assicurarci di ottenere collegamenti di alta qualità. Ad esempio, se abbiamo un negozio di consegna di fiori e riceviamo un collegamento dal sito Web di automobili, non è l'ideale come ottenere un collegamento da un sito Web di regali (poiché i fiori sono in qualche modo correlati ai regali)."
+
+	},
+  {
+    "o": "Spamming our keywords",
+   	"t": "Spammando le nostre parole chiave"
+
+	},
+  {
+    "o": "of course we need to embed the keywords we want to promote in our website, but we have to do it in a fashionly way and not to spam our website with that keyword too much.",
+   	"t": "ovviamente dobbiamo incorporare le parole chiave che vogliamo promuovere nel nostro sito web, ma dobbiamo farlo in modo alla moda e non spammare troppo il nostro sito web con quella parola chiave."
+   },
+  {
+    "o": "Share your Guest Blog",
+   	"t": "Condividi il tuo post sul blog"
+
+	} ,
+  {
+    "o": "Boost TRAFFIC",
+   	"t": "Aumenta il TRAFFICO"
+   },
+  {
+    "o": "Get new Backlinks & Optimize your Landing Pages",
+   	"t": "Ottieni nuovi backlink e ottimizza le tue pagine di destinazione"
+   },
+  {
+    "o": "Monthly Backlinks with our new 'Best' Package",
+   	"t": "Backlink mensili con il nostro nuovo pacchetto 'Migliore'."
+   },
+  {
+    "o": "The keywords you want to promote - you can add more keyword in 'My Keywords' tab, and you can use the table below to find the best keywords for your website.",
+   	"t": "Le parole chiave che desideri promuovere: puoi aggiungere altre parole chiave nella scheda 'Le mie parole chiave' e utilizzare la tabella seguente per trovare le migliori parole chiave per il tuo sito web."
+   },
+  {
+    "o": "Average Referring Domain Rank",
+   	"t": "Rango medio del dominio di riferimento"
+   },
+  {
+    "o": "Average Referring Page Rank",
+   	"t": "Rank medio della pagina di riferimento"
+   } ,
+  {
+    "o": "Listed Broken Backlinks",
+   	"t": "Backlink interrotti elencati"
+   },
+  {
+    "o": "Total Anchors",
+   	"t": "Ancore totali"
+   },
+  {
+    "o": "Listed Anchors",
+   	"t": "Ancore elencate"
+   },
+  {
+    "o": "Backlinks from Top 5 Anchors",
+   	"t": "Backlink dai 5 migliori ancoraggi"
+   },
+  {
+    "o": "Average Referring Domain Rank from Top 5",
+   	"t": "Rango medio del dominio di riferimento dai primi 5"
+   },
+  {
+    "o": "Listed Linked Pages",
+   	"t": "Pagine collegate elencate"
+   },
+  {
+    "o": "Total Linked Pages",
+   	"t": "Pagine collegate totali"
+   },
+  {
+    "o": "Backlinks to Top 5 Pages",
+   	"t": "Backlink alle prime 5 pagine"
+   },
+  {
+    "o": "Referring Domains Rank to Top 5 Pages",
+   	"t": "I domini di riferimento si posizionano nelle prime 5 pagine"
+   },
+  {
+    "o": "Referring MainDomains",
+   	"t": "Riferimento a MainDomains"
+   },
+  {
+    "o": "Referring Subnets",
+   	"t": "Sottoreti di riferimento"
+   },
+  {
+    "o": "Referring Domain",
+   	"t": "Dominio di riferimento"
+   } 
+]

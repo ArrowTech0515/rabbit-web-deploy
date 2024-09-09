@@ -1,0 +1,356 @@
+<html>
+  <head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+      /* font-family: 'Poppins', sans-serif; */
+    }
+
+    html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+    }
+
+    p {
+      margin:0px;
+    }
+   
+    .a-container {
+      max-width: 900px;
+      margin:auto;
+    }
+
+    div.header {
+      
+      height: 600px;
+      background-size: cover;
+      background-color: #c7eaff;
+      background-image: url('../images/newsletter/bg-header.png');
+    }
+    div.header-main {
+      background-image: url('../images/newsletter/rocket.png');
+      padding: 20px;
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 150px;
+    }
+    div.body {
+       font-family: 'Poppins', sans-serif;
+    }
+    div.footer {
+      background-image: url('../images/newsletter/bg-footer.png');
+      height: 150px;
+      background-size: cover;
+    }
+    
+
+    .font-black {
+      font-weight: 900;
+    }
+    .m-auto {
+        margin: auto;
+    }
+    .px-20 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .justify-between {
+        justify-content: space-between;
+    }
+    .w-full {
+        width: 100%;
+    }
+    .flex {
+        display: flex;
+    }
+    .w-52 {
+        width: 13rem;
+    }
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+   
+    .text-\[\#0f0530\] {
+        --tw-text-opacity: 1;
+        color: rgb(15 5 48 / var(--tw-text-opacity));
+    }
+    .font-black {
+        font-weight: 900;
+    }
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .mt-10 {
+        margin-top: 2.5rem;
+    }
+    blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+        margin: 0;
+    }
+    .bg-\[\#c7eaff\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(199 234 255 / var(--tw-bg-opacity));
+    }
+
+   
+    .px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    
+    .bg-\[\#ffffff\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+    .mt-\[-96\] {
+        margin-top: -196;
+    }
+   
+    .items-center {
+        align-items: center;
+    }
+    .block {
+          display: block;
+    }
+    .mb-10 {
+      margin-bottom: 2.5rem;
+    }
+    .mb-12 {
+        margin-bottom: 3rem;
+    }
+  
+    .w-28 {
+        width: 7rem;
+    }
+    .h-28 {
+        height: 7rem;
+    }
+    .m-auto {
+        margin: auto;
+    }
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+    
+  .mt-2 {
+      margin-top: 0.5rem;
+  }
+  .text-\[\#35A1EE\] {
+    --tw-text-opacity: 1;
+    color: rgb(53 161 238 / var(--tw-text-opacity));
+  }
+  .font-bold {
+      font-weight: 700;
+  }
+  .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+  }
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+ }
+ .hidden {
+    display: none;
+  }
+  .text-center {
+      text-align: center;
+  }
+  .mb-16 {
+      margin-bottom: 4rem;
+  }
+  .text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+  }
+  .text-center {
+      text-align: center;
+  }
+  .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+  }
+  .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+  .bg-\[\#35A1EE\] {
+      --tw-bg-opacity: 1;
+      background-color: rgb(53 161 238 / var(--tw-bg-opacity));
+  }
+  .border {
+      border-width: 1px;
+  }
+  .rounded-2xl {
+      border-radius: 1rem;
+  }
+  .cursor-pointer {
+      cursor: pointer;
+  }
+  .w-56 {
+    width: 14rem;
+}
+
+  @media (min-width: 768px)
+    {
+    .md\:text-6xl {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
+    }
+    @media (min-width: 640px) {
+    .sm\:text-5xl {
+        font-size: 3rem;
+        line-height: 1;
+      }
+      .px-20 {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+     }
+    }
+    @media (min-width: 640px) {
+        .sm\:mt-\[-50\] {
+            margin-top: -80px;
+        }
+    }
+    @media (min-width: 640px) {
+      .sm\:flex {
+          display: flex;
+      }
+    }
+    @media (min-width: 640px)
+    {
+      .sm\:hidden {
+          display: none;
+      }
+    }
+    @media (min-width: 640px)
+    {
+      .sm\:block {
+          display: block;
+      }
+    }
+    @media (min-width: 640px)
+    {
+      .sm\:mb-20 {
+          margin-bottom: 5rem;
+      }
+    }
+    @media (min-width: 640px){
+      .sm\:w-40 {
+          width: 10rem;
+      }
+    }
+    @media (min-width: 640px) {
+      .sm\:h-40 {
+          height: 10rem;
+       }
+    }
+    @media (min-width: 640px){
+      .sm\:ml-10 {
+          margin-left: 2.5rem;
+      }
+      .sm\:mr-10 {
+          margin-right: 2.5rem;
+      }
+    }
+    @media (min-width: 640px) {
+      .sm\:mt-0 {
+          margin-top: 0px;
+      }
+    }
+    
+
+  </style>
+  <body>
+    <div class="a-container m-auto">
+          <div class="header  px-20 py-6 ">
+            <div class="w-full flex justify-between header-main" >
+              <div class="w-full">
+                <div>
+                  <!-- <p class="text-black text-2xl sm:text-3xl md:text-4xl font-bold">Links4u.net</p>
+                   -->
+                   <img src="https://www.rabbitseo.com/images/mail/logo.png" class="w-52 "/>
+                </div>
+                <p class="text-[#0f0530] font-black mt-10 mb-10 text-4xl sm:text-5xl md:text-6xl"><span
+                    class="text-[#35A1EE]">Learn</span> How To <br/><span
+                      class="text-[#35A1EE]">Boost</span> Traffic <br/>To Your <span
+                        class="text-[#35A1EE]">Website</span></p>
+                </div>
+                <!-- <div class="ml-20">
+                  <img src="./img/rocket.png" style="width:150px; margin:auto; float:right;"/>
+                </div> -->
+            </div>
+          </div>
+
+          <div class="body bg-[#ffffff] mt-[-96] sm:mt-[-50] px-10">
+            <div class="block sm:flex justify-between items-center mb-12 sm:mb-20">
+              <img src="https://www.rabbitseo.com/images/mail/link-circle-1.png" class="block sm:hidden m-auto  w-28 sm:w-40 h-28 sm:h-40">
+              
+              <img src="https://www.rabbitseo.com/images/mail/link-circle-1.png"
+               class="hidden sm:block m-auto sm:m-left w-28 sm:w-40 h-28 sm:h-40">
+              <div class="mt-2 sm:mt-0 sm:ml-10">
+                <p class="text-2xl font-bold text-[#35A1EE]">Use targeted keywords in all the right places - </p>
+                <p class="text-xl mt-2">Whilst the motivation should always be humans first, search engines second, the bedrock of this whole process is keywords. Not only do they get to the heart of what visitors and Google are looking for by isolating common search terms, but SEO also drives 1000%+ more traffic than organic social media, which itself dominates over half of all online traffic. So, if keywords are at the heart of SEO, they should be at the heart of everything you do, too.</p>
+              </div>
+            </div>
+            <div class="block sm:flex justify-between items-center mb-12 sm:mb-20">
+              <img src="https://www.rabbitseo.com/images/mail/link-circle-2.png" class="block sm:hidden m-auto  w-28 sm:w-40 h-28 sm:h-40">
+              <div class="w-full sm:mr-10">
+                <p class="text-2xl font-bold text-[#35A1EE]">Focus on building relevant links - </p>
+                <p class="text-xl mt-2">
+                  Another key aspect in building domain reputation/site authority is link-building. We've already touched upon why outbound/external links are important: you not only enhance the information you are providing but you can receive reciprocal backlinks through outreach, etc.
+                </p>
+
+              </div>
+              <img src="https://www.rabbitseo.com/images/mail/link-circle-2.png"
+              class="hidden sm:block m-auto sm:m-right w-28 sm:w-40 h-28 sm:h-40" >
+            </div>
+            <div class="block sm:flex justify-between items-center mb-12 sm:mb-20">
+              <img src="https://www.rabbitseo.com/images/mail/link-circle-3.png" class="block sm:hidden m-auto  w-28 sm:w-40 h-28 sm:h-40">
+              
+              <img src="https://www.rabbitseo.com/images/mail/link-circle-3.png"
+                class="hidden sm:block m-auto  sm:m-left w-28 sm:w-40 h-28 sm:h-40">
+              <div class="mt-2 sm:mt-0 sm:ml-10">
+                <p class="text-2xl font-bold text-[#35A1EE]">Target Relevant Primary and Secondary Keywords - </p>
+                <p class="text-xl mt-2">
+                  Keyword research is the foundation of any good SEO stragety. If you know how to use keywords effectively, you can develop content that attracts more people to your website. The first step is to identify your page's primary and secondary keywords. Your primary keyword is the main focus of your content. You only need to pick one primary keyword per page. It should be relevant to what your page's focus, your brand identity, your products, and your services. Your secondary keywords support the main topic.
+                  You will probably have several of these. Often, they're more grangular than the primary keyword and represent subtopics you're covering throughout an article. Try to include them naturally in your content, but don't force them if they don't fit.
+                </p>
+              </div>
+            </div>
+            <div class="m-auto text-center mb-16">
+             <p class="cursor-pointer m-auto text-2xl text-white px-8 py-2 w-56 rounded-2xl  text-center border bg-[#35A1EE]">Learn More ></p>
+            </div>
+          </div>
+
+          <div class="footer">
+
+          </div>
+
+        </div>
+      </body>
+      <script>
+  </script>
+    </html>

@@ -1,0 +1,210 @@
+<form class="form-horizontal" id="createNewsletter">
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Newsletter Name*</label>
+            <input name="newsletterName" type="text" value="rabbitBlogPostsNewsletter" class="form-control form-control-lg" placeholder="e.g. Rabbit-SummerSale or EasySEO-Jan-News"/>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Condition* <br /><span class="text-success" id="condCount" /></label>
+            <select name="cond" onchange="checkCondCount(this)" multiple="multiple" class="form-control form-select js-example-placeholder-multiple" >
+                <option value="isRabbitUser is true and">Rabbit User</option>
+                <option value="isSeolyUser is true and">SEOly User</option>
+                <option value="isLinks4uUser is true and">Links4u User</option>
+                <option value="isEasySeoUser is true and">EasySEO User</option>
+                <option value="is123contentUser is true and">123Content User</option>
+                <option value="wixUser is true and">Wix User</option>
+                <option value="shopifyUser is true and">Shopify User</option>
+                <option value="internalUser is true and">Internal User</option>
+                <option value="isPayingNow = false and">Free User</option>
+                <option value="isWasPaying is true and">Downgraded Users</option>
+                <option value="isPayingNow is true and">Paying</option>
+                <option value="isPayingNowAnnual is true and">Paying Annual</option>
+                <option value="unsubscribeRabbit = false and">Rabbit Subscribed</option>
+                <option value="unsubscribeRabbit is true and">Rabbit Unsubscribed</option>
+                <option value="unsubscribeSeoly = false and">SEOly Subscribed</option>
+                <option value="unsubscribeSeoly is true and">SEOly Unsubscribed</option>
+                <option value="unsubscribeEasyseo = false and">EasySEO Subscribed</option>
+                <option value="unsubscribeEasyseo is true and">EasySEO Unsubscribed</option>
+                <option value="unsubscribeLinks4u = false and">Links4 Subscribed</option>
+                <option value="unsubscribeLinks4u is true and">Links4 Unsubscribed</option>
+                <option value="unsubscribe123content = false and">123Content Subscribed</option>
+                <option value="unsubscribe123content is true and">123Content Unsubscribed</option>
+            </select>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">From Name*</label>
+            <input name="from" type="text" class="form-control form-control-lg" value="Rabbit SEO" placeholder="e.g. Rabbit Support"/>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">From Name2 (AB Testing)</label>
+            <input name="from2" type="text" class="form-control form-control-lg" value="#agentName from Rabbit SEO" placeholder="e.g. #agentName from Rabbit Support"/>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">App Domain*</label>
+            <select id="appDomainSelectNewsletter" name="appDomainName" class="form-control form-select js-example-placeholder-single">
+            </select>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Subject*</label>
+            <select name="subject" class="form-control form-select js-example-placeholder-single" >
+                <option value="🚀 Mastering SEO in 2024: Using Blog Posts and Backlinks for Ultimate Success! 🚀">🚀 Mastering SEO in 2024: Using Blog Posts & Backlinks for Ultimate Success! 🚀</option>
+                <option value="Nice Holidays Gift for #websiteName">Nice Holidays Gift for #websiteName</option>
+                <option value="Free Discount for #websiteName">Free Discount for #websiteName</option>
+                <option value="Want to Publish your website #websiteName?">Want to Publish your website #websiteName?</option>
+                <option value="How to Boost Traffic for #websiteName?">How to Boost Traffic for #websiteName?</option>
+                <option value="Small gift for #websiteName">Small gift for #websiteName</option>
+                <option value="Boost Your SEO with Our New 50% Exclusive Offer">Boost Your SEO with Our New 50% Exclusive Offer</option>
+                <option value="Get 50% OFF - Limited Offer">Get 50% OFF - Limited Offer</option>
+            </select>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Subject2 (AB Testing)</label>
+            <select name="subject2" class="form-control form-select js-example-placeholder-single" >
+                <option value="🚀 2024 SEO Guide for #websiteName - Unleashing the Power of Blog Posts and Backlinks 🚀">🚀 2024 SEO Guide for #websiteName - Using Blog Posts & Backlinks for Ultimate Success 🚀</option>
+                <option value="🚀 2024 SEO Guide for #websiteName - Unleashing the Power of Blog Posts and Backlinks 🚀">🚀 2024 SEO Guide for #websiteName - Unleashing the Power of Blog Posts and Backlinks 🚀</option>
+                <option value="Nice Holidays Gift for #websiteName">Nice Holidays Gift for #websiteName</option>
+                <option value="Free Discount for #websiteName">Free Discount for #websiteName</option>
+                <option value="Want to Publish your website #websiteName?">Want to Publish your website #websiteName?</option>
+                <option value="How to Boost Traffic for #websiteName?">How to Boost Traffic for #websiteName?</option>
+                <option value="Small gift for #websiteName">Small gift for #websiteName</option>
+                <option value="Get 50% OFF - Limited Offer">Get 50% OFF - Limited Offer</option>
+                <option value="Get 50% OFF - Limited Offer for #websiteName">Get 50% OFF - Limited Offer for #websiteName</option>
+            </select>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Template*</label>
+            <select name="template" class="form-control form-select js-example-placeholder-single" >
+                <option value="rabbitGeneralNewsletter.ftl">rabbitGeneralNewsletter.ftl</option>
+                <option value="rabbitBlogPostsNewsletter.ftl">rabbitBlogPostsNewsletter.ftl</option>
+                <option value="blackFriday.ftl">blackFriday.ftl</option>
+                <option value="blackFriday2.ftl">blackFriday2.ftl</option>
+                <option value="customMsg.ftl">customMsg.ftl</option>
+                <option value="newsletter_rabbit.html">newsletter_rabbit.html</option>
+                <option value="newsletter_links4u.html">newsletter_links4u.html</option>
+                <option value="newsletter_seoly.html">newsletter_seoly.html</option>
+                <option value="newsletter_easyeso.html">newsletter_easyeso.html</option>
+                <option value="newsletter_123content.html">newsletter_123content.html</option>
+                <option value="newsletter_easyeso_new_unlock.html">newsletter_easyeso_new_unlock.ftl</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Template 2 (AB Testing)</label>
+            <select name="template2" class="form-control form-select js-example-placeholder-single" >
+                <option value="rabbitGeneralNewsletter.ftl">rabbitGeneralNewsletter.ftl</option>
+                <option value="rabbitBlogPostsNewsletter.ftl">rabbitBlogPostsNewsletter.ftl</option>
+                <option value="blackFriday.ftl">blackFriday.ftl</option>
+                <option value="blackFriday2.ftl">blackFriday2.ftl</option>
+                <option value="customMsg.ftl">customMsg.ftl</option>
+                <option value="newsletter_rabbit.html">newsletter_rabbit.html</option>
+                <option value="newsletter_links4u.html">newsletter_links4u.html</option>
+                <option value="newsletter_seoly.html">newsletter_seoly.html</option>
+                <option value="newsletter_easyeso.html">newsletter_easyeso.html</option>
+                <option value="newsletter_123content.html">newsletter_123content.html</option>
+                <option value="newsletter_easyeso_new_unlock.html">newsletter_easyeso_new_unlock.ftl</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Limit</label>
+            <input name="limit" type="number" class="form-control form-control-lg" value="50000" />
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Promo Code</label>
+            <input name="promoCode" type="text" class="form-control form-control-lg" placeholder="1308Sale"/>
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="d-md-flex justify-content-between align-items-center">
+            <label class="settingLabel">Discount</label>
+            <input name="discount" type="text" class="form-control form-control-lg" placeholder="30%"/>
+        </div>
+    </div>
+    <div class="mb-3">
+<!--        <div class="d-md-flex justify-content-between align-items-center">-->
+        <div class="">
+            <label class="settingLabel">Content</label>
+            <input id="contentHtml" name="content" type="hidden" class="form-control form-control-lg" value="I wanted to ask if I can offer you a free blog post to publish your website? If you like it we have this week a sale of 30% on all our plans :)" />
+<!--            <input id="contentHtml" name="content" type="text" class="form-control form-control-lg" value="I wanted to ask if I can offer you a free blog post to publish your website? If you like it we have this week a sale of 30% on all our plans :)" />-->
+            <div id="summernote">
+                <div class=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <input type="hidden" id="sendTest" name="test" />
+        <div class="d-md-flex justify-content-between align-items-center">
+            <button type="button" onclick="$('#sendTest').val('true'); $('#createNewsletterResult').html(ajaxSubmitForm('createNewsletter'))" class="btn btn-primary btn-lg pageBtn">Send Test
+            </button>
+            <button type="button" onclick="$('#sendTest').val('false'); $('#createNewsletterResult').html(ajaxSubmitForm('createNewsletter'))" style="margin-left: 20px" class="btn btn-primary btn-lg pageBtn">Submit
+            </button>
+        </div>
+        <div id="createNewsletterResult" class="text-success"></div>
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        $('#createNewsletter .form-select').select2({
+            tags: true,
+            placeholder: 'Choose from the list or type your own',
+        });
+        $('#summernote').summernote({
+            placeholder: 'Custom Content',
+            height: 420,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link']],
+                // ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ],
+            callbacks: {
+                onChange: function(contents, $editable) {
+                    $('#contentHtml').val($('#summernote').summernote('code'));
+                }
+            }
+        });
+        $.getJSON(apiUrl + 'miniListJsonAppDomain', function (data) {
+            for (let i = 0; i < data['list'].length; i++) {
+                availableAppDomains.push(data['list'][i]['name']);
+            }
+        });
+        var appDomainSelect = $("#appDomainSelectNewsletter").select2({tokenSeparators: [',', ', ', '\n'],
+            data: availableAppDomains,
+            width: "100%",
+        });
+    });
+    function checkCondCount(obj) {
+        const val = $(obj).val();
+        console.log('val is ' + val);
+        if (val && val.length > 0) {
+            $.getJSON(apiUrl + 'countSubscribersNewsletter?cond=' + val, function (data) {
+                console.log('countSubscribersNewsletter json ' + JSON.stringify(data));
+                $('#condCount').html(data.obj + ' Subscribers');
+            });
+        }
+    }
+</script>

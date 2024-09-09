@@ -1,0 +1,345 @@
+<div class="onPageCompaireContent">
+    <div class="alert alert-primary compareIntro" role="alert">
+        Get useful insights on your competitor landing pages titles, meta descriptions tags, structure etc, but don't
+        use
+        the same content.
+    </div>
+    <div class="card nncard">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <label class="mb-2">Competitor</label>
+                    <select id="onPageCompOverviewUrlId" onchange="runOnPageCompare()"
+                            class="onPageCompOverviewSelect form-control form-select js-example-placeholder-single dropdown-toggle"></select>
+                </div>
+                <div class="col-6">
+                    <label class="mb-2">Keyword</label>
+                    <select id="onPageKeywordId" onchange="runOnPageCompare()" name="onPageKeywordId"
+                            class="onPageKeywordId form-control form-select js-example-placeholder-single  dropdown-toggle"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="onpage-compare-section card mt-3">
+        <div class="card-body loading-icon" style="display: none">
+            <div class="text-center">
+                <span><img src="/assets/img/loader.gif" alt="Loading"></span>
+            </div>
+        </div>
+        <div class="card-body onpage-compare">
+            <table class="table comparestable w-100">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th class="midtable">Competitor</th>
+                    <th>You</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Landing Page</td>
+                    <td class="midtable text-wrap">
+                        <div class="compUrl"><span class="spinner-border text-primary"></span></div>
+                    </td>
+                    <td class="text-wrap">
+                        <!--                        <div class="myUrl"><span class="spinner-border text-primary"></span></div>-->
+                        <select id="linkHrefCompare" onchange="runOnPageCompare()"
+                                class="js-example-placeholder-single"
+                                name="linkHref"></select>
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <td>Rank</td>
+                    <td class="midtable">
+                        <span class="compScore"><span class="spinner-border text-primary"></span></span>
+                    </td>
+                    <td>
+                        <span class="myScore"><span class="spinner-border text-primary"></span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td class="midtable text-wrap position-relative pe-4">
+                        <div class="compTitle"><span class="spinner-border text-primary"></span></div>
+                    </td>
+                    <td class="text-wrap position-relative pe-4">
+                        <div class="myTitle"><span class="spinner-border text-primary"></span></div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Page Content</td>
+                    <td class="midtable">
+                        <div class=" text-wrap position-relative pe-4">
+                            <span class="WordsCountDetails"></span>
+                            <span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png"
+                                                              alt="copy"/></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class=" text-wrap position-relative pe-4">
+                            <span class="myWordsCountDetails"></span>
+                            <span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png"
+                                                              alt="copy"/></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="internalLinksTooltip">Internal Links <img
+                            src="/assets/images/home_icon/material-symbols_help.png" style="height: 18px"/></span></td>
+                    <td class="midtable">
+                        <span class="compInternalLinks"></span>
+                        <span class="eyeIcon" onclick="loadPageLinks(this, 'linksIn', $('#onPageCompOverviewUrlId').val());"> <img
+                            src="assets/images/newicon/mdi_eye-outline.png" height="24" alt="icon"/> Show Links</span>
+                    </td>
+                    <td>
+                        <span class="myInternalLinks"></span> <span class="eyeIcon"
+                                                                    onclick="loadPageLinks(this, 'linksIn', $('#linkHrefCompare').val());"><img
+                            src="assets/images/newicon/mdi_eye-outline.png" height="24" alt="icon"/> Show Links</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="externalLinksTooltip">External Links <img
+                            src="/assets/images/home_icon/material-symbols_help.png" style="height: 18px"></span></td>
+                    <td class="midtable">
+                        <span class="compExternallinks"></span> <span class="eyeIcon"
+                                                                      onclick="loadPageLinks(this, 'linksOut', $('#onPageCompOverviewUrlId').val());"><img
+                            src="assets/images/newicon/mdi_eye-outline.png" height="24" alt="icon"/> Show Links</span>
+                    </td>
+                    <td>
+                        <span class="myExternallinks"></span> <span class="eyeIcon"
+                                                                    onclick="loadPageLinks(this, 'linksOut', $('#linkHrefCompare').val());"><img
+                            src="assets/images/newicon/mdi_eye-outline.png" height="24" alt="icon"/> Show Links</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Keyword Count</td>
+                    <td class="midtable">
+                        <span class="compKeywordCount"></span> encounters
+                    </td>
+                    <td>
+                        <span class="myKeywordCount"></span> encounters
+                    </td>
+                </tr>
+                <tr>
+                    <td>Keyword Density</td>
+                    <td class="midtable">
+                        <span class="compKeywordDensity"></span>%
+                    </td>
+                    <td>
+                        <span class="myKeywordDensity"></span>% 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Meta Description</td>
+                    <td class="midtable text-wrap  position-relative pe-4">
+                        <div class="compMetaDescription"><span class="spinner-border text-primary"></span></div>
+                    </td>
+                    <td class="text-wrap  position-relative pe-4">
+                        <div class="myMetaDescription"><span class="spinner-border text-primary"></span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>H1 Tag</td>
+                    <td class="midtable text-wrap  position-relative pe-4">
+                        <div class="compH1"></div>
+                    </td>
+                    <td class="text-wrap  position-relative pe-4">
+                        <div class="myH1"><span class="spinner-border text-primary"></span></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+                <h3>Upgrade to see your backlinks here</h3>
+                <p>Currently you see a demo of amazon, upgrade now to <br>
+                    see results of your website</p>
+                <button type="button">Upgrade to Premium</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        addTooltipWithSubjectToSelector('.compareIntro', 'Landing Page Comparison', onPageCompareTooltip);
+        $('.compUrl').html(competitorDomain);
+        createLandingPagesSelect();
+        loadCompsToSelect('#onPageCompOverviewUrlId', competitorDomain);
+        $.getJSON(getApiUrl('getMyJsonKeywordsPairListKeywordForWebsite?url=' + $('#inputSearchWebsite').val()), function (json) {
+            json = json['list'];
+            console.log('load keywordIdsList with ' + JSON.stringify(json));
+            const placeholder = 'Choose keywords to filter competitors';
+            $(".onPageKeywordId").select2({
+                tokenSeparators: [',', ', ', '\n'],
+                selectOnClose: true,
+                data: json,
+                width: "100%",
+                placeholder: placeholder,
+                searchInputPlaceholder: placeholder,
+                "language": {
+                    "noResults": () => 'You can only keywords from My Keywords tab (for those keywords we store competitors results)'
+                },
+            });
+            console.log('myLandingPageHref is ' + myLandingPageHref)
+            setSelectedValue(document.getElementById('linkHrefCompare'), myLandingPageHref);
+            runOnPageCompare();
+        });
+    });
+
+    function runOnPageCompare() {
+        if (!payingUser && !isTestingMode()) {
+            $('.spinner-border').remove();
+            $('.onpage-compare-section .upgradeBlock').attr("onclick", upgradeLink);
+            $('.onpage-compare-section .upgradeBlock').show();
+            $('.onpage-compare-section').css('opacity', 0.3);
+            $('.onpage-compare-section').addClass('ignoreme');
+        } else {
+            $('.loading-icon').show();
+            $('.onpage-compare').hide();
+            const compUrl = $('#onPageCompOverviewUrlId').val();
+            const myUrl = $('#linkHrefCompare').val();
+            const url = getApiUrl('getMyJsonOnpageCompareLandingPage?keyword=' + $('#onPageKeywordId').val() +
+                '&domain=' + encodeURIComponent(compUrl ? compUrl : competitorDomain) +
+                '&linkHrefCompare=' + encodeURIComponent(myUrl ? myUrl : myLandingPageHref));
+            console.log('onpage compare url ' + url)
+            $.getJSON(url, function (json) {
+                $('.loading-icon').hide();
+                $('.onpage-compare').show();
+                json = json['obj'];
+                console.log('getMyJsonOnpageCompareLandingPage ' + JSON.stringify(json));
+
+                if (json) {
+                    $('.compWordsCount').html(json['compOnPage']['wordsCount'] ? json['compOnPage']['wordsCount'] : '');
+                    const compContent = json['compOnPage']['content'] ? json['compOnPage']['content'] : '';
+                    addPopoverToSelector('.compContentPopover', compContent.replaceAll('\n', '<br />'))
+                    $('.compContentDownloadText').html(compContent.replaceAll('\n', '<br />'));
+                    $('.myWordsCount').html(json['myOnPage']['wordsCount']);
+
+                    const myContent = json['myOnPage']['content'] ? json['myOnPage']['content'] : '';
+                    $('.myContentDownloadText').html(myContent.replaceAll('\n', '<br />'));
+                    $('.compUrl').html(getFormattedExternalUrl(json['compOnPage']['pageUrl']));
+                    // $('.myUrl').html(getFormattedExternalUrl(json['myOnPage']['pageUrl']));
+                    console.log('set linkHrefCompare ' + json['myOnPage']['pageUrl'])
+                    setSelectedValue(document.getElementById('linkHrefCompare'), json['myOnPage']['pageUrl']);
+                    $('.compTitle').html(json['compOnPage']['title'] ? json['compOnPage']['title'] + '<span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png" alt="copy"/></span>' : '');
+                    $('.myTitle').html(json['myOnPage']['title'] ? json['myOnPage']['title'] + '<span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png" alt="copy"/></span>' : '');
+                    $('.compKeywordDensity').html(json['compOnPage']['keywordDensity']);
+                    $('.myKeywordDensity').html(json['myOnPage']['keywordDensity']);
+                    $('.compMetaDescription').html(json['compOnPage']['metaDesc'] ? (json['compOnPage']['metaDesc'] + '<span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png" alt="copy"/></span>') : '');
+                    $('.myMetaDescription').html(json['myOnPage']['metaDesc'] ? (json['myOnPage']['metaDesc'] + '<span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png" alt="copy"/></span>') : '');
+                    $('.compH1').html(json['compOnPage']['H1'] ? json['compOnPage']['H1'] + '<span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png" alt="copy"/></span>' : '');
+                    $('.myH1').html(json['myOnPage']['H1'] ? json['myOnPage']['H1'] + '<span class="copyContentDiv"><img src="/assets/images/newicon/copy-bold.png" alt="copy"/></span>' : '');
+                    $('.compInternalLinks').html(json['compOnPage']['linksIn']);
+                    $('.myInternalLinks').html(json['myOnPage']['linksIn']);
+                    $('.compExternallinks').html(json['compOnPage']['linksOut']);
+                    $('.myExternallinks').html(json['myOnPage']['linksOut']);
+                    $('.compScore').html(json['compOnPage']['score']);
+                    $('.myScore').html(json['myOnPage']['score']);
+                    $('.compKeywordCount').html(json['compOnPage']['countWordMatches']);
+                    $('.myKeywordCount').html(json['myOnPage']['countWordMatches']);
+                    // $('.compKeywordCount').html(json['compOnPage']['countWordMatches'] + '(' + json['compOnPage']['keywordTerm'] + ')');
+                    // $('.myKeywordCount').html(json['myOnPage']['countWordMatches'] + '(' + json['myOnPage']['keywordTerm'] + ')');
+                    $('.WordsCountDetails').html(compContent);
+                    $('.myWordsCountDetails').html(myContent);
+                }
+
+                $('.spinner-border').remove();
+                showHideTestingMode();
+                addTooltipWithSubjectToSelector('.internalLinksTooltip', 'What is Internal Link?', internalLinkTooltip);
+                addTooltipWithSubjectToSelector('.externalLinksTooltip', 'What is External Link?', externalLinkTooltip);
+            });
+        }
+    }
+
+    $('#appDataModal').on('hidden.bs.modal', function () {
+        // Remove the specific class from the element
+        $('.modal-dialog').removeClass('max-80');
+    });
+    $("body").delegate(".copyContentDiv", "click", function () {
+        var textToCopy = $(this).parent('div').text();
+        showModal('Copied to Clipboard...', '', '', '');
+        setTimeout(() => {
+            $('#modalMessage').modal('hide');
+        }, "1000");
+        // Create a temporary textarea element to copy the text to the clipboard
+        var tempTextarea = $("<textarea>");
+        tempTextarea.val(textToCopy);
+
+        // Append the textarea to the body and select its content
+        $("body").append(tempTextarea);
+        tempTextarea.select();
+
+        // Copy the selected text to the clipboard
+        document.execCommand("copy");
+
+        // Remove the temporary textarea
+        tempTextarea.remove();
+    });
+
+    function exportWord(obj) {
+        $(obj).wordExport();
+    }
+</script>
+
+<style type="text/css">
+    body div#appDataModal .max-80 {
+        max-width: 1140px !important;
+    }
+
+    table.comparestable thead th {
+        border-color: #D1E0FF !important;
+        padding: 16px 10px;
+    }
+
+    table.comparestable tbody td:first-child {
+        width: 22%;
+    }
+
+    table.comparestable tbody td {
+        border-color: #D1E0FF !important;
+        padding: 16px 10px;
+    }
+
+    .midtable {
+        background: #F5F8FF !important;
+    }
+
+    table.comparestable tbody td .compContentPopover, table.comparestable tbody td .compContentDownload, table.comparestable tbody td .myContentPopover, table.comparestable tbody td .myContentDownload {
+        color: #2970FF;
+    }
+
+    .nncard {
+        margin-top: -20px;
+    }
+
+    .nncard .select2-container--default .select2-selection--single {
+        background-color: #FCFCFD;
+        border: 1px solid #EEF2F6;
+        font-size: 14px;
+    }
+
+    .nncard label {
+        color: #727A86;
+    }
+
+    table .copyContentDiv {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .onPageCompaireContent {
+        max-height: 80vh;
+        overflow-y: scroll;
+    }
+
+    .WordsCountDetails, .myWordsCountDetails {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+</style>

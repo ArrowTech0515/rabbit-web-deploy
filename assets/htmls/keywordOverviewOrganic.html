@@ -1,0 +1,147 @@
+<script src="/assets/scripts/pagination.min.js"></script>
+<link rel="stylesheet" href="/assets/css/pagination.css"/>
+
+<div class="pt-4 mh-360">
+    <div class="row justify-content-between">
+        <div class="col-lg-7">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <div class="mb-3">
+                            <select class="form-select selectDropdown" id="organicDateSelect" style="display: none">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="organicView" style="max-height: 400px; overflow-y: scroll;">
+                <div class="wrapper"></div>
+            </div>
+
+            <!--            <hr>-->
+            <!--            <div class="customPagination d-flex justify-content-between">-->
+            <!--                <div class="d-flex align-items-center lengthMenu">-->
+            <!--                    <select>-->
+            <!--                        <option value="10">10</option>-->
+            <!--                        <option value="20">20</option>-->
+            <!--                        <option value="30">30</option>-->
+            <!--                        <option value="-1">All</option>-->
+            <!--                    </select>-->
+            <!--                    <b class="me-2">Rows</b> Per Page-->
+            <!--                </div>-->
+
+            <!--                <div class="d-flex align-items-center customPageCount">-->
+            <!--                    <span>Page</span>-->
+            <!--                    <select>-->
+            <!--                        <option value="1">1</option>-->
+            <!--                        <option value="2">2</option>-->
+            <!--                        <option value="3">3</option>-->
+            <!--                    </select>-->
+            <!--                    <span>of 10</span>-->
+            <!--                    <div class="ms-3">-->
+            <!--                        <a href="javascript:;" class="btn" title="Prev"><i-->
+            <!--                                class="fas fa-chevron-left"></i></a>-->
+            <!--                        <a href="javascript:;" class="btn me-0 active" title="Next"><i-->
+            <!--                                class="fas fa-chevron-right"></i></a>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+        </div>
+        <div class="col-lg-5">
+            <h5 class="gskTitle">Google Similar Keyword </h5>
+            <p>Add Keywords: </p>
+            <ul class="list-style-none addkeyLink" id="similarKeywords"></ul>
+            <div id="similarKeywordAddedDiv" style="display: none" class="alert alert-success landingSuccess" role="alert">
+                <div class="d-flex">
+                    <p class="my-0">Your keyword was added successfully</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // console.log('keywordRowData ' + JSON.stringify(keywordRowData));
+        $.getJSON(getApiUrl('getMyJsonSerpResultDatesKeyword?id=' + keywordRowData.keywordId), function (json) {
+            if (!hasAlertToShow(json)) {
+                json = json['map2'];
+                var html = '';
+                var i = 0;
+                for (const key in json) {
+                    html += '<option value="' + json[key] + '" ' + (i == 1 ? 'selected' : '') + '>' + key.substr(key.indexOf('Task') + 4) + '</option>';
+                    i++;
+                }
+                if (i > 0) {
+                    $('select#organicDateSelect').html(html);
+                    $('select#organicDateSelect').show();
+                }
+
+            }
+        });
+        organicNormalResult(keywordRowData.keywordId);
+        $('select#organicDateSelect').change(function () {
+            organicNormalResult(keywordRowData.keywordId);
+        })
+
+    });
+
+    function organicNormalResult(id) {
+        $('#organicView').html('<div class="wrapper"><div class="spinner-border ms-auto organicSpinner" role="status" aria-hidden="true"></div></div>');
+        $.getJSON(getApiUrl('getMyJsonSerpResultKeyword?id=' + id), function (json) {
+            if (!hasAlertToShow(json)) {
+                var similarKeywords = json['obj'];
+                if (similarKeywords != null) {
+                    var similarKeywordsArray = similarKeywords.split(",,");
+                    var html = '';
+                    for (let j = 0; j < similarKeywordsArray.length; j++) {
+                        let currKeyword = similarKeywordsArray[j];
+                        if (currKeyword && currKeyword.length > 0) {
+                            html += ' <li><a href="javascript: saveNewKeyword(\'' + currKeyword + '\')"><img src="/assets/images/icon/addbtn.png" class="me-2" alt="add"> ' + currKeyword + ' </a></li>';
+                            if (currKeyword) {
+                                html += '';
+                            }
+                        }
+                    }
+                    $('#similarKeywords').html(html.replace('||', ''));
+                }
+                // $('#keywordOverviewTitle').text(keywordRowData.keywordName);
+                $('#organicSearchResultTitle').text(keywordRowData.keywordName);
+                $('#relatedKeywordsTitle').text(keywordRowData.keywordName);
+                
+                json = JSON.parse(json['data']);
+                if (json && json['tasks'] && json['tasks'][0]) {
+                    json = json['tasks'][0];
+                    // console.log('json serp result ' + JSON.stringify(json['result']));
+                    if (json && json['result'] && json['result'][0] && json['result'][0]['items']) {
+                        let organicResultArray = json['result'][0]['items'];
+                        if (organicResultArray != null) {
+                            console.log('organicResultArray ' + JSON.stringify(organicResultArray))
+                            $('#organicView').pagination({
+                                dataSource: organicResultArray,
+                                pageSize: 150,
+                                callback: function (data, pagination) {
+                                    var wrapper = $('#organicView .wrapper').empty();
+                                    let counter = 1;
+                                    $.each(data, function (i, f) {
+                                        // console.log(JSON.stringify(f));
+                                        if (f.url && f.domain) {
+                                            const val = '<ul class="list-style-none or_ul"><li>' + (counter++) + '. <a target="_blank" href="' + f.url + '" class="text-truncate">' + f.domain + '</a><p class=" mb-0" style="color: #0d6efd !important;" data-toggle="tooltip" title="' + f.description + '">' + f.title + '</p></li></ul>';
+                                            // console.log('val to append ' + val);
+                                            $('#organicView .wrapper').append(val);
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    }
+                } else {
+                    console.log('missing json ' + JSON.stringify(json))
+                }
+            } else {
+                $('#organicView').html('');
+            }
+        })
+    }
+</script>

@@ -1,0 +1,34 @@
+<table>
+    <tr>
+        <td>
+            User
+        </td>
+        <td>
+            ${user.id("0")}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            User Name
+        </td>
+        <td>
+            ${user.name} - ${user.firstName} ${user.lastName}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Message
+        </td>
+        <td>
+            ${msg}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Exception
+        </td>
+        <td>
+            ${ex}
+        </td>
+    </tr>
+</table>

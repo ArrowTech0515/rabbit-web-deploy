@@ -1,0 +1,569 @@
+<link href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@5.4.2/dist/css/coreui.min.css" rel="stylesheet" integrity="sha384-+5b/xZ3OQhHfamps3tw08DlI5OFgTuUzPpaEZsw8TRItmaZIAE6GkbaFtJ7V1Qnp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/assets/css/easyForms.css">
+<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@5.4.2/dist/js/coreui.bundle.min.js" integrity="sha384-+Ug5YaEFOtOtIaZG8WkBSUnbFWwZrEkpXgJT1icRSEYUg3uBSsWiA8HHIVUvGzKv" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<script type="text/javascript" src="/assets/scripts-app/easyForms.js" defer></script>
+
+<div class="top-update-bar w-100 d-flex justify-content-center align-items-center">
+    <div class="mfw mfs">Get more with EasyForms: Upgrade your pricing plan and unlock new possibilities for creating web forms!</div>
+    <button class="white-button mx-5 bg-white"><span class="primary-grad-color">UPGRADE NOW</span></button>
+</div>
+<div class="d-flex">
+    <!-- Left-side panel -->
+    <div class="left-side-panel">
+        <div class="d-flex flex-column flex-shrink-0">
+            <!-- Left-side panel content -->
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img src="../assets/images/forms/easy-logo.png"  width="40"/>
+                <span class="logo-title">EasyForms</span>
+            </a>
+            <button class="white-button mt-3" onclick="" style="margin-right: 27px;"><i class="fa-solid fa-code mx-1"></i> Code to integration</button>
+            <br><br>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item active dashboard">
+                    <a href="#" class="nav-link" aria-current="page" onclick="loadEasyFormsHtml()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 3H4C3.44772 3 3 3.44772 3 4V11C3 11.5523 3.44772 12 4 12H9C9.55228 12 10 11.5523 10 11V4C10 3.44772 9.55228 3 9 3Z" stroke="#1C2028" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 3H15C14.4477 3 14 3.44772 14 4V7C14 7.55228 14.4477 8 15 8H20C20.5523 8 21 7.55228 21 7V4C21 3.44772 20.5523 3 20 3Z" stroke="#1C2028" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12H15C14.4477 12 14 12.4477 14 13V20C14 20.5523 14.4477 21 15 21H20C20.5523 21 21 20.5523 21 20V13C21 12.4477 20.5523 12 20 12Z" stroke="#1C2028" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 16H4C3.44772 16 3 16.4477 3 17V20C3 20.5523 3.44772 21 4 21H9C9.55228 21 10 20.5523 10 20V17C10 16.4477 9.55228 16 9 16Z" stroke="#1C2028" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link link-dark" onclick="loadInsightsHtml(this)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3V21H21" stroke="#A4ABB8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 12V17H19V8L14 13L10 9L7 12Z" stroke="#A4ABB8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="link-text">Insights</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link link-dark" onclick="loadSubmissionsHtml(this)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_3110_5542)">
+                                <path d="M20.1 6.3299H15.24M15.24 6.3299L17.67 3.8999M15.24 6.3299L17.67 8.7599M12.81 3.9404C12.5438 3.9134 12.2738 3.8999 12 3.8999C7.52639 3.8999 3.90002 7.52627 3.90002 11.9999C3.90002 13.4749 4.29449 14.8592 4.9838 16.0499L4.30502 19.6949L7.95002 19.0161C9.18093 19.728 10.5781 20.1019 12 20.0999C16.4737 20.0999 20.1 16.4735 20.1 11.9999C20.1 11.7261 20.0865 11.4561 20.0595 11.1899" stroke="#A4ABB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_3110_5542">
+                                    <rect width="18" height="18" fill="white" transform="translate(3 3)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="link-text">Submissions</span>
+                    </a>
+                </li>
+                <br><br>
+                <li class="nav-item">
+                    <a href="#" class="nav-link link-dark">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 8C6 6.4087 6.63214 4.88258 7.75736 3.75736C8.88258 2.63214 10.4087 2 12 2C13.5913 2 15.1174 2.63214 16.2426 3.75736C17.3679 4.88258 18 6.4087 18 8C18 15 21 17 21 17H3C3 17 6 15 6 8Z" stroke="#A4ABB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.3 21C10.4674 21.3044 10.7134 21.5583 11.0125 21.7352C11.3115 21.912 11.6526 22.0053 12 22.0053C12.3474 22.0053 12.6885 21.912 12.9875 21.7352C13.2865 21.5583 13.5326 21.3044 13.7 21" stroke="#A4ABB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="link-text">Notification</span>
+                        <span class="notification-count">12</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link link-dark">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#A4ABB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.09003 9.00008C9.32513 8.33175 9.78918 7.76819 10.4 7.40921C11.0108 7.05024 11.7289 6.91902 12.4272 7.03879C13.1255 7.15857 13.7588 7.52161 14.2151 8.06361C14.6714 8.60561 14.9211 9.2916 14.92 10.0001C14.92 12.0001 11.92 13.0001 11.92 13.0001" stroke="#A4ABB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 17H12.01" stroke="#A4ABB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="link-text">Help center</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="nav-item-space" style="height: 100px; width: 100%;"></div>
+            <div class="banner mb-5 px-2">
+                <img src="../assets/images/forms/raise_experience.png   " width="100%">
+            </div>
+            <div class="banner mb-3">
+                <a onclick="loadFormTemplatesHtml()">
+                    <img src="../assets/images/forms/banner.png" width="100%">
+                </a>
+            </div>
+            <div class="user d-flex justify-content-between align-items-center mt-3" onclick="loadSettingHtml()">
+                <a href="#" class="d-flex align-items-center link-dark text-decoration-none">
+                    <img src="../assets/images/forms/default_avatar.png" alt="" width="40" height="40" class="rounded-circle me-2">
+                    <div class="user-info">
+                        <div class="username">Alex Plakhov</div>
+                        <div class="nickname">Alex Plakhov</div>
+                    </div>
+                </a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 19L19 12L12 5" stroke="#828B9D" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 12H19" stroke="#828B9D" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="user-form-created-number mt-2">
+                <div class="user-form-created-number-content">
+
+                </div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div class="xsfs mtc dfw">Created Forms: <strong class="mfw"><span>05</span>/10</strong></div>
+                    <div class="question-mark">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_3110_5963)">
+                                <path d="M8.00001 14.6668C11.6819 14.6668 14.6667 11.6821 14.6667 8.00016C14.6667 4.31826 11.6819 1.3335 8.00001 1.3335C4.31811 1.3335 1.33334 4.31826 1.33334 8.00016C1.33334 11.6821 4.31811 14.6668 8.00001 14.6668Z" stroke="#1C2028" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.06 5.99989C6.21673 5.55434 6.5261 5.17863 6.9333 4.93931C7.3405 4.7 7.81926 4.61252 8.28478 4.69237C8.7503 4.77222 9.17254 5.01424 9.47672 5.37558C9.78089 5.73691 9.94737 6.19424 9.94666 6.66656C9.94666 7.99989 7.94666 8.66656 7.94666 8.66656" stroke="#1C2028" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 11.3335H8.00667" stroke="#1C2028" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_3110_5963">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="user-form-created-number-tooltip">The number of Forms you have created  in the current Plan To increase the number of Forms you can create, upgrade your current plan <a style="color: var(--primary-color);">here</a>.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="top-buttons">
+            <button class="create-new-form" onclick="createNewForm()">Create New Form</button>
+            <button class="start-with-easyforms" onclick="loadFormTemplatesHtml()">Start with Easy Forms</button>
+            <div class="float-end position-relative d-none">
+                <button class="white-button mx-2" onclick=""><i class="fa-solid fa-code mx-1"></i> Code to integration</button>
+                <div class="code_integrate">
+
+                    <div class="d-flex gap-2 justify-content-between align-items-center mt-3">
+                        <div class="share-link-content mtc mfs dfw width-85">
+                            &lt;script id='script-seorush' src='https://link_to_code_here' async='true'&gt;&lt;/script&gt;
+                        </div>
+                        <button class="white-button">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.5 10.5V15.5" stroke="#1C2028" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 13H15" stroke="#1C2028" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.6667 7.16675H8.33341C7.41294 7.16675 6.66675 7.91294 6.66675 8.83341V17.1667C6.66675 18.0872 7.41294 18.8334 8.33341 18.8334H16.6667C17.5872 18.8334 18.3334 18.0872 18.3334 17.1667V8.83341C18.3334 7.91294 17.5872 7.16675 16.6667 7.16675Z" stroke="#1C2028" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.33341 13.8334C2.41675 13.8334 1.66675 13.0834 1.66675 12.1667V3.83341C1.66675 2.91675 2.41675 2.16675 3.33341 2.16675H11.6667C12.5834 2.16675 13.3334 2.91675 13.3334 3.83341" stroke="#1C2028" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+                    <div class="sfs mfw dtc mt-3">Copy the code and paste it in each page of your site before (above) the </head> tag.</div>
+                </div>
+            </div>
+        </div>
+        <div class="top-header mt-5 ">
+            <div class="hello-user">Hello Alex</div>
+            <div class="page-description">Create and manage your Easy Forms</div>
+            <div class="setting-note smbr info-grad-bg m-0 mt-3">
+                <div class="setting-inner-note d-flex justify-content-between">
+                    <div class="d-flex">
+                        <svg class="mx-1" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2207_17317)">
+                                <path d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6023 18.3333 9.99996C18.3333 5.39759 14.6023 1.66663 9.99996 1.66663C5.39759 1.66663 1.66663 5.39759 1.66663 9.99996C1.66663 14.6023 5.39759 18.3333 9.99996 18.3333Z" stroke="url(#paint0_linear_2207_17317)" stroke-width="2"/>
+                                <path d="M10 14.1666V9.16663" stroke="url(#paint1_linear_2207_17317)" stroke-linecap="round"/>
+                                <path d="M9.99996 5.83333C10.4602 5.83333 10.8333 6.20643 10.8333 6.66667C10.8333 7.1269 10.4602 7.5 9.99996 7.5C9.53972 7.5 9.16663 7.1269 9.16663 6.66667C9.16663 6.20643 9.53972 5.83333 9.99996 5.83333Z" fill="url(#paint2_linear_2207_17317)"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_2207_17317" x1="-3.18289" y1="14.0787" x2="22.5438" y2="11.392" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#F8D821"/>
+                                    <stop offset="1" stop-color="#FB3C6C"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_2207_17317" x1="9.70903" y1="12.8903" x2="11.2688" y2="12.8577" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#F8D821"/>
+                                    <stop offset="1" stop-color="#FB3C6C"/>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_2207_17317" x1="8.68167" y1="6.25879" x2="11.2543" y2="6.52746" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#F8D821"/>
+                                    <stop offset="1" stop-color="#FB3C6C"/>
+                                </linearGradient>
+                                <clipPath id="clip0_2207_17317">
+                                    <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="sfs mfw mtc mx-2">
+                            <div class="mfw mfs mtc">You are currently using the demo version of EasyForms</div>
+                            <div class="dfw sfs mtc">Please note that some features may be limited in this mode. To unlock the full experience and access all functionalities, consider upgrading to the full version.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--   Overview   -->
+        <div class="overview mt-5 pt-3">
+            <div class="header">
+                <div class="title">Overview</div>
+            </div>
+            <div class="d-flex gap-3 justify-content-between mt-4">
+                <div class="overview-item forms">
+                    <div class="title">Forms</div>
+                    <div class="count">1</div>
+                    <div class="desc">
+                        <span class="positive">Active: 2</span><span class="negative mx-2">Draft: 1</span>
+                    </div>
+                </div>
+                <div class="overview-item views">
+                    <div class="title">Views</div>
+                    <div class="count">49</div>
+                    <div class="desc positive">+4 today</div>
+                </div>
+                <div class="overview-item clicks">
+                    <div class="title">Clicks</div>
+                    <div class="count">49</div>
+                    <div class="desc positive">+4 today</div>
+                </div>
+                <div class="overview-item submissions">
+                    <div class="title">Submissions</div>
+                    <div class="count">12</div>
+                    <div class="desc negative">0 today</div>
+                </div>
+            </div>
+        </div>
+
+        <!--   My Forms   -->
+
+        <div class="my-forms mt-5">
+            <div class="header">
+                <div class="title">My Forms</div>
+            </div>
+            <div class="my-forms-content mt-4">
+                <div class="my-form-item visible mb-3">
+                    <div class="my-form-item-header d-flex justify-content-between align-items-center">
+                        <div class="my-form-item-title lfs mfw mtc">Form Name</div>
+                        <div class="d-flex align-items-center">
+                            <div class="my-form-edit">
+                                <button class="sfs dfw dtc"><i class="fa-regular fa-pen-to-square mx-2 mtc"></i>Edit</button>
+                            </div>
+                            <div class="my-form-status mx-3 sfs mfw">
+                                Visible
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" checked name="my_keywords"
+                                       value="My Keywords">
+                                <label class="form-check-label dfw sfs dtc">Hide</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-form-item-content d-flex justify-content-between align-items-center gap-3 mt-3">
+                        <div class="my-form-item-content-created">
+                            <div class="my-form-item-content-header">Date Created</div>
+                            <div class="my-form-item-content-detail">01.08.2024</div>
+                        </div>
+                        <div class="my-form-item-content-visitors">
+                            <div class="my-form-item-content-header">Visitors</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04086 8.82827L0.5 14.3691V19.3624H24.5V1L17.5074 7.86544C16.3653 8.98676 14.684 9.35907 13.1753 8.82473L10.4003 7.84192C8.8785 7.30296 7.18242 7.68671 6.04086 8.82827Z" fill="url(#paint0_linear_2863_9689)"/>
+                                    <path d="M0.5 14.3691L6.04086 8.82827C7.18242 7.68671 8.8785 7.30296 10.4003 7.84192L13.1753 8.82473C14.684 9.35907 16.3653 8.98676 17.5074 7.86544L24.5 1" stroke="#2DBA3B"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9689" x1="12.5" y1="-14.1409" x2="12.5" y2="23.1046" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#2DBA3B"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info">+1 today</span>
+                            </div>
+                        </div>
+                        <div class="my-form-item-content-clicks">
+                            <div class="my-form-item-content-header">Clicks</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04086 8.82827L0.5 14.3691V19.3624H24.5V1L17.5074 7.86544C16.3653 8.98676 14.684 9.35907 13.1753 8.82473L10.4003 7.84192C8.8785 7.30296 7.18242 7.68671 6.04086 8.82827Z" fill="url(#paint0_linear_2863_9689)"/>
+                                    <path d="M0.5 14.3691L6.04086 8.82827C7.18242 7.68671 8.8785 7.30296 10.4003 7.84192L13.1753 8.82473C14.684 9.35907 16.3653 8.98676 17.5074 7.86544L24.5 1" stroke="#2DBA3B"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9689" x1="12.5" y1="-14.1409" x2="12.5" y2="23.1046" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#2DBA3B"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info">+1 today</span>
+                            </div>
+                        </div>
+                        <div class="my-form-item-content-submissions">
+                            <div class="my-form-item-content-header">Submissions</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.26307 6.01406L0.5 12.4319V17.4251H24.5V8.52246L16.5814 7.84158C15.9622 7.78834 15.3626 7.59794 14.8261 7.28421L10.7401 4.89477C8.89614 3.81645 6.53612 4.29874 5.26307 6.01406Z" fill="url(#paint0_linear_2863_9713)"/>
+                                    <path d="M0.5 12.4319L5.69815 6.1656C6.98134 4.61875 9.18246 4.20156 10.9427 5.17159L14.6972 7.24061C15.3163 7.58179 16.0117 7.76071 16.7185 7.76069L24.5 7.76049" stroke="#FF0606"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9713" x1="12.5" y1="-16.078" x2="12.5" y2="21.1676" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#FF0606"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info negative">0 today</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-form-item draft mb-3">
+                    <div class="my-form-item-header d-flex justify-content-between align-items-center">
+                        <div class="my-form-item-title lfs mfw mtc">Form Name</div>
+                        <div class="d-flex align-items-center">
+                            <div class="my-form-edit">
+                                <button class="sfs dfw dtc"><i class="fa-regular fa-pen-to-square mx-2 mtc"></i>Edit</button>
+                            </div>
+                            <div class="my-form-status mx-3 sfs mfw">
+                                Visible
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" checked name="my_keywords"
+                                       value="My Keywords">
+                                <label class="form-check-label dfw sfs dtc">Hide</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-form-item-content d-flex justify-content-between align-items-center gap-3 mt-3">
+                        <div class="my-form-item-content-created">
+                            <div class="my-form-item-content-header">Date Created</div>
+                            <div class="my-form-item-content-detail">01.08.2024</div>
+                        </div>
+                        <div class="my-form-item-content-visitors">
+                            <div class="my-form-item-content-header">Visitors</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04086 8.82827L0.5 14.3691V19.3624H24.5V1L17.5074 7.86544C16.3653 8.98676 14.684 9.35907 13.1753 8.82473L10.4003 7.84192C8.8785 7.30296 7.18242 7.68671 6.04086 8.82827Z" fill="url(#paint0_linear_2863_9689)"/>
+                                    <path d="M0.5 14.3691L6.04086 8.82827C7.18242 7.68671 8.8785 7.30296 10.4003 7.84192L13.1753 8.82473C14.684 9.35907 16.3653 8.98676 17.5074 7.86544L24.5 1" stroke="#2DBA3B"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9689" x1="12.5" y1="-14.1409" x2="12.5" y2="23.1046" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#2DBA3B"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info">+1 today</span>
+                            </div>
+                        </div>
+                        <div class="my-form-item-content-clicks">
+                            <div class="my-form-item-content-header">Clicks</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04086 8.82827L0.5 14.3691V19.3624H24.5V1L17.5074 7.86544C16.3653 8.98676 14.684 9.35907 13.1753 8.82473L10.4003 7.84192C8.8785 7.30296 7.18242 7.68671 6.04086 8.82827Z" fill="url(#paint0_linear_2863_9689)"/>
+                                    <path d="M0.5 14.3691L6.04086 8.82827C7.18242 7.68671 8.8785 7.30296 10.4003 7.84192L13.1753 8.82473C14.684 9.35907 16.3653 8.98676 17.5074 7.86544L24.5 1" stroke="#2DBA3B"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9689" x1="12.5" y1="-14.1409" x2="12.5" y2="23.1046" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#2DBA3B"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info">+1 today</span>
+                            </div>
+                        </div>
+                        <div class="my-form-item-content-submissions">
+                            <div class="my-form-item-content-header">Submissions</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.26307 6.01406L0.5 12.4319V17.4251H24.5V8.52246L16.5814 7.84158C15.9622 7.78834 15.3626 7.59794 14.8261 7.28421L10.7401 4.89477C8.89614 3.81645 6.53612 4.29874 5.26307 6.01406Z" fill="url(#paint0_linear_2863_9713)"/>
+                                    <path d="M0.5 12.4319L5.69815 6.1656C6.98134 4.61875 9.18246 4.20156 10.9427 5.17159L14.6972 7.24061C15.3163 7.58179 16.0117 7.76071 16.7185 7.76069L24.5 7.76049" stroke="#FF0606"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9713" x1="12.5" y1="-16.078" x2="12.5" y2="21.1676" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#FF0606"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info negative">0 today</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-form-item visible mb-3">
+                    <div class="my-form-item-header d-flex justify-content-between align-items-center">
+                        <div class="my-form-item-title lfs mfw mtc">Form Name</div>
+                        <div class="d-flex align-items-center">
+                            <div class="my-form-edit">
+                                <button class="sfs dfw dtc"><i class="fa-regular fa-pen-to-square mx-2 mtc"></i>Edit</button>
+                            </div>
+                            <div class="my-form-status mx-3 sfs mfw">
+                                Visible
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" checked name="my_keywords"
+                                       value="My Keywords">
+                                <label class="form-check-label dfw sfs dtc">Hide</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-form-item-content d-flex justify-content-between align-items-center gap-3 mt-3">
+                        <div class="my-form-item-content-created">
+                            <div class="my-form-item-content-header">Date Created</div>
+                            <div class="my-form-item-content-detail">01.08.2024</div>
+                        </div>
+                        <div class="my-form-item-content-visitors">
+                            <div class="my-form-item-content-header">Visitors</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04086 8.82827L0.5 14.3691V19.3624H24.5V1L17.5074 7.86544C16.3653 8.98676 14.684 9.35907 13.1753 8.82473L10.4003 7.84192C8.8785 7.30296 7.18242 7.68671 6.04086 8.82827Z" fill="url(#paint0_linear_2863_9689)"/>
+                                    <path d="M0.5 14.3691L6.04086 8.82827C7.18242 7.68671 8.8785 7.30296 10.4003 7.84192L13.1753 8.82473C14.684 9.35907 16.3653 8.98676 17.5074 7.86544L24.5 1" stroke="#2DBA3B"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9689" x1="12.5" y1="-14.1409" x2="12.5" y2="23.1046" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#2DBA3B"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info">+1 today</span>
+                            </div>
+                        </div>
+                        <div class="my-form-item-content-clicks">
+                            <div class="my-form-item-content-header">Clicks</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.04086 8.82827L0.5 14.3691V19.3624H24.5V1L17.5074 7.86544C16.3653 8.98676 14.684 9.35907 13.1753 8.82473L10.4003 7.84192C8.8785 7.30296 7.18242 7.68671 6.04086 8.82827Z" fill="url(#paint0_linear_2863_9689)"/>
+                                    <path d="M0.5 14.3691L6.04086 8.82827C7.18242 7.68671 8.8785 7.30296 10.4003 7.84192L13.1753 8.82473C14.684 9.35907 16.3653 8.98676 17.5074 7.86544L24.5 1" stroke="#2DBA3B"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9689" x1="12.5" y1="-14.1409" x2="12.5" y2="23.1046" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#2DBA3B"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info">+1 today</span>
+                            </div>
+                        </div>
+                        <div class="my-form-item-content-submissions">
+                            <div class="my-form-item-content-header">Submissions</div>
+                            <div class="my-form-item-content-detail">
+                                12
+                                <svg class="mx-2" width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.26307 6.01406L0.5 12.4319V17.4251H24.5V8.52246L16.5814 7.84158C15.9622 7.78834 15.3626 7.59794 14.8261 7.28421L10.7401 4.89477C8.89614 3.81645 6.53612 4.29874 5.26307 6.01406Z" fill="url(#paint0_linear_2863_9713)"/>
+                                    <path d="M0.5 12.4319L5.69815 6.1656C6.98134 4.61875 9.18246 4.20156 10.9427 5.17159L14.6972 7.24061C15.3163 7.58179 16.0117 7.76071 16.7185 7.76069L24.5 7.76049" stroke="#FF0606"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_2863_9713" x1="12.5" y1="-16.078" x2="12.5" y2="21.1676" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0.215226" stop-color="#FF0606"/>
+                                            <stop offset="0.941068" stop-color="white" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <span class="added-info negative">0 today</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--   Analytics   -->
+        <div class="analytics mt-5">
+            <div class="header">
+                <div class="title">Analytics</div>
+            </div>
+            <div class="analytics-content">
+                <div class="analytic-item">
+                    <div class="analytic-item-header mfw ftc lfs">Forms Insights By hours of the Day</div>
+                    <div class="analytic-item-sub-header dfw dtc mfs">In this graph, you can see during which hours of the day <br> your Forms are most active.</div>
+                    <div class="view-options d-flex justify-content-end align-items-center">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input for_visitors" onchange="change_hour_chart_line(0)" type="checkbox" checked name="my_keywords"
+                                   value="My Keywords">
+                            <label class="form-check-label dfw sfs dtc">Visitors</label>
+                        </div>
+                        <div class="form-check form-switch mx-4">
+                            <input class="form-check-input for_clicks" onchange="change_hour_chart_line(1)" type="checkbox" checked name="my_keywords"
+                                   value="My Keywords">
+                            <label class="form-check-label dfw sfs dtc">Clicks</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input for_submissions" onchange="change_hour_chart_line(2)" type="checkbox" checked name="my_keywords"
+                                   value="My Keywords">
+                            <label class="form-check-label dfw sfs dtc">Submissions</label>
+                        </div>
+                    </div>
+                    <div class="analytic-item-chart">
+                        <canvas id="by_hours" height="350"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="analytics-content d-flex gap-3 mt-4">
+                <div class="analytic-item mt-3 w-100">
+                    <div class="analytic-item-header mfw ftc lfs">Forms Insights By Days of Week</div>
+                    <div class="analytic-item-sub-header dfw dtc mfs">In this graph, you can see during which days of week <br> your Forms are most active.</div>
+                    <div class="view-options d-flex justify-content-end align-items-center">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input for_visitors" onchange="change_day_chart_line(0)" type="checkbox" checked name="my_keywords"
+                                   value="My Keywords">
+                            <label class="form-check-label dfw sfs dtc">Visitors</label>
+                        </div>
+                        <div class="form-check form-switch mx-4">
+                            <input class="form-check-input for_clicks" onchange="change_day_chart_line(1)" type="checkbox" checked name="my_keywords"
+                                   value="My Keywords">
+                            <label class="form-check-label dfw sfs dtc">Clicks</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input for_submissions" onchange="change_day_chart_line(2)" type="checkbox" checked name="my_keywords"
+                                   value="My Keywords">
+                            <label class="form-check-label dfw sfs dtc">Submissions</label>
+                        </div>
+                    </div>
+                    <div class="analytic-item-chart">
+                        <canvas id="by_days" height="350"></canvas>
+                    </div>
+                </div>
+                <div class="analytic-item mt-3 w-100">
+                    <div class="analytic-item-header mfw ftc lfs">Forms Insights By Devices</div>
+                    <div class="analytic-item-sub-header dfw dtc mfs mb-5">This graph shows which devices <br> your visitors use the most.</div>
+                    <div class="row align-items-center py-3 my-5">
+                        <div class="col-4 text-center">
+                            <div class="xdfw sfs dtc">Mobile Devices</div>
+                            <div class="lfw mtc xxxlfs">
+                                60.7%
+                                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.2048 9.26545C11.6334 9.66137 11.6334 10.3386 11.2048 10.7346L2.42855 18.8417C1.78807 19.4334 0.750001 18.9791 0.750001 18.1072L0.75 1.89283C0.75 1.0209 1.78807 0.566625 2.42855 1.15828L11.2048 9.26545Z" fill="#19213D"/>
+                                </svg>
+                            </div>
+                            <div class="mfw mfs ftc">
+                                1200 Visitors
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <canvas id="by_devices"></canvas>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="xdfw sfs dtc">Desktop Devices</div>
+                            <div class="lfw mtc xxxlfs">
+                                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.795177 9.26545C0.366579 9.66137 0.366578 10.3386 0.795177 10.7346L9.57145 18.8417C10.2119 19.4334 11.25 18.9791 11.25 18.1072L11.25 1.89283C11.25 1.0209 10.2119 0.566625 9.57145 1.15828L0.795177 9.26545Z" fill="#19213D"/>
+                                </svg>
+                                60.7%
+                            </div>
+                            <div class="mfw mfs ftc">
+                                1200 Visitors
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 mt-5">
+                        <button class="width-30 primary-small-button active">
+                            <div class="button-text">
+                                Visitors
+                            </div>
+                        </button>
+                        <button class="width-30 primary-small-button">
+                            <div class="button-text">
+                                Clicks
+                            </div>
+                        </button>
+                        <button class="width-30 primary-small-button">
+                            <div class="button-text">
+                                Submissions
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="text-center align-items-center">
+<h4 id="keywordOverviewTitle" class="dash-title"></h4>
+</div>
+<div id="keywordOverviewContent">
+<ul class="nav nav-tabs searchTab" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a id="firstTabLink" href="/assets/htmls/keywordOverviewPerformance.html" class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#tabBasic"
+           type="button" role="tab" aria-controls="first" aria-selected="false">My Performace
+        </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a href="/assets/htmls/keywordOverviewOrganic.html" class="nav-link" id="organic-search-tab" data-bs-toggle="tab"
+           data-bs-target="#tabSecond"
+           type="button" role="tab" aria-controls="tabSecond" aria-selected="true">Organic Search Results
+        </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a href="/assets/htmls/keywordOverviewGoogle.html" class="nav-link" id="third-tab" data-bs-toggle="tab"
+           data-bs-target="#tabThird"
+           type="button" role="tab" aria-controls="tabThird" aria-selected="false">Google View
+        </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a href="/assets/htmls/keywordOverviewRelated.html" class="nav-link" id="fourth-tab" data-bs-toggle="tab"
+           data-bs-target="#tabForth"
+           type="button" role="tab" aria-controls="tabForth" aria-selected="false">Related Keywords
+        </a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="tabBasic"></div>
+    <div class="tab-pane" id="tabSecond"></div>
+    <div class="tab-pane" id="tabThird"></div>
+    <div class="tab-pane" id="tabForth"></div>
+</div>
+</div>
+<div onclick="closeAppModal()">
+<div id="upgradeBlock" class="upgradeBlock" style="display: none">
+    <h3>Upgrade to see Detailed Keyword Overview</h3>
+    <p>Upgrade now to <br>
+        see results of YOUR website</p>
+    <button type="button">Upgrade to Premium</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        loadAjaxTabs();
+        let defaultTab = '#firstTabLink';
+        let defaultTabContent = '#tabBasic';
+        // if (daysCount < 3) {
+        //     defaultTab = '#organic-search-tab';
+        //     defaultTabContent = '#tabSecond';
+        // }
+        $(defaultTabContent).load($(defaultTab).attr("href"), function (result) {
+            $(defaultTab).tab('show');
+        });
+        // $('#tabBasic').load($('#firstTabLink').attr("href"), function (result) {
+        //     $('#firstTabLink').tab('show');
+        // });
+        // console.log('keywordRowData ' + keywordRowData);
+        $('#keywordOverviewTitle').html(getTranslationWord('Keyword Overview') + ' - ' + keywordRowData.keywordName);
+        if (!payingUser) {
+            $('.upgradeBlock').attr("onclick", upgradeLink);
+            $('.upgradeBlock').show();
+            $('#keywordOverviewContent').css('opacity', 0.4);
+        }
+    });
+</script>
+

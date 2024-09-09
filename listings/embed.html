@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="embedListings">
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<!--<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>-->
+
+<script>
+    $(document).ready(function () {
+        // let url = 'https://raw.githubusercontent.com/ronchuke/listings-ui/main/listings.html';
+        let url = 'listings.html';
+        // let url = 'http://localhost:8080/listings/listings.html';
+        // let url = 'https://dlnil54eooeso.cloudfront.net/listings/listings.html';
+
+        $.ajax({
+            url: url, dataType: 'html', success: function (html) {
+                $('#embedListings').html(html);
+            }
+        });
+    });
+</script>
+</body>
+</html>

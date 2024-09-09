@@ -1,0 +1,836 @@
+<div class="mb-5 mt-4">
+<!--    <div class="page-title d-flex align-items-center justify-content-between mb-20px">-->
+<!--        <div class="d-flex align-items-center align-items-center">-->
+<!--            <h3 class="dash-title mb-0">My Websites</h3>-->
+<!--            <a href="javascript: runIntro();" class="btn btn-outline-primary pageBtn userManual_btn"><img src="/assets/images/icon/u_manual.svg" alt="User Manual"><span>User Manual</span></a>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="row keyfirstRow">
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/keywords.png" class="dashcardIcon" alt="Rank"/>
+                        <div>
+                            <h4 id="websitesCount"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>All Websites</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+<!--        <div class="col-xl-2 col-lg-4 col-md-6" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="down" data-bs-content="This value indicates the number of ranks that went up since yesterday">-->
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/rank_up.png" class="dashcardIcon" alt="Keywords"/>
+                        <div>
+                            <h4 id="websitesKeywordsUp"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Ranks went up</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+<!--        <div class="col-xl-2 col-lg-4 col-md-6" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="down" data-bs-content="This value indicates the number of ranks that went down since yesterday">-->
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/rank_down.png" class="dashcardIcon" alt="Keywords"/>
+                        <div>
+                            <h4 id="websitesKeywordsDown"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Ranks went down</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+<!--        <div class="col-xl-2 col-lg-4 col-md-6" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="down" data-bs-content="This value indicates the average position of your live ranks">-->
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/stat_up_yellow.png" class="dashcardIcon" alt="Position"/>
+                        <div>
+                            <h4 id="websitesAvgPos"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Average Position</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/pie-chart.png" class="dashcardIcon" alt="Percent"/>
+                        <div>
+                            <h4 id="websitesChangePercent"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Change Percent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="nav nav-tabs searchTab dash-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="my-websites" data-bs-toggle="tab" data-bs-target="#my-websites-view" type="button" role="tab" aria-controls="my-websites" aria-selected="true">All Websites</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="my-keywords" data-bs-toggle="tab" data-bs-target="#my-keywords-view" type="button" role="tab" aria-controls="my-keywords" aria-selected="false">All Keywords</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="my-websites-view" role="tabpanel" aria-labelledby="my-websites">
+            <div class="card page-card mb-4">
+                <div class="card-body">
+                    <div class="d-lg-flex justify-content-between mb-20px">
+                        <div class="d-flex align-items-center">
+<!--                            <h3 class="cardTitle mb-0">My Websites</h3>-->
+<!--                            <span class="listedItem" id="listedItemsCount"></span>-->
+                        </div>
+                        <div>
+                            <ul class="list-style-none actionkey_ul">
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="PDF" class="pdfButton ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                                        <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li">
+                                    <div class="keywordSearch">
+                                        <img src="/assets/images/icon/search.svg" alt="Search"/>
+                                        <input type="text" class="form-control tableSearch" placeholder="Search..."/>
+                                    </div>
+                                </li>
+                                <li class="actionkey_li">
+                                    <div class="addhideColumn dropdown">
+                                        <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown"
+                                           aria-expanded="false"><h3 class="cardTitle mb-0">Columns<i
+                                                class="fas fa-chevron-down"></i></h3></a>
+
+                                        <form id="saveColHideFormWebsite" class="dropdown-menu py-3" aria-labelledby="addhideColumn">
+                                            <ul id="showHideColswebsitesTable" class="showHideColsMenu">
+                                            </ul>
+                                            <div class="text-end px-3">
+                                                <button type="button" onclick="saveColHideShow(getFormDValues(saveColHideFormWebsite), 'websitesTable')" class="btn btn-primary pageBtn">Save for next time</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rabbitTable">
+                        <table id="websitesTable" class="table align-middle border-bottom-0 hover" style="width:100%">
+                            <thead class="thead-dark"></thead>
+                            <tbody>
+                            <td colspan="12" class="text-center">
+                                <strong>Loading...</strong>
+                            </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="my-keywords-view" role="tabpanel" aria-labelledby="my-keywords">
+            <div class="card page-card mb-4">
+                <div class="card-body">
+                    <div class="d-lg-flex justify-content-between mb-20px">
+                        <div class="d-flex align-items-center">
+                            <h3 class="cardTitle mb-0">All Keywords</h3>
+                            <span class="listedItem" id="listedItemsCount"></span>
+                        </div>
+                        <div>
+                            <ul class="list-style-none actionkey_ul">
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="PDF" class="pdfButton ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li ">
+                                    <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                                        <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li">
+                                    <div class="keywordSearch">
+                                        <img src="/assets/images/icon/search.svg" alt="Search"/>
+                                        <input type="text" class="form-control tableSearch" placeholder="Search..."/>
+                                    </div>
+                                </li>
+<!--                                <li class="actionkey_li">-->
+<!--                                    <div class="addhideColumn dropdown">-->
+<!--                                        <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown"-->
+<!--                                           aria-expanded="false"><h3 class="cardTitle mb-0">Columns<i-->
+<!--                                                class="fas fa-chevron-down"></i></h3></a>-->
+
+<!--                                        <form id="saveColHideShowForm" class="dropdown-menu py-3" aria-labelledby="addhideColumn">-->
+<!--                                            <ul id="showHideCols" class="showHideColsMenu">-->
+<!--                                            </ul>-->
+<!--                                            <div class="text-end px-3">-->
+<!--                                                <button type="button" onclick="saveColHideShow('websitesTable')" class="btn btn-primary pageBtn">Save for next time</button>-->
+<!--                                            </div>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
+<!--                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rabbitTable">
+                        <table id="allKeywordsTable" class="table align-middle border-bottom-0 hover" style="width:100%">
+                            <thead class="thead-dark"></thead>
+                            <tbody>
+                            <td colspan="12" class="text-center">
+                                <strong>Loading...</strong>
+                            </td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card page-card mb-4">
+        <div class="card-body pt-2">
+            <ul class="nav nav-tabs searchTab" id="myTab" role="tablist">
+                <li id="days-li" class="nav-item" role="presentation">
+                    <button class="nav-link active" id="days-tab" data-bs-toggle="tab" data-bs-target="#days" type="button" role="tab" aria-controls="days" aria-selected="true">Average Rank Last Days</button>
+                </li>
+                <li id="month-li" class="nav-item" role="presentation">
+                    <button class="nav-link" id="months-tab" data-bs-toggle="tab" data-bs-target="#months" type="button" role="tab" aria-controls="months" aria-selected="false">Average Rank Last Months</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="days" style="width: 500px; height: 300px; max-height: 300px" role="tabpanel" aria-labelledby="days-tab">
+            <canvas id="allWebsitesDaysChart" height="300"></canvas>
+        </div>
+        <div class="tab-pane fade" id="months" style="width: 500px; height: 300px; max-height: 300px" role="tabpanel" aria-labelledby="months-tab">
+            <canvas id="allWebsitesMonthsChart"></canvas>
+        </div>
+    </div>
+</div>
+<div class="modal" id="newWebsite">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Website</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="partner-form">
+                    <form id="websiteEditForm">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="name">Website Name* </label>
+                                <input type="text" name="name" id="name" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="url">Website Url*</label>
+                                <input type="text" name="url" id="url" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="websiteClassification">Website Classification</label>
+                                <input type="text" name="websiteClassification" id="websiteClassification"
+                                       class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="country">Country</label>
+                                <input type="text" name="country" id="country" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="keywords">Keywords</label>
+                            <textarea class="form-control" name="keywords" id="keywords" rows="3"></textarea>
+                        </div>
+                        <div class="text-right">
+                            <input type="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal" id="editWebsiteModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Website</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="partner-form">
+                    <form id="websiteUpdateForm">
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="name">Website Name </label>
+                                <input type="text" name="websiteName" id="websiteName" class="form-control"> <input
+                                    type="hidden" name="websiteId" id="websiteId">
+                            </div>
+                            <div class="col">
+                                <label for="url">Project Manager</label>
+                                <select id="proManagerSelect">
+
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" onclick="updateWebsite()" class="btn btn-danger" data-dismiss="modal">Update</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--<div id="reportForm" />-->
+<div id="reportForm" style="display:none;" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadWebsites();
+        $('#my-keywords').click(function () {
+            showAllKeywords = true;
+            initKeywords();
+        });
+    });
+    websiteEditForm.onsubmit = async (e) => {
+        e.preventDefault();
+        let response = await fetch(getApiUrl('saveWebsite'), {
+            mode: 'no-cors',
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(getFormDValues(websiteEditForm))
+        });
+        replaceSpecifics()
+    };
+    function downloadPdf(link, url) {
+        console.log('start downloadPdf');
+        // $('#reportForm').show();
+        if ($('#reportForm').html() == '') {
+            console.log('loading reports...');
+            ajaxSimpleLoadToDiv('/assets/htmls/reports.html', 'reportForm');
+            console.log('finished loading reports...');
+            setTimeout(downloadPdf(link, url), 1000);
+        } else {
+            let ourLink = $(link);
+            ourLink.prepend('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+            console.log('downloadPdf ' + url);
+            currWebsite = url;
+            convert();
+        }
+    }
+    function downloadOldPdf(link, url) {
+        console.log('start downloadOldPdf');
+        openModal('/jsp/Report/newReportForm.jsp', 'Download Report');
+    }
+    deleteWebsite = async (id) => {
+        var $target = $(event.target);
+        var tr = $target.closest('tr');
+        showModal('Confirm', 'Are you sure you want to delete your website?', 'No', 'Yes');
+        $('div#modalMessage button#modalSecondButton').click(function () {
+            $.ajax({
+                type: 'POST',
+                url: apiUrl + 'editWebsite',
+                data: getPostParams('oper=del&id=' + id),
+                success: function (result) {
+                    if (result.status) {
+                        showModal("Message", result.status, "Close", "");
+                    } else {
+                        // websitesTable.ajax.reload();
+                        location.reload();
+                        // websitesTable.rows(tr).remove().draw();
+                        // $("#inputSearchWebsite option[value='" + addNew + "']").remove();
+                        // refreshUsage();
+                    }
+                }
+            });
+        });
+    }
+
+    function editWebsite(id) {
+        $('#editWebsiteModal input#websiteName').val($('tr#' + id + ' td:eq(1)').text());
+        $('#editWebsiteModal input#websiteId').val(id);
+
+        $.getJSON(getApiUrl('getMyJsonDataWebsite?url=' + $('tr#' + id + ' td:eq(1)').text()), function (json) {
+            json = JSON.parse(json["data"]);
+            var websiteProjectManagerId = json['websiteProjectManagerId'];
+            $.getJSON(apiUrl + 'jsonProjectManager', function (json) {
+                json = json.list
+                var html = '';
+                if (json.length) {
+                    for (let i = 0; i < json.length; i++) {
+                        html +=
+                            '<option value="' + json[i]['id'] + '" ' + (websiteProjectManagerId == json[i]['id'] ? 'selected' : '') + '>' + json[i]['name'] + '</option>'
+                    }
+                    $('#editWebsiteModal select#proManagerSelect').html(html);
+                }
+            })
+            $('#editWebsiteModal').modal();
+        })
+
+    }
+
+    async function updateWebsite() {
+        var websiteId = $('#editWebsiteModal input#websiteId').val();
+        var projectManagerId = $('#editWebsiteModal select#proManagerSelect').val();
+        const response = await fetch(apiUrl + 'editPMWebsite?websiteId=' + websiteId + '&pmId=' + projectManagerId, {
+            mode: 'no-cors',
+            method: 'post',
+        });
+    }
+
+    function loadWebsites() {
+        websitesTable = $('#websitesTable').DataTable({
+            "ajax": {
+                "url": getApiUrl('jsonWebsite'),
+                "type": "get",
+                "datatype": "json",
+                "dataSrc": "list",
+            },
+            rowId: 'id',
+            "columns": [
+                // {
+                //     "className": 'details-control',
+                //     "orderable": false,
+                //     "data": null,
+                //     "defaultContent": '<img src="/assets/images/icon/blue_arrow.png"  width="30" height="30" class="blueArrow" /> <img src="/assets/images/icon/arrow_down.png" class="grayArrow" width="30" height="30" />'
+                // },
+                {
+                    data: "starred",
+                    render: function (data, type, row) {
+                        // return data;
+                        if (type === 'display' || type === 'filter') {
+                            return '<a class="no-click" id="star' + row.id + '" href="javascript:toggleStar(\'Website\', ' + row.id + ', ' + data + ')">' + (data ? '<img src="/assets/images/icon/starFill.png"></a>' : '<img src="/assets/images/icon/star.png"></a>');
+                        } else {
+                            return data;
+                        }
+                    },
+                    visible: true
+                },
+                {"data": "name", "defaultContent": "", "title": "Name", 'visible': true},
+                {
+                    "data": "url",
+                    "name": "pageUrl",
+                    "title": "Website Url",
+                    "defaultContent": "",
+                    "autoWidth": true,
+                    'visible': false,
+                },
+                {"data": "dateCreated", "name": "dateCreated", "title": "Created Date", 'visible': false},
+                // {
+                //     "data": "facebookLikes",
+                //     "name": "facebookLikes",
+                //     "title": "Facebook Likes",
+                //     'visible': false,
+                //     render: function (data, type, row) {
+                //         if (type === 'display' || type === 'filter') {
+                //             return nFormatter(data, 2);
+                //         }
+                //         return data;
+                //     }
+                // },
+                {
+                    "data": "totalRanksCount",
+                    "name": "totalRanksCount",
+                    "title": "Total Keywords",
+                    'visible': true,
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return nFormatter(data, 2);
+                        }
+                        return data;
+                    },
+                    "tooltip" : getTranslationWord("Indicates how many keywords the given website is ranked for")
+                },
+                {"data": "countKfw", "name": "countKfw", "title": "Tracked Keywords", 'visible': true,
+                    // "tooltip" : "Indicates how many keywords have daily tracking for the given website",
+                },
+                {
+                    "data": "avgPosCurr", "name": "avgPosCurr", "title": "Avg Position", 'visible': true,
+                    "tooltip" : getTranslationWord("Indicates average position (of the daily tracked keywords) for the given website"),
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return nFormatter(data, 2);
+                        }
+                        return data;
+                    }
+                },
+                {
+                    "data": "avgPosYesterday",
+                    "name": "avgPosYesterday",
+                    "title": "Avg Position Yesterday",
+                    'visible': false,
+                    "tooltip" : getTranslationWord("Indicates yesterday average position (of the daily tracked keywords) for the given website"),
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return nFormatter(data, 2);
+                        }
+                        return data;
+                    }
+                },
+                {
+                    "data": "avgPos7", "name": "avgPos7", "title": "Avg Position Last Week", 'visible': false,
+                    "tooltip" : getTranslationWord("Indicates last week average position (of the daily tracked keywords) for the given website"),
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return nFormatter(data, 2);
+                        }
+                        return data;
+                    }
+                },
+                {
+                    "data": "avgPos30", "name": "avgPos30", "title": "Avg Position Last Month", 'visible': false,
+                    "tooltip" : getTranslationWord("Indicates last month average position (of the daily tracked keywords) for the given website"),
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return nFormatter(data, 2);
+                        }
+                        return data;
+                    }
+                },
+                {
+                    "data": "ranksUp",
+                    "name": "ranksUp",
+                    "title": "Ranks Up",
+                    'visible': true,
+                    "tooltip" : getTranslationWord("Indicates how many ranks went up since yesterday for the given website"),
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return data ? "<span style=\"color: #3da700\">" + data + (data > 0 ? ' <img src="/assets/images/icon/upload-up.png" />' : '') + "</span>" : "-";
+                        }
+                        return data;
+                    }
+                },
+                {
+                    "data": "ranksDown", "name": "ranksDown", "title": "Ranks Down", 'visible': true,
+                    "tooltip" : getTranslationWord("Indicates how many ranks went down since yesterday for the given website"),
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return data ? "<span style=\"color: #ac2925\">" + data + (data > 0 ? ' <img src="/assets/images/icon/upload-down.png" />' : '') + "</span>" : "-";
+                        }
+                        return data;
+                    }
+                },
+                {"data": "ranksUpFromPrev", "name": "ranksUpFromPrev", "title": "Ranks Up", 'visible': false,
+                    "tooltip" : getTranslationWord("Indicates how many ranks went up since last change for the given website"),
+                },
+                {"data": "ranksDownFromPrev", "name": "ranksDownFromPrev", "title": "Ranks Down", 'visible': false,
+                    "tooltip": getTranslationWord("Indicates how many ranks went down since yesterday for the given website"),},
+
+                {"data": "countLandingPages", "name": "countLandingPages", "title": "Tracked Pages", 'visible': false,
+                    "tooltip" : getTranslationWord("Indicates how many landing pages are tracked for the given website"),},
+                {"data": "pr", "name": "pr", "title": "Page Rank", 'visible': true,
+                    "tooltip" : getTranslationWord("Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.")},
+                {
+                    "data": "totalBacklinksCount",
+                    "name": "totalBacklinksCount",
+                    "title": "Backlinks",
+                    'visible': false,
+                    "tooltip" : getTranslationWord("Indicates how many backlinks are linking for the given website"),
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return nFormatter(data, 2);
+                        }
+                        return data;
+                    }
+                },
+                {
+                    "data": "countMonitoredLinks",
+                    "name": "countMonitoredLinks",
+                    "title": "Tracked Links",
+                    'visible': false,
+                    "tooltip" : getTranslationWord("Indicates how many backlinks are being monitored for the given website"),
+                },
+                {
+                    "data": "visitLastMonth", "name": "visitLastMonth", "title": "Visitors", 'visible': false,
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return nFormatter(data, 2);
+                        }
+                        return data;
+                    }
+                },
+                {
+                    data: "url", "name": "url", "title": "PDF", 'visible': false,
+                    render: function (data, type, row) {
+                        return '<a class="no-click" onclick="reverseMode = false; downloadPdf(this,\'' + data + '\')"><i class="fa-solid fa-file-pdf"></i></a>' +
+                            (localStorage.getItem('rtl') == 1 ? ('<a data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="In some browsers the PDF will show reversed letters - click here to download fixed PDF" class="no-click reversedPdfButton" onclick="reverseMode = true; downloadPdf(this,\'' + data + '\')"><i class="fa-duotone fa-file-pdf"></i></a>') : '');
+                    }
+                },
+                // {
+                //     data: "url", "name": "url", "title": "PDF Old", 'visible': false,
+                //     render: function (data, type, row) {
+                //         return '<a class="no-click" onclick="downloadOldPdf(this,\'' + data + '\')"><i class="fa-solid fa-file-pdf"></i></a>';
+                //     }
+                // },
+                {
+                    data: "id", "name": "id", "title": "Delete", 'visible': true,
+                    render: function (data, type, row) {
+                        return '<a class="no-click" onclick="deleteWebsite(' + row.id + ')"><img src="/assets/images/icon/remove.png" alt="Remove"></a>';
+                    }
+                }
+            ],
+            'fnCreatedRow': function (nRow, data, iDataIndex) {
+                $(nRow).attr('onclick', 'websitesTableClick(\'' + data.url + '\')');
+                $(nRow).attr('style', 'cursor:pointer');
+            },
+            "order": [[1, "asc"]],
+            destroy: true,
+            buttons: ['copy', 'excel', 'print', {
+                extend: 'pdfHtml5', orientation: 'landscape', pageSize: 'LEGAL'
+            }],
+            "dom": '<"dt-buttons"Bf><"clear">firtlp',
+            // info: false,
+            // paging: false,
+            // "bFilter": true,
+            // fixedHeader: true,
+            // deferRender: true,
+            // scrollY: 700,
+            // scrollCollapse: true,
+            info: false,
+            fixedHeader: false,
+            deferRender: true,
+            paging: false,
+            "bFilter": true,
+            // scroller: true,
+            "aoColumnDefs": [{
+                "searchable": false,
+                "targets": [0]
+            }],
+            "initComplete": function(settings, json) {
+                let rows = websitesTable.rows();
+                let rowCount = rows.count();
+                var websitesCount = 0;
+                var websitesKeywordsUp = 0;
+                var websitesKeywordsDown = 0;
+                var websitesAvgPos = 0;
+                var websitesChangePercent = 0;
+                rows.every(function (rowIdx, tableLoop, rowLoop) {
+                    var row = this.data();
+                    websitesCount++;
+                    websitesKeywordsUp += row.ranksUp;
+                    websitesKeywordsDown += row.ranksDown;
+                    websitesAvgPos += row.avgPosCurr;
+                    websitesChangePercent += row.changePercent;
+                    $('#websitesCount').html(rowCount);
+                    $('#websitesKeywordsUp').html(websitesKeywordsUp);
+                    $('#websitesKeywordsDown').html(websitesKeywordsDown);
+                    $('#websitesAvgPos').html(nFormatter((websitesAvgPos / websitesCount), 2));
+                    $('#websitesChangePercent').html(nFormatter((websitesChangePercent / websitesCount), 2));
+                });
+                enableTooltips();
+                adjustExportButtons('keywordSearch', websitesTable);
+                initShowHideColumns('websitesTable', websitesTable);
+            }
+        });
+
+
+        // $('input.checkHideShow').change(function (e) {
+        //     e.preventDefault();
+        //     var column = websitesTable.column($(this).attr('col-index'));
+        //     column.visible($(this).prop("checked"));
+        // })
+    }
+
+    $.getJSON(getApiUrl('getMyJsonAllAvgRanksReportWebsite'), function (json) {
+        if (!hasAlertToShow(json)) {
+            console.log('getMyJsonAllAvgRanksReportWebsite ' + JSON.stringify(json));
+            json = json.list;
+            var websites = [];
+            var daysLabels = [];
+            var daysValues = [];
+            var websitesDaysValues = [];
+            var monthsLabels = [];
+            var monthsValues = [];
+            var websitesMonthsValues = [];
+            for (var i = 0; i < json.length; i++) {
+                websites.push(json[i].id);
+                let ranks = json[i].name;
+                if (ranks) {
+                    // console.log('ranks ' + JSON.stringify(ranks));
+                    let days = ranks.days;
+                    let months = ranks.months;
+                    daysLabels = Object.keys(ranks.days);
+                    daysValues = Object.values(ranks.days);
+                    websitesDaysValues.push(daysValues);
+
+                    monthsLabels = Object.keys(ranks.months);
+                    monthsValues = Object.values(ranks.months);
+                    websitesMonthsValues.push(monthsValues);
+                }
+            }
+            let borderColor = ['#336CFB', '#16D090', '#EFAD0A', '#212529', '#ff6347', '#0000FF', '#FF00FF', '#C0C0C0', '#808000', '#ADD8E6', '#00FFFF'];
+            var lineChartData = {}; //declare an object
+            lineChartData.labels = daysLabels;
+            lineChartData.datasets = []; //add 'datasets' array element to object
+            var lineChartDataMonth = {}; //declare an object
+            lineChartDataMonth.labels = monthsLabels;
+            lineChartDataMonth.datasets = []; //add 'datasets' array element to object
+
+            for (var line = 0; line < json.length; line++) {
+                lineChartData.datasets.push({}); //create a new line dataset
+                lineChartDataMonth.datasets.push({}); //create a new line dataset
+                var dataset = lineChartData.datasets[line];
+                var datasetMonth = lineChartDataMonth.datasets[line];
+                dataset.label = json[line].id;
+                datasetMonth.label = json[line].id;
+                dataset.borderColor = borderColor[line];
+                datasetMonth.borderColor = borderColor[line];
+                // dataset.strokeColor = "rgba(200,200,200,1)";
+                dataset.data = websitesDaysValues[line]; //contains the 'Y; axis data
+                datasetMonth.data = websitesMonthsValues[line]; //contains the 'Y; axis data
+                lineChartData.datasets[line].data = websitesDaysValues[line]; //send new line data to dataset
+                lineChartDataMonth.datasets[line].data = websitesMonthsValues[line]; //send new line data to dataset
+            }
+            // console.log('websites ' + websites);
+            // console.log('daysLabels ' + daysLabels.length);
+            // console.log('websitesDaysValues ' + websitesDaysValues.length);
+            if (allWebsitesDaysChart) {
+                allWebsitesDaysChart.destroy();
+            }
+            if (allWebsitesMonthsChart) {
+                allWebsitesMonthsChart.destroy();
+            }
+
+            allWebsitesDaysChart = new Chart("allWebsitesDaysChart", {
+                type: "line",
+                options: reversedLineOptions,
+                data: lineChartData
+            })
+            allWebsitesMonthsChart = new Chart("allWebsitesMonthsChart", {
+                type: "line",
+                options: reversedLineOptions,
+                data: lineChartDataMonth
+            })
+
+        }
+    });
+
+    // new Chart("newLinks", {
+    //     type: "line",
+    //     data: {
+    //         labels: xValues,
+    //         datasets: [{
+    //             label: 'new backlinks',
+    //             data: newBacklinks,
+    //             borderColor: "#336CFB",
+    //             fill: false,
+    //             lineTension: 0.4,
+    //             pointRadius: 0,
+    //             pointHoverRadius: 4,
+    //         }, {
+    //             label: 'new referring domains',
+    //             data: newReferringDomains,
+    //             borderColor: "#16D090",
+    //             fill: false,
+    //             lineTension: 0.4,
+    //             pointRadius: 0,
+    //             pointHoverRadius: 4,
+    //         }]
+    //     },
+    //     options: {
+    //         plugins: {
+    //             legend: {
+    //                 display: false
+    //             }
+    //         },
+    //         responsive: true,
+    //         maintainAspectRatio: false,
+    //         legend: {display: true}
+    //     }
+    // });
+    var reversedLineOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                reverse: true,
+                ticks: {
+                    beginAtZero: true,
+                    precision: 0,
+                },
+                grid: {
+                    display: true,
+                    stepSize: 1,
+                    color: "#D7DBDE"
+                }
+            },
+            x: {
+                // reverse: true,
+                ticks: {
+                    // reverse: true,
+                    beginAtZero: true
+                },
+                grid: {
+                    display: true,
+                }
+            },
+            // ticks: {
+            //     precision:0
+            // },
+        }
+    };
+    function websitesTableClick(websiteName) {
+        let tdHtml = $(event.target).closest('td')[0].innerHTML;
+        console.log('tdHtml ' + tdHtml);
+        if (!tdHtml || !tdHtml.includes('no-click')) {
+            tabToShow = 'dashboard';
+            let row = websitesTable.row($(event.target).closest('tr'));
+            $('#inputSearchWebsite').val(websiteName).change();
+        }
+    }
+</script>
+<style>
+.reversedPdfButton {
+    margin-right: 10px; margin-left: 10px;
+}
+</style>

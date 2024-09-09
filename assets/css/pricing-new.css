@@ -1,0 +1,72 @@
+div#plans {
+    max-width: 1600px;
+}
+
+.pricing_container_box {
+    padding: 0;
+}
+
+.pricing_container_box .pricing_top_area:after {
+    display: none;
+}
+
+.pricing_container_box .pricing_top_area {
+    display: none;
+}
+
+.row.planRow> div> div .card-header.bg-primary, .row.planRow> div> div .card-header {
+    border: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row.planRow> div> div .card-header h4.my-0.fw-normal {
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.row.planRow> div> div.border-primary {
+    padding: 15px 15px 35px 15px;
+    border-radius: 10px !important;
+    background: #ffffff96 !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: .3s ease all;
+    border: 0 !important;
+}
+
+.row.planRow> div> div.border-primary:hover {
+    background: #fcc718b8 !important;
+}
+
+.row.planRow> div> div .card-header.bg-primary h1.card-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 30px 0 30px 0;
+    font-size: 46px;
+    color: #212529;
+}
+
+.row.planRow> div> div.border-primary .card-body {
+    padding: 0;
+}
+
+.row.planRow> div> div.border-primary ul li::before {
+    filter: unset;
+}
+
+.row.planRow> div> div .card-body ul li {
+    font-size: 16px;
+}
+
+.row.planRow> div> div .card-header.bg-primary h1.card-title small.text-muted.fw-light {
+    font-weight: inherit !important;
+    color: #212529 !important;
+}
+
+.row.planRow> div> div.border-primary:hover ul li::before {
+    filter: brightness(0) !important;
+}

@@ -1,0 +1,151 @@
+<link rel="stylesheet" href="/assets/css/styleApp.css"/>
+<link rel="stylesheet" href="/assets/css/yellow.css"/>
+<link rel="stylesheet" href="/assets/css/yellow-new.css"/>
+
+<script type="text/javascript" src="/assets/scripts-app/rabbit.js"></script>
+
+<div class="py-24px">
+    <h5 class="tabTitle">Find User by Domain / Email</h5>
+    <form id="adminFindUser">
+        <div class="mb-3">
+            <div class="custom-control custom-switch">
+                <input class="control-input form-control-lg" name="myUser">
+<!--                <input type="hidden" name="showAll" value="true">-->
+                <!--                <label class="custom-control-label">User Email / Website</label>-->
+                <button type="button" onclick="findUsers()" class="btn btn-primary mw-75px">Find User</button>
+            </div>
+        </div>
+        <!--        <div style="margin-top: 10px;" class="alert alert-success" role="alert">-->
+        <!--            <div class="d-flex">-->
+        <!--                <p id="usersResult" class="my-0"></p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </form>
+    <div class="rabbitTable">
+        <table id="supportUsersTable" class="table align-middle border-bottom-0 hover" style="width:100%">
+            <thead class="thead-dark"></thead>
+            <tbody>
+            <td colspan="12" class="text-center">
+            </td>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mb-3">
+        <div class="custom-control custom-switch">
+            <input class="control-input form-control-lg" id="unsubscribeEmail">
+            <button type="button" onclick="unsubscribeEmail()" class="btn btn-primary mw-75px">Unsubscribe Email from ALL APPS (Only for DAEMON-MAIL errors)</button>
+        </div>
+        <div style="margin-top: 10px;" class="alert alert-success" role="alert" id="unsubscribeEmailResult"></div>
+    </div>
+
+</div>
+<script>
+    isAgent = true;
+    $(document).ready(function () {
+        $(document).click(function (event) {
+        });
+    });
+
+    function unsubscribeEmail() {
+        $.getJSON(apiUrl + 'getMyJsonUnsubscribeAllAppsGuest?email=' + $('#unsubscribeEmail').val(), function (json) {
+            console.log('getMyJsonUnsubscribeAllAppsGuest ' + JSON.stringify(json));
+            $('#unsubscribeEmailResult').html(json['obj'] + ' email unsubscribed');
+        });
+    }
+
+    function findUsers() {
+        const result = ajaxSubmitFormGetFullResult('adminFindUser');
+        $('#usersResult').html(result);
+        let supportUsersTable = $('#supportUsersTable').DataTable({
+            "datatype": "json",
+            "data": result['list'],
+            rowId: 'id',
+            "columns": [
+                // {
+                //     data: "starred",
+                //     render: function (data, type, row) {
+                //         // return data;
+                //         if (type === 'display' || type === 'filter') {
+                //             return '<a id="star' + row.id + '" href="javascript:toggleStar(\'KeywordForWebsite\', ' + row.id + ', ' + data + ')">' + (data ? '<img src="/assets/images/icon/starFill.png"></a>' : '<img src="/assets/images/icon/star.png"></a>');
+                //         } else {
+                //             return data;
+                //         }
+                //     },
+                //     visible: true
+                // },
+                {"data": "id", "defaultContent": "", "visible" : false },
+                {"data": "name", "defaultContent": "", "title": "Name",},
+                {
+                    "data": "email", "defaultContent": "", "title": "Email",
+                    render: function (data, type, row) {
+                        if (type === 'display' || type === 'filter') {
+                            return data.indexOf('@') !== -1 ? data : row.extraEmails;
+                        } else {
+                            return data;
+                        }
+                    }
+                },
+                {"data": "wixUrl", "defaultContent": "", "title": "Domain",},
+                {"data": "appDomainName", "defaultContent": "", "title": "Source",},
+                {"data": "country", "defaultContent": "", "title": "Country",},
+                {"data": "keywordsUsed", "defaultContent": "", "title": "Keywords Used",},
+                {"data": "keywordsMax", "defaultContent": "", "title": "Keywords Max",},
+                {"data": "websitesUsed", "defaultContent": "", "title": "Websites",},
+                {"data": "researchUsed", "defaultContent": "", "title": "Researches",},
+                {"data": "linksRequestUsed", "defaultContent": "", "title": "Used Links", },
+                {"data": "linksRequestMax", "defaultContent": "", "title": "Max Links",},
+                {"data": "dateCreated", "defaultContent": "", "title": "Date Created",},
+                {"data": "lastLogin", "defaultContent": "", "title": "Last Login",},
+                // {"data": "loginCount30", "defaultContent": "", "title": "Login 30",},
+                {"data": "userPackageName", "defaultContent": "", "title": "Login 30",},
+                {"data": "pricePerMonth", "defaultContent": "", "title": "Price",},
+                {"data": "lastPaymentDate", "defaultContent": "", "title": "Last Payment",},
+                {"data": "extraData", "defaultContent": "", "title": "Extra Data",},
+                {"data": "websiteRanks", "defaultContent": "", "title": "Ranks",},
+                {"data": "websiteLinks", "defaultContent": "", "title": "Links",},
+                {"data": "countLandingPages", "defaultContent": "", "title": "Pages",},
+                // { "data": "websitesMax", "defaultContent": "", "title": "websitesMax", },
+            ],
+            destroy: true,
+            "language": {
+                "emptyTable": "No users found"
+            }, info: false,
+            fixedHeader: true,
+            deferRender: true,
+            paging: false,
+            "bFilter": true,
+            "aoColumnDefs": [{
+                "searchable": false,
+                "targets": [0]
+            }],
+        });
+        $('#supportUsersTable tbody tr').on('click', 'td', function () {
+        // $('#supportUsersTable tbody tr').on('click', 'td:first-child', function () {
+            console.log('tbody click')
+            var tr = $(this).closest('tr');
+            var row = supportUsersTable.row(tr);
+
+            if (row.child.isShown()) {
+                // This row is already open - close it.
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open row.
+                let data = row.data();
+                let html = createUserActionsHtml(data);
+                row.child(html, 'childClass').show();
+                tr.addClass('shown');
+                $('.superAdmin').hide();
+            }
+        });
+    }
+</script>
+<style type="text/css">
+#supportUsersTable userActions a {
+    margin: 10px;
+}
+#supportUsersTable tbody tr {
+    cursor: pointer;
+}
+</style>

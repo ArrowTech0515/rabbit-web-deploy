@@ -1,0 +1,106 @@
+body {
+    font-family: sans-serif;
+}
+main {
+    overflow-x: hidden;
+}
+.main {
+    display: inline-flex;
+    width: 100%;
+}
+
+.main .left-panel {
+    width: 20%;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.main .form-panel {
+    width: 80%;
+}
+
+.main input, .main textarea {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: solid 1px gray;
+}
+.ql-toolbar.ql-snow {
+    border: solid 1px gray;
+    border-radius: 10px 10px 0 0 ;
+}
+#description-editor {
+    height: 100px;
+    font-size: 17px;
+    border: solid 1px gray!important;
+    border-radius: 0 0 10px 10px;
+}
+.structure-content {
+    border: solid 1px gray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.structure-content .structure-item {
+    border-bottom: solid 1px gray;
+
+}
+.structure-content .structure-item .type {
+    opacity: 50%;
+}
+.form-panel {
+    padding: 20px;
+    color: #CBD5E1;
+}
+.form-panel .form-space {
+    width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 10% 100px;
+}
+.form-panel .form-space-title{
+    font-size: 30px;
+}
+.form-panel .form-space-description {
+    font-size: 25px;
+}
+.form-panel .form-space-description p {
+    margin-bottom: 0px!important;
+}
+.form-panel .form-space-widgets input{
+    padding: 10px;
+}
+.add-block-panel {
+    width: 17vw;
+    height: calc(100vh - 80px);
+    position: absolute;
+    right: -17vw;
+    top: 0px;
+    background: white;
+    border-left: solid 2px lightgrey;
+}
+
+.close-add-block-panel {
+    width: 25px;
+    cursor: pointer;
+}
+.add-block-types {
+    font-size: 15px;
+    font-weight: bold;
+    color: #616161;
+}
+.add-block-panel .input-blocks {
+    padding: 10px;
+}
+.add-block-panel .input-blocks .mx-auto {
+    text-align: center;
+}
+.add-block-panel .input-blocks svg {
+    width: 20px;
+}
+.add-block-panel .input-blocks p {
+    margin-bottom: 0px;
+}
+.add-block-panel .input-blocks .cursor-grab:hover {
+    background: lightgray;
+}

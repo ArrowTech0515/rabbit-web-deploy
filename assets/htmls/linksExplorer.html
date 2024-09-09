@@ -1,0 +1,43 @@
+<div class="mb-5">
+    <div class="page-title d-flex align-items-center justify-content-between mb-20px">
+        <div class="d-flex align-items-center align-items-center">
+            <h3 class="dash-title mb-0" id="overviewOf"></h3>
+<!--            <a href="javascript: runIntro();" class="btn btn-outline-primary pageBtn userManual_btn"><img-->
+<!--                    src="/assets/images/icon/u_manual.svg" alt="User Manual"><span>User Manual</span></a>-->
+        </div>
+    </div>
+
+    <div class="card-body pt-1">
+        <ul class="nav nav-tabs searchTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a id="firstTabLink" class="nav-link active" data-bs-toggle="tab" href="/assets/htmls/linksAll.html"
+                   data-bs-target="#tabBasic"
+                   role="tab" aria-controls="first" aria-selected="true">Backlinks List</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="/assets/htmls/linksAnchors.html" data-bs-target="#tabSecond"
+                   role="tab" aria-controls="second" aria-selected="false">Backlinks By Keywords</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" data-bs-toggle="tab" href="/assets/htmls/linksPages.html" data-bs-target="#tabThird"
+                   role="tab" aria-controls="third" aria-selected="false">Backlinks By Pages</a>
+            </li>
+        </ul>
+        <br/>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tabBasic"></div>
+            <div class="tab-pane" id="tabSecond"></div>
+            <div class="tab-pane" id="tabThird"></div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#overviewOf').html($('#inputSearchWebsite').val() + ' <span>Links Explorer</span>');
+        loadAjaxTabs();
+        // load first tab content
+        $('#tabBasic').load($('#firstTabLink').attr("href"), function (result) {
+            $('#firstTabLink').tab('show');
+        });
+    });
+</script>

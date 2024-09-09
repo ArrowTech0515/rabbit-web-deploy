@@ -1,0 +1,998 @@
+<title>Get Leads | Make your website discoverable | Marketing & SEO for SMBs</title>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"></script>
+<link rel="icon" type="image/x-icon" href="/assets/images/rabbitFavicon.ico">
+<link rel="stylesheet" href="/assets/css/style.css"/>
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/scripts-app/welcome-rabbit.js"></script>
+<!-- Matomo Image Tracker-->
+
+<div class="bodyWrap">
+    <div id="loginLoader" class="login_loader" style="display: none">
+        <span><img src="/assets/img/loader.gif" alt="Loading"></span>
+    </div>
+
+    <header class="header_area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="javascript: scrollTo('#loginLoader')"><img src="/assets/img/logo.png"  alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="/assets/img/bars-solid.svg" alt="">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript: scrollTo('.pricing_tab_area')">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://blog.rabbitseo.com">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript: scrollTo('.contactUsFormContainer')">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript: scrollTo('.signUp_form_container')">Try Get Leads</a>
+                        </li>
+                    </ul>
+                    <div class="login_dropdown " id="rabbitLoginBox">
+                        <div class="login_icon">
+                            <span><img src="/assets/img/user-circle-solid.svg" alt="user"></span> Login
+                        </div>
+                        <div class="logingDropdown">
+                            <div class="login_container">
+                                <form id="appLoginGuest" method="POST">
+                                    <input type="hidden" name="action" value="login">
+                                    <input type="hidden" name="loginAttempt" value="1">
+                                    <div class="login_inp">
+                                        <input type="email" name="email" placeholder="Email">
+                                        <img src="/assets/img/email.png" alt="" class="input_icon">
+                                    </div>
+                                    <div class="login_inp">
+                                        <input type="password" name="password" placeholder="Password">
+                                        <img src="/assets/img/lock.png" alt="" class="input_icon">
+                                    </div>
+                                    <div class="loginRemember">
+                                        <input type="checkbox" name="rememberMe" id="login_Remember">
+                                        <label for="login_Remember">
+												<span class="Remember_check">
+													<img src="/assets/img/check.png" alt="check">
+												</span>
+                                            Remember Me
+                                        </label>
+                                    </div>
+                                    <div class="logInBtn">
+                                        <button class="button g-recaptcha"
+                                                data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                data-callback='sendLoginForm' data-action='submit'>LOGIN
+                                        </button>
+                                    </div>
+                                    <div style="display: none; margin-top: 10px;" class="alert alert-success"
+                                         role="alert">
+                                        <div class="d-flex">
+                                            <p class="my-0">Your message was successfully sent</p>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="text-center">
+                                    <a style="cursor: pointer" class="forgot_pass">
+                                        Forgot Password?
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="forgot_container">
+                                <img src="/assets/img/arrow-left-solid.svg" alt="arrow-left" class="backLogin"
+                                     title="Back to Login">
+                                <h3>Forgot Password?</h3>
+                                <form id="ajaxForgotPasswordGuest" name="forgot_pass">
+                                    <div class="login_inp">
+                                        <input type="email" name="email" placeholder="Email">
+                                        <img src="/assets/img/email.png" alt="" class="input_icon">
+                                    </div>
+                                    <div class="logInBtn">
+                                        <button class="button g-recaptcha"
+                                                data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                data-callback='forgotPassword' data-action='submit'>SUBMIT
+                                        </button>
+                                    </div>
+                                    <div style="display: none; margin-top: 10px;" class="alert alert-success"
+                                         role="alert">
+                                        <div class="d-flex">
+                                            <p class="my-0" id="forgotPasswordDiv"></p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+<div class="main_content_index">
+    <section class="home_banar">
+        <div class="container">
+            <div class="banar_container">
+                <div class="banarcontent">
+                    <img src="/assets/img/home-logo.png" alt="" class="banarLogo">
+                    <p>
+                        The Ideal SEO & Marketing Solution for Small-Medium Businesses.
+<!--                        Get Leads gives you what you need to make your site a success-->
+                    </p>
+                    <a href="javascript: scrollTo('.signUp_form_container')" class="yellowBtn">START USING RABBIT
+                        SEO </a>
+                </div>
+                <img src="/assets/img/homebanner.png" alt="" class="banar_img">
+            </div>
+        </div>
+    </section>
+
+    <section class="homeReviews">
+        <div class="container">
+            <div class="text-center">
+                <h5>Some of our customers...</h5>
+            </div>
+            <div class="reviewsContents"> 
+                <div class="myreviewsdivs"></div>
+                <div class="myreviewsdivs_btn">
+                    <button name="prev" class="yellowBtn"><img src="/assets/images/icon/arrow_prev.png"></button>
+                    <button name="next" class="yellowBtn"><img src="/assets/images/icon/arrow_next.png"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home_white_area">
+        <div class="container">
+            <img src="/assets/img/home_shaoe_1.png" alt="" class="home_shape homeshape_1">
+            <img src="/assets/img/home_shaoe_2.png" alt="" class="home_shape homeshape_2">
+            <img src="/assets/img/home_shaoe_3.png" alt="" class="home_shape homeshape_3">
+            <img src="/assets/img/home_shaoe_4.png" alt="" class="home_shape homeshape_4">
+            <img src="/assets/img/home_shaoe_5.png" alt="" class="home_shape homeshape_5">
+            <img src="/assets/img/home_shaoe_6.png" alt="" class="home_shape homeshape_6">
+            <img src="/assets/img/home_shaoe_7.png" alt="" class="home_shape homeshape_7">
+            <div class="whiteRow row">
+                <div class="col-md-6">
+                    <div class="whiteCont">
+                        <h4>Publish Guest Blogs in Sites with High DA & DR</h4>
+                        <a href="javascript: scrollTo('.signUp_form_container')" class="yellowBtn arrowBtn">Get your Free Trial NOW <img
+                                src="/assets/img/arrow-circle.svg"
+                                alt="arrow-circle"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/assets/img/white_img_5.png" alt="" class="whiteRowImg">
+                </div>
+            </div>
+            <div class="whiteRow row colRevers">
+                <div class="col-md-6 ">
+                    <img src="/assets/img/white_img_1.png" alt="" class="whiteRowImg">
+                </div>
+                <div class="col-md-6">
+                    <div class="whiteCont">
+                        <h4>Boost Your Traffic With Get Leads</h4>
+                        <a href="javascript: scrollTo('.signUp_form_container')" class="yellowBtn arrowBtn">Create Backlinks NOW <img
+                                src="/assets/img/arrow-circle.svg"
+                                alt="arrow-circle"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whiteRow row">
+                <div class="col-md-6">
+                    <div class="whiteCont">
+                        <h4>Optimize Your Landing Pages and Get Higher Rankings</h4>
+                        <a href="javascript: scrollTo('.signUp_form_container')" class="yellowBtn arrowBtn">Get Free On Page Recommendations NOW <img
+                                src="/assets/img/arrow-circle.svg"
+                                alt="arrow-circle"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/assets/img/white_img_2.png" alt="" class="whiteRowImg">
+                </div>
+            </div>
+
+            <div class="whiteRow row colRevers">
+                <div class="col-md-6 ">
+                    <img src="/assets/img/white_img_3.png" alt="" class="whiteRowImg">
+                </div>
+                <div class="col-md-6">
+                    <div class="whiteCont">
+                        <h4>Increase Your Website Traffic with New Hot Keywords</h4>
+                        <a href="javascript: scrollTo('.signUp_form_container')" class="yellowBtn arrowBtn">Show Keyword Research NOW <img
+                                src="/assets/img/arrow-circle.svg"
+                                alt="arrow-circle"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whiteRow row">
+                <div class="col-md-6">
+                    <div class="whiteCont">
+                        <h4>Spy On Your Competitors & Get Real Time Inside Data </h4>
+                        <a href="javascript: scrollTo('.signUp_form_container')" class="yellowBtn arrowBtn">Show Competitors Keywords & Backlinks <img
+                                src="/assets/img/arrow-circle.svg"
+                                alt="arrow-circle"></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="/assets/img/white_img_4.png" alt="" class="whiteRowImg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    <section class="seo_platform">-->
+    <!--        <div class="container">-->
+    <!--            <img src="/assets/img/home_shaoe_8.png" alt="" class="home_shape homeshape_8">-->
+    <!--            <img src="/assets/img/home_shaoe_9.png" alt="" class="home_shape homeshape_9">-->
+    <!--            <div class="secoPlat_cont text-center">-->
+    <!--                <h2>SEO Platform</h2>-->
+    <!--                <p>You are one step from being discoverable :)</p>-->
+    <!--                <a href="javascript: scrollTo('.signUp_form_container')" class="yellowBtn">CREATE FREE ACCOUNT</a>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <div class="signUp_form_container" id="rabbitSignup">
+        <div class="signupcontainer">
+            <div class="row">
+                <div class="signup_col signLeft">
+                    <h2>Try Get Leads <br> For Free</h2>
+                    <ul>
+                        <li>Drive traffic to your site & get higher ranks</li>
+                        <li>Find new keywords within a minute!</li>
+                        <li>Get your landing pages improved and optimized</li>
+                        <li>No credit card required</li>
+                    </ul>
+                </div>
+                <div class="signup_col signRight">
+                    <h3>Try it Now</h3>
+                    <form id="createGetLeadsAccountGuest" method="post" class="sign-up">
+                        <input type="hidden" name="createNew" value="true"/>
+                        <div class="input_col">
+                            <input type="url" placeholder="Website Url" name="url" id="siteUrl">
+                            <img src="/assets/img/link.png" class="inp_icon">
+                        </div>
+                        <div class="input_col">
+                            <input type="email" placeholder="Email" name="email" id="reg_email">
+                            <img src="/assets/img/email.png" class="inp_icon">
+                        </div>
+                        <div class="input_col">
+                            <input type="password" placeholder="Password" name="password" id="reg_pass">
+                            <img src="/assets/img/lock.png" class="inp_icon">
+                        </div>
+                        <div class="reg_btn">
+                            <button type="submit" class="button g-recaptcha"
+                                    data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT" data-callback='signupGetLeads'
+                                    data-action='submit' onclick="$('.spinner-border').show();">CREATE MY ACCOUNT
+                                <div class="spinner-border ms-auto" style="display: none" role="status"></div>
+                            </button>
+                        </div>
+                        <div style="display: none; margin-top: 10px;" class="alert alert-success" role="alert">
+                            <div class="d-flex">
+                                <p class="my-0" id="signupResult"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <img src="/assets/img/shape(1).png" alt="" class="form_shapereg form_shapereg_1">
+            <img src="/assets/img/shape(2).png" alt="" class="form_shapereg form_shapereg_2">
+            <img src="/assets/img/shape(3).png" alt="" class="form_shapereg form_shapereg_3">
+            <img src="/assets/img/shape(3).png" alt="" class="form_shapereg form_shapereg_4">
+            <img src="/assets/img/shape(4).png" alt="" class="form_shapereg form_shapereg_5">
+        </div>
+    </div>
+
+    <section class="pricingBanar_area" id="rabbitPlan">
+        <div class="container pricing_container">
+            <div class="banar_content">
+                <h1>Create Your Free Account Now</h1>
+                <h3>No credit card required</h3>
+                <ul class="pricingNave nav nav-pills " id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" onclick="toggleYearly()" id="monthlyTab" data-bs-toggle="pill"
+                                data-bs-target="#monh-pil" type="button" role="tab" aria-controls="monh-pil"
+                                aria-selected="true">Monthly
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" onclick="toggleYearly()" id="annualyTab" data-bs-toggle="pill"
+                                data-bs-target="#annualy-pil"
+                                type="button" role="tab" aria-controls="annualy-pil"
+                                aria-selected="false">Annually
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="pricing_tab_area">
+        <div class="container pricing_container">
+            <img src="/assets/img/art1.png" class="artLine artline1">
+            <img src="/assets/img/art2.png" class="artLine artline2">
+            <img src="/assets/img/art3.png" class="artLine artline3">
+            <img src="/assets/img/art4.png" class="artLine artline4">
+            <div class="tab-content pricingNavCont" id="pills-tabContent">
+                <div class="container py-3" id="plans">
+                    <!--                    <div class="pricing_container_box">-->
+                    <!--                        <header>-->
+                    <!--                            <div class="pricing_top_area">-->
+                    <!--                                &lt;!&ndash; <img src="/assets/images/pricing_banar2.jpg" alt="" class="pricing_banar2"> &ndash;&gt;-->
+                    <!--                                <div class="row">-->
+                    <!--                                    <div class="col-md-6">-->
+                    <!--                                        <div class="annualy_check">-->
+                    <!--                                            <div class="anualyCheckBox">-->
+                    <!--                                                <input onclick="toggleYearly()" type="checkbox" name="annullyCheck" id="annullyCheck">-->
+                    <!--                                                <label for="annullyCheck">-->
+                    <!--                                                    <span class="checkDesign"></span>-->
+                    <!--                                                    <p> Pay annually <br>-->
+                    <!--                                                        and <span class="savepercent">save up to 20% <img src="/assets/images/shapeLine.png" alt=""></span> of the plan price</p>-->
+                    <!--                                                </label>-->
+                    <!--                                            </div>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!--                                    <div class="col-md-6">-->
+                    <!--                                        <h2>Plans & Pricing</h2>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </header>-->
+                    <!--                        <main>-->
+                    <!--                            <div class="row row-cols-1 row-cols-md-4 mb-3 text-center planRow">-->
+
+                    <!--                            </div>-->
+                    <!--                        </main>-->
+                    <!--                    </div>-->
+                    <!--                    <br>-->
+                    <div class="api_links">
+                        <a href="javascript: scrollTo('.contactUsFormContainer')">Need a bigger plan or API access?</a>
+                    </div>
+                </div>
+
+            </div> <!-- /.tab-content -->
+        </div>
+    </section>
+
+    <section class="pricing_tab_area pricing_tab_new">
+        <div class="container pricing_container">
+            <div class="row pricing_row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 pricing_col" id="packageFree">
+                    <div class="pricing_box">
+                        <h2 class="prici_title"></h2>
+                        <div class="pricing_inner">
+                            <h2>Free</h2>
+                            <div class="pricing_package">
+                            </div>
+                            <ul class="packageOffer">
+                                <li>Home page analysis</li>
+                                <li>Links Monitoring</li>
+                                <li>Backlinks Summary</li>
+                                <li>Backlinks Explorer (Limited)</li>
+                            </ul>
+                        </div>
+                        <div class="pricing_button">
+                            <a href="javascript: scrollTo('.signUp_form_container')" class="chesePlan">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-12 pricing_col -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 pricing_col" id="packagePro">
+                    <div class="pricing_box">
+                        <h2 class="prici_title"></h2>
+                        <div class="pricing_inner">
+                            <h2></h2>
+                            <div class="pricing_package">
+                            </div>
+                            <ul class="packageOffer">
+                                <li>Landing Pages Optimization</li>
+                                <li>Links Monitoring</li>
+                                <li>White Label Reports</li>
+                                <li>Keywords Research</li>
+                                <!--								<li>Traffic Explorer (Similar Web)</li>-->
+                                <li>Related Keywords</li>
+                                <li>Backlinks Summary</li>
+                                <li>Backlinks Explorer</li>
+                            </ul>
+                        </div>
+                        <div class="pricing_button">
+                            <a href="javascript: scrollTo('.signUp_form_container')" class="chesePlan">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-12 pricing_col -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 pricing_col" id="packageBest">
+                    <div class="pricing_box">
+                        <h2 class="prici_title"></h2>
+                        <div class="pricing_inner">
+                            <h2></h2>
+                            <div class="pricing_package">
+                            </div>
+                            <ul class="packageOffer">
+                                <li>Landing Pages Optimization</li>
+                                <li>Links Monitoring</li>
+                                <li>White Label Reports</li>
+                                <li>Keywords Research</li>
+                                <!--								<li>Traffic Explorer (Similar Web)</li>-->
+                                <li>Related Keywords</li>
+                                <li>Competitors Analysis</li>
+                                <li>Competitors OnPage Spy</li>
+                                <li>Backlinks Summary</li>
+                                <li>Backlinks Explorer</li>
+                                <li>Spy Backlinks</li>
+                                <li>Backlinks History</li>
+                            </ul>
+                        </div>
+                        <div class="pricing_button">
+                            <a href="javascript: scrollTo('.signUp_form_container')" class="chesePlan">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-12 pricing_col -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 pricing_col" id="packageAgency">
+                    <div class="pricing_box">
+                        <h2 class="prici_title">Enterprise</h2>
+                        <div class="pricing_inner">
+                            <h2></h2>
+                            <div class="pricing_package">
+                            </div>
+                            <ul class="packageOffer">
+                                <li>Landing Pages Optimization</li>
+                                <li>Links Monitoring</li>
+                                <li>White Label Reports</li>
+                                <li>API Access</li>
+                                <li>Keywords Research</li>
+                                <!--								<li>Traffic Explorer (Similar Web)</li>-->
+                                <li>Related Keywords</li>
+                                <li>Competitors Analysis</li>
+                                <li>Competitors OnPage Spy</li>
+                                <li>Backlinks Summary</li>
+                                <li>Backlinks Explorer</li>
+                                <li>Spy Backlinks</li>
+                                <li>Backlinks History</li>
+                            </ul>
+                        </div>
+                        <div class="pricing_button">
+                            <a href="javascript: scrollTo('.signUp_form_container')" class="chesePlan">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-12 pricing_col -->
+            </div>
+        </div>
+    </section>
+
+    <div class="contactUsFormContainer" id="rabbitContactus">
+        <div class="form_innenr">
+            <div class="form_left_text">
+                <h4 class="" id="returnMessage">Contact Us</h4>
+                <p class=""> Please fill in the form below and we will try to get back to you as soon as
+                    possible.</p>
+            </div>
+            <div class="partner-form">
+                <h3>Let's get in touch</h3>
+                <form id="contactUsGuest" method="POST">
+                    <div class="input_col">
+                        <!-- <label>Your Name* </label> -->
+                        <input type="text" name="name" class="form-control" placeholder="Your name">
+                    </div>
+                    <div class="input_col">
+                        <!-- <label>Your Email*</label> -->
+                        <input type="email" name="email" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="input_col">
+                        <!-- <label for="exampleFormControlTextarea1">Message Content</label> -->
+                        <textarea class="form-control" name="comment" id="exampleFormControlTextarea1"
+                                  rows="3"></textarea>
+                    </div>
+                    <div class="input_btn">
+                        <button type="submit" class="button g-recaptcha"
+                                data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT" data-callback='saveForm'
+                                data-action='submit'>SEND
+                        </button>
+                    </div>
+                    <div style="display: none; margin-top: 10px;" class="alert alert-success" role="alert">
+                        <div class="d-flex">
+                            <p class="my-0">Your message was successfully sent</p>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- /.partner-form -->
+            <img src="/assets/img/shape(1).png" alt="" class="form_shape form_shape_1">
+            <img src="/assets/img/shape(2).png" alt="" class="form_shape form_shape_2">
+            <img src="/assets/img/shape(3).png" alt="" class="form_shape form_shape_3">
+            <img src="/assets/img/shape(4).png" alt="" class="form_shape form_shape_4">
+        </div>
+        <div class="contact_bg"></div>
+    </div>
+    <section class="articalList">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="mb-3">Latest Article</h4>
+                    <div id="latestPost"></div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3">Top Articles</h4>
+                    <div id="latestPostTop" class="toArticalList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <footer class="footer_area">
+        <div class="footer_top">
+            <img src="/assets/img/logo-footer.png" alt="logo-footer" class="footer_art">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-7 col-sm-12 col-12">
+                        <div class="foote_rabit">
+                            <a href="javascript: scrollTo('#loginLoader')" class="footLogo"><img
+                                    src="/assets/img/logo-yellow.png"
+                                    alt="logo"></a>
+                            <p>Get Leads is designed to provide this information and more to the end user (who
+                                doesn't need to be an SEO expert). Our mission is to help you easily get your
+                                rankings higher - for that purpose we analyze your website and the keywords you like
+                                to improve your ranks and give you tips and hints on how to reach that goal so
+                                eventually you will get more high quality traffic.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-sm-12 col-12">
+                        <div class="quickLinks_box">
+                            <h3 class="quick_link">QUICK LINKS</h3>
+                            <ul class="quickLinks">
+                                <li><a href="javascript: scrollTo('.pricing_tab_area')">Plans</a></li>
+                                <li><a href="javascript:;" onclick="loadTermsHtml()">Terms & Conditions</a></li>
+                                <li><a href="javascript: scrollTo('.contactUsFormContainer')">Get Support</a></li>
+                                <li><a href="https://www.wix.com/app-market/rabbit-seo" target="_blank">Get Leads on
+                                    Wix</a></li>
+                                <li><a href="https://apps.shopify.com/rabbitseo" target="_blank">Get Leads on
+                                    Shopify</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.footer_top -->
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-7 col-sm-6 col-12">
+                        <p class="copyRight"><b>Copyright</b> © <b>2013</b> Rabbit SEO. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-sm-6 col-12">
+                        <div class="selectLanguage_box" style="display:none">
+                            <select name="select_Language" id="select_Language" class="selectLanguage">
+                                <option value="Choose a Language">Choose a Language</option>
+                                <option value="English">English</option>
+                                <option value="FR">FR</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<style>
+    .pricing_top_area {
+        margin: 0 -25px;
+        padding: 20px 25px 0px 25px;
+        position: relative;
+    }
+
+    .pricing_top_area:after {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 450px;
+        background: #E8E8E8;
+        display: block;
+        content: "";
+        background-image: linear-gradient(to right, #E8E8E8, #F5D184);
+        border-radius: 5px;
+    }
+
+    .anualyCheckBox label p {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    span.savepercent {
+        display: inline-block;
+        position: relative;
+        color: #fec200;
+    }
+
+    .annualy_check {
+    }
+
+    .pricing_top_area .col-md-6:nth-child(2) {
+        text-align: right;
+    }
+
+    .pricing_top_area h2 {
+        text-align: right;
+        font-size: 34px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .row.planRow > div > div .card-header.bg-primary, .row.planRow > div > div .card-header {
+        background: transparent !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 !important;
+    }
+
+    .row.planRow > div > div .card-header.bg-primary h1.card-title {
+        font-weight: revert;
+        font-size: 28px;
+    }
+
+    .row.planRow > div > div {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid #000 !important;
+        padding: 25px;
+        border-radius: 10px !important;
+        height: 100%;
+        color: #333;
+        transition: .3s ease all;
+        box-shadow: 0 0 15px #00000026 !important;
+    }
+
+    .row.planRow > div > div .card-header.bg-primary h4.my-0.fw-normal.text-white {
+        color: #333 !important;
+        font-size: 18px;
+    }
+
+    .row.planRow > div > div h1.card-title.pricing-card-title {
+        margin: 0;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .row.planRow > div > div h1.card-title.pricing-card-title s {
+        display: block;
+        font-size: 18px;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .row.planRow > div > div:hover .card-header {
+        background: transparent !important;
+        color: #333;
+    }
+
+    .row.planRow > div > div:hover .card-header.bg-primary {
+        background: transparent !important;
+    }
+
+    .row.planRow > div > div .card-body button {
+        background: #333;
+        color: #fff;
+        border: 2px solid #333;
+        padding: 10px 15px;
+    }
+
+    .row.planRow > div > div .card-body button:hover {
+        background: transparent;
+        color: #333;
+    }
+
+    .pricing_top_area .row {
+        align-items: flex-end;
+        padding-bottom: 30px;
+    }
+
+    @media only screen and (max-width: 767px) {
+
+        .pricing_top_area .col-md-6:nth-child(2) h2 {
+            text-align: left;
+        }
+
+    }
+
+    /* (max-width: 767px)  */
+
+    span.savepercent img {
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+
+    .row.planRow > div > div.border-primary h2.annuallyPrice {
+        display: none;
+    }
+
+    h2.annuallyPrice {
+        text-align: center;
+        margin: -5px 0 25px 0;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    h2.annuallyPrice b {
+        font-size: 34px;
+    }
+
+    .row.planRow > div > div.border-primary {
+        background: #FEC200 !important;
+    }
+
+    .row.planRow > div > div:hover {
+        border-color: #fcc718 !important;
+    }
+
+    .row.row-cols-1.row-cols-md-4.mb-3.text-center.planRow {
+        z-index: 9;
+        position: relative;
+    }
+
+
+    section.compare_plans {
+        padding: 50px 0;
+    }
+
+    .compare_title {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .compare_title h2 {
+        font-size: 40px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .compare_title p {
+        font-size: 22px;
+    }
+
+    .compare_tables_area {
+        overflow: auto;
+    }
+
+    .tr {
+        display: flex;
+    }
+
+    .tr > .td,
+    .tr > .th {
+        width: 180px;
+        flex-shrink: 0;
+        text-align: center;
+        color: #333;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 15px 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .tr > .td:first-child, .tr > .th:first-child {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+
+    .tr > .td {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tr > .td img {
+        display: block;
+        width: 18px;
+        margin: 0 auto;
+    }
+
+    .tr > .th span {
+        position: absolute;
+        display: block;
+        width: 1px;
+        height: 70%;
+        background: #ebebeb;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .tr > .th:first-child {
+        font-weight: bold;
+        vertical-align: middle;
+        display: inline-flex;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .tr > .th p {
+        color: #ebebeb;
+        margin: 0 0 3px 0;
+        font-size: 18px;
+    }
+
+    .tr > .th {
+        padding: 25px 15px;
+    }
+
+    .table_head {
+        background-color: #f6d386;
+        background-image: linear-gradient(to right, #e8e8e8, #f6d388);
+        border-radius: 5px;
+    }
+
+    .tr > .th:last-child span {
+        display: none;
+    }
+
+    .tr > .th h3 {
+        font-size: 30px;
+    }
+
+    .compare_table {
+        min-width: 715px;
+    }
+
+    @media only screen and (max-width: 1199px) {
+
+        .tr > .td, .tr > .th {
+            width: 128px;
+            padding: 15px 10px;
+        }
+
+        .tr > .th h3 {
+            font-size: 23px;
+        }
+
+        .tr > .th p {
+            font-size: 16px;
+        }
+
+        .tr > .td {
+            font-size: 16px;
+        }
+
+    }
+
+    /* (max-width: 1199px) */
+
+
+    @media only screen and (max-width: 767px) {
+
+        .annualy_check,
+        .anualyCheckBox label {
+            display: block;
+        }
+
+    }
+
+    /* and (max-width: 767px) */
+
+    .row.planRow > div > div .card-body ul li {
+        font-size: 18px;
+        line-height: 1.3;
+        margin: 10px 0;
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .row.planRow > div > div .card-body ul li::before {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        width: 15px;
+        height: 15px;
+        left: 0;
+        content: "";
+        top: 3px;
+        background: url("/assets/images/checkOrange.png") no-repeat scroll center / contain;
+    }
+
+
+    .row.planRow > div > div.border-primary ul li::before {
+        filter: invert(1) brightness(0);
+    }
+
+    .pricing_tab_new::after {
+        display: none;
+    }
+
+    section.pricing_tab_area.pricing_tab_new {
+        padding: 30px 0;
+        background: #ECF1F3;
+    }
+    section.pricing_tab_area.pricing_tab_new .pricing_inner h2{
+        display: flex;
+        justify-content: center;
+    }
+    section.pricing_tab_area.pricing_tab_new .pricing_inner h2 s{
+       font-size: 24px;
+       order: -1;
+
+    }
+    
+
+</style>
+<script type="text/javascript">
+     
+    addGoogleTag();
+    
+    $(document).click(function() {
+        if ( $('div').hasClass('main_content_terms')) {
+        var container = $(".main_content_terms");
+        if (!container.is(event.target) && !container.has(event.target).length) {
+            container.remove(); 
+        }
+        $('.main_content_index').show();
+    }
+       
+    });
+    function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+        $.getJSON('assets/data/reviews.json', function (response) { 
+   
+        const json = shuffle(response['list']);
+         var reviewHtml = '';
+        for (let i = 0; i < json.length; i++) {
+         
+           reviewHtml+='<div><div class="row gap-0">' +
+                    '<div class="col-md-4 d-flex align-items-center position-relative">' + 
+                    '<div class="reviewsContentsLeft">'+
+                    '<div class="reviewsImage">'+
+                    '<img src="'+json[i]['reviewsImage']+'">'+
+                    '</div>'+
+                    '<h6>'+  json[i]['reviewsCompanyName'] + '</h6>'+
+                    '</div>'+
+                    '<div class="counterReview"><span>'+json[i]['reviewsCount']+'</span>/<span class="counterReviewTotal">'+json.length+'</span></div>'+
+                    '</div>'+
+                    '<div class="col-md-8 reviewsContentsRight"><div>'+
+                    '<h6>'+  json[i]['reviewsTitle'] + '</h6>'+
+                    '<div>' +  json[i]['reviewsDescription'] + 
+                    '</div></div></div>'+ 
+                    '</div></div>' ;                
+        }
+        $('.myreviewsdivs').html(reviewHtml) ;
+        var reviewsdivs = $('.myreviewsdivs>div');
+        var reviewsnow = 0; // currently shown div
+       
+        reviewsdivs.hide().first().show(); // hide all divs except first
+        $("button[name=next]").click(function () {
+            reviewsdivs.eq(reviewsnow).hide();
+            reviewsnow = (reviewsnow + 1 < reviewsdivs.length) ? reviewsnow + 1 : 0;
+            reviewsdivs.eq(reviewsnow).show(); // show next
+        });
+        $("button[name=prev]").click(function () {
+            reviewsdivs.eq(reviewsnow).hide();
+            reviewsnow = (reviewsnow > 0) ? reviewsnow - 1 : reviewsdivs.length - 1;
+            reviewsdivs.eq(reviewsnow).show(); // show previous
+        });
+         $(document).keydown(function(event) {
+            if (event.which === 39) {
+                // Right arrow key was pressed 
+                $( ".myreviewsdivs_btn button[name=next]").trigger('click');
+                // Add your code to handle right arrow key press here
+            } else if (event.which === 37) {
+                // Left arrow key was pressed 
+                $( ".myreviewsdivs_btn button[name=prev]").trigger('click');
+                // Add your code to handle left arrow key press here
+            }
+        });
+    });
+</script>

@@ -1,0 +1,2831 @@
+[
+  {
+	"o":"test",
+	"t":"контрольная работа"
+},
+{
+	"o":"Demo Account",
+	"t":"Демо-счет"
+},
+{
+	"o":"Dashboard",
+	"t":"Панель приборов"
+},
+{
+	"o":"My Keywords",
+	"t":"Мои ключевые слова"
+},
+{
+	"o":"Landing Pages",
+	"t":"Целевые страницы"
+},
+{
+	"o":"Competitors",
+	"t":"Конкуренты"
+},
+{
+	"o":"Backlinks",
+	"t":"Обратные ссылки"
+},
+{
+	"o":"Links Summary",
+	"t":"Сводка ссылок"
+},
+{
+	"o":"Links History",
+	"t":"История ссылок"
+},
+{
+	"o":"Links Explorer",
+	"t":"Обозреватель ссылок"
+},
+{
+	"o":"Links Intersection",
+	"t":"Пересечение ссылок"
+},
+{
+	"o":"Spy Links",
+	"t":"Шпионские ссылки"
+},
+{
+	"o":"Links Monitoring",
+	"t":"Мониторинг ссылок"
+},
+{
+	"o":"Google Analytics",
+	"t":"Гугл Аналитика"
+},
+{
+	"o":"Report",
+	"t":"Отчет"
+},
+{
+	"o":"PDF Report",
+	"t":"PDF-отчет"
+},
+{
+	"o":"No results, sorry",
+	"t":"Нет результатов, извините"
+},
+{
+	"o":"My Websites",
+	"t":"Мои сайты"
+},
+{
+	"o":"Ranks went up",
+	"t":"Ряды поднялись"
+},
+{
+	"o":"Ranks went down",
+	"t":"Ранги понизились"
+},
+{
+	"o":"Average Position",
+	"t":"Средняя позиция"
+},
+{
+	"o":"Change Percent",
+	"t":"Изменить процент"
+},
+{
+	"o":"Average Rank Last Days",
+	"t":"Средний рейтинг за последние дни"
+},
+{
+	"o":"Average Rank Last Months",
+	"t":"Средний рейтинг за последние месяцы"
+},
+{
+	"o":"Indicates how many keywords the given website is ranked for",
+	"t":"Указывает, по скольким ключевым словам ранжируется данный веб-сайт."
+},
+{
+	"o":"Indicates how many keywords have daily tracking for the given website",
+	"t":"Указывает, сколько ключевых слов ежедневно отслеживается для данного веб-сайта."
+},
+{
+	"o":"Indicates average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю позицию (ежедневно отслеживаемых ключевых слов) для данного веб-сайта."
+},
+{
+	"o":"Indicates yesterday average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю вчерашнюю позицию (по ежедневно отслеживаемым ключевым словам) для данного веб-сайта."
+},
+{
+	"o":"Indicates last week average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю позицию за последнюю неделю (по ежедневным отслеживаемым ключевым словам) для данного веб-сайта."
+},
+{
+	"o":"Indicates last month average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю позицию за последний месяц (по ежедневным отслеживаемым ключевым словам) для данного веб-сайта."
+},
+{
+	"o":"Indicates how many ranks went up since yesterday for the given website",
+	"t":"Указывает, на сколько позиций поднялся со вчерашнего дня для данного веб-сайта"
+},
+{
+	"o":"Indicates how many ranks went down since yesterday for the given website",
+	"t":"Указывает, на сколько позиций понизился со вчерашнего дня для данного веб-сайта"
+},
+{
+	"o":"Indicates how many ranks went up since last change for the given website",
+	"t":"Указывает, на сколько позиций поднялось с момента последнего изменения для данного веб-сайта."
+},
+{
+	"o":"Indicates how many landing pages are tracked for the given website",
+	"t":"Указывает, сколько целевых страниц отслеживается для данного веб-сайта."
+},
+{
+	"o":"Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+	"t":"Рейтинг веб-сайта (Page Rank) — это алгоритм Google, предназначенный для измерения важности веб-страницы на основе качества и количества веб-страниц, которые на нее ссылаются. Страницы с высоким PageRank (т. е. с большим количеством качественных обратных ссылок) воспринимаются Google как более авторитетные и ранжируются лучше, чем страницы с более низким PageRank."
+},
+{
+	"o":"Indicates how many backlinks are linking for the given website",
+	"t":"Указывает, сколько обратных ссылок ссылается на данный веб-сайт."
+},
+{
+	"o":"Indicates how many backlinks are being monitored for the given website",
+	"t":"Указывает, сколько обратных ссылок отслеживается для данного веб-сайта."
+},
+{
+	"o":"Save for next time",
+	"t":"Сохранить для следующего раза"
+},
+{
+	"o":"Copy",
+	"t":"Копировать"
+},
+{
+	"o":"Excel",
+	"t":"Excel"
+},
+{
+	"o":"Print",
+	"t":"Распечатать"
+},
+{
+	"o":"Total Keywords",
+	"t":"Всего ключевых слов"
+},
+{
+	"o":"Tracked Keywords",
+	"t":"Отслеживаемые ключевые слова"
+},
+{
+	"o":"Avg Position",
+	"t":"Средняя позиция"
+},
+{
+	"o":"Ranks Up",
+	"t":"Ранги вверх"
+},
+{
+	"o":"Ranks Down",
+	"t":"Ранги вниз"
+},
+{
+	"o":"Page Rank",
+	"t":"Рейтинг страницы"
+},
+{
+	"o":"Loading...",
+	"t":"Загрузка..."
+},
+{
+	"o":"Edit Website",
+	"t":"Редактировать веб-сайт"
+},
+{
+	"o":"Website Name* ",
+	"t":"Название веб-сайта*"
+},
+{
+	"o":"Website Url*",
+	"t":"URL веб-сайта*"
+},
+{
+	"o":"Website Classification",
+	"t":"Классификация веб-сайтов"
+},
+{
+	"o":"Country",
+	"t":"Страна"
+},
+{
+	"o":"Keywords",
+	"t":"Ключевые слова"
+},
+{
+	"o":"Close",
+	"t":"Закрывать"
+},
+{
+	"o":"Website Name ",
+	"t":"Название веб-сайта"
+},
+{
+	"o":"Project Manager",
+	"t":"Руководитель проекта"
+},
+{
+	"o":"Update",
+	"t":"Обновлять"
+},
+{
+	"o":"Upgrade",
+	"t":"Обновление"
+},
+{
+	"o":"SEO Tutorial",
+	"t":"Учебник по SEO"
+},
+{
+	"o":"Contact Us",
+	"t":"Связаться с нами"
+},
+{
+	"o":"Terms & Condition",
+	"t":"Условия и положения"
+},
+{
+	"o":"English",
+	"t":"Английский"
+},
+{
+	"o":"Copyright © 2013 RabbitSEO . All Rights Reserved.",
+	"t":"Copyright © 2013 Кролик SEO. Все права защищены."
+},
+{
+	"o":"Close\n                ",
+	"t":"Закрывать\n                "
+},
+{
+	"o":"Yes",
+	"t":"Да"
+},
+{
+	"o":"Save changes",
+	"t":"Сохранить изменения"
+},
+{
+	"o":"Confirm",
+	"t":"Подтверждать"
+},
+{
+	"o":"Are you sure you want to delete?",
+	"t":"Вы уверены, что хотите удалить?"
+},
+{
+	"o":"No\n                ",
+	"t":"Нет\n                "
+},
+{
+	"o":"Ranked Keywords",
+	"t":"Ранжированные ключевые слова"
+},
+{
+	"o":"This value indicates the number of backlinks linking to your website.",
+	"t":"Это значение указывает количество обратных ссылок, ведущих на ваш сайт."
+},
+{
+	"o":"Total Backlinks",
+	"t":"Всего обратных ссылок"
+},
+{
+	"o":"This value indicates the number of referring domains linking to your website.",
+	"t":"Это значение указывает количество ссылающихся доменов, ссылающихся на ваш сайт."
+},
+{
+	"o":"This value indicates the number of broken backlinks that are linking to your website, you should fix all of them so there will be no broken backlinks linking to you. You can easily do it by create a page with the url of that link.",
+	"t":"Это значение указывает количество неработающих обратных ссылок, ведущих на ваш веб-сайт, вы должны исправить их все, чтобы не было неработающих обратных ссылок, ведущих на вас. Вы можете легко сделать это, создав страницу с URL-адресом этой ссылки."
+},
+{
+	"o":"Broken Backlinks",
+	"t":"Неработающие обратные ссылки"
+},
+{
+	"o":"Facebook Likes",
+	"t":"Facebook лайки"
+},
+{
+	"o":"Website Rank",
+	"t":"Рейтинг веб-сайта"
+},
+{
+	"o":"We're checking for your rankings and competitors, it can take up to 30 seconds",
+	"t":"Мы проверяем ваш рейтинг и конкурентов, это может занять до 30 секунд."
+},
+{
+	"o":"Keyword in Track",
+	"t":"Ключевое слово в треке"
+},
+{
+	"o":"Ranks Up since Yesterday",
+	"t":"Рейтинг поднялся со вчерашнего дня"
+},
+{
+	"o":"Ranks Down since Yesterday",
+	"t":"Рейтинг упал со вчерашнего дня"
+},
+{
+	"o":"Keyword in Top 3",
+	"t":"Ключевое слово в ТОП-3"
+},
+{
+	"o":"Keyword in Top 10",
+	"t":"Ключевое слово в Топ-10"
+},
+{
+	"o":"Average Position Last Week",
+	"t":"Средняя позиция за прошлую неделю"
+},
+{
+	"o":"Average Position Last Year",
+	"t":"Средняя позиция за прошлый год"
+},
+{
+	"o":"Average Position Last Month",
+	"t":"Средняя позиция за последний месяц"
+},
+{
+	"o":"My Top Competitors Visibility",
+	"t":"Видимость моих лучших конкурентов"
+},
+{
+	"o":"Show more",
+	"t":"Показать больше"
+},
+{
+	"o":"Average Visits Per Day",
+	"t":"Среднее количество посещений в день"
+},
+{
+	"o":"Visit Last Month",
+	"t":"Посетите в прошлом месяце"
+},
+{
+	"o":"Average Time On Site",
+	"t":"Среднее время на сайте"
+},
+{
+	"o":"Average Bonuce Rate",
+	"t":"Средний показатель отказов"
+},
+{
+	"o":"Average Page Views",
+	"t":"Среднее число просмотров страниц"
+},
+{
+	"o":"Websites",
+	"t":"Веб-сайты"
+},
+{
+	"o":"Researches",
+	"t":"Исследования"
+},
+{
+	"o":"Overview",
+	"t":"Обзор"
+},
+{
+	"o":"Keyword Suggestions",
+	"t":"Предложения по ключевым словам"
+},
+{
+	"o":"Keyword",
+	"t":"Ключевое слово"
+},
+{
+	"o":"Url",
+	"t":"Url"
+},
+{
+	"o":"Indicates the (approximate) number of monthly searches for the given keyword on google",
+	"t":"Указывает (приблизительное) количество ежемесячных поисков по данному ключевому слову в Google."
+},
+{
+	"o":"Search Volume",
+	"t":"Объем поиска"
+},
+{
+	"o":"Indicates the Estimated Organic monthly Traffic to the domain calculated as the product of CTR (click-through-rate) and search volume values of the returned keyword",
+	"t":"Указывает расчетный органический ежемесячный трафик на домен, рассчитанный как произведение CTR (рейтинга кликов) и значений объема поиска по возвращаемому ключевому слову."
+},
+{
+	"o":"Indicates the chance of getting in top-10 organic results for a keyword on a logarithmic scale from 0 to 100, where 1 is easy and 100 is extremely hard",
+	"t":"Указывает вероятность попадания в топ-10 органических результатов по ключевому слову по логарифмической шкале от 0 до 100, где 1 — легко, а 100 — чрезвычайно сложно."
+},
+{
+	"o":"Difficulty",
+	"t":"Сложность"
+},
+{
+	"o":"Indicates the relative amount of competition associated with the given keyword",
+	"t":"Указывает относительную степень конкуренции, связанную с данным ключевым словом."
+},
+{
+	"o":"Competition",
+	"t":"Соревнование"
+},
+{
+	"o":"Indicates the average cost per click (USD) historically paid for the given keyword",
+	"t":"Указывает среднюю цену за клик (в долларах США), исторически выплачиваемую по данному ключевому слову."
+},
+{
+	"o":"Indicates the number of search results returned for the given keyword",
+	"t":"Указывает количество результатов поиска, возвращенных по данному ключевому слову."
+},
+{
+	"o":"Results",
+	"t":"Полученные результаты"
+},
+{
+	"o":"Rank",
+	"t":"Классифицировать"
+},
+{
+	"o":"Add",
+	"t":"Добавлять"
+},
+{
+	"o":"Upgrade to see more results",
+	"t":"Обновите, чтобы увидеть больше результатов"
+},
+{
+	"o":"Upgrade to Premium",
+	"t":"Обновите до Премиум"
+},
+{
+	"o":"Organic Search",
+	"t":"Органический поиск"
+},
+{
+	"o":"This values indicates the number of organic searches where the domain ranks #1 (for all the keywords the website is ranked for, not just those you are tracking)",
+	"t":"Эти значения указывают количество обычных поисковых запросов, в которых домен занимает первое место (по всем ключевым словам, по которым ранжируется веб-сайт, а не только по тем, которые вы отслеживаете)."
+},
+{
+	"o":"Keywords In First Position",
+	"t":"Ключевые слова на первой позиции"
+},
+{
+	"o":"Keywords in First Position",
+	"t":"Ключевые слова на первой позиции"
+},
+{
+	"o":"Keyword in First Page",
+	"t":"Ключевое слово на первой странице"
+},
+{
+	"o":"Website Average Ranking",
+	"t":"Средний рейтинг веб-сайта"
+},
+{
+	"o":"Estimated Organic Traffic is an estimation of website traffic that can be driven by the group of keywords your website is ranked for. The metric displays the approximate number of monthly visits the keywords can lead to your website (this doesn't include traffic from other sources, only organic traffic). ETV is calculated by multiplying a keyword’s search volume by the click-through rate coefficient of a search result",
+	"t":"Предполагаемый органический трафик — это оценка трафика веб-сайта, который может быть обусловлен группой ключевых слов, по которым ранжируется ваш сайт. Метрика отображает приблизительное количество ежемесячных посещений вашего сайта по ключевым словам (сюда не входит трафик из других источников, а только органический трафик). ETV рассчитывается путем умножения объема поиска по ключевому слову на коэффициент кликабельности результата поиска."
+},
+{
+	"o":"Estimated Organic Traffic",
+	"t":"Предполагаемый органический трафик"
+},
+{
+	"o":"Keywords in Top 3",
+	"t":"Ключевые слова в топ-3"
+},
+{
+	"o":"Keywords in Top 10",
+	"t":"Ключевые слова в ТОП-10"
+},
+{
+	"o":"Current Website Status",
+	"t":"Текущий статус веб-сайта"
+},
+{
+	"o":"Website Status Week Ago",
+	"t":"Статус сайта Неделю назад"
+},
+{
+	"o":"Website Status Month Ago",
+	"t":"Статус сайта Месяц назад"
+},
+{
+	"o":"Initial Website Status",
+	"t":"Исходный статус веб-сайта"
+},
+{
+	"o":"of Keywords are in the top 5 results",
+	"t":"ключевых слов входят в топ-5 результатов"
+},
+{
+	"o":"of Keywords are in the top 10 results",
+	"t":"ключевых слов входят в 10 лучших результатов"
+},
+{
+	"o":"of Keywords are in the top 20 results",
+	"t":"ключевых слов входят в топ-20 результатов"
+},
+{
+	"o":"This indicates the number of new ranked elements, how many new ranked elements were found for this domain in the past month or so.",
+	"t":"Это указывает на количество новых ранжированных элементов, сколько новых ранжированных элементов было найдено для этого домена за последний месяц или около того."
+},
+{
+	"o":"New Ranks",
+	"t":"Новые ранги"
+},
+{
+	"o":"This indicates how many ranked elements of this domain went up in Google Search in the past month or so.",
+	"t":"Это указывает на то, сколько ранжированных элементов этого домена повысилось в поиске Google за последний месяц или около того."
+},
+{
+	"o":"Ranks went Up",
+	"t":"Ранг поднялся"
+},
+{
+	"o":"This indicates how many ranked elements of this domain went down in Google Search in the past month or so.",
+	"t":"Это указывает на то, сколько ранжированных элементов этого домена снизилось в поиске Google за последний месяц или около того."
+},
+{
+	"o":"Ranks went Down",
+	"t":"Ранги понизились"
+},
+{
+	"o":"This indicates how many ranked elements of this domain were previously presented in google, but weren’t found during the last check in the past month or so.",
+	"t":"Это указывает на то, сколько ранжированных элементов этого домена ранее было представлено в Google, но не было найдено при последней проверке за последний месяц или около того."
+},
+{
+	"o":"Lost Ranks",
+	"t":"Потерянные звания"
+},
+{
+	"o":"This chart shows how many keywords are ranked for this website in each group of position.",
+	"t":"Эта диаграмма показывает, сколько ключевых слов ранжируются для этого веб-сайта в каждой группе позиций."
+},
+{
+	"o":"Ranking Distribution",
+	"t":"Распределение рейтинга"
+},
+{
+	"o":"Monitored Keywords",
+	"t":"Отслеживаемые ключевые слова"
+},
+{
+	"o":"Keywords in top 3",
+	"t":"Ключевые слова в топ-3"
+},
+{
+	"o":"This value indicates the number of ranks that went up since yesterday",
+	"t":"Это значение указывает количество рангов, которые повысились со вчерашнего дня."
+},
+{
+	"o":"This value indicates the number of ranks that went down since yesterday",
+	"t":"Это значение указывает количество рангов, которые снизились со вчерашнего дня."
+},
+{
+	"o":"This value indicates the average position of your live ranks",
+	"t":"Это значение указывает среднюю позицию ваших живых рейтингов."
+},
+{
+	"o":"General",
+	"t":"Общий"
+},
+{
+	"o":"The page in your website that google links when someone search for this keyword",
+	"t":"Страница вашего веб-сайта, на которую ссылается Google, когда кто-то выполняет поиск по этому ключевому слову."
+},
+{
+	"o":"The search engine of the given keyword, you can have multiple keywords with different search engines. To change the search engine - you should delete the keyword and create a new keyword with the required search engine",
+	"t":"Поисковая система по данному ключевому слову. Вы можете использовать несколько ключевых слов в разных поисковых системах. Чтобы сменить поисковую систему - следует удалить ключевое слово и создать новое ключевое слово с нужной поисковой системой."
+},
+{
+	"o":"Which device the given keyword is being searched on - Desktop or Mobile",
+	"t":"На каком устройстве выполняется поиск по данному ключевому слову: настольном или мобильном?"
+},
+{
+	"o":"Indicates the initial monitored rank of the given keyword, very useful for reports and tracking progress",
+	"t":"Указывает начальный отслеживаемый рейтинг данного ключевого слова, что очень полезно для отчетов и отслеживания прогресса."
+},
+{
+	"o":"Indicates the best monitored rank that was captured for the given keyword",
+	"t":"Указывает лучший отслеживаемый рейтинг, зафиксированный для данного ключевого слова."
+},
+{
+	"o":"Indicates the previous monitored rank of the given keyword",
+	"t":"Указывает предыдущий отслеживаемый рейтинг данного ключевого слова."
+},
+{
+	"o":"Indicates the (approximate) number of monthly searches for the given keyword on the search engine",
+	"t":"Указывает (приблизительное) количество ежемесячных поисков данного ключевого слова в поисковой системе."
+},
+{
+	"o":"Landing Page",
+	"t":"Целевая страница"
+},
+{
+	"o":"Last Days",
+	"t":"В последние дни"
+},
+{
+	"o":"Indicates the rank a week ago of the given keyword",
+	"t":"Указывает рейтинг данного ключевого слова неделю назад."
+},
+{
+	"o":"Last Year",
+	"t":"В прошлом году"
+},
+{
+	"o":"Indicates the rank one year ago of the given keyword, very useful for reports and tracking progress",
+	"t":"Указывает рейтинг данного ключевого слова год назад, что очень полезно для отчетов и отслеживания прогресса."
+},
+{
+	"o":"Add New Keyword",
+	"t":"Добавить новое ключевое слово"
+},
+{
+	"o":"Search Engine",
+	"t":"Поисковый движок"
+},
+{
+	"o":"Device",
+	"t":"Устройство"
+},
+{
+	"o":"Desktop",
+	"t":"Рабочий стол"
+},
+{
+	"o":"Mobile",
+	"t":"мобильный"
+},
+{
+	"o":"Keyword(s)",
+	"t":"Ключевое слово(а)"
+},
+{
+	"o":"Add Keywords\n",
+	"t":"Добавить ключевые слова\n"
+},
+{
+	"o":"Your Keywords were added successfully, usually it takes between 10-40 seconds until you can see live results!",
+	"t":"Ваши ключевые слова были успешно добавлены. Обычно это занимает от 10 до 40 секунд, прежде чем вы увидите живые результаты!"
+},
+{
+	"o":"Page Url",
+	"t":"URL-адрес страницы"
+},
+{
+	"o":"Live Rank",
+	"t":"Живой рейтинг"
+},
+{
+	"o":"No keywords found, create your first keyword now",
+	"t":"Ключевые слова не найдены, создайте свое первое ключевое слово сейчас"
+},
+{
+	"o":"This shows the overall score of your tracked landing pages, we test your pages title, H1 tag, keyword density, page content etc. To improve your rankings at search engines you should make sure your pages are optimized.",
+	"t":"Здесь показан общий рейтинг ваших отслеживаемых целевых страниц. Мы проверяем заголовок вашей страницы, тег H1, плотность ключевых слов, содержание страницы и т. д. Чтобы улучшить свой рейтинг в поисковых системах, вам следует убедиться, что ваши страницы оптимизированы."
+},
+{
+	"o":"Indicates how many times the give keywords appears in the content of the landing page",
+	"t":"Указывает, сколько раз заданные ключевые слова встречаются в содержимом целевой страницы."
+},
+{
+	"o":"Overall Score",
+	"t":"Общая оценка"
+},
+{
+	"o":"This shows the number of warnings we found on your pages that you should fix, after fixing them you can click refresh and let RabbitSEO test the pages again.",
+	"t":"Здесь показано количество предупреждений, которые мы обнаружили на ваших страницах и которые вам следует исправить. После их исправления вы можете нажать «Обновить» и позволить RabbitSEO еще раз протестировать страницы."
+},
+{
+	"o":"Total Warnings",
+	"t":"Всего предупреждений"
+},
+{
+	"o":"broken backlinks",
+	"t":"неработающие обратные ссылки"
+},
+{
+	"o":"Add New Landing Page",
+	"t":"Добавить новую целевую страницу"
+},
+{
+	"o":"You can enter several URLs (one in each line).",
+	"t":"Вы можете ввести несколько URL-адресов (по одному в каждой строке)."
+},
+{
+	"o":"rescan",
+	"t":"повторное сканирование"
+},
+{
+	"o":"Add New Page",
+	"t":"Добавить новую страницу"
+},
+{
+	"o":"Page",
+	"t":"Страница"
+},
+{
+	"o":"Shows the title of the given page, page title is very important for SEO, make sure you choose a title that contains the right keyword.",
+	"t":"Показывает заголовок данной страницы. Заголовок страницы очень важен для SEO, убедитесь, что вы выбрали заголовок, содержащий правильное ключевое слово."
+},
+{
+	"o":"Title",
+	"t":"Заголовок"
+},
+{
+	"o":"Shows how many words the given page has, search engines love content - all your pages should have content, even your contact us page",
+	"t":"Показывает, сколько слов на данной странице. Поисковые системы любят контент. На всех ваших страницах должен быть контент, даже на странице контактов."
+},
+{
+	"o":"Words",
+	"t":"Слова"
+},
+{
+	"o":"Shows how many internal links (to YOUR website) the given page has.",
+	"t":"Показывает, сколько внутренних ссылок (на ВАШ сайт) имеет данная страница."
+},
+{
+	"o":"In. links",
+	"t":"В. ссылки"
+},
+{
+	"o":"Shows how many external links (to OTHER websites) the given page has.",
+	"t":"Показывает, сколько внешних ссылок (на ДРУГИЕ веб-сайты) имеет данная страница."
+},
+{
+	"o":"Ext. links",
+	"t":"Внеш. ссылки"
+},
+{
+	"o":"Shows the keyword you would like to optimize this page for, it is important to choose the right keyword for each page.",
+	"t":"Показывает ключевое слово, под которое вы хотели бы оптимизировать эту страницу. Важно выбрать правильное ключевое слово для каждой страницы."
+},
+{
+	"o":"The score of your page, the better it is, the higher you can rank :)",
+	"t":"Оценка вашей страницы, чем она лучше, тем выше вы можете ранжироваться :)"
+},
+{
+	"o":"Score",
+	"t":"Счет"
+},
+{
+	"o":"Shows how many issues we found for the given page.",
+	"t":"Показывает, сколько проблем мы обнаружили на данной странице."
+},
+{
+	"o":"Issues",
+	"t":"Проблемы"
+},
+{
+	"o":"You can enter several URLs (one in each line)",
+	"t":"Вы можете ввести несколько URL-адресов (по одному в каждой строке)"
+},
+{
+	"o":"Save",
+	"t":"Сохранять"
+},
+{
+	"o":"Back to Competitors",
+	"t":"Вернуться к конкурентам"
+},
+{
+	"o":"Domain",
+	"t":"Домен"
+},
+{
+	"o":"Average Rank",
+	"t":"Средний рейтинг"
+},
+{
+	"o":"Weighted Average",
+	"t":"Средневзвешенное"
+},
+{
+	"o":"In Top 20",
+	"t":"В Топ-20"
+},
+{
+	"o":"In Top 10",
+	"t":"В Топ-10"
+},
+{
+	"o":"Current Status",
+	"t":"Текущее состояние"
+},
+{
+	"o":"Month Ago",
+	"t":"Месяц назад"
+},
+{
+	"o":"In Top 5",
+	"t":"В Топ-5"
+},
+{
+	"o":"Keywords in top 20",
+	"t":"Ключевые слова в топ-20"
+},
+{
+	"o":"Keywords in top 10",
+	"t":"Ключевые слова в топ-10"
+},
+{
+	"o":"Keywords in top 5",
+	"t":"Ключевые слова в топ-5"
+},
+{
+	"o":"Keywords in First Position",
+	"t":"Ключевые слова на первой позиции"
+},
+{
+	"o":"In Top 3",
+	"t":"В топ-3"
+},
+{
+	"o":"In Top 1",
+	"t":"В Топ 1"
+},
+{
+	"o":"General Details",
+	"t":"Общие сведения"
+},
+{
+	"o":"This value indicates the number of referring pages linking to your website, (one website can link to your website from multiple pages)",
+	"t":"Это значение указывает количество ссылающихся страниц, ссылающихся на ваш сайт (один веб-сайт может ссылаться на ваш сайт с нескольких страниц)."
+},
+{
+	"o":"Referring Pages",
+	"t":"Ссылающиеся страницы"
+},
+{
+	"o":"This value indicates the number of broken pages on the target that respond with 4xx or 5xx status codes.",
+	"t":"Это значение указывает количество неработающих страниц на целевом объекте, которые отвечают кодами состояния 4xx или 5xx."
+},
+{
+	"o":"Broken Pages",
+	"t":"Сломанные страницы"
+},
+{
+	"o":"Site Rank",
+	"t":"Рейтинг сайта"
+},
+{
+	"o":"Shows how many internal links your website has, it is calculated as the sum of internal links on the pages of the specified website.",
+	"t":"Показывает, сколько внутренних ссылок имеет ваш сайт, рассчитывается как сумма внутренних ссылок на страницах указанного сайта."
+},
+{
+	"o":"Internal Backlinks",
+	"t":"Внутренние обратные ссылки"
+},
+{
+	"o":"Shows how many external links your website has, it is calculated as the sum of external links on the pages of the specified website.",
+	"t":"Показывает, сколько внешних ссылок имеет ваш сайт, рассчитывается как сумма внешних ссылок на страницах указанного сайта."
+},
+{
+	"o":"External Backlinks",
+	"t":"Внешние обратные ссылки"
+},
+{
+	"o":"Indicates the types of the referring links and link count per each type",
+	"t":"Указывает типы ссылающихся ссылок и количество ссылок для каждого типа."
+},
+{
+	"o":"Referring Links Types",
+	"t":"Типы ссылающихся ссылок"
+},
+{
+	"o":"Link from specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.",
+	"t":"Ссылка из определяет самостоятельный контент, например иллюстрации, диаграммы, фотографии, списки кодов и т. д."
+},
+{
+	"o":"Referring Links Semantic Locations",
+	"t":"Семантическое расположение ссылающихся ссылок"
+},
+{
+	"o":"Indicates the link attributes of the referring links",
+	"t":"Указывает атрибуты ссылающихся ссылок."
+},
+{
+	"o":"Attributes of the Referring Links",
+	"t":"Атрибуты ссылающихся ссылок"
+},
+{
+	"o":"Type",
+	"t":"Тип"
+},
+{
+	"o":"Value",
+	"t":"Ценить"
+},
+{
+	"o":"Percent",
+	"t":"Процент"
+},
+{
+	"o":"Locations",
+	"t":"Локации"
+},
+{
+	"o":"Attribute",
+	"t":"Атрибут"
+},
+{
+	"o":"Summary",
+	"t":"Краткое содержание"
+},
+{
+	"o":"New Links",
+	"t":"Новые ссылки"
+},
+{
+	"o":"Links Issues",
+	"t":"Проблемы со ссылками"
+},
+{
+	"o":"Top Level Domain",
+	"t":"Домен верхнего уровня"
+},
+{
+	"o":"Types",
+	"t":"Типы"
+},
+{
+	"o":"Onpage",
+	"t":"На странице"
+},
+{
+	"o":"Referring Domains",
+	"t":"Ссылающиеся домены"
+},
+{
+	"o":"Tooltip",
+	"t":"Подсказка"
+},
+{
+	"o":"New Backlinks",
+	"t":"Новые обратные ссылки"
+},
+{
+	"o":"New Referring Domains",
+	"t":"Новые ссылающиеся домены"
+},
+{
+	"o":"Lost backlinks",
+	"t":"Потерянные обратные ссылки"
+},
+{
+	"o":"Broken backlinks",
+	"t":"Неработающие обратные ссылки"
+},
+{
+	"o":"Broken pages",
+	"t":"Сломанные страницы"
+},
+{
+	"o":"com",
+	"t":"com"
+},
+{
+	"o":"org",
+	"t":"org"
+},
+{
+	"o":"net",
+	"t":"net"
+},
+{
+	"o":"Anchor",
+	"t":"Якорь"
+},
+{
+	"o":"Canonical",
+	"t":"Канонический"
+},
+{
+	"o":"Article",
+	"t":"Статья"
+},
+{
+	"o":"Main",
+	"t":"Основной"
+},
+{
+	"o":"Footer",
+	"t":"Нижний колонтитул"
+},
+{
+	"o":"Internal Links Count",
+	"t":"Количество внутренних ссылок"
+},
+{
+	"o":"External Links Count",
+	"t":"Количество внешних ссылок"
+},
+{
+	"o":"Upgrade to see YOUR WEBSITE here",
+	"t":"Обновите версию, чтобы увидеть здесь ВАШ ВЕБ-САЙТ"
+},
+{
+	"o":"Upgrade to Business",
+	"t":"Перейти на бизнес-версию"
+},
+{
+	"o":"Backlinks List",
+	"t":"Список обратных ссылок"
+},
+{
+	"o":"Backlinks By Keywords",
+	"t":"Обратные ссылки по ключевым словам"
+},
+{
+	"o":"Backlinks By Pages",
+	"t":"Обратные ссылки по страницам"
+},
+{
+	"o":"Find Mutual Referring Domains",
+	"t":"Найдите взаимные ссылающиеся домены"
+},
+{
+	"o":"Url From",
+	"t":"URL-адрес откуда"
+},
+{
+	"o":"Url To",
+	"t":"URL-адрес"
+},
+{
+	"o":"TLD From",
+	"t":"TLD От"
+},
+{
+	"o":"Anchor",
+	"t":"Якорь"
+},
+{
+	"o":"Page From Rank",
+	"t":"Страница из рейтинга"
+},
+{
+	"o":"Page From Title",
+	"t":"Страница из заголовка"
+},
+{
+	"o":"Item Type",
+	"t":"Тип вещи"
+},
+{
+	"o":"Group Count",
+	"t":"Количество групп"
+},
+{
+	"o":"First Seen",
+	"t":"Первый раз"
+},
+{
+	"o":"Last Seen",
+	"t":"Последний визит"
+},
+{
+	"o":"Add Link",
+	"t":"Добавить ссылку"
+},
+{
+	"o":"Comments",
+	"t":"Комментарии"
+},
+{
+	"o":"Email",
+	"t":"Электронная почта"
+},
+{
+	"o":"Href",
+	"t":"Href"
+},
+{
+	"o":"Phone",
+	"t":"Телефон"
+},
+{
+	"o":"Subject",
+	"t":"Предмет"
+},
+{
+	"o":"Cost",
+	"t":"Расходы"
+},
+{
+	"o":"My Monitored Backlinks",
+	"t":"Мои отслеживаемые обратные ссылки"
+},
+{
+	"o":"Website",
+	"t":"Веб-сайт"
+},
+{
+	"o":"Track",
+	"t":"Отслеживать"
+},
+{
+	"o":"Enabled",
+	"t":"Включено"
+},
+{
+	"o":"Follow",
+	"t":"Следовать"
+},
+{
+	"o":"Date Created",
+	"t":"Дата создания"
+},
+{
+	"o":"Last Checked",
+	"t":"Последняя проверка"
+},
+{
+	"o":"Visits",
+	"t":"Посещения"
+},
+{
+	"o":"Medium",
+	"t":"Середина"
+},
+{
+	"o":"Source",
+	"t":"Источник"
+},
+{
+	"o":"Browser",
+	"t":"Браузер"
+},
+{
+	"o":"Last Month",
+	"t":"Прошлый месяц"
+},
+{
+	"o":"Last calendar month",
+	"t":"Последний календарный месяц"
+},
+{
+	"o":"Last 3 Months",
+	"t":"Последние 3 месяца"
+},
+{
+	"o":"Last 6 Months",
+	"t":"Последние 6 месяцев"
+},
+{
+	"o":"Avg Time on Site",
+	"t":"Среднее время на сайте"
+},
+{
+	"o":"Bounce Rate",
+	"t":"Показатель отказов"
+},
+{
+	"o":"Page Views",
+	"t":"Просмотры страниц"
+},
+{
+	"o":"Ranks",
+	"t":"Звания"
+},
+{
+	"o":"Images",
+	"t":"Изображений"
+},
+{
+	"o":"Internal Links",
+	"t":"Внутренние ссылки"
+},
+{
+	"o":"External Links",
+	"t":"Внешние ссылки"
+},
+{
+	"o":"SEO Report",
+	"t":"SEO-отчет"
+},
+{
+	"o":"Your Logo",
+	"t":"Ваш логотип"
+},
+{
+	"o":"Upload logo clicking here",
+	"t":"Загрузите логотип, нажав здесь"
+},
+{
+	"o":"Contact Details",
+	"t":"Контактная информация"
+},
+{
+	"o":"Cover Title",
+	"t":"Название обложки"
+},
+{
+	"o":"You can change title here",
+	"t":"Вы можете изменить название здесь"
+},
+{
+	"o":"Choose sections to export in your Report",
+	"t":"Выберите разделы для экспорта в отчете"
+},
+{
+	"o":"Executive Summary",
+	"t":"Управляющее резюме"
+},
+{
+	"o":"Section title",
+	"t":"Название раздела"
+},
+{
+	"o":"General Website Info:",
+	"t":"Общая информация о сайте:"
+},
+{
+	"o":"Tracking Information:",
+	"t":"Информация об отслеживании:"
+},
+{
+	"o":"Add Status Detail",
+	"t":"Добавить информацию о статусе"
+},
+{
+	"o":"Website Current Status",
+	"t":"Текущий статус веб-сайта"
+},
+{
+	"o":"One Month Ago",
+	"t":"Месяц назад"
+},
+{
+	"o":"Initial Status",
+	"t":"Исходное состояние"
+},
+{
+	"o":"Options:",
+	"t":"Параметры:"
+},
+{
+	"o":"URL",
+	"t":"URL-адрес"
+},
+{
+	"o":"Initial Position",
+	"t":"Исходное положение"
+},
+{
+	"o":"6 Months Ago",
+	"t":"6 месяцев назад"
+},
+{
+	"o":"3 Months Ago",
+	"t":"3 месяца назад"
+},
+{
+	"o":"Best Rank",
+	"t":"Лучший ранг"
+},
+{
+	"o":"Keywords Suggestions (Extra Keywords)",
+	"t":"Предложения ключевых слов (дополнительные ключевые слова)"
+},
+{
+	"o":"Google Analytics Data",
+	"t":"Данные Google Аналитики"
+},
+{
+	"o":"Date Range:",
+	"t":"Диапазон дат:"
+},
+{
+	"o":"OnPage",
+	"t":"На странице"
+},
+{
+	"o":"Create PDF",
+	"t":"Создать PDF"
+},
+{
+	"o":"My Monitoring Result",
+	"t":"Мой результат мониторинга"
+},
+{
+	"o":"My Top Competitors",
+	"t":"Мои лучшие конкуренты"
+},
+{
+	"o":"Settings",
+	"t":"Настройки"
+},
+{
+	"o":"Plans",
+	"t":"Планы"
+},
+{
+	"o":"Log Out",
+	"t":"Выйти"
+},
+{
+	"o":"Indicates how many keywords the given website is ranked for",
+	"t":"Указывает, по скольким ключевым словам ранжируется данный веб-сайт."
+},
+{
+	"o":"Indicates how many keywords have daily tracking for the given website",
+	"t":"Указывает, сколько ключевых слов отслеживаются ежедневно для данного веб-сайта."
+},
+{
+	"o":"Indicates average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю позицию (ключевых слов, отслеживаемых ежедневно) для данного веб-сайта."
+},
+{
+	"o":"Indicates yesterday average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю позицию за вчерашний день (ключевых слов, отслеживаемых ежедневно) для данного веб-сайта."
+},
+{
+	"o":"Indicates last week average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю позицию (по ежедневно отслеживаемым ключевым словам) за последнюю неделю для данного веб-сайта."
+},
+{
+	"o":"Indicates last month average position (of the daily tracked keywords) for the given website",
+	"t":"Указывает среднюю позицию (по ежедневно отслеживаемым ключевым словам) за последний месяц для данного веб-сайта."
+},
+{
+	"o":"Indicates how many ranks went up since yesterday for the given website",
+	"t":"Указывает, сколько позиций повысилось со вчерашнего дня для данного веб-сайта."
+},
+{
+	"o":"Indicates how many ranks went down since yesterday for the given website",
+	"t":"Указывает, сколько позиций понизилось со вчерашнего дня для данного веб-сайта."
+},
+{
+	"o":"Indicates how many ranks went up since last change for the given website",
+	"t":"Указывает, сколько позиций повысилось с момента последнего изменения данного веб-сайта."
+},
+{
+	"o":"Indicates how many landing pages are tracked for the given website",
+	"t":"Указывает, сколько целевых страниц отслеживается для данного веб-сайта."
+},
+{
+	"o":"Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.",
+	"t":"Рейтинг веб-сайта (Page Rank) — это алгоритм Google, предназначенный для измерения важности веб-страницы на основе качества и количества ссылающихся на нее веб-страниц. Страницы с высоким PageRank (т. е. большим количеством качественных обратных ссылок) воспринимаются Google как более авторитетные и имеют более высокий рейтинг, чем страницы с более низким PageRank."
+},
+{
+	"o":"Indicates how many backlinks are linking for the given website",
+	"t":"Указывает, сколько обратных ссылок ссылается на данный веб-сайт."
+},
+{
+	"o":"Indicates how many backlinks are being monitored for the given website",
+	"t":"Указывает, сколько обратных ссылок отслеживается для данного веб-сайта."
+},
+{
+	"o":"Save for next time",
+	"t":"Сохраните для следующего раза"
+},
+{
+	"o":"PDF",
+	"t":"PDF"
+},
+{
+	"o":"Name",
+	"t":"Имя"
+},
+{
+	"o":"Delete",
+	"t":"Удалить"
+},
+{
+	"o":"Edit Website",
+	"t":"Редактировать сайт"
+},
+{
+	"o":"Website Name* ",
+	"t":"Название веб-сайта* "
+},
+{
+	"o":"Website Url*",
+	"t":"URL веб-сайта*"
+},
+{
+	"o":"Website Classification",
+	"t":"Классификация веб-сайтов"
+},
+{
+	"o":"Country",
+	"t":"Страна"
+},
+{
+	"o":"Close",
+	"t":"Закрывать"
+},
+{
+	"o":"Website Name",
+	"t":"Название веб-сайта"
+},
+{
+	"o":"Project Manager",
+	"t":"Руководитель проекта"
+},
+{
+	"o":"Update",
+	"t":"Обновлять"
+},
+{
+	"o":"Upgrade",
+	"t":"Обновление"
+},
+{
+	"o":"SEO Tutorial",
+	"t":"SEO-руководство"
+},
+{
+	"o":"Contact Us",
+	"t":"Связаться с нами"
+},
+{
+	"o":"English",
+	"t":"Английский"
+},
+{
+	"o":"Copyright © 2013 RabbitSEO . All Rights Reserved.",
+	"t":"Авторские права © 2013 RabbitSEO. Все права защищены."
+},
+{
+	"o":"Close\n",
+	"t":"Закрывать\n"
+},
+{
+	"o":"Yes",
+	"t":"Да"
+},
+{
+	"o":"Save changes",
+	"t":"Сохранить изменения"
+},
+{
+	"o":"Confirm",
+	"t":"Подтверждать"
+},
+{
+	"o":"Are you sure you want to delete?",
+	"t":"Вы уверены, что хотите удалить?"
+},
+{
+	"o":"No\n",
+	"t":"Нет\n"
+},
+{
+	"o":"Account",
+	"t":"Счет"
+},
+{
+	"o":"General",
+	"t":"Общий"
+},
+{
+	"o":"Notifications",
+	"t":"Уведомления"
+},
+{
+	"o":"Login",
+	"t":"Авторизоваться"
+},
+{
+	"o":"Websites",
+	"t":"Веб-сайты"
+},
+{
+	"o":"Researches",
+	"t":"Исследования"
+},
+{
+	"o":"Upgrade Now",
+	"t":"Обнови сейчас"
+},
+{
+	"o":"Compare plans",
+	"t":"Сравнить планы"
+},
+{
+	"o":"Starter",
+	"t":"Стартер"
+},
+{
+	"o":"Premium",
+	"t":"Премиум"
+},
+{
+	"o":"Business",
+	"t":"Бизнес"
+},
+{
+	"o":"Enterprise",
+	"t":"Предприятие"
+},
+{
+	"o":"Landing Pages Optimization",
+	"t":"Оптимизация целевых страниц"
+},
+{
+	"o":"Google Analytics Integration",
+	"t":"Интеграция Google Аналитики"
+},
+{
+	"o":"White Label Reports",
+	"t":"Отчеты White Label"
+},
+{
+	"o":"API Access",
+	"t":"API-доступ"
+},
+{
+	"o":"Available Researches (up to 500 results per research):",
+	"t":"Доступные исследования (до 500 результатов на исследование):"
+},
+{
+	"o":"Keywords Research",
+	"t":"Ключевые слова Исследования"
+},
+{
+	"o":"Traffic Explorer (Similar Web)",
+	"t":"Обозреватель трафика (аналогичный веб-сайт)"
+},
+{
+	"o":"Related Keywords",
+	"t":"Связанные ключевые слова"
+},
+{
+	"o":"Top Traffic Pages",
+	"t":"Страницы с самым высоким трафиком"
+},
+{
+	"o":"Competitors Analysis",
+	"t":"Анализ конкурентов"
+},
+{
+	"o":"Keywords Gap",
+	"t":"Разрыв в ключевых словах"
+},
+{
+	"o":"Backlinks Summary",
+	"t":"Обзор обратных ссылок"
+},
+{
+	"o":"Backlinks Explorer",
+	"t":"Обозреватель обратных ссылок"
+},
+{
+	"o":"Limited",
+	"t":"Ограниченное"
+},
+{
+	"o":"Spy Backlinks",
+	"t":"Шпионские обратные ссылки"
+},
+{
+	"o":"Backlinks History",
+	"t":"История обратных ссылок"
+},
+{
+	"o":"Avg Position Yesterday",
+	"t":"Средняя позиция вчера"
+},
+{
+	"o":"Avg Position Last Week",
+	"t":"Средняя позиция на прошлой неделе"
+},
+{
+	"o":"Avg Position Last Month",
+	"t":"Средняя позиция за последний месяц"
+},
+{
+	"o":"Initial Rank",
+	"t":"Начальный ранг"
+},
+{
+	"o":"Days Ago 2",
+	"t":"Дней назад 2"
+},
+{
+	"o":"Yesterday",
+	"t":"Вчера"
+},
+{
+	"o":"Columns",
+	"t":"Привет"
+},
+{
+	"o":"Hello",
+	"t":"Привет"
+},
+{
+	"o":"Add New Website",
+	"t":"Добавить новый веб-сайт"
+},
+{
+	"o":"All Websites",
+	"t":"Все веб-сайты"
+},
+{
+	"o":"Website Details",
+	"t":"Подробности веб-сайта"
+},
+{
+	"o":"Website Url",
+	"t":"URL веб-сайта"
+},
+{
+	"o":"Enter Website Url",
+	"t":"Введите URL-адрес веб-сайта"
+},
+{
+	"o":"Website Nickname (Optional)",
+	"t":"Псевдоним веб-сайта (необязательно)"
+},
+{
+	"o":"Enter Website Nickname",
+	"t":"Введите псевдоним веб-сайта"
+},
+{
+	"o":"Location",
+	"t":"Расположение"
+},
+{
+	"o":"Next",
+	"t":"Следующий"
+},
+{
+	"o":"Enter your desired keywords, one in each line. You can add up to",
+	"t":"Введите желаемые ключевые слова, по одному в каждой строке. Вы можете добавить до "
+},
+{
+	"o":"Please choose keywords for your website.",
+	"t":"Пожалуйста, выберите ключевые слова для вашего сайта."
+},
+{
+	"o":"Close",
+	"t":"Закрывать"
+},
+{
+	"o":"keywords",
+	"t":"ключевые слова"
+},
+{
+	"o":"Website Onboarding",
+	"t":"Регистрация веб-сайта"
+},
+{
+	"o":"User Manual",
+	"t":"Руководство пользователя"
+},
+{
+	"o":"Listed Competitors",
+	"t":"Перечисленные конкуренты"
+},
+{
+	"o":"Website Visits Last Month",
+	"t":"Посещения веб-сайта за последний месяц"
+},
+{
+	"o":"Display Settings",
+	"t":"Настройки отображения"
+},
+{
+	"o":"Menu",
+	"t":"Меню"
+},
+{
+	"o":"Tables",
+	"t":"Таблицы"
+},
+{
+	"o":"Information",
+	"t":"Информация"
+},
+{
+	"o":"Company Name",
+	"t":"Название компании"
+},
+{
+	"o":"First Name",
+	"t":"Имя"
+},
+{
+	"o":"Email Notifications of Rankings Changes",
+	"t":"Уведомления по электронной почте об изменениях рейтинга"
+},
+{
+	"o":"Email Rankings (days a week)",
+	"t":"Рейтинги по электронной почте (дни в неделю)"
+},
+{
+	"o":"Last Name",
+	"t":"Рейтинги по электронной почте (дни в неделю)"
+},
+{
+	"o":"Email all rankings, not only changes from last day",
+	"t":"Отправьте по электронной почте все рейтинги, а не только изменения по сравнению с прошлым днем."
+},
+{
+	"o":"Or notify me:",
+	"t":"Или сообщите мне:"
+},
+{
+	"o":"Login Details",
+	"t":"Детали входа"
+},
+{
+	"o":"Current Password",
+	"t":"Текущий пароль"
+},
+{
+	"o":"New Password",
+	"t":"Новый пароль"
+},
+{
+	"o":"Confirm Password",
+	"t":"Подтвердите пароль"
+},
+{
+	"o":"Website SEO Report for",
+	"t":"SEO-отчет веб-сайта для"
+},
+{
+	"o":"Keywords List",
+	"t":"Список ключевых слов"
+},
+{
+	"o":"Keywords that went up last month",
+	"t":"Ключевые слова, число которых выросло в прошлом месяце"
+},
+{
+	"o":"Keywords Suggestions (Extra Keywords)",
+	"t":"Предложения ключевых слов (дополнительные ключевые слова)"
+},
+{
+	"o":"Links History",
+	"t":"История ссылок"
+},
+{
+	"o":"Last Year Chart",
+	"t":"График прошлого года"
+},
+{
+	"o":"Search Volume History",
+	"t":"История объемов поиска"
+},
+{
+	"o":"January",
+	"t":"январь"
+},
+{
+	"o":"February",
+	"t":"февраль"
+},
+{
+	"o":"March",
+	"t":"Маршировать"
+},
+{
+	"o":"April",
+	"t":"апрель"
+},
+{
+	"o":"May",
+	"t":"Может"
+},
+{
+	"o":"June",
+	"t":"Июнь"
+},
+{
+	"o":"July",
+	"t":"Июль"
+},
+{
+	"o":"August",
+	"t":"Август"
+},
+{
+	"o":"September",
+	"t":"Сентябрь"
+},
+{
+	"o":"October",
+	"t":"Октябрь"
+},
+{
+	"o":"Novermber",
+	"t":"ноябрь"
+},
+{
+	"o":"December",
+	"t":"Декабрь"
+},
+{
+	"o":"Sunday",
+	"t":"Воскресенье"
+},
+{
+	"o":"Monday",
+	"t":"Понедельник"
+},
+{
+	"o":"Tuesday",
+	"t":"Вторник"
+},
+{
+	"o":"Wednesday",
+	"t":"Среда"
+},
+{
+	"o":"Thursday",
+	"t":"Четверг"
+},
+{
+	"o":"Friday",
+	"t":"Пятница"
+},
+{
+	"o":"Saturday",
+	"t":"Суббота"
+},
+{
+	"o":"Last Week Chart",
+	"t":"График прошлой недели"
+},
+{
+	"o":"Listed Keywords",
+	"t":"Перечисленные ключевые слова"
+},
+{
+	"o":"Total Keywords",
+	"t":"Всего ключевых слов"
+},
+{
+	"o":"Total",
+	"t":"Общий"
+},
+{
+	"o":"We found only few landing pages for your website, you should create more pages in your website for higher rankings in Google",
+	"t":"Мы нашли только несколько целевых страниц для вашего веб-сайта. Чтобы повысить рейтинг в Google, вам следует создать больше страниц на своем веб-сайте."
+},
+{
+	"o":"Warning - No Landing Pages",
+	"t":"Предупреждение: целевые страницы запрещены"
+},
+{
+	"o":"Add New Keywords to your list, we track them daily so you can see the progress of your website. You can choose which search engine and search type like desktop / mobile",
+	"t":"Предупреждение: целевые страницы запрещены"
+},
+{
+	"o":"Keyword was added, you can see it in My Keywords tab",
+	"t":"Ключевое слово было добавлено, вы можете увидеть его на вкладке «Мои ключевые слова»."
+},
+{
+	"o":"You can choose which columns to show, for example you can choose to see if landing page of the given keyword contains the keyword etc.",
+	"t":"Вы можете выбрать, какие столбцы показывать, например, вы можете посмотреть, содержит ли целевая страница данного ключевого слова это ключевое слово и т. д."
+},
+{
+	"o":"Click on the keyword to see more details, you can see the top 100 results, and also you can track your progress and see the previous ranks you had. You can also find Related Keywords and add them to your list",
+	"t":"Нажмите на ключевое слово, чтобы просмотреть более подробную информацию, вы увидите 100 лучших результатов, а также сможете отслеживать свой прогресс и видеть предыдущие ранги, которые у вас были. Вы также можете найти связанные ключевые слова и добавить их в свой список."
+},
+{
+	"o":"Add new Landing Pages to your list, if you added more pages to your website you can manually add those pages here, or you can also choose to rescan your website again and let us find the landing pages of your website.",
+	"t":"Добавьте новые целевые страницы в свой список. Если вы добавили на свой веб-сайт больше страниц, вы можете добавить эти страницы сюда вручную или вы также можете повторно отсканировать свой веб-сайт и позволить нам найти целевые страницы вашего веб-сайта."
+},
+{
+	"o":"Click on each Landing Page in the grid to see more details about the page, below you can see also tips and hints how to improve your landing pages, those recommendations are calculated in real time so you can also refresh the page test it again",
+	"t":"Нажмите на каждую целевую страницу в сетке, чтобы просмотреть более подробную информацию о странице. Ниже вы также можете увидеть советы и подсказки, как улучшить ваши целевые страницы. Эти рекомендации рассчитываются в режиме реального времени, поэтому вы также можете обновить страницу, протестировать ее еще раз."
+},
+{
+	"o":"Here you can see the overall score of your website, it is calculated by the number of warnings we found on your landing pages. By getting high score your website can get higher ranks in Google and then of course more traffic",
+	"t":"Здесь вы можете увидеть общую оценку вашего веб-сайта, она рассчитывается на основе количества предупреждений, которые мы обнаружили на ваших целевых страницах. Получив высокий балл, ваш сайт может получить более высокие позиции в Google, а затем, конечно, больше трафика."
+},
+{
+	"o":"Warning - Only Few Landing Pages Found",
+	"t":"Внимание! Найдено всего несколько целевых страниц."
+},
+{
+	"o":"Keywords Found",
+	"t":"Ключевые слова найдены"
+},
+
+	{  
+    "o": "Links Building", 
+     "t":"Создание ссылок" 
+	}, 
+	  { 
+    "o": "Extra Backlinks", 
+    "t":"Дополнительные обратные ссылки"
+      },  
+  {	
+    
+    "o": "Get",
+    "t":"Получать"
+
+	}, 
+	  {
+    
+    "o": "Monthly Backlinks with our new",
+    "t":"Ежемесячные обратные ссылки с нашим новым"
+
+	}, 
+	  {
+    
+    "o": "Best", 
+    "t":"Лучший"
+
+	}, 
+	  {
+    
+   	"o": "Order Premium Backlinks",
+    "t":"Заказать премиум-обратные ссылки"
+
+	},
+  {
+    
+   "o": "Load Keywords Ideas",
+    "t":"Загрузить идеи ключевых слов"
+
+	},
+  {
+    "o": "We couldn't find any landing pages for your website, you can try to manually add new pages or",
+    "t":"Нам не удалось найти целевые страницы для вашего сайта. Попробуйте добавить новые страницы вручную или"
+
+	},
+  {
+    "o": "Message",
+    "t":"Сообщение"
+
+	},
+  {
+    "o": "We are now scanning your website again, results should be ready in one minute approximately.",
+    "t":"Сейчас мы снова сканируем ваш сайт, результаты должны быть готовы примерно через одну минуту."
+      },
+  {
+    "o": "Links Created",
+    "t":"Ссылки созданы"
+
+	},
+  {
+    "o": "mo",
+    "t":"мес." 
+	},
+  {
+    "o": "Premium Member",
+    "t":"Премиум-участник"
+
+	},
+  {
+    "o": "No Landing Pages found",
+    "t":"Целевые страницы не найдены"
+
+	},
+  {
+    "o": "My Links",
+    "t":"Мои ссылки"
+
+	},
+  {
+    "o": "Optimization Score",
+    "t":"Показатель оптимизации"
+
+	},
+  {
+    "o": "Failed Tests",
+    "t":"Неудачные тесты"
+
+	},
+  {
+    "o": "Successful Tests",
+    "t":"Успешные испытания"
+
+	},
+  {
+    "o": "You can enter several URLs (one in each line).",
+    "t":"Вы можете ввести несколько URL-адресов (по одному в каждой строке)."
+
+	},
+  {
+    "o": "If you added new pages, we can",
+    "t":"Если вы добавили новые страницы, мы можем"
+
+	},
+  {
+    "o": "your website again",
+    "t":"снова ваш сайт"
+
+	},
+  {
+    "o": "My Recent Backlinks",
+    "t":"Мои недавние обратные ссылки"
+
+	},
+  {
+    "o": "Welcome to Rabbit SEO",
+    "t":"Добро пожаловать в Rabbit SEO"
+
+	},
+  {
+    "o": "Terms",
+    "t":"Условия"
+
+	},
+  {
+    "o": "Condition",
+    "t":"Состояние"
+
+	},
+  {
+    "o": "My Backlinks",
+    "t":"Мои обратные ссылки"
+
+	},
+  {
+    "o": "Guest Blogs",
+    "t":"Сообщения в блоге"
+
+	},
+  {
+    "o": "Premium Listings",
+    "t":"Премиум-листинги"
+
+	},
+  {
+    "o": "Managed Service",
+    "t":"Управляемый сервис"
+
+	},
+  {
+    "o": "Update Details",
+    "t":"Обновить детали"
+
+	},
+  {
+    "o": "Monitor Link",
+    "t":"Ссылка на монитор"
+
+	},
+  {
+    "o": "Publish Premium Listings",
+    "t":"Заказать премиум-листинги"
+
+	},
+  {
+    "o": "Publish Exclusive Guest Blog",
+    "t":"Заказать эксклюзивную публикацию в блоге"
+
+	},
+  {
+    "o": "No data available in table",
+    "t":"Данные отсутствуют в таблице"
+
+	},
+  {
+    "o": "Edit / Share",
+    "t":"Редактировать/Поделиться"
+
+	},
+  {
+    "o": "Created On",
+    "t":"Создано на"
+
+	},
+  {
+    "o": "Live",
+    "t":"Жить"
+
+	},
+  {
+    "o": "Href",
+    "t":"Href"
+
+	},
+  {
+    "o": "My Website Details",
+    "t":"Подробности моего сайта"
+
+	},
+  {
+    "o": "Keywords to Promote",
+    "t":"Ключевые слова для продвижения"
+
+	},
+  {
+    "o": "Category",
+    "t":"Категория"
+
+	},
+  {
+    "o": "Description",
+    "t":"Описание"
+
+	},
+  {
+    "o": "Address (optional)",
+    "t":"Адрес (необязательно)"
+
+	},
+  {
+    "o": "Phone (optional)",
+    "t":"Телефон опционально)"
+
+	},
+  {
+    "o": "Upload logo",
+    "t":"Загрузить логотип"
+
+	},
+  {
+    "o": "Submit",
+    "t":"Представлять на рассмотрение"
+
+	},
+  {
+    "o": "Page Url",
+    "t":"URL-адрес страницы"
+
+	},
+  {
+    "o": "Contact Name",
+    "t":"Контактное лицо"
+
+	},
+  {
+    "o": "Order Premium Links",
+    "t":"Заказать премиум-ссылки"
+
+	},
+  {
+    "o": "Keyword to Promote",
+    "t":"Ключевое слово для продвижения"
+
+	},
+  {
+    "o": "Enter a keyword",
+    "t":"Введите ключевое слово"
+
+	},
+  {
+    "o": "Language",
+    "t":"Язык"
+
+	},
+  {
+    "o": "Guest Blog Title (based on your domain and 'Keyword to Promote')",
+    "t":"Заголовок сообщения в блоге (на основе вашего домена и «ключевого слова для продвижения»)"
+
+	},
+  {
+    "o": "Landing Page to Promote",
+    "t":"Целевая страница для продвижения"
+
+	},
+  {
+    "o": "Number of guest blogs to create",
+    "t":"Количество постов в блоге, которые нужно создать"
+
+	},
+  {
+    "o": "You have",
+    "t":"У вас есть"
+
+	},
+  {
+    "o": "links left this month",
+    "t":"ссылки остались в этом месяце"
+
+	},
+  {
+    "o": "Please Note",
+    "t":"Пожалуйста, обрати внимание"
+
+	},
+  {
+    "o": "Please Note: One Guest Blog is equivalent to 4 Links.",
+    "t":"Обратите внимание: одно сообщение в блоге эквивалентно 4 ссылкам."
+
+	},
+  {
+    "o": "Show Advanced Settings",
+    "t":"Показать дополнительные настройки"
+
+	},
+  {
+    "o": "Choose Blog / News Site (Optional)",
+    "t":"Выберите блог/сайт новостей (необязательно)"
+
+	},
+  {
+    "o": "How many words in the post (approximately)?",
+    "t":"Сколько слов в посте (приблизительно)?"
+
+	},
+  {
+    "o": "Add Publisher Details Section in the Guest Blog",
+    "t":"Добавьте раздел сведений об издателе в сообщение блога"
+
+	},
+  {
+    "o": "On",
+    "t":"На"
+
+	},
+  {
+    "o": "Publish Date",
+    "t":"Дата публикации"
+
+	},
+  {
+    "o": "Submit Guest Blog Order",
+    "t":"Отправить заказ на публикацию в блоге"
+
+	},
+  {
+    "o": "Competition Level",
+    "t":"Уровень конкуренции"
+
+	},
+  {
+    "o": "Search Volume",
+    "t":"Объем поиска"
+
+	},
+  {
+    "o": "Number of links to create",
+    "t":"Количество ссылок для создания"
+
+	},
+  {
+    "o": "Submit Premium Links Order",
+    "t":"Отправьте заказ на премиум-ссылки"
+
+	},
+  {
+    "o": "Add New Keywords",
+    "t":"Добавить новые ключевые слова"
+
+	},
+  {
+    "o": "Last Week",
+    "t":"На прошлой неделе"
+
+	},
+  {
+    "o": "Words Count",
+    "t":"Количество слов"
+
+	},
+  {
+    "o": "Page Title",
+    "t":"Заголовок страницы"
+
+	},
+  {
+    "o": "Keyword Density",
+    "t":"Плотность ключевых слов"
+
+	},
+  {
+    "o": "Title Contains Keyword",
+    "t":"Название содержит ключевое слово"
+
+	},
+  {
+    "o": "Title Length",
+    "t":"Длина заголовка"
+
+	},
+  {
+    "o": "November",
+    "t":"ноябрь"
+
+	},
+  {
+    "o": "Last Rank",
+    "t":"Последний ранг"
+
+	},
+  {
+    "o": "H1 Contains Keyword",
+    "t":"H1 содержит ключевое слово"
+
+	},
+  {
+    "o": "H2 Count",
+    "t":"Количество H2"
+
+	},
+  {
+    "o": "Compact View",
+    "t":"Компактный вид"
+
+	},
+  {
+    "o": "Comfort View",
+    "t":"Комфортный вид"
+
+	},
+  {
+    "o": "Enter keywords you want to promote",
+    "t":"Введите ключевые слова, которые вы хотите продвигать"
+
+	},
+  {
+    "o": "Filter by Keywords",
+    "t":"Фильтровать по ключевым словам"
+
+	},
+  {
+    "o": "Table View",
+    "t":"Представление таблицы"
+
+	},
+  {
+    "o": "Filter Competitors by Keywords",
+    "t":"Фильтровать конкурентов по ключевым словам"
+
+	},
+  {
+    "o": "Find Competitors",
+    "t":"Найдите конкурентов"
+
+	},
+  {
+    "o": "Clear All",
+    "t":"Очистить все"
+
+	},
+  {
+    "o": "My Competitors",
+    "t":""
+      }, 
+  {
+    "o": "Competitor Backlinks",
+    "t":"Мои конкуренты"
+      }, 
+  {
+    "o": "Referring Domain Rank",
+    "t":"Ссылка на рейтинг домена"
+
+	},
+  {
+    "o": "Referring Page Rank",
+    "t":"Ссылка на рейтинг страницы"
+
+	},
+  {
+    "o": "Domain Rank",
+    "t":""
+
+	},
+  {
+    "o": "Listed Backlinks",
+    "t":"Ранг домена"
+
+	},
+  {
+    "o": "Search...",
+    "t":"Поиск..."
+
+	},
+  {
+    "o": "Domain From",
+    "t":"Домен от"
+
+	},
+  {
+    "o": "Upgrade to see your backlinks here",
+    "t":"Обновите версию, чтобы увидеть здесь свои обратные ссылки."
+
+	},
+  {
+    "o": "Currently you see a demo of amazon, upgrade now to",
+    "t":"В настоящее время вы видите демо-версию Amazon, обновите сейчас до"
+
+	},
+  {
+    "o": "see results of your website",
+    "t":"увидеть результаты вашего сайта"
+
+	},
+  {
+    "o": "Broken Links",
+    "t":"Неработающие ссылки"
+
+	},
+  {
+    "o": "Connet your Google Analytics Account",
+    "t":"Подключите свой аккаунт Google Analytics"
+
+	},
+  {
+    "o": "See what you get in each product and its plans.",
+    "t":"Посмотрите, что вы получаете в каждом продукте и его планах."
+
+	},
+  {
+    "o": "Choose Plan",
+    "t":"Выберите план"
+
+	},
+  {
+    "o": "1200 Keywords",
+    "t":"1200 ключевых слов"
+
+	},
+  {
+    "o": "We will be sad to see you leaving but if you wish to cancel your account with us, click delete",
+    "t":"Нам будет грустно видеть, что вы уходите, но если вы хотите закрыть свою учетную запись у нас, нажмите «Удалить»."
+
+	},
+  {
+    "o": "How to cancel my account?",
+    "t":"Как аннулировать мой аккаунт?"
+
+	},
+  {
+    "o": "Delete Account",
+    "t":"Удалить аккаунт"
+
+	},
+  {
+    "o": "Notification",
+    "t":"Уведомление"
+
+	},
+  {
+    "o": "Email for receiving notifications",
+    "t":"Электронная почта для получения уведомлений"
+
+	},
+  {
+    "o": "Email New Listings / Guest Blogs Links that were created",
+    "t":"Отправьте по электронной почте новые объявления/сообщения в блогах, ссылки, которые были созданы."
+
+	},
+  {
+    "o": "Rankings",
+    "t":"Рейтинги"
+
+	},
+  {
+    "o": "Email All Links Together Once a Week",
+    "t":"Отправляйте по электронной почте все ссылки раз в неделю."
+
+	},
+  {
+    "o": "of at least",
+    "t":"по крайней мере"
+
+	},
+  {
+    "o": "UP",
+    "t":"ВВЕРХ"
+
+	},
+  {
+    "o": "DOWN",
+    "t":"ВНИЗ"
+
+	},
+  {
+    "o": "positions",
+    "t":"позиции"
+
+	},
+  {
+    "o": "Free Member",
+    "t":"Бесплатный член"
+
+	},
+  {
+    "o": "Please fill in the form below and we will try to get back to you as soon as possible.",
+    "t":"Пожалуйста, заполните форму ниже, и мы постараемся ответить вам как можно скорее."
+
+	},
+  {
+    "o": "What is SEO?",
+    "t":"Что такое SEO?"
+
+	},
+  {
+    "o": "Why we do it?",
+    "t":"Почему мы это делаем?"
+
+	},
+  {
+    "o": "Search Engines",
+    "t":"Поисковые системы"
+
+	},
+  {
+    "o": "Links",
+    "t":"Ссылки"
+
+	},
+  {
+    "o": "Common Mistakes",
+    "t":"Распространенные ошибки"
+
+	},
+  {
+    "o": "SEO Stands for Search Engine Optimization. It is all about optimizing a website for search engines and some would say it is the art of ranking in the search engines. It is basically the process of designing and developing a web site to rank well in search engine results. You can think of it as the technical part of online marketing since helps to promote your website but… it also needs some technical knowledge and skills. Anyway, don’t you worry because it’s not rocket science :)",
+    "t":"SEO означает поисковую оптимизацию. Все дело в оптимизации веб-сайта для поисковых систем, и некоторые сказали бы, что это искусство ранжирования в поисковых системах. По сути, это процесс проектирования и разработки веб-сайта, чтобы он занимал высокие позиции в результатах поисковых систем. Вы можете думать об этом как о технической части онлайн-маркетинга, поскольку она помогает продвигать ваш веб-сайт, но… это также требует некоторых технических знаний и навыков. В любом случае, не волнуйтесь, это не ракетостроение :)"
+
+	},
+  {
+    "o": "So we are referring to the collection of techniques that allow our website to get more traffic from search engines (Google, Yahoo, Microsoft etc).",
+    "t":"Итак, мы имеем в виду набор методов, которые позволяют нашему сайту получать больше трафика из поисковых систем (Google, Yahoo, Microsoft и т. д.)."
+
+	},
+  {
+    "o": "SEO can be divided into two main areas: off-page SEO – this is the work we do externally from our website and on-page SEO – these are the changes we make on our website.",
+    "t":"SEO можно разделить на две основные области: внестраничное SEO — это работа, которую мы выполняем за пределами нашего веб-сайта, и внутреннее SEO — это изменения, которые мы вносим на нашем веб-сайте."
+
+	},
+  {
+    "o": "And just to make sure we are all on the same page … when we say SEO we don’t mean purchasing the number #1 sponsored link through Google Adwords. Purchasing sponsored links is more in the area of PPC (Pay Per Click). SEO is also not ranking #1 for our company's name - search engines are usually smart enough to give you the first rank for your company name by default (it might take some time to scan your website though).",
+    "t":""
+
+	},
+  {
+    "o": "We are using SEO to improve the volume and quality of traffic to our website from search engines. SEO is a very important technique for any website willing to get more traffic.",
+    "t":"Мы используем SEO, чтобы улучшить объем и качество трафика на наш сайт из поисковых систем. SEO — очень важный метод для любого веб-сайта, желающего получить больше трафика."
+
+	},
+  {
+    "o": "With everyone using the internet to obtain information, SEO became a very important part in the last years to attract visitors to our website through search engines. Ideally, with SEO we want our website to appear higher in search engines results for certain keywords (that are related to the topic of your website) which will result in a higher volume and quality of visitors.",
+    "t":"Поскольку все используют Интернет для получения информации, в последние годы SEO стало очень важной частью привлечения посетителей на наш сайт через поисковые системы. В идеале с помощью SEO мы хотим, чтобы наш веб-сайт появлялся выше в результатах поисковых систем по определенным ключевым словам (которые связаны с темой вашего веб-сайта), что приведет к увеличению количества и качества посетителей."
+
+	},
+  {
+    "o": "If we want to do SEO right, there are many factors to think about. It is import to understand how search engines work and how they look at our website. Then we need to change our website for the keywords we want to rank well by changing the content and titles. Afterwards we need start applying backlinks strategies and keep track of our progress by using monitoring changes. This manual is a great start for learning SEO and following the recommendations can help you get higher rankings and more quality traffic to your website!",
+    "t":"Если мы хотим сделать SEO правильно, нужно учитывать множество факторов. Важно понимать, как работают поисковые системы и как они смотрят на наш сайт. Затем нам нужно изменить наш веб-сайт по ключевым словам, которые мы хотим высоко ранжировать, изменив контент и заголовки. После этого нам нужно начать применять стратегии обратных ссылок и отслеживать наш прогресс, используя мониторинг изменений. Это руководство — отличное начало для изучения SEO, и следование рекомендациям поможет вам повысить рейтинг и повысить качество трафика на ваш сайт!"
+
+	},
+  {
+    "o": "It is important to remember that search engines are not humans but text-driven computers. Search engines do not care about how our website looks but more on the content it has. The main processes of search engines are crawling, indexing, and retrieving process.",
+    "t":"Важно помнить, что поисковые системы — это не люди, а компьютеры, управляемые текстом. Поисковые системы не заботятся о том, как выглядит наш сайт, их больше интересует его содержание. Основными процессами поисковых систем являются сканирование, индексирование и поиск."
+
+	},
+  {
+    "o": "Crawling",
+    "t":"Ползание"
+
+	},
+  {
+    "o": "the websites are crawled by the search engine crawlers (Google bot in the case of Google). This means the crawler will look at the text on a website and looks for links to different pages from that website.",
+    "t":"веб-сайты сканируются сканерами поисковых систем (бот Google в случае Google). Это означает, что сканер будет просматривать текст на веб-сайте и искать ссылки на разные страницы этого веб-сайта."
+
+	},
+  {
+    "o": "Indexing",
+    "t":"Индексирование"
+
+	},
+  {
+    "o": "creating index for all the fetched web pages and keeping them in a database from where it can later be fetched. Essentially, the process of indexing is identifying the words and expressions that best describe the page and assigning the page to particular keywords. This is also why it is important we decide which keywords we want to promote and optimize our website for.",
+    "t":"создание индекса для всех выбранных веб-страниц и сохранение их в базе данных, откуда их можно будет позже получить. По сути, процесс индексирования заключается в определении слов и выражений, которые лучше всего описывают страницу, и присвоении ей определенных ключевых слов. Именно поэтому важно решить, какие ключевые слова мы хотим продвигать и оптимизировать наш веб-сайт."
+
+	},
+  {
+    "o": "Retrieving Process",
+    "t":"Процесс получения"
+
+	},
+  {
+    "o": "when a search engine user looks for keywords their search strings will be matched to the index database and the search engine will return a list of best-matching pages (websites). We can have million or even billion of pages will be matched to the search string and that is why the search engine calculates which pages are the most relevant for our search.",
+    "t":"когда пользователь поисковой системы ищет ключевые слова, его строки поиска будут сопоставляться с базой данных индекса, и поисковая система вернет список наиболее соответствующих страниц (веб-сайтов). У нас может быть миллион или даже миллиард страниц, которые будут соответствовать поисковой строке, и именно поэтому поисковая система вычисляет, какие страницы наиболее релевантны для нашего поиска."
+
+	},
+  {
+    "o": "Before we can start optimizing our website for the search engines, we first need to know which keywords (terms) we want to target. We might want to choose 3 or 4 keywords we would like our website to rank well for. We usually refer to Google as the search engine because if you can rank well there, you'll probably rank well on the other search engines too. These keywords can be either broad or specific, but you'll want to study them before, mostly the local search volume and the competition. This research can be done with Google Keywords Tool. You can enter a term that relates to your website, e.g. flowers delivery and then see other related keywords. Obviously, we want to take those with lower competitions but with a nice amount of local searches as those can be the “quick wins”. You can monitor your keywords in the Rankings tab!",
+    "t":"Прежде чем мы сможем начать оптимизацию нашего веб-сайта для поисковых систем, нам сначала нужно знать, на какие ключевые слова (термины) мы хотим ориентироваться. Возможно, мы захотим выбрать 3 или 4 ключевых слова, по которым мы хотели бы, чтобы наш сайт имел хорошие позиции. Мы обычно называем Google поисковой системой, потому что, если вы можете получить хороший рейтинг там, вы, вероятно, получите хороший рейтинг и в других поисковых системах. Эти ключевые слова могут быть как широкими, так и конкретными, но вам следует изучить их заранее, в основном объем местного поиска и конкуренцию. Это исследование можно провести с помощью Google Keyword Tool. Вы можете ввести термин, относящийся к вашему веб-сайту, например. доставка цветов, а затем просмотрите другие связанные ключевые слова. Очевидно, мы хотим выбрать те, у которых более низкая конкуренция, но с большим количеством локальных поисковых запросов, поскольку они могут быть «быстрыми победами». Вы можете отслеживать свои ключевые слова на вкладке «Рейтинги»!"
+
+	},
+  {
+    "o": "Choosing the right keywords is very important also for the next steps as “Content is the King”. Content is probably the biggest driving force to high ranking. It is extremely important to have a descent amount of quality content containing our keywords and relevant text for our keywords. Trust the search engines that they will know if you just “plant” your keywords in a text which is not related to it. It’s obvious that users love fresh content, but search engines do as well. Generally, when a website is frequently updated, this increases the probability that the search engines will revisit the site sooner.",
+    "t":"Выбор правильных ключевых слов очень важен и для следующих шагов, поскольку «Контент – это король». Контент, вероятно, является самой большой движущей силой высокого рейтинга. Чрезвычайно важно иметь достаточное количество качественного контента, содержащего наши ключевые слова и текст, соответствующий нашим ключевым словам. Поверьте поисковым системам, что они узнают, если вы просто «всадите» свои ключевые слова в текст, который к нему не относится. Очевидно, что пользователи любят свежий контент, но и поисковые системы тоже. Как правило, когда веб-сайт часто обновляется, это увеличивает вероятность того, что поисковые системы вернутся к нему раньше."
+
+	},
+  {
+    "o": "Linking is a very important part of our SEO. This is part of the off-page SEO. Websites need to be linked to if they want to be found on the internet and gain traffic. When a website is newly created it can take some time to be indexed in the search engines. Having links to from other websites makes this process much faster but of course it has to be balanced and not too many links and too fast. Search engines think the more websites linking to your webpage, the more important your webpage will be. It is also very important to get quality backlinks as it improves the importance of your website. There are 3 types of links:",
+    "t":"Ссылки — очень важная часть нашего SEO. Это часть внешнего SEO. На веб-сайты должны быть ссылки, если они хотят, чтобы их можно было найти в Интернете и привлечь трафик. Индексация веб-сайта в поисковых системах может занять некоторое время. Наличие ссылок с других веб-сайтов значительно ускоряет этот процесс, но, конечно, он должен быть сбалансированным, не слишком большим количеством ссылок и не слишком быстрым. Поисковые системы считают, что чем больше веб-сайтов ссылается на вашу веб-страницу, тем важнее будет ваша веб-страница. Также очень важно получить качественные обратные ссылки, поскольку это повышает значимость вашего сайта. Существует 3 типа ссылок:"
+
+	},
+  {
+    "o": "Inbound links",
+    "t":"Входящие ссылки"
+
+	},
+  {
+    "o": "When an external website links to our page.",
+    "t":"Когда внешний веб-сайт ссылается на нашу страницу."
+
+	},
+  {
+    "o": "Outbound links",
+    "t":"Исходящие ссылки"
+
+	},
+  {
+    "o": "When linking from our website to another page.",
+    "t":"При ссылке с нашего сайта на другую страницу."
+
+	},
+  {
+    "o": "Internal links",
+    "t":"Внутренние ссылки"
+
+	},
+  {
+    "o": "When linking within our website to all the pages.",
+    "t":"При ссылках на нашем веб-сайте на все страницы."
+
+	},
+  {
+    "o": "Web site Crawler will go to a site again and again whose ranking in Search Engine is high. You can verify this fact by putting your site on a high rank site. If your site link is available on a high rank web site then you have 99.99% chances that you site will be indexed with-in 24Hrs.",
+    "t":"Поисковый робот веб-сайта будет снова и снова заходить на сайт, рейтинг которого в поисковых системах высок. Вы можете убедиться в этом факте, разместив свой сайт на сайте с высоким рейтингом. Если ссылка на ваш сайт доступна на веб-сайте с высоким рейтингом, вероятность того, что ваш сайт будет проиндексирован в течение 24 часов, составляет 99,99%."
+
+	},
+  {
+    "o": "What can we do to improve?",
+    "t":"Что мы можем сделать, чтобы улучшить?"
+
+	},
+  {
+    "o": "Submit your site in popular search engines manually. Don't go for automated submission.",
+    "t":"Добавьте свой сайт в популярные поисковые системы вручную. Не переходите на автоматическую отправку."
+
+	},
+  {
+    "o": "Provide high quality content - people will naturally link to your site if you have what they want and couldn’t find it elsewhere.",
+    "t":"Предоставляйте высококачественный контент — люди естественным образом будут ссылаться на ваш сайт, если у вас есть то, что им нужно, и они не могут найти это где-либо еще."
+
+	},
+  {
+    "o": "If you have personal relations with other webmasters, try to leverage it. Put your site link on their sites. One way links often count for more than reciprocal links.",
+    "t":"Если у вас есть личные отношения с другими веб-мастерами, попробуйте использовать это. Разместите ссылку на свой сайт на их сайтах. Односторонние ссылки часто имеют большее значение, чем взаимные."
+
+	},
+  {
+    "o": "Try to find Link Exchange Program. Find websites that are doing the same business and contact them for links exchange.",
+    "t":"Попробуйте найти программу обмена ссылками. Найдите веб-сайты, которые занимаются тем же бизнесом, и свяжитесь с ними для обмена ссылками."
+
+	},
+  {
+    "o": "A landing page, sometimes called a destination page, is the web page that visitors arrive at after they click the link on a search engine results page. A landing page can be the first page of a website that was advertised on the search engine results page, or from one of the natural results from the search query. This page generally displays logical information, usually something that pertains directly to the keywords searched, or has the keywords directly on the page.",
+    "t":"Целевая страница, иногда называемая целевой страницей, — это веб-страница, на которую посетители попадают после нажатия ссылки на странице результатов поисковой системы. Целевая страница может быть первой страницей веб-сайта, который рекламировался на странице результатов поисковой системы, или одним из естественных результатов поискового запроса. На этой странице обычно отображается логическая информация, обычно имеющая отношение непосредственно к искомым ключевым словам или имеющая ключевые слова непосредственно на странице."
+
+	},
+  {
+    "o": "It is very important to optimize your landing pages for 2 reasons: first, optimized landing page are likely to get higher ranking by the search engines. Second, attractive landing pages are likely to lead to conversion by your potential customers. These conversion may differ from one website to another – you probably know what means a “success” in your website. It can be someone that left his details in the contact us form, someone who bought a product, someone who left a comment to your article etc.",
+    "t":"Очень важно оптимизировать целевые страницы по двум причинам: во-первых, оптимизированная целевая страница, скорее всего, получит более высокий рейтинг в поисковых системах. Во-вторых, привлекательные целевые страницы, скорее всего, приведут к конверсии ваших потенциальных клиентов. Эти конверсии могут отличаться от одного веб-сайта к другому — вы, вероятно, знаете, что означает «успех» на вашем веб-сайте. Это может быть кто-то, кто оставил свои данные в форме обратной связи, кто-то, кто купил товар, кто-то, кто оставил комментарий к вашей статье и т. д."
+
+	},
+  {
+    "o": "By creating specific pages for different marketing channels, you’ll be able to customize your marketing message, which will provide revenue lifts. There are plenty of tutorials out there how to optimize and design landing pages so go ahead and try them.",
+    "t":"Создав специальные страницы для разных маркетинговых каналов, вы сможете настроить свое маркетинговое сообщение, что обеспечит рост доходов. Существует множество руководств по оптимизации и дизайну целевых страниц, так что попробуйте их."
+
+	},
+  {
+    "o": "As in every other type of business, it is always good (to some extent) to learn who are our competitors, what do they do and offer, how their web pages look like … and in the case of online marketing also make some co-operations with them. We can learn a lot and also get more traffic by working with them:",
+    "t":"Как и в любом другом виде бизнеса, всегда полезно (до некоторой степени) узнать, кто наши конкуренты, что они делают и предлагают, как выглядят их веб-страницы… а в случае онлайн-маркетинга также сделать некоторые совместные действия. операции с ними. Работая с ними, мы можем многому научиться, а также получить больше трафика:"
+
+	},
+  {
+    "o": "As we stated before, back links are very important to generate traffic. If we address our competitors and suggest some sort of links exchange, we can get a high quality back link to our website. It is high quality because our competitor is in the same field as we do so the search engine see that as a relevant link.",
+    "t":"Как мы уже говорили ранее, обратные ссылки очень важны для генерации трафика. Если мы обратимся к нашим конкурентам и предложим какой-то обмен ссылками, мы сможем получить качественную обратную ссылку на наш сайт. Это высокое качество, потому что наш конкурент работает в той же области, что и мы, поэтому поисковая система увидит это как релевантную ссылку."
+
+	},
+  {
+    "o": "It is also important to see where are our competitors ranked for the same keywords we are promoting and also to see maybe other keywords they are promoting and we haven’t thought about.",
+    "t":"Также важно увидеть, какое место занимают наши конкуренты по тем же ключевым словам, которые мы продвигаем, а также увидеть, возможно, другие ключевые слова, которые они продвигают, о которых мы не подумали."
+
+	},
+  {
+    "o": "Once your website is already up and running, it is very important to monitor the traffic and see how to optimize it. Google analytics provides you with lots of rich data about the activity in your website and also some details about the customers. You can see which keywords brought him to your website and try to optimize those keywords.",
+    "t":"Когда ваш веб-сайт уже запущен и работает, очень важно отслеживать трафик и думать, как его оптимизировать. Аналитика Google предоставляет вам множество обширных данных о деятельности на вашем веб-сайте, а также некоторую информацию о клиентах. Вы можете увидеть, какие ключевые слова привели его на ваш сайт, и попытаться оптимизировать эти ключевые слова."
+
+	},
+  {
+    "o": "Common Misktakes",
+    "t":"Распространенные ошибки"
+
+	},
+  {
+    "o": "Targeting the wrong keywords",
+    "t":"Таргетинг на неправильные ключевые слова"
+
+	},
+  {
+    "o": "This is probably most common mistake. We might find the right keywords that describe our web page, but the users use other keywords (for instance, we decided to promote the keyword ‘flowers shop’ but users would search for ‘flowers delivery’. We must think like the user does, and see what keywords are used more than others.",
+    "t":"Это, пожалуй, самая распространенная ошибка. Мы можем найти правильные ключевые слова, описывающие нашу веб-страницу, но пользователи используют другие ключевые слова (например, мы решили продвигать ключевое слово «магазин цветов», но пользователи будут искать «доставка цветов». Мы должны думать так же, как пользователь, и посмотрите, какие ключевые слова используются чаще других."
+
+	},
+  {
+    "o": "Lack of keywords in the content",
+    "t":"Отсутствие ключевых слов в контенте"
+
+	},
+  {
+    "o": "Once we found the keywords we want to promote, we have to make sure we embed them in the content of our website, especially in the title of the pages. We could write articles and have these keywords in them for instance.",
+    "t":"После того, как мы нашли ключевые слова, которые хотим продвигать, мы должны убедиться, что мы встроили их в контент нашего веб-сайта, особенно в заголовок страниц. Например, мы могли бы писать статьи и включать в них эти ключевые слова."
+
+	},
+  {
+    "o": "Irrelevant backlinks",
+    "t":"Нерелевантные обратные ссылки"
+
+	},
+  {
+    "o": "it is very important to have other websites linking to our website but we have to make sure we get high quality links. For example, if we have a flowers delivery shop and we get a link from cars website it is not as ideal as to get a link from a gifts website (as flowers are somehow related to gifts).",
+    "t":"очень важно, чтобы другие веб-сайты ссылались на наш веб-сайт, но мы должны быть уверены, что получаем ссылки высокого качества. Например, если у нас есть магазин по доставке цветов и мы получаем ссылку с сайта автомобилей, это не так идеально, как получить ссылку с сайта подарков (поскольку цветы каким-то образом связаны с подарками)."
+
+	},
+  {
+    "o": "Spamming our keywords",
+    "t":"Спам по нашим ключевым словам"
+
+	},
+  {
+    "o": "of course we need to embed the keywords we want to promote in our website, but we have to do it in a fashionly way and not to spam our website with that keyword too much.",
+    "t":"Конечно, нам нужно встроить ключевые слова, которые мы хотим продвигать, на наш веб-сайт, но мы должны делать это модно и не слишком часто спамить наш веб-сайт этими ключевыми словами."
+    },
+  {
+    "o": "Share your Guest Blog",
+    "t":"Поделитесь своим сообщением в блоге"
+
+	} ,
+  {
+    "o": "Boost TRAFFIC",
+    "t":"Увеличьте ТРАФИК"
+    },
+  {
+    "o": "Get new Backlinks & Optimize your Landing Pages",
+    "t":"Получите новые обратные ссылки и оптимизируйте свои целевые страницы"
+    },
+  {
+    "o": "Monthly Backlinks with our new 'Best' Package",
+    "t":"Ежемесячные обратные ссылки с нашим новым «Лучшим» пакетом"
+    },
+  {
+    "o": "The keywords you want to promote - you can add more keyword in 'My Keywords' tab, and you can use the table below to find the best keywords for your website.",
+    "t":"Ключевые слова, которые вы хотите продвигать. Вы можете добавить дополнительные ключевые слова на вкладке «Мои ключевые слова» и использовать таблицу ниже, чтобы найти лучшие ключевые слова для вашего веб-сайта."
+    },
+  {
+    "o": "Average Referring Domain Rank",
+    "t":"Средний рейтинг ссылающегося домена"
+    },
+  {
+    "o": "Average Referring Page Rank",
+    "t":"Средний рейтинг ссылающейся страницы"
+    } ,
+  {
+    "o": "Listed Broken Backlinks",
+    "t":"Перечислены неработающие обратные ссылки"
+    },
+  {
+    "o": "Total Anchors",
+    "t":"Всего якорей"
+    },
+  {
+    "o": "Listed Anchors",
+    "t":"Перечисленные якоря"
+    },
+  {
+    "o": "Backlinks from Top 5 Anchors",
+    "t":"Обратные ссылки от 5 лучших анкоров"
+    },
+  {
+    "o": "Average Referring Domain Rank from Top 5",
+    "t":"Средний рейтинг ссылающегося домена из топ-5"
+    },
+  {
+    "o": "Listed Linked Pages",
+    "t":"Перечисленные связанные страницы"
+    },
+  {
+    "o": "Total Linked Pages",
+    "t":"Всего связанных страниц"
+    },
+  {
+    "o": "Backlinks to Top 5 Pages",
+    "t":"Обратные ссылки на 5 лучших страниц"
+    },
+  {
+    "o": "Referring Domains Rank to Top 5 Pages",
+    "t":"Связывание рейтинга доменов с топ-5 страницами"
+    },
+  {
+    "o": "Referring MainDomains",
+    "t":"Ссылка на главные домены"
+    },
+  {
+    "o": "Referring Subnets",
+    "t":"Ссылающиеся подсети"
+    },
+  {
+    "o": "Referring Domain",
+    "t":"Ссылающийся домен"
+    } 
+]

@@ -1,0 +1,241 @@
+<style type="text/css">
+  .modal:nth-of-type(even) {
+        z-index: 1062 !important;
+    }
+  /*  .modal-backdrop.show:nth-of-type(even) {
+        z-index: 561 !important;
+    }*/
+    /*model btn*/
+    #paymentModal h2 {
+      font-size: 24px;
+      font-weight: 800;
+
+      background: -webkit-linear-gradient(180deg, #529D79 9.62%, #46AE93 99.97%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #paymentModal .btn-primary{
+      border: none;
+    }
+    .EasyseoModel .btn-primary {
+        background: linear-gradient(135deg, #3D9C99 6.43%, #47B093 93.57%) !important;
+        color: #fff !important;
+    }
+    
+    .EasyseoModel h2{
+      background: -webkit-linear-gradient(#3D9C99, #47B093);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 28px;
+    }
+    .EasyseoModel .modalQuestion svg path{
+       fill: #4EA281;
+    }
+    .EasyseoModel .modal-dialog{ 
+      max-width: 500px;
+    }
+ 
+    
+    .EasyseoModel .bg-white.m-1.p-3.mb-2.rounded{
+      overflow: hidden;
+    }
+    .EasyseoModel .pricelist .postItemm {
+      color: #9AA4B2; 
+      font-size: 14px;
+    }
+    .EasyseoModel .pricelist .newPrice{
+      color: #9AA4B2;
+    }
+    .EasyseoModel .pricelist .postItemm .postType {
+      color: #202939;
+      font-weight: normal;
+      font-size: 14px;
+      display: block;
+    }
+    .EasyseoModel .totalBlog { 
+      border-radius: 8px;
+      border: 1px solid var(--neutral-100, #EEF2F6);
+      background: #FFF;
+      margin: 0 !important;
+      display: flex !important;
+      padding:13px 0!important;
+      margin-top: 10px !important;
+    }
+    .EasyseoModel .postItemmList .postItemm{
+      color: #4AA88A;
+      font-size: 20px;
+    }
+    .EasyseoModel .postItemmList .newPrice{
+      color: #4DA483 !important;
+      font-weight: bold;
+       font-size: 24px;
+    }
+    .EasyseoModel .postItemmList .newPrice del{
+      color: #9AA4B2 !important;
+      font-weight: normal;
+      font-size: 14px;
+      position: relative;
+      top: -9px;
+    }
+ 
+    
+    .EasyseoModel .totalBlog .totalBlogRight h2{
+      margin: 0;
+    }
+    .EasyseoModel .postItemmList .pricelist > div:hover, .EasyseoModel .postItemmList .active{ 
+      color: #202939;
+    }
+    #paymentModal .postItemmList .pricelist > div{
+      position: relative;
+    }
+   #paymentModal .postItemmList input{
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      cursor: pointer;
+    }
+
+
+
+    .WelcomeModel .btn-primary {
+        background: linear-gradient(135deg, #35A1EE 6.43%, #3C83B5 93.57%) !important;
+        color: #fff !important;
+    }
+    .WelcomeModel h2{
+        background: -webkit-linear-gradient(#35A1EE, #3C83B5);
+         -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .WelcomeModel .modalQuestion svg path{
+       fill: #78C9FF;
+    }
+
+
+    .RabbitseoModel .btn-primary {
+        background: linear-gradient(142.45deg, #FF833D 9.3%, #FFBD3D 94.75%) !important;
+        color: #fff !important;
+    }
+    .RabbitseoModel h2{
+        background: -webkit-linear-gradient(#FF833D, #FFBD3D);
+         -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .RabbitseoModel .modalQuestion svg path{
+       fill: #FEC200;
+    }
+
+       
+    
+    /*model logo*/
+    #paymentModal .modal-dialog{
+        max-width: 400px;
+    }
+  #paymentModal .modal-content{
+    background: #F8FAFC;
+  }
+  #paymentModal .modal-header .modal-header{
+    padding-bottom: 0;
+    border: none;
+  }
+ #paymentModal .modal-header .modal-title{
+    color: #202939;
+    font-size: 16px;
+  }
+  #paymentModal .modal-body h5{
+    font-size: 16px;
+    color: #202939;
+  }
+  #paymentModal .pricelist{
+    border:1px solid #4CA585;
+    box-shadow: 0px 1px 2px 0px rgba(81, 74, 74, 0.10); 
+    border-radius: 6px;
+    padding: 8px 4px; 
+    margin-top: 16px;
+    font-size: 20px;
+  }
+  #paymentModal .pricelist > div{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+  
+     justify-content: center;
+     gap:20px;
+     font-size: 20px;
+     color: #4AA88A;
+  }
+  #paymentModal label{
+    font-size: 14px;
+    color: #697586;
+  }
+  #paymentModal .form-control{
+    background: #FAF9F9;
+    border: none;
+  }
+
+</style>
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h5 class="modal-title fw-bold">Purchase Extra Articles</h5>
+            <a href="javascript:;"  class="close_btn" data-dismiss="modal" aria-label="Close"
+                    onclick="$('#paymentModal').modal('hide');">
+                <img src="/assets/images/icon/--remove.png" alt="Remove">
+            </a>
+        </div>
+        <div class="modal-body">
+            <div class="bg-white m-1 p-3 mb-2 rounded">
+        
+               <div class="postItemmList">
+                  <div class="pricelist">
+                     <div class="active">
+                         <input type="radio" value="10" name="postItemm">
+                         <span class="postItemm">Single Article</span>
+                         <span><span class="newPrice">$7 <del>$10</del></span>  </span>
+                     </div>
+<!--                     <div class="active">-->
+<!--                         <input type="radio" value="10" name="postItemm">-->
+<!--                         <span class="postItemm">Free Package</span>-->
+<!--                         <span class="ms-auto"><span class="newPrice">$8 <del>$10</del></span>  / Article</span>-->
+<!--                     </div>-->
+<!--                     <div>-->
+<!--                         <input type="radio" value="25" name="postItemm">-->
+<!--                         <span class="postItemm">Premium</span>-->
+<!--                         <span class="ms-auto"><span class="newPrice">$7 <del>$9</del></span>  / Article</span>-->
+<!--                     </div>-->
+<!--                     <div>-->
+<!--                         <input type="radio" value="50" name="postItemm">-->
+<!--                         <span class="postItemm">Business</span>-->
+<!--                         <span class="ms-auto"><span class="newPrice">$6 <del>$8</del></span>  / Article</span>-->
+<!--                     </div>-->
+<!--                     <div>-->
+<!--                         <input type="radio" value="100" name="postItemm">-->
+<!--                         <span class="postItemm">Enterprise</span>-->
+<!--                         <span class="ms-auto"><span class="newPrice">$5 <del>$7</del></span>  / Article</span>-->
+<!--                     </div>-->
+                  </div>
+               </div>
+               <div class="row pt-4 totalBlog">
+                   <div class="col-7 totalBlogLeft">
+                       <label>Articles to Purchase?</label>
+                       <div>
+                         <input id="itemsCount" type="number" class="form-control" min="1" value="10" name="">
+                       </div>
+                   </div>
+                   <div class="col-4 ms-auto text-center totalBlogRight">
+                       <label>Total Price</label>
+                       <h2>$<span id="payAsYouGoPrice" class="planPrice">80</span></h2>
+                   </div>
+               </div>
+
+            </div>
+             <button type="button" class="btn btn-primary w-100" onclick="submitPayAsYouGo($('.totalBlogLeft #itemsCount').val(), $('#payAsYouGoPrice').html())"><strong>Order Now</strong></button>
+        </div>
+    </div>
+</div>
+
+ 

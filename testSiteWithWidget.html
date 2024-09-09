@@ -1,0 +1,25 @@
+<head>
+<object data="https://www.example.com" width="100%" height="100%" style="min-height: 800px"></object>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        let searchParams = new URL(location.href).searchParams;
+        let appName = searchParams.get("app");
+        let isDev = searchParams.get("isDev");
+        const url = isDev && isDev === 'true' ?
+            'http://localhost:8080/addMyIpGuest?app=' + appName :
+            'https://rabbitseo.com/addMyIpGuest?app=' + appName;
+        console.log('url is ' + url)
+        $.getJSON(url, function (data) {
+            console.log('json is ' + JSON.stringify(data))
+            let userId = data['obj'];
+            console.log('userId is ' + userId)
+            let headTag = document.getElementsByTagName("head")[0];
+            let jqTag = document.createElement('script');
+            jqTag.type = 'text/javascript';
+            jqTag.src = '/assets/embed/embed.js?id=' + userId + '&guid=' + data['obj2'] + '&app=' + data['data'];
+            headTag.appendChild(jqTag);
+        });
+    });
+</script>
+</head>

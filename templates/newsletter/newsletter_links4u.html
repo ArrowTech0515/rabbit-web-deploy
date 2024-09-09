@@ -1,0 +1,101 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <title>
+  </title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <title>${appName} - publish your website</title>
+ <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; color: #202939">
+	<table style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; border: none;" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td  style="background: #ffffff; padding: 16px;"><img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/links4u/logo.png" alt="" title=""/></td>
+			</tr>
+			<tr style="width: 600px">
+				<td colspan="5">
+					<img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/links4u/banner.png" alt="" style="width: 100%" title="">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5"  style="background: #fff; padding: 16px 35px;">
+					<p style="margin: 0; font-size: 14px; color: #202939">Hello
+						<#if userName??>
+						Dear <b>${userName}
+						</b>
+					</#if>
+					</p>
+					<p style="margin: 0; font-size: 14px; color: #202939">As the holiday season approaches, we're excited to announce our biggest sale of the year - Link4u's Winter Sale! This is your chance to unlock the power of our SEO booster app and transform your website's online presence at an incredible price.</p>
+					<br/>
+					<p style="margin: 0; font-size: 14px; color: #202939">Link4u is your one-stop solution for hassle-free SEO optimization. Our comprehensive suite of features empowers you to identify high-value keywords, craft compelling blog posts, and build a strong backlink profile - all essential ingredients for achieving top-tier search engine rankings.</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5"  style="background: #F2FDFF; padding:29px 60px 44px 60px;">
+					<h3 style="margin: 0; margin-bottom: 20px; padding: 0; font-size: 20px; color: #202939; text-align: center; "> What You'll Get: </h3>
+					<table border="0" cellspacing="10" cellpadding="0">
+						<tbody>
+							<tr> 
+								<td style="background: #fff; padding: 16px; text-align: center; border: 1px solid #EEF2F6; border-radius: 8px">
+									<img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/links4u/data.png"  alt="" title=""/>
+									<p style="margin: 0; font-size: 14px; color: #202939"><b>Blog Posts & Listings Backlinks</b></p>
+									<p style="margin: 0; font-size: 14px; color: #202939"> Boost your website's performance with high-quality blog posts backlinks in top-ranked websites.</p>
+								</td>
+							</tr>
+							<tr> 
+								<td style="background: #fff; padding: 16px; text-align: center; border: 1px solid #EEF2F6; border-radius: 8px">
+									<img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/links4u/key.png"  alt="" title=""/>
+									<p style="margin: 0; font-size: 14px; color: #202939"><b>Keyword Ideas</b></p>
+									<p style="margin: 0; font-size: 14px; color: #202939"> Discover profitable keywords that drive targeted traffic to your website</p>
+								</td>
+							</tr>
+						  
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			 
+			<tr>
+				<td colspan="5" style="background:linear-gradient(91deg, #48C8FE 0.46%, #4261E0 84.92%); padding:24px; text-align: center;">
+					 <h3 style="margin: 0; color: #FFF; font-size: 20px;letter-spacing: 0.25px; line-height: 150%; font-weight: 600;">Use Our Special Code for ${discount}</h3>
+					 <h2 style="margin: 0; color: #FDF516; font-size: 24px;letter-spacing: 0.25px; line-height: 150%; font-weight: bold;">${promoCode}</h2>
+					 <p style="margin: 0; font-size: 14px; color: #ffffff">Grab this limited-time Winter SALE offer and start dominating search engine results! Visit our website or contact our team to learn more.</p>
+					<div style="overflow: hidden;  margin-bottom: 20px;">
+						<div style="width:50%; float: left; text-align: right;">
+							<#if user?? && user.activationCode??>
+							<a href="${appUrl}emailClickGuest?subscriberId=<#if subscriberId??>${subscriberId?c}</#if>&name=${template}&url=${appUrl}activationLoginGuest%3FactivationCode%3D${user.activationCode}%26source%3D${template}${appDomain.name}&userId=${user.id?c}" title="Login"
+							   style="background: #318573; border: 1px solid #FFEDB4; padding: 6px 20px; font-weight: bold; border-radius: 8px; display: inline-block; text-decoration: none; color: #ffffff;  margin-right: 10px;">Start ${appName}</a>
+							<#else>
+							<a href="${appUrl}emailClickGuest?name=${template}&url=${url}&subscriberId=${subscriberId?c}" title="Login"
+							   style="background: #318573; border: 1px solid #FFEDB4; padding: 6px 20px; font-weight: bold; border-radius: 8px; display: inline-block; text-decoration: none; color: #ffffff;  margin-right: 10px;">Start ${appName}</a>
+						</#if>
+					</div>
+					</div>
+					<p style="margin: 0; font-size: 14px; color: #ffffff">Happy Winter Sale from the ${appName} Team!</p>
+					<p style="margin: 0; font-size: 14px; color: #ffffff">If you wish to unsubscribe click
+						<a style="margin: 0; font-size: 14px; color: #ffffff" href="${appUrl}unsubscribeLinks4uGuest?name=${template}&email=${userEmail}"> here</a> </p>
+				</td>
+				 
+			</tr>
+		</tbody>
+	</table>
+	<#include "../include/openMail.ftl"/>
+</body>
+</html>

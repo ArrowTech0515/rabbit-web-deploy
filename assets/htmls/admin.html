@@ -1,0 +1,571 @@
+<link rel="icon" type="image/x-icon" href="/assets/images/rabbitFavicon.ico">
+
+<link rel="stylesheet" href="/assets/css/styleApp.css"/>
+<link rel="stylesheet" href="/assets/css/yellow.css"/>
+<!--<link rel="stylesheet" href="/assets/css/yellow-new.css"/>-->
+
+<script type="text/javascript" src="/assets/scripts-app/rabbit.js"></script>
+<script>
+    let usersTable, supportUsersTable, newslettersTable;
+    let isAgent;
+
+    function saveUser() {
+        const json = ajaxSubmitForm('getMyJsonUpdateUser');
+        if (json && json['obj'] && json['obj']['id']) {
+            $('#userStatus').html('Details Saved');
+            initUserForm(json['obj']);
+        }
+    }
+</script>
+<div class="py-24px">
+    <div class="card page-card mb-4">
+        <div class="card-body pt-1">
+            <ul class="nav nav-tabs searchTab" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" href="/assets/htmls/adminUsers.html" id="first-tab" data-bs-toggle="tab"
+                       data-bs-target="#first" type="button" role="tab" aria-controls="first"
+                       aria-selected="true">Users</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="/assets/htmls/adminPayments.html" id="second-tab" data-bs-toggle="tab"
+                       data-bs-target="#second" type="button" role="tab" aria-controls="second" aria-selected="false">Payments</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="/assets/htmls/supportAgent.html" id="third-tab" data-bs-toggle="tab"
+                       data-bs-target="#third" type="button" role="tab" aria-controls="third" aria-selected="false">Support</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="https://admin.rabbitseo.com/jsp/SuperAdmin/comments.jsp" id="fourth-tab"
+                       data-bs-toggle="tab" data-bs-target="#fourth" type="button" role="tab" aria-controls="fourth"
+                       aria-selected="false">Comments</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="/assets/htmls/adminNewsletters.html" id="five-tab"
+                       data-bs-toggle="tab" data-bs-target="#five" type="button" role="tab" aria-controls="five"
+                       aria-selected="false">Emails</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="/assets/htmls/linksBuilderUpload.html" id="six-tab" data-bs-toggle="tab"
+                       data-bs-target="#six" type="button" role="tab" aria-controls="six" aria-selected="false">Links
+                        Upload</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="/assets/htmls/leadsGen.html" id="seven-tab" data-bs-toggle="tab"
+                       data-bs-target="#seven" type="button" role="tab" aria-controls="seven" aria-selected="false">Leads</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                </div>
+                <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+                </div>
+                <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
+                </div>
+                <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+                </div>
+                <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="five-tab">
+                </div>
+                <div class="tab-pane fade" id="six" role="tabpanel" aria-labelledby="six-tab">
+                </div>
+                <div class="tab-pane fade" id="seven" role="tabpanel" aria-labelledby="seven-tab">
+                </div>
+            </div>
+        </div>
+    </div>
+    <select class="cloudlocalization-selection form-select footerDrop mb-3"
+            aria-label="Language">
+    </select>
+
+</div>
+<div id="modalMessage" class="modal fade" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#modalMessage').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="modalFirstButton" type="button" class="btn btn-secondary btn-lg pageBtn"
+                        onclick="$('#modalMessage').modal('hide');">Close
+                </button>
+                <a id="modalConfirmBtn" style="cursor: pointer; display: none" class="btn pageBtn btn-primary">Yes</a>
+                <button id="modalSecondButton" type="button" class="btn btn-primary btn-lg pageBtn">Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="appModal" class="modal fade" tabindex="-1"  role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 90%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    Update User
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#appModal').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="getMyJsonUpdateUser">
+                    <input type="hidden" class="userId" name="id">
+                    <div class="settingForm">
+                        <div class="row">
+                            <div id="general"  class="col-4"></div>
+                            <div id="package"  class="col-4"></div>
+                            <div id="usage"  class="col-2"></div>
+                            <div id="advanced"  class="col-2"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="userStatus"></div>
+            <div class="modal-footer">
+                <button type="button" onclick="saveUser();" class="btn btn-primary btn-lg pageBtn">Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="paymentModal" class="modal fade" tabindex="-1"  role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 30%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    New Payment
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#paymentModal').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="createNewPayment">
+                    <input type="hidden" class="userId" name="payerId">
+                    <div class="settingForm">
+                        <div id="generalPayment" class="row">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="paymentStatus" />
+            <div class="modal-footer">
+                <button type="button" onclick="$('#paymentStatus').html(ajaxSubmitForm('createNewPayment'))" class="btn btn-primary btn-lg pageBtn">Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="appDataModal" class="modal fade" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 70%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-truncate"></h5>
+                <span class="loader loadingBar" style=""></span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#appDataModal').modal('hide');">
+                    <img src="/assets/images/home_icon/close.png" alt="">
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="$('#appDataModal').modal('hide');">Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        if (isTestingMode()) {
+            $('#fourth-tab').attr('href', '/jsp/SuperAdmin/comments.jsp');
+        }
+        loadAjaxTabs();
+
+        $('#myTab a.nav-link').hide();
+        let role = mainUserDetails['roleName'];
+
+        if (role && role === 'SuperAdmin') {
+            $('#myTab a.nav-link').show();
+            $('#first').load($('#first-tab').attr("href"), function (result) {
+                $('#first-tab').tab('show');
+            });
+        } else if (role && role === 'Support') {
+            $('#third-tab').show();
+            $('#seven-tab').show();
+            $('#third').load($('#third-tab').attr("href"), function (result) {
+                $('#third-tab').tab('show');
+            });
+        } else if (role === 'LinksBuilder') {
+            $('#six-tab').show();
+            $('#seven-tab').show();
+            $('#six').load($('#six-tab').attr("href"), function (result) {
+                $('#six-tab').tab('show');
+            });
+        } else if (role && role === 'Accounting') {
+            $('#second-tab').show();
+            $('#second').load($('#second-tab').attr("href"), function (result) {
+                $('#second-tab').tab('show');
+            });
+        }
+    });
+    function showEditUserForm(id) {
+        console.log('start showEditUserForm');
+        $('#appModal').modal('show');
+        
+        $.getJSON(apiUrl + 'getMyJsonUser?id=' + id, function (json) {
+            console.log('getMyJsonUser ' + JSON.stringify(json));
+            initUserForm(json['obj']);
+        });
+    }
+    function showPaymentUserForm(id) {
+        console.log('start showPaymentUserForm');
+        $('#paymentModal').modal('show');
+
+        $.getJSON(apiUrl + 'getMyJsonUser?id=' + id, function (json) {
+            console.log('getMyJsonUser ' + JSON.stringify(json));
+            initPaymentForm(json['obj']);
+        });
+    }
+    function showActions(id) {
+        console.log('start showActions');
+
+        $.getJSON(apiUrl + 'getMyJsonActionsUser?id=' + id, function (json) {
+            console.log('getMyJsonActionsUser ' + JSON.stringify(json));
+            openModalHtml('appDataModal', createUserActionsHtml(json['map2']) + '<br />' + json['obj'], 'Actions');
+        });
+    }
+    function showTest(id) {
+        console.log('start showTest');
+
+        $.getJSON(apiUrl + 'getMyJsonTestUser?id=' + id, function (json) {
+            console.log('getMyJsonTestUser ' + JSON.stringify(json));
+            openModalHtml('appDataModal', createUserActionsHtml(json['obj']) + '<br />' + json['status'], 'Status');
+        });
+    }
+    function createUserActionsHtml(data) {
+        if (data && data['id']) {
+            return '<div class="userActions card page-card key-child-card">\n\
+                     <div class="card-body">' +
+                'Email: ' + data["actualEmail"] + ', Domain ' + data["wixUrl"] +
+                ' <a class="superAdmin" href=\'javascript: showEditUserForm(' + data['id'] + ')\'>Edit</a> ' +
+                ' <a class="superAdmin" href=\'javascript: showPaymentUserForm(' + data['id'] + ')\'>Payment</a> ' +
+                ' <a href=\'javascript: showTest(' + data['id'] + ')\'>Status</a> ' +
+                ' <a href=\'javascript: outputUrlResultToModal(' + data["id"] + ',\"/removeUnsubscribeGuest?inApp=true&gift=freeFeatures&id=' + data['id'] + '")\'>Unscubscribe</a> ' +
+                '<br />Country: ' + data["country"] + ', Date Created: ' + data["dateCreated"] + ' Last Login: ' + data["lastLogin"] + ', Login Last 30 Days ' + data['loginCount30'] +
+                '<br />Keywords Used ' + data["keywordsUsed"] + ", Links Request Used " + data["linksRequestUsed"] + ",  Blogs Used " + data["guestBlogsUsed"] + ', Credits ' + data["creditsUsed"] +
+                '<br/>First Payment Date ' + data['firstPaymentDate'] + ', Last Payment Date ' + data['lastPaymentDate'] + ', Price Per Month ' + data['pricePerMonth'] + //', Package name ' + data['userPackageName'] +
+                '<br/>Website Ranks ' + data['websiteRanks'] + ', Website Links ' + data['websiteLinks'] + ', Links Used ' + data['linksUsed'] +
+                '<br />Internal Payments: ' + data["showInternalPayment"] +
+                '<br />Extra Data' + data["extraData"] +
+                '<br>' +
+                    '<div class="row">\
+                    <div class="alert alert-secondary" style="margin-right: 10px" role="alert">\
+                    <h4>Operations:</h4>\
+                    <a target="_blank" href=\'' + data['appDomainMainSite'] + 'activationLoginGuest?activationCode=' + (data["activationCode"] ? data["activationCode"] : '') + '\' class="btn btn-outline-secondary">Login</a>\n\
+                    <a  target="_blank" href=\'http://localhost:8080/activationLoginGuest?activationCode=' + (data["activationCode"] ? data["activationCode"] : '') + '\' class="superAdmin btn btn-outline-secondary">Dev Login</a>\n\
+                    <a  target="_blank" href=\'https://www.rabbitseo.com/addMyIpGuest?id=' + data["id"] + '\' class="superAdmin btn btn-outline-secondary">Add ID</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/addFreeKeywordsGuest?inApp=true&gift=missingReview&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Missing Review</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/addFreeKeywordsGuest?inApp=true&gift=addedReview&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Review Posted</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/removeUnsubscribeGuest?inApp=true&gift=freeFeatures&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Unsubscribe</a>\n\
+                    <a href=\'javascript: showTest(' + data['id'] + ')\' class="btn btn-outline-secondary">Status</a>\n\
+                    <a href=\'javascript: showActions(' + data['id'] + ')\' class="btn btn-outline-secondary">Show Actions</a>\n\
+                    </div></div>\n\
+                    <div class="alert alert-secondary" role="alert" id="currentStatus' + data['id'] + '"></div><br />\
+                    <div class="alert alert-secondary" role="alert">\
+                    <h4>Set Automatic Follow Up:</h4>\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/updateContactedSupportUser?contactType=contactAddedGift&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Added Gift</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/updateContactedSupportUser?contactType=contactAboutBug&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Bug</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/updateContactedSupportUser?contactType=contactHowToUse&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">How to Use</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/updateContactedSupportUser?contactType=contactAboutBillingIssue&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Billing Issue</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/updateContactedSupportUser?contactType=contactAboutWhatDoWeOffer&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">What Do We Offer</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/updateContactedSupportUser?contactType=contactComplains&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Complains</a>\n\
+                    \<br>' + showSubscriberData(data['id']) + '\
+                    </div>\n\
+                    <div class="alert alert-secondary" style="margin-right: 10px" role="alert">\
+                    <h4>Gifts:</h4>\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/addFreeKeywordsGuest?inApp=true&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Free Keywords</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/addFreeKeywordsGuest?inApp=true&gift=link&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Free Listing</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/addFreeKeywordsGuest?inApp=true&gift=blog&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Free Blog</a>\n\
+                    <a href=\'javascript:outputUrlResultToModal(' + data["id"] + ',\"/addFreeKeywordsGuest?inApp=true&gift=freeFeatures&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Free Trial</a>\n\
+                    </div>\n\
+                        </div>\n\
+                        </div>\n\
+                    ';
+        //    <a href=\'javascript:outputUrlResultToModal(\"/addFreeKeywordsGuest?inApp=true&gift=link&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Add Link</a>\n\
+        } else {
+            return '';
+        }
+        // <a href=\'javascript:outputUrlResultToModal(\"/addFreeKeywordsGuest?inApp=true&gift=askForAnotherReview&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Ask For Another Review</a>\n\
+        // <a href=\'javascript:outputUrlResultToModal(\"/addFreeKeywordsGuest?inApp=true&gift=missingReview&id=' + data["id"] + '\")\' class="btn btn-outline-secondary">Missing Review</a>\n\
+
+    }
+    function showSubscriberData(id) {
+        $.getJSON(apiUrl + 'getMyJsonTestUser?id=' + id, function (data) {
+            let result = '';
+            try {
+                data = data['obj']['subscriber'];
+                console.log('getCurrentlySetFollowup data is ' + JSON.stringify(data));
+                console.log('getCurrentlySetFollowup contactAddedFreeBlog is ' + JSON.stringify(data['contactAddedFreeBlog']));
+                result =
+                    (data['contactAboutBug'] ? 'Contact about Bug on ' + data['contactAboutBug'] + '<br>' : '')
+                    + (data['contactHowToUse'] ? 'Contact about How to Use on ' + data['contactHowToUse'] + '<br>' : '')
+                    + (data['contactAboutBillingIssue'] ? 'Contact about Billing Issue on ' + data['contactAboutBillingIssue'] + '<br>' : '')
+                    + (data['contactAboutWhatDoWeOffer'] ? 'Contact about What Do We Offer on ' + data['contactAboutWhatDoWeOffer'] + '<br>' : '')
+                    + (data['contactComplains'] ? 'Contact about Complains on ' + data['contactComplains'] + '<br>' : '')
+                    + (data['contactDeletedOrDowngraded'] ? 'Deleted or Downgraded on ' + data['contactDeletedOrDowngraded'] + '<br>' : '')
+                    + (data['contactAddedFreeBlog'] ? 'Contact about free gift on ' + data['contactAddedFreeBlog'] + '<br>' : '')
+                ;
+            } catch (e) {
+            }
+            if (result.length > 1) {
+                result = '<h5>Please note that this user is already planned to be contacted automatically by the app soon</h5><br/>' + result;
+            }
+            $('#currentStatus' + id).html(result)
+        });
+    }
+    let availableAppDomains = [];
+    function appendInput(json, fieldLabel, fieldId, section) {
+        const jsonElement = json[fieldId];
+        console.log('appendInput ' + fieldId + ' val ' + jsonElement)
+        let html = '                        <div class="mb-3">\n' +
+            '                            <div class="form-flex-col d-md-flex  justify-content-between align-items-center">\n' +
+            '                                <label class="settingLabel fw-bold">' + fieldLabel + '</label>\n' +
+            '                                <input data-hj-allow id="' + fieldId + '" name="' + fieldId + '" type="text"\n' +
+            '                                       class="form-control form-control-lg" value="' + (jsonElement ? jsonElement : '') + '" />\n' +
+            '                            </div>\n' +
+            '                        </div>';
+        $(section).append(html);
+    }
+    function appendCheckbox(json, fieldLabel, fieldId, section) {
+        const jsonElement = json[fieldId];
+        let html = '<div class="mb-3">\n' +
+            '                                <div class="form-check d-flex align-items-center">\n' +
+            '                                    <input class="form-check-input" type="checkbox"' + (jsonElement ? ' checked ' : '') + ' id="' + fieldId + '" name="' + fieldId + '">\n' +
+            '                                    <label class="form-check-label mb-0 d-flex align-items-center selectText">' + fieldLabel +
+            '                                    </label>\n' +
+            '                                </div>\n' +
+            '                            </div>';
+        $(section).append(html);
+    }
+
+    function initPaymentForm(json) {
+        $('.userId').val(json['id']);
+        $('#generalPayment').html('<h5>General</h5>');
+
+        json['emailInvoice'] = true;
+        json['currency'] = 'USD';
+        json['name'] = json['billingName'];
+        appendInput(json, 'Name', 'name', '#generalPayment');
+        // appendInput(json, 'Address', 'billingAddress', '#generalPayment');
+        $('#generalPayment').append('<div class="mb-3">\n' +
+            '                                    <div class="d-md-flex justify-content-between align-items-center">\n' +
+            '                                        <label class="settingLabel">Payment Type</label>\n' +
+            '                                        <select name="paymentType"\n' +
+            '                                                class="form-control form-select dropdown-toggle">' +
+            '<option value="BankTransfer">Bank Transfer</option>' +
+            '<option value="Credit">Credit</option>' +
+            '<option value="Paypal">Paypal</option>\n' +
+            '<option value="Wise">Wise</option>\n' +
+            '<option value="Charge Back">Charge Back</option></select>\n' +
+            '                                    </div>\n' +
+            '                                </div>');
+        $('#generalPayment').append('<div class="mb-3">\n' +
+            '                                    <div class="d-md-flex justify-content-between align-items-center">\n' +
+            '                                        <label class="settingLabel">Order Type</label>\n' +
+            '                                        <select name="orderType"\n' +
+            '                                                class="form-control form-select dropdown-toggle">' +
+            '<option value="Subscription">Subscription</option>' +
+            '<option value="Pay As You Go">Pay As You Go</option>' +
+            '<option value="Reseller">Reseller</option></select>\n' +
+            '                                    </div>\n' +
+            '                                </div>');
+        // appendInput(json, 'Payment Type', 'paymentType', '#generalPayment');
+        appendInput(json, 'Card Number', 'cardNumber', '#generalPayment');
+        appendInput(json, 'Expiry Date', 'expiryDate', '#generalPayment');
+        appendInput(json, 'CVV', 'cvv', '#generalPayment');
+        appendInput(json, 'Comment', 'comment', '#generalPayment');
+        appendInput(json, 'Amount', 'amount', '#generalPayment');
+        appendInput(json, 'Currency', 'currency', '#generalPayment');
+        appendInput(json, 'Tax ID', 'taxId', '#generalPayment');
+        appendInput(json, 'InvoiceDate', 'invoiceDate', '#generalPayment');
+        appendCheckbox(json, 'AddVAT', 'addVAT', '#generalPayment');
+        appendCheckbox(json, 'Ignore Payment', 'ignorePayment', '#generalPayment');
+        appendCheckbox(json, 'Email Invoice', 'emailInvoice', '#generalPayment');
+    }
+
+    function initUserForm(json) {
+        $('.userId').val(json['id']);
+        $('#general').html('<h5>General</h5>');
+        $('#usage').html('<h5>Usage</h5>');
+        $('#package').html('<h5>Package</h5>');
+        $('#advanced').html('<h5>Advanced</h5>');
+        appendInput(json, 'Name', 'name', '#general');
+        appendInput(json, 'Domain', 'wixUrl', '#general');
+        appendInput(json, 'Email', 'email', '#general');
+        appendInput(json, 'Extra Emails', 'extraEmails', '#general');
+        appendInput(json, 'Password', 'password', '#general');
+        appendInput(json, 'Date Created', 'dateCreated', '#general');
+        appendInput(json, 'Last Login', 'lastLogin', '#general');
+        appendInput(json, 'Last AutoPilot Date', 'lastAutoPilotDate', '#general');
+        appendInput(json, 'Lang', 'defaultLang', '#general');
+        // appendInput(json, 'Extra Data', 'extraData', '#general');
+        appendInput(json, 'Phone', 'phone', '#general');
+        appendInput(json, 'Comment', 'comment', '#general');
+        $('#general').append('<div class="mb-3">\n' +
+            '                                    <div class="d-md-flex justify-content-between align-items-center">\n' +
+            '                                        <label class="settingLabel">Search Engine</label>\n' +
+            '                                        <select id="searchEngineSelect" name="searchEngineName"\n' +
+            '                                                class="form-control form-select dropdown-toggle"></select>\n' +
+            '                                    </div>\n' +
+            '                                </div>');
+        var searchEngineSelect = $("#searchEngineSelect").select2({tokenSeparators: [',', ', ', '\n'],
+            data: availableSearchEngines,
+            width: "100%",
+        });
+        console.log('json[\'searchEngine\'] ' + json['searchEngine']);
+        searchEngineSelect.val(json['searchEngineName']).change();
+
+        $('#general').append('<div class="mb-3">\n' +
+            '                                    <div class="d-md-flex justify-content-between align-items-center">\n' +
+            '                                        <label class="settingLabel">Country</label>\n' +
+            '                                        <select id="countrySelect" name="countryName"\n' +
+            '                                                class="form-control form-select dropdown-toggle"></select>\n' +
+            '                                    </div>\n' +
+            '                                </div>');
+        var countrySelect = $("#countrySelect").select2({tokenSeparators: [',', ', ', '\n'],
+            selectOnClose: true,
+            data: availableCountries,
+            width: "100%",
+        });
+        countrySelect.val(json['countryName']).change();
+
+        appendCheckbox(json, 'AB Testing', 'abTesting', '#general');
+        appendCheckbox(json, 'Try New Features', 'tryNewFeatures', '#general');
+
+        $('#package').append('<div class="mb-3">\n' +
+            '                                    <div class="d-md-flex justify-content-between align-items-center">\n' +
+            '                                        <label class="settingLabel">AppDomain</label>\n' +
+            '                                        <select id="appDomainSelect" name="appDomainName"\n' +
+            '                                                class="form-control form-select dropdown-toggle"></select>\n' +
+            '                                    </div>\n' +
+            '                                </div>');
+        $.ajaxSetup({async: false});
+        $('#package').append('<div class="mb-3">\n' +
+            '                                    <div class="d-md-flex justify-content-between align-items-center">\n' +
+            '                                        <label class="settingLabel">User Package</label>\n' +
+            '                                        <select id="userPackageSelect" name="userPackageName"\n' +
+            '                                                class="form-control form-select dropdown-toggle"></select>\n' +
+            '                                    </div>\n' +
+            '                                </div>');
+
+        $.getJSON(apiUrl + 'miniListJsonAppDomain', function (data) {
+            for (let i = 0; i < data['list'].length; i++) {
+                availableAppDomains.push(data['list'][i]['name']);
+            }
+        });
+        var appDomainSelect = $("#appDomainSelect").select2({tokenSeparators: [',', ', ', '\n'],
+            data: availableAppDomains,
+            width: "100%",
+        });
+        var userPackageSelect;
+        appDomainSelect.change(function () {
+            $("#userPackageSelect").select2().empty();
+            $.getJSON(apiUrl + 'getMyJsonPerDomainUserPackage?appDomainName=' + appDomainSelect.val(), function (data) {
+                console.log('getMyJsonPerDomainUserPackage ' + JSON.stringify(data));
+                userPackageSelect = $("#userPackageSelect").select2({tokenSeparators: [',', ', ', '\n'],
+                    data: data['list'],
+                    width: "100%",
+                });
+            });
+        });
+        appDomainSelect.val(json['appDomainName']).change();
+        userPackageSelect.val(json['userPackageName']).change();
+        $.ajaxSetup({async: true});
+        appendInput(json, 'Monthly Price', 'pricePerMonth', '#package');
+        appendInput(json, 'Annual Price', 'pricePerYear', '#package');
+        appendInput(json, 'First Payment Date', 'firstPaymentDate', '#package');
+        appendInput(json, 'Last Payment Date', 'lastPaymentDate', '#package');
+        appendInput(json, 'Exp. Date', 'accountExpiryDate', '#package');
+        appendInput(json, 'CardHolder Id', 'cardHolderId', '#package');
+        appendInput(json, 'Billing Name', 'billingName', '#package');
+        appendInput(json, 'Billing Address', 'billingAddress', '#package');
+        appendInput(json, 'Billing City', 'billingCity', '#package');
+        appendCheckbox(json, 'Active', 'active', '#package');
+        appendCheckbox(json, 'Blocked Until Payment', 'blockedUntilPayment', '#package');
+        appendCheckbox(json, 'Auto Bill', 'autoBill', '#package');
+        appendCheckbox(json, 'Wix Internal Payment', 'showInternalPayment', '#package');
+
+        appendInput(json, 'Total Links', 'linksUsed', '#usage');
+        appendInput(json, 'Links Max', 'linksRequestMax', '#usage');
+        appendInput(json, 'Links Used', 'linksRequestUsed', '#usage');
+
+        appendInput(json, 'Blogs Max', 'guestBlogsMax', '#usage');
+        appendInput(json, 'Blogs Used', 'guestBlogsUsed', '#usage');
+        appendInput(json, 'Blogs P-G', 'payAsYoGoBlogs', '#usage');
+
+        appendInput(json, 'Credits Max', 'creditsMax', '#usage');
+        appendInput(json, 'Credits Used', 'creditsUsed', '#usage');
+
+        appendInput(json, 'Research Max', 'researchMax', '#usage');
+        appendInput(json, 'Research Used', 'researchUsed', '#usage');
+
+        appendInput(json, 'Keywords Max', 'keywordsMax', '#usage');
+        appendInput(json, 'Keywords Used', 'keywordsUsed', '#usage');
+
+        appendInput(json, 'AppItems Max', 'appItemsMax', '#usage');
+        appendInput(json, 'AppItems Used', 'appItemsUsed', '#usage');
+
+        appendInput(json, 'Websites Max', 'websitesMax', '#usage');
+        appendInput(json, 'Websites Used', 'websitesUsed', '#usage');
+
+        appendInput(json, 'Fixed Listings', 'fixedListings', '#usage');
+        appendInput(json, 'Featured Listings', 'featuredListings', '#usage');
+
+        appendInput(json, 'Activation Code', 'activationCode', '#advanced');
+        appendInput(json, 'Email Freq', 'emailFreq', '#advanced');
+        appendInput(json, 'External Id', 'externalId', '#advanced');
+        appendInput(json, 'External Prop', 'externalProp', '#advanced');
+        appendInput(json, 'External Prop2', 'externalProp2', '#advanced');
+        appendInput(json, 'Guid', 'guid', '#advanced');
+        appendCheckbox(json, 'Weekly Links Mail', 'weeklyLinksMail', '#advanced');
+        appendCheckbox(json, 'AddMyUserDetails', 'addMyUserDetails', '#advanced');
+        appendCheckbox(json, 'IgnoreKfwOnPageScan', 'ignoreKfwOnPageScan', '#advanced');
+        appendCheckbox(json, 'EmailNewLink', 'emailNewLink', '#advanced');
+        appendCheckbox(json, 'AutoPilot', 'autoPilot', '#advanced');
+    }
+    function outputUrlResultToModal(id, url) {
+        $.ajax({
+            type: 'POST',
+            url: apiUrl + url,
+            success: function (result) {
+                console.log('outputUrlResultToModal ' + JSON.stringify(result));
+                showModal('Result', result['status'], '', '');
+                showSubscriberData(id);
+                // setTimeout(function () {
+                //     modalFadeout();
+                // }, 4000);
+            }
+        });
+    }
+
+</script>
+<style>
+    .settingLabel {
+        width: 200px;
+    }
+    .modal-body {
+        max-height: 700px;
+        overflow-y: scroll;
+    }
+</style>

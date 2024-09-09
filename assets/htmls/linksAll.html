@@ -1,0 +1,216 @@
+<div class="mb-5">
+    <div class="row lhRow">
+        <div id="totalBacklinksDiv" class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="Total Backlinks found in the crawler for the given domain. This value is usually updated once a month, so new backlinks might not calculated just yet.">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/bluelink.png" class="dashcardIcon" alt="Backlinks">
+                        <div>
+                            <h4 id="totalBacklinks"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Total Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/domain.png" class="dashcardIcon" alt="Referring">
+                        <div>
+                            <h4 id="listedBacklinks"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Listed Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="Average rank of referring pages, Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="avgRefPageRank" class="avgRefPageRank"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Referring Page Rank</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="Average rank of referring domains, Website Rank (Page Rank) is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="avgRefDomainRank" class="avgRefDomainRank"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Referring Domain Rank</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card page-card mb-4">
+        <div class="card-body">
+            <div class="alert alert-primary likspyAlert" role="alert" id="fewLinksAlert" style="display:none;">
+                <div class="d-flex">
+                    <div class="warningBox">
+                        <img src="/assets/images/icon/alertque.png" alt="Primary">
+                    </div>
+                    <p class="my-0">NOTICE<br>
+                        This website has more backlinks, but we show only one link per domain by default and not from all pages.
+                    </p>
+                </div>
+            </div>
+            <div class="d-lg-flex justify-content-between mb-20px">
+                <div class="d-flex align-items-center">
+                    <h3 class="cardTitle mb-0">Backlinks List</h3>
+                    <span class="listedItem" id="listedItemsCount"></span>
+                </div>
+                <div>
+                    <ul class="list-style-none actionkey_ul">
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PDF" class="pdfButton ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                                <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <div class="keywordSearch landingpageKew">
+                                <input data-hj-allow type="text" class="tableSearch form-control" placeholder="Search..."/>
+                                <img src="/assets/images/icon/search.svg" alt="Search"/>
+                            </div>
+                        </li>
+                        <li class="actionkey_li">
+                            <div style="display: none" class="dropdown">
+                                <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    Advanced Search
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <input type="checkbox" name="onlyOneLinkPerDomain" id="onlyOneLinkPerDomain"
+                                           onclick="showOnlyOnelink(this)">
+                                    <label for="onlyOneLinkPerDomain">Show Only One Link Per Domain</label><br>
+                                    <input type="checkbox" name="sortFromAllResult" id="sortFromAllResult">
+                                    <label for="sortFromAllResult">Sort From All Result</label>
+
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">US </a></li>-->
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">Canada</a></li>-->
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">Russia</a></li>-->
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">Israel</a></li>-->
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="actionkey_li">
+                            <div class="addhideColumn dropdown">
+                                <a href="javascript:;" id="addhideColumn" class="addhideLink" data-bs-toggle="dropdown"
+                                   aria-expanded="false"><h3 class="cardTitle mb-0">Columns<i
+                                        class="fas fa-chevron-down"></i></h3></a>
+
+                                <form id="saveColHideShowFormLinksAll" class="dropdown-menu py-3" aria-labelledby="addhideColumn">
+                                    <ul id="showHideColslinksList" class="showHideColsMenu">
+                                    </ul>
+                                    <div class="text-end px-3">
+                                        <button type="button" onclick="saveColHideShow(getFormDValues(saveColHideShowFormLinksAll), 'linksList')" class="btn btn-primary pageBtn">Save for next time</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="linksContDiv" class="rabbitTable">
+                <table id="linksList" class="table align-middle border-bottom-0 hover" style="width:100%">
+                    <thead class="thead-dark"></thead>
+                    <tbody>
+                    <td colspan="12" class="text-center">
+                        <strong><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></strong>
+                    </td>
+                    </tbody>
+                </table>
+                <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+                    <h3>Upgrade to see your backlinks here</h3>
+                    <p>Currently you see a demo of amazon, upgrade now to <br>
+                        see results of your website</p>
+                    <button type="button">Upgrade to Premium</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        let websiteUrl = getMyUrlOrComp();
+        if (!payingUser) {
+            // websiteUrl = "amazon.com";
+            $('#linksContDiv .upgradeBlock').attr("onclick", upgradeLink);
+            $('#linksContDiv .upgradeBlock').show();
+            $('#linksList').css('opacity', 0.3);
+            $('#linksList').addClass('ignoreme');
+            // $('.spinner-border').hide();
+        // } else {
+        }
+            $('#overviewOf').html(' <span>Links Explorer</span>');
+            // $('#overviewOf').html(websiteUrl + ' <span>Links Explorer</span>');
+            loadBacklinksList(websiteUrl);
+    });
+
+    function showOnlyOnelink(checkbox) {
+        $('#linksList tbody').html('<td colspan="15" class="text-center"><strong>Loading...</strong></td>');
+        if (!checkbox.checked) {
+            $.getJSON(getApiUrl(links_url + '?api=WebsiteLinks&url=' + websiteUrl), function (json) {
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json["data"]);
+                    $('#totalBacklinks').html(nFormatter(json["total_count"], 2));
+                    json = json['items'];
+                    loadBacklinks(json);
+                }
+            });
+        } else {
+            $.getJSON(getApiUrl(links_url + '?api=WebsiteLinks&mode=one_per_domain'), function (json) {
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json["data"]);
+                    $('#totalBacklinks').html(nFormatter(json["total_count"], 2));
+                    json = json['items'];
+                    loadBacklinks(json);
+                } else {
+                    $('#linksList').DataTable().destroy()
+                    $('#linksList tbody').html("");
+                    $('#linksList').DataTable(defaultTableSettings);
+                }
+            });
+        }
+    }
+
+    sortFromAllResult = async (col, dir) => {
+        // console.log(col, dir);
+        const response = await fetch(getApiUrl('getMyJsonCompDataGeneric?url=' + websiteUrl + '&api=WebsiteLinks&order_by="' + col + ',' + dir + '"'), {
+            mode: 'no-cors',
+            method: 'post',
+        });
+    }
+</script>

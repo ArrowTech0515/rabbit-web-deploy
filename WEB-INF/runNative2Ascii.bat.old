@@ -1,0 +1,1 @@
+native2ascii -encoding utf8 C:\dev\rabbitseo\resources\ApplicationResources_iw.org  C:\dev\rabbitseo\resources\ApplicationResources_iw.properties

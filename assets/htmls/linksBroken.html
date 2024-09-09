@@ -1,0 +1,206 @@
+<div class="mb-5">
+    <div class="row lhRow">
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/broken-link.png" class="dashcardIcon" alt="Backlinks">
+                        <div>
+                            <h4 id="totalBrokenBacklinks">
+<!--                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+                                -
+                            </h4>
+                            <span>Broken Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/domain.png" class="dashcardIcon" alt="Referring">
+                        <div>
+                            <h4 id="listedBacklinks">
+                                -
+<!--                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+                            </h4>
+                            <span>Listed Broken Backlinks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="avgRefPageRank">
+                                -
+<!--                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+                            </h4>
+                            <span>Average Referring Page Rank</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="avgRefDomainRank">
+<!--                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+                                -
+                            </h4>
+                            <span>Average Referring Domain Rank</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card page-card mb-4">
+        <div class="card-body">
+            <div class="d-lg-flex justify-content-between mb-20px">
+                <div class="d-flex align-items-center">
+                    <h3 class="cardTitle mb-0">Broken Backlinks</h3>
+                    <span class="listedItem" id="listedItemsCount"></span>
+                </div>
+                <div>
+                    <ul class="list-style-none actionkey_ul">
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="COPY" id="copyButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="XLS" id="xlsButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PDF" id="pdfButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PRINT" id="printButton" class="ks_buttn d-inline-block">
+                                <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <div class="keywordSearch">
+                                <img src="/assets/images/icon/search.svg" alt="Search"/>
+                                <input type="text" class="form-control" id="tableSearch" placeholder="Search..."/>
+                            </div>
+                        </li>
+                        <li class="actionkey_li">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    Advanced Search
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <input type="checkbox" name="onlyOneLinkPerDomain" id="onlyOneLinkPerDomain"
+                                           onclick="showOnlyOnelink(this)">
+                                    <label for="onlyOneLinkPerDomain">Show Only One Link Per Domain</label><br>
+                                    <input type="checkbox" name="sortFromAllResult" id="sortFromAllResult">
+                                    <label for="sortFromAllResult">Sort From All Result</label>
+
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">US </a></li>-->
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">Canada</a></li>-->
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">Russia</a></li>-->
+                                    <!--                                <li><a class="dropdown-item" style="cursor: pointer">Israel</a></li>-->
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rabbitTable">
+                <table id="linksList" class="table align-middle border-bottom-0 hover" style="width:100%">
+                    <thead class="thead-dark">
+                    <tr>
+                        <!--            <th>#</th>-->
+                        <th>Url From</th>
+                        <th>Url To</th>
+                        <th tooltip="top-level domain of the referring URL">TLD From</th>
+                        <th tooltip="top-level domain of the referring URL">Anchor</th>
+                        <!-- <th>New</th>
+                        <th>Lost</th> -->
+                        <th tooltip="PageRank is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.">
+                            Rank
+                        </th>
+                        <th tooltip="PageRank is Google’s algorithm designed to measure the importance of a webpage based on the quality and quantity of webpages that refer to it. Pages that have high PageRank (i.e., a large number of quality backlinks) are perceived as more authoritative by Google and rank better than those with lower PageRank.">
+                            Page From Rank
+                        </th>
+                        <th>Page From Title</th>
+                        <th>Item Type</th>
+                        <th tooltip="Indicates total number of backlinks from this domain">Group Count</th>
+                        <!-- <th tooltip="Indicates whether the backlink is broken, if true, the backlink is pointing to a page responding with a 4xx or 5xx status code">
+                            Broken
+                        </th>              -->
+                        <th>First Seen</th>
+                        <th>Last Seen</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <td colspan="15" class="text-center">
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                    </td>
+                    </tbody>
+                </table>
+                <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+                    <h3>Upgrade to see your backlinks here</h3>
+                    <p>Currently you see a demo of amazon, upgrade now to <br>
+                        see results of your website</p>
+                    <button type="button">Upgrade to Premium</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        let websiteUrl = $('#inputSearchWebsite').val();
+        if (payingUser == false) {
+            websiteUrl = "amazon.com";
+            $('.upgradeBlock').attr("onclick", upgradeLink);
+            $('.upgradeBlock').show();
+            $('#linksList').css('opacity', 0.3);
+            $('#linksList').addClass('ignoreme');
+        }
+        $('#overviewOf').html(websiteUrl + ' <span>Broken Backlinks</span>');
+        $('#totalBrokenBacklinks').html(nFormatter(brokenLinks, 2));
+        if (payingUser && brokenLinks > 0) {
+            $.getJSON(getApiUrl(links_url + '?api=WebsiteLinks&filters="is_broken","=",true&url=' + websiteUrl), function (json) {
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json["data"]);
+                    $('#totalBacklinks').html(nFormatter(json["total_count"], 2));
+                    json = json['items'];
+                    loadBacklinks(json);
+                } else {
+                    $('#linksList tbody').html('No data found');
+                }
+            });
+        } else {
+            if (payingUser) {
+                showModalFadeOut('Hooray', 'Great job, no broken links were found for your website! Use the Links Building to get more links.', 'Close', '');
+                $('#linksList tbody').html('No data found');
+            } else {
+                $('#linksList tbody').html('Upgrade to see');
+            }
+        }
+    });
+</script>

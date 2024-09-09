@@ -1,0 +1,447 @@
+<form id="savePublishDetailsUser">
+    <div class="settingForm">
+        <input hidden="true" name="rabbitAd" id="rabbitAd" value="true">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="publishLinkGeneral" data-bs-toggle="tab" data-bs-target="#publishLinkGeneral-pane" type="button" role="tab" aria-controls="publishLinkGeneral-pane" aria-selected="true"><img src="/assets/images/newicon/business_center.png" height="24" width="24" alt="icon"/> General</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="publishLinkDesc" data-bs-toggle="tab" data-bs-target="#publishLinkDesc-pane" type="button" role="tab" aria-controls="publishLinkDesc-pane" aria-selected="true"><img src="/assets/images/newicon/mdi_business-card.png" height="24" width="24" alt="icon"/> Description</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="publishLinkContact" data-bs-toggle="tab" data-bs-target="#publishLinkContact-pane" type="button" role="tab" aria-controls="publishLinkContact-pane" aria-selected="false"><img src="/assets/images/newicon/contact.png" height="24" width="24" alt="icon"/> Contact Info</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="publishImagesMedia" data-bs-toggle="tab" data-bs-target="#publishImagesMedia-pane" type="button" role="tab" aria-controls="publishImagesMedia-pane" aria-selected="false"><img src="/assets/images/newicon/images.png" height="24" width="24" alt="icon"/> Images & Media</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="publishLinkSocial" data-bs-toggle="tab" data-bs-target="#publishLinkSocial-pane" type="button" role="tab" aria-controls="publishLinkSocial-pane" aria-selected="false"><img src="/assets/images/newicon/social_sharp.png" height="24" width="24" alt="icon"/> Social Media Pages </button>
+          </li>
+           
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="publishLinkGeneral-pane" role="tabpanel" aria-labelledby="publishLinkGeneral" tabindex="0">
+            <div class="card mb-2">
+                <div class="card-body"> 
+                    <div class="mb-3">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <label class="settingLabel">Domain</label>
+                            <input id="domain" name="domain" type="text" class="form-control form-control-lg" placeholder="Domain"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <label class="settingLabel">Company Name</label>
+                            <input id="name" name="name" type="text" class="form-control form-control-lg"
+                                   placeholder="Company Name"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <label class="settingLabel">Keywords to Promote</label>
+                            <select id="keywordsToPromote" name="keyword" class="keywordsToPromote js-example-placeholder-multiple" multiple="multiple"
+                                    placeholder="Choose Keyword"></select>
+                        </div>
+                    </div>
+<!--                    <div class="mb-3">-->
+                    <div class="">
+                        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+                        <div class="">
+<!--                        <div class="sm_m_b">-->
+                            <div class="drop-zone" onclick="changeLogo()">
+                                <div id="logoForm" data-toggle="tooltip" title="Logo size should be 200*100 pixel!">
+                                    <form name="photo" class="text-center" id="imageUploadForm" enctype="multipart/form-data"
+                                          action="saveImgUser" method="post">
+                                        <input type='file' name="pdfImage" id="pdfImage" onchange="changeImg()" style="display:none;" >
+                                        <img id="logoImg" alt="Upload Logo" style="display:none"/>
+                                        <i class="fa fa-cloud-upload" id="logoIcon"></i>
+                                        <p id="logoP">Change Logo</p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                     <div>
+                        <div class="d-flex gap-2  align-items-center">
+                            <input data-hj-allow="" type="checkbox" name="toggleEmbedDetails" id="toggleEmbedDetails" onclick="toggleAddUserDetails(this)" class="">
+                            <label class="settingLabel settingLabelCheckbox" for="toggleEmbedDetails">
+                                Add My Details in Published Guest Blogs
+                                <img src="/assets/images/home_icon/material-symbols_help.png"
+                                     style="margin-left: 5px; height: 22px;"
+                                     class="addMyDetailsHtml"
+                                     alt="help">
+                            </label>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade show" id="publishLinkDesc-pane" role="tabpanel" aria-labelledby="publishLinkDesc" tabindex="0">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <label class="settingLabel">Business Description
+                            <img src="/assets/images/home_icon/material-symbols_help.png" class="bisDescTooltip" />
+                                <br/>
+                                <a style="text-decoration: none; font-size: 13px;" target="_blank"
+                                   href="/assets/data/Business Description Template.docx">Download Template</a>
+                            </label>
+                            <textarea id="description" name="description" class="form-control form-control-lg" style="height: 150px;"
+                                      placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <label class="settingLabel">Business Tags</label>
+                            <select id="bizTags" name="tags" class="js-example-placeholder-multiple" multiple="multiple"></select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <label class="settingLabel">Business Category</label>
+                            <select name="category" id="categorySelect"
+                                    class="categorySelect form-select form-select-lg dropdown-toggle js-example-placeholder-single "
+                                    placeholder="Choose Category">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="publishLinkContact-pane" role="tabpanel" aria-labelledby="publishLinkContact" tabindex="0">
+            <div class="container">
+                <div class="row g-2 mb-2">
+                    <div class="col-md-6">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">Country</label>
+                                        <select id="bizCountry" name="bizCountry"
+                                                class="countrySelect form-select form-select-lg dropdown-toggle js-example-placeholder-single">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">Address</label>
+                                        <input id="address" name="address" type="text" class="form-control form-control-lg"
+                                               placeholder="Business Address"/>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">Phone</label>
+                                        <input id="phone" name="phone" type="text" class="form-control form-control-lg"
+                                               placeholder="Business Phone Number"/>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">Contact Us Page</label>
+                                        <input id="contactUsPage" name="contactUsPage" type="text" class="form-control form-control-lg"
+                                               placeholder="https://www.your-domain/contact-us"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">Pricing Page</label>
+                                        <input id="pricingPage" name="pricingPage" type="text" class="form-control form-control-lg"
+                                               placeholder="https://www.your-domain/pricing"/>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">About Us Page</label>
+                                        <input id="aboutUsPage" name="aboutUsPage" type="text" class="form-control form-control-lg"
+                                               placeholder="https://www.your-domain/about-us"/>
+                                    </div>
+                                </div>
+                               
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">Blog Link</label>
+                                        <input id="blogPage" name="blogPage" type="text" class="form-control form-control-lg"
+                                               placeholder="https://www.your-domain/blog"/>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-md-flex justify-content-between align-items-center">
+                                        <label class="settingLabel">FAQ Page</label>
+                                        <input id="faqPage" name="faqPage" type="text" class="form-control form-control-lg"
+                                               placeholder="https://www.your-domain/faq"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                        
+                        
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel">Business Hours</label>
+                                <textarea id="businessHours" name="businessHours" class="form-control form-control-lg"
+                                          placeholder="Monday-Friday: 9:00 AM - 6:00 PM
+Please note that these hours are subject to change, and it's always a good idea to check for any updates or special holiday hours. We look forward to serving you during our regular business hours!"></textarea>
+                            </div>
+                        </div>
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="publishLinkSocial-pane" role="tabpanel" aria-labelledby="publishLinkSocial" tabindex="0">
+             <div class="card">
+                <div class="card-body">
+                     <div class="tagsLabel mb-3">
+                        <strong>Add your Social Media Pages</strong> (Optional)
+                    </div>
+                    <div class="contentBoxx">
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/facebook.png" height="22" width="22" /> Facebook Page</label>
+                                <input id="facebook" name="facebook" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.facebook.com/company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/twitter.png" height="22" width="22" /> Twitter </label>
+                                <input id="twitter" name="twitter" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.twitter.com/company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/pinterest.png" height="22" width="22" /> Pinterest</label>
+                                <input id="pinterest" name="pinterest" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.pinterest.com/company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/linkedin.png" height="22" width="22" /> LinkedIn</label>
+                                <input id="linkedin" name="linkedin" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.linkedin.com/company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/youtube.png" height="22" width="22" /> Youtube Channel</label>
+                                <input id="youtube" name="youtube" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.youtube.com/@company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/instagram.png" height="22" width="22" /> Instagram</label>
+                                <input id="instagram" name="instagram" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.instagram.com/company-name/"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/reddit.png" height="22" width="22" /> Reddit</label>
+                                <input id="reddit" name="reddit" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.reddit.com/user/company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/x.png" height="22" width="22" /> X Page</label>
+                                <input id="x" name="x" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.x.com/company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/tumblr.png" height="22" width="22" /> Tumblr</label>
+                                <input id="tumblr" name="tumblr" type="text" class="form-control form-control-lg"
+                                       placeholder="https://company-name.tumblr.com"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/snapchat.png" height="22" width="22" /> Snapchat</label>
+                                <input id="snapchat" name="snapchat" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.snapchat.com/add/company-name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/googleBusiness.png" height="22" width="22" /> Google My Business</label>
+                                <input id="googleBusiness" name="googleBusiness" type="text" class="form-control form-control-lg"
+                                       placeholder="https://search.google.com/local/writereview?placeid=<company_id>"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="publishImagesMedia-pane" role="tabpanel" aria-labelledby="publishImagesMedia" tabindex="0">
+                <div class="card">
+                    <div class="card-body"> 
+                       <div class="tagsLabel mb-3"><strong>My Image Gallery</strong></div>
+                       <div class="imagesUploadPublishList mb-3">
+                            <div class="imagesUploadPublish">
+                                <button type="button" class="btn btn-primary text-white" style="cursor: pointer" onclick="$('#uploadGalleryImgUser input#userImage').click()"> <img src="/assets/images/newicon/uploadImage.png" alt="icon" /> <span class=" text-white">Upload image</span></button>
+                                <form class="text-center" id="uploadGalleryImgUser" enctype="multipart/form-data" method="post" style="display: none">
+                                    <input type='file' name="userImage" id="userImage" onchange="uploadImageGallery('uploadGalleryImgUser')" hidden>
+                                </form>
+                            </div>
+                       </div>
+                        <hr>
+                        <div class="tagsLabel mb-3 uploadLabel" style="display: none"><strong>Upload From Your Site</strong></div>
+                        <div class="vertical-center"></div>
+                        <hr>
+                       <div class="tagsLabel mb-3"><strong>Youtube Video</strong></div>
+                       <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel" for="youtubeMarketingVideo">Youtube Video Link</label>
+                                <input id="youtubeMarketingVideo" name="youtubeMarketingVideo" type="text" class="form-control form-control-lg"
+                                       placeholder="https://www.youtube.com/marketing-video"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+         
+        </div> 
+
+        <div id="publishButton" class="mt-4">
+            <button type="button" onclick="publishLinkInRabbit()"
+                    class="btn btn-primary mw-75px btn-next-form btn-lg pageBtn" style="width: 100%">Update Listings Details
+            </button>
+        </div>
+<!--        <div style="display: none; margin-top: 10px;" id="publishFormResultDiv" class="alert alert-success"-->
+<!--             role="alert">-->
+<!--            <div class="d-flex">-->
+<!--                <p class="my-0" id="publishFormResultMsg">-->
+<!--                    &lt;!&ndash;                            Your details have been saved successfully, we&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            will email you after reviewing your details.&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            At the meantime, you can see your links under <a&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                    href="javascript: changeTab('linksMonitoring');">My Links</a> tab.&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</form>
+<script>
+    function showGalleryFromJson(json) {
+        console.log('GalleryImages ' + JSON.stringify(json));
+        $('.imageItem').hide();
+        if (json && json['obj']) {
+            const myArray = json['obj'].split(",");
+            console.log('showGalleryFromJson myArray ' + myArray)
+            if (myArray.length > 0) {
+                for (const image of myArray) {
+                    console.log('showGalleryFromJson curr image ' + image);
+                    if (image && image.length > 1) {
+                        if (image.indexOf('https://') === -1 && image.indexOf('http://') === -1) {
+                            $('.imagesUploadPublishList').append('<div class="imagesUploadPublish imageItem"  onclick="deleteImage(\'' + image + '\')">' +
+                                '<img src="https://dlnil54eooeso.cloudfront.net/gallery/' + image + '.png" ' +
+                                'style="height: 172px;"/></div>');
+                        } else {
+                            $('.imagesUploadPublishList').append('<div class="imagesUploadPublish imageItem"  onclick="deleteImage(\'' + image + '\')">' +
+                                '<img src="' + image + '" ' +
+                                'style="height: 172px;"/></div>');
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    function showImageGallery() {
+        $.getJSON(getApiUrl('getMyJsonGalleryUser'), function (json) {
+            showGalleryFromJson(json);
+        });
+    }
+
+    function showSiteImages() {
+        console.log('showSiteImages getMyJsonImagesLandingPage')
+        $.getJSON(getApiUrl('getMyJsonImagesLandingPage'), function (json) {
+            console.log('getMyJsonImagesLandingPage ' + JSON.stringify(json))
+            let list = json['obj'];
+            for (let i = 0; i < list.length; i++) {
+                // $('.vertical-center').append('<div class="">' + list[i] + '</div>');
+                $('.vertical-center').append('<div class="col-12 col-sm-6 col-md-4"><div style="background:url(' + list[i] + ') no-repeat;" src="' + list[i] + '" class="article-image"></div></div>');
+            }
+            $('.article-image').click(function () {
+                const src = $(this).attr('src');
+                uploadImageUrlGallery('uploadGalleryImgUser', src);
+                // $('.articleImage').val(src);
+                // $(this).toggleClass("active");
+            });
+            const sliders = document.querySelectorAll('.slick-initialized');
+            sliders.forEach(item => {
+                $(item).slick('unslick');
+            })
+            $('.vertical-center').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                        }
+                    },
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+            $('.uploadLabel').show();
+            addTooltipToSelector('.article-image', 'Add image to listings gallery');
+            console.log('getMyJsonImagesLandingPage ' + JSON.stringify(json));
+        });
+    }
+
+    $(document).ready(function () {
+        $("#bizTags").select2({
+            tokenSeparators: [',', ', ', '\n'],
+            // selectOnClose: true,
+            closeOnSelect: false,
+            data: tagsArray.sort(),
+            maximumSelectionLength: 10,
+            tags: true,
+            placeholder: 'Choose Tags (max 10)',
+        });
+
+        $('.countrySelect').select2({tokenSeparators: [',', ', ', '\n'],
+            selectOnClose: true,
+            data: getCountriesArray(),
+            width: "100%",
+        });
+
+        fillPublishDetailsForm();
+        $('#toggleEmbedDetails').prop('checked', mainUserDetails['addUserDetails']);
+        loadUserLogo();
+        initHelpSection();
+        initBizSignaturePreview();
+        addPopoverToSelector('.bisDescTooltip', bizDescContent);
+        showImageGallery();
+        console.log('in publishLink mainUserDetails[\'isABTest\'] ' + mainUserDetails['isABTest'])
+        if (mainUserDetails['isABTest']) {
+            // showSiteImages();
+        }
+    });
+</script>

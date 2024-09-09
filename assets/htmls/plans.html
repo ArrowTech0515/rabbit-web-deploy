@@ -1,0 +1,446 @@
+<div class="container py-3" id="plans" style="max-width: 1420px">
+    <header>
+        <div class="pricing_top_area">
+            <!-- <img src="/assets/images/pricing_banar2.jpg" alt="" class="pricing_banar2"> -->
+            <div class="row d-flex justify-content-center">
+<!--                <div class="col-md-12">-->
+                    <div class="annualy_check d-flex justify-content-center">
+                        <div class="anualyCheckBox">
+                            <input onclick="toggleYearly()" type="checkbox" name="annullyCheck" id="annullyCheck" checked>
+                            <label for="annullyCheck">
+                                <span class="checkDesign"></span>
+                                <p> Pay annually <br>  and <span class="savepercent">SAVE 20%-30% <img src="/assets/images/shapeLine.png" alt=""></span> of the plan price</p>
+                            </label>
+                        </div>
+                    </div>
+<!--                </div>-->
+<!--                <div class="col-md-6">-->
+<!--                    <h2>Plans & Pricing</h2>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row row-cols-1 row-cols-md-4 mb-3 text-center planRow">
+
+        </div>
+    </main>
+</div>
+<script>
+$(document).ready(function () {
+    yearly = true;
+    initPlans();
+    
+    // $('#annullyCheck').click();
+});
+function drawPlans() {
+    var html = '';
+    console.log('plans pricing ' + JSON.stringify(allPlans));
+    for (const key in allPlans) {
+        var item = allPlans[key];
+        const realPrice = yearly ? item['yearlyPrice'] : item['planPrice'];
+        const planPrice = yearly ? item['yearlyPrice'] / 12 : item['planPrice'];
+        
+        const monthlyPrice = item['planPrice'];
+        const yearlyPrice = item['yearlyPrice'] / 12;
+        console.log('old planPrice is ' + monthlyPrice);
+        console.log('planPrice is ' + planPrice);
+        const percentDiscountnum = (monthlyPrice-planPrice)*100/monthlyPrice;
+        const percentDiscount = Math.floor(percentDiscountnum);
+        if(isNaN(percentDiscount)){
+            $('.perent_box').hide();
+        }
+        console.log(percentDiscount);
+
+        html =
+            '<div class="col">' +
+            '<div class="card mb-4 rounded-3 shadow-sm ' + (packageName === item['planName'] ? 'border-primary' : '') + '">' + (yearly && monthlyPrice > 0 ? '<div class="perent_box">'+percentDiscount +'% OFF' +'</div>' : '')+
+            '<div class="card-header text-start d-block py-3 ' + (packageName === item['planName'] ? 'bg-primary border-primary' : '') + '">' +
+            '<h4 class="my-0 fw-normal ' + (packageName === item['planName'] ? 'text-white' : '') + '">' + item['planName'] + '</h4>' +
+            '<h1 class="card-title pricing-card-title d-flex align-items-start mt-3">' +
+            (yearly && monthlyPrice > 0 ? ('<s class="fw-normal">' + item['planPriceCurrency'] + monthlyPrice + '</s>') : '') + (packageName !== item['planName'] && (!planPrice || planPrice === 0) ? "Free" :
+                item['planPriceCurrency'] + planPrice + '/<small class="text-muted fw-light fs-5 mt-1">mo</small>') + ' </h1>' +
+            '</div>' +
+            '<div class="card-body">' +
+            '<ul class="list-unstyled mt-3 mb-4" style="text-align: left;list-style: inside;">' +
+            (appDomainName.indexOf('Wix') !== -1 || appDomainName.indexOf('Shopify') !== -1 ? '' : '<li> ' + item['planWebsites'] + (item['planWebsites'] > 1 ? ' Websites' :' Website') + '</li>') +
+            '<li> ' + item['planKeywords'] + ' Keywords</li>' +
+            '<li> ' + (planPrice === 0 ? 'Limited Optimization' : 'Full On Page Optimization') + '</li>' +
+            (item['planLinksBuilder'] > 0 ? '<li> ' + item['planLinksBuilder'] + ' New Backlinks / mo</li>' : '') +
+            '<li> ' + item['planResearches'] + ' Researches / mo</li>' +
+            (planPrice !== 0 ? '' : '<li>One Exclusive Guest Blog</li>') +
+            (planPrice !== 0 ? '' : '<li>One Premium Listing</li>') +
+            (planPrice === 0 ? '' : '<li>Rankings Monitoring</li>') +
+            (planPrice < 50 ? '' : '<li>Related Keywords Finder</li>') +
+            (planPrice === 0 ? '' : '<li>Backlinks Managed Service</li>') +
+            (planPrice === 0 ? '' : '<li>Guest Blogs Categories</li>') +
+            (planPrice === 0 ? '' : '<li>Guest Blogs Tags</li>') +
+            (planPrice < 50 ? '' : '<li>Guest Blogs Custom Image</li>') +
+            //(planPrice === 0 ? '' : '<li>Competitors Spy</li>') +
+            (planPrice < 50 ? '' : '<li>Competitors Keywords</li>') +
+            (planPrice < 50 ? '' : '<li>Competitors Backlinks</li>') +
+            (planPrice < 100 ? '' : '<li>Backlinks History</li>') +
+            (planPrice < 100 ? '' : '<li>API Access</li>') +
+            // (planPrice < 75 ? '' : '<li>Backlinks Anchor</li>') +
+            // (item['planLinksBuilder'] > 0 ? '<li> ' + item['planLinksBuilder'] + ' Links Building / mo</li>' : '<li> ' + item['planLinks'] + ' Links</li>') +
+            '</ul>' +
+            (yearly ? '<h2 class="annuallyPrice">$<b>'+realPrice+'</b>/year</h2>' : '') +
+            // getButton(item, realPrice, yearly) +
+            (packageName == item['planName'] && packageName === 'Starter' ? '' : getButton(item, realPrice, yearly)) +
+            '</div>' +
+            '</div>' +
+            '</div>' + html;
+    }
+    $('#plans main div').html(html);
+}
+</script>
+<style>
+.pricing_top_area {
+    margin: 0 -25px;
+    padding: 20px 25px 0px 25px;
+    position: relative;
+}
+
+.pricing_top_area:after {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 450px;
+    background: #E8E8E8;
+    display: block;
+    content: "";
+    background-image: linear-gradient(to right, #E8E8E8, #F5D184);
+    border-radius: 5px;
+}
+
+.anualyCheckBox label p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+span.savepercent {
+    display: inline-block;
+    position: relative;
+    /*color: #fec200;*/
+    font-weight: 700;
+}
+
+.annualy_check {
+}
+
+.pricing_top_area .col-md-6:nth-child(2) {
+    text-align: right;
+}
+
+.pricing_top_area h2 {
+    text-align: right;
+    font-size: 34px;
+    font-weight: bold;
+    color: #333;
+}
+
+.row.planRow> div> div .card-header.bg-primary, .row.planRow> div> div .card-header {
+    background: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 !important;
+}
+
+.row.planRow> div> div .card-header.bg-primary h1.card-title {
+    font-weight: revert;
+    font-size: 28px;
+}
+.perent_box{
+   
+    border-radius:4px 10px 0px 4px;
+    background: linear-gradient(124deg, #FEC22B 29.89%, #FE902B 110.82%); 
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 20px;
+    color: #fff;
+
+}
+.perent_box:before{
+    display: inline-block;
+    content: "";
+    height: 17px;
+    width: 17px;
+    background: url(../assets/images/teenyicons_discount-solid-light.png) no-repeat;
+    position: relative;
+    margin-right: 3px;
+    top: 3px;
+}
+.row.planRow> div> div.border-primary .perent_box{
+    background: #fff;
+    color: #FEC22B;
+}
+.row.planRow> div> div.border-primary .perent_box:before{
+     background: url(../assets/images/teenyicons_discount-solid.png) no-repeat;
+}
+.row.planRow> div> div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #000 !important;
+    padding: 25px;
+    border-radius: 10px !important;
+    height: 100%;
+    color: #333;
+    transition: .3s ease all;
+    box-shadow: 0 0 15px #00000026 !important;
+}
+
+.row.planRow> div> div .card-header.bg-primary h4.my-0.fw-normal.text-white {
+    color: #333 !important;
+    font-size: 18px;
+}
+
+.row.planRow> div> div h1.card-title.pricing-card-title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.row.planRow> div> div h1.card-title.pricing-card-title s {display: block;font-size: 18px;text-align: right;font-weight: bold;}
+
+.row.planRow> div> div:hover .card-header {
+    background: transparent !important;
+    color: #333;
+}
+
+.row.planRow> div> div:hover .card-header.bg-primary {
+    background: transparent !important;
+}
+
+.row.planRow> div> div .card-body button {
+    background: #333;
+    color: #fff;
+    border: 2px solid #333;
+    padding: 10px 15px;
+}
+
+.row.planRow> div> div .card-body button:hover {
+    background: transparent;
+    color: #333;
+}
+
+.pricing_top_area .row {
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .pricing_top_area .col-md-6:nth-child(2) h2 {
+        text-align: left;
+    }  
+    
+}/* (max-width: 767px)  */
+
+span.savepercent img {
+    display: block;
+    position: absolute;
+    width: 100%;
+}
+
+.row.planRow> div> div.border-primary h2.annuallyPrice {
+    display: none;
+}
+.row.planRow> div> div.border-primary h1.card-title s{
+    color: #fff;
+}
+h2.annuallyPrice {
+    text-align: center;
+    margin: -5px 0 25px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h2.annuallyPrice b {
+    font-size: 34px;
+}
+
+.row.planRow> div> div.border-primary {
+    background: #FEC200 !important;
+}
+
+.row.planRow> div> div:hover {
+    border-color: #fcc718 !important;
+}
+.row.row-cols-1.row-cols-md-4.mb-3.text-center.planRow {
+    z-index: 9;
+    position: relative;
+}
+
+/* Table Css  */
+
+
+section.compare_plans {
+    padding: 50px 0;
+}
+
+.compare_title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.compare_title h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.compare_title p {
+    font-size: 22px;
+}
+
+.compare_tables_area {
+    overflow: auto;
+}
+
+.tr {
+    display: flex;
+}
+
+.tr> .td,
+.tr> .th {
+    width: 180px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.tr> .td:first-child, .tr> .th:first-child {
+    flex-grow: 1;
+    text-align: left;
+}
+
+
+.tr> .td {
+    border-bottom: 1px solid #ddd;
+}
+
+.tr> .td img {
+    display: block;
+    width: 18px;
+    margin: 0 auto;
+}
+
+.tr> .th span {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 70%;
+    background: #ebebeb;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.tr> .th:first-child {
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.tr> .th p {
+    color: #ebebeb;
+    margin: 0 0 3px 0;
+    font-size: 18px;
+}
+
+.tr> .th {
+    padding: 25px 15px;
+}
+
+.table_head {
+    background-color: #f6d386;
+    background-image: linear-gradient(to right, #e8e8e8, #f6d388);
+    border-radius: 5px;
+}
+
+.tr> .th:last-child span {
+    display: none;
+}
+
+.tr> .th h3 {
+    font-size: 30px;
+}
+
+.compare_table {
+    min-width: 715px;
+}
+
+@media only screen and (max-width: 1199px) {
+
+    .tr> .td, .tr> .th {
+        width: 128px;
+        padding: 15px 10px;
+    }
+    
+    .tr> .th h3 {
+        font-size: 23px;
+    }
+    
+    .tr> .th p {
+        font-size: 16px;
+    }
+    
+    .tr> .td {
+        font-size: 16px;
+    }
+    
+} /* (max-width: 1199px) */
+
+
+@media only screen and (max-width: 767px) {
+
+    .annualy_check,
+    .anualyCheckBox label {
+        display: block;
+    }
+
+}/* and (max-width: 767px) */
+.row.planRow> div> div .card-body ul{
+    height: 100%;
+}
+.row.planRow> div> div .card-body ul li {
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.row.planRow> div> div .card-body ul li::before {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    content: "";
+    top: 3px;
+    background: url("/assets/images/checkOrange.png") no-repeat scroll center / contain;
+}
+
+
+.row.planRow> div> div.border-primary ul li::before {
+    filter: invert(1) brightness(0);
+}
+
+</style>

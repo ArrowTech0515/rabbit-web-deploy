@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site Description">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <base href="https://dlnil54eooeso.cloudfront.net/"> -->
+
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="assets/carousel/owl.carousel.min.js"></script>
+    <script src="assets/scripts-app/active.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link href="assets/css/bootstrap5.0.2.min.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            let forwardTo = location.href;
+            console.log('forwardTo is ' + forwardTo);
+            // dev- change to open welcome file
+            //  forwardTo = "links4u.net";
+
+            if (forwardTo.indexOf("links4u.net") !== -1) {
+                loadWelcomeHtml('welcomeLinks4u.html'); 
+                $('body').addClass("theindex_home sm_responsive");
+            } else if (forwardTo.indexOf("seoly.co") !== -1) {
+                loadWelcomeHtml('welcomeSeoly.html'); 
+                $('body').addClass("theindex_home sm_responsive");
+            } else if (forwardTo.indexOf("easyseo.shop") !== -1) {
+                loadWelcomeHtml('welcomeEasySEO.html'); 
+                $('body').addClass("sm_responsive");
+            } else if (forwardTo.indexOf("123content.net") !== -1) {
+                loadWelcomeHtml('welcome123Content.html'); 
+                $('body').addClass("sm_responsive");
+            } else if (forwardTo.indexOf("getleads") !== -1) {
+                loadWelcomeHtml('welcomeGetLeads.html');
+                $('body').addClass("sm_responsive");
+            } else if (forwardTo.indexOf("easychat.world") !== -1) {
+                loadWelcomeHtml('welcomeEasyChat.html');
+                $('body').addClass("sm_responsive");
+            } else if (forwardTo.indexOf("easyforms.me") !== -1) {
+                loadWelcomeHtml('welcomeEasyForms.html');
+                $('body').addClass("sm_responsive");
+            } else if (forwardTo.indexOf("signup") !== -1) {
+                loadWelcomeHtml('welcomeSignupLand.html');
+                $('body').addClass("sm_responsive");
+            } else if (forwardTo.indexOf("seorush") !== -1) {
+                loadWelcomeHtml('welcomeSeoRush.html');
+                $('body').addClass("sm_responsive");
+            } else {
+                loadWelcomeHtml('index.html');
+               
+            }
+
+        });
+        let assetsUrl = '/assets/htmls-welcome/';
+        function loadWelcomeHtml(mainHtml) {
+            console.log('loading file ' + assetsUrl + mainHtml)
+            $.get(assetsUrl + mainHtml, function (data) {
+                $('body').append(data);
+            });
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

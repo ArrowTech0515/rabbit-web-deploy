@@ -1,0 +1,2652 @@
+<script type="text/javascript" src="/resources/jspdf.min.js.keep"></script>
+<script type="text/javascript" src="/resources/canvasjs.min.js.keep"></script>
+<!--<script type="text/javascript" src="/resources/jspdf.plugin.autotable.js.keep"></script>-->
+<!--<script type="text/javascript" src="/resources/html2canvas.min.js.keep"></script>-->
+<!--<script type="text/javascript" src="/resources/logo.js.keep"></script>-->
+<!--<script type="text/javascript" src="/resources/Alef-Regular-normal.js.keep"></script>-->
+<!--<script type="text/javascript" src="/resources/Alef-Bold-normal.js.keep"></script>-->
+<!--<script type="text/javascript" src="/resources/Assistant-Regular-normal.js.keep"></script>-->
+<!--<script type="text/javascript" src="/resources/Assistant-Bold-normal.js.keep"></script>-->
+<script type="text/javascript" src="https://dlnil54eooeso.cloudfront.net/assets/scripts/jspdf.plugin.autotable.js"></script>
+<script type="text/javascript" src="https://dlnil54eooeso.cloudfront.net/assets/scripts/html2canvas.min.js"></script>
+<script type="text/javascript" src="https://dlnil54eooeso.cloudfront.net/assets/report/logo.js"></script>
+<script type="text/javascript" src="https://dlnil54eooeso.cloudfront.net/assets/report/Alef/Alef-Regular-normal.js"></script>
+<script type="text/javascript" src="https://dlnil54eooeso.cloudfront.net/assets/report/Alef/Alef-Bold-normal.js"></script>
+<script type="text/javascript" src="https://dlnil54eooeso.cloudfront.net/assets/report/Assistant/Assistant-Regular-normal.js"></script>
+<script type="text/javascript" src="https://dlnil54eooeso.cloudfront.net/assets/report/Assistant/Assistant-Bold-normal.js"></script>
+
+<div class="container">
+    <h1 class="text-center fw-bold">SEO Report</h1>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Your Logo</h3>
+            <div id="logoForm" onclick="changeLogo()" data-toggle="tooltip" title="Logo size should be 200*100 pixel!">
+                <form name="photo" class="text-center" id="imageUploadForm" enctype="multipart/form-data"
+                      action="saveImgUser" method="post">
+                    <input type='file' name="pdfImage" id="pdfImage" onchange="changeImg()" style="display:none;">
+                    <img id="logoImg" alt="Upload Logo" style="display:none"/>
+                    <i class="fa fa-cloud-upload" id="logoIcon"></i>
+                    <p id="logoP">Upload logo clicking here</p>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Contact Details</h3>
+            <textarea class="form-control mt-3 title" rows="5" id="contactDetail" placeholder="The SEO Agency
+1 Long St
+London
+Postcode
+UK"></textarea>
+        </div>
+    </div>
+    <hr>
+    <div class="mt-3">
+        <h3 class="mt-4">Choose sections to export in your Report</h3>
+        <form id="settingDetail">
+            <div class="mt-3">
+                <h3 class="mt-4 mb-2">Cover Title</h3>
+                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                <input type="text" class="form-control title" id="coverTitle" placeholder="Add document title here"
+                       value="Website SEO Report for ">
+                <label for="coverTitle" class="titleLabel">You can change title here</label>
+            </div>
+            <br/>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked name="website_info" id="website_info"
+                       value="Website Info">
+                <label class="form-check-label fw-bold" for="website_info">Executive Summary</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="summaryTitle" value="Executive Summary">
+                <label for="summaryTitle" class="titleLabel">You can change title here</label>
+                <div class="row mt-2">
+                    <div class="col-md-7">
+                        <p class="mt-2 mb-1">General Website Info:</p>
+                        <div class="row" id="websiteInfoOption">
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="rankedKeywords"
+                                               value="Ranked Keywords"><span>Ranked Keywords</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="totalBacklinks"
+                                               value="Total Backlinks"><span>Total Backlinks</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="organicSearch"
+                                               value="Organic Search"><span>Organic Search</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check" style="display: none">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" id="facebookLikes"
+                                               value="Facebook Likes"><span>Facebook Likes</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="websiteRank"
+                                               value="Website Rank"><span>Website Rank</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="referringDomains"
+                                               value="Referring Domains"><span>Referring Domains</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <p class="mt-2 mb-1"><span>Tracking Information:</span>
+                            <label class="form-check-label">
+                                <input type="checkbox" checked class="form-check-input" id="addStatusDetail"><span>Add Status Detail</span>
+                            </label>
+                        </p>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" checked class="form-check-input" id="websiteCurrentStatus"
+                                       value=""><span>Website Current Status</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" checked class="form-check-input" id="oneMonthAgo" value=""><span>One Month Ago</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" checked class="form-check-input" id="initialStatus"
+                                       value=""><span>Initial Status</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked id="my_keywords" name="my_keywords"
+                       value="My Keywords">
+                <label class="form-check-label fw-bold" for="my_keywords">My Keywords</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="myKeywordsTitle" value="Keywords List">
+                <label for="myKeywordsTitle" class="titleLabel">You can change title here</label>
+                <div>
+                    <p class="mt-3 mb-1">Options:</p>
+                    <div class="row" id="myKeywordsOption">
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="URL" value="URL"><span>URL</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="searchEngine"
+                                           value="Search Engine"><span>Search Engine</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="searchVolume"
+                                           value="Search Volume"><span>Search Volume</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="competition"
+                                           value="Competition"><span>Competition</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="cpc" value="CPC"><span>CPC</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="results"
+                                           value="Results"><span>Results</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="initialPosition"
+                                           value="Initial Position"><span>Initial Position</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="6monthsAgo"
+                                           value="6 Months Ago"><span>6 Months Ago</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="3monthsAgo"
+                                           value="3 Months Ago"><span>3 Months Ago</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="lastMonth"
+                                           value="Last Month"><span>Last Month</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="liveRank"
+                                           value="Live Rank"><span>Live Rank</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="bestRank"
+                                           value="Best Rank"><span>Best Rank</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked id="higher_keywords" name="higher_keywords"
+                       value="Higher Keywords">
+                <label class="form-check-label fw-bold" for="higher_keywords">Keywords that went up last month</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="higherKeywordsTitle"
+                       value="Keywords that went up last month">
+                <label for="higherKeywordsTitle" class="titleLabel">You can change title here</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked id="other_keywords" name="other_keywords"
+                       value="Other Keywords">
+                <label class="form-check-label fw-bold" for="other_keywords">Keywords Suggestions (Extra
+                    Keywords)</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="otherKeywordsTitle"
+                       value="Keywords Suggestions (Extra Keywords)">
+                <label for="otherKeywordsTitle" class="titleLabel">You can change title here</label>
+            </div>
+            <div class="form-check form-switch" style="display: none">
+                <input class="form-check-input" type="checkbox" id="google_analytics_data"
+                       name="google_analytics_data" value="Google Analytics Data">
+                <label class="form-check-label fw-bold" for="google_analytics_data">Google Analytics Data</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="analyticsTitle" value="Google Analytics Data">
+                <label for="analyticsTitle" class="titleLabel">You can change title here</label>
+                <div class="row">
+                    <div class="col-md-9">
+                        <p class="mt-3 mb-1">Options:</p>
+                        <div class="row" id="analyticsOption">
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="visits"
+                                               value=""><span>Visits</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="keywords"
+                                               value=""><span>Keywords</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="medium"
+                                               value=""><span>Medium</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="source"
+                                               value=""><span>Source</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="browser"
+                                               value=""><span>Browser</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="type"
+                                               value=""><span>Type</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="mobile"
+                                               value=""><span>Mobile</span>
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" checked class="form-check-input" id="country"
+                                               value=""><span>Country</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group justify-content-between">
+                            <label class="mt-3 mb-1" for="analyticsDateRange">Date Range:</label>
+                            <select class="form-control" id="analyticsDateRange">
+                                <option value="&numberOfMonths=1">Last Month</option>
+                                <option value="&numberOfMonths=1">Last calendar month</option>
+                                <option value="&numberOfMonths=3">Last 3 Months</option>
+                                <option value="&numberOfMonths=6">Last 6 Months</option>
+                                <option value="&numberOfMonths=12">Last Year</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked id="links_summary" name="links_summary"
+                       value="Links Summary">
+                <label class="form-check-label fw-bold" for="links_summary">Links Summary</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="linksSummaryTitle" value="Links Summary">
+                <label for="linksSummaryTitle" class="titleLabel">You can change title here</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked id="links_list" name="links_list"
+                       value="Links List">
+                <label class="form-check-label fw-bold" for="links_list">Links History</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="linksHistoryTitle" value="Links History">
+                <label for="linksHistoryTitle" class="titleLabel">You can change title here</label>
+                <div>
+                    <p class="mt-3 mb-1">Options:</p>
+                    <div class="row" id="linksHistoryOption">
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="summary" value=""><span>Summary</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="newLinks"
+                                           value=""><span>New Links</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="linksIssues"
+                                           value=""><span>Links Issues</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="topLevelDomain"
+                                           value=""><span>Top Level Domain</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="types" value=""><span>Types</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="locations"
+                                           value=""><span>Locations</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" checked class="form-check-input" id="onPage" value=""><span>OnPage</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" checked id="landing_pages" name="landing_pages"
+                       value="Landing Pages">
+                <!--        <input class="form-check-input" type="checkbox" checked id="landing_pages" name="landing_pages" value="Landing Pages">-->
+                <label class="form-check-label fw-bold" for="landing_pages">Landing Pages</label>
+            </div>
+            <div class="mx-4 mt-2 mb-3">
+                <p class="mt-3 mb-1">Section title</p>
+                <input type="text" class="form-control title" id="landingTitle" value="Landing Pages">
+                <label for="landingTitle" class="titleLabel">You can change title here</label>
+            </div>
+        </form>
+    </div>
+    <div class="btn_container text-center my-4" id="div1">
+        <button id="create" class="btn btn-primary"
+                onclick="if (payingUser) { makeButtonLoading(this); reverseMode = false; convert();} else {callUpgradePage()}">
+            Create PDF
+        </button>
+        <button id="createReversed" class="btn btn-primary" style="display: none;" data-bs-toggle="popover"
+                data-bs-html="true" data-bs-trigger="hover" data-bs-placement="bottom"
+                data-bs-content="In some browsers the PDF will show reversed letters - click here to download fixed PDF"
+                onclick="if (payingUser) { makeButtonLoading(this); reverseMode = true; convert();} else {callUpgradePage()}">
+            Create Reversed PDF
+        </button>
+    </div>
+    <div id="chartRanking" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartAvgRanking" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartWebsiteStatus" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartAna" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartKey" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartMed" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartSou" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartBro" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartTy" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartMob" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartCou" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksType" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksSemantic" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksAttributes" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksHistorySummary" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksHistoryNewLinks" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksHistoryLinksIssues" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksHistoryTopLevelDomain" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksHistoryTypes" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksHistoryLocations" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+    <div id="chartLinksHistoryOnpage" classs="charts notranslate" style="visibility: hidden;" dir="ltr"></div>
+</div>
+<script class="notranslate">
+    function downloadSampleDoc() {
+        var doc = new jsPDF();
+        // doc.setDisplayMode(2);
+        // doc.setDisplayMode(2, 'continuous', 'FullScreen');
+        doc.setR2L(false);
+        doc.setFont("Assistant");
+        const options = {
+            isInputVisual: false,
+            isOutputVisual: true,
+            isInputRtl: false,
+            isOutputRtl: false
+        };
+        doc.text("1234 ", 10, 40, options);
+        doc.text("1234", 100, 40, options);
+        doc.text(" שלום עליכם ", 10, 60, options);
+        doc.text("abc ", 10, 80, options);
+        doc.text("abc", 100, 80, options);
+
+        doc.save();
+    }
+
+    function convert() {
+        console.log('convert start');
+        // downloadSampleDoc();
+        // console.log('localStorage json ' + JSON.stringify(localStorage));
+        var lang = $('select.cloudlocalization-selection').val();
+
+        // console.log('$(\'select.cloudlocalization-selection\').val()' + lang);
+        $("form#settingDetail :input").each(function () {
+            var input = $(this);
+            input.attr("name", input.attr("id"));
+        });
+        var data = getFormValues($('#settingDetail'));
+        // console.log('saving settings ' + JSON.stringify(data));
+        $.ajax({
+            type: 'POST',
+            url: apiUrl + 'savePDFSettingsGeneric',
+            data: data,
+            success: function (result) {
+                // console.log('settings saved ' + JSON.stringify(result));
+            }
+        });
+        console.log('convert step 2');
+        var enable_pages = [];
+
+        $("form#settingDetail").children('div.form-check').children('input:checkbox:checked').each(function () {
+            enable_pages.push($(this).val());
+        });
+
+        var googleAnalyticsDateRange = $('select#analyticsDateRange').val();
+        var chart_type = 'column';
+        var chartdataRanking = [], chartdataAvgRanking = [], chartdataAna = [], chartdataKey = [], chartdataMed = [],
+            chartdataSou = [], chartdataBro = [], chartdataTy = [], chartdataMob = [], chartdataCou = [],
+            chartdataLinksType = [], chartdataLinksSemantic = [], chartdataLinksAttributes = [];
+
+        let currWebsiteName;
+        if (!currWebsite) {
+            currWebsite = $('#inputSearchWebsite').val();
+            currWebsiteName = currWebsite;
+        }
+
+        var dashboard_url = apiUrl + 'getMyJsonDataWebsite?api=WebsiteRanks&url=' + currWebsite;
+        var WebsiteRanks_url = apiUrl + 'getMyJsonRankedKeywordsKeywordForWebsite?&url=' + currWebsite;
+        var landingPages_url = apiUrl + 'jsonLandingPage?url=' + currWebsite;
+        var summaryWebsite_url = apiUrl + 'getMyJsonExecutiveSummaryWebsite?url=' + currWebsite + '&firstPos=true&monthAgoPos=true&currentPosition=true&avgRanksReport=true';
+        var websiteData_url = apiUrl + 'getMyJsonDataWebsite?url=' + currWebsite;
+        var keyword_url = apiUrl + 'jsonKeywordForWebsite?url=' + currWebsite;
+        var analyticsKeyword_url = apiUrl + 'getMyJsonGoogleAnalyticsWebsite?url=' + currWebsite + '&viewType=keyword' + googleAnalyticsDateRange;
+        var analyticsMedium_url = apiUrl + 'getMyJsonGoogleAnalyticsWebsite?url=' + currWebsite + '&viewType=medium' + googleAnalyticsDateRange;
+        var analyticsSource_url = apiUrl + 'getMyJsonGoogleAnalyticsWebsite?url=' + currWebsite + '&viewType=source' + googleAnalyticsDateRange;
+        var analyticsBrowser_url = apiUrl + 'getMyJsonGoogleAnalyticsWebsite?url=' + currWebsite + '&viewType=browser' + googleAnalyticsDateRange;
+        var analyticsVisitorType_url = apiUrl + 'getMyJsonGoogleAnalyticsWebsite?url=' + currWebsite + '&viewType=visitorType' + googleAnalyticsDateRange;
+        var analyticsIsMobile_url = apiUrl + 'getMyJsonGoogleAnalyticsWebsite?url=' + currWebsite + '&viewType=isMobile' + googleAnalyticsDateRange;
+        var analyticsCountry_url = apiUrl + 'getMyJsonGoogleAnalyticsWebsite?url=' + currWebsite + '&viewType=country' + googleAnalyticsDateRange;
+        var linkSummary_url = apiUrl + 'getMyJsonCompDataGeneric?api=WebsiteLinksSummary&url=' + currWebsite;
+        var linkList_url = apiUrl + 'getMyJsonCompDataGeneric?api=WebsiteLinksHistory&url=' + currWebsite;
+        var analytics_url = apiUrl + 'getMyJsonGoogleAnalyticsVisitsWebsite?url=' + currWebsite + googleAnalyticsDateRange;
+        console.log('convert step 3');
+        $.when(
+            enable_pages.indexOf("Website Info") == -1 || $.getJSON(dashboard_url),
+            (enable_pages.indexOf("Other Keywords") == -1 && enable_pages.indexOf("Website Info") == -1) || $.getJSON(WebsiteRanks_url),
+            enable_pages.indexOf("Landing Pages") == -1 || $.getJSON(landingPages_url),
+            enable_pages.indexOf("Website Info") == -1 || $.getJSON(summaryWebsite_url),
+            enable_pages.indexOf("My Keywords") == -1 || $.getJSON(websiteData_url),
+            (enable_pages.indexOf("My Keywords") == -1 && enable_pages.indexOf("Higher Keywords") == -1) || $.getJSON(keyword_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analyticsKeyword_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analyticsMedium_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analyticsSource_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analyticsBrowser_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analyticsVisitorType_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analyticsIsMobile_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analyticsCountry_url),
+            enable_pages.indexOf("Links Summary") == -1 || $.getJSON(linkSummary_url),
+            enable_pages.indexOf("Links List") == -1 || $.getJSON(linkList_url),
+            enable_pages.indexOf("Google Analytics Data") == -1 || $.getJSON(analytics_url),
+        ).done(function () {
+            console.log('convert step 3');
+            // ******************************************Chart
+            if (arguments[1] != true && arguments[1][0] && arguments[1][0]['data']) {
+                var json = JSON.parse(arguments[1][0]['data']);
+                for (const key in json['metrics']['organic']) {
+                    if (key.includes('pos') && key.indexOf('pos') == 0) {
+                        chartdataRanking.push({'y': json['metrics']['organic'][key], 'label': key.slice(4)});
+                    }
+                }
+
+                var chartRanking = new CanvasJS.Chart("chartRanking", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    dataPointMaxWidth: 40,
+                    data: [
+                        {
+                            type: 'column',
+                            color: "blue",
+                            dataPoints: chartdataRanking
+                        }
+                    ]
+                });
+                chartRanking.render();
+            }
+            if (arguments[3] != true) {
+                var json = JSON.parse(arguments[3][0]['data']);
+                for (const key in json['avgRanksReport']) {
+                    chartdataAvgRanking.push({'y': json['avgRanksReport'][key] * -1, 'label': key});
+                }
+                var chartAvgRanking = new CanvasJS.Chart("chartAvgRanking", {
+                    title: {
+                        text: getTranslationWord("Website Average Ranking"),
+                    },
+                    axisX: {
+                        labelFontSize: 25,
+                    },
+                    axisY: {
+                        reversed: true,
+                        labelFontSize: 25
+                    },
+                    data: [
+                        {
+                            type: 'spline',
+                            color: "blue",
+                            dataPoints: chartdataAvgRanking
+                        }
+                    ]
+                });
+                chartAvgRanking.render();
+                var chartdataWebsiteStatus = [];
+                if (document.getElementById("initialStatus").checked) {
+                    chartdataWebsiteStatus.push(
+                        {
+                            type: "column",
+                            indexLabel: document.getElementById("addStatusDetail").checked ? null : "{y}%",
+                            indexLabelPlacement: "outside",
+                            indexLabelFontSize: 25,
+                            showInLegend: true,
+                            legendText: getTranslationWord("Initial Status"),
+                            color: "#16D090",
+                            dataPoints: [
+                                {label: getTranslationWord('Keywords in top 20'), y: json['top20firstPos']},
+                                {label: getTranslationWord('Keywords in top 10'), y: json['top10firstPos']},
+                                {label: getTranslationWord('Keywords in top 5'), y: json['top5firstPos']},
+                                {label: getTranslationWord('Keywords in First Position'), y: json['top5firstPos']},
+                            ]
+                        }
+                    )
+                }
+                console.log('convert step 4');
+
+                if (document.getElementById("oneMonthAgo").checked) {
+                    chartdataWebsiteStatus.push(
+                        {
+                            type: "column",
+                            indexLabel: document.getElementById("addStatusDetail").checked ? null : "{y}%",
+                            indexLabelPlacement: "outside",
+                            indexLabelFontSize: 25,
+                            showInLegend: true,
+                            legendText: getTranslationWord("Month Ago"),
+                            color: "#336CFB",
+                            dataPoints: [
+                                {label: getTranslationWord('Keywords in top 20'), y: json['top20monthAgoPos']},
+                                {label: getTranslationWord('Keywords in top 10'), y: json['top10monthAgoPos']},
+                                {label: getTranslationWord('Keywords in top 5'), y: json['top5monthAgoPos']},
+                                {label: getTranslationWord('Keywords in First Position'), y: json['top5monthAgoPos']},
+                            ]
+                        }
+                    )
+                }
+                if (document.getElementById("websiteCurrentStatus").checked) {
+                    chartdataWebsiteStatus.push(
+                        {
+                            type: "column",
+                            indexLabel: document.getElementById("addStatusDetail").checked ? null : "{y}%",
+                            indexLabelPlacement: "outside",
+                            indexLabelFontSize: 25,
+                            showInLegend: true,
+                            legendText: getTranslationWord("Current Status"),
+                            color: "#FAC032",
+                            dataPoints: [
+                                {label: getTranslationWord('Keywords in top 20'), y: json['top20currentPosition']},
+                                {label: getTranslationWord('Keywords in top 10'), y: json['top10currentPosition']},
+                                {label: getTranslationWord('Keywords in top 5'), y: json['top5currentPosition']},
+                                {
+                                    label: getTranslationWord('Keywords in First Position'),
+                                    y: json['top5currentPosition']
+                                },
+                            ]
+                        }
+                    )
+                }
+                var chartWebsiteStatus = new CanvasJS.Chart("chartWebsiteStatus", {
+                    axisX: {
+                        labelFontSize: 25,
+                    },
+                    axisY: {
+                        labelFontSize: 25,
+                    },
+                    legend: {
+                        fontSize: 25,
+                    },
+                    dataPointMaxWidth: 50,
+                    data: chartdataWebsiteStatus
+                });
+                chartWebsiteStatus.render();
+            }
+            console.log('convert step 5');
+            if (arguments[6] != true) {
+                if (arguments[6][0]['list'] != null) var json = arguments[6][0]['list'];
+                else var json = [];
+                var chartColors = [
+                    '#4661EE',
+                    '#EC5657',
+                    '#1BCDD1',
+                    '#8FAABB',
+                    '#B08BEB',
+                    '#3EA0DD',
+                    '#F5A52A',
+                    '#23BFAA',
+                    '#FAA586',
+                    '#EB8CC6'
+                ]
+
+                var chartKey = new CanvasJS.Chart("chartKey", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 30,
+                        fontFamily: "Lato",
+                    },
+                    dataPointMaxWidth: 50,
+                    axisY: {
+                        gridThickness: 0,
+                        lineThickness: 0,
+                        labelWrap: false,
+                    },
+                    data: getMultiChartData(json),
+                });
+                chartKey.render();
+            }
+            if (arguments[7] != true) {
+                if (arguments[7][0]['list'] != null) var json = arguments[7][0]['list'];
+                else var json = [];
+
+                var chartMed = new CanvasJS.Chart("chartMed", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 30,
+                        fontFamily: "Lato",
+                    },
+                    dataPointMaxWidth: 50,
+                    data: getMultiChartData(json),
+                });
+                chartMed.render();
+            }
+            if (arguments[8] != true) {
+                if (arguments[8][0]['list'] != null) var json = arguments[8][0]['list'];
+                else var json = [];
+
+                var chartSou = new CanvasJS.Chart("chartSou", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 30,
+                        fontFamily: "Lato",
+                    },
+                    dataPointMaxWidth: 50,
+                    data: getMultiChartData(json),
+                });
+                chartSou.render();
+            }
+            console.log('convert step 6');
+            if (arguments[9] != true) {
+                if (arguments[9][0]['list'] != null) var json = arguments[9][0]['list'];
+                else var json = [];
+
+                var chartBro = new CanvasJS.Chart("chartBro", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 30,
+                        fontFamily: "Lato",
+                    },
+                    dataPointMaxWidth: 50,
+                    data: getMultiChartData(json),
+                });
+                chartBro.render();
+            }
+            if (arguments[10] != true) {
+                if (arguments[10][0]['list'] != null) var json = arguments[10][0]['list'];
+                else var json = [];
+
+                var chartTy = new CanvasJS.Chart("chartTy", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 30,
+                        fontFamily: "Lato",
+                    },
+                    dataPointMaxWidth: 50,
+                    data: getMultiChartData(json),
+                });
+                chartTy.render();
+            }
+            if (arguments[11] != true) {
+                if (arguments[11][0]['list'] != null) var json = arguments[11][0]['list'];
+                else var json = [];
+
+                var chartMob = new CanvasJS.Chart("chartMob", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 30,
+                        fontFamily: "Lato",
+                    },
+                    dataPointMaxWidth: 50,
+                    data: getMultiChartData(json),
+                });
+                chartMob.render();
+            }
+            if (arguments[12] != true) {
+                if (arguments[12][0]['list'] != null) var json = arguments[12][0]['list'];
+                else var json = [];
+
+                var chartCou = new CanvasJS.Chart("chartCou", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 30,
+                        fontFamily: "Lato",
+                    },
+                    dataPointMaxWidth: 50,
+                    data: getMultiChartData(json),
+                });
+                chartCou.render();
+            }
+            console.log('convert step 7');
+            if (arguments[13] != true) {
+                var json = JSON.parse(arguments[13][0]['data']);
+                totalLinksTypesVal = 0;
+                totalLinksSemanticVal = 0;
+                totalLinksAttributesVal = 0;
+                for (let key in json['referring_links_types']) {
+                    totalLinksTypesVal += json['referring_links_types'][key];
+                    chartdataLinksType.push({'y': json['referring_links_types'][key], 'legendText': key})
+                }
+                for (let key in json['referring_links_semantic_locations']) {
+                    totalLinksSemanticVal += json['referring_links_semantic_locations'][key];
+                    chartdataLinksSemantic.push({
+                        'y': json['referring_links_semantic_locations'][key],
+                        'legendText': key
+                    })
+                }
+                for (let key in json['referring_links_attributes']) {
+                    totalLinksAttributesVal += json['referring_links_attributes'][key];
+                    chartdataLinksAttributes.push({'y': json['referring_links_attributes'][key], 'legendText': key})
+                }
+                var chartLinksType = new CanvasJS.Chart("chartLinksType", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 25,
+                    },
+                    data: [
+                        {
+                            type: 'pie',
+                            showInLegend: true,
+                            dataPoints: chartdataLinksType
+                        }
+                    ]
+                });
+                chartLinksType.render();
+                var chartLinksSemantic = new CanvasJS.Chart("chartLinksSemantic", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 25,
+                    },
+                    data: [
+                        {
+                            type: 'pie',
+                            showInLegend: true,
+                            dataPoints: chartdataLinksSemantic
+                        }
+                    ]
+                });
+                chartLinksSemantic.render();
+                var chartLinksAttributes = new CanvasJS.Chart("chartLinksAttributes", {
+                    axisX: {
+                        labelFontSize: 30,
+                    },
+                    axisY: {
+                        labelFontSize: 30,
+                    },
+                    legend: {
+                        fontSize: 25,
+                    },
+                    data: [
+                        {
+                            type: 'pie',
+                            showInLegend: true,
+                            dataPoints: chartdataLinksAttributes
+                        }
+                    ]
+                });
+                chartLinksAttributes.render();
+            }
+            console.log('convert step 8');
+            if (arguments[14] != true) {
+                var json = JSON.parse(arguments[14][0]['data']);
+                if (arguments[14][0]['data'] != undefined && json.hasOwnProperty('items')) {
+                    json = json['items'];
+                } else {
+                    json = [];
+                }
+                chartdataTotalBackLinks = [];
+                chartdataReferringDomains = [];
+                chartdataWebsiteRank = [];
+                chartdataNewBackLinks = [];
+                chartdataNewReferringDomains = [];
+                chartdataLostBackLinks = [];
+                chartdataBrokenBackLinks = [];
+                chartdataBrokenPages = [];
+                chartdataCom = [];
+                chartdataOrg = [];
+                chartdataNet = [];
+                chartdataAnchor = [];
+                chartdataCanonical = [];
+                chartdataRedirect = [];
+                chartdataAlternate = [];
+                chartdataArticle = [];
+                chartdataMain = [];
+                chartdataAside = [];
+                chartdataFooter = [];
+                chartdataInternalLinksCount = [];
+                chartdataExternalLinksCount = [];
+                for (i = 0; i < json.length; i++) {
+                    chartdataTotalBackLinks.push({'x': new Date(json[i]['date']), 'y': json[i]['backlinks']})
+                    chartdataReferringDomains.push({'x': new Date(json[i]['date']), 'y': json[i]['referring_domains']})
+                    chartdataWebsiteRank.push({'x': new Date(json[i]['date']), 'y': json[i]['rank']})
+                    chartdataNewBackLinks.push({x: new Date(json[i]['date']), y: json[i]['new_backlinks']})
+                    chartdataNewReferringDomains.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['new_referring_domains']
+                    })
+                    chartdataLostBackLinks.push({x: new Date(json[i]['date']), y: json[i]['lost_backlinks']})
+                    chartdataBrokenBackLinks.push({x: new Date(json[i]['date']), y: json[i]['broken_backlinks']})
+                    chartdataBrokenPages.push({x: new Date(json[i]['date']), y: json[i]['broken_pages']})
+                    chartdataCom.push({x: new Date(json[i]['date']), y: json[i]['referring_links_tld']['com']})
+                    chartdataOrg.push({x: new Date(json[i]['date']), y: json[i]['referring_links_tld']['org']})
+                    chartdataNet.push({x: new Date(json[i]['date']), y: json[i]['referring_links_tld']['net']})
+                    chartdataAnchor.push({x: new Date(json[i]['date']), y: json[i]['referring_links_types']['anchor']})
+                    chartdataCanonical.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['referring_links_types']['canonical']
+                    })
+                    chartdataRedirect.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['referring_links_types']['redirect']
+                    })
+                    chartdataAlternate.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['referring_links_types']['alternate']
+                    })
+                    chartdataArticle.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['referring_links_semantic_locations']['article']
+                    })
+                    chartdataAside.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['referring_links_semantic_locations']['aside']
+                    })
+                    chartdataMain.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['referring_links_semantic_locations']['main']
+                    })
+                    chartdataFooter.push({
+                        x: new Date(json[i]['date']),
+                        y: json[i]['referring_links_semantic_locations']['footer']
+                    })
+                    chartdataInternalLinksCount.push({x: new Date(json[i]['date']), y: json[i]['internal_links_count']})
+                    chartdataExternalLinksCount.push({x: new Date(json[i]['date']), y: json[i]['external_links_count']})
+                }
+                var chartLinksHistorySummary = new CanvasJS.Chart("chartLinksHistorySummary", {
+                    axisX: {
+                        valueFormatString: "YYYY-MM",
+                        interval: 1
+                    },
+                    dataPointMaxWidth: 40,
+                    legend: {
+                        fontSize: 20,
+                        verticalAlign: "top",
+                        horizontalAlign: 'right'
+                    },
+                    data: [
+                        {
+                            type: "spline",
+                            color: "blue",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("total backlinks"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataTotalBackLinks
+                        },
+                        {
+                            type: "spline",
+                            color: "green",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("referring domains"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataReferringDomains
+                        },
+                        {
+                            type: "column",
+                            color: "orange",
+                            showInLegend: true,
+                            name: getTranslationWord("website rank"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataWebsiteRank
+                        },
+                    ]
+                });
+                console.log('convert step 9');
+                chartLinksHistorySummary.render();
+
+                var chartLinksHistoryNewLinks = new CanvasJS.Chart("chartLinksHistoryNewLinks", {
+                    axisX: {
+                        valueFormatString: "YYYY-MM",
+                        interval: 1
+                    },
+                    dataPointMaxWidth: 40,
+                    legend: {
+                        fontSize: 20,
+                        verticalAlign: "top",
+                        horizontalAlign: 'right'
+                    },
+                    data: [
+                        {
+                            type: "spline",
+                            color: "blue",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("new backlinks"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataNewBackLinks
+                        },
+                        {
+                            type: "spline",
+                            color: "green",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("newreferring domains"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataNewReferringDomains
+                        },
+                    ]
+                });
+                chartLinksHistoryNewLinks.render();
+
+                var chartLinksHistoryLinksIssues = new CanvasJS.Chart("chartLinksHistoryLinksIssues", {
+                    axisX: {
+                        valueFormatString: "YYYY-MM",
+                        interval: 1
+                    },
+                    dataPointMaxWidth: 40,
+                    legend: {
+                        fontSize: 20,
+                        verticalAlign: "top",
+                        horizontalAlign: 'right'
+                    },
+                    data: [
+                        {
+                            type: "spline",
+                            color: "red",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("lost backlinks"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataLostBackLinks
+                        },
+                        {
+                            type: "spline",
+                            color: "blue",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("broken backlinks"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataBrokenBackLinks
+                        },
+                        {
+                            type: "spline",
+                            color: "orange",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("broken pages"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataBrokenPages
+                        },
+                    ]
+                });
+                chartLinksHistoryLinksIssues.render();
+                console.log('convert step 10');
+                var chartLinksHistoryTopLevelDomain = new CanvasJS.Chart("chartLinksHistoryTopLevelDomain", {
+                    axisX: {
+                        valueFormatString: "YYYY-MM",
+                        interval: 1
+                    },
+                    dataPointMaxWidth: 40,
+                    legend: {
+                        fontSize: 20,
+                        verticalAlign: "top",
+                        horizontalAlign: 'right'
+                    },
+                    data: [
+                        {
+                            type: "spline",
+                            color: "blue",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("com"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataCom
+                        },
+                        {
+                            type: "spline",
+                            color: "green",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("org"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataOrg
+                        },
+                        {
+                            type: "spline",
+                            color: "orange",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("net"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataNet
+                        }
+                    ]
+                });
+                chartLinksHistoryTopLevelDomain.render();
+
+                var chartLinksHistoryTypes = new CanvasJS.Chart("chartLinksHistoryTypes", {
+                    axisX: {
+                        valueFormatString: "YYYY-MM",
+                        interval: 1
+                    },
+                    dataPointMaxWidth: 40,
+                    legend: {
+                        fontSize: 20,
+                        verticalAlign: "top",
+                        horizontalAlign: 'right'
+                    },
+                    data: [
+                        {
+                            type: "spline",
+                            color: "red",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("anchor"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataAnchor
+                        },
+                        {
+                            type: "spline",
+                            color: "blue",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("canonical"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataCanonical
+                        },
+                        {
+                            type: "spline",
+                            color: "orange",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("redirect"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataRedirect
+                        },
+                        {
+                            type: "spline",
+                            color: "green",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("alternate"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataAlternate
+                        }
+                    ]
+                });
+                chartLinksHistoryTypes.render();
+
+                var chartLinksHistoryLocations = new CanvasJS.Chart("chartLinksHistoryLocations", {
+                    axisX: {
+                        valueFormatString: "YYYY-MM",
+                        interval: 1
+                    },
+                    dataPointMaxWidth: 40,
+                    legend: {
+                        fontSize: 20,
+                        verticalAlign: "top",
+                        horizontalAlign: 'right'
+                    },
+                    data: [
+                        {
+                            type: "spline",
+                            color: "red",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("article"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataArticle
+                        },
+                        {
+                            type: "spline",
+                            color: "orange",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("footer"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataFooter
+                        },
+                        {
+                            type: "spline",
+                            color: "green",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("aside"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataAside
+                        },
+                        {
+                            type: "spline",
+                            color: "blue",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("main"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataMain
+                        }
+                    ]
+                });
+                chartLinksHistoryLocations.render();
+                console.log('convert step 11');
+                var chartLinksHistoryOnpage = new CanvasJS.Chart("chartLinksHistoryOnpage", {
+                    axisX: {
+                        valueFormatString: "YYYY-MM",
+                        interval: 1
+                    },
+                    dataPointMaxWidth: 40,
+                    legend: {
+                        fontSize: 20,
+                        verticalAlign: "top",
+                        horizontalAlign: 'right'
+                    },
+                    data: [
+                        {
+                            type: "spline",
+                            color: "red",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("internal links count"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataInternalLinksCount
+                        },
+                        {
+                            type: "spline",
+                            color: "black",
+                            showInLegend: true,
+                            markerType: "none",
+                            name: getTranslationWord("external links count"),
+                            xValueFormatString: "YYYY-MM",
+                            dataPoints: chartdataExternalLinksCount
+                        },
+                    ]
+                });
+                chartLinksHistoryOnpage.render();
+            }
+            if (arguments[15] != true) {
+                for (const key in arguments[15][0]['map2']) {
+                    const d = new Date(Number(key));
+                    chartdataAna.push({'y': arguments[15][0]['map2'][key], 'label': d.toLocaleDateString()});
+                }
+                var chartAna = new CanvasJS.Chart("chartAna", {
+                    axisX: {
+                        labelFontSize: 20,
+                    },
+                    axisY: {
+                        labelFontSize: 20,
+                    },
+                    data: [
+                        {
+                            type: 'spline',
+                            color: "blue",
+                            dataPoints: chartdataAna
+                        }
+                    ]
+                });
+                chartAna.render();
+            }
+            canvasRanking = $("#chartRanking .canvasjs-chart-canvas").get(0);
+            canvasAvgRanking = $("#chartAvgRanking .canvasjs-chart-canvas").get(0);
+            canvasWebsiteStatus = $("#chartWebsiteStatus .canvasjs-chart-canvas").get(0);
+            canvasAna = $("#chartAna .canvasjs-chart-canvas").get(0);
+            canvasKey = $("#chartKey .canvasjs-chart-canvas").get(0);
+            canvasBro = $("#chartBro .canvasjs-chart-canvas").get(0);
+            canvasCou = $("#chartCou .canvasjs-chart-canvas").get(0);
+            canvasMob = $("#chartMob .canvasjs-chart-canvas").get(0);
+            canvasMed = $("#chartMed .canvasjs-chart-canvas").get(0);
+            canvasSou = $("#chartSou .canvasjs-chart-canvas").get(0);
+            canvasTy = $("#chartTy .canvasjs-chart-canvas").get(0);
+            canvasLinksType = $("#chartLinksType .canvasjs-chart-canvas").get(0);
+            canvasLinksSemantic = $("#chartLinksSemantic .canvasjs-chart-canvas").get(0);
+            canvasLinksAttributes = $("#chartLinksAttributes .canvasjs-chart-canvas").get(0);
+            canvasLinksHistorySummary = $("#chartLinksHistorySummary .canvasjs-chart-canvas").get(0);
+            canvasLinksHistoryNewLinks = $("#chartLinksHistoryNewLinks .canvasjs-chart-canvas").get(0);
+            canvasLinksHistoryLinksIssues = $("#chartLinksHistoryLinksIssues .canvasjs-chart-canvas").get(0);
+            canvasLinksHistoryTopLevelDomain = $("#chartLinksHistoryTopLevelDomain .canvasjs-chart-canvas").get(0);
+            canvasLinksHistoryTypes = $("#chartLinksHistoryTypes .canvasjs-chart-canvas").get(0);
+            canvasLinksHistoryLocations = $("#chartLinksHistoryLocations .canvasjs-chart-canvas").get(0);
+            canvasLinksHistoryOnpage = $("#chartLinksHistoryOnpage .canvasjs-chart-canvas").get(0);
+            console.log('convert step 12');
+            // *****************************************Table
+            var table = [];
+            var WebsiteRanks_cols = [], landingPages_cols = [], FacebookLikes_cols = [], higherKeywords_cols = [],
+                keywords_cols = [], analyticsKeyword_cols = [], analyticsMedium_cols = [], analyticsSource_cols = [],
+                analyticsBrowser_cols = [], analyticsVisitorType_cols = [], analyticsIsMobile_cols = [],
+                analyticsCountry_cols = [], linkSummary_cols = [], linksTypes_cols = [], linksSemantic_cols = [],
+                linksAttributes_cols = [], linkList_cols = [], keywords_cols_en = [], higherkeywords_cols_en = [];
+            var WebsiteRanks_rows = [], landingPages_rows = [], FacebookLikes_rows = [], higherKeywords_rows = [],
+                keywords_rows = [], analyticsKeyword_rows = [], analyticsMedium_rows = [], analyticsSource_rows = [],
+                analyticsBrowser_rows = [], analyticsVisitorType_rows = [], analyticsIsMobile_rows = [],
+                analyticsCountry_rows = [], linkSummary_rows = [], linksTypes_rows = [], linksSemantic_rows = [],
+                linksAttributes_rows = [], linkList_rows = [];
+            if (arguments[0] != true && arguments[0][0].hasOwnProperty('data') && arguments[0][0]['data'] != undefined) {
+                json = JSON.parse(arguments[0][0]["data"]);
+                summaryCols = ['Ranked Keywords', 'Total Backlinks', 'Facebook Likes', 'Website Rank', 'Referring Domains'];
+                summaryRows = []
+                summaryRows.push(json.rankedKeywords)
+                summaryRows.push(json.linksCount)
+                summaryRows.push(json.facebookCount)
+                summaryRows.push(json.websiteRank)
+                summaryRows.push(json.referringDomains)
+                summary_icons = ['keywords.png', 'backlink.png', 'facebook.png', 'webrank.png', 'domain.png']
+            }
+
+            if (arguments[1] != true && arguments[1][0].hasOwnProperty('data') && arguments[1][0]['data'] != undefined) {
+                var existingKeywordsList = [];
+                var jsonExistingKeywords = arguments[1][0]['list'];
+                var json = JSON.parse(arguments[1][0]['data']);
+                if (jsonExistingKeywords && jsonExistingKeywords != 'undefined') {
+                    for (let j = 0; j < jsonExistingKeywords.length; j++) {
+                        existingKeywordsList.push(jsonExistingKeywords[j]);
+                    }
+                }
+                organicKeys = ['Keywords in First Position', 'Estimated Organic Traffic', 'Keywords in Top 3', 'Keywords in Top 10', 'New Ranks', 'Ranks went Up'];
+                // organicKeys = ['Keywords in First Position', 'Estimated Organic Traffic', 'Keywords in Top 3', 'Keywords in Top 10', 'New Ranks', 'Ranks went Up', 'Ranks went Down', 'Lost Ranks'];
+                organicValues = [
+                    formatNum(json['metrics']['organic']['pos_1']),
+                    nFormatter(json['metrics']['organic']['etv'], 2),
+                    formatNum(json['metrics']['organic']['pos_1'] + json['metrics']['organic']['pos_2_3']),
+                    formatNum(json['metrics']['organic']['pos_1'] + json['metrics']['organic']['pos_2_3'] + json['metrics']['organic']['pos_4_10']),
+                    formatNum(json['metrics']['organic']['is_new']),
+                    formatNum(json['metrics']['organic']['is_up']),
+                    // formatNum(json['metrics']['organic']['is_down']),
+                    // formatNum(json['metrics']['organic']['is_lost']),
+                ];
+                extraKeywordsInfoKeys = ['Keywords', 'Keywords in Top 3', 'Keyword in First Page', 'Average Position', 'Change Percent']
+                extraKeywordsInfoValues = [];
+                extraKeywordsInfoIcons = ['keywords.png', 'top3.png', 'stat_up_fill.png', 'stat_up_yellow.png', 'pie-chart.png'];
+
+                var extraKeywords = 0;
+                var extraSumRanks = 0;
+                var extraKeywordsInTop = 0;
+                var extraKeywordsFirstPage = 0;
+                var extraKeywordsAvgPos = 0;
+                var extraKeywordsChangePercent = 0;
+                organicIcons = ['stat_up.png', 'stat_round.png', 'topkeywords.png', 'top10keywords.png', 'newrank.png', 'rank_up.png', 'rank_down.png', 'lost.png']
+                var Cols = ['Keyword', 'URL', 'Search Volume', 'Difficulty', 'Competition', 'CPC', 'Results', 'Rank']
+                var Rows = [];
+                json = json['items'];
+                for (let i = 0; i < json.length; i++) {
+                    let keywordAlreadyExist = -1;
+                    if (existingKeywordsList.length > 0) {
+                        keywordAlreadyExist = existingKeywordsList.indexOf(json[i]["keyword_data.keyword"]);
+                    }
+                    if (keywordAlreadyExist == -1) {
+                        extraKeywords++;
+                        extraSumRanks += Number(json[i]['ranked_serp_element.serp_item.rank_absolute']);
+                        if (json[i]['ranked_serp_element.serp_item.rank_absolute'] <= 10) {
+                            extraKeywordsFirstPage++;
+                            if (json[i]['ranked_serp_element.serp_item.rank_absolute'] <= 3) {
+                                extraKeywordsInTop++;
+                            }
+                        }
+                        Rows.push([
+                            json[i].hasOwnProperty('keyword_data.keyword') ? json[i]['keyword_data.keyword'] : '',
+                            json[i].hasOwnProperty('ranked_serp_element.serp_item.relative_url') ? decodeURI(json[i]['ranked_serp_element.serp_item.relative_url']) : '',
+                            json[i].hasOwnProperty('keyword_data.keyword_info.search_volume') ? formatNum(json[i]['keyword_data.keyword_info.search_volume']) : '',
+                            json[i].hasOwnProperty('ranked_serp_element.keyword_difficulty') ? formatNum(json[i]['ranked_serp_element.keyword_difficulty']) : '',
+                            json[i].hasOwnProperty('keyword_data.keyword_info.competition') ? formatNum(json[i]['keyword_data.keyword_info.competition']) : '',
+                            json[i].hasOwnProperty('keyword_data.keyword_info.cpc') ? formatNum(json[i]['keyword_data.keyword_info.cpc']) : '',
+                            json[i].hasOwnProperty('ranked_serp_element.se_results_count') ? formatNum(json[i]['ranked_serp_element.se_results_count']) : '',
+                            json[i].hasOwnProperty('ranked_serp_element.serp_item.rank_absolute') ? json[i]['ranked_serp_element.serp_item.rank_absolute'] : '',
+                        ])
+                    }
+                }
+                extraKeywordsInfoValues.push(
+                    formatNum(extraKeywords),
+                    formatNum(extraKeywordsInTop),
+                    formatNum(extraKeywordsFirstPage),
+                    formatNum(extraSumRanks / extraKeywords),
+                    formatNum(String((extraKeywordsChangePercent / higherKeywords).toFixed(2) + "%"))
+                )
+
+                WebsiteRanks_cols = Cols;
+                WebsiteRanks_rows = Rows;
+            }
+            if (arguments[2] != true && arguments[2][0].hasOwnProperty('list') && arguments[2][0]['list'] != undefined) {
+                var json = arguments[2][0]['list'];
+                var Cols = ['Page', 'Title', 'Words', 'In.Links', 'Ext.Links', 'Keyword', 'Checked', 'Score', 'Issues']
+                var Rows = [];
+                var overallScore = 0;
+                var totalIssues = 0;
+                var j = 0;
+                for (let i = 0; i < json.length; i++) {
+                    if (!json[i].pageUrl.includes("/#comp")) {
+                        var domain = json[i].pageUrl;
+                        let startRelativeUrl = domain.indexOf('/');
+                        if (startRelativeUrl > 0) {
+                            domain = domain.slice(startRelativeUrl, domain.length);
+                        }
+                    }
+                    Rows.push([
+                        domain && domain.length > 1 ? domain : 'Homepage',
+                        json[i]['title'],
+                        formatNum(json[i]['wordsCount']),
+                        nFormatter(json[i]['linksIn'], 2),
+                        nFormatter(json[i]['linksOut'], 2),
+                        json[i]['keyword'],
+                        json[i]['lastChecked'],
+                        formatNum(json[i]['optScore']),
+                        formatNum(json[i]['failedTests']),
+                    ])
+                    if (json[i]['optScore'] != 'null') {
+                        overallScore += json[i]['optScore'];
+                        j++;
+                    }
+                    if (json[i]['failedTests'] != 'null') {
+                        totalIssues += json[i]['failedTests'];
+                    }
+                }
+                console.log('convert step 13');
+                landingInfoKeys = ['Overall Score', 'Total Warnings']
+                landingInfoValues = [Math.round(overallScore / j), totalIssues];
+                landingInfoIcons = ['evaluation.png', 'research.png'];
+                landingPages_cols = Cols;
+                landingPages_rows = Rows;
+            }
+            if (arguments[3] != true && arguments[3][0].hasOwnProperty('data') && arguments[3][0]['data'] != undefined) {
+                var json = JSON.parse(arguments[3][0]['data']);
+                currentStatus = {
+                    '5': json['top5currentPosition'] + '%',
+                    '10': json['top10currentPosition'] + '%',
+                    '20': json['top20currentPosition'] + '%',
+                }
+                monthAgoStatus = {
+                    '5': json['top5monthAgoPos'] + '%',
+                    '10': json['top10monthAgoPos'] + '%',
+                    '20': json['top20monthAgoPos'] + '%',
+                }
+                initialStatus = {
+                    '5': json['top5firstPos'] + '%',
+                    '10': json['top10firstPos'] + '%',
+                    '20': json['top20firstPos'] + '%',
+                }
+            }
+            if (arguments[4] != true && arguments[4][0].hasOwnProperty('data') && arguments[4][0]['data'] != undefined) {
+                var json = JSON.parse(arguments[4][0]['data']);
+
+                // keywordsInfoKeys = ['Keywords', 'Keywords in top 3', 'Keyword in First Page', 'Average Position', 'Change Percent']
+                // keywordsInfoValues = [formatNum(json['generalDetails']['keywordsInTrack']), formatNum(json['generalDetails']['ranksInTop']), 0, nFormatter(json['generalDetails']['avgPosCurr'],2), formatNum(json['generalDetails']['changePercent'])+'%'];
+                // KeywordsInfoIcons = ['keywords.png', 'top3.png', 'stat_up_fill.png', 'stat_up_yellow.png', 'pie-chart.png'];
+            }
+            if (arguments[5] != true && arguments[5][0].hasOwnProperty('list') && Object.getPrototypeOf(arguments[5][0]['list']) !== Object.prototype) {
+                var json = arguments[5][0]['list'];
+                var Cols = ['Keyword', 'URL', 'Search Engine', 'Search Volume', 'Results', 'Competition', 'CPC', 'Initial Position', '6 Months Ago', '3 Months Ago', 'Last Month', 'Live Rank', 'Best Rank']
+                var Cols1 = ['Keyword', 'URL', 'Search Engine', 'Search Volume', 'Results', 'Competition', 'CPC', 'Initial Position', '6 Months Ago', '3 Months Ago', 'Last Month', 'Live Rank', 'Best Rank']
+                var Cols2 = ['Keyword', 'URL', 'Search Engine', 'Search Volume', 'Results', 'Competition', 'CPC', 'Initial Position', '6 Months Ago', '3 Months Ago', 'Last Month', 'Live Rank', 'Best Rank']
+                var Cols3 = ['Keyword', 'URL', 'Search Engine', 'Search Volume', 'Results', 'Competition', 'CPC', 'Initial Position', '6 Months Ago', '3 Months Ago', 'Last Month', 'Live Rank', 'Best Rank']
+                var Rows = [];
+                var higher_Rows = [];
+                keywordsInfoKeys = ['Keywords', 'Keywords in top 3', 'Keyword in First Page', 'Average Position', 'Change Percent']
+                keywordsInfoValues = [];
+                KeywordsInfoIcons = ['keywords.png', 'top3.png', 'stat_up_fill.png', 'stat_up_yellow.png', 'pie-chart.png'];
+
+
+                higherKeywordsInfoKeys = ['Keywords', 'Keywords in top 3', 'Keyword In First Page', 'Average Position', 'Change Percent']
+                higherKeywordsInfoValues = [];
+                higherKeywordsInfoIcons = ['keywords.png', 'top3.png', 'stat_up_fill.png', 'stat_up_yellow.png', 'pie-chart.png'];
+
+                var higherKeywords = 0;
+                var higherSumRanks = 0;
+                var higherKeywordsInTop = 0;
+                var higherKeywordsFirstPage = 0;
+                var higherKeywordsAvgPos = 0;
+                var higherKeywordsChangePercent = 0;
+
+                var keywordsCount = 0;
+                var sumRanks = 0;
+                var keywordsInTopPage = 0;
+                var ranksFirstPage = 0;
+                var changePercent = 0
+                for (let i = 0; i < json.length; i++) {
+                    var value = (Number(json[i]['monthAgo1']) - Number(json[i]['currentPosition']));
+                    var chnageDirection = json[i]['currentPosition'];
+                    // if (value > 0) {
+                    //   chnageDirection += " ↓" + value;
+                    // }
+                    // else if (value < 0) {
+                    //   chnageDirection += " ↑" + value;
+                    // }
+                    keywordsCount++;
+                    sumRanks += Number(json[i]['currentPosition']);
+                    changePercent += formatNum(json[i]['posChange'])
+                    if (json[i]['currentPosition'] <= 10) {
+                        ranksFirstPage++;
+                        if (json[i]['currentPosition'] <= 3) {
+                            keywordsInTopPage++;
+                        }
+                    }
+                    if (Number(json[i]['currentPosition']) < Number(json[i]['monthAgo1'])) {
+                        higherKeywords++;
+                        higherSumRanks += Number(json[i]['currentPosition']);
+                        higherKeywordsChangePercent += formatNum(json[i]['posChange']);
+                        if (json[i]['currentPosition'] <= 10) {
+                            higherKeywordsFirstPage++;
+                            if (json[i]['currentPosition'] <= 3) {
+                                higherKeywordsInTop++;
+                            }
+                        }
+                        higher_Rows.push([
+                            json[i]['keywordName'],
+                            json[i]['pageUrl'],
+                            json[i]['searchEngine'],
+                            nFormatter(json[i]['keywordLocalSearch'], 2),
+                            nFormatter(json[i]['keywordResults'], 2),
+                            formatNum(json[i]['keywordCompetition']),
+                            json[i]['keywordCpc'],
+                            json[i]['firstPos'],
+                            json[i]['monthAgo6'],
+                            json[i]['monthAgo3'],
+                            json[i]['monthAgo1'],
+                            json[i]['currentPosition'],
+                            json[i]['bestRank'],
+                        ])
+                    }
+                    Rows.push([
+                        json[i]['keywordName'],
+                        json[i]['pageUrl'],
+                        json[i]['searchEngine'],
+                        nFormatter(json[i]['keywordLocalSearch'], 2),
+                        nFormatter(json[i]['keywordResults'], 2),
+                        formatNum(json[i]['keywordCompetition']),
+                        json[i]['keywordCpc'],
+                        json[i]['firstPos'],
+                        json[i]['monthAgo6'],
+                        json[i]['monthAgo3'],
+                        json[i]['monthAgo1'],
+                        chnageDirection,
+                        json[i]['bestRank'],
+                    ])
+                }
+                keywordsInfoValues[0] = formatNum(keywordsCount);
+                keywordsInfoValues[1] = formatNum(keywordsInTopPage);
+                keywordsInfoValues[2] = formatNum(ranksFirstPage);
+                keywordsInfoValues[3] = formatNum(sumRanks / keywordsCount);
+                keywordsInfoValues[4] = String((changePercent / keywordsCount).toFixed(2) + "%");
+                higherKeywordsInfoValues.push(
+                    formatNum(higherKeywords),
+                    formatNum(higherKeywordsInTop),
+                    formatNum(higherKeywordsFirstPage),
+                    formatNum(higherSumRanks / higherKeywords),
+                    formatNum(String((higherKeywordsChangePercent / higherKeywords).toFixed(2) + "%"))
+                )
+                higherKeywords_cols = Cols1;
+                higherKeywords_rows = higher_Rows;
+                keywords_cols = Cols;
+                keywords_cols_en = Cols2;
+                higherkeywords_cols_en = Cols3;
+                keywords_rows = Rows;
+            }
+            console.log('convert step 14');
+            if (arguments[6] != true && arguments[6][0]['list'] !== null) {
+                if (arguments[6][0]['list'] != null && Array.isArray(arguments[6][0]['list'])) {
+                    var json = arguments[6][0]['list'];
+                } else {
+                    var json = [];
+                }
+                var Cols = ['Name', 'Visits', 'Avg Time on Site', 'Bounce Rate', 'Page Views']
+                var Rows = [];
+                for (let i = 0; i < json.length; i++) {
+                    Rows.push([
+                        json[i]['name'],
+                        json[i]['visits'],
+                        json[i]['avgTimeOnSite'],
+                        json[i]['visitBounceRate'],
+                        json[i]['pageViewsPerVisit'],
+                    ])
+                }
+                analyticsKeyword_cols = Cols;
+                analyticsKeyword_rows = Rows;
+            }
+            if (arguments[7] != true && arguments[7][0]['list'] !== null) {
+                if (arguments[7][0]['list'] != null && Array.isArray(arguments[7][0]['list'])) {
+                    var json = arguments[7][0]['list'];
+                } else {
+                    var json = [];
+                }
+                var Cols = ['Name', 'Visits', 'Avg Time on Site', 'Bounce Rate', 'Page Views']
+                var Rows = [];
+                for (let i = 0; i < json.length; i++) {
+                    Rows.push([
+                        json[i]['name'],
+                        json[i]['visits'],
+                        json[i]['avgTimeOnSite'],
+                        json[i]['visitBounceRate'],
+                        json[i]['pageViewsPerVisit'],
+                    ])
+                }
+                analyticsMedium_cols = Cols;
+                analyticsMedium_rows = Rows;
+            }
+            if (arguments[8] != true && arguments[8][0]['list'] !== null) {
+                if (arguments[8][0]['list'] != null && Array.isArray(arguments[8][0]['list'])) {
+                    var json = arguments[8][0]['list'];
+                } else {
+                    var json = [];
+                }
+                var Cols = ['Name', 'Visits', 'Avg Time on Site', 'Bounce Rate', 'Page Views']
+                var Rows = [];
+                for (let i = 0; i < json.length; i++) {
+                    Rows.push([
+                        json[i]['name'],
+                        json[i]['visits'],
+                        json[i]['avgTimeOnSite'],
+                        json[i]['visitBounceRate'],
+                        json[i]['pageViewsPerVisit'],
+                    ])
+                }
+                analyticsSource_cols = Cols;
+                analyticsSource_rows = Rows;
+            }
+            if (arguments[9] != true && arguments[9][0]['list'] !== null) {
+                if (arguments[9][0]['list'] != null && Array.isArray(arguments[9][0]['list'])) {
+                    var json = arguments[9][0]['list'];
+                } else {
+                    var json = [];
+                }
+                var Cols = ['Name', 'Visits', 'Avg Time on Site', 'Bounce Rate', 'Page Views']
+                var Rows = [];
+                for (let i = 0; i < json.length; i++) {
+                    Rows.push([
+                        json[i]['name'],
+                        json[i]['visits'],
+                        json[i]['avgTimeOnSite'],
+                        json[i]['visitBounceRate'],
+                        json[i]['pageViewsPerVisit'],
+                    ])
+                }
+                analyticsBrowser_cols = Cols;
+                analyticsBrowser_rows = Rows;
+            }
+            if (arguments[10] != true && arguments[10][0]['list'] !== null) {
+                if (arguments[10][0]['list'] != null && Array.isArray(arguments[10][0]['list'])) {
+                    var json = arguments[10][0]['list'];
+                } else {
+                    var json = [];
+                }
+                var Cols = ['Name', 'Visits', 'Avg Time on Site', 'Bounce Rate', 'Page Views']
+                var Rows = [];
+                for (let i = 0; i < json.length; i++) {
+                    Rows.push([
+                        json[i]['name'],
+                        json[i]['visits'],
+                        json[i]['avgTimeOnSite'],
+                        json[i]['visitBounceRate'],
+                        json[i]['pageViewsPerVisit'],
+                    ])
+                }
+                analyticsVisitorType_cols = Cols;
+                analyticsVisitorType_rows = Rows;
+            }
+            if (arguments[11] != true && arguments[11][0]['list'] !== null) {
+                if (arguments[11][0]['list'] != null && Array.isArray(arguments[11][0]['list'])) {
+                    var json = arguments[11][0]['list'];
+                } else {
+                    var json = [];
+                }
+                var Cols = ['Name', 'Visits', 'Avg Time on Site', 'Bounce Rate', 'Page Views']
+                var Rows = [];
+                for (let i = 0; i < json.length; i++) {
+                    Rows.push([
+                        json[i]['name'],
+                        json[i]['visits'],
+                        json[i]['avgTimeOnSite'],
+                        json[i]['visitBounceRate'],
+                        json[i]['pageViewsPerVisit'],
+                    ])
+                }
+                analyticsIsMobile_cols = Cols;
+                analyticsIsMobile_rows = Rows;
+            }
+            console.log('convert step 15');
+            if (arguments[12] != true && arguments[12][0]['list'] !== null) {
+                if (arguments[12][0]['list'] != null && Array.isArray(arguments[12][0]['list'])) {
+                    var json = arguments[12][0]['list'];
+                } else {
+                    var json = [];
+                }
+                var Cols = ['Name', 'Visits', 'Avg Time on Site', 'Bounce Rate', 'Page Views']
+                var Rows = [];
+                for (let i = 0; i < json.length; i++) {
+                    Rows.push([
+                        json[i]['name'],
+                        json[i]['visits'],
+                        json[i]['avgTimeOnSite'],
+                        json[i]['visitBounceRate'],
+                        json[i]['pageViewsPerVisit'],
+                    ])
+                }
+                analyticsCountry_cols = Cols;
+                analyticsCountry_rows = Rows;
+            }
+            if (arguments[13] != true && arguments[13][0].hasOwnProperty('data') && arguments[13][0]['data'] != undefined) {
+                json = JSON.parse(arguments[13][0]['data']);
+                linksSummaryGeneralKeys = ['BackLinks', 'Referring Pages', 'Broken Backlinks', 'Broken Pages', 'Referring Domains', 'Site Rank', 'Internal BackLinks', 'External Backlinks']
+                linksSummaryGeneralValues = [formatNum(json.backlinks), formatNum(json.referring_pages), formatNum(json.broken_backlinks), formatNum(json.broken_pages), formatNum(json.referring_domains), formatNum(json.rank), formatNum(json.internal_links_count), formatNum(json.external_links_count)];
+                linksSummaryGeneralIcons = ['backlink1.png', 'reffer.png', 'broken-link.png', 'broken-page.png', 'domain-registration.png', 'ranking.png', 'iebroken-link.png', 'eebroken-link.png']
+                linksTypes_cols = ['TYPE', 'VALUE', 'PERCENT'];
+                linksTypes_rows = [];
+                linksSemantic_cols = ['TYPE', 'VALUE', 'PERCENT'];
+                linksSemantic_rows = [];
+                linksAttributes_cols = ['TYPE', 'VALUE', 'PERCENT'];
+                linksAttributes_rows = [];
+                for (const key in json['referring_links_types']) {
+                    linksTypes_rows.push([key, json['referring_links_types'][key], nFormatter(json['referring_links_types'][key] * 100 / totalLinksTypesVal, 2) + "%"]);
+                }
+                for (const key in json['referring_links_semantic_locations']) {
+                    linksSemantic_rows.push([key, json['referring_links_semantic_locations'][key], nFormatter(json['referring_links_semantic_locations'][key] * 100 / totalLinksSemanticVal, 2) + "%"]);
+                }
+                for (const key in json['referring_links_attributes']) {
+                    linksAttributes_rows.push([key, json['referring_links_attributes'][key], nFormatter(json['referring_links_attributes'][key] * 100 / totalLinksAttributesVal, 2) + "%"]);
+                }
+            }
+            if (arguments[14] != true && arguments[14][0].hasOwnProperty('data') && arguments[14][0]['data'] != undefined) {
+                var json = JSON.parse(arguments[14][0]['data']);
+                if (json.hasOwnProperty('items')) {
+                    json = json['items'];
+                } else {
+                    json = [];
+                }
+                linksHistory_xValues = []
+                totalBacklinks = []
+                referringDomains = []
+                websiteRank = []
+                newBacklinks = []
+                newReferringDomains = []
+                lostBacklinks = []
+                brokenBacklinks = []
+                brokenPages = []
+                com = []
+                org = []
+                net = []
+                co_il = []
+                anchor = []
+                canonical = []
+                redirect = []
+                alternate = []
+                article = []
+                footer = []
+                aside = []
+                main = []
+                internalLinksCount = []
+                externalLinksCount = []
+
+                for (i = 0; i < json.length; i++) {
+                    linksHistory_xValues.push(json[i]['date'].slice(0, 7))
+                    totalBacklinks.push(json[i]['backlinks'])
+                    referringDomains.push(json[i]['referring_domains'])
+                    websiteRank.push(json[i]['rank'])
+                    newBacklinks.push(json[i]['new_backlinks'])
+                    newReferringDomains.push(json[i]['new_referring_domains'])
+                    lostBacklinks.push(json[i]['lost_backlinks'])
+                    brokenBacklinks.push(json[i]['broken_backlinks'])
+                    brokenPages.push(json[i]['broken_pages'])
+                    com.push(json[i]['referring_links_tld']['com'])
+                    org.push(json[i]['referring_links_tld']['org'])
+                    net.push(json[i]['referring_links_tld']['net'])
+                    co_il.push(json[i]['referring_links_tld']['co'])
+                    anchor.push(json[i]['referring_links_types']['anchor'])
+                    canonical.push(json[i]['referring_links_types']['canonical'])
+                    redirect.push(json[i]['referring_links_types']['redirect'])
+                    alternate.push(json[i]['referring_links_types']['alternate'])
+                    article.push(json[i]['referring_links_semantic_locations']['article'])
+                    footer.push(json[i]['referring_links_semantic_locations']['footer'])
+                    aside.push(json[i]['referring_links_semantic_locations']['aside'])
+                    main.push(json[i]['referring_links_semantic_locations']['main'])
+                    internalLinksCount.push(json[i]['internal_links_count'])
+                    externalLinksCount.push(json[i]['external_links_count'])
+                }
+                linksHistorySummaryKeys = ['Total Backlinks', 'Referring Domains', 'Website Rank']
+                linksHistorySummaryIcons = ['bluelink.png', 'domain.png', 'webrank.png'];
+                linksHistorySummaryValues = [Math.max.apply(null, totalBacklinks), Math.max.apply(null, referringDomains), Math.max.apply(null, websiteRank)];
+                linksHistoryNewLinksKeys = ['New Backlinks', 'New Referring Domains']
+                linksHistoryNewLinksIcons = ['bluelink.png', 'domain.png'];
+                linksHistoryNewLinksValues = [Math.max.apply(null, newBacklinks), Math.max.apply(null, newReferringDomains)];
+                linksHistoryLinksIssuesKeys = ['Lost backlinks', 'Broken backlinks', 'Broken pages']
+                linksHistoryLinksIssuesIcons = ['lost_link.png', 'broken-link.png', 'broken-pagey.png'];
+                linksHistoryLinksIssuesValues = [Math.max.apply(null, lostBacklinks), Math.max.apply(null, brokenBacklinks), Math.max.apply(null, brokenPages)];
+                linksHistoryTopLevelDomainKeys = ['com', 'org', 'net']
+                linksHistoryTopLevelDomainIcons = ['com.png', 'org.png', 'net.png'];
+                linksHistoryTopLevelDomainValues = [Math.max.apply(null, com), Math.max.apply(null, org), Math.max.apply(null, net)];
+                linksHistoryTypesKeys = ['Anchor', 'Canonical']
+                linksHistoryTypesIcons = ['anchor.png', 'demostration.png'];
+                linksHistoryTypesValues = [Math.max.apply(null, anchor), Math.max.apply(null, canonical)];
+                linksHistoryLocationsKeys = ['Article', 'Main', 'Footer']
+                linksHistoryLocationsIcons = ['article.png', 'main.png', 'footer.png'];
+                linksHistoryLocationsValues = [Math.max.apply(null, article), Math.max.apply(null, main), Math.max.apply(null, footer)];
+                linksHistoryOnpageKeys = ['Internal Links Count', 'External Links Count']
+                linksHistoryOnpageIcons = ['onpage-link.png', 'onpage-link_black.png'];
+                linksHistoryOnpageValues = [Math.max.apply(null, internalLinksCount), Math.max.apply(null, externalLinksCount)];
+            }
+            console.log('convert step 16');
+            var doc = new jsPDF('p', 'pt', 'a4', true);
+            doc = doc.setDisplayMode(2, 'continuous', 'FullScreen');
+            var today = new Date();
+            var date = (today.getDate()) + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+            // doc.setR2L(false);
+
+            if (lang === 'iw') {
+                console.log('set r2l to true');
+                doc.setFont("Assistant");
+                // doc.setR2L(true);
+            }
+            console.log('convert step 17');
+            console.log('localStorage.getItem(\'rtl\') ' + localStorage.getItem('rtl'));
+            console.log('document.getElementsByTagName("html")[0].getAttribute("dir") ' + document.getElementsByTagName("html")[0].getAttribute("dir"));
+            console.log('convert lang is ' + lang);
+            if (localStorage.getItem('rtl') == 1) {
+                console.log('set R2L ' + reverseMode);
+                doc.setR2L(reverseMode);
+            }
+            console.log('convert step 18');
+            var width = doc.internal.pageSize.width;
+            var height = doc.internal.pageSize.height;
+            var imgLogo = new Image();
+            console.log('convert step 18.1');
+            // imgLogo.src = 'https://dlnil54eooeso.cloudfront.net/assets/images/icon/upload-up.png';
+            imgLogo.src = $('img#logoImg').attr('src')
+            console.log('convert step 18.2 imgLogo.src ' + imgLogo.src);
+            if ($('img#logoImg').attr('src') != undefined && $('img#logoImg').width() > 0) {
+                var imgWidth = $('img#logoImg').width();
+                var imgHeight = $('img#logoImg').height();
+                var ratio = imgHeight / imgWidth;
+                if (ratio < 0.5) {
+                    imgWidth = 200;
+                    imgHeight = 200 * ratio;
+                } else {
+                    imgHeight = 100;
+                    imgWidth = 100 / ratio;
+                }
+                console.log('convert step 18.3');
+                // doc.addImage(imgLogo, 'JPEG', lang != 'iw' ? 50 : 350, 50, imgWidth, imgHeight, '', 'FAST');
+                console.log('convert step 18.4');
+            }
+            console.log('convert step 19');
+            doc.setFontSize(14);
+            doc.writeText(lang != 'iw' ? 400 : 100, 65, $('textarea#contactDetail').val());
+            doc.setFontSize(24);
+            doc.setFontType("bold");
+            doc.writeText(0, 362, $('input#coverTitle').val(), {align: 'center'});
+            doc.writeText(0, 390, currWebsiteName ? currWebsiteName : currWebsite, {align: 'center'});
+            doc.setFontSize(14);
+            doc.writeText(0, 738, date, {align: 'center'});
+
+            //var keyValueArray = [summaryCols,summaryRows,summary_icons,landingInfoKeys,landingInfoValues,landingInfoIcons,keywordsInfoKeys,keywordsInfoValues,KeywordsInfoIcons]
+
+            var cols_arr = [WebsiteRanks_cols, keywords_cols, higherKeywords_cols, landingPages_cols, analyticsKeyword_cols, analyticsMedium_cols, analyticsSource_cols, analyticsBrowser_cols, analyticsVisitorType_cols, analyticsIsMobile_cols, analyticsCountry_cols, linksTypes_cols, linksSemantic_cols, linksAttributes_cols, linkList_cols]
+            var rows_arr = [WebsiteRanks_rows, keywords_rows, higherKeywords_rows, landingPages_rows, analyticsKeyword_rows, analyticsMedium_rows, analyticsSource_rows, analyticsBrowser_rows, analyticsVisitorType_rows, analyticsIsMobile_rows, analyticsCountry_rows, linksTypes_rows, linksSemantic_rows, linksAttributes_rows, linkList_rows]
+            if (lang == 'iw') {
+                for (let i = 0; i < cols_arr.length; i++) {
+                    cols_arr[i].reverse();
+                    for (let k = 0; k < cols_arr[i].length; k++) {
+                        cols_arr[i][k] = getTranslationWord(cols_arr[i][k]);
+                    }
+                    for (let j = 0; j < rows_arr[i].length; j++) {
+                        rows_arr[i][j].reverse();
+                    }
+                }
+                keywords_cols_en.reverse();
+                higherkeywords_cols_en.reverse();
+            }
+            let pageWidth = doc.internal.pageSize.getWidth() - 20;
+            var RTL_flag = -1;
+            var RTL_align = 'right';
+            var RTL_index = -1;
+            if (lang != 'iw') {
+                RTL_flag = 1;
+                RTL_align = 'left';
+                pageWidth = 0;
+                RTL_index = 0;
+            }
+            console.log('convert step 20');
+            drawPageBorder()
+            doc.setFontType("normal")
+            if (enable_pages.indexOf("Website Info") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#summaryTitle').val()), {align: 'center'});
+                let i = 0;
+                var imgSummary = []
+                var websiteInfoOptions = [];
+                $("div#websiteInfoOption input:checkbox:checked").each(function () {
+                    websiteInfoOptions.push($(this).val());
+                });
+                var j = 0
+                for (let i = 0; i < summaryCols.length; i++) {
+                    if (websiteInfoOptions.indexOf(summaryCols[i]) != -1) {
+                        imgSummary[i] = new Image();
+                        imgSummary[i].src = assetsUrl + 'assets/images/icon/' + summary_icons[i];
+                        doc.addImage(imgSummary[i], 'PNG', RTL_flag * (30 + 500 / websiteInfoOptions.length * j) + pageWidth, 90, imgSummary[i].width / 2, imgSummary[i].height / 2, 'imgSummary_' + i, '', 'FAST');
+                        doc.setFontSize(12);
+                        doc.setFontType("bold");
+                        doc.writeText(RTL_flag * (60 + 500 / websiteInfoOptions.length * j), 100, formatNum(summaryRows[i]), {align: RTL_align});
+                        doc.setFontType("normal")
+                        doc.setFontSize(6);
+                        doc.writeText(RTL_flag * (60 + 500 / websiteInfoOptions.length * j), 110, getTranslationWord(summaryCols[i]), {align: RTL_align});
+                        j++;
+                    }
+                }
+                var organicHeight = 230;
+                if (websiteInfoOptions.indexOf('Organic Search') != -1) {
+                    organicHeight = 0;
+                    doc.setFontSize(10);
+                    doc.writeText(RTL_flag * 41, 153, getTranslationWord('Organic Search'), {align: RTL_align});
+                    var imgOrganic = [];
+                    for (let i = 0; i < organicKeys.length; i++) {
+                        imgOrganic[i] = new Image();
+                        imgOrganic[i].src = assetsUrl + 'assets/images/icon/' + organicIcons[i];
+                        doc.addImage(imgOrganic[i], 'PNG', i % 2 == 0 ? RTL_flag * 50 + pageWidth : RTL_flag * (50 + 120) + pageWidth, 180 + 40 * (Math.floor(i / 2)), imgOrganic[i].width / 2, imgOrganic[i].height / 2, 'imgOrganic_' + i, '', 'FAST');
+                        doc.setFontSize(12);
+                        doc.setFontType("bold");
+                        doc.writeText(i % 2 == 0 ? RTL_flag * 80 : RTL_flag * (80 + 120), 190 + 40 * (Math.floor(i / 2)), organicValues[i], {align: RTL_align});
+                        doc.setFontType("normal")
+                        doc.setFontSize(6);
+                        const translationWord = getTranslationWord(organicKeys[i]);
+                        // console.log('organicKeys[i] ' + organicKeys[i] + ': ' + translationWord);
+                        doc.writeText(i % 2 == 0 ? RTL_flag * 80 : RTL_flag * (80 + 120), 200 + 40 * (Math.floor(i / 2)), translationWord, {align: RTL_align});
+                    }
+                    doc.setFontSize(8);
+                    doc.writeText(RTL_flag * 280, 160, getTranslationWord("Ranking Distribution"), {align: RTL_align});
+                    var dataURL = canvasRanking.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 200, 250, 120, '', 'FAST');
+                }
+                var dynamicHeight = 0;
+                var chartAvgRankingLeft = 250;
+                if (!document.getElementById('addStatusDetail').checked) {
+                    chartAvgRankingLeft = 0;
+                    pageWidth = 0;
+                    RTL_flag = 1;
+                } else {
+                    if (document.getElementById("websiteCurrentStatus").checked) {
+                        doc.setFontSize(10);
+                        doc.writeText(RTL_flag * 41, 380 - organicHeight, getTranslationWord('Current Website Status'), {align: RTL_align});
+                        let j = 0;
+                        for (let key in currentStatus) {
+                            doc.setFontSize(11);
+                            doc.setTextColor('blue');
+                            doc.writeText(RTL_flag * 50, 410 + j * 30 - organicHeight, currentStatus[key], {align: RTL_align});
+                            doc.setFontSize(8);
+                            doc.setTextColor('black');
+                            doc.writeText(RTL_flag * 100, 410 + j * 30 - organicHeight, getTranslationWord('of Keywords are in the top ' + key + ' results'), {align: RTL_align});
+                            j++;
+                        }
+                    } else {
+                        dynamicHeight += 140;
+                    }
+                    if (document.getElementById("oneMonthAgo").checked) {
+                        doc.setFontSize(10);
+                        doc.writeText(RTL_flag * 41, 530 - dynamicHeight - organicHeight, getTranslationWord('Website Status Month Ago'), {align: RTL_align});
+                        let k = 0;
+                        for (let key in monthAgoStatus) {
+                            doc.setFontSize(11);
+                            doc.setTextColor('blue');
+                            doc.writeText(RTL_flag * 50, 550 + k * 30 - dynamicHeight - organicHeight, monthAgoStatus[key], {align: RTL_align});
+                            doc.setFontSize(8);
+                            doc.setTextColor('black');
+                            doc.writeText(RTL_flag * 100, 550 + k * 30 - dynamicHeight - organicHeight, getTranslationWord('of Keywords are in the top ' + key + ' results'), {align: RTL_align});
+                            k++;
+                        }
+                    } else {
+                        dynamicHeight += 140;
+                    }
+                    if (document.getElementById("initialStatus").checked) {
+                        doc.setFontSize(10);
+                        doc.writeText(RTL_flag * 41, 680 - dynamicHeight - organicHeight, getTranslationWord('Initial Website Status'), {align: RTL_align});
+                        let l = 0;
+                        for (let key in initialStatus) {
+                            doc.setFontSize(11);
+                            doc.setTextColor('blue');
+                            doc.writeText(RTL_flag * 50, 700 + l * 30 - dynamicHeight - organicHeight, initialStatus[key], {align: RTL_align});
+                            doc.setFontSize(8);
+                            doc.setTextColor('black');
+                            doc.writeText(RTL_flag * 100, 700 + l * 30 - dynamicHeight - organicHeight, getTranslationWord('of Keywords are in the top ' + key + ' results'), {align: RTL_align});
+                            l++;
+                        }
+                    } else {
+                        dynamicHeight += 140;
+                    }
+                }
+                console.log('convert step 21');
+                var dataURL = canvasAvgRanking.toDataURL();
+                doc.addImage(dataURL, 'JPEG', RTL_flag * (50 + chartAvgRankingLeft) + 3 * pageWidth / 5, 380 - organicHeight, 500 - chartAvgRankingLeft, 200 - chartAvgRankingLeft / 3, '', 'FAST');
+                var dataURL = canvasWebsiteStatus.toDataURL();
+                doc.addImage(dataURL, 'JPEG', RTL_flag * (50 + chartAvgRankingLeft) + 3 * pageWidth / 5, 630 - organicHeight, 500 - chartAvgRankingLeft, 130, '', 'FAST');
+                drawPageBorder();
+            }
+            if (enable_pages.indexOf("Landing Pages") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#landingTitle').val()), {align: 'center'});
+                var imgLaningPages = [];
+                for (let i = 0; i < landingInfoKeys.length; i++) {
+                    imgLaningPages[i] = new Image();
+                    imgLaningPages[i].src = assetsUrl + 'assets/images/icon/' + landingInfoIcons[i];
+                    doc.addImage(imgLaningPages[i], 'PNG', RTL_flag * (50 + 100 * i) + pageWidth, 90, imgLaningPages[i].width / 2, imgLaningPages[i].height / 2, 'imgLaningPages_' + i, '', 'FAST');
+                    doc.setFontSize(12);
+                    doc.setFontType("bold");
+                    doc.writeText(RTL_flag * (80 + 100 * i), 100, formatNum(landingInfoValues[i]), {align: RTL_align});
+                    doc.setFontType("normal")
+                    doc.setFontSize(6);
+                    doc.writeText(RTL_flag * (80 + 100 * i), 110, getTranslationWord(landingInfoKeys[i]), {align: RTL_align});
+                }
+                addtable(landingPages_cols, landingPages_rows, 140);
+                drawPageBorder();
+            }
+            if (enable_pages.indexOf("My Keywords") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#myKeywordsTitle').val()), {align: 'center'});
+                var imgKeywords = [];
+                for (let i = 0; i < keywordsInfoKeys.length; i++) {
+                    imgKeywords[i] = new Image();
+                    imgKeywords[i].src = assetsUrl + 'assets/images/icon/' + KeywordsInfoIcons[i];
+                    doc.addImage(imgKeywords[i], 'PNG', RTL_flag * (50 + 100 * i) + pageWidth, 90, imgKeywords[i].width / 2, imgKeywords[i].height / 2, 'imgKeywords_' + i, '', 'FAST');
+                    doc.setFontSize(12);
+                    doc.setFontType("bold");
+                    doc.writeText(RTL_flag * (80 + 100 * i), 100, keywordsInfoValues[i], {align: RTL_align});
+                    doc.setFontType("normal")
+                    doc.setFontSize(6);
+                    doc.writeText(RTL_flag * (80 + 100 * i), 110, getTranslationWord(keywordsInfoKeys[i]), {align: RTL_align});
+                }
+                var myKeywordsOption = [];
+                $("div#myKeywordsOption input:checkbox:not(:checked)").each(function () {
+                    myKeywordsOption.push($(this).val());
+                });
+                var tempKeyword_cols = keywords_cols;
+                var tempKeyword_rows = keywords_rows;
+                for (let i = 0; i < myKeywordsOption.length; i++) {
+                    var unCheckedIndex = keywords_cols_en.indexOf(myKeywordsOption[i]);
+                    if (unCheckedIndex != 0 && unCheckedIndex != -1) {
+                        keywords_cols_en.splice(unCheckedIndex, 1);
+                        tempKeyword_cols.splice(unCheckedIndex, 1);
+                        for (let j = 0; j < tempKeyword_rows.length; j++) {
+                            tempKeyword_rows[j].splice(unCheckedIndex, 1);
+                        }
+                    }
+                }
+                addtable(tempKeyword_cols, tempKeyword_rows, 140);
+                drawPageBorder();
+            }
+            console.log('convert step 22');
+            if (enable_pages.indexOf("Higher Keywords") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#higherKeywordsTitle').val()), {align: 'center'});
+                var imghigherKeywords = [];
+                for (let i = 0; i < higherKeywordsInfoKeys.length; i++) {
+                    imghigherKeywords[i] = new Image();
+                    imghigherKeywords[i].src = assetsUrl + 'assets/images/icon/' + higherKeywordsInfoIcons[i];
+                    doc.addImage(imghigherKeywords[i], 'PNG', RTL_flag * (50 + 100 * i) + pageWidth, 90, imghigherKeywords[i].width / 2, imghigherKeywords[i].height / 2, 'imghigherKeywords_' + i, '', 'FAST');
+                    doc.setFontSize(12);
+                    doc.setFontType("bold");
+                    doc.writeText(RTL_flag * (80 + 100 * i), 100, higherKeywordsInfoValues[i], {align: RTL_align});
+                    doc.setFontType("normal")
+                    doc.setFontSize(6);
+                    doc.writeText(RTL_flag * (80 + 100 * i), 110, getTranslationWord(higherKeywordsInfoKeys[i]), {align: RTL_align});
+                }
+                var tempHigherKeyword_cols = higherKeywords_cols;
+                var tempHigherKeyword_rows = higherKeywords_rows;
+                for (let i = 0; i < myKeywordsOption.length; i++) {
+                    var unCheckedIndex = higherkeywords_cols_en.indexOf(myKeywordsOption[i]);
+                    if (unCheckedIndex != 0 && unCheckedIndex != -1) {
+                        higherkeywords_cols_en.splice(unCheckedIndex, 1);
+                        tempHigherKeyword_cols.splice(unCheckedIndex, 1);
+                        for (let j = 0; j < tempHigherKeyword_rows.length; j++) {
+                            tempHigherKeyword_rows[j].splice(unCheckedIndex, 1);
+                        }
+                    }
+                }
+                addtable(tempHigherKeyword_cols, tempHigherKeyword_rows, 140);
+                drawPageBorder();
+            }
+            if (enable_pages.indexOf("Other Keywords") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#otherKeywordsTitle').val()), {align: 'center'});
+                var imgextraKeywords = [];
+                for (let i = 0; i < extraKeywordsInfoKeys.length; i++) {
+                    imgextraKeywords[i] = new Image();
+                    imgextraKeywords[i].src = assetsUrl + 'assets/images/icon/' + extraKeywordsInfoIcons[i];
+                    doc.addImage(imgextraKeywords[i], 'PNG', RTL_flag * (50 + 100 * i) + pageWidth, 90, imgextraKeywords[i].width / 2, imgextraKeywords[i].height / 2, 'imgextraKeywords_' + i, '', 'FAST');
+                    doc.setFontSize(12);
+                    doc.setFontType("bold");
+                    doc.writeText(RTL_flag * (80 + 100 * i), 100, extraKeywordsInfoValues[i], {align: RTL_align});
+                    doc.setFontType("normal")
+                    doc.setFontSize(6);
+                    doc.writeText(RTL_flag * (80 + 100 * i), 110, getTranslationWord(extraKeywordsInfoKeys[i]), {align: RTL_align});
+                }
+                addtable(WebsiteRanks_cols, WebsiteRanks_rows, 140);
+                drawPageBorder();
+            }
+            if (enable_pages.indexOf("Google Analytics Data") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#analyticsTitle').val()), {align: 'center'});
+
+                var dynamicHeight = 0;
+                if (document.getElementById("visits").checked) {
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Visits'), {align: RTL_align});
+                    var dataURL = canvasAna.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 40, 100, 500, 160, '', 'FAST');
+                } else {
+                    dynamicHeight = 210;
+                }
+                if (document.getElementById("keywords").checked) {
+                    doc.writeText(RTL_flag * 40, 290 - dynamicHeight, getTranslationWord('Keywords'), {align: RTL_align});
+                    var dataURL = canvasKey.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 310 - dynamicHeight, 250, 100, '', 'FAST');
+                    addtable(analyticsKeyword_cols, analyticsKeyword_rows, 310 - dynamicHeight, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                }
+                if (document.getElementById("medium").checked) {
+                    doc.addPage();
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Medium'), {align: RTL_align});
+                    var dataURL = canvasMed.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 100, 250, 100, '', 'FAST');
+                    addtable(analyticsMedium_cols, analyticsMedium_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                }
+                if (document.getElementById("source").checked) {
+                    doc.addPage();
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Source'), {align: RTL_align});
+                    var dataURL = canvasSou.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 100, 250, 100, '', 'FAST');
+                    addtable(analyticsSource_cols, analyticsSource_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                }
+                if (document.getElementById("browser").checked) {
+                    doc.addPage();
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Browser'), {align: RTL_align});
+                    var dataURL = canvasBro.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 100, 250, 100, '', 'FAST');
+                    addtable(analyticsBrowser_cols, analyticsBrowser_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                }
+                if (document.getElementById("type").checked) {
+                    doc.addPage();
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Type'), {align: RTL_align});
+                    var dataURL = canvasTy.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 100, 250, 100, '', 'FAST');
+                    addtable(analyticsVisitorType_cols, analyticsVisitorType_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                }
+                if (document.getElementById("mobile").checked) {
+                    doc.addPage();
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Mobile'), {align: RTL_align});
+                    var dataURL = canvasMob.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 100, 250, 100, '', 'FAST');
+                    addtable(analyticsIsMobile_cols, analyticsIsMobile_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                }
+                if (document.getElementById("country").checked) {
+                    doc.addPage();
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Country'), {align: RTL_align});
+                    var dataURL = canvasCou.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', RTL_flag * 300 + 3 * pageWidth / 5, 100, 250, 100, '', 'FAST');
+                    addtable(analyticsCountry_cols, analyticsCountry_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                }
+                drawPageBorder();
+            }
+            if (enable_pages.indexOf("Links Summary") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#linksSummaryTitle').val()), {align: 'center'});
+                doc.setFontSize(12);
+                doc.writeText(RTL_flag * 40, 80, getTranslationWord('General Details'), {align: RTL_align});
+                var imgLinksSummary = [];
+                for (let i = 0; i < linksSummaryGeneralKeys.length; i++) {
+                    imgLinksSummary[i] = new Image();
+                    imgLinksSummary[i].src = assetsUrl + 'assets/images/icon/' + linksSummaryGeneralIcons[i];
+                    doc.addImage(imgLinksSummary[i], 'PNG', RTL_flag * (50 + 140 * (i % 4)) + pageWidth, 100 + Math.floor(i / 4) * 40, linksSummaryGeneralIcons[i].width / 2, linksSummaryGeneralIcons[i].height / 2, 'imgLinksSummary_' + i, '', 'FAST');
+                    doc.setFontSize(12);
+                    doc.setFontType("bold");
+                    doc.writeText(RTL_flag * (80 + 140 * (i % 4)), 110 + Math.floor(i / 4) * 40, linksSummaryGeneralValues[i], {align: RTL_align});
+                    doc.setFontType("normal")
+                    doc.setFontSize(6);
+                    doc.writeText(RTL_flag * (80 + 140 * (i % 4)), 120 + Math.floor(i / 4) * 40, getTranslationWord(linksSummaryGeneralKeys[i]), {align: RTL_align});
+                }
+                doc.setFontSize(12);
+                doc.writeText(RTL_flag * 40, 220, getTranslationWord('Referring Links Types'), {align: RTL_align});
+                addtable(linksTypes_cols, linksTypes_rows, 240, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                var dataURL = canvasLinksType.toDataURL();
+                doc.addImage(dataURL, 'JPEG', RTL_flag * 230 + 2 * pageWidth / 5, 240, 350, 110, '', 'FAST');
+
+                doc.addPage();
+                doc.writeText(RTL_flag * 40, 80, getTranslationWord('Referring Links Semantic Locations'), {align: RTL_align});
+                addtable(linksSemantic_cols, linksSemantic_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                var dataURL = canvasLinksSemantic.toDataURL();
+                doc.addImage(dataURL, 'JPEG', RTL_flag * 230 + 2 * pageWidth / 5, 100, 350, 110, '', 'FAST');
+
+                doc.addPage();
+                doc.writeText(RTL_flag * 40, 80, getTranslationWord('Link attributes of the referring links'), {align: RTL_align});
+                addtable(linksAttributes_cols, linksAttributes_rows, 100, 350 - 6 * pageWidth / 11, pageWidth / 2 + 30);
+                var dataURL = canvasLinksAttributes.toDataURL();
+                doc.addImage(dataURL, 'JPEG', RTL_flag * 230 + 2 * pageWidth / 5, 100, 350, 110, '', 'FAST');
+                drawPageBorder();
+            }
+            if (enable_pages.indexOf("Links List") != -1) {
+                doc.addPage();
+                doc.setFontSize(18);
+                doc.writeText(0, 62, getTranslationWord($('input#linksHistoryTitle').val()), {align: 'center'});
+                if (document.getElementById("summary").checked && typeof linksHistorySummaryKeys !== 'undefined') {
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Summary'), {align: RTL_align});
+                    var imgHistorySummary = [];
+                    for (let i = 0; i < linksHistorySummaryKeys.length; i++) {
+                        imgHistorySummary[i] = new Image();
+                        imgHistorySummary[i].src = assetsUrl + 'assets/images/icon/' + linksHistorySummaryIcons[i];
+                        doc.addImage(imgHistorySummary[i], 'PNG', RTL_flag * (50 + 500 / linksHistorySummaryKeys.length * i) + pageWidth, 90, imgHistorySummary[i].width / 2, imgHistorySummary[i].height / 2, 'imgHistorySummary_' + i, '', 'FAST');
+                        doc.setFontSize(12);
+                        doc.setFontType("bold");
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistorySummaryKeys.length * i), 100, formatNum(linksHistorySummaryValues[i]), {align: RTL_align});
+                        doc.setFontType("normal")
+                        doc.setFontSize(6);
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistorySummaryKeys.length * i), 110, getTranslationWord(linksHistorySummaryKeys[i]), {align: RTL_align});
+                    }
+                    var dataURL = canvasLinksHistorySummary.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 50, 150, 500, 200, '', 'FAST');
+                }
+                if (document.getElementById("newLinks").checked && typeof linksHistoryNewLinksKeys !== 'undefined') {
+                    doc.addPage();
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('New Links'), {align: RTL_align});
+                    var imgHistoryNewLinks = [];
+                    for (let i = 0; i < linksHistoryNewLinksKeys.length; i++) {
+                        imgHistoryNewLinks[i] = new Image();
+                        imgHistoryNewLinks[i].src = assetsUrl + 'assets/images/icon/' + linksHistoryNewLinksIcons[i];
+                        doc.addImage(imgHistoryNewLinks[i], 'PNG', RTL_flag * (50 + 500 / linksHistoryNewLinksKeys.length * i) + pageWidth, 90, imgHistoryNewLinks[i].width / 2, imgHistoryNewLinks[i].height / 2, 'imgHistoryNewLinks_' + i, '', 'FAST');
+                        doc.setFontSize(12);
+                        doc.setFontType("bold");
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistoryNewLinksKeys.length * i), 100, formatNum(linksHistoryNewLinksValues[i]), {align: RTL_align});
+                        doc.setFontType("normal")
+                        doc.setFontSize(6);
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistoryNewLinksKeys.length * i), 110, getTranslationWord(linksHistoryNewLinksKeys[i]), {align: RTL_align});
+                    }
+                    var dataURL = canvasLinksHistoryNewLinks.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 50, 150, 500, 200, '', 'FAST');
+                }
+                if (document.getElementById("linksIssues").checked && typeof linksHistoryLinksIssuesKeys !== 'undefined') {
+                    doc.addPage();
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Links Issues'), {align: RTL_align});
+                    var imgHistoryLinksIssues = [];
+                    for (let i = 0; i < linksHistoryLinksIssuesKeys.length; i++) {
+                        imgHistoryLinksIssues[i] = new Image();
+                        imgHistoryLinksIssues[i].src = assetsUrl + 'assets/images/icon/' + linksHistoryLinksIssuesIcons[i];
+                        doc.addImage(imgHistoryLinksIssues[i], 'PNG', RTL_flag * (50 + 500 / linksHistoryLinksIssuesKeys.length * i) + pageWidth, 90, imgHistoryLinksIssues[i].width / 2, imgHistoryLinksIssues[i].height / 2, 'imgHistoryLinksIssues_' + i, '', 'FAST');
+                        doc.setFontSize(12);
+                        doc.setFontType("bold");
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistoryLinksIssuesKeys.length * i), 100, formatNum(linksHistoryLinksIssuesValues[i]), {align: RTL_align});
+                        doc.setFontType("normal")
+                        doc.setFontSize(6);
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistoryLinksIssuesKeys.length * i), 110, getTranslationWord(linksHistoryLinksIssuesKeys[i]), {align: RTL_align});
+                    }
+                    var dataURL = canvasLinksHistoryLinksIssues.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 50, 150, 500, 200, '', 'FAST');
+                }
+                if (document.getElementById("topLevelDomain").checked && typeof linksHistoryTopLevelDomainKeys !== 'undefined') {
+                    doc.addPage();
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Top Level Domain'), {align: RTL_align});
+                    var imgHistoryTopLevelDomain = [];
+                    for (let i = 0; i < linksHistoryTopLevelDomainKeys.length; i++) {
+                        if (linksHistoryTopLevelDomainValues[i]) {
+                            imgHistoryTopLevelDomain[i] = new Image();
+                            imgHistoryTopLevelDomain[i].src = assetsUrl + 'assets/images/icon/' + linksHistoryTopLevelDomainIcons[i];
+                            doc.addImage(imgHistoryTopLevelDomain[i], 'PNG', RTL_flag * (50 + 500 / linksHistoryTopLevelDomainKeys.length * i) + pageWidth, 90, imgHistoryTopLevelDomain[i].width / 2, imgHistoryTopLevelDomain[i].height / 2, 'imgHistoryTopLevelDomain_' + i, '', 'FAST');
+                            doc.setFontSize(12);
+                            doc.setFontType("bold");
+                            doc.writeText(RTL_flag * (80 + 500 / linksHistoryTopLevelDomainKeys.length * i), 100, formatNum(linksHistoryTopLevelDomainValues[i]), {align: RTL_align});
+                            doc.setFontType("normal")
+                            doc.setFontSize(6);
+                            doc.writeText(RTL_flag * (80 + 500 / linksHistoryTopLevelDomainKeys.length * i), 110, getTranslationWord(linksHistoryTopLevelDomainKeys[i]), {align: RTL_align});
+                        }
+                    }
+                    var dataURL = canvasLinksHistoryTopLevelDomain.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 50, 150, 500, 200, '', 'FAST');
+                }
+                if (document.getElementById("types").checked && typeof linksHistoryTypesKeys !== 'undefined') {
+                    doc.addPage();
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Types'), {align: RTL_align});
+                    var imgHistoryTypes = [];
+                    for (let i = 0; i < linksHistoryTypesKeys.length; i++) {
+                        if (linksHistoryTypesValues[i]) {
+                            imgHistoryTypes[i] = new Image();
+                            imgHistoryTypes[i].src = assetsUrl + 'assets/images/icon/' + linksHistoryTypesIcons[i];
+                            doc.addImage(imgHistoryTypes[i], 'PNG', RTL_flag * (50 + 500 / linksHistoryTypesKeys.length * i) + pageWidth, 90, imgHistoryTypes[i].width / 2, imgHistoryTypes[i].height / 2, 'imgHistoryTypes_' + i, '', 'FAST');
+                            doc.setFontSize(12);
+                            doc.setFontType("bold");
+                            doc.writeText(RTL_flag * (80 + 500 / linksHistoryTypesKeys.length * i), 100, formatNum(linksHistoryTypesValues[i]), {align: RTL_align});
+                            doc.setFontType("normal")
+                            doc.setFontSize(6);
+                            doc.writeText(RTL_flag * (80 + 500 / linksHistoryTypesKeys.length * i), 110, getTranslationWord(linksHistoryTypesKeys[i]), {align: RTL_align});
+                        }
+                    }
+                    var dataURL = canvasLinksHistoryTypes.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 50, 150, 500, 200, '', 'FAST');
+                }
+                if (document.getElementById("locations").checked && typeof linksHistoryLocationsKeys !== 'undefined') {
+                    doc.addPage();
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Locations'), {align: RTL_align});
+                    var imgHistoryLocations = [];
+                    for (let i = 0; i < linksHistoryLocationsKeys.length; i++) {
+                        if (linksHistoryLocationsValues[i]) {
+                            imgHistoryLocations[i] = new Image();
+                            imgHistoryLocations[i].src = assetsUrl + 'assets/images/icon/' + linksHistoryLocationsIcons[i];
+                            doc.addImage(imgHistoryLocations[i], 'PNG', RTL_flag * (50 + 500 / linksHistoryLocationsKeys.length * i) + pageWidth, 90, imgHistoryLocations[i].width / 2, imgHistoryLocations[i].height / 2, 'imgHistoryLocations_' + i, '', 'FAST');
+                            doc.setFontSize(12);
+                            doc.setFontType("bold");
+                            doc.writeText(RTL_flag * (80 + 500 / linksHistoryLocationsKeys.length * i), 100, formatNum(linksHistoryLocationsValues[i]), {align: RTL_align});
+                            doc.setFontType("normal")
+                            doc.setFontSize(6);
+                            doc.writeText(RTL_flag * (80 + 500 / linksHistoryLocationsKeys.length * i), 110, getTranslationWord(linksHistoryLocationsKeys[i]), {align: RTL_align});
+                        }
+                    }
+                    var dataURL = canvasLinksHistoryLocations.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 50, 150, 500, 200, '', 'FAST');
+                }
+                if (document.getElementById("onPage").checked && typeof linksHistoryOnpageKeys !== 'undefined') {
+                    doc.addPage();
+                    doc.setFontSize(12);
+                    doc.writeText(RTL_flag * 40, 80, getTranslationWord('Onpage'), {align: RTL_align});
+                    var imgHistoryOnpage = [];
+                    for (let i = 0; i < linksHistoryOnpageKeys.length; i++) {
+                        imgHistoryOnpage[i] = new Image();
+                        imgHistoryOnpage[i].src = assetsUrl + 'assets/images/icon/' + linksHistoryOnpageIcons[i];
+                        doc.addImage(imgHistoryOnpage[i], 'PNG', RTL_flag * (50 + 500 / linksHistoryOnpageKeys.length * i) + pageWidth, 90, imgHistoryOnpage[i].width / 2, imgHistoryOnpage[i].height / 2, 'imgHistoryOnpage_' + i, '', 'FAST');
+                        doc.setFontSize(12);
+                        doc.setFontType("bold");
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistoryOnpageKeys.length * i), 100, formatNum(linksHistoryOnpageValues[i]), {align: RTL_align});
+                        doc.setFontType("normal")
+                        doc.setFontSize(6);
+                        doc.writeText(RTL_flag * (80 + 500 / linksHistoryOnpageKeys.length * i), 110, getTranslationWord(linksHistoryOnpageKeys[i]), {align: RTL_align});
+                    }
+                    var dataURL = canvasLinksHistoryOnpage.toDataURL();
+                    doc.addImage(dataURL, 'JPEG', 50, 150, 500, 200, '', 'FAST');
+                }
+                drawPageBorder();
+            }
+            console.log('convert step 24');
+            doc.save(currWebsite + '.pdf');
+            console.log('convert step 25');
+            releaseButtonLoading(document.getElementById('create'));
+            releaseButtonLoading(document.getElementById('createReversed'));
+            $('.spinner-border').hide(); // if download from allWebsites
+            // $('#reportForm').hide(); // if download from allWebsites
+            function addtable(cols, rows, top = 0, right = 20, left = 30) {
+                doc.autoTable(cols, rows, {
+                        theme: 'striped',
+                        startY: top,
+                        margin: {top: 30, left: left, right: right, bottom: 20},
+                        headerStyles: {
+                            //lineWidth: 5,
+                            textColor: [31, 88, 231],
+                            fillColor: 200,
+                            valign: 'middle',
+                            halign: lang != 'iw' ? 'left' : 'right',
+                            font: lang != 'iw' ? 'helvetica' : "Assistant",
+                            fontStyle: "bold",
+                        },
+                        // columnStyles: {
+                        //   0: {textColor: "#1F58E7", fontStyle:"bold" }
+                        // },
+                        styles: {
+                            fontSize: 6,
+                            overflow: 'linebreak',
+                            halign: lang != 'iw' ? 'left' : 'right',
+                            font: lang != 'iw' ? 'helvetica' : "Assistant",
+                        },
+                    }
+                );
+            }
+
+            function drawPageBorder() {
+                for (var i = 1; i < doc.internal.pages.length; i++) {
+                    doc.setDrawColor(200);
+                    // doc.setLineWidth(1);
+                    doc.internal.pages[i].push("15 815 565 -800 re");
+                    doc.internal.pages[i].push("S");
+                }
+            }
+        });
+    }
+
+    (function (api, $) {
+        'use strict';
+        api.writeText = function (x, y, text, options) {
+            options = options || {};
+            var defaults = {
+                align: 'left',
+                width: this.internal.pageSize.width
+            }
+            var settings = $.extend({}, defaults, options);
+            var fontSize = this.internal.getFontSize();
+            var txtWidth = this.getStringUnitWidth(text) * fontSize / this.internal.scaleFactor;
+
+            if (settings.align === 'center')
+                x += (settings.width - txtWidth) / 2;
+            else if (settings.align === 'right')
+                x += (settings.width - txtWidth);
+            this.text(text, x, y);
+        }
+    })(jsPDF.API, jQuery);
+
+    // function getFormattedDate(date) {
+    //     return new Date(date).toISOString().slice(0, 10);
+    // }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function getMultiChartData(json) {
+        var data = [];
+        for (let i = 0; i < json.length; i++) {
+            var [hours, minutes] = json[i]['avgTimeOnSite'].split(':');
+            var totalMinutes = (+hours) * 60 * 60 + (+minutes);
+            data.push(
+                {
+                    type: "column",
+                    showInLegend: true,
+                    legendText: json[i]['name'],
+                    color: getRandomColor(),
+                    dataPoints: [
+                        {label: 'Visits', y: json[i]['visits']},
+                        {label: 'Avg Time on Site', y: totalMinutes * 0.01},
+                        {label: 'Bounce Rate', y: Number(json[i]['visitBounceRate'].slice(0, -1))},
+                        {label: 'Page views', y: json[i]['pageViewsPerVisit']},
+                    ]
+                }
+            )
+        }
+        return data;
+    }
+
+    function reverseArray(array) {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                array[i][j].reverse();
+            }
+        }
+    }
+
+    function fillReportForm(data) {
+        // console.log('data is ' + JSON.stringify(data));
+        $('form#settingDetail').find('input:checkbox').prop('checked', false);
+        $.each(data, function (key, value) {
+            if (value && value.length > 0) {
+                // console.log('curr key is ' + key + ' value is ' + value);
+                // if (value == 'true' || value == 'false') {
+                $('#' + key).prop("checked", value && value == 'on');
+                // } else {
+                $('#' + key).val(value);
+                // }
+            }
+        });
+    }
+
+    function setTitleByLang(inputId) {
+        const translationWord = getTranslationWord($(inputId).attr('value'));
+        // console.log('input id is ' + inputId + ' word is ' + translationWord);
+        $(inputId).val(translationWord);
+    }
+
+    $(document).ready(function () {
+        const lang = $('select.cloudlocalization-selection').val();
+        console.log('lang is ' + lang);
+        setTitleByLang('#coverTitle');
+        setTitleByLang('#summaryTitle');
+        setTitleByLang('#landingTitle');
+        setTitleByLang('#myKeywordsTitle');
+        setTitleByLang('#higherKeywordsTitle');
+        setTitleByLang('#otherKeywordsTitle');
+        setTitleByLang('#analyticsTitle');
+        setTitleByLang('#linksSummaryTitle');
+        setTitleByLang('#linksHistoryTitle');
+        if (localStorage.getItem('rtl') == 1) {
+            $('#createReversed').show();
+        }
+        loadUserLogo();
+        enableTooltips();
+
+        // $.get(apiUrl + 'UserLogo?pdfImage=true')
+        //         .done(function(data) {
+        //           console.log('UserLogo data ' + data.length);
+        //           if (data && data.length > 0) {
+        //             $('img#logoImg').show()
+        //             $('i#logoIcon').hide()
+        //             $('p#logoP').hide()
+        //             $('img#logoImg').attr('src', apiUrl + 'UserLogo?pdfImage=true');
+        //           }
+        //         }).fail(function() {
+        //   console.log('Logo image does not exist');
+        // })
+        loadUserLogo();
+
+        $.getJSON(apiUrl + 'getMyJsonReadPDFSettingsGeneric', function (json) {
+            // console.log('getMyJsonReadPDFSettingsGeneric ' + JSON.stringify(json));
+            json = JSON.parse(json.data);
+            if (json) {
+                fillReportForm(json);
+            }
+            // console.log('PDF websiteData[\'showGoogleAnalyticsTab\'] ' + websiteData['showGoogleAnalyticsTab']);
+            if (true) {
+            // if (!websiteData || !websiteData['showGoogleAnalyticsTab']) {
+                $('#google_analytics_data').prop('checked', false);
+            }
+            $('.spinner-border').hide();
+        });
+
+        $('form#settingDetail>div>input:checkbox').change(function () {
+            // console.log('on change ' + this);
+            if (!document.getElementById($(this).attr('id')).checked) {
+                $(this).parent().next().find(":input").each(function () {
+                    this.disabled = true;
+                    this.style.color = 'grey';
+                });
+                $(this).parent().next().find("label.form-check-label").each(function () {
+                    this.style.color = 'grey';
+                });
+            } else {
+                $(this).parent().next().find(":input").each(function () {
+                    this.disabled = false;
+                    this.style.color = '#212529';
+                });
+                $(this).parent().next().find("label.form-check-label").each(function () {
+                    this.style.color = '#212529';
+                });
+            }
+        });
+        document.getElementById("searchEngine").click();
+        document.getElementById("competition").click();
+        document.getElementById("cpc").click();
+        document.getElementById("results").click();
+        document.getElementById("6monthsAgo").click();
+        document.getElementById("3monthsAgo").click();
+        document.getElementById("searchEngine").click();
+        document.getElementById("searchEngine").click();
+        document.getElementById("landing_pages").click();
+        document.getElementById("links_list").click();
+        document.getElementById("links_summary").click();
+        document.getElementById("medium").click();
+        document.getElementById("browser").click();
+        document.getElementById("type").click();
+        $(document).on({
+            ajaxStart: function () {
+                // $("body").addClass("loading");
+            },
+            ajaxStop: function () {
+                // $("body").removeClass("loading");
+            }
+        });
+    })
+</script>
+<style>
+    button#createReversed {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    div#logoForm {
+        width: 50%;
+        height: 120px;
+        display: flex;
+        cursor: pointer;
+        margin: 30px 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 2px dashed #6990F2;
+    }
+
+    div#logoForm :where(i, p) {
+        color: #6990F2;
+    }
+
+    div#logoForm i {
+        font-size: 50px;
+    }
+
+    div#logoForm p {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+
+    #logImg {
+        max-height: 120px;
+    }
+</style>

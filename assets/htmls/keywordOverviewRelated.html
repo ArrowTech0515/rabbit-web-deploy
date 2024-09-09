@@ -1,0 +1,182 @@
+<div id="upgradeBlock" class="upgradeBlock" style="display: none">
+    <h3>Upgrade to get RELATED Keywords</h3>
+    <p></p>
+    <button type="button">Upgrade to Premium</button>
+</div>
+
+<div id="relatedKeywordsDiv" class="card page-card mb-4">
+    <div class="card-body">
+        <div class="d-lg-flex justify-content-between mb-20px">
+            <div class="d-flex align-items-center">
+                <h3 class="cardTitle mb-0">Related Keywords</h3>
+                <span class="listedItem" id="listedItemsCount"></span>
+            </div>
+            <div>
+                <ul class="list-style-none actionkey_ul">
+                    <li class="actionkey_li">
+                        <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li">
+                        <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li">
+                        <a href="javascript:;" title="PDF" class="pdfButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li">
+                        <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                            <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li">
+                        <div class="keywordSearch landingpageKew">
+                            <input data-hj-allow type="text" class="tableSearch form-control" placeholder="Search..."/>
+                            <img src="/assets/images/icon/search.svg" alt="Search"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rabbitTable">
+            <table id="relatedKeywordsTable" class="table align-middle border-bottom-0 hover" style="width:100%">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Keyword</th>
+<!--                    <th>Url</th>-->
+<!--                    <th>Search Engine</th>-->
+<!--                    <th>Country</th>-->
+                    <th>Search<br/>Volume</th>
+                    <th>Difficulty</th>
+                    <th>Competition</th>
+                    <th>CPC</th>
+                    <th>Results</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td colspan="10" class="text-center">
+                    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                </td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        if (payingUser == false) {
+            $('.upgradeBlock').attr("onclick", upgradeLink);
+            $('.upgradeBlock').show();
+            $('#relatedKeywordsDiv').hide();
+        } else {
+            $.getJSON(getApiUrl('getMyJsonRelatedKeyword?id=' + keywordRowData.keywordId), function (json) {
+                console.log('getMyJsonRelatedKeyword ' + JSON.stringify(json));
+                var html = '';
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json['data']);
+
+                    if (json.hasOwnProperty('items') && json['items'] != undefined) {
+                        relatedKeywordsArray = json['items'];
+
+                        var currItem = '';
+                        for (var i = 0; i < relatedKeywordsArray.length; i++) {
+                            currItem = relatedKeywordsArray[i];
+                            let url = currItem["ranked_serp_element.check_url"];
+                            html += '<tr>' +
+                            // html += '<tr onclick="relatedKeywordsSubgrid(relatedKeywordsArray, ' + i + ')">' +
+                                '<td class=" dt-control" rowId=' + i + '><a style="cursor: pointer" class="ignoreme addNewKeyword" id="' + i + '" onclick="addRelatedKeywordTrack(this, relatedKeywordsArray, ' + i + ')">Add</a></td>' +
+                                // '<td class=" dt-control" rowId=' + i + '>' + (i + 1) + '</td>' +
+                                '<td>' + currItem["keyword_data.keyword"] + '</td>' +
+                                // '<td><a href="' + url + '" target="_blank">' + url + '</a></td>' +
+                                // '<td>' + '' + '</td>' +
+                                // '<td>' + '' + '</td>' +
+                                // '<td>' + 'Google.com' + '</td>' +
+                                // '<td>' + 'US' + '</td>' +
+                                '<td>' + nFormatter(currItem["keyword_data.keyword_info.search_volume"], 2) + '</td>' +
+                                '<td>' + nFormatter(currItem["ranked_serp_element.keyword_difficulty"], 2) + '</td>' +
+                                '<td>' + formatNumber(currItem["keyword_data.keyword_info.competition"], 2) + '</td>' +
+                                '<td>' + formatNumber(currItem["keyword_data.keyword_info.cpc"]) + '</td>' +
+                                '<td>' + nFormatter(currItem["ranked_serp_element.se_results_count"], 2) + '</td>' +
+                                '</tr>';
+
+                        }
+                    }
+                }
+                $('#relatedKeywordsTable tbody').html(html);
+                let dataTable = $('#relatedKeywordsTable').DataTable({
+                    destroy: true,
+                    buttons: ['copy', 'excel', 'print', {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    }],
+                    "dom": '<"dt-buttons"Bf><"clear">firtlp',
+                    info: false,
+                    // paging:   false,
+                    // responsive: true,
+                    fixedHeader: true,
+                    deferRender: true,
+                    scrollY: 1000,
+                    scrollCollapse: true,
+                    scroller: true,
+                    select: true,
+                    "bFilter": true,
+                    "columnDefs": [{
+                        "targets": 'no-sort',
+                        "orderable": false,
+                    }],
+                    searchPanes: {
+                        controls: false,
+                    }
+                });
+                adjustExportButtons('tableSearch', dataTable);
+            })
+        }
+    });
+    function addRelatedKeywordTrack(element, list, i) {
+        var jsonPost = list[i];
+        jsonPost['ranked_serp_element.check_url'] = '';
+        jsonPost = JSON.stringify(jsonPost);
+        jsonPost = encodeURIComponent(jsonPost);
+        console.log('addRelatedKeywordTrack jsonPost is ' + jsonPost);
+
+        $.ajax({
+            type: 'POST',
+            url: apiUrl + 'addToTrackWithValuesKeywordForWebsite',
+            // dataType: 'json',
+            data: getPostParams('url=' + $('#inputSearchWebsite').val() + '&keywordData=' + jsonPost),
+            success: function (result) {
+                console.log('addRelatedKeywordTrack result ' + JSON.stringify(result));
+                if (result.status) {
+                    if (result.status === 'limit') {
+                        callUpgradePage();
+                    } else {
+                        showModal("Message", result.status, "Close", "");
+                    }
+                } else {
+                    $(element).html('<img src="/assets/images/home_icon/check-white.svg" alt="check">');
+                    $(element).addClass("checked");
+                    refreshUsage();
+                    refreshKeywordTable();
+                    
+                    needToRefreshKeywords = true;
+                    if (!shownBeforeKeywordAdded) {
+                        fadeModal('Success', 'Keyword was added');
+                        shownBeforeKeywordAdded = true;
+                    }
+                }
+            },
+            complete: function (result) {
+                console.log(result);
+            }
+        });
+        refreshUsage()
+    }
+</script>
+

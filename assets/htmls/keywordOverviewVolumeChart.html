@@ -1,0 +1,44 @@
+<div class="pt-4 mh-360">
+    <canvas id="volumnChart" height="300"></canvas>
+</div>
+<script>
+    $(document).ready(function () {
+        var data1 = {
+            labels: ["10-2021", "9-2021", "8-2021", "7-2021", "6-2021", "5-2021", "4-2021", "3-2021", "2-2021", "1-2021", "2020-11"],
+            datasets: [{
+                label: "Dataset #1",
+                backgroundColor: "#EBF0FF",
+                borderColor: "#336CFB",
+                borderWidth: 2,
+                hoverBackgroundColor: "#EBF0FF",
+                hoverBorderColor: "#336CFB",
+                data: [65, 59, 20, 81, 65, 59, 20, 81, 65, 59, 20],
+            }]
+        };
+
+        var options1 = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    stacked: true,
+                    grid: {
+                        display: true,
+                        color: "#D7DBDE"
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        };
+        // new Chart('volumnChart', {
+        //     type: 'bar',
+        //     options: options1,
+        //     data: data1
+        // });
+    });
+</script>
+

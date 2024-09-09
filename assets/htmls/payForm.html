@@ -1,0 +1,250 @@
+<style type="text/css">
+     .modal:nth-of-type(even) {
+        z-index: 1062 !important;
+    }
+    /*.modal-backdrop.show:nth-of-type(even) {
+        z-index: 561 !important;
+    }*/
+    /*model btn*/
+    #paymentModal  h2 {
+      font-size: 24px;
+      font-weight: 800;
+      background: -webkit-linear-gradient(#48C8FE, #4261E0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #paymentModal .btn-primary{
+      border: none;
+    }
+    
+
+    .WelcomeModel .btn-primary {
+        background: linear-gradient(135deg, #35A1EE 6.43%, #3C83B5 93.57%) !important;
+        color: #fff !important;
+    }
+    .WelcomeModel h2{
+        background: -webkit-linear-gradient(#35A1EE, #3C83B5);
+         -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .WelcomeModel .modalQuestion svg path{
+       fill: #78C9FF;
+    }
+
+
+    .RabbitseoModel .btn-primary {
+        background: linear-gradient(142.45deg, #FF833D 9.3%, #FFBD3D 94.75%) !important;
+        color: #fff !important;
+    }
+    .RabbitseoModel h2{
+        background: -webkit-linear-gradient(#FF833D, #FFBD3D);
+         -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .RabbitseoModel .modalQuestion svg path{
+       fill: #FEC200;
+    }
+
+    .SeolyseoModel .btn-primary {
+        background: linear-gradient(170.21deg, #723FCF 21.3%, #9F73EC 86.06%) !important;
+        color: #fff !important;
+    }
+    .SeolyseoModel h2{
+        background: -webkit-linear-gradient(#723FCF, #9F73EC);
+         -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .SeolyseoModel .modalQuestion svg path{
+       fill: #6610f2;
+    }
+
+     
+    
+    /*model logo*/
+   #paymentModal .modal-dialog{
+        max-width: 400px;
+    }
+  #paymentModal .modal-content{
+    background: #F8FAFC;
+  }
+ #paymentModal .modal-header .modal-header{
+    padding-bottom: 0;
+    border: none;
+  }
+ #paymentModal .modal-header .modal-title{
+    color: #202939;
+    font-size: 16px;
+  }
+  #paymentModal .modal-body h5{
+    font-size: 16px;
+    color: #202939;
+  }
+ 
+  #paymentModal .pricelist > div{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+     border-bottom: 1px solid #EEF2F6;
+  }
+  #paymentModal label{
+    font-size: 14px;
+    color: #697586;
+  }
+  #paymentModal .form-control{
+    background: #FAF9F9;
+    border: none;
+  }
+  .WelcomeModel .totalBlog .totalBlogLeft{
+      padding: 8px;
+      width: calc(100% - 32px);
+      border-radius: 8px;
+      border: 1px solid var(--neutral-100, #EEF2F6);
+      background: #FFF;
+      text-align: center;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    .WelcomeModel .totalBlog .totalBlogLeft > div{ 
+      border-radius: 8px; 
+      max-width: 50%;
+      margin:5px auto;
+    }
+    .WelcomeModel .totalBlog .totalBlogRight{ 
+      margin-top: 10px; 
+      width: 100%; 
+      text-align: center;
+    }
+    .WelcomeModel .totalBlog .totalBlogRight h2{
+      margin: 0;
+    }
+    .WelcomeModel .priceBoxBlanklist{
+      border-radius: 4px;
+      border: 1px solid #528BFF;
+      background:#EFF4FF;
+      color: #6837C4;
+      text-align: center;
+      font-size: 14px;
+      justify-content: center;
+
+    }
+    .WelcomeModel .priceBoxBlanklist span{
+      font-size: 16px;
+      font-weight: bold;
+    }
+ 
+    .WelcomeModel .postItemmList{
+      gap:10px;
+      border-radius: 8px;
+      background: #EEF2F6;
+      padding: 10px;   
+      flex-wrap: wrap;
+    }
+    .postItemmList input{
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      cursor: pointer;
+    }
+    .WelcomeModel .postItemmList > div{
+      width: 48%;
+      flex: 0 0 48%;
+      background: #ffffff;
+      padding:8px;
+      text-align: center;
+      color: #4B5565;
+      font-size: 13px;
+      border-radius: 8px;
+       position: relative;
+    }
+    .WelcomeModel .postItemmList > div:hover, .WelcomeModel .postItemmList .active{ 
+      color: #202939;
+    }
+    .WelcomeModel .postItemmList .active .postItemm{
+      color: #4261E0;
+    }
+    .WelcomeModel .postItemmList > div .postItemm{
+      font-size:16px;
+      font-weight: normal;
+      flex: 0 0 100%;
+      display: block;
+      color: #364152;
+      font-weight: 600;
+    }
+    .WelcomeModel .postItemmList > div .newPrices{
+      color: #7BC4FD;
+    }
+    #paymentModal .pricelist{
+        padding: 5px;
+        border: 1px solid #eef2f6;
+        border-radius: 8px;
+    }
+    #paymentModal .modal-header{
+      border: none;
+      padding-bottom: 0;
+    }
+
+</style> 
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h5 class="modal-title fw-bold">Pay as You Go Blog Posts Credits</h5>
+            <a href="javascript:;"  class="close_btn" data-dismiss="modal" aria-label="Close"
+                    onclick="$('#paymentModal').modal('hide');">
+                <img src="/assets/images/icon/--remove.png" alt="Remove">
+            </a>
+        </div>
+        <div class="modal-body">
+            <div class="bg-white m-1 p-3 pb-2 mb-2 rounded">
+         
+               <div class="pricelist"> 
+                    <div class="postItemmList"> 
+                      <div class="active">
+                         <input type="radio" value="10" name="postItemm" checked="">
+                         <span class="postItemm">10 Blogs</span>
+                         <span class="ms-auto"><span class="newPrices">$8</span> / Blog Post</span>
+                      </div>
+                      <div>
+                         <input type="radio" value="25" name="postItemm" checked="">
+                         <span class="postItemm">25 Blogs</span>
+                         <span class="ms-auto"><span class="newPrices">$7</span> / Blog Post</span>
+                      </div>
+                      <div>
+                         <input type="radio" value="50" name="postItemm">
+                         <span class="postItemm">50 Blogs</span>
+                         <span class="ms-auto"><span class="newPrices">$6</span> / Blog Post</span>
+                      </div>
+                      <div>
+                        <input type="radio" value="100" name="postItemm">
+                        <span class="postItemm">100 Blogs</span>
+                        <span class="ms-auto"><span class="newPrices">$5</span> / Blog Post</span>
+                      </div>
+                    </div>
+               </div>
+               <div class="row pt-2 totalBlog">
+                   <div class="col-4 totalBlogLeft">
+                       <label>How many Blog Posts would you like to buy?</label>
+                       <div>
+                         <input id="itemsCount" type="number" class="form-control" min="1" value="10" name="">
+                       </div>
+                   </div>
+                   <div class="col-4 ms-auto totalBlogRight">
+                       <label>Total Price</label>
+                       <h2>$<span id="payAsYouGoPrice" class="planPrice">80</span></h2>
+                   </div>
+               </div>
+
+            </div>
+             <button type="button" class="btn btn-primary w-100" onclick="submitPayAsYouGo($('.totalBlogLeft #itemsCount').val(), $('#payAsYouGoPrice').html())"><strong>Order Now</strong></button>
+             <div class="text-center mt-2">
+               <img src="/assets/images/spiderman.png" alt="win" />
+             </div>
+        </div>
+    </div>
+</div>
+
+ 

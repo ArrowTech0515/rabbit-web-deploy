@@ -1,0 +1,66 @@
+<div id="keywordResearchDiv" class="card page-card mb-4">
+    <div class="card-body">
+        <div class="d-md-flex justify-content-between">
+            <div class="d-flex align-items-center mb-20px">
+                <h3 class="cardTitle mb-0">Keywords Research</h3>
+                <span class="listedItem" id="ideasListedItemsCount"></span>
+            </div>
+            <div id="exportOptions" class="mb-20px">
+                <ul class="list-style-none actionkey_ul">
+                    <li class="actionkey_li hideOnboarding"> 
+                        <a href="javascript:;" title="COPY" class="copyButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li hideOnboarding">
+                        <a href="javascript:;" title="XLS" class="xlsButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li hideOnboarding">
+                        <a href="javascript:;" title="PDF"  class="pdfButton ks_buttn d-inline-block">
+                            <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li hideOnboarding">
+                        <a href="javascript:;" title="PRINT" class="printButton ks_buttn d-inline-block">
+                            <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                        </a>
+                    </li>
+                    <li class="actionkey_li">
+                        <div class="keywordSearch">
+                            <img src="/assets/images/icon/search.svg" alt="Search"/>
+                            <input type="text" class="form-control tableSearch" placeholder="Search..."/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rabbitTable">
+            <table id="keywordIdeasTable" class="table align-middle border-bottom-0 hover" style="width:100%">
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="10" class="text-center">
+                            <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+                <h3>Upgrade to see Keywords Research</h3>
+                <p>To view more results, you must upgrade <br>
+                    your current subscription</p>
+                <button type="button">Upgrade to Premium</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadKeywordResearchList();
+    });
+</script>

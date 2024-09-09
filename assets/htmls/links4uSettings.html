@@ -1,0 +1,351 @@
+<form id="savePublishDetailsUser">
+    <div class="settingForm">
+        
+        <div class="accordion mb-3" id="accordionLinks4uSettings">
+             <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#Links4uSettings1" aria-expanded="true" aria-controls="Links4uSettings1">
+                      <img src="/assets/images/newicon/clarity_details-solid.png" height="22" width="22" alt="icon"/><strong> Brand Details</strong>
+                    </button>
+                </h2>
+                <div id="Links4uSettings1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionLinks4uSettings">
+                    <div class="accordion-body">
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Brand Name</label>
+                                <input id="name" name="name" type="text" class="form-control form-control-lg"
+                                       placeholder="Company Name"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Domain</label>
+                                <input id="domain" name="domain" type="text" class="form-control form-control-lg" placeholder="Domain"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Brand Section</label>
+                                <select name="category" type="text" id="categorySelect"
+                                        class="categorySelect form-select form-select-lg dropdown-toggle js-example-placeholder-single "
+                                        placeholder="Choose Category">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Brand Profile
+                                    <span class="tooltip_sm">
+                                        <img src="/assets/images/links4u/tooltip.png">
+                                        <div class="right">
+                                            <div class="text-content">
+                                                <h4>Ideas how to fill your Company Profile</h4>
+                                                <p>Introduction to your business, basic information, how did you start your company, showcase significant achievements, products or services description, how do your customer benefit, your team, etc...</p>
+                                            </div>
+                                            <i></i>
+                                        </div>
+                                    </span>
+                                </label>
+                                <textarea id="description" name="description" class="form-control form-control-lg"
+                                          placeholder="Ideas how to fill your Company Profile - Introduction to your business, basic information, how did you start your company, showcase significant achievements, products or services description, how do your customer benefit, your team, etc..."></textarea>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Keywords </label>
+                                <select id="keywordsToPromote" name="keyword" class="keywordsToPromote js-example-placeholder-multiple" multiple="multiple"
+                                        placeholder="Choose Keyword"></select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Brand Tags </label>
+                                <select id="bizTags" name="tags" class="keywordsToPromote js-example-placeholder-multiple" multiple="multiple"
+                                        placeholder="Add Tags"></select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Working Hours</label>
+                                <textarea id="businessHours" name="businessHours" class="form-control form-control-lg"
+                                          placeholder="Working Hours"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Address</label>
+                                <input id="address" name="address" type="text" class="form-control form-control-lg"
+                                       placeholder="Your Business Address"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Brand Youtube Clip</label>
+                                <input id="youtubeMarketingVideo" name="youtubeMarketingVideo" type="text" class="form-control form-control-lg"
+                                       placeholder="Brand Youtube Clip"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">Contact Us Link</label>
+                                <input id="contactUsPage" name="contactUsPage" type="text" class="form-control form-control-lg"
+                                       placeholder="Contact Us Page link"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="">
+                                <label class="settingLabel">About Us Link</label>
+                                <input id="aboutUsPage" name="aboutUsPage" type="text" class="form-control form-control-lg"
+                                       placeholder="About Us Page Link"/>
+                            </div>
+                        </div> 
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <div class="">
+                                        <label class="settingLabel">Phone </label>
+                                        <input id="phone" name="phone" type="text" class="form-control form-control-lg"
+                                               placeholder="Business Phone Number"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                   <label class="settingLabel">Add Brand Logo </label> 
+                                    <div class="sm_m_b">
+                                        <div class="drop-zone" onclick="changeLogo()">
+                                            <div id="logoForm" data-toggle="tooltip" title="Logo size should be 200*100 pixel!">
+                                                <form name="photo" class="text-center" id="imageUploadForm" enctype="multipart/form-data"
+                                                      action="saveImgUser" method="post">
+                                                    <input type='file' name="pdfImage" id="pdfImage" onchange="changeImg()" style="display:none;" >
+                                                    <img id="logoImg" alt="Upload Logo" style="display:none"/>
+                                                    <i class="fa fa-cloud-upload" id="logoIcon"></i>
+                                                    <p id="logoP">Upload logo</p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--                            <div class="drop-zone" onclick="changeLogo()">-->
+                                        <!--                                <form name="photo" class="text-center" id="imageUploadForm" enctype="multipart/form-data" action="saveImgUser" method="post">-->
+                                        <!--                                <div class="drop-zone__prompt">-->
+                                        <!--                                    <img id="logoImg" src="/assets/images/links4u/demo_img.png" alt="">-->
+                                        <!--                                    <p class="big">Select a logo file to upload</p>-->
+                                        <!--                                    <p class="small">or drag and drop it here</p>-->
+                                        <!--                                </div>-->
+                                        <!--                                <input type="file" name="pdfImage" id="pdfImage" onchange="changeImg()" class="drop-zone__input">-->
+                                        <!--                                </form>-->
+                                        <!--                            </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--        <div class="mb-3">-->
+                        <!--            <div class="d-md-flex justify-content-between align-items-center">-->
+                        <!--                <label class="settingLabel">Additional Contact Information <span>(optional)</span></label>-->
+                        <!--                <input id="contactInfo" name="contactInfo" type="text" class="form-control form-control-lg"-->
+                        <!--                       placeholder="Fax "/>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                    </div>
+                </div>
+            </div>
+      
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Links4uImages3" aria-expanded="false" aria-controls="Links4uImages3">
+                        <img src="/assets/images/newicon/material-symbols_image-outline.png" height="22" width="22" alt="icon"/> <strong> Product & Brand Images </strong>
+                    </button>
+                </h2>
+                <div id="Links4uImages3" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionLinks4uSettings">
+                    <div class="accordion-body">
+                        <div class="imagesUploadPublishList mb-3">
+                            <div class="imagesUploadPublish">
+                                <form class="text-center" id="uploadGalleryImgUser" enctype="multipart/form-data" method="post" style="display: none">
+                                    <input type='file' name="userImage" id="userImage" onchange="uploadImageGallery('uploadGalleryImgUser')" hidden>
+                                </form>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Links4uSettings3" aria-expanded="false" aria-controls="Links4uSettings3">
+                        <img src="/assets/images/newicon/zondicons_network.png" height="22" width="22" alt="icon"/> <strong> Social Media Links </strong>
+                    </button>
+                </h2>
+                <div id="Links4uSettings3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionLinks4uSettings">
+                    <div class="accordion-body">
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/facebook_blue.png" height="22" width="22" /></label>
+                                <input id="facebook" name="facebook" type="text" class="form-control form-control-lg"
+                                       placeholder="Facebook Brand Page"/>
+                            </div>
+                        </div>
+<!--                        <div class="mb-3">-->
+<!--                            <div class="d-md-flex justify-content-between align-items-center">-->
+<!--                                <label class="settingLabel text-center"><img src="/assets/images/newicon/twitter_blue.png" height="22" width="22" /></label>-->
+<!--                                <input id="twitter" name="twitter" type="text" class="form-control form-control-lg"-->
+<!--                                       placeholder="Twitter Company Page"/>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/pinterest_blue.png" height="22" width="22" /></label>
+                                <input id="pinterest" name="pinterest" type="text" class="form-control form-control-lg"
+                                       placeholder="Pinterest Brand Page"/>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/linkedin.png" height="22" width="22" /></label>
+                                <input id="linkedin" name="linkedin" type="text" class="form-control form-control-lg"
+                                       placeholder="LinkedIn Brand Page"/>
+                            </div>
+                        </div>
+<!--                        <div class="mb-3">-->
+<!--                            <div class="d-md-flex justify-content-between align-items-center">-->
+<!--                                <label class="settingLabel text-center"><img src="/assets/images/newicon/youtube_blue.png" height="22" width="22" /></label>-->
+<!--                                <input id="youtube" name="youtube" type="text" class="form-control form-control-lg"-->
+<!--                                       placeholder="YouTube Company Page"/>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="mb-3">
+                            <div class="d-md-flex justify-content-between align-items-center">
+                                <label class="settingLabel text-center"><img src="/assets/images/newicon/instagram_blue.png" height="22" width="22" /></label>
+                                <input id="instagram" name="instagram" type="text" class="form-control form-control-lg"
+                                       placeholder="Instagram Brand Page"/>
+                            </div>
+                        </div>
+<!--                        <div class="mb-3">-->
+<!--                            <div class="d-md-flex justify-content-between align-items-center">-->
+<!--                                <label class="settingLabel text-center"><img src="/assets/images/newicon/reddit_blue.png" height="22" width="22" /></label>-->
+<!--                                <input id="reddit" name="reddit" type="text" class="form-control form-control-lg"-->
+<!--                                       placeholder="Reddit Company Page"/>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="publishButton" class="mt-4">
+            <button type="button" onclick="saveListingsSettings()"
+                    class="btn btn-primary py-3 btn-next-form btn-lg pageBtn w-100" style="width: 100% !important">UPDATE BRAND DETAILS
+            </button>
+        </div>
+<!--        <div style="display: none; margin-top: 10px;" id="publishFormResultDiv" class="alert alert-success"-->
+<!--             role="alert">-->
+<!--            <div class="d-flex">-->
+<!--                <p class="my-0" id="publishFormResultMsg">-->
+<!--                    &lt;!&ndash;                            Your details have been saved successfully, we&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            will email you after reviewing your details.&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            At the meantime, you can see your links under <a&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                    href="javascript: changeTab('linksMonitoring');">My Links</a> tab.&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        fillPublishDetailsForm();
+        $('#toggleEmbedDetails').prop('checked', mainUserDetails['addUserDetails']);
+        loadUserLogo();
+    });
+    function saveListingsSettings() {
+        var result = ajaxSubmitForm('savePublishDetailsUser');
+        closeAppModal();
+        showModal('Business Listings Update', result && result.indexOf('successfully') !== -1 ? 'Your Listings were successfully updated' : result, 'Close', '');
+    }
+     function showGalleryFromJson(json) {
+        console.log('GalleryImages ' + JSON.stringify(json));
+        var totalItems = 10;
+        $('.imageItem').hide();
+        if (json && json['obj']) {
+            const myArray = json['obj'].split(",");
+            totalItems = totalItems - myArray.length ;
+            console.log('showGalleryFromJson myArray ' + myArray)
+            if (myArray.length > 0) {
+                for (const image of myArray) {
+                    console.log('showGalleryFromJson curr image ' + image);
+                    if (image && image.length > 1) {
+                        $('.imagesUploadPublishList').append('<div class="imagesUploadPublish imageItem"  onclick="deleteImage(\'' + image + '\')">' +
+                            '<div class="uploadGalleryNoimg"><img src="https://dlnil54eooeso.cloudfront.net/gallery/' + image + '.png" ' +
+                            'style="height: 105px;"/></div></div>');
+                    }
+                }
+            }
+
+           
+
+
+        }
+        $('.uploadGalleryImgNew').remove();
+
+       
+            for(var j=0;j<totalItems; j++)
+            { 
+            $('.imagesUploadPublishList').append('<div class="uploadGalleryImgNew" style="cursor: pointer" onclick="$(\'#uploadGalleryImgUser input#userImage\').click()"> <div class="uploadGalleryNoimg"> <img src="assets/images/newicon/upload.png" alt="noimage" /> </div> <button type="button" class="btn btn-sm btn-outline-primary my-2">  + <span>Upload </span></button> </div>');
+        }
+
+    }
+    function showImageGallery() { 
+        $.getJSON(getApiUrl('getMyJsonGalleryUser'), function (json) {
+            showGalleryFromJson(json);
+        });
+    }
+    $(document).ready(function () {
+        $("#bizTags").select2({
+            tokenSeparators: [',', ', ', '\n'],
+            // selectOnClose: true,
+            closeOnSelect: false,
+            data: tagsArray.sort(),
+            tags: true,
+            placeholder: 'Add tags that are relevant for your brand',
+        });
+        
+        showImageGallery();
+    });
+ 
+</script>
+<style type="text/css">
+    .modal-footer{
+        /*display: none;*/
+    }
+    .modal-open span.select2-container.select2-container--open{
+        z-index: 10000;
+    }
+   form#savePublishDetailsUser .select2-container--default .select2-selection--multiple .select2-selection__choice{
+            background: #ffffff;
+    }
+    form#savePublishDetailsUser .select2-container--default .select2-selection--multiple .select2-selection__choice__display{
+        line-height: 34px;
+    }
+    form#savePublishDetailsUser input{
+        border-radius: 4px;
+        border: 1px solid #EEF2F6;
+        background:#F8FAFC;
+         font-size: 14px;
+
+    }
+    form#savePublishDetailsUser .form-control, form#savePublishDetailsUser .form-select,form#savePublishDetailsUser.form-control{
+        border-radius: 4px;
+        border: 1px solid #EEF2F6;
+        background:#F8FAFC;
+         font-size: 14px;
+    }
+    form#savePublishDetailsUser .select2-container--default .select2-selection--single{
+        border-radius: 4px;
+        border: 1px solid #EEF2F6;
+        background:#F8FAFC;
+         font-size: 14px;
+    }
+   form#savePublishDetailsUser span.select2-selection.select2-selection--multiple{
+        border-radius: 4px;
+        border: 1px solid #EEF2F6;
+        background:#F8FAFC;
+        font-size: 14px;
+    }
+</style>

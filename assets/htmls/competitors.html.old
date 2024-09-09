@@ -1,0 +1,246 @@
+<div class="row">
+    <div class="row dashfirstRow"  data-title="Competitors Spying"
+         data-intro="Consider a real-world example: Imagine you operate a grocery store — one of three competing stores
+                    in town. Your customers are happy, but you know they also visit other stores because they can't buy
+                    everything in one place. So you go on a road trip to gather competitive intelligence. You visit the
+                    other stores to understand the popular items they offer. By offering these items yourself — or even
+                    superior ones — you help your customers make fewer trips, and in turn, you gain more business.">
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="This number indicates how many competitors we found for you based on the keywords below. An SEO competitor analysis, or SEO competitive analysis, involves researching the content and other
+                    elements of the content, like the links and keywords a competitor has used. Put simply, it is an SEO
+                    comparison between two competing websites in a similar industry or business.">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/analytics.png" class="dashcardIcon" alt="Referring"/>
+                        <div>
+                            <h4 id="listedCompetitor">
+                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                            </h4>
+                            <span>Listed Competitors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="In order to calculate your competitors we use the results for the keywords you want to promote.">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/filtering.png" class="dashcardIcon" alt="Website"/>
+                        <div>
+                            <h4 id="filterByKeywords">
+                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                            </h4>
+                            <span>Filter by Keywords</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="You can change to table view with more details or simple list view.">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/lists.png" class="dashcardIcon" alt="Broken Backlinks"/>
+                        <div>
+                            <h4>
+                                <div class="switch_check">
+                                    <div class="switchCheckBox">
+                                        <input onclick="toggleCompsView()" type="checkbox" name="compsView" id="compsView">
+                                        <label for="compsView">
+                                            <span class="switchDesign"></span>
+                                        </label>
+                                    </div>
+<!--                                    <div class="form-check form-switch" style="margin-right: 20px; margin-left: 20px;">-->
+<!--                                        <input class="form-check-input" type="checkbox" id="compsView" onchange="toggleCompsView()">-->
+<!--                                        <label class="form-check-label fw-bold" for="compsView">Table View</label>-->
+<!--                                    </div>-->
+                                </div>
+                            </h4>
+                            <span>Table View</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <a id="backToCompetitorsLink" href="javascript: ajaxLoadToDiv('/assets/htmls/competitors.html', 'tabData')">Back to
+            Competitors</a>
+        <div class="domainCard" id="competitorsTitle">Competitors</div>
+            <div class="card page-card mb-4" id="compResearch">
+            <div class="card-body">
+                <!--                <div class="alert alert-primary likspyAlert" role="alert" id="fewKeywordsAlert" style="display:none;">-->
+                <!--                    <div class="d-flex">-->
+                <!--                        <div class="warningBox">-->
+                <!--                            <img src="/assets/images/icon/alertque.png" alt="Primary">-->
+                <!--                        </div>-->
+                <!--                        <p class="my-0">WARNING <br>-->
+                <!--                            The competitors are being calculated based on the keywords you're tracking and there are not enough keywords, to get accurate competitors' data you should add more keywords.-->
+                <!--                        </p>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <div class="row">
+                    <div class="col text-center" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" data-bs-content="Rabbit SEO calculates your competitors based on your keywords in real time (you can edit them in the
+                        Keywords tab) - you can see for each competitor which keywords they're ranked for and get ideas for
+                        new keywords, same for links etc. You can also create a keywords gap between your competitors and
+                        your website.">
+                        <h3>Filter Competitors by Keywords</h3>
+                    </div>
+                    <select id="keywordIdsList" name="keywordIdsList" class="keywordIdsList
+                                                            form-control
+                                                            form-select js-example-placeholder-multiple
+                                                            dropdown-toggle" multiple="multiple"></select>
+                    <div class="col text-center" style="margin-top: 20px; margin-bottom: 20px">
+                        <button class="btn btn-outline-primary pageBtn" type="button"
+                                onclick="selectAll('.keywordIdsList', false)">Clear All
+                        </button>
+                        <button class="btn btn-primary pageBtn" type="button" onclick="fetchComps()"> Find Competitors </button>
+                    </div>
+                </div>
+<!--                <div class="d-lg-flex justify-content-between" style="height: 60px;">-->
+<!--                    <div class="d-flex align-items-center align-items-center">-->
+<!--                        <h3 class="dash-title mb-0" id="compsTitle"></h3>-->
+<!--&lt;!&ndash;                        <span class="listedItem" id="listedItemsCount"></span>&ndash;&gt;-->
+<!--                    </div>-->
+
+<!--                    <div id="exportOptions" style="display: none" class="mb-20px">-->
+<!--                        <ul class="list-style-none actionkey_ul">-->
+<!--                            <li class="actionkey_li">-->
+<!--                                <a href="javascript:;" title="COPY" id="copyButton" class="ks_buttn d-inline-block">-->
+<!--                                    <img src="/assets/images/icon/copy.svg" alt="Copy"/>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="actionkey_li">-->
+<!--                                <a href="javascript:;" title="XLS" id="xlsButton" class="ks_buttn d-inline-block">-->
+<!--                                    <img src="/assets/images/icon/xls.svg" alt="XLS"/>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="actionkey_li">-->
+<!--                                <a href="javascript:;" title="PDF" id="pdfButton" class="ks_buttn d-inline-block">-->
+<!--                                    <img src="/assets/images/icon/pdf.svg" alt="PDF"/>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="actionkey_li">-->
+<!--                                <a href="javascript:;" title="PRINT" id="printButton" class="ks_buttn d-inline-block">-->
+<!--                                    <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="actionkey_li">-->
+<!--                                <div class="keywordSearch">-->
+<!--                                    <img src="/assets/images/icon/search.svg" alt="Search"/>-->
+<!--                                    <input type="text" class="form-control" id="tableSearch" placeholder="Search..."/>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="d-lg-flex justify-content-between">
+                    <div class="d-flex align-items-center align-items-center">
+                        <h3 class="dash-title mb-0" id="overviewOf" data-intro="Your website might rank number one for a certain keyword today, but this status is not forever. Over
+                    time, other websites – most of them competitors – will learn how to optimize their content and
+                    outrank your site. This is why SEO competitive analysis needs to be an ongoing initiative for any
+                    business.<br />SEO competitive analysis is effective and efficient because you don’t have to start your research
+                    from scratch. You can see what other competitors are doing and apply it to your own SEO efforts."><span>My Competitors</span></h3>
+                        <a href="javascript: runIntro();" class="btn btn-outline-primary pageBtn"><img
+                                src="/assets/images/icon/u_manual.svg" alt="Tour"><span>User Manual</span></a>
+                    </div>
+                </div>
+                <br/>
+                <div id="compsList" data-intro="Now it's time to track your competitors, see how they're doing, which keywords they're promoting, how do they get most of their traffic, where from etc.">
+
+                </div>
+
+                <div class="rabbitTable">
+                    <table id="compsTable" class="table notranslate hover" style="display: none; width: 100%;">
+                        <thead class="text-primary thead-dark">
+                        <tr>
+                            <th class="no-sort" style="display: none"></th>
+                            <th>Domain</th>
+                            <th>Average Rank</th>
+                            <th>Weighted Average</th>
+                            <th>In Top 20</th>
+                            <th>In Top 10</th>
+                            <th>In Top 5</th>
+                            <th>In Top 3</th>
+                            <th>In Top 1</th>
+                            <th class="no-sort"></th>
+                            <th class="no-sort"></th>
+<!--                            <th class="no-sort"></th>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+<!--                        <tr>-->
+<!--                            <td>-->
+<!--                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="compsTableChild" style="display: none">
+                    <div class="d-lg-flex justify-content-between" style="width: 95%; margin-top: 10px;">
+                        <div class="d-flex align-items-center mb-20px">
+                            <h3 class="cardTitle mb-0">Keywords</h3>
+                            <span class="listedItem" id="listedInnerCount"></span>
+                        </div>
+                        <div class="mb-20px">
+                            <ul class="list-style-none actionkey_ul">
+                                <li class="actionkey_li">
+                                    <a href="javascript:;" title="COPY" id="copyButtonInner"
+                                       class="ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li">
+                                    <a href="javascript:;" title="XLS" id="xlsButtonInner"
+                                       class="ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li">
+                                    <a href="javascript:;" title="PDF" id="pdfButtonInner"
+                                       class="ks_buttn d-inline-block">
+                                        <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li">
+                                    <a href="javascript:;" title="PRINT" id="printButtonInner"
+                                       class="ks_buttn d-inline-block">
+                                        <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                                    </a>
+                                </li>
+                                <li class="actionkey_li">
+                                    <div class="keywordSearch">
+                                        <img src="/assets/images/icon/search.svg" alt="Search"/>
+                                        <input type="text" class="form-control" id="tableSearchInner"
+                                               placeholder="Search..."/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rabbitTable">
+                        <table class="table notranslate table-striped hover compact display" style="width: 95%;">
+                            <thead class="text-primary thead-dark"></thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        initCompsTab();
+    });
+</script>

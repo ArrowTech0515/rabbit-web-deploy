@@ -1,0 +1,34 @@
+<style>
+body {
+    /*color: #333333;*/
+}
+.gridTable {
+    /*border: 1px solid #7c8389;*/
+    padding: 0;
+    /*border-collapse: collapse;*/
+}
+.gridTable tr.header {
+    text-align: center;
+    background-color: #e6e6e6;
+    height: 50px;
+    font-size: 13px;
+}
+.gridTable tr.odd {
+    background-color: #e6e6e6;
+}
+.gridTable td {
+    /*border: 1px solid #7c8389;*/
+    padding: 0 2px;
+    font-size: 12px;
+    border: 0.5px solid #e6e6e6;
+}
+.percentageBox {
+    height: 25px;
+    width: 100px;
+    background-color: #fec200;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 8px;
+    padding-top: 3px;
+}
+</style>

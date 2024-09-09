@@ -1,0 +1,42 @@
+<div class="modal fade" id="domainChangeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title text-center">
+                    Notice of Domain Change
+                </h6>
+                <button style="display: none" type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#domainChangeModal').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alertDomain mt-2 mb-3 ">
+                    <div class="alertDomainImage">
+                        <img src="/assets/images/warning.png">
+                    </div>
+                    <div>
+                        Do you have a new domain?<br />
+                    Please choose your active domain:
+                    </div>
+                    
+                </div>
+
+                <form id="updateDomainUser">
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="$('#updatedWixUrl').val(mainUserDetails['wixUrl'])" type="radio" name="domainSelect" id="oldDomain" checked>
+                        <label id="oldDomainLabel" class="form-check-label" for="oldDomain"></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="$('#updatedWixUrl').val(mainUserDetails['showDomainChange'])" type="radio" name="domainSelect" id="newDomain">
+                        <label id="newDomainLabel" class="form-check-label" for="newDomain"></label>
+                    </div>
+                    <input type="hidden" id="updatedWixUrl" name="wixUrl" />
+
+                    <button type="button" onclick="updateDomain()" class="btn btn-primary btn-lg pageBtn w-100">Submit</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>

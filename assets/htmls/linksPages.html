@@ -1,0 +1,213 @@
+<div class="mb-5">
+    <div class="row lhRow">
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/bluelink.png" class="dashcardIcon" alt="Backlinks">
+                        <div>
+                            <h4 id="totalPages">
+                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                            </h4>
+                            <span>Total Linked Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/domain.png" class="dashcardIcon" alt="Referring">
+                        <div>
+                            <h4 id="listedPages">
+                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                            </h4>
+                            <span>Listed Linked Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="backlinksToTopPages">
+                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                            </h4>
+                            <span>Backlinks to Top 5 Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="refDomainsToTopPages">
+                                <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                            </h4>
+                            <span>Referring Domains Rank to Top 5 Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card page-card mb-4">
+        <div class="card-body">
+            <div class="d-lg-flex justify-content-between mb-20px">
+                <div class="d-flex align-items-center">
+                    <h3 class="cardTitle mb-0">Backlinks By Pages</h3>
+                    <span class="listedItem" id="listedItemsCount"></span>
+                </div>
+                <div>
+                    <ul id="linksPagesButtons" class="list-style-none actionkey_ul">
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="COPY" id="copyButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="XLS" id="xlsButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PDF" id="pdfButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PRINT" id="printButton" class="ks_buttn d-inline-block">
+                                <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <div class="keywordSearch">
+                                <img src="/assets/images/icon/search.svg" alt="Search"/>
+                                <input type="text" class="form-control" id="tableSearch" placeholder="Search..."/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rabbitTable">
+                <table id="linksPages" class="notranslate uk-table uk-table-hover uk-table-striped hover"
+                       style="width:100%">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Page</th>
+                        <th>Rank</th>
+                        <th>Backlinks</th>
+                        <th>Referring Domains</th>
+                        <th>Referring Pages</th>
+                        <th>Words</th>
+                        <th>Images</th>
+                        <th>Internal Links</th>
+                        <th>External Links</th>
+                        <th>Title</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <td colspan="15" class="text-center">
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                    </td>
+                    </tbody>
+                </table>
+                <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+                    <h3>Upgrade to see your backlinks here</h3>
+                    <p>Currently you see a demo of amazon, upgrade now to <br>
+                        see results of your website</p>
+                    <button type="button">Upgrade to Premium</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        let websiteUrl = $('#inputSearchWebsite').val();
+        if (payingUser == false) {
+            websiteUrl = "amazon.com";
+            $('.upgradeBlock').attr("onclick", upgradeLink);
+            $('.upgradeBlock').show();
+            $('#linksPages').css('opacity', 0.3);
+            $('#linksPages').addClass('ignoreme');
+            $('.spinner-border').hide();
+        } else {
+
+            $.getJSON(getApiUrl('getMyJsonCompDataGeneric?api=WebsiteLinksPages&url=' + websiteUrl), function (json) {
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json["data"]);
+                    console.log('WebsiteLinksPages ' + JSON.stringify(json));
+                    $('#totalPages').html(nFormatter(json["total_count"], 2));
+                    json = json['items'];
+
+                    if (json) {
+                        var html = '';
+                        var listedPages = 0;
+                        var backlinksToTopPages = 0;
+                        var refDomainsToTopPages = 0;
+
+                        for (var i = 0; i < json.length; i++) {
+                            listedPages++;
+                            if (i < 5) {
+                                backlinksToTopPages += json[i]["page_summary"]["backlinks"];
+                                refDomainsToTopPages += json[i]["page_summary"]["referring_domains"];
+                            }
+
+                            let wordsCount = nFormatter(json[i]["meta"]["words_count"], 2);
+                            let imagesCount = nFormatter(json[i]["meta"]["images_count"], 2);
+                            let intLinks = nFormatter(json[i]["meta"]["internal_links_count"], 2);
+                            let extLinks = nFormatter(json[i]["meta"]["external_links_count"], 2);
+                            let page = json[i]["page"];
+                            let formattedPage = getFormattedUrl(page);
+                            // let formattedPage = page ? page.replace("https://", "").replace("http://", "").replace("www.", "").replace($('#inputSearchWebsite').val(), "") : '';
+                            html +=
+                                '<tr>' +
+                                '<td>' + (i + 1) + '</td>' +
+                                '<td width="30%"><a href="' + page + '" target="_blank">' + formattedPage + '</a></td>' +
+                                '<td>' + json[i]["page_summary"]["rank"] + '</td>' +
+                                '<td>' + nFormatter(json[i]["page_summary"]["backlinks"], 2) + '</td>' +
+                                '<td>' + nFormatter(json[i]["page_summary"]["referring_domains"], 2) + '</td>' +
+                                '<td>' + nFormatter(json[i]["page_summary"]["referring_pages"], 2) + '</td>' +
+                                '<td>' + formatBiggerThanZeroVal(wordsCount) + '</td>' +
+                                '<td>' + formatBiggerThanZeroVal(imagesCount) + '</td>' +
+                                '<td>' + formatBiggerThanZeroVal(intLinks) + '</td>' +
+                                '<td>' + formatBiggerThanZeroVal(extLinks) + '</td>' +
+                                '<td>' + (json[i]["meta"]["title"] && json[i]["meta"]["title"] != 'undefined' ? json[i]["meta"]["title"] : '') + '</td>' +
+                                // '<td>' + json[i]["meta"]["h1"] + '</td>' +
+                                '</tr>';
+                        }
+                        $('#listedPages').html(listedPages);
+                        $('#backlinksToTopPages').html(nFormatter(backlinksToTopPages, 2));
+                        $('#refDomainsToTopPages').html(nFormatter((refDomainsToTopPages / 3), 2));
+                        $('#linksPages tbody').html(html);
+                        var linksPages = $('#linksPages').DataTable(defaultTableSettings);
+                        adjustExportButtonsByParent('tableSearch', linksPages, 'linksPagesButtons');
+                    } else {
+                        $('#listedPages').html('');
+                        $('#backlinksToTopPages').html('');
+                        $('#refDomainsToTopPages').html('');
+                        $('#linksPages tbody').html('');
+                    }
+                } else if (isFreeUser()) {
+                    showUpgradeModal(genericUpgradeMsg);
+                }
+            });
+        }
+    })
+</script>

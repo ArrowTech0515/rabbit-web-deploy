@@ -1,0 +1,236 @@
+<div class="top-buttons">
+    <button class="create-new-form" onclick="createNewForm()">Create New Form</button>
+    <button class="start-with-easyforms" onclick="loadFormTemplatesHtml()">Start with Easy Forms</button>
+</div>
+
+<div class="top-header mt-5 ">
+    <div class="hello-user">Insights</div>
+    <div class="setting-note smbr info-grad-bg m-0 mt-3">
+        <div class="setting-inner-note d-flex justify-content-between">
+            <div class="d-flex">
+                <svg class="mx-1" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_2207_17317)">
+                        <path d="M9.99996 18.3333C14.6023 18.3333 18.3333 14.6023 18.3333 9.99996C18.3333 5.39759 14.6023 1.66663 9.99996 1.66663C5.39759 1.66663 1.66663 5.39759 1.66663 9.99996C1.66663 14.6023 5.39759 18.3333 9.99996 18.3333Z" stroke="url(#paint0_linear_2207_17317)" stroke-width="2"/>
+                        <path d="M10 14.1666V9.16663" stroke="url(#paint1_linear_2207_17317)" stroke-linecap="round"/>
+                        <path d="M9.99996 5.83333C10.4602 5.83333 10.8333 6.20643 10.8333 6.66667C10.8333 7.1269 10.4602 7.5 9.99996 7.5C9.53972 7.5 9.16663 7.1269 9.16663 6.66667C9.16663 6.20643 9.53972 5.83333 9.99996 5.83333Z" fill="url(#paint2_linear_2207_17317)"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_2207_17317" x1="-3.18289" y1="14.0787" x2="22.5438" y2="11.392" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F8D821"/>
+                            <stop offset="1" stop-color="#FB3C6C"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_2207_17317" x1="9.70903" y1="12.8903" x2="11.2688" y2="12.8577" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F8D821"/>
+                            <stop offset="1" stop-color="#FB3C6C"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_2207_17317" x1="8.68167" y1="6.25879" x2="11.2543" y2="6.52746" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#F8D821"/>
+                            <stop offset="1" stop-color="#FB3C6C"/>
+                        </linearGradient>
+                        <clipPath id="clip0_2207_17317">
+                            <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="sfs mfw mtc mx-2">
+                    <div class="mfw mfs mtc">You are currently using the demo version of EasyForms</div>
+                    <div class="dfw sfs mtc">Please note that some features may be limited in this mode. To unlock the full experience and access all functionalities, consider upgrading to the full version.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="summary mt-3">
+    <div class="summary-header mfw xlfs ftc my-3">Summary</div>
+    <div class="summary-content dfw lfs dtc">
+        <p>Based on the data provided, we can see that the top hours of day for site visitor engagement are 7AM and 5AM, with 227 and 61 visits respectively. This indicates that visitors tend to be most active in the early morning hours, possibly before starting their workday or during their commute.</p>
+        <p>On the other hand, the lowest peak hours are 13 and 16, with only 4 and 2 visits respectively. These hours are typically during mid-afternoon when people may be busy with work or other activities.</p>
+        <p>In terms of countries, the top country for site visitors is the United States with 317 visits, followed by Israel with 249 visits. This could indicate that the content on the site is most relevant or interesting to visitors from these countries. Russia and Germany have much lower engagement with only 4 and 3 visits respectively. When looking at days of the week, the top day for engagement is Wednesday with 283 visits, followed by Thursday with 103 visits. This suggests that visitors are most active during the middle of the week, possibly when they are looking for information or entertainment to get them through the rest of the workweek.</p>
+        <p>Key takeaways from this data could include the importance of targeting content and marketing efforts towards visitors from the United States and Israel, as they are the top countries for engagement. Additionally, focusing on engagement strategies during the early morning hours and mid-week could help increase overall site traffic and visitor interaction.</p>
+    </div>
+</div>
+
+<div class="analytics mt-5">
+    <div class="analytics-content mt-4">
+        <div class="analytic-item w-100">
+            <div class="analytic-item-header mfw ftc lfs">Days of the Month</div>
+            <div class="analytic-item-sub-header dfw dtc mfs">In this graph, you can see on which of the days of the <br>month your Forms are most active.</div>
+            <div class="view-options d-flex justify-content-end align-items-center">
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_visitors" onchange="change_date_chart_line(0)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Visitors</label>
+                </div>
+                <div class="form-check form-switch mx-4">
+                    <input class="form-check-input for_clicks" onchange="change_date_chart_line(1)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Clicks</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_submissions" onchange="change_date_chart_line(2)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Submissions</label>
+                </div>
+            </div>
+            <div class="analytic-item-chart">
+                <canvas id="by_date" height="350"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="analytics-content d-flex gap-3 mt-4">
+        <div class="analytic-item" style="width: 60%">
+            <div class="analytic-item-header mfw ftc lfs">Hours</div>
+            <div class="analytic-item-sub-header dfw dtc mfs">In this graph, you can see on which of the days <br>week your Forms are most active.</div>
+            <div class="view-options d-flex justify-content-end align-items-center">
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_visitors" onchange="change_hour_chart_line(0)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Visitors</label>
+                </div>
+                <div class="form-check form-switch mx-4">
+                    <input class="form-check-input for_clicks" onchange="change_hour_chart_line(1)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Clicks</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_submissions" onchange="change_hour_chart_line(2)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Submissions</label>
+                </div>
+            </div>
+            <div class="analytic-item-chart">
+                <canvas id="by_hours" height="350"></canvas>
+            </div>
+        </div>
+        <div class="analytic-item" style="width: 40%">
+            <div class="analytic-item-header mfw ftc lfs">Days</div>
+            <div class="analytic-item-sub-header dfw dtc mfs">In this graph, you can see on which the days of <br>week  your channels are most active.</div>
+            <div class="view-options d-flex justify-content-end align-items-center">
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_visitors" onchange="change_day_chart_line(0)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Visitors</label>
+                </div>
+                <div class="form-check form-switch mx-4">
+                    <input class="form-check-input for_clicks" onchange="change_day_chart_line(1)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Clicks</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_submissions" onchange="change_day_chart_line(2)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Submissions</label>
+                </div>
+            </div>
+            <div class="analytic-item-chart">
+                <canvas id="by_days" height="350"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="analytics-content d-flex gap-3 mt-4">
+        <div class="analytic-item mt-3 width-33">
+            <div class="analytic-item-header mfw ftc lfs">Countries</div>
+            <div class="analytic-item-sub-header dfw dtc mfs m3-5">This graph shows which countries you have the most visitors from.</div>
+            <div class="view-options d-flex justify-content-center align-items-center">
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_visitors" onchange="change_country_chart_line(0)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Visitors</label>
+                </div>
+                <div class="form-check form-switch mx-4">
+                    <input class="form-check-input for_clicks" onchange="change_country_chart_line(1)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Clicks</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_submissions" onchange="change_country_chart_line(2)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Submissions</label>
+                </div>
+            </div>
+            <div class="mt-3" style="height: 300px; overflow-y: scroll;">
+                <div>
+                    <canvas id="by_countries"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="analytic-item mt-3 width-33">
+            <div class="analytic-item-header mfw ftc lfs">Cities</div>
+            <div class="analytic-item-sub-header dfw dtc mfs m3-5">This graph shows which cities you have the most visitors from.</div>
+            <div class="view-options d-flex justify-content-center align-items-center">
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_visitors" onchange="change_city_chart_line(0)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Visitors</label>
+                </div>
+                <div class="form-check form-switch mx-4">
+                    <input class="form-check-input for_clicks" onchange="change_city_chart_line(1)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Clicks</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input for_submissions" onchange="change_city_chart_line(2)" type="checkbox" checked name="my_keywords"
+                           value="My Keywords">
+                    <label class="form-check-label dfw sfs dtc">Submissions</label>
+                </div>
+            </div>
+            <div class="mt-3" style="height: 300px; overflow-y: scroll;">
+                <div>
+                    <canvas id="by_cities"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="analytic-item mt-3 width-33">
+            <div class="analytic-item-header mfw ftc lfs">Devices</div>
+            <div class="analytic-item-sub-header dfw dtc mfs mb-5">This graph shows which devices <br> your visitors use the most.</div>
+            <div class="d-flex gap-3 mt-5">
+                <button class="width-30 primary-small-button active">
+                    <div class="button-text">
+                        Visitors
+                    </div>
+                </button>
+                <button class="width-30 primary-small-button">
+                    <div class="button-text">
+                        Clicks
+                    </div>
+                </button>
+                <button class="width-30 primary-small-button">
+                    <div class="button-text">
+                        Submissions
+                    </div>
+                </button>
+            </div>
+            <div class="row align-items-center py-3 my-5">
+                <div class="col-4 text-center">
+                    <div class="xdfw sfs dtc">Mobile Devices</div>
+                    <div class="lfw mtc xxxlfs">
+                        60.7%
+                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.2048 9.26545C11.6334 9.66137 11.6334 10.3386 11.2048 10.7346L2.42855 18.8417C1.78807 19.4334 0.750001 18.9791 0.750001 18.1072L0.75 1.89283C0.75 1.0209 1.78807 0.566625 2.42855 1.15828L11.2048 9.26545Z" fill="#19213D"/>
+                        </svg>
+                    </div>
+                    <div class="mfw mfs ftc">
+                        1200 Visitors
+                    </div>
+                </div>
+                <div class="col-4">
+                    <canvas id="by_devices"></canvas>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="xdfw sfs dtc">Desktop Devices</div>
+                    <div class="lfw mtc xxxlfs">
+                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.795177 9.26545C0.366579 9.66137 0.366578 10.3386 0.795177 10.7346L9.57145 18.8417C10.2119 19.4334 11.25 18.9791 11.25 18.1072L11.25 1.89283C11.25 1.0209 10.2119 0.566625 9.57145 1.15828L0.795177 9.26545Z" fill="#19213D"/>
+                        </svg>
+                        60.7%
+                    </div>
+                    <div class="mfw mfs ftc">
+                        1200 Visitors
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

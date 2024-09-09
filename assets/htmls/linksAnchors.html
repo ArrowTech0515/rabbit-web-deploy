@@ -1,0 +1,206 @@
+<div class="mb-5">
+    <div class="row lhRow">
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/bluelink.png" class="dashcardIcon" alt="Backlinks">
+                        <div>
+                            <h4 id="totalAnchors"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Total Anchors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/domain.png" class="dashcardIcon" alt="Referring">
+                        <div>
+                            <h4 id="listedAnchors"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Listed Anchors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="backlinksAnchorsFromTop"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Backlinks from Top 5 Anchors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dash-card" data-bs-container="body" data-bs-toggle="popover" data-bs-trigger="hover"
+                 data-bs-placement="bottom" data-bs-content="Tooltip" data-bs-original-title="" title="">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <img src="/assets/images/icon/webrenk.png" class="dashcardIcon" alt="Website">
+                        <div>
+                            <h4 id="avgRefDomainRankTop"><div class="spinner-border ms-auto" role="status" aria-hidden="true"></div></h4>
+                            <span>Average Referring Domain Rank from Top 5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card page-card mb-4">
+        <div class="card-body">
+            <div class="d-lg-flex justify-content-between mb-20px">
+                <div class="d-flex align-items-center">
+                    <h3 class="cardTitle mb-0">Backlinks By Keywords</h3>
+                    <span class="listedItem" id="listedItemsCount"></span>
+                </div>
+                <div>
+                    <ul id="linksAnchorsButtons" class="list-style-none actionkey_ul">
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="COPY" id="copyButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/copy.svg" alt="Copy"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="XLS" id="xlsButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/xls.svg" alt="XLS"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PDF" id="pdfButton" class="ks_buttn d-inline-block">
+                                <img src="/assets/images/icon/pdf.svg" alt="PDF"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <a href="javascript:;" title="PRINT" id="printButton" class="ks_buttn d-inline-block">
+                                <img style="display: none" src="/assets/images/icon/print.svg" alt="PRINT"/>
+                            </a>
+                        </li>
+                        <li class="actionkey_li">
+                            <div class="keywordSearch">
+                                <img src="/assets/images/icon/search.svg" alt="Search"/>
+                                <input type="text" class="form-control" id="tableSearch" placeholder="Search..."/>
+                            </div>
+                        </li>
+                        <!--                        <li class="actionkey_li">-->
+                        <!--                            <div class="dropdown">-->
+                        <!--                                <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+                        <!--                                    Advanced Search-->
+                        <!--                                </button>-->
+                        <!--                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+                        <!--                                    <input type="checkbox" name="onlyOneLinkPerDomain" id="onlyOneLinkPerDomain" onclick="showOnlyOnelink(this)">-->
+                        <!--                                    <label for="onlyOneLinkPerDomain">Show Only One Link Per Domain</label><br>-->
+                        <!--                                    <input type="checkbox" name="sortFromAllResult" id="sortFromAllResult">-->
+                        <!--                                    <label for="sortFromAllResult">Sort From All Result</label>-->
+
+                        <!--                                    &lt;!&ndash;                                <li><a class="dropdown-item" style="cursor: pointer">US </a></li>&ndash;&gt;-->
+                        <!--                                    &lt;!&ndash;                                <li><a class="dropdown-item" style="cursor: pointer">Canada</a></li>&ndash;&gt;-->
+                        <!--                                    &lt;!&ndash;                                <li><a class="dropdown-item" style="cursor: pointer">Russia</a></li>&ndash;&gt;-->
+                        <!--                                    &lt;!&ndash;                                <li><a class="dropdown-item" style="cursor: pointer">Israel</a></li>&ndash;&gt;-->
+                        <!--                                </ul>-->
+                        <!--                            </div>-->
+                        <!--                        </li>-->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rabbitTable">
+                <table id="linksAnchors" class="notranslate uk-table uk-table-hover uk-table-striped hover"
+                       style="width:100%">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Anchor</th>
+                        <th>Backlinks</th>
+                        <th>First Seen</th>
+                        <th>Rank</th>
+                        <th>Referring Domain</th>
+                        <th>Referring MainDomains</th>
+                        <th>Referring Pages</th>
+                        <th>Referring Subnets</th>
+                        <th>Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <td colspan="15" class="text-center">
+                        <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                    </td>
+                    </tbody>
+                </table>
+                <div id="upgradeBlock" class="upgradeBlock" style="display: none">
+                    <h3>Upgrade to see your backlinks here</h3>
+                    <p>Currently you see a demo of amazon, upgrade now to <br>
+                        see results of your website</p>
+                    <button type="button">Upgrade to Premium</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        let websiteUrl = $('#inputSearchWebsite').val();
+        if (!payingUser) {
+            websiteUrl = "amazon.com";
+            $('.upgradeBlock').attr("onclick", upgradeLink);
+            $('.upgradeBlock').show();
+            $('#linksAnchors').css('opacity', 0.3);
+            $('#linksAnchors').addClass('ignoreme');
+            $('.spinner-border').hide();
+        } else {
+            $.getJSON(getApiUrl('getMyJsonCompDataGeneric?api=WebsiteLinksAnchors&url=' + websiteUrl), function (json) {
+                if (!hasAlertToShow(json)) {
+                    json = JSON.parse(json["data"]);
+                    $('#totalAnchors').html(nFormatter(json["total_count"], 2));
+                    json = json['items'];
+                    var html = '';
+                    var listedAnchors = 0;
+                    var backlinksAnchorsFromTop = 0;
+                    var avgRefDomainRankTop = 0;
+
+                    for (var i = 0; i < json.length; i++) {
+                        listedAnchors++;
+                        if (i < 3) {
+                            backlinksAnchorsFromTop += json[i]["backlinks"];
+                            avgRefDomainRankTop += json[i]["rank"];
+                        }
+                        let anchor = json[i]["anchor"];
+                        html +=
+                            '<tr>' +
+                            '<td>' + (i + 1) + '</td>' +
+                            '<td>' + (anchor ? anchor : '-') + '</td>' +
+                            '<td>' + nFormatter(json[i]["backlinks"], 2) + '</td>' +
+                            '<td>' + getFormattedDate(json[i]["first_seen"]) + '</td>' +
+                            '<td>' + nFormatter(json[i]["rank"], 2) + '</td>' +
+                            '<td>' + nFormatter(json[i]["referring_domains"], 2) + '</td>' +
+                            '<td>' + nFormatter(json[i]["referring_main_domains"], 2) + '</td>' +
+                            '<td>' + nFormatter(json[i]["referring_pages"], 2) + '</td>' +
+                            '<td>' + nFormatter(json[i]["referring_subnets"], 2) + '</td>' +
+                            '<td>' + json[i]["type"] + '</td>' +
+                            '</tr>';
+                    }
+
+                    $('#listedAnchors').html(nFormatter(listedAnchors, 2));
+                    $('#listedItemsCount').html(nFormatter(listedAnchors, 2));
+                    $('#backlinksAnchorsFromTop').html(nFormatter(backlinksAnchorsFromTop, 2));
+                    $('#avgRefDomainRankTop').html(nFormatter((avgRefDomainRankTop / 3), 2));
+
+                    $('#linksAnchors tbody').html(html);
+                    var linksAnchors = $('#linksAnchors').DataTable(defaultTableSettings);
+                    adjustExportButtonsByParent('tableSearch', linksAnchors, 'linksAnchorsButtons');
+                } else if (isFreeUser()) {
+                    showUpgradeModal(genericUpgradeMsg);
+                }
+            });
+        }
+    })
+</script>

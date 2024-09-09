@@ -1,0 +1,494 @@
+<title>Links4u - publish your website</title>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"></script>
+<script src="/assets/scripts-app/welcome-links4u.js"></script>
+
+<link rel="stylesheet" href="/assets/css/links4u.css">
+<header>
+    <section class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/" style="cursor: pointer">
+                    <img src="/assets/images/links4u/logo.png" alt="">
+                </a>
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex">
+                    <li>
+                        <div class="login_dropdown">
+                            <div class="login_icon"><span class="avatar"><img src="/assets/images/links4u/avatar.jpg"  alt="user"></span><!-- Login --><span
+                                    class="arrow_down"><img src="/assets/images/links4u/arrow_down.png" alt="user"></span>
+                            </div>
+                            <div class="logingDropdown">
+                                <div class="login_container">
+                                    <div class="form_titel">Login into your Account</div>
+                                    <form id="appLoginGuest" method="POST">
+                                        <input type="hidden" id="appVal" name="app" value="links4u"/>
+                                        <input type="hidden" name="app" value="links4u"/>
+                                        <input type="hidden" name="action" value="login"/>
+                                        <input type="hidden" name="loginAttempt" value="1"/>
+                                        <div class="login_inp mb-3">
+                                            <input type="email" name="email" class="form-control" placeholder="Email"/>
+                                        </div>
+                                        <div class="login_inp mb-3">
+                                            <input type="password" name="password" class="form-control"
+                                                   placeholder="Password"/>
+                                        </div>
+                                        <div class="loginRemember">
+                                            <input type="checkbox" name="rememberMe" id="login_Remember"/>
+                                            <label for="login_Remember">
+                                           <span class="Remember_check">
+                                             <img src="/assets/img/check.png" alt="check"/>
+                                           </span>
+                                                Remember Me
+                                            </label>
+                                        </div>
+                                        <div class="sm_abs">
+                                            <a class="forgot_pass"> Forgot Password? </a>
+                                        </div>
+                                        <div class="logInBtn">
+                                            <button
+                                                    class="button g-recaptcha btn-primary"
+                                                    data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                    data-callback="sendLoginForm"
+                                                    data-action="submit"
+                                            >
+                                                LOGIN
+                                            </button>
+                                        </div>
+                                        <div
+                                                style="display: none; margin-top: 10px"
+                                                class="alert alert-success"
+                                                role="alert"
+                                        >
+                                            <div class="d-flex">
+                                                <p class="my-0">Your message was successfully sent</p>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="forgot_container">
+                                    <img
+                                            src="/assets/images/links4u/arrow-left-solid.svg"
+                                            alt="arrow-left"
+                                            class="backLogin"
+                                            title="Back to Login"
+                                    />
+                                    <div class="form_titel">Forgot Password?</div>
+                                    <form id="ajaxForgotPasswordGuest" name="forgot_pass">
+                                        <input type="hidden" name="app" value="links4u"/>
+                                        <div class="login_inp">
+                                            <input type="email" name="email" placeholder="Email" class="form-control"/>
+                                        </div>
+                                        <div class="logInBtn">
+                                            <button
+                                                    class="button g-recaptcha btn btn-primary"
+                                                    data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                    data-callback="forgotPassword"
+                                                    data-action="submit"
+                                            >
+                                                SUBMIT
+                                            </button>
+                                        </div>
+                                        <div
+                                                style="display: none; margin-top: 10px"
+                                                class="alert alert-success"
+                                                role="alert"
+                                        >
+                                            <div class="d-flex">
+                                                <p class="my-0" id="forgotPasswordDiv"></p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+    </section>
+</header>
+<div class="main_content_index">
+    <section class="section_cont header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="titel_1">We <span>Publish</span> your website and <span>Boost</span> traffic</h1>
+                    <p class="big_para2">You request links and listings for your website and we build
+                        them for you, to drive more traffic to your site and get higher
+                        rankings in search engines.</p>
+                    <div><a href="javascript: scrollTo('#createLinks4uAccountGuest')" class="btn sm_btn">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+
+            </div>
+        </div>
+        <div class="right_img"></div>
+    </section>
+
+
+    <section class="product_features">
+        <h2 class="titel_2">Product <span>Features</span></h2>
+        <p>We publish your website in directory listings, social websites, guest blogs and more. This is one of the most
+            important missions in your marketing operations.</p>
+    </section>
+
+    <section class="section_cont directory_listing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <h3 class="titel_3">Directory Listing</h3>
+                    <p class="big_para">Once search engines have crawled pages on the web, they can extract the content of
+                        those pages and add it to sufficient quality to be ranked well for relevant keywords. When they're
+                        deciding this, the search engines don't just look at the content of the page — they also look at the
+                        number of links pointing to that page from external websites, and the quality of those external
+                        websites. Generally speaking, the more high - quality websites that link to you, the more likely you
+                        are to rank well in search results.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="left_img"></div>
+    </section>
+
+
+    <section class="section_cont blog_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="titel_3">Blog</h3>
+                    <p class="big_para">The more sites your content and name appear on, the more authoritative Google sees
+                        you.</p>
+                    <p class="big_para">Guest blogging is important because it helps you build relationships with others in
+                        your industry, expose your brand to a new audience, drive targeted traffic to your website,
+                        establish yourself as a thought leader, and build potentially SEO -boosting backlinks to your
+                        website</p>
+                </div>
+                <div class="col-md-6"></div>
+
+            </div>
+        </div>
+        <div class="right_img"></div>
+    </section>
+
+    <section class="section_cont increase_traffic">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <h3 class="titel_3">Increase Traffic</h3>
+                    <p class="big_para">Once search engines have crawled pages on the web, they can extract the content of
+                        those pages and add it to their indexes. In this way, they can decide if they feel a page is of
+                        sufficient quality to be ranked don't just look at the content of the page — they also look at the
+                        number of links pointing to that page from external websites, and the quality of those external
+                        websites. Generally speaking, the more high - quality websites that link to you, the more likely you
+                        are to rank well in search results.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="left_img"></div>
+    </section>
+
+    <section class="contact_section sm1">
+        <div class="container">
+            <div class="row">
+                <div class="contact_bg">
+                    <div class="text">
+                        <h2 class="titel_2">Sign up for Free</h2>
+                        <p>Try now Links4u for free!</p>
+                    </div>
+                    <div class="contact_form">
+
+                        <form id="createLinks4uAccountGuest" method="POST" class="row g-2">
+                            <div class="col-auto">
+                                <!-- <label>Your Name* </label> -->
+                                <input type="url" name="url" class="form-control" placeholder="Your Domain">
+                            </div>
+                            <div class="col-auto">
+                                <!-- <label>Your Email*</label> -->
+                                <input type="email" name="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="col-auto">
+                                <input type="password" class="form-control" placeholder="Password" name="password"
+                                       id="reg_pass">
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="button g-recaptcha"
+                                        data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                        data-callback='signupLinks4u' data-action='submit'>Submit
+                                </button>
+                            </div>
+                            <div style="display: none; margin-top: 10px;" class="alert alert-success" role="alert">
+                                <div class="d-flex">
+                                    <p class="my-0" id="signupResult"></p>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="pricing_section">
+
+        <div class="container py-3" id="plans">
+            <header class="text-center">
+
+                <h2 class="titel_2"><span>Pricing</span></h2>
+
+                <div class="pricing_top_area">
+
+
+                    <div class="annualy_check">
+                        <div class="anualyCheckBox">
+                            <input onclick="toggleYearly()" type="checkbox" name="annullyCheck" id="annullyCheck">
+                            <label for="annullyCheck">
+                                <p class="monthly">Monthly</p>
+                                <span class="checkDesign"></span>
+                                <p class="yearly"> Yearly
+                                    <!--                                        <span class="savepercent">SAVE UP TO 20% </span>-->
+                                </p>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+            <main>
+                <div class="row row-cols-1 row-cols-md-4 mb-3 text-center planRow">
+
+                </div>
+            </main>
+
+            <p class="text-center">*Prices are in USD</p>
+        </div>
+    </section>
+
+
+    <section class="contact_section sm2">
+        <div class="container">
+            <div class="row">
+                <div class="contact_bg">
+                    <div class="text">
+                        <h2 class="titel_2">Contact Us</h2>
+                        <p>Tell us about your needs and we will be happy to show how we can make you more efficient.</p>
+                    </div>
+                    <div class="contact_form">
+                        <!-- ///////////////////// -->
+                        <div class="contactUsFormContainer">
+                            <div class="form_innenr">
+                                <div class="partner-form">
+                                    <form id="contactUsGuest" method="POST" class="row g-2">
+                                        <div class="col-auto">
+                                            <!-- <label>Your Name* </label> -->
+                                            <input type="text" name="name" class="form-control" placeholder="Your name">
+                                        </div>
+                                        <div class="col-auto">
+                                            <!-- <label>Your Email*</label> -->
+                                            <input type="email" name="email" class="form-control" placeholder="Your Email">
+                                        </div>
+                                        <div class="col-auto">
+                                            <!-- <label for="exampleFormControlTextarea1">Message Content</label> -->
+                                            <textarea placeholder="Message" class="form-control" name="comment"
+                                                      id="exampleFormControlTextarea1"
+                                                      rows="3"></textarea>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="submit" class="button g-recaptcha"
+                                                    data-sitekey="6Lf2o-MdAAAAADIx2SC3UlxGPkU12dE7h7jrPnxT"
+                                                    data-callback='saveForm' data-action='submit'>Submit
+                                            </button>
+                                        </div>
+                                        <div style="display: none; margin-top: 10px;" class="alert alert-success"
+                                             role="alert">
+                                            <div class="d-flex">
+                                                <p class="my-0">Your message was successfully sent</p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div> <!-- /.partner-form -->
+                            </div>
+
+                        </div>
+
+                        <!-- /////////////// -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<section class="homeReviews">
+    <div class="container"> 
+        <div class="reviewsContents"> 
+            <div class="myreviewsdivs"></div>
+            <div class="myreviewsdivs_btn">
+                <button name="prev" class="yellowBtn"><img src="/assets/images/icon/arrow_prev_blue.png"></button>
+                <button name="next" class="yellowBtn"><img src="/assets/images/icon/arrow_next_blue.png"></button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer_section">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="/assets/images/links4u/links4u-img/logo_footer.png" alt="">
+                    <p>Good link building can help build your brand and establish you as an authority in your niche.
+                        There are some link building techniques, such as content creation, which can show people the
+                        expertise of your company, and this can go a long way toward building your brand. For example,
+                        if you create a piece of content based on industry data and publish it, you have a chance of
+                        becoming well known for it in your industry. When you do outreach and try to get links to the
+                        content, you're showing your expertise and asking other people in your industry to help spread
+                        the word and show others the same.</p>
+                </div>
+                <div class="col-md-7">
+                    <div class="footer_flex">
+                        <div class="footer_menu">
+                            <h2>Site Quicklinks</h2>
+                            <ul>
+                                <li><a href="javascript: scrollTo('#createLinks4uAccountGuest')">Plans</a></li>
+                                <li><a  href="javascript:;" onclick="loadTermsHtml();">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2022 Links4u.net. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="right_side">
+                        <ul>
+                            <li><a href="javascript:;" onclick="loadtrmsHtml();">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    textarea#exampleFormControlTextarea1 {
+        height: 48px;
+    }
+</style>
+<script type="text/javascript">
+    $(document).click(function() { 
+        if ( $('div').hasClass('main_content_terms')) {
+        var container = $(".main_content_terms");
+        if (!container.is(event.target) && !container.has(event.target).length) {
+            container.remove(); 
+        }
+        $('.main_content_index').show();
+    }
+       
+    });
+     function shuffle(a) {
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+      $.getJSON('assets/data/reviewsLinks4uHome.json', function (response) { 
+    
+        const json = shuffle(response['list']);
+         var reviewHtml = '';
+        for (let i = 0; i < json.length; i+=2) {
+         
+           reviewHtml+='<div><div class="reviewDivBox">' +
+                    '<div class="reviewHeaders">' + 
+                    '<div class="reviewsContentsLeft">'+
+                   
+                    '<h6>'+  json[i]['reviewsCompanyName'] + '</h6>'+
+                    '<div class="reviewImagess'+  json[i]['reviewRating'] + '"></div>'+
+                    '</div>'+
+                    '<div class="counterReview"><span>'+json[i]['reviewsCount']+'</span>/<span class="counterReviewTotal">'+json.length+'</span></div>'+
+                    '</div>'+
+                    '<div class="reviewsContentsRight"><div>'+
+                     '<div class="reviewsImage">'+
+                    '<img src="'+json[i]['reviewsImage']+'">'+
+                    '</div>'+
+                    '<h6>'+  json[i]['reviewsTitle'] + '</h6>'+
+                    '<div>' +  json[i]['reviewsDescription'] + 
+                    '</div></div></div>'+ 
+                    '</div> ' ; 
+                   try{
+                    reviewHtml+=' <div class="reviewDivBox">' +
+                    '<div class="reviewHeaders">' + 
+                    '<div class="reviewsContentsLeft">'+
+                   
+                    '<h6>'+  json[i+1]['reviewsCompanyName'] + '</h6>'+
+                    '<div class="reviewImagess'+  json[i+1]['reviewRating'] + '"></div>'+
+                    '</div>'+
+                    '<div class="counterReview"><span>'+json[i+1]['reviewsCount']+'</span>/<span class="counterReviewTotal">'+json.length+'</span></div>'+
+                    '</div>'+
+                    '<div class="reviewsContentsRight"><div>'+
+                     '<div class="reviewsImage">'+
+                    '<img src="'+json[i+1]['reviewsImage']+'">'+
+                    '</div>'+
+                    '<h6>'+  json[i+1]['reviewsTitle'] + '</h6>'+
+                    '<div>' +  json[i+1]['reviewsDescription'] + 
+                    '</div></div></div>'+ 
+                    '</div></div>' ; 
+                } catch(err){
+
+                }
+                                   
+        }
+        $('.myreviewsdivs').html(reviewHtml) ;
+        var reviewsdivs = $('.myreviewsdivs>div');
+        var reviewsnow = 0; // currently shown div
+       
+        reviewsdivs.hide().first().show(); // hide all divs except first
+        $("button[name=next]").click(function () {
+            reviewsdivs.eq(reviewsnow).hide();
+            reviewsnow = (reviewsnow + 1 < reviewsdivs.length) ? reviewsnow + 1 : 0;
+            reviewsdivs.eq(reviewsnow).show(); // show next
+        });
+        $("button[name=prev]").click(function () {
+            reviewsdivs.eq(reviewsnow).hide();
+            reviewsnow = (reviewsnow > 0) ? reviewsnow - 1 : reviewsdivs.length - 1;
+            reviewsdivs.eq(reviewsnow).show(); // show previous
+        });
+         $(document).keydown(function(event) {
+            if (event.which === 39) {
+                // Right arrow key was pressed 
+                $( ".myreviewsdivs_btn button[name=next]").trigger('click');
+                // Add your code to handle right arrow key press here
+            } else if (event.which === 37) {
+                // Left arrow key was pressed 
+                $( ".myreviewsdivs_btn button[name=prev]").trigger('click');
+                // Add your code to handle left arrow key press here
+            }
+        });
+    });
+</script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3908798,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>

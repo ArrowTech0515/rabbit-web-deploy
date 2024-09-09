@@ -1,0 +1,72 @@
+<style type="text/css">
+    div#appDataModal .modal-dialog{
+        max-width: 600px !important;
+    }
+</style>
+<div class="paymentBlogModalBox">
+    <div class="mb-2">
+        <label>Domain</label>
+        <div class="userDomain"></div>
+    </div>
+    <div class="mb-2 existingUserEmail">
+        <label>Email</label>
+        <div class="userEmail"></div>
+    </div>
+ 
+<div class="row mb-3 userEmailForImageUpload">
+    <div class="col">
+        <label>Your Email</label>
+        <input data-hj-allow type="text" class="form-control" id="userEmailForImageUpload" name="email"  placeholder="Email">
+    </div>
+</div> 
+<!--<div class="drop-zone my-4">-->
+<!--   <p class="fs-6 mb-0"><img src="assets/images/uploadcloud.png"/>  Upload Blog Post Image</p>-->
+<!--</div>-->
+<div class="paymentBlogModalBoxNotice">
+    <p><img src="assets/images/warning-fill.png" alt="icon" />  Image resolution should be (Max 1080px x 1080px)</p>
+    <p><img src="assets/images/warning-fill.png" alt="icon" /> Images must be with appropriate content (no violence, porn etc)</p>
+    <p><img src="assets/images/warning-fill.png" alt="icon" /> Images must no include any ads or brand logo</p>
+    <div class="text-dark">If image doesn't meet the requirement we will have to change the image.</div>
+</div>
+ 
+
+
+
+</div>
+
+<div class="d-flex gap-3 mt-3 newBtnGroup">
+    <button onclick="$('#appDataModal').modal('hide');" class="btn btn-secondary w-100">Cancel</button>
+    <button onclick="askPermission()" class="btn btn-primary w-100">Submit Permission Request</button>
+</div>
+<div id="askPermissionResult" style="display: none">Great! we will notify you shortly by email.</div>
+
+<script>
+    $(document).ready(function () {
+        $('.modal-footer').hide();
+        $('.userDomain').html(mainUserDetails['wixUrl']);
+        $('.userEmail').html(mainUserDetails['email']);
+
+        if (isUserEmailExist()) {
+            $('.userEmailForImageUpload').hide();
+        } else {
+            $('.existingUserEmail').hide();
+        }
+    });
+    function askPermission() {
+        $.getJSON(getApiUrl('requestImageUploadPermissionLink?email=' + $('#userEmailForImageUpload').val()), function (json) {
+            console.log('requestImageUploadPermissionLink json ' + JSON.stringify(json));
+            // $('#askPermissionResult').show();
+            showModal("Success", "Great! we will notify you shortly by email.", "Close", "");
+            $('#appDataModal').modal('hide');
+            setTimeout(function () {
+                $('#modalMessage').modal('hide');
+            }, 5000);
+            
+            if (json['status'].indexOf('@') !== -1) {
+                $('#askPermissionResult').html('Great! we will notify you shortly by email ' + json['status']);
+            } else {
+                $('#askPermissionResult').html(json['status']);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,464 @@
+<html>
+  <head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <style>
+    body {
+      padding: 0px;
+      margin: 0px;
+      font-family: 'Poppins', sans-serif;
+    }
+    p {
+      margin:0px;
+    }
+    section {
+      padding:0px;
+      margin:0px;
+    }
+    section.header {
+      height: 50px;
+    }
+    div.slide  {
+      height: 400px;
+    }
+    section.body .main{
+      /* max-width: 650px; */
+    }
+    .h-30 {
+      width: 100%;
+      height: 50px;
+    }
+    section.body .main .main-div .title-1 {
+      border-left:10px solid rgb( 255, 191, 0 );
+      padding:20px;
+      padding-left:30px;
+    }
+    section.body .main .main-div .title-2 {
+      border-left:10px solid black;
+      padding:20px;
+      padding-left:30px;
+    }
+    section.body .main .main-div .description {
+      padding:30px;
+      padding-left:40px;
+    }
+    section.footer .footer-main {
+      max-width: 650px;
+    }
+    section.footer ul {
+      list-style-type: none;
+      font-size:12.5px !important;
+    }
+    section.footer ul li {
+      padding-left:10px;
+    }
+
+
+    html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+    }
+
+    .font-black {
+      font-weight: 900;
+    }
+    .m-auto {
+        margin: auto;
+    }
+    .px-20 {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .py-6 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .justify-between {
+        justify-content: space-between;
+    }
+    .w-full {
+        width: 100%;
+    }
+    .flex {
+        display: flex;
+    }
+    .p-10 {
+    padding: 2.5rem;
+}
+    .w-52 {
+        width: 13rem;
+    }
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+    .bg-\[\#f9e9ea\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 233 234 / var(--tw-bg-opacity));
+}
+    .text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+   
+    .text-\[\#0f0530\] {
+        --tw-text-opacity: 1;
+        color: rgb(15 5 48 / var(--tw-text-opacity));
+    }
+    .font-black {
+        font-weight: 900;
+    }
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .mt-10 {
+        margin-top: 2.5rem;
+    }
+    blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+        margin: 0;
+    }
+    .bg-\[\#c7eaff\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(199 234 255 / var(--tw-bg-opacity));
+    }
+    .text-\[\#8954E0\] {
+    --tw-text-opacity: 1;
+    color: rgb(137 84 224 / var(--tw-text-opacity));
+}
+    .bg-\[\#E2D7FF\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(226 215 255 / var(--tw-bg-opacity));
+}
+    .px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+    .px-10 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    
+    .bg-\[\#ffffff\] {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+    .mt-\[-96\] {
+        margin-top: -196;
+    }
+   
+    .items-center {
+        align-items: center;
+    }
+    .block {
+          display: block;
+    }
+    .mb-10 {
+      margin-bottom: 2.5rem;
+    }
+    .mb-12 {
+        margin-bottom: 3rem;
+    }
+  
+    .w-28 {
+        width: 7rem;
+    }
+    .h-28 {
+        height: 7rem;
+    }
+    .m-auto {
+        margin: auto;
+    }
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+    .rounded-2xl {
+    border-radius: 1rem;
+}
+  .mt-2 {
+      margin-top: 0.5rem;
+  }
+  .text-\[\#35A1EE\] {
+    --tw-text-opacity: 1;
+    color: rgb(53 161 238 / var(--tw-text-opacity));
+  }
+  .mb-20 {
+    margin-bottom: 5rem;
+}
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+.bg-\[\#CFEFFE\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(207 239 254 / var(--tw-bg-opacity));
+}
+.w-32 {
+    width: 8rem;
+}
+  .font-bold {
+      font-weight: 700;
+  }
+  .px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+  .bg-\[\#90DAFF\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(144 218 255 / var(--tw-bg-opacity));
+}
+  .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+  }
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+ }
+ .hidden {
+    display: none;
+  }
+  .text-center {
+      text-align: center;
+  }
+  .mb-16 {
+      margin-bottom: 4rem;
+  }
+  .text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+  }
+  .text-center {
+      text-align: center;
+  }
+  .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+  }
+  .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+  .bg-\[\#35A1EE\] {
+      --tw-bg-opacity: 1;
+      background-color: rgb(53 161 238 / var(--tw-bg-opacity));
+  }
+  .border {
+      border-width: 1px;
+  }
+  .rounded-2xl {
+      border-radius: 1rem;
+  }
+  .cursor-pointer {
+      cursor: pointer;
+  }
+  .w-56 {
+    width: 14rem;
+}
+.text-\[\#0f0530\] {
+    --tw-text-opacity: 1;
+    color: rgb(15 5 48 / var(--tw-text-opacity));
+}
+.mt-20 {
+    margin-top: 5rem;
+}
+.text-right {
+    text-align: right;
+}
+.w-52 {
+    width: 13rem;
+}
+.float-right {
+    float: right;
+}
+.w-20 {
+    width: 5rem;
+}
+.bg-\[\#ffbf00\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 191 0 / var(--tw-bg-opacity));
+}
+.bg-\[\#333333\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(51 51 51 / var(--tw-bg-opacity));
+}
+.flex-col {
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.text-\[\#ffbf00\] {
+    --tw-text-opacity: 1;
+    color: rgb(255 191 0 / var(--tw-text-opacity));
+}
+.text-\[\#333333\] {
+    --tw-text-opacity: 1;
+    color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.mt-6 {
+    margin-top: 1.5rem;
+}
+.p-8 {
+    padding: 2rem;
+}
+.rounded-md {
+    border-radius: 0.375rem;
+}
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+.p-4 {
+    padding: 1rem;
+}
+
+
+  </style>
+  <body>
+    <div class="a-container m-auto">
+      <section class="header w-100 flex justify-content items-center
+        bg-[#ffbf00]">
+        <img src="https://www.rabbitseo.com/images/mail/rabbit-seo.png" class="m-auto"/>
+      </section>
+      <section class="body">
+        <div class="slide bg-[#333333] w-100 flex flex-col justify-center
+          items-center flex-column">
+          <p class="font-1 font-bold text-center text-white m-0 mb-1 text-3xl
+            sm:tetxt-4xl md:text-5xl"><span
+              class="text-[#ffbf00]">5 tips</span> how to increase your <p>
+              <p class="font-1 font-bold text-center text-white m-0 mb-2
+                text-3xl sm:tetxt-4xl md:text-5xl"><span
+                  class="text-[#ffbf00]">rankings</span> in <span
+                  class="text-[#ffbf00]">Google</span></p>
+              <p class="text-md lg:text-xl text-[#333333] bg-[#ffbf00] p-4 mt-6
+                rounded-md uppercase cursor-pointer">Create your free account
+                now</p>
+            </div>
+            <div class="main p-10 m-auto bg-[#f9e9ea]">
+              <div class="m-auto" style="max-width: 650px">
+                <div class="main-div bg-[#f9e9ea]">
+                  <div class="h-30">
+                  </div>
+                  <div class="font-3 title-1 font-bold text-[#333333] text-xl
+                    sm:text-2xl">
+                    Write for humans first and search engines second
+                  </div>
+                  <div class="description text-[#6e6e6e] text-md">
+                    Improving your URL structure can significantly impact your on-page SEO with relatively little effort. A clean URL can help search engines understand your page and gives you a more user-friendly appearance in the SERPs. Use keywords: Try to include your primary keyword, if you can. Be readable: When your visitor reads the URL, it should be easy for them to understand what the page is about. Be concise: Shorter URLs (around 60 characters) are preferable. That's because many search engines can't process longer URLs and might rank you lower as a result.
+                  </div>
+                </div>
+                <div class="main-div bg-[#ffbf00]" >
+                  <div class="h-30">
+                  </div>
+                  <div class="font-3 title-2 font-bold text-[#333333] text-xl
+                    sm:text-2xl">
+                    Use Short, Descriptive URLs
+                  </div>
+                  <div class="description text-black text-md">
+                    Improving your URL structure can significantly impact your on-page SEO with relatively little effort. A clean URL can help search engines understand your page and gives you a more user-friendly appearance in the SERPs. Use keywords: Try to include your primary keyword, if you can. Be readable: When your visitor reads the URL, it should be easy for them to understand what the page is about. Be concise: Shorter URLs (around 60 characters) are preferable. That's because many search engines can't process longer URLs and might rank you lower as a result.
+                  </div>
+                </div>
+                <div class="main-div bg-[#f9e9ea]">
+                  <div class="h-30">
+                  </div>
+                  <div class="font-3 title-1 font-bold text-[#333333] text-xl
+                    sm:text-2xl">
+                    Generate Backlinks from High Site Authority Websites 
+                  </div>
+                  <div class="description text-[#6e6e6e] text-md">
+                    Backlinks, or external links leading to your site, are a critical rankng factor. Links from reputable sources can increase your site's authority and improve your SEO over time. You can acquire those backlinks through a process called building.
+                  </div>
+                </div>
+                <div class="main-div bg-[#ffbf00]" >
+                  <div class="h-30">
+                  </div>
+                  <div class="font-3 title-2 font-bold text-[#333333] text-xl
+                    sm:text-2xl">
+                   Update Old Pages
+                  </div>
+                  <div class="description text-black text-md">
+                    Do you have a bunch of blog posts on your site collecting dust? If so, you can probably improve your rankings by updating that post. Let me show you how this works with a real-life example...
+                  </div>
+                </div>
+                <div class="main-div bg-[#f9e9ea]">
+                  <div class="h-30">
+                  </div>
+                  <div class="font-3 title-1 font-bold text-[#333333] text-xl
+                    sm:text-2xl">
+                    Create Content Around Shoulder Niches
+                  </div>
+                  <div class="description text-[#6e6e6e] text-md">
+                    Publishing high-quality content is one of the most important SEO tips.
+                    But what if you are in a so-called "boring" niche? Isn't it impossible to create content that people will link to or share on social media? Fortunately not. All you need to do is create content around "Shoulder Niches". Shoulder Niches are closely-related topics that you can easily create awesome content around.
+                  </div>
+                </div>
+                <div>
+                  <p class="text-center text-md sm:text-xl text-[#333333] bg-[#ffbf00] p-4 mt-6
+                  rounded-md uppercase cursor-pointer m-auto mx-2">Create your free account
+                  now</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="footer bg-[#333333] p-8">
+            <div class="footer-main m-auto text-center text-white">
+              <img src="https://www.rabbitseo.com/images/mail/rabbit-seo-yellow.png" class="m-auto"/>
+              <p style="margin-top:20px;" class="text-md">
+                <b>Copyright &copy; 2013</b>
+                Rabbit Website SEO. All Rights Reserved.
+              </p>
+              <ul class="ul-1 hidden sm:flex color-[#b5b5b5] text-center text-md
+                m-auto m-0 p-0 m-auto justify-center bg-[#ffbf00] mt-2">
+                <li class="text-black">Plan zs</li>
+                <li >|</li>
+                <li class="text-black">Business index</li>
+                <li>|</li>
+                <li class="text-black">Rabbit SEO on Wix</li>
+                <li>|</li>
+                <li class="text-black">Rabbit SEO on Shopify</li>
+                <li>|</li>
+                <li class="text-black">Unsubscribe</li>
+              </ul>
+              <div class="ul-2 text-sm block sm:hidden bg-[#ffbf00]">
+                <p><span class="text-black">Plan zs</span><span style="margin-left:5px;
+                    margin-right:10px;"> | </span><span class="text-black">Business index</span></p>
+                <p><span class="text-black">Rabbit SEO on Wix</span> <span style="margin-left:5px;
+                    margin-right:10px;"> | </span><span class="text-black">Rabbit SEO on Shopify</span></p>
+                <p><span class="text-black"> Unsubscribe</span></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </body>
+      <script>
+  </script>
+    </html>
