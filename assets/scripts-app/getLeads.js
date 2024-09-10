@@ -20,7 +20,7 @@ function drawPlans() {
     const active = (packageName === item['planName']);
 
     let newItem = `
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6 pricing-panel">
                 <div class="pricing-card ${active ? 'active' : ''}">
                     <h6 class="card-title">${item['planName']}</h6>
                     ${yearly && monthlyPrice > 0 ? `<div class="percent_box">${percentDiscount}% OFF</div>` : ''}
@@ -73,6 +73,11 @@ function hideLoading() {
   $("#loading-overlay").hide();
 }
 
+function toggleMobileSidebar() {
+  $(".mobile-sidebar").toggleClass("show"); // Toggle sidebar visibility
+  $(".mobile-sidebar-overlay").toggle(); // Toggle overlay visibility
+}
+
 showLoading();
 
 function writeLog(title, value) {
@@ -111,6 +116,10 @@ $(document).ready(function () {
     $("#hdr_userName").text(mainUserDetails['firstName']);
     $("#hdr_roleName").text(mainUserDetails['roleName']);
     $('.header .profile img').attr('src', mainUserDetails['avatar']);
+    
+    $(".mobile-sidebar-header span").text(mainUserDetails['firstName']);
+    $(".mobile-sidebar-header small").text(mainUserDetails['roleName']);
+    $('.mobile-sidebar-header img').attr('src', mainUserDetails['avatar']);
 
     console.log('mainUserDetails ---> ', mainUserDetails);
 
@@ -135,6 +144,10 @@ $(document).ready(function () {
     });
   }
   initHeader();
+
+  $(".mobile-sidebar-overlay").on("click", function () {
+    toggleMobileSidebar();
+  });
 
   var rowsPerPage = 10;
   var currentRows = []; // Array to hold the current rows (after filtering and sorting)
@@ -695,6 +708,18 @@ $(document).ready(function () {
     var target = $(this).data("target");
     $(".content-item").removeClass("active");
     $(target).addClass("active");
+
+    $(".mobile-menu a").removeClass('active');
+    $(`.mobile-menu a[data-target="${target}"]`).addClass('active');
+  });
+
+  $('.mobile-menu a').on('click', function(e) {
+    e.preventDefault();
+
+    var target = $(this).data("target");
+    $(`.sidebar .nav-link[data-target="${target}"]`).click();
+
+    toggleMobileSidebar();
   });
 
   $(".widgets-menu .nav-link").on("click", function (e) {
@@ -1109,7 +1134,7 @@ $(document).ready(function () {
     let file = $(this)[0].files[0];
     if (file) {
       const reader = new FileReader();
-      const $img = $(this).closest('.file-container').find('img');
+      const $img = $(this).closest('.avatar-container').find('img');
 
       reader.onload = function (e) {
         $img.attr("src", e.target.result);
@@ -1347,48 +1372,42 @@ $(document).ready(function () {
           visits += widget[6];
           clicks += widget[7];
           submissions += widget[8];
+          console.log('widget info ----> ', widget);
     
           let newElement = `
               <div class="widget-row mb-3 p-3" data-id='${widget[0]}' data-name='${widget[1]}' data-type='${widget[2].toLowerCase().replace(' ', '_')}'>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                        <img src="assets/getleads-img/Widgets/${widget[2].replace(' ', '')}.png" width="24px" height="24px" alt="${widget[2]} Icon">                                            
-                        <div class="mx-3 d-flex align-items-center">
-                            <h5 class="mb-0">${widget[1]}</h5>
-                            <div class="tooltip-container">
-                              <i class="fas fa-pencil-alt mx-3 update-widget-name"></i>
-                              <div class="tooltip-content">
-                                  Update Widget Name
-                              </div>
-                            </div>
-                        </div>
+                <div class="justify-content-between align-items-center gap-2 widget-row-header">
+                    <div class="d-flex align-items-center widget-name-part">
+                        <img src="assets/images/getleads/Widgets/${widget[2].replace(' ', '')}.png" width="24px" height="24px" alt="${widget[2]} Icon">                                            
+                        <h5 class="mb-0">${widget[2]}</h5>
+                        <div class='vertical-line' style="height: 18px;"></div>
+                        <span class='widget-name'>${widget[1]}</span>
+                        <span class="update-widget-name" data-bs-toggle="tooltip" data-bs-placement="top" title="Update Widget Name"><i class="fas fa-pencil-alt"></i></span>
                     </div>
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex align-items-center icon-group">
-                            <span class="mx-3 update-widget" data-bs-toggle="tooltip" data-bs-placement="top" title="Modify Widget" style="cursor:pointer;">Update</span>
-                            <div class="border-right"></div>
-                            <span class="mx-3 update-widget" data-bs-toggle="tooltip" data-bs-placement="top" title="Insights and statistics. Thanks to these statistics, you will be able to better learn about the effectiveness of your widgets."><i class="fas fa-chart-bar widget-table-list"></i></span>
-                            <div class="border-right"></div>
-                            <span class="mx-3 update-widget" data-bs-toggle="tooltip" data-bs-placement="top" title="Toggle Widget"><i class="fas fa-eye toggle-widget-status"></i></span>
-                            <div class="border-right"></div>
-                            <span class="mx-3 delete-widget" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete Widget"><i class="fas fa-trash-alt text-danger delete-widget"></i></span>
-                        </div>
+                    <div class="d-flex align-items-center gap-3 icon-group">
+                        <span class="update-widget" data-bs-toggle="tooltip" data-bs-placement="top" title="Modify Widget" style="cursor:pointer;">Update</span>
+                        <div class="border-right" style="height: 15px;"></div>
+                        <span class="widget-table-list" data-bs-toggle="tooltip" data-bs-placement="top" title="Insights and statistics. Thanks to these statistics, you will be able to better learn about the effectiveness of your widgets."><i class="fas fa-chart-bar"></i></span>
+                        <div class="border-right" style="height: 15px;"></div>
+                        <span class="toggle-widget-status" data-bs-toggle="tooltip" data-bs-placement="top" title="Toggle Widget"><i class="fas fa-eye"></i></span>
+                        <div class="border-right" style="height: 15px;"></div>
+                        <span class="delete-widget" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete Widget"><i class="fas fa-trash-alt text-danger"></i></span>
                     </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 stats-row">
-                    <div class="stat-item">
+                <div class="row justify-content-between align-items-center stats-row">
+                    <div class="col-sm-3 col-6 stat-item">
                         <span>Views:</span>
                         <strong>${widget[6] ? widget[6].toLocaleString() : '0'}</strong>
                     </div>
-                    <div class="stat-item">
+                    <div class="col-sm-3 col-6 stat-item">
                         <span>Clicks:</span>
                         <strong>${widget[7] ? widget[7].toLocaleString() : '0'}</strong>
                     </div>
-                    <div class="stat-item">
+                    <div class="col-sm-3 col-6 stat-item">
                         <span>Created On:</span>
                         <strong>${formatDate(widget[3])}</strong>
                     </div>
-                    <div class="stat-item">
+                    <div class="col-sm-3 col-6 stat-item">
                         <span>Status:</span>
                         <strong>${widget[5] ? 'Active' : 'Inactive'}</strong>
                     </div>

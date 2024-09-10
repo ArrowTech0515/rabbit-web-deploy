@@ -29,7 +29,7 @@
         <div class="nav-item">
             <a href="#" class="nav-link active" data-menu="welcome">
                 <div class="icon">
-                    <i class="bi bi-pentagon"></i>
+                    <i class="bi bi-house-lock"></i>
                 </div>
                 <span>Home</span>
             </a>
@@ -51,6 +51,14 @@
             </a>
         </div>
         <div class="nav-item">
+            <a href="#" class="nav-link" data-menu="keywords">
+                <div class="icon">
+                    <i class="bi bi-key"></i> <!-- Replace with appropriate icon -->
+                </div>
+                <span>Keywords</span>
+            </a>
+        </div>
+        <div class="nav-item">
             <a href="#" class="nav-link" data-menu="local-listings">
                 <div class="icon">
                     <i class="bi bi-collection"></i>
@@ -66,30 +74,7 @@
                 <span>Guest Posts</span>
             </a>
         </div>
-        <div class="nav-item">
-            <a href="#" class="nav-link" data-menu="insights">
-                <div class="icon">
-                    <i class="bi bi-bar-chart"></i>
-                </div>
-                <span>Insights</span>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="#" class="nav-link" data-menu="keywords">
-                <div class="icon">
-                    <i class="bi bi-key"></i> <!-- Replace with appropriate icon -->
-                </div>
-                <span>Keywords</span>
-            </a>
-        </div>
-        <div class="nav-item">
-            <a href="#" class="nav-link" data-menu="competitors">
-                <div class="icon">
-                    <i class="bi bi-people"></i> <!-- Replace with appropriate icon -->
-                </div>
-                <span>Competitors</span>
-            </a>
-        </div>
+
         <div class="settings">
             <a href="#" class="nav-link">
                 <div class="icon">
@@ -110,38 +95,68 @@
     </div>
 
     <div class="content welcome-page position-relative">
-        <div class="top-nav d-flex justify-content-between">
-            <div></div>
-            <button class="btn btn-outline-secondary code-integration-btn">Code to integration</button>
-        </div>
-
-        <div class="table-container">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h4 class="page_title" id="my_blog_post_count">My Blog Posts <span class="text-muted"></span></h4>
+        <div class="container-fluid">
+            <div class="top-nav d-flex justify-content-between">
                 <div>
-                    <button class="btn manage-blog-btn">Manage Blog</button>
-                    <button class="btn publish-btn">+ Publish New Article</button>
+                    <p class="membership-demo-stats ">
+                        <span><i class="bi bi-info-circle"></i> You are currently using the demo version of Seorush.me</span><br>
+                        <span class="description">Please note that some features may be limited in this mode. To unlock the full experience and access all functionalities, consider upgrading to the full version.</span>
+                    </p>
+                </div>
+                <div class="button-wrapper">
+                    <button class="btn code-integration-btn">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.3872 6.41183C14.6297 6.14243 15.0446 6.12059 15.314 6.36305L16.8343 7.73133C17.4787 8.31115 18.0131 8.79211 18.3801 9.22839C18.766 9.68706 19.0403 10.18 19.0403 10.7883C19.0403 11.3967 18.766 11.8896 18.3801 12.3483C18.0131 12.7846 17.4787 13.2656 16.8343 13.8453L15.314 15.2137C15.0446 15.4561 14.6297 15.4342 14.3872 15.1648C14.1447 14.8954 14.1666 14.4805 14.436 14.238L15.9204 12.9021C16.6098 12.2816 17.0746 11.8613 17.3757 11.5034C17.6647 11.1599 17.7278 10.9593 17.7278 10.7883C17.7278 10.6174 17.6647 10.4168 17.3757 10.0733C17.0746 9.71541 16.6098 9.29506 15.9204 8.67459L14.436 7.33863C14.1666 7.09616 14.1447 6.68123 14.3872 6.41183Z" fill="#6E8490"/>
+                            <path d="M6.56424 7.33863C6.83363 7.09616 6.85547 6.68123 6.61301 6.41183C6.37056 6.14243 5.95561 6.12059 5.68622 6.36305L4.16591 7.73133C3.52162 8.31115 2.98716 8.79211 2.62017 9.22839C2.23427 9.68706 1.95996 10.18 1.95996 10.7883C1.95996 11.3967 2.23427 11.8896 2.62017 12.3483C2.98716 12.7846 3.52161 13.2656 4.1659 13.8453L5.68622 15.2137C5.95561 15.4561 6.37056 15.4342 6.61301 15.1648C6.85547 14.8954 6.83363 14.4805 6.56424 14.238L5.07983 12.9021C4.39043 12.2816 3.92563 11.8613 3.62454 11.5034C3.33557 11.1599 3.27246 10.9593 3.27246 10.7883C3.27246 10.6174 3.33557 10.4168 3.62454 10.0733C3.92563 9.71541 4.39043 9.29506 5.07983 8.67459L6.56424 7.33863Z" fill="#6E8490"/>
+                            <path opacity="0.5" d="M12.4087 3.74103C12.7587 3.83483 12.9665 4.19468 12.8727 4.54477L9.39577 17.5208C9.30197 17.8709 8.94208 18.0786 8.59203 17.9848C8.24194 17.891 8.03419 17.5311 8.12799 17.181L11.6049 4.20507C11.6987 3.85498 12.0586 3.64722 12.4087 3.74103Z" fill="#6E8490"/>
+                        </svg>
+                        Code to integration
+                    </button>
+                    <button class="btn rate-us-btn">
+                        <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.3649 4.38586C11.3149 2.79529 11.7899 2 12.5 2C13.2102 2 13.6851 2.79529 14.6351 4.38586L14.8809 4.79736C15.1508 5.24935 15.2858 5.47535 15.4963 5.62447C15.7068 5.77358 15.9689 5.82893 16.4931 5.93963L16.9703 6.04042C18.8151 6.42998 19.7376 6.62477 19.9569 7.28342C20.1764 7.94203 19.5476 8.62838 18.29 10.0009L17.9645 10.3561C17.6072 10.7461 17.4285 10.9411 17.3481 11.1824C17.2677 11.4237 17.2947 11.6839 17.3488 12.2042L17.3979 12.6781C17.5881 14.5094 17.6832 15.4251 17.1086 15.8322C16.5341 16.2392 15.6705 15.868 13.9432 15.1258L13.4964 14.9338C13.0055 14.7228 12.7602 14.6174 12.5 14.6174C12.2399 14.6174 11.9944 14.7228 11.5037 14.9338L11.0568 15.1258C9.32951 15.868 8.46589 16.2392 7.89137 15.8322C7.31684 15.4251 7.41191 14.5094 7.60205 12.6781L7.65124 12.2042C7.70528 11.6839 7.73229 11.4237 7.6519 11.1824C7.57151 10.9411 7.39283 10.7461 7.03544 10.3561L6.71008 10.0009C5.45244 8.62838 4.82362 7.94203 5.04306 7.28342C5.26251 6.62477 6.18489 6.42998 8.02966 6.04042L8.50692 5.93963C9.0311 5.82893 9.29323 5.77358 9.50369 5.62447C9.71416 5.47535 9.84916 5.24935 10.1191 4.79736L10.3649 4.38586Z" fill="white"/>
+                            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M7.65231 2.76896C5.91839 2.24551 4.05844 2.522 2.26388 3.62298L2.08174 3.73473C1.76899 3.92661 1.36698 3.81654 1.18382 3.4889C1.00066 3.16125 1.10572 2.74009 1.41847 2.54822L1.60061 2.43647C3.66598 1.16934 5.89489 0.807466 8.01573 1.44772L8.19762 1.50263C8.54589 1.60777 8.74686 1.98876 8.6465 2.35362C8.54614 2.71847 8.18247 2.92901 7.8342 2.82387L7.65231 2.76896ZM4.23175 7.1085C4.26251 7.48685 3.9947 7.81969 3.63357 7.85187C3.49956 7.86387 3.3968 7.87066 3.3107 7.87643C3.15549 7.8867 3.05436 7.89348 2.92164 7.92016C2.74972 7.95472 2.52648 8.02787 2.12135 8.24007C1.79717 8.40993 1.40299 8.27225 1.2409 7.93262C1.07882 7.593 1.21021 7.18004 1.53438 7.01027C2.00425 6.76415 2.34528 6.63592 2.67424 6.56978C2.89028 6.52634 3.11329 6.51112 3.31384 6.49744C3.38672 6.49246 3.45663 6.48769 3.52217 6.48184C3.88329 6.44961 4.20098 6.73018 4.23175 7.1085ZM5.17815 12.5348C4.14218 12.2805 3.05072 12.5327 2.23402 13.2068C1.94934 13.4419 1.53671 13.3905 1.3124 13.0924C1.08809 12.7941 1.13703 12.3619 1.42172 12.1268C2.55729 11.1894 4.05922 10.8479 5.47759 11.196C5.83047 11.2827 6.0495 11.6526 5.96681 12.0223C5.88412 12.392 5.53103 12.6215 5.17815 12.5348Z" fill="white"/>
+                        </svg>
+                        Rate Us
+                    </button>
                 </div>
             </div>
 
-            <div class="table-wrapper">
-                <table id="my_blog_table" class="display" style="width:100%">
-                    <thead>
-                    <tr>
-                        <th style="width: 20%;">Title of Article</th>
-                        <th style="">Page</th>
-                        <th style="width: 20%;">Keyword</th>
-                        <th style="width: 150px;">Number of words</th>
-                        <th style="width: 75px;">Status</th>
-                        <th style="width: 120px;">Date</th>
-                        <th style="width: 40px;"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+            <div class="page-wrapper">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="page_title" id="my_blog_post_count">My Blog Posts <span class="text-muted"></span></h4>
+                    <div>
+                        <button class="btn manage-blog-btn">Manage Blog</button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <div class="table-wrapper">
+                        <table id="my_blog_table" class="display" style="width:100%">
+                            <thead>
+                            <tr>
+                                <th style="width: 20%;">Title of Article</th>
+                                <th style="">Page</th>
+                                <th style="width: 20%;">Keyword</th>
+                                <th style="width: 150px;">Number of words</th>
+                                <th style="width: 90px;">Status</th>
+                                <th style="width: 120px;">Date</th>
+                                <th style="width: 16px;"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="button-wrapper">
+                        <button class="btn publish-btn">+ Publish New Article</button>
+                    </div>
+                </div>
+
             </div>
         </div>
+
     </div>
 
     <div class="content my-blog-page hidden">
@@ -2511,7 +2526,7 @@
                             <div class="accordion" id="advancedSettingsAccordionPanel4">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="advancedSettings4">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advancedSettingsAccordion4" aria-expanded="false" aria-controls="advancedSettingsAccordion4">
+                                        <button class="accordion-button collapsed font-bold" type="button" data-bs-toggle="collapse" data-bs-target="#advancedSettingsAccordion4" aria-expanded="false" aria-controls="advancedSettingsAccordion4">
                                             <span class="icon"></span> <!-- Custom icon span -->
                                             Advanced Settings
                                         </button>
@@ -2541,9 +2556,9 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row mt-3">
-                                                <h6 class="sub-title-1">How many words do you need in this blog post? &nbsp; <span><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h6>
-                                                <div class="col">
+                                            <div class="row mt-1">
+                                                <label for="publishDate" class="form-label">How many words do you need in this blog post? &nbsp; <span><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></label>
+                                                <div class="col mt-1">
                                                     <div class="btn-group-2" role="group" id="wordLevelButton">
                                                         <button type="button" class="btn" data-level="200">Very Short</button>
                                                         <button type="button" class="btn" data-level="400">Short</button>
@@ -2664,7 +2679,7 @@
     <div id="managed_blog_modal" class="custom-popup">
         <div class="popover-body">
             <div class="d-flex justify-content-center align-items-center">
-                <span>Automatic Posting</span>
+                <h6>Automatic Posting <span><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h6>
             </div>
             <div class="mt-2 custom-switch d-flex justify-content-center">
                 <input type="checkbox" checked>

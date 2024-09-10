@@ -1,3 +1,7 @@
+let loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+console.log('pageBooster loadTime ' + loadTime);
+
+console.log('start pageBooster');
 const pageBoosterSearchParams = new URL(document.currentScript.src).searchParams;
 let pageBoosterUserId = pageBoosterSearchParams.get("id");
 let pageBoosterGuid = pageBoosterSearchParams.get("guid");
@@ -83,8 +87,8 @@ function uploadCompressedFile() {
 }
 
 // after finished loading the page report to server the loading time of this page
-function logVisitor(loadingTime, pageId) {
-    console.log('logVisitor start loadingTime ' + loadingTime + ' pageId ' + pageId);
+function logPageView(loadingTime, pageId) {
+    console.log('logPageView start loadingTime ' + loadingTime + ' pageId ' + pageId);
     if (pageBoosterUserId && pageBoosterGuid) {
         let json = {};
         json['userId'] = pageBoosterUserId;
@@ -96,7 +100,7 @@ function logVisitor(loadingTime, pageId) {
         json['pageTitle'] = $(document).find("title").text();
         json['url'] = location.href;
         let url = getPageBoosterUrl('getMyJsonWebsiteWidgetsGuest');
-        console.log('logVisitor url is ' + url + ' data ' + JSON.stringify(json));
+        console.log('logPageView url is ' + url + ' data ' + JSON.stringify(json));
 
         $.ajax({
             url: url,
@@ -105,7 +109,7 @@ function logVisitor(loadingTime, pageId) {
             type: 'POST',
             data: json,
             success: function (json) {
-                console.log('logVisitor ' + JSON.stringify(json));
+                console.log('logPageView ' + JSON.stringify(json));
             }
         });
     }
@@ -125,3 +129,4 @@ function getPageBoosterUrl(apiName) {
     console.log('getPageBoosterUrl ' + url)
     return url;
 }
+

@@ -1,4 +1,4 @@
-var l={o:"",t:!1,id:0,type:"",plugin:"",l:function(data){var data=data.split("-"),type="",o=parseInt(data[1]);return this.type=data[0],"Contact_Us"==data[0]?type="contact_forms":"Join_Newsletter"==data[0]&&(type="join_newsletter"),[type,o]},i:function(type,o){if("contact_forms"==type){if(1==o)return`
+var l={o:"",t:!1,id:0,type:"",plugin:"",l:function(data){var data=data.split("-"),type="",o=parseInt(data[1]);return this.type=data[0],"Contact_Us"==data[0]?type="contact_forms":"Join_Newsletter"==data[0]?type="join_newsletter":"Lead_Generation"==data[0]&&(type="lead_generation"),[type,o]},i:function(type,o){if("contact_forms"==type){if(1==o)return`
                     <div class="col-md-12 plugin-widget-container contact_forms form_1" data-plugin="1">
                         <div class="row">
                             <div class="col-xl-3 col-lg-2 col-md-1"></div>
@@ -174,43 +174,6 @@ var l={o:"",t:!1,id:0,type:"",plugin:"",l:function(data){var data=data.split("-"
                                     <div class="col-xl-3 col-lg-2 col-md-1"></div>
                                 </div>
                             </div>
-                  `;if(5==o)return`
-                                <div class="col-md-12 plugin-widget-container contact_forms form_5" data-plugin="5">
-                                    <div class="row">
-                                        <div class="col-xl-3 col-lg-2 col-md-1"></div>
-                                        <div class="col-xl-6 col-lg-8 col-md-10 form-wrapper for-accentBorderColor for-backgroundColor">
-                                            <div class="row mt-5 mb-3">
-                                                <div class="col-1"></div>
-                                                <div class="col-10">
-                                                    <span class="close-button">&times;</span>
-
-                                                    <h1 class="title for-titleTextColor for-titleFont">GET IN <b>TOUCH</b></h1>
-                                                    <p class="description for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
-
-                                                    <form class="form-container" method="post">
-                                                        <div class="form-group-list">
-                                                            <div class="form-group">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Full Name" placeholder="Full Name">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Email">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <textarea class="form-control for-fieldTextColor for-fieldFont" name="Message" placeholder="Message"></textarea>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="actions-area">
-                                                            <button type="button" class="btn btn-submit for-fieldFont for-accentBackgroundColor">SENT</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="col-1"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-2 col-md-1"></div>
-                                    </div>
-                                </div>
                   `}else if("join_newsletter"==type){if(1==o)return`
                                 <div class="col-md-12 plugin-widget-container join_newsletter form_1" data-plugin="1">
                                     <div class="row">
@@ -350,7 +313,44 @@ var l={o:"",t:!1,id:0,type:"",plugin:"",l:function(data){var data=data.split("-"
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
                                     </div>
                                 </div>
-                  `}return'<div class="col-md-12 plugin-widget-container">'},u:function(o,color){color=`
+                  `}else if("lead_generation"==type&&5==o)return`
+                                <div class="col-md-12 plugin-widget-container lead_generation form_5" data-plugin="5">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-2 col-md-1"></div>
+                                        <div class="col-xl-6 col-lg-8 col-md-10 form-wrapper for-accentBorderColor for-backgroundColor">
+                                            <div class="row mt-5 mb-3">
+                                                <div class="col-1"></div>
+                                                <div class="col-10">
+                                                    <span class="close-button">&times;</span>
+
+                                                    <h1 class="title for-titleTextColor for-titleFont">GET IN <b>TOUCH</b></h1>
+                                                    <p class="description for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
+
+                                                    <form class="form-container" method="post">
+                                                        <div class="form-group-list">
+                                                            <div class="form-group">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Full Name" placeholder="Full Name">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Email">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control for-fieldTextColor for-fieldFont" name="Message" placeholder="Message"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="actions-area">
+                                                            <button type="button" class="btn btn-submit for-fieldFont for-accentBackgroundColor">SENT</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-2 col-md-1"></div>
+                                    </div>
+                                </div>
+                  `;return'<div class="col-md-12 plugin-widget-container">'},u:function(o,color){color=`
                     <div class="modal" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
