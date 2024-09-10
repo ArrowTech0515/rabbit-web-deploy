@@ -2709,6 +2709,12 @@ body>#preview_widget {
 .table-wrapper .dataTable.no-footer{
     border-bottom: 1px solid #e7e5f2;
 }
+.table-wrapper .dataTables_info {
+    font-size: 12px;
+}
+.table-wrapper .dataTables_paginate {
+    font-size: 12px;
+}
 .table-wrapper .dataTables_filter {
     display: none !important;
 }
