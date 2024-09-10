@@ -84,11 +84,13 @@ if (typeof window.cdnUrl === 'undefined') {
     window.cdnUrl = {};
 }
 if (typeof window.cdnUrl[getAppGuid()] === 'undefined') {
-    window.cdnUrl[getAppGuid()] = 'https://rabbit-web-deploy.onrender.com/';
+    window.cdnUrl[getAppGuid()] = 'https://dlnil54eooeso.cloudfront.net/';
 }
 
 if (location.toString().toLowerCase().indexOf("localhost:8080") !== -1) {
     window.apiUrl[getAppGuid()] = 'http://localhost:8080/';
+} else if (location.toString().toLowerCase().indexOf("https://rabbit-web-deploy.onrender.com/") !== -1) {
+    window.apiUrl[getAppGuid()] = 'https://rabbit-web-deploy.onrender.com/';
 }
 
 function preload(guid) {
