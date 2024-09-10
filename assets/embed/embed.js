@@ -84,7 +84,7 @@ if (typeof window.cdnUrl === 'undefined') {
     window.cdnUrl = {};
 }
 if (typeof window.cdnUrl[getAppGuid()] === 'undefined') {
-    window.cdnUrl[getAppGuid()] = 'https://dlnil54eooeso.cloudfront.net/';
+    window.cdnUrl[getAppGuid()] = 'https://rabbit-web-deploy.onrender.com/';
 }
 
 if (location.toString().toLowerCase().indexOf("localhost:8080") !== -1) {
