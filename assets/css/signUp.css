@@ -854,9 +854,9 @@ body {
 .dropdown.datepicker .btn {
     box-shadow: none;
     border-radius: 24px;
-    border: 1px solid #b1b1b1;
+    border: 1px solid #F5576C;
     padding: 8px 16px;
-    color: #434A63;
+    color: #8e91a5;
     background: transparent;
     font-size: 14px;
     font-weight: 700;
@@ -872,15 +872,16 @@ body {
 .dropdown.datepicker .dropdown-item {
     border-radius: 8px;
     padding: 8px 16px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
+    color: #8e91a5;
 }
 .dropdown.datepicker .dropdown-item:hover {
-    background-color: #f5f5f5;
+    background: linear-gradient(129.54deg, rgba(240, 147, 251, 0.16) -17.57%, rgba(245, 87, 108, 0.16) 110.96%);
 }
 .dropdown.datepicker .dropdown-item.active {
-    background-color: #f8e5f1;
-    color: #d63384;
+    background: linear-gradient(129.54deg, rgba(240, 147, 251, 0.16) -17.57%, rgba(245, 87, 108, 0.16) 110.96%);
+    color: #2d324a;
 }
 
 .ph-32 {
@@ -1844,8 +1845,11 @@ body>#preview_widget {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     display: none;
+}
+#preview_content>.plugin-widget-container.active {
+    transform: translate(-50%, -50%) !important;
 }
 .plugin-widget-container.active {
     display: block;
@@ -2666,6 +2670,7 @@ body>#preview_widget {
 }
 .table-wrapper .dataTable tbody tr td {
     font-size: 14px;
+    font-weight: 700;
     background: transparent !important;
     border-bottom: 1px solid #e7e5f2;
     padding: 15px 10px;
