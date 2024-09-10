@@ -89,6 +89,8 @@ if (typeof window.cdnUrl[getAppGuid()] === 'undefined') {
 
 if (location.toString().toLowerCase().indexOf("localhost:8080") !== -1) {
     window.apiUrl[getAppGuid()] = 'http://localhost:8080/';
+} else if (location.toString().toLowerCase().indexOf("https://rabbit-web-deploy.onrender.com/") !== -1) {
+    window.apiUrl[getAppGuid()] = 'https://rabbit-web-deploy.onrender.com/';
 }
 
 function preload(guid) {
