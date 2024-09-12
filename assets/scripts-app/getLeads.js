@@ -131,15 +131,15 @@ $(document).ready(function () {
   $('[data-bs-toggle="tooltip"]').tooltip();
   
   function initHeader(){
-    $("#hdr_userName").text(mainUserDetails['firstName']);
+    console.log('mainUserDetails ---> ', mainUserDetails);
+
+    $("#hdr_userName").text(mainUserDetails['name']);
     $("#hdr_roleName").text(mainUserDetails['roleName']);
     $('.header .profile img').attr('src', mainUserDetails['avatar']);
     
-    $(".mobile-sidebar-header span").text(mainUserDetails['firstName']);
+    $(".mobile-sidebar-header span").text(mainUserDetails['name']);
     $(".mobile-sidebar-header small").text(mainUserDetails['roleName']);
     $('.mobile-sidebar-header img').attr('src', mainUserDetails['avatar']);
-
-    console.log('mainUserDetails ---> ', mainUserDetails);
 
     if (mainUserDetails['hideAllUpgradeLinks']) {
       $('#upgradeHeader').hide();
@@ -529,10 +529,10 @@ $(document).ready(function () {
     $('#warningModal').modal('show');
   }
   function showPersonalModal() {
-    $('#email').val('');
-    $('#wixUrl').val('');
-    $('#password').val('');
-    $('#extraEmails').val('');
+    $('#personalInfoModal #email').val('');
+    $('#personalInfoModal #wixUrl').val('');
+    $('#personalInfoModal #password').val('');
+    $('#personalInfoModal #extraEmails').val('');
     $('#updateAccountDetailsUser .alert-success').hide();
     fillForm('#updateAccountDetailsUser', mainUserDetails);
     $('#updateAccountDetailsUser img').attr('src', mainUserDetails['avatar']);
@@ -540,6 +540,10 @@ $(document).ready(function () {
   }
   $('#saveUserInfo').on('click', function() {
     saveFormAndRefreshDetails(this);
+    
+    setTimeout(() => {
+      initHeader();
+    }, 3000);
   });
 
   function showFaqModal() {
@@ -1149,18 +1153,28 @@ $(document).ready(function () {
 
   // avatar change
   $('#fileInput').on('change', function () {
-    let file = $(this)[0].files[0];
-    if (file) {
-      const reader = new FileReader();
-      const $img = $(this).closest('.avatar-container').find('img');
+    showLoading();
 
-      reader.onload = function (e) {
-        $img.attr("src", e.target.result);
-        $('.header .profile img').attr('src', e.target.result);
-      };
+    uploadAvatar(function(retVal) {
+      hideLoading();
+      if (retVal) {
+        $('.avatar-container img').attr('src', retVal);
+        $('.header .profile img').attr('src', retVal);
+      }
+    });
 
-      reader.readAsDataURL(file);
-    }
+    // let file = $(this)[0].files[0];
+    // if (file) {
+    //   const reader = new FileReader();
+    //   const $img = $(this).closest('.avatar-container').find('img');
+
+    //   reader.onload = function (e) {
+    //     $img.attr("src", e.target.result);
+    //     $('.header .profile img').attr('src', e.target.result);
+    //   };
+
+    //   reader.readAsDataURL(file);
+    // }
   });
 
   $('#settingsContent .button-item').click(function () {
@@ -1393,7 +1407,7 @@ $(document).ready(function () {
           console.log('widget info ----> ', widget);
     
           let newElement = `
-              <div class="widget-row mb-3 p-3" data-id='${widget[0]}' data-name='${widget[1]}' data-type='${widget[2].toLowerCase().replace(' ', '_')}'>
+              <div class="widget-row mb-3 p-3" data-id='${widget[0]}' data-name='${widget[1]}' data-type='${widget[2].toLowerCase().replace(' ', '_')}' data-status='${widget[5]}'>
                 <div class="justify-content-between align-items-center gap-2 widget-row-header">
                     <div class="d-flex align-items-center widget-name-part">
                         <img src="assets/images/getleads/Widgets/${widget[2].replace(' ', '')}.png" width="24px" height="24px" alt="${widget[2]} Icon">                                            
@@ -1470,7 +1484,8 @@ $(document).ready(function () {
   });
   $('.widget-list').on('click', '.toggle-widget-status', function () {
     let id = $(this).closest('.widget-row').data('id');
-    toggleWidgetStatus(id, false);
+    let status = $(this).closest('.widget-row').data('status');
+    toggleWidgetStatus(id, !status);
     setTimeout(function () { updateDashboard(); }, 500);
   });
   $('.widget-list').on('click', '.delete-widget', function () {
