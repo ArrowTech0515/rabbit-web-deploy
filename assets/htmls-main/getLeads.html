@@ -79,7 +79,7 @@
             </div>
             <div class="v-divider"></div>
             <div class="profile">
-                <img src="assets/images/getleads/profile.png" alt="M. Khalid Saied">
+                <img src="https://via.placeholder.com/300" alt="M. Khalid Saied">
                 <div class="px-2" style="display: inline-grid;">
                     <span id="hdr_userName">M. Khalid Saied</span>
                     <small id="hdr_roleName">Premium Member</small>
@@ -2916,10 +2916,14 @@
                     <div class="modal-body">
                         <div class="row g-3">
                             <div class="col-md-5 avatar-container">
-                                <label class="w-100 h-100" for="fileInput"><img src="assets/images/getleads/profile.png" alt="Profile Image" class="profile-image"></label>
-                                <input type='file' name="fileInput" id="fileInput" onchange="uploadAvatar()">
+                                <label class="w-100 h-100" for="fileInput"><img src="https://via.placeholder.com/300" alt="Profile Image" class="profile-image"></label>
+                                <input type='file' name="fileInput" id="fileInput">
                             </div>
                             <div class="col-md-7">
+                                <div class="form-floating-label">
+                                    <input type="text" class="form-control" id="name" placeholder="" name="name">
+                                    <label for="name">Name</label>
+                                </div>
                                 <div class="form-floating-label">
                                     <input type="email" class="form-control" id="email" placeholder="" name="email">
                                     <label for="email">Email Address</label>
@@ -2928,7 +2932,6 @@
                                     <input type="text" class="form-control" id="wixUrl" placeholder="" name="wixUrl">
                                     <label for="wixUrl">Domain</label>
                                 </div>
-                                <input type="hidden" id="name" name="name">
                                 <input type="hidden" id="firstName" name="firstName">
                                 <input type="hidden" id="lastName" name="lastName">
                                 <input type="hidden" id="phone" name="phone">
@@ -2945,7 +2948,7 @@
                         <div style="display: none; margin-top: 10px;" class="alert alert-success"
                              role="alert">
                             <div class="d-flex">
-                                <p class="my-0">Your email settings have been saved successfully</p>
+                                <p class="my-0">Your settings have been saved successfully</p>
                             </div>
                         </div>
                     </div>

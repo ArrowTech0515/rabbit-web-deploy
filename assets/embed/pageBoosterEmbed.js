@@ -1,11 +1,16 @@
-let loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
-console.log('pageBooster loadTime ' + loadTime);
-
 console.log('start pageBooster');
 const pageBoosterSearchParams = new URL(document.currentScript.src).searchParams;
 let pageBoosterUserId = pageBoosterSearchParams.get("id");
 let pageBoosterGuid = pageBoosterSearchParams.get("guid");
 let pageBoosterPageId; // need to fill it when get page mappings or create page mappings (if it is first time)
+
+const images = document.querySelectorAll('img');
+console.log('booster images size ' + images.length)
+// images.forEach(img => img.src = img.dataset.src);
+// images.forEach(img => img.loading = 'lazy');
+let loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+console.log('pageBooster loadTime ' + loadTime);
+logPageView(loadTime);
 
 function getPageMappings() {
     let result;
@@ -97,21 +102,21 @@ function logPageView(loadingTime, pageId) {
         json['widgetId'] = pageId;
         json['loadingTime'] = loadingTime;
         json['device'] = (isMobile() ? 'Mobile' : 'Desktop');
-        json['pageTitle'] = $(document).find("title").text();
+        json['pageTitle'] = document.title;
         json['url'] = location.href;
         let url = getPageBoosterUrl('getMyJsonWebsiteWidgetsGuest');
         console.log('logPageView url is ' + url + ' data ' + JSON.stringify(json));
-
-        $.ajax({
-            url: url,
-            dataType: 'json',
-            async: true,
-            type: 'POST',
-            data: json,
-            success: function (json) {
-                console.log('logPageView ' + JSON.stringify(json));
-            }
-        });
+        loadXMLDoc(url + '?' + new URLSearchParams(json).toString());
+        // $.ajax({
+        //     url: url,
+        //     dataType: 'json',
+        //     async: true,
+        //     type: 'POST',
+        //     data: json,
+        //     success: function (json) {
+        //         console.log('logPageView ' + JSON.stringify(json));
+        //     }
+        // });
     }
 }
 
@@ -124,9 +129,26 @@ function isMobile() {
 }
 
 function getPageBoosterUrl(apiName) {
-    let host = location.toString().toLowerCase().indexOf("localhost") !== -1 ? 'http://localhost:8080/' : 'https://www.rabbitseo.com/';
+    console.log('pageBooster location.toString() ' + location.toString())
+    let host = 'http://localhost:8080/';
+    // let host = location.toString().toLowerCase().indexOf("localhost") !== -1 ? 'http://localhost:8080/' : 'https://www.rabbitseo.com/';
     let url = host + apiName;
     console.log('getPageBoosterUrl ' + url)
     return url;
 }
+function loadXMLDoc(url) {
+    var xmlhttp = new XMLHttpRequest();
+    console.log('pageBooster loadXMLDoc url ' + url)
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4
+            alert(xmlhttp.responseText);
+            let elemDiv = document.createElement('div');
+            elemDiv.id = 'pageBoosterTest';
+            elemDiv.style.display = 'none';
+            document.body.appendChild(elemDiv);
+        }
+    };
 
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+}
