@@ -6,14 +6,14 @@ function drawPlans() {
   let html;
   for (const key in allPlans) {
     var item = allPlans[key];
-    const realPrice = yearly ? item['yearlyPrice'] : item['planPrice'];
-    const planPrice = yearly ? item['yearlyPrice'] / 12 : item['planPrice'];
 
     const monthlyPrice = item['planPrice'];
     const yearlyPrice = item['yearlyPrice'] / 12;
 
-    const percentDiscountnum = (monthlyPrice - planPrice) * 100 / monthlyPrice;
-    const percentDiscount = Math.floor(percentDiscountnum);
+    const realPrice = yearly ? item['yearlyPrice'] : item['planPrice'];
+    const planPrice = yearly ? yearlyPrice : monthlyPrice;
+
+    const percentDiscount = Math.floor((monthlyPrice - planPrice) * 100 / monthlyPrice);
     if (isNaN(percentDiscount)) {
       $('.percent_box').hide();
     }
@@ -31,25 +31,11 @@ function drawPlans() {
                       `<p class="card-price">${item['planPriceCurrency'] + planPrice}/mo</p>`}
                     </div>
                     <ul class="card-features">
-                        ${appDomainName.indexOf('Wix') !== -1 || appDomainName.indexOf('Shopify') !== -1 ? '' : `<li> ${item['planWebsites'] + (item['planWebsites'] > 1 ? ' Websites' : ' Website')}</li>`}
-                        ${item['planKeywords'] > 0 ? (`<li>${item['planKeywords']} Keywords</li>`) : ''}
-                        ${`<li> ${planPrice === 0 ? 'Limited Optimization' : 'Full On Page Optimization'}</li>`}
-                        ${(item['planLinksBuilder'] > 0 ? `<li>${item['planLinksBuilder']} New Backlinks / mo</li>` : '')}
-                        ${'<li> ' + item['planResearches'] + ' Researches / mo</li>'}
-                        ${(planPrice !== 0 ? '' : '<li>One Exclusive Guest Blog</li>')}
-                        ${(planPrice !== 0 ? '' : '<li>One Premium Listing</li>')}
-                        ${(planPrice === 0 ? '' : '<li>Rankings Monitoring</li>')}
-                        ${(planPrice < 50 ? '' : '<li>Related Keywords Finder</li>')}
-                        ${(planPrice === 0 ? '' : '<li>Backlinks Managed Service</li>')}
-                        ${(planPrice === 0 ? '' : '<li>Guest Blogs Categories</li>')}
-                        ${(planPrice === 0 ? '' : '<li>Guest Blogs Tags</li>')}
-                        ${(planPrice < 50 ? '' : '<li>Guest Blogs Custom Image</li>')}
-                        ${(planPrice < 50 ? '' : '<li>Competitors Keywords</li>')}
-                        ${(planPrice < 50 ? '' : '<li>Competitors Backlinks</li>')}
-                        ${(planPrice < 100 ? '' : '<li>Backlinks History</li>')}
-                        ${(planPrice < 100 ? '' : '<li>API Access</li>')}
+                        ${'<li> ' + item['visitors'] + ' Visitors/month</li>'}
+                        ${(planPrice === 0 ? '<li>Widget on Homepage only</li>' : '<li>Widget visible on all pages</li>')}
+                        ${(planPrice === 0 ? '<li>Powered by “GetLeads” Message</li>' : '<li>No Powered by “GetLeads” Message</li>')}
+                        ${(planPrice === 0 ? '<li>No Creditcard Needed</li>' : '<li>Unlimited clicks and impressions on apps!</li>')}
                     </ul>
-                    ${(yearly ? '<h3 class="annuallyPrice">$<b>' + realPrice + '</b>/year</h3>' : '')}
                     ${active && packageName === 'Starter' ? '' : getButton(item, realPrice, yearly)}
                 </div>
             </div>
@@ -96,6 +82,38 @@ function writeLog(title, value) {
 
   console.log(`${formattedDateTime} --------------------> ${title}`);
   console.log(value);
+}
+
+function numberToOrdinal(n) {
+  const ordinals = [
+      "Zero", "First", "Second", "Third", "Fourth", "Fifth", "Sixth",
+      "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth", 
+      "Thirteenth", "Fourteenth", "Fifteenth", "Sixteenth", 
+      "Seventeenth", "Eighteenth", "Nineteenth", "Twentieth"
+  ];
+
+  const tens = ["", "", "Twentieth", "Thirtieth", "Fortieth", "Fiftieth", 
+                "Sixtieth", "Seventieth", "Eightieth", "Ninetieth"];
+
+  // For numbers 0 - 20
+  if (n <= 20) {
+      return ordinals[n];
+  }
+
+  // For numbers above 20 but below 100
+  if (n < 100) {
+      const tensPlace = Math.floor(n / 10);
+      const onesPlace = n % 10;
+
+      if (onesPlace === 0) {
+          return tens[tensPlace];
+      } else {
+          return tens[tensPlace].slice(0, -2) + "y-" + ordinals[onesPlace];
+      }
+  }
+
+  // For numbers above 100, just return n + 'th' (You can add more cases if needed)
+  return n + "th";
 }
 
 $(document).ready(function () {
@@ -1734,7 +1752,7 @@ $(document).ready(function () {
     let newSection = $(`
         <div class="col-md-6 puf-panel">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">#${sectionCount}</div>
+                <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Input'}</div>
                 <div class="justify-content-end">
                     <button type="button" class="btn btn-icon p-0 delete-panel">
                         <i class="far fa-trash-alt" style="color: red;"></i>
@@ -2013,7 +2031,7 @@ $(document).ready(function () {
     let newSection = $(`
           <div class="col-md-6 faq-panel">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">#${sectionCount}</div>
+                <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Question'}</div>
                 <div class="justify-content-end">
                     <button type="button" class="btn p-0 panel-close">
                         <i class="far fa-trash-alt" style="color: red;"></i>
@@ -2153,9 +2171,9 @@ $(document).ready(function () {
     let sectionCount = storyList.find('.story-item').length + 1;
 
     let newSection = $(`
-            <div class="col-6 story-item">
+            <div class="col-lg-6 story-item">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">#${sectionCount}</div>
+                    <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Story'}</div>
                     <div class="justify-content-end">
                         <button type="button" class="btn btn-sm btn-icon ml-2 close-panel">
                             <i class="far fa-trash-alt" style="color: #EF6F81;"></i>
@@ -2702,9 +2720,10 @@ $(document).ready(function () {
     let sectionCount = $('#rv_reviewList').find('.review-item').length + 1;
 
     let newSection = $(`
-              <div class="col-md-6 review-item mt-3">
+              <div class="col-md-6">
+                <div class="review-item">
                   <div class="d-flex justify-content-between align-items-center mb-2">
-                      <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">#${sectionCount}</div>
+                      <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Review'}</div>
                       <div class="justify-content-end">
                           <button type="button" class="btn btn-sm btn-icon ml-2 close-panel">
                               <i class="far fa-trash-alt" style="color: red;"></i>
@@ -2722,8 +2741,7 @@ $(document).ready(function () {
                       <label for="rvName_${sectionCount}">Name</label>
                   </div>
                   <div class="form-floating-label">
-                      <input type="text" class="form-control" id="rvReviewtxt_${sectionCount}"
-                          name="rvReviewtxt_${sectionCount}">
+                      <textarea type="textarea" class="form-control" id="rvReviewtxt_${sectionCount}" name="rvReviewtxt_${sectionCount}"></textarea>
                       <label for="rvReviewtxt_${sectionCount}">Review Text</label>
                   </div>
                   <div class="row group-details-section">
@@ -2742,6 +2760,7 @@ $(document).ready(function () {
                           </div>
                       </div>
                   </div>
+                </div>
               </div>
       `);
 
@@ -3052,7 +3071,7 @@ $(document).ready(function () {
                   <div class="row mb-2">
                       <div class="col-md-12">
                           <div class="d-flex justify-content-between align-items-center mb-4">
-                              <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">#${sectionCount}</div>
+                              <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Input'}</div>
                               <div class="justify-content-end">
                                   <button type="button" class="btn btn-sm btn-icon ml-2 close-panel">
                                       <i class="far fa-trash-alt" style="color: red;"></i>
@@ -3063,26 +3082,26 @@ $(document).ready(function () {
                   </div>
                       
                   <div class="row group-details-section">
-                      <div class="col-3 group-details-image-section">
+                      <div class="col-lg-3 col-5 group-details-image-section">
                           <div class="mb-1">Image</div>
                           <img id="cuCoverImage_${sectionCount}" src="https://via.placeholder.com/400x300">
                           <input type="hidden" class="cover-image-val" name="cuCoverImageVal_${sectionCount}" id="cuCoverImageVal_${sectionCount}"></input>
                       </div>
-                      <div class="col-9">
-                          <div class="col-md-12">
+                      <div class="col-lg-9 col-7">
+                          <div class="col-lg-12">
                               <div class="form-floating-label" >
                                   <input type="text" class="form-control" id="cuManagerName_${sectionCount}" name="cuManagerName_${sectionCount}">
                                   <label for="cuManagerName_${sectionCount}">Manager Name</label>
                               </div>
                           </div>
                           <div class="row">
-                              <div class="col-8">
+                              <div class="col-lg-8">
                                   <div class="file-container">
                                       <label for="cuUploadImage_${sectionCount}" class="custom-file-upload px-2 py-2"><i class="fas fa-upload"></i>Upload</label>
                                       <input type="file" class="form-control image-upload" id="cuUploadImage_${sectionCount}">
                                   </div>
                               </div>
-                              <div class="col-4">
+                              <div class="col-lg-4">
                                   <div class="form-floating-label">
                                       <input type="button" class="w-100 px-2 py-2 explore-gallery" id="cuExploreGallery_${sectionCount}" value="Explore Gallery">
                                   </div>
@@ -3091,20 +3110,20 @@ $(document).ready(function () {
                       </div>
                   </div>
                   <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <div class="form-floating-label" >
                               <input type="text" class="form-control" id="cuRoles_${sectionCount}" name="cuRoles_${sectionCount}">
                               <label for="cuRoles_${sectionCount}">Roles</label>
                           </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <div class="form-floating-label" >
                               <input type="text" class="form-control" id="cuCaption_${sectionCount}" name="cuCaption_${sectionCount}">
                               <label for="cuCaption_${sectionCount}">Caption</label>
                           </div>
                       </div>
                   </div>
-                  <div class="col-md-12">
+                  <div class="col-lg-12">
                       <div class="form-floating-label">
                           <textarea type="textarea" class="form-control" id="cuInitialWords_${sectionCount}" placeholder="" name="cuInitialWords_${sectionCount}"></textarea>
                           <label for="cuInitialWords_${sectionCount}">Initial Words</label>
@@ -3112,7 +3131,7 @@ $(document).ready(function () {
                   </div>
                   <div class="row g-3">
                       <!-- Facebook -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuFacebook_${sectionCount}" placeholder="Link here" name="cuFacebook_${sectionCount}">
                               <label for="cuFacebook_${sectionCount}">Facebook Messenger Id</label>
@@ -3123,14 +3142,12 @@ $(document).ready(function () {
                                   <!-- <i class="fab fa-facebook pl-2"></i> -->
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- Instagram -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuInstagram_${sectionCount}" placeholder="Link here" name="cuInstagram_${sectionCount}">
                               <label for="cuInstagram_${sectionCount}">Instagram Username</label>
@@ -3140,14 +3157,12 @@ $(document).ready(function () {
                                   <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%3Csvg%20enable-background%3D%22new%200%200%2024%2024%22%20viewBox%3D%220%200%2024%2024%22%20%20width%3D%2250%22%20height%3D%2250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%09%3ClinearGradient%20id%3D%22SVGID_1_%22%20gradientTransform%3D%22matrix(0%20-1.982%20-1.844%200%20-132.522%20-51.077)%22%0A%09%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%22-37.106%22%20x2%3D%22-26.555%22%20y1%3D%22-72.705%22%20y2%3D%22-84.047%22%3E%0A%09%09%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fd5%22%2F%3E%0A%09%09%3Cstop%20offset%3D%22.5%22%20stop-color%3D%22%23ff543e%22%2F%3E%0A%09%09%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c837ab%22%2F%3E%0A%09%3C%2FlinearGradient%3E%0A%09%3Cpath%0A%09%09d%3D%22m1.5%201.633c-1.886%201.959-1.5%204.04-1.5%2010.362%200%205.25-.916%2010.513%203.878%2011.752%201.497.385%2014.761.385%2016.256-.002%201.996-.515%203.62-2.134%203.842-4.957.031-.394.031-13.185-.001-13.587-.236-3.007-2.087-4.74-4.526-5.091-.559-.081-.671-.105-3.539-.11-10.173.005-12.403-.448-14.41%201.633z%22%0A%09%09fill%3D%22url(%23SVGID_1_)%22%2F%3E%0A%09%3Cpath%0A%09%09d%3D%22m11.998%203.139c-3.631%200-7.079-.323-8.396%203.057-.544%201.396-.465%203.209-.465%205.805%200%202.278-.073%204.419.465%205.804%201.314%203.382%204.79%203.058%208.394%203.058%203.477%200%207.062.362%208.395-3.058.545-1.41.465-3.196.465-5.804%200-3.462.191-5.697-1.488-7.375-1.7-1.7-3.999-1.487-7.374-1.487zm-.794%201.597c7.574-.012%208.538-.854%208.006%2010.843-.189%204.137-3.339%203.683-7.211%203.683-7.06%200-7.263-.202-7.263-7.265%200-7.145.56-7.257%206.468-7.263zm5.524%201.471c-.587%200-1.063.476-1.063%201.063s.476%201.063%201.063%201.063%201.063-.476%201.063-1.063-.476-1.063-1.063-1.063zm-4.73%201.243c-2.513%200-4.55%202.038-4.55%204.551s2.037%204.55%204.55%204.55%204.549-2.037%204.549-4.55-2.036-4.551-4.549-4.551zm0%201.597c3.905%200%203.91%205.908%200%205.908-3.904%200-3.91-5.908%200-5.908z%22%0A%09%09fill%3D%22%23fff%22%2F%3E%0A%3C%2Fsvg%3E">
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- Skype -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuSkype_${sectionCount}" placeholder="Link here" name="cuSkype_${sectionCount}">
                               <label for="cuSkype_${sectionCount}">Skype Username</label>
@@ -3157,14 +3172,12 @@ $(document).ready(function () {
                                 <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%09%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%3E%0A%09%20%20%3Cg%3E%0A%09%20%20%20%20%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%2225%22%20style%3D%22fill%3A%20%2315ace5%22%2F%3E%0A%09%20%20%20%20%3Cpath%20d%3D%22M38.89%2C27.72A14.34%2C14.34%2C0%2C0%2C0%2C39.15%2C25%2C14.16%2C14.16%2C0%2C0%2C0%2C25%2C10.85a14.34%2C14.34%2C0%2C0%2C0-2.72.26A8.17%2C8.17%2C0%2C0%2C0%2C11.11%2C22.28%2C14.34%2C14.34%2C0%2C0%2C0%2C10.85%2C25%2C14.16%2C14.16%2C0%2C0%2C0%2C25%2C39.15a14.34%2C14.34%2C0%2C0%2C0%2C2.72-.26A8.17%2C8.17%2C0%2C0%2C0%2C38.89%2C27.72Zm-13.62%2C7c-5%2C0-7.54-1.89-8.32-4.26s.92-3%2C1.46-3.09a1.85%2C1.85%2C0%2C0%2C1%2C2%2C1.06%2C4.68%2C4.68%2C0%2C0%2C0%2C3.86%2C3.29c2.42.24%2C4-.87%2C4.5-2s-.39-2.76-4.11-3.29-7.59-2.17-7.59-5.9%2C4.26-5.22%2C8.32-5.22%2C6.11%2C2.3%2C6.57%2C3.19c.56%2C1.12.37%2C3-1%2C3.29s-2.12-.43-3.14-2.32-4.78-1.45-6-.34-.92%2C2.71%2C4.3%2C3.72%2C7.15%2C2.9%2C7.15%2C5.85S30.3%2C34.72%2C25.27%2C34.72Z%22%20style%3D%22fill%3A%20%23fff%22%2F%3E%0A%09%20%20%3C%2Fg%3E%0A%09%3C%2Fsvg%3E%0A">
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
                       
                       <!-- Telegram -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuTelegram_${sectionCount}" placeholder="Link here" name="cuTelegram_${sectionCount}">
                               <label for="cuTelegram_${sectionCount}">Telegram Username</label>
@@ -3174,14 +3187,12 @@ $(document).ready(function () {
                                   <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%09%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%3E%0A%09%09%3Cg%3E%0A%09%09%20%20%20%20%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%2225%22%20style%3D%22fill%3A%20%230088cc%22%2F%3E%0A%09%09%20%20%20%20%3Cpath%20d%3D%22M36%2C10.2%2C9.4%2C22.42c-1.81.87-1.8%2C2.07-.33%2C2.61L15.7%2C27.5l2.53%2C9.27c.31%2C1%2C.16%2C1.41%2C1.05%2C1.41a1.68%2C1.68%2C0%2C0%2C0%2C1.38-.82L24%2C33.52l6.89%2C6.07c1.27.84%2C2.19.4%2C2.5-1.4L37.9%2C12.76C38.36%2C10.55%2C37.19%2C9.54%2C36%2C10.2ZM16.74%2C26.93%2C31.68%2C15.69c.74-.54%2C1.43-.25.86.35L19.75%2C29.8l-.49%2C6.33Z%22%20style%3D%22fill%3A%20%23fff%22%2F%3E%0A%09%09%20%20%3C%2Fg%3E%0A%09%3C%2Fsvg%3E%0A">                                                                    
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- Phone -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuPhoneNumber_${sectionCount}" placeholder="Link here" name="cuPhoneNumber_${sectionCount}">
                               <label for="cuPhoneNumber_${sectionCount}">Phone Number</label>
@@ -3191,14 +3202,12 @@ $(document).ready(function () {
                                   <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%2225%22%20style%3D%22fill%3A%20%235461f4%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M40.61%2C31.06h0c-1.14-2.15-4.78-4.33-5.2-4.58a3.37%2C3.37%2C0%2C0%2C0-2.52-.41%2C2.48%2C2.48%2C0%2C0%2C0-1.46%2C1.1c-.47.56-1.06%2C1.23-1.19%2C1.34a1.59%2C1.59%2C0%2C0%2C1-2.42-.25l-6.09-6.08a1.58%2C1.58%2C0%2C0%2C1-.27-2.38c.14-.17.81-.76%2C1.37-1.23a2.48%2C2.48%2C0%2C0%2C0%2C1.1-1.46%2C3.35%2C3.35%2C0%2C0%2C0-.42-2.53c-.24-.41-2.42-4.05-4.57-5.19A3.32%2C3.32%2C0%2C0%2C0%2C15%2C10l-1.34%2C1.34C11.25%2C13.75%2C8.29%2C19%2C15.77%2C26.43l7.8%2C7.8C27.15%2C37.81%2C30.21%2C39%2C32.69%2C39a8.45%2C8.45%2C0%2C0%2C0%2C6-2.68L40%2C35A3.32%2C3.32%2C0%2C0%2C0%2C40.61%2C31.06Z%22%20style%3D%22fill%3A%20%23ffffff%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">                                                                     
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- Whatsapp -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuWhatsapp_${sectionCount}" placeholder="Link here" name="cuWhatsapp_${sectionCount}">
                               <label for="cuWhatsapp_${sectionCount}">Whatsapp Phone Number</label>
@@ -3208,14 +3217,12 @@ $(document).ready(function () {
                                   <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%2225%22%20style%3D%22fill%3A%20%2330bf39%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M39.8%2C23.4A14.64%2C14.64%2C0%2C0%2C1%2C25.1%2C38%2C15.25%2C15.25%2C0%2C0%2C1%2C18%2C36.2L9.8%2C38.8%2C12.5%2C31a14.84%2C14.84%2C0%2C0%2C1-2.1-7.5%2C14.7%2C14.7%2C0%2C0%2C1%2C29.4-.1ZM25.1%2C11.2A12.38%2C12.38%2C0%2C0%2C0%2C12.7%2C23.5a12%2C12%2C0%2C0%2C0%2C2.4%2C7.2l-1.5%2C4.6%2C4.8-1.5A12.44%2C12.44%2C0%2C0%2C0%2C37.6%2C23.5%2C12.53%2C12.53%2C0%2C0%2C0%2C25.1%2C11.2Zm7.4%2C15.6a3.22%2C3.22%2C0%2C0%2C0-.7-.4l-2.5-1.2c-.3-.1-.6-.2-.8.2a8.54%2C8.54%2C0%2C0%2C1-1.1%2C1.4.59.59%2C0%2C0%2C1-.8.1%2C11%2C11%2C0%2C0%2C1-2.9-1.8%2C9.88%2C9.88%2C0%2C0%2C1-2-2.5.46.46%2C0%2C0%2C1%2C.2-.7%2C2.65%2C2.65%2C0%2C0%2C0%2C.5-.6c.2-.2.2-.4.4-.6a.64.64%2C0%2C0%2C0%2C0-.6c-.1-.2-.8-1.9-1.1-2.7s-.6-.6-.8-.6h-.7a1.85%2C1.85%2C0%2C0%2C0-1%2C.4%2C4.16%2C4.16%2C0%2C0%2C0-1.3%2C3%2C6.45%2C6.45%2C0%2C0%2C0%2C1.5%2C3.7c.2.2%2C2.5%2C4%2C6.2%2C5.4s3.7%2C1%2C4.3.9a3.74%2C3.74%2C0%2C0%2C0%2C2.4-1.7A2.82%2C2.82%2C0%2C0%2C0%2C32.5%2C26.8Z%22%20style%3D%22fill%3A%20%23fff%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A">                                                                       
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- Email -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuEmail_${sectionCount}" placeholder="Link here" name="cuEmail_${sectionCount}">
                               <label for="cuEmail_${sectionCount}">Email</label>
@@ -3225,14 +3232,12 @@ $(document).ready(function () {
                                   <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%2250%22%20viewBox%3D%220%200%2050%2050%22%3E%0A%20%20%3Cg%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2225%22%20cy%3D%2225%22%20r%3D%2225%22%20style%3D%22fill%3A%20%23fc872b%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M25%2C25.89%2C10%2C13.75H40Zm-6.78-2.28L10%2C17V32.58Zm13.56%2C0%2C8.22%2C9V17Zm-2%2C1.58L25%2C29.11l-4.84-3.92L10%2C36.25H40Z%22%20style%3D%22fill%3A%20%23fff%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A">                                                                        
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- iMessage -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuImessages_${sectionCount}" placeholder="Link here" name="cuImessages_${sectionCount}">
                               <label for="cuImessages_${sectionCount}">iMessages Phone Number</label>
@@ -3242,14 +3247,12 @@ $(document).ready(function () {
                                   <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%3Csvg%0A%09xmlns%3Adc%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%22%0A%09xmlns%3Acc%3D%22http%3A%2F%2Fcreativecommons.org%2Fns%23%22%0A%09xmlns%3Ardf%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%22%0A%09xmlns%3Asvg%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%09xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%09xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%0A%09xmlns%3Asodipodi%3D%22http%3A%2F%2Fsodipodi.sourceforge.net%2FDTD%2Fsodipodi-0.dtd%22%0A%09xmlns%3Ainkscape%3D%22http%3A%2F%2Fwww.inkscape.org%2Fnamespaces%2Finkscape%22%0A%09width%3D%221024px%22%0A%09height%3D%221024px%22%0A%09viewBox%3D%220%200%2066.145836%2066.145836%22%0A%09version%3D%221.1%22%0A%09id%3D%22svg8%22%0A%09inkscape%3Aversion%3D%220.92.2%20(5c3e80d%2C%202017-08-06)%22%0A%09sodipodi%3Adocname%3D%22iMessage%20logo.svg%22%3E%0A%09%3Ctitle%0A%09%09id%3D%22title907%22%3EiMessage%20logo%3C%2Ftitle%3E%0A%09%3Cdefs%0A%09%09id%3D%22defs2%22%3E%0A%09%09%3ClinearGradient%0A%09%09%09inkscape%3Acollect%3D%22always%22%0A%09%09%09id%3D%22linearGradient899%22%3E%0A%09%09%09%3Cstop%0A%09%09%09%09style%3D%22stop-color%3A%230cbd2a%3Bstop-opacity%3A1%22%0A%09%09%09%09offset%3D%220%22%0A%09%09%09%09id%3D%22stop895%22%2F%3E%0A%09%09%09%3Cstop%0A%09%09%09%09style%3D%22stop-color%3A%230cbd2a%3Bstop-opacity%3A1%22%0A%09%09%09%09offset%3D%221%22%0A%09%09%09%09id%3D%22stop897%22%2F%3E%0A%09%09%3C%2FlinearGradient%3E%0A%09%09%3ClinearGradient%0A%09%09%09inkscape%3Acollect%3D%22always%22%0A%09%09%09xlink%3Ahref%3D%22%23linearGradient899%22%0A%09%09%09id%3D%22linearGradient901%22%0A%09%09%09x1%3D%22-25.272568%22%0A%09%09%09y1%3D%22207.52057%22%0A%09%09%09x2%3D%22-25.272568%22%0A%09%09%09y2%3D%22152.9982%22%0A%09%09%09gradientUnits%3D%22userSpaceOnUse%22%0A%09%09%09gradientTransform%3D%22matrix(0.98209275%2C0%2C0%2C0.98209275%2C-1.0651782%2C3.7961838)%22%2F%3E%0A%09%3C%2Fdefs%3E%0A%09%3Csodipodi%3Anamedview%0A%09%09id%3D%22base%22%0A%09%09pagecolor%3D%22%23ffffff%22%0A%09%09bordercolor%3D%22%23666666%22%0A%09%09borderopacity%3D%221.0%22%0A%09%09inkscape%3Apageopacity%3D%220.0%22%0A%09%09inkscape%3Apageshadow%3D%222%22%0A%09%09inkscape%3Azoom%3D%221%22%0A%09%09inkscape%3Acx%3D%22142.01984%22%0A%09%09inkscape%3Acy%3D%2261.975439%22%0A%09%09inkscape%3Adocument-units%3D%22px%22%0A%09%09inkscape%3Acurrent-layer%3D%22layer1%22%0A%09%09showgrid%3D%22false%22%0A%09%09inkscape%3Asnap-object-midpoints%3D%22false%22%0A%09%09showguides%3D%22true%22%0A%09%09inkscape%3Aguide-bbox%3D%22true%22%0A%09%09inkscape%3Asnap-intersection-paths%3D%22false%22%0A%09%09inkscape%3Awindow-width%3D%221920%22%0A%09%09inkscape%3Awindow-height%3D%221017%22%0A%09%09inkscape%3Awindow-x%3D%221358%22%0A%09%09inkscape%3Awindow-y%3D%22-8%22%0A%09%09inkscape%3Awindow-maximized%3D%221%22%0A%09%09fit-margin-top%3D%220%22%0A%09%09fit-margin-left%3D%220%22%0A%09%09fit-margin-right%3D%220%22%0A%09%09fit-margin-bottom%3D%220%22%2F%3E%0A%09%3Cmetadata%0A%09%09id%3D%22metadata5%22%3E%0A%09%09%3Crdf%3ARDF%3E%0A%09%09%09%3Ccc%3AWork%0A%09%09%09%09rdf%3Aabout%3D%22%22%3E%0A%09%09%09%09%3Cdc%3Aformat%3Eimage%2Fsvg%2Bxml%3C%2Fdc%3Aformat%3E%0A%09%09%09%09%3Cdc%3Atype%0A%09%09%09%09%09rdf%3Aresource%3D%22http%3A%2F%2Fpurl.org%2Fdc%2Fdcmitype%2FStillImage%22%2F%3E%0A%09%09%09%09%3Cdc%3Atitle%3EiMessage%20logo%3C%2Fdc%3Atitle%3E%0A%09%09%09%09%3Cdc%3Adate%3E02%2F04%2F2018%3C%2Fdc%3Adate%3E%0A%09%09%09%09%3Cdc%3Acreator%3E%0A%09%09%09%09%09%3Ccc%3AAgent%3E%0A%09%09%09%09%09%09%3Cdc%3Atitle%3EApple%2C%20Inc.%3C%2Fdc%3Atitle%3E%0A%09%09%09%09%09%3C%2Fcc%3AAgent%3E%0A%09%09%09%09%3C%2Fdc%3Acreator%3E%0A%09%09%09%09%3Cdc%3Apublisher%3E%0A%09%09%09%09%09%3Ccc%3AAgent%3E%0A%09%09%09%09%09%09%3Cdc%3Atitle%3ECMetalCore%3C%2Fdc%3Atitle%3E%0A%09%09%09%09%09%3C%2Fcc%3AAgent%3E%0A%09%09%09%09%3C%2Fdc%3Apublisher%3E%0A%09%09%09%09%3Cdc%3Asource%3Ehttps%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F8%2F85%2FIMessage_icon.png%3C%2Fdc%3Asource%3E%0A%09%09%09%3C%2Fcc%3AWork%3E%0A%09%09%3C%2Frdf%3ARDF%3E%0A%09%3C%2Fmetadata%3E%0A%09%3Cg%0A%09%09inkscape%3Alabel%3D%22Capa%201%22%0A%09%09inkscape%3Agroupmode%3D%22layer%22%0A%09%09id%3D%22layer1%22%0A%09%09transform%3D%22translate(59.483067%2C-145.8456)%22%3E%0A%09%09%3Cg%0A%09%09%09id%3D%22g963%22%3E%0A%09%09%09%3Crect%0A%09%09%09%09ry%3D%2214.567832%22%0A%09%09%09%09rx%3D%2214.567832%22%0A%09%09%09%09y%3D%22145.8456%22%0A%09%09%09%09x%3D%22-59.483067%22%0A%09%09%09%09height%3D%2266.145836%22%0A%09%09%09%09width%3D%2266.145836%22%0A%09%09%09%09id%3D%22rect826%22%0A%09%09%09%09style%3D%22opacity%3A1%3Bfill%3Aurl(%23linearGradient901)%3Bfill-opacity%3A1%3Bstroke%3Anone%3Bstroke-width%3A1.33634758%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-dashoffset%3A0%3Bstroke-opacity%3A1%3Bpaint-order%3Amarkers%20stroke%20fill%22%2F%3E%0A%09%09%09%3Cpath%0A%09%09%09%09inkscape%3Aconnector-curvature%3D%220%22%0A%09%09%09%09id%3D%22path922%22%0A%09%09%09%09d%3D%22m%20-26.410149%2C157.29606%20a%2024.278298%2C20.222157%200%200%200%20-24.278105%2C20.22202%2024.278298%2C20.222157%200%200%200%2011.79463%2C17.31574%2027.365264%2C20.222157%200%200%201%20-4.245218%2C5.94228%2023.85735%2C20.222157%200%200%200%209.86038%2C-3.87367%2024.278298%2C20.222157%200%200%200%206.868313%2C0.83768%2024.278298%2C20.222157%200%200%200%2024.2781059%2C-20.22203%2024.278298%2C20.222157%200%200%200%20-24.2781059%2C-20.22202%20z%22%0A%09%09%09%09style%3D%22opacity%3A1%3Bfill%3A%23ffffff%3Bfill-opacity%3A1%3Bstroke%3Anone%3Bstroke-width%3A1.56409621%3Bstroke-linecap%3Asquare%3Bstroke-linejoin%3Amiter%3Bstroke-miterlimit%3A4%3Bstroke-dasharray%3Anone%3Bstroke-dashoffset%3A0%3Bstroke-opacity%3A1%3Bpaint-order%3Amarkers%20stroke%20fill%22%2F%3E%0A%09%09%3C%2Fg%3E%0A%09%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A">                                                                       
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- Weibo -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuWeibo_${sectionCount}" placeholder="Link here" name="cuWeibo_${sectionCount}">
                               <label for="cuWeibo_${sectionCount}">Weibo user ID</label>
@@ -3259,14 +3262,12 @@ $(document).ready(function () {
                                   <img alt="" src="data:image/svg+xml;charset=utf-8,%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221024%22%20height%3D%221024%22%20viewBox%3D%220%200%20300%20300%22%3E%0A%09%3Cg%3E%0A%09%09%3Ccircle%20cx%3D%22150%22%20cy%3D%22150%22%20r%3D%22150%22%20style%3D%22fill%3A%20%23f5f5f5%22%2F%3E%0A%09%09%3Cg%20transform%3D%22matrix(3.5%200%200%203.5%2070%2060)%22%3E%0A%09%09%09%3Cpath%20fill%3D%22%23E99315%22%0A%09%09%09%20%20%20%20%20%20d%3D%22M50.448%2012.132c.217%202.814-.259%206.186-2.117%206.351-3.033.271-1.451-3.07-1.411-5.081.111-5.829-4.865-9.879-9.739-9.879-1.381%200-4.588.936-4.094-1.976.222-1.284%201.31-1.266%202.399-1.411%208.197-1.093%2014.386%204.546%2014.962%2011.996z%22%2F%3E%0A%09%09%09%3Cpath%20fill%3D%22%23D52A2C%22%0A%09%09%09%20%20%20%20%20%20d%3D%22M37.04%2018.907c3.524%201.928%207.758%202.888%207.056%208.61-.168%201.371-.998%203.203-1.834%204.373-5.957%208.339-23.924%2011.844-35.144%205.506C3.355%2035.269-.539%2032.159.062%2025.962c.517-5.333%204.103-9.464%207.622-12.983%203.357-3.359%206.897-5.987%2011.714-7.198%205.226-1.314%206.771%203.043%205.363%207.339%203.027-.203%209.442-3.582%2012.279-.282%201.25%201.454.771%204.058%200%206.069zm-3.811%2013.548c1.129-1.28%202.264-3.231%202.257-5.503-.015-7.014-8.851-9.605-15.806-9.033-3.804.312-6.363%201.115-9.033%202.682-2.179%201.279-4.729%203.36-5.363%206.491-1.427%207.041%206.231%2010.35%2011.855%2010.726%206.498.437%2013.002-1.857%2016.09-5.363z%22%2F%3E%0A%09%09%09%3Cpath%20fill%3D%22%23E99315%22%0A%09%09%09%20%20%20%20%20%20d%3D%22M43.531%2012.132c.296%202.149-.319%204.011-1.552%204.093-2.056.137-1.287-1.408-1.412-3.246-.078-1.132-1.016-2.439-1.835-2.823-1.606-.752-4.093.548-4.093-1.693%200-1.664%201.443-1.491%202.259-1.553%203.574-.272%206.216%202.191%206.633%205.222z%22%2F%3E%0A%09%09%09%3Cpath%0A%09%09%09%09d%3D%22M27.019%2026.246c3.007%209.088-12.66%2013.314-15.525%205.504-1.917-5.223%202.686-9.377%207.48-9.879%204.093-.429%207.144%201.658%208.045%204.375zm-7.198%201.553c.638%201.104%202.105.311%201.976-.564-.154-1.013-1.989-.863-1.976.564zm-2.541%204.799c2.634-.627%202.988-5.588-.988-4.658-3.34.78-2.694%205.533.988%204.658z%22%2F%3E%0A%09%09%3C%2Fg%3E%0A%09%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A">
                               </button>
                               <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>
 
                       <!-- Viber -->
-                      <div class="col-12 col-md-6 col-lg-6 d-flex gap-2">
+                      <div class="col-lg-6 d-flex gap-2">
                           <div class="form-floating-label w-100">
                               <input type="text" class="form-control" id="cuViber_${sectionCount}" placeholder="Link here" name="cuViber_${sectionCount}">
                               <label for="cuViber_${sectionCount}">Viber Phone Number</label>
@@ -3277,7 +3278,6 @@ $(document).ready(function () {
                               </button>
                               <ul class="dropdown-menu">
                                   <li><a class="dropdown-item" href="#">Option 1</a></li>
-                                  <li><a class="dropdown-item" href="#">Option 2</a></li>
                               </ul>
                           </div>
                       </div>

@@ -1128,7 +1128,7 @@
                       <label for="iconHoverTextNormal" class="form-label text-3-bold main-text-2">Hover Text</label>
                       <input type="text" class="form-control text-3-bold" id="iconHoverTextNormal" value="Normal" placeholder="Enter new hover text." oninput="changeChatIconHoverText(this)">
                     </div>
-                    <div class="mt-2">
+                    <div class="mt-2 d-none">
                       <label for="iconHoverTextOnCloseNormal" class="form-label text-3-bold main-text-2">Hover Text on Close button</label>
                       <input type="text" class="form-control text-3-bold" id="iconHoverTextOnCloseNormal" value="Close" placeholder="Enter new hover text." oninput="changeChatIconHoverTextOnClose(this)">
                     </div>
@@ -1170,11 +1170,11 @@
                   <div class="d-flex justify-content-between collapse-header collapsed c-show-hide-collapse" data-bs-toggle="collapse" data-bs-target="#channelWhatsappDetail" aria-expanded="true" aria-controls="channelWhatsappDetail" style="cursor: pointer;">
                     <div class="text-2-bold main-text">Show Settings</div>
                   </div>                
-                  <div class="collapse mt-3" id="channelWhatsappDetail">
+                  <div class="collapse pt-2" id="channelWhatsappDetail">
 
                     <!-- whatsapp channel type -->
-                    <div class="text-3-bold main-text-2">Whatsapp Channel Type</div>
-                    <div class="d-flex flex-lg-row flex-md-column gap-3 my-3">
+                    <div class="text-3-bold main-text-2 mb-2 d-none">Whatsapp Channel Type</div>
+                    <div class="d-flex flex-lg-row flex-md-column gap-3 my-3 d-none">
                       <div class="w-100">
                         <div class="c-channel-icon-preview-block active" id="whatsappType0" onclick="selectWhatsappType(0)">
                           <img src="../assets/images/easychatty/Whatsapp_type_0.png" />
@@ -1188,7 +1188,7 @@
                     </div>
 
                     <!-- heading -->
-                    <div class="bg-white" style="border-radius: 20px; padding: 30px">
+                    <div class="bg-white d-none" style="border-radius: 20px; padding: 30px">
                       <div>
                         <label for="whatsappHeading" class="form-label text-3-bold main-text-2">Heading</label>
                         <input type="text" class="form-control text-3-bold" id="whatsappHeading" value="Whatsapp Chat." placeholder="Whatsapp Chat.">
@@ -1214,12 +1214,12 @@
                       </div>
                     </div>
 
-                    <div class="form-check form-switch d-flex justify-content-between align-items-center mt-3 ps-0">
+                    <div class="form-check form-switch d-flex justify-content-between align-items-center mt-3 ps-0 d-none">
                       <label class="form-check-label text-3-bold main-text-2" for="whatsappCustomImageEnable">Custom Image</label>
                       <input class="form-check-input" type="checkbox" id="whatsappCustomImageEnable" name="darkmode" value="yes" checked>
                     </div>
 
-                    <div class="c-upload-drop-zone mt-2" id="whatsappProfileImageDrop">
+                    <div class="c-upload-drop-zone mt-2 d-none" id="whatsappProfileImageDrop">
                       Drap your files here or browse.
                     </div>
 
@@ -1257,7 +1257,7 @@
                   <img src="../assets/images/easychatty/trash.svg" alt="trash" id="trashChannelContactForm" onclick="removeChannel(this)" style="cursor: pointer;">
                 </div>
 
-                <div class="mt-3">
+                <div class="mt-4">
                   <input type="email" class="form-control" placeholder="Sent to your@gmail.com" id="channelUsernameContactForm" oninput="inputContactInfo(this)">
                 </div>
 
@@ -1268,7 +1268,7 @@
                       <div>
                         <p class="text-3-bold main-text-2">Full Name</p>
                       </div>
-                      <div class="d-flex gap-3">
+                      <div class="d-flex gap-3 d-none">
                         <div class="form-check form-switch d-flex align-items-center flex-directions-reverse gap-2" style="width: 90px;">
                           <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormFullNameRequired" />
                           <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormFullNameRequired">Required</label>
@@ -1292,7 +1292,7 @@
                       <div>
                         <p class="text-3-bold main-text-2">Email</p>
                       </div>
-                      <div class="d-flex gap-3">
+                      <div class="d-flex gap-3 d-none">
                         <div class="form-check form-switch" style="width: 90px;">
                           <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormEmailRequired" />
                           <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormEmailRequired">Required</label>
@@ -1316,7 +1316,7 @@
                       <div>
                         <p class="text-3-bold main-text-2">Message</p>
                       </div>
-                      <div class="d-flex gap-3">
+                      <div class="d-flex gap-3 d-none">
                         <div class="form-check form-switch" style="width: 90px;">
                           <input class="form-check-input" type="checkbox" role="switch" id="addChannelContactFormMessageRequired" />
                           <label class="form-check-label text-3-bold main-text-2" for="addChannelContactFormMessageRequired">Required</label>
@@ -1330,12 +1330,12 @@
                     </div>
     
                     <div class="mt-1">
-                      <input type="text" class="form-control" placeholder="e.g.John Smirth">
+                      <input type="text" class="form-control" placeholder="What's your problem?">
                     </div>
                   </div>
 
                   <!-- add more button -->
-                  <div class="mt-2" style="padding-top: 20px;">
+                  <div class="mt-2 d-none" style="padding-top: 20px;">
                     <button class="btn btn-white d-flex justify-content-center align-items-center w-100 style="height: 49px; border-radius: 10px; border: 1px solid #DCE0EA; cursor: pointer;">
                       <i class="material-icons me-3 main-text">add</i>
                       <p class="text-2-bold main-text">Add Fields</p>
@@ -1345,14 +1345,14 @@
 
                 <!-- show more -->
                 <div class="mt-3">
-                  <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMore" aria-expanded="true" aria-controls="addChannelContactFormShowMore" style="cursor: pointer;">
+                  <div class="d-flex justify-content-between collapse-header collapsed c-show-hide-collapse" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMore" aria-expanded="true" aria-controls="addChannelContactFormShowMore" style="cursor: pointer;">
                     <div class="text-2-bold main-text">Show Settings</div>
                   </div>                
                   <div class="collapse" id="addChannelContactFormShowMore">
 
                     <!-- form -->
                     <div>
-                      <div class="d-flex justify-content-between align-items-center collapse-header collapsed pt-3" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMoreForm" aria-expanded="true" aria-controls="addChannelContactFormShowMoreForm" style="cursor: pointer;">
+                      <div class="d-flex justify-content-between align-items-center collapse-header collapsed pt-3 " data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMoreForm" aria-expanded="true" aria-controls="addChannelContactFormShowMoreForm" style="cursor: pointer;">
                         <div class="text-2-bold main-text-2">Form</div>
                       </div>                
                       <div class="collapse" id="addChannelContactFormShowMoreForm">
@@ -1362,25 +1362,23 @@
                           </div>
                           <div class="d-flex gap-3 mt-2">
                             <div class="d-flex">
-                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Background</label>
-                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+                              <label for="contactFormTitleBgColor" class="form-label text-3-bold main-text-2 me-2">Background</label>
+                              <input type="color" class="form-control" id="contactFormTitleBgColor" value="#7672FB" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
                           
                             <div class="d-flex">
-                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Text</label>
-                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#ffffff" style="width: 20px; height: 20px; padding: 0">
+                              <label for="contactFormTitleTxtColor" class="form-label text-3-bold main-text-2 me-2">Text</label>
+                              <input type="color" class="form-control" id="contactFormTitleTxtColor" value="#ffffff" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
 
                             <div class="d-flex">
-                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Close Icon</label>
-                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#ffffff" style="width: 20px; height: 20px; padding: 0">
+                              <label for="contactFormCloseIconColor" class="form-label text-3-bold main-text-2 me-2">Close Icon</label>
+                              <input type="color" class="form-control" id="contactFormCloseIconColor" value="#ffffff" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
                           </div>
                         </div>
 
-                        <div class="mt-2">
-                          <input type="text" class="form-control" placeholder="Contact Us Today">
-                        </div>
+                        <input type="text" class="form-control mt-2" id="contactFormTitleText" placeholder="Contact Us Today" value="Contact Us Today" oninput="setContactFormData()">
 
                         <div class="d-flex justify-content-between align-items-center mt-2">
                           <div>
@@ -1388,19 +1386,19 @@
                           </div>
                           <div class="d-flex gap-3">
                             <div class="d-flex">
-                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Background</label>
-                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+                              <label for="contactFormButtonBgColor" class="form-label text-3-bold main-text-2 me-2">Background</label>
+                              <input type="color" class="form-control" id="contactFormButtonBgColor" value="#7672FB" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
                           
                             <div class="d-flex">
-                              <label for="settingsEmail123" class="form-label text-3-bold main-text-2 me-2">Text</label>
-                              <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#ffffff" style="width: 20px; height: 20px; padding: 0">
+                              <label for="contactFormTextColor" class="form-label text-3-bold main-text-2 me-2">Text</label>
+                              <input type="color" class="form-control" id="contactFormTextColor" value="#ffffff" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
                           </div>
                         </div>
           
                         <div class="mt-2">
-                          <input type="text" class="form-control" placeholder="Submit">
+                          <input type="text" class="form-control" placeholder="Submit" value="Submit" oninput="setContactFormData()">
                         </div>
 
                         <!-- advanced form settings -->
@@ -1410,50 +1408,50 @@
                         <div class="collapse" id="addChannelContactFormShowMoreFormAdvancedSetting">
                           
                           <div class="form-check form-switch d-flex justify-content-between align-items-center mt-1 ps-0">
-                            <label class="form-check-label text-3-bold main-text-2" for="mySwitch">Close Form after Submission</label>
-                            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                            <label class="form-check-label text-3-bold main-text-2" for="contactFormCloseAfterSubmission">Close Form after Submission</label>
+                            <input class="form-check-input" type="checkbox" id="contactFormCloseAfterSubmission" value="yes" checked oninput="setContactFormData()">
                           </div>
 
                           <div class="mt-2">
-                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="typeNumber">Close After</label>
+                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="contactFormCloseAfterSec">Close After</label>
                           </div>
                           <div data-mdb-input-init class="form-outline">
-                            <input type="number" id="typeNumber" class="form-control" />
+                            <input type="number" id="contactFormCloseAfterSec" class="form-control" oninput="setContactFormData()"/>
                           </div>
 
                           <div class="form-check form-switch d-flex justify-content-between align-items-center mt-1 ps-0">
-                            <label class="form-check-label text-3-bold main-text-2" for="mySwitch">Redirect Customers</label>
-                            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                            <label class="form-check-label text-3-bold main-text-2" for="contactFormRedirect">Redirect Customers</label>
+                            <input class="form-check-input" type="checkbox" id="contactFormRedirect" name="darkmode" value="yes" checked oninput="setContactFormData()">
                           </div>
 
                           <div class="mt-2">
-                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="typeNumber">Redirect to</label>
-                            <input type="url" class="form-control" placeholder="rabittseo.com">
+                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="contactFormRedirectUrl">Redirect to</label>
+                            <input type="url" class="form-control" placeholder="rabittseo.com" id="contactFormRedirectUrl" value="rabbitseo.com" oninput="setContactFormData()">
                           </div>
 
                           <div class="mt-2">
-                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="typeNumber">Thank you message</label>
-                            <input type="url" class="form-control" placeholder="Thank you for submission">
+                            <label class="form-label btn-exclamation text-3-bold main-text-2" for="contactFormThankyou">Thank you message</label>
+                            <input type="url" class="form-control" placeholder="Thank you for Submission" id="contactFormThankyou" oninput="setContactFormData()">
                           </div>
 
                           <div class="d-flex flex-md-row flex-column gap-2 mt-3">
                             <div class="flex-grow-1">
-                              <label for="customRange" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Title Size';"></label>
-                              <input type="range" class="form-range" id="customRange">
+                              <label for="contactFormTitleSize" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Title Size';"></label>
+                              <input type="range" class="form-range" id="contactFormButtonRange" min="1" max="20" value="10" oninput="setContactFormData()">
                             </div>
                             <div class="flex-grow-1">
-                              <label for="customRange" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Field Size';"></label>
-                              <input type="range" class="form-range" id="customRange">
+                              <label for="contactFormFieldSize" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Field Size';"></label>
+                              <input type="range" class="form-range" id="contactFormFieldSize" min="1" max="20" value="10" oninput="setContactFormData()">
                             </div>
                             <div class="flex-grow-1">
-                              <label for="customRange" class="form-label text-3-bold main-text-2">Button Size</label>
-                              <input type="range" class="form-range" id="customRange">
+                              <label for="contactFormButtonSize" class="form-label text-3-bold main-text-2">Button Size</label>
+                              <input type="range" class="form-range" id="contactFormButtonSize" min="1" max="20" value="10" oninput="setContactFormData()">
                             </div>
                           </div>
 
-                          <div class="form-check form-switch d-flex justify-content-between align-items-center mt-1 ps-0">
+                          <div class="form-check form-switch d-flex justify-content-between align-items-center mt-1 ps-0 d-none">
                             <label class="form-check-label text-3-bold main-text-2" for="mySwitch">Captcha</label>
-                            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                            <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked oninput="setContactFormData()">
                           </div>
                         </div>
                       </div>
@@ -1466,29 +1464,29 @@
                       </div>
                       <div class="collapse" id="addChannelContactFormShowMoreChannel">
                         <div class="mt-3 d-flex justify-content-between ps-0">
-                          <label for="settingsEmail123" class="form-label text-3-bold main-text-2">Icon Background</label>
-                          <input type="color" class="form-control" id="settingsEmail123" placeholder="Enter Email" value="#7672FB" style="width: 20px; height: 20px; padding: 0">
+                          <label for="iconColorContactForm" class="form-label text-3-bold main-text-2">Icon Background</label>
+                          <input type="color" class="form-control" id="iconColorContactForm" value="#7672FB" style="width: 20px; height: 20px; padding: 0" oninput="changeChatIconColor(this)">
                         </div>
     
                         <div class="d-flex justify-content-between form-switch align-items-center mt-2 ps-0">
-                          <label for="settingsEmail123" class="form-label text-3-bold main-text-2">Show on Desktop Devices</label>
-                          <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                          <label for="iconShowonDesktopContactForm" class="form-label text-3-bold main-text-2">Show on Desktop Devices</label>
+                          <input class="form-check-input" type="checkbox" id="iconShowonDesktopContactForm" value="yes" checked oninput="changeChatDesktop(this)">
                         </div>
     
                         <div class="d-flex justify-content-between form-switch align-items-center mt-2 ps-0">
-                          <label for="settingsEmail123" class="form-label text-3-bold main-text-2">Show on Mobile Devices</label>
-                          <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                          <label for="iconShowonMobileContactForm" class="form-label text-3-bold main-text-2">Show on Mobile Devices</label>
+                          <input class="form-check-input" type="checkbox" id="iconShowonMobileContactForm" value="yes" checked oninput="changeChatMobile(this)">
                         </div>
     
                         <div class="mt-2">
-                          <label for="settingsEmail" class="form-label text-3-bold main-text-2">Hover Text</label>
-                          <input type="text" class="form-control text-3-bold" id="settingsEmail" value="Close" placeholder="Contact Us">
+                          <label for="iconHoverTextContactForm" class="form-label text-3-bold main-text-2">Contact Us</label>
+                          <input type="text" class="form-control text-3-bold" id="iconHoverTextContactForm" value="Contact Us" placeholder="Contact Us"  oninput="changeChatIconHoverText(this)">
                         </div>
                       </div>
                     </div>
 
                     <!-- advanced position(premium) -->
-                    <div class="mt-3">
+                    <div class="mt-3 d-none">
                       <div class="d-flex justify-content-between collapse-header collapsed" data-bs-toggle="collapse" data-bs-target="#addChannelContactFormShowMoreAdvanced" aria-expanded="true" aria-controls="addChannelContactFormShowMoreAdvanced" style="cursor: pointer;">
                         <div class="btn-premium text-2-bold main-text" style="--button-text: 'Advanced Settings'"></div>
                       </div>
@@ -2488,6 +2486,11 @@
       <img src="../assets/images/easychatty/icon_ContactForm.png" alt="contact-us" class="position-absolute bottom-0 end-0">
     </div>
   </div>
+</div>
+
+<div class="c-loading-lay d-none">
+  <div class="c-progress-bar"></div>
+  <div class="c-loading-lay-bg"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/gh/priyashpatil/phone-input-by-country@0.0.1/cpi.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

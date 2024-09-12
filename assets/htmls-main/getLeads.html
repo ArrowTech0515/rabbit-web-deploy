@@ -497,7 +497,7 @@
                         </div>
                     </nav>
     
-                    <div id="widgetSettingSection" class="row">
+                    <div id="widgetSettingSection" class="row g-3">
                         <!-- Left panel for dynamic content -->
                         <div class="col-md-5">
                             <div class="left-side">
@@ -540,7 +540,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center accordion-wrapper">
                                                 <div class="accordion" id="pu_accordion">
                                                     <h2 class="accordion-header" id="popup-show-hide-advanced-configuration">
                                                     <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#popup_advanced_config_content" aria-expanded="true" aria-controls="collapseOne">
@@ -693,7 +693,7 @@
                                             </div>
                                             <div class="row my-1" id="puf_itemList">
                                             </div>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center accordion-wrapper">
                                                 <div class="accordion" id="popup_form_accordion">
                                                     <h2 class="accordion-header" id="popup-form-show-hide-advanced-configuration">
                                                     <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#popup_form_advanced_config_content" aria-expanded="true" aria-controls="collapseOne">
@@ -714,13 +714,13 @@
                                                                     <label for="puf_showImage">Show Image</label>
                                                                 </div>
                                                                 <div class="row">
-                                                                    <div class="col-8">
+                                                                    <div class="col-sm-8">
                                                                         <div class="file-container">
                                                                             <label for="puf_uploadFile" class="custom-file-upload"><i class="fas fa-upload"></i>Upload</label>
                                                                             <input type="file" class="form-control image-upload" id="puf_uploadFile" name="puf_uploadFile">
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-4">
+                                                                    <div class="col-sm-4">
                                                                         <div class="form-floating-label">
                                                                             <input type="button" class="explore-gallery" id="puf_exploreGallery" value="Explore Gallery">
                                                                         </div>
@@ -736,7 +736,7 @@
                                                         <div class="divider-b-1"></div>
                                                         <div class="widget-subtitle my-3">Icon Design</div>
                                                         <div class="row">
-                                                            <div class="col-6">
+                                                            <div class="col-md-6 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="puf_roundness" name="puf_roundness">
                                                                         <option value="raidus" selected>Radius</option>
@@ -744,7 +744,7 @@
                                                                     <label for="puf_roundness">Roundness</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-3">
+                                                            <div class="col-md-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="puf_desktopPosition" name="puf_desktopPosition">
                                                                         <option value="bottom-right" selected>Bottom-right</option>
@@ -759,7 +759,7 @@
                                                                     <label for="puf_desktopPosition">Desktop Position</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-3">
+                                                            <div class="col-md-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="puf_mobilePosition" name="puf_mobilePosition">
                                                                         <option value="bottom-right" selected>Bottom-right</option>
@@ -774,9 +774,7 @@
                                                                     <label for="puf_mobilePosition">Mobile Position</label>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-3">
+                                                            <div class="col-md-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="puf_animatedButton" name="puf_animatedButton">
                                                                         <option value="yes" selected>Yes</option>
@@ -785,7 +783,7 @@
                                                                     <label for="puf_animatedButton">Animated Button</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-3">
+                                                            <div class="col-md-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="puf_appearAnimation" name="puf_appearAnimation">
                                                                         <option value="yes" selected>Yes</option>
@@ -798,25 +796,25 @@
                                                         <hr>
                                                         <div class="my-2 py-1 widget-subtitle">Colors</div>
                                                         <div class="row mb-1">
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="puf_bgColor" name="puf_bgColor" aria-label="puf_bgColor" value="#ffffff">
                                                                     <label for="puf_bgColor">Background</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="puf_buttonColor" name="puf_buttonColor" aria-label="puf_buttonColor" value="#ff0000">
                                                                     <label for="puf_buttonColor">Button</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="puf_textColor" name="puf_textColor" aria-label="puf_textColor" value="#000000">
                                                                     <label for="puf_textColor">Text</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="puf_buttonTextColor" name="puf_buttonTextColor" aria-label="puf_buttonTextColor" value="#ffffff">
                                                                     <label for="puf_buttonTextColor">Button Text</label>
@@ -851,7 +849,7 @@
                                             </div>
                                             <div class="row g-3 my-1" id="faq_questionList">
                                             </div>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center accordion-wrapper">
                                                 <div class="accordion" id="faq_accordion">    
                                                     <h2 class="accordion-header" id="faq-show-hide-advanced-configuration">
                                                         <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq_advanced_config_content" aria-expanded="true" aria-controls="collapseOne">
@@ -865,17 +863,17 @@
                                                     <div class="widget-subtitle mt-3">Button</div>
                                                     <div class="row mt-2 faq-button-style-section">
                                                         <input type="hidden" name="faq_buttonStyle" id="faq_buttonStyle" value="round-with-text"></input>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-3 col-6">
                                                             <div class="option-card active" value="round-with-text">
                                                                 <div class="option-icon">
                                                                     <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M71.151 0.72168H10.139C4.61616 0.72168 0.139008 5.19883 0.139008 10.7217C0.139008 16.2445 4.61616 20.7217 10.139 20.7217H71.151C76.6739 20.7217 81.151 16.2445 81.151 10.7217C81.151 5.19883 76.6739 0.72168 71.151 0.72168Z" fill="#E1D8B6"/>
+                                                                        <path d="M71.151 0.72168H10.139C4.61616 0.72168 0.139008 5.19883 0.139008 10.7217C0.139008 16.2445 4.61616 20.7217 10.139 20.7217H71.151C76.6739 20.7217 81.151 16.2445 81.151 10.7217C81.151 5.19883 76.6739 0.72168 71.151 0.72168Z" fill="#F0F1F2"/>
                                                                     </svg>                                                                                                                                              
                                                                 </div>
                                                             </div>
                                                             <div class="option-subtext">Round with Text</div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-3 col-6">
                                                             <div class="option-card" value="square-with-text">
                                                                 <div class="option-icon">
                                                                     <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -885,7 +883,7 @@
                                                             </div>
                                                             <div class="option-subtext">Square with Text</div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-3 col-6">
                                                             <div class="option-card" value="outline-round">
                                                                 <div class="option-icon">
                                                                     <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -895,7 +893,7 @@
                                                             </div>
                                                             <div class="option-subtext">Outline Round</div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-md-3 col-6">
                                                             <div class="option-card" value="outline-square">
                                                                 <div class="option-icon">
                                                                     <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -909,7 +907,7 @@
                                                     <hr>
                                                     <div class="widget-subtitle">Button Text & Animation</div>
                                                     <div class="row mt-4">
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <select class="form-select form-select-custom" id="faq_roundness" name="faq_roundness">
                                                                     <option value="radius" selected>Radius</option>
@@ -917,14 +915,14 @@
                                                                 <label for="faq_roundness">Roundness</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="faq_buttonText" name="faq_buttonText" placeholder="Enter Title" value="Any questions?">
                                                                 <label for="faq_buttonText">Text</label>
                                                             </div>
                                                         </div>
     
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <select class="form-select form-select-custom" id="faq_desktopPosition" name="faq_desktopPosition">
                                                                     <option value="bottom-right" selected>Bottom-right</option>
@@ -939,7 +937,7 @@
                                                                 <label for="faq_desktopPosition">Desktop Position</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <select class="form-select form-select-custom" id="faq_mobilePosition" name="faq_mobilePosition">
                                                                     <option value="bottom-right" selected>Bottom-right</option>
@@ -955,7 +953,7 @@
                                                             </div>
                                                         </div>
                                                         
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <select class="form-select form-select-custom" id="faq_smallerButton" name="faq_smallerButton">
                                                                     <option value="yes">Yes</option>
@@ -965,7 +963,7 @@
                                                             </div>
                                                         </div>
                                                         
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <select class="form-select form-select-custom" id="faq_shakeButton" name="faq_shakeButton">
                                                                     <option value="yes" selected>Yes</option>
@@ -975,7 +973,7 @@
                                                             </div>
                                                         </div>
                                                         
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <select class="form-select form-select-custom" id="faq_wavesAnimation" name="faq_wavesAnimation">
                                                                     <option value="yes" selected>Yes</option>
@@ -985,7 +983,7 @@
                                                             </div>
                                                         </div>
                                                         
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <select class="form-select form-select-custom" id="faq_appearAnimation" name="faq_appearAnimation">
                                                                     <option value="yes" selected>Yes</option>
@@ -998,25 +996,25 @@
                                                     <hr>
                                                     <div class="widget-subtitle">Button Design and Color</div>
                                                     <div class="row mt-3">
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="number" class="form-control" id="faq_verticalMargin" name="faq_verticalMargin" min="0" value="0">
                                                                 <label for="faq_verticalMargin">Vertical Margin</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="number" class="form-control" id="faq_horizontalMargin" name="faq_horizontalMargin" min="0" value="0">
                                                                 <label for="faq_horizontalMargin">Horizontal Margin</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_buttonTextColor" name="faq_buttonTextColor" value="#ffffff">
                                                                 <label for="faq_buttonTextColor">Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-6 col-lg-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_buttonBgColor" name="faq_buttonBgColor" value="#000000">
                                                                 <label for="faq_buttonBgColor">Background</label>
@@ -1032,25 +1030,25 @@
                                                     </div>
                                                     <div class="widget-subtitle my-3">Header</div>
                                                     <div class="row">
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="faq_headerText" name="faq_headerText">
                                                                 <label for="faq_headerText">Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="faq_headerSubtitle" name="faq_headerSubtitle">
                                                                 <label for="faq_headerSubtitle">Subtitle</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_headerTextColor" name="faq_headerTextColor" value="#ffffff">
                                                                 <label for="faq_headerTextColor">Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-6 col-lg-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_headerBgColor" name="faq_headerBgColor" value="#000000">
                                                                 <label for="faq_headerBgColor">Background</label>
@@ -1060,19 +1058,19 @@
                                                     <hr>
                                                     <div class="widget-subtitle">Questions & Answers Design</div>
                                                     <div class="row mt-3">
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_questionTextColor" name="faq_questionTextColor" value="#ff0000">
                                                                 <label for="faq_questionTextColor">Question Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3 col-lg-3">
+                                                        <div class="col-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_answerTextColor" name="faq_answerTextColor" value="#000000">
                                                                 <label for="faq_answerTextColor">Answers Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3 col-lg-3">
+                                                        <div class="col-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_questionLinkColor" name="faq_questionLinkColor" value="#0000ff">
                                                                 <label for="faq_questionLinkColor">Question Link</label>
@@ -1089,25 +1087,25 @@
                                                     </div>
                                                     <div class="widget-subtitle my-3">Footer</div>
                                                     <div class="row mt-2">
-                                                        <div class="col-12 col-md-3 col-lg-3">
+                                                        <div class="col-6 col-md-3">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="faq_footerText" name="faq_footerText">
                                                                 <label for="faq_footerText">Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3 col-lg-3">
+                                                        <div class="col-6 col-md-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_footerBgColor" name="faq_footerBgColor" value="#000000">
                                                                 <label for="faq_footerBgColor">Background</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3 col-lg-3">
+                                                        <div class="col-6 col-md-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_footerTextColor" name="faq_footerTextColor" value="#ffffff">
                                                                 <label for="faq_footerTextColor">Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-12 col-md-3 col-lg-3">
+                                                        <div class="col-6 col-md-3">
                                                             <div class="form-floating-label">
                                                                 <input type="color" class="form-control" id="faq_footerLinkColor" name="faq_footerLinkColor" value="#0000ff">
                                                                 <label for="faq_footerLinkColor">Link</label>
@@ -1119,10 +1117,10 @@
                                         </div>
                                         
                                         <div class="row mt-3">
-                                            <div class="col-md-3">
+                                            <div class="col-3">
                                                 <a id="rv_saveDraft" class="btn btn-save-draft align-content-center">Save Draft</a>
                                             </div>
-                                            <div class="col-md-9">
+                                            <div class="col-9">
                                                 <div class="btn btn-publish" id="faq_publish">
                                                     <a><span style="color: #aaa;">Next Step &nbsp; |</span> &nbsp; Publish Common Questions</a>
                                                     <span><i class="fa fa-arrow-right"></i></span> 
@@ -1152,8 +1150,8 @@
                                             </div>
                                             
                                             <div class="widget-subtitle">Container Design</div>
-                                            <div class="row review-container-design">
-                                                <div class='col-sm-3'>
+                                            <div class="row g-3 review-container-design">
+                                                <div class='col-lg-3 col-md-6 col-4'>
                                                     <div id="rv_bgColorPicker" class="color-picker-container">
                                                         <div class="color-box"></div>
                                                         <label for="rv_bgColor">Select</label>
@@ -1161,7 +1159,7 @@
                                                         <div class="color-label">BG Color</div>
                                                     </div>
                                                 </div>                                    
-                                                <div class='col-sm-3'>
+                                                <div class='col-lg-3 col-md-6 col-4'>
                                                     <div id="rv_buttonColorPicker" class="color-picker-container">
                                                         <div class="color-box"></div>
                                                         <label for="rv_buttonColor">Select</label>
@@ -1169,7 +1167,7 @@
                                                         <div class="color-label">Button Color</div>
                                                     </div>
                                                 </div>                                        
-                                                <div class='col-sm-3'>
+                                                <div class='col-lg-3 col-md-6 col-4'>
                                                     <div id="rv_reviewsAnimationPicker" class="color-picker-container">
                                                         <div class="color-box"></div>
                                                         <label for="rv_reviewsAnimation">Top level</label>
@@ -1177,7 +1175,7 @@
                                                         <div class="color-label">Animation</div>
                                                     </div>
                                                 </div>                                    
-                                                <div class='col-sm-3'>
+                                                <div class='col-lg-3 col-md-6 col-4'>
                                                     <div id="rv_reviewsBgColorPicker" class="color-picker-container">
                                                         <div class="color-box"></div>
                                                         <label for="rv_reviewsBgColor">Select</label>
@@ -1196,15 +1194,15 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class="row" id="rv_reviewList">
+                                            <div class="row g-3" id="rv_reviewList">
                                             </div>
-                                            <div class="col-md-12 mt-4">
+                                            <div class="col-12 mt-4">
                                                 <div class="form-floating-label">
                                                     <input type="text" class="form-control" id="rv_successText" placeholder="" name="rv_successText">
                                                     <label for="rv_successText">Success Text</label>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center accordion-wrapper">
                                                 <div class="accordion" id="review_accordion">
                                                     <h2 class="accordion-header" id="review-show-hide-advanced-configuration">
                                                     <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#review_advanced_config_content" aria-expanded="true" aria-controls="collapseOne">
@@ -1219,17 +1217,17 @@
                                                         <div class="widget-subtitle">Button</div>
                                                         <div class="row mt-2 review-button-style-section">
                                                             <input type="hidden" name="rv_buttonStyle" id="rv_buttonStyle" value="round-with-text"></input>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="option-card active" value="round-with-text"> 
                                                                     <div class="option-icon">
                                                                         <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path d="M71.151 0.72168H10.139C4.61616 0.72168 0.139008 5.19883 0.139008 10.7217C0.139008 16.2445 4.61616 20.7217 10.139 20.7217H71.151C76.6739 20.7217 81.151 16.2445 81.151 10.7217C81.151 5.19883 76.6739 0.72168 71.151 0.72168Z" fill="#E1D8B6"/>
+                                                                            <path d="M71.151 0.72168H10.139C4.61616 0.72168 0.139008 5.19883 0.139008 10.7217C0.139008 16.2445 4.61616 20.7217 10.139 20.7217H71.151C76.6739 20.7217 81.151 16.2445 81.151 10.7217C81.151 5.19883 76.6739 0.72168 71.151 0.72168Z" fill="#F0F1F2"/>
                                                                         </svg>   
                                                                     </div>
                                                                 </div>
                                                                 <div class="option-subtext">Round with Text</div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="option-card" value="square-with-text">
                                                                     <div class="option-icon">
                                                                         <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1239,7 +1237,7 @@
                                                                 </div>
                                                                 <div class="option-subtext">Square with Text</div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="option-card" value="outline-round">
                                                                     <div class="option-icon">
                                                                         <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1249,7 +1247,7 @@
                                                                 </div>
                                                                 <div class="option-subtext">Outline Round</div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="option-card" value="outline-square">
                                                                     <div class="option-icon">
                                                                         <svg width="82" height="21" viewBox="0 0 82 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1263,7 +1261,7 @@
                                                         <hr>
                                                         <div class="widget-subtitle">Button Design & Animation</div>
                                                         <div class="row mt-4">
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom" id="rv_btRoundness" name="rv_btRoundness">
                                                                         <option value="radius" selected>Radius</option>
@@ -1271,14 +1269,14 @@
                                                                     <label for="rv_btRoundness">Roundness</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <input type="text" class="form-control" id="rv_text" placeholder="Enter Title" name="rv_text">
                                                                     <label for="rv_text">Text</label>
                                                                 </div>
                                                             </div>
         
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom" id="rv_desktopPosition" name="rv_desktopPosition">
                                                                         <option value="bottom-right" selected>Bottom-right</option>
@@ -1293,7 +1291,7 @@
                                                                     <label for="rv_desktopPosition">Desktop Position</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom" id="rv_mobilePosition" name="rv_mobilePosition">
                                                                         <option value="bottom-right" selected>Bottom-right</option>
@@ -1309,7 +1307,7 @@
                                                                 </div>
                                                             </div>
                                                             
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom" id="rv_delay" name="rv_delay">
                                                                         <option value="yes" selected>Yes</option>
@@ -1319,7 +1317,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom" id="rv_makeButtonSmaller" name="rv_makeButtonSmaller">
                                                                         <option value="yes" selected>Yes</option>
@@ -1329,7 +1327,7 @@
                                                                 </div>
                                                             </div>
                                                                                                                     
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom" id="rv_waveAnimation" name="rv_waveAnimation">
                                                                         <option value="yes" selected>Yes</option>
@@ -1339,7 +1337,7 @@
                                                                 </div>
                                                             </div>
                                                             
-                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom" id="rv_appearAnimation" name="rv_appearAnimation">
                                                                         <option value="yes" selected>Yes</option>
@@ -1355,10 +1353,10 @@
                                         </div>
                                         
                                         <div class="row mt-3">
-                                            <div class="col-md-3">
+                                            <div class="col-3">
                                                 <a id="rv_saveDraft" class="btn btn-save-draft align-content-center">Save Draft</a>
                                             </div>
-                                            <div class="col-md-9">
+                                            <div class="col-9">
                                                 <div class="btn btn-publish" id="rv_publish">
                                                     <a><span style="color: #aaa;">Next Step &nbsp; |</span> &nbsp; Publish Testimonials</a>
                                                     <span><i class="fa fa-arrow-right"></i></span> 
@@ -1392,8 +1390,8 @@
                                             <div class="my-3 widget-subtitle">Desktop Layout</div>
                                             <div class="story-desktop-layout-section">
                                                 <input type="hidden" name="st_desktopLayout" id="st_desktopLayout" value="top-inside"></input>
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
+                                                <div class="row">
+                                                    <div class="col">
                                                         <div class="option-card mb-2 active" value="top-inside">
                                                             <div class="option-icon">
                                                                 <svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1404,7 +1402,7 @@
                                                         </div>
                                                         <div class="option-subtext">Top Inside</div>
                                                     </div>
-                                                    <div>
+                                                    <div class="col">
                                                         <div class="option-card" value="top-over">
                                                             <div class="option-icon">
                                                                 <svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1415,7 +1413,7 @@
                                                         </div>
                                                         <div class="option-subtext">Top Over</div>
                                                     </div>
-                                                    <div>
+                                                    <div class="col">
                                                         <div class="option-card" value="bottom-over">
                                                             <div class="option-icon">
                                                                 <svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1426,7 +1424,7 @@
                                                         </div>
                                                         <div class="option-subtext">Bottom Over</div>
                                                     </div>
-                                                    <div>
+                                                    <div class="col">
                                                         <div class="option-card" value="left-over">
                                                             <div class="option-icon">
                                                                 <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1437,7 +1435,7 @@
                                                         </div>
                                                         <div class="option-subtext">Left Over</div>
                                                     </div>
-                                                    <div>
+                                                    <div class="col">
                                                         <div class="option-card" value="right-over">
                                                             <div class="option-icon">
                                                                 <svg width="62" height="63" viewBox="0 0 62 63" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1452,12 +1450,12 @@
                                             </div>
                                             <hr>
                                             <div class="row story-animation-section">
-                                                <div class="col-5">
+                                                <div class="col-lg-5">
                                                     <div class="widget-subtitle my-1">Animations</div>
                                                     <div class="row">
                                                         <input type="hidden" name="st_animation" id="st_animation" value="rotating-border"></input>
 
-                                                        <div class="col-6">
+                                                        <div class="col-lg-6 col-4">
                                                             <div class="option-card active" value="rotating-border">
                                                                 <div class="option-icon">
                                                                     <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1468,7 +1466,7 @@
                                                             </div>
                                                             <div class="option-subtext">Rotating Border</div>
                                                         </div>
-                                                        <div class="col-6">
+                                                        <div class="col-lg-6 col-4">
                                                             <div class="option-card" value="glass-effect">
                                                                 <div class="option-icon">
                                                                     <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1482,7 +1480,7 @@
                                                         </div>                                                    
                                                     </div>
                                                 </div>
-                                                <div class="col-7">
+                                                <div class="col-lg-7">
                                                     <div class="my-1 widget-subtitle">Colors</div>
                                                     <div class="row ">
                                                         <div class="col-6">
@@ -1531,27 +1529,27 @@
                                             </div>
                                             <div class="my-3 widget-subtitle">Group Details</div>
                                             <div class="row group-details-section">
-                                                <div class="col-9">
-                                                    <div class="form-floating-label">
+                                                <div class="col-lg-9 col-7">
+                                                    <div class="col-12 form-floating-label">
                                                         <input type="text" class="form-control" id="st_groupTitle" placeholder=""
                                                             name="st_groupTitle">
                                                         <label for="st_groupTitle">News Group Title</label>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-6">
+                                                        <div class="col-lg-6 col-12">
                                                             <div class="file-container">
                                                                 <label for="st_uploadGroupImage" class="custom-file-upload"><i class="fas fa-upload"></i>Upload</label>
                                                                 <input type="file" class="form-control image-upload" id="st_uploadGroupImage">
                                                             </div>
                                                         </div>
-                                                        <div class="col-6">
+                                                        <div class="col-lg-6 col-12">
                                                             <div class="form-floating-label">
                                                                 <input type="button" class="explore-gallery" id="st_exploreGallery" value="Explore Gallery">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-3 group-details-image-section">
+                                                <div class="col-lg-3 col-5 group-details-image-section">
                                                     <div>Cover Image</div>
                                                     <img id="st_coverImage" src="https://via.placeholder.com/400x300">
                                                     <input type="hidden" class="cover-image-val" name="st_coverImageVal" id="st_coverImageVal"></input>
@@ -1561,7 +1559,7 @@
                                             <div class="mb-3 widget-subtitle">What do you want to show in your News?</div>
                                             <div class="row story-image-setting-section">
                                                 <input type="hidden" name="st_imageSetting" id="st_imageSetting" value="images-only"></input>
-                                                <div class="col-4 story-news-style-img">
+                                                <div class="col-lg-4 col-6 story-news-style-img">
                                                     <div class="option-card mb-2 active" value="images-only">
                                                         <div class="option-icon">
                                                             <svg width="125" height="61" viewBox="0 0 125 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1576,7 +1574,7 @@
                                                     </div>
                                                     <div class="option-subtext">Images Only</div>
                                                 </div>
-                                                <div class="col-4 story-news-style-img">
+                                                <div class="col-lg-4 col-6 story-news-style-img">
                                                     <div class="option-card mb-2" value="images-text">
                                                         <div class="option-icon">
                                                             <svg width="125" height="61" viewBox="0 0 125 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1597,7 +1595,7 @@
                                                     </div>
                                                     <div class="option-subtext">Images and Text</div>
                                                 </div>
-                                                <div class="col-4 story-news-style-img">
+                                                <div class="col-lg-4 col-6 story-news-style-img">
                                                     <div class="option-card mb-2" value="images-text-button">
                                                         <div class="option-icon">
                                                             <svg width="125" height="61" viewBox="0 0 125 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1621,7 +1619,7 @@
                                                     </div>
                                                     <div class="option-subtext">Images Text and Button</div>
                                                 </div>
-                                                <div class="d-flex justify-content-between my-3">
+                                                <div class="d-flex justify-content-between my-3 accordion-wrapper">
                                                     <div class="d-flex justify-content-end align-items-center pr-1 gap-2">
                                                         <div class="accordion" id="story_accordion">
                                                             <h2 class="accordion-header" id="story-show-hide-advanced-configuration">
@@ -1674,14 +1672,14 @@
                                             </div>
 
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-3">
+                                        <div class="row g-2">
+                                            <div class="col-lg-3 col-6">
                                                 <a id="st_saveDraft" class="btn btn-save-draft align-content-center">Save Draft</a>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-lg-3 col-6">
                                                 <a id="st_preview" class="btn btn-preview align-content-center">Preview</a>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-lg-6 col-12">
                                                 <div class="btn btn-publish" id="st_publish">
                                                     <a><span style="color: #aaa;">Next Step &nbsp; |</span> &nbsp; Publish News</a>
                                                     <span><i class="fa fa-arrow-right"></i></span> 
@@ -1714,33 +1712,33 @@
                                                 <div class="widget-subtitle mb-3">Window Content</div>
                                                 <div class="manager-section">
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-lg-6">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="cu_title" name="cu_title" placeholder="">
                                                                 <label for="cu_title">Title</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-lg-6">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="cu_footer" name="cu_footer" placeholder="">
                                                                 <label for="cu_footer">Footer</label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-12">
+                                                    <div class="col-lg-12">
                                                         <div class="form-floating-label">
                                                             <textarea type="textarea" class="form-control" id="cu_subtitle" name="cu_subtitle" placeholder=""></textarea>
                                                             <label for="cu_subtitle">Subtitle</label>
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-lg-6">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="cu_wechatButtonText" name="cu_wechatButtonText" placeholder="">
                                                                 <label for="cu_wechatButtonText">Wechat Username Button Text</label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-lg-6">
                                                             <div class="form-floating-label">
                                                                 <input type="text" class="form-control" id="cu_footerStart" name="cu_footerStart" placeholder="">
                                                                 <label for="cu_footerStart">Start Chat Text:</label>
@@ -1751,7 +1749,7 @@
                                                 <div class="direct-content">
                                                     <div class="row g-2">
                                                         <!-- Facebook -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directFacebook" placeholder="Link here" name="cu_directFacebook">
                                                                 <label for="cu_directFacebook">Facebook Messenger Id</label>
@@ -1769,7 +1767,7 @@
                                                         </div>
                                             
                                                         <!-- Instagram -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directInstagram" placeholder="Link here" name="cu_directInstagram">
                                                                 <label for="cu_directInstagram">Instagram Username</label>
@@ -1786,7 +1784,7 @@
                                                         </div>
                                             
                                                         <!-- Skype -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directSkype" placeholder="Link here" name="cu_directSkype">
                                                                 <label for="cu_directSkype">Skype Username</label>
@@ -1803,7 +1801,7 @@
                                                         </div>
                                                         
                                                         <!-- Telegram -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directTelegram" placeholder="Link here" name="cu_directTelegram">
                                                                 <label for="cu_directTelegram">Telegram Username</label>
@@ -1820,7 +1818,7 @@
                                                         </div>
                                             
                                                         <!-- Phone -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directPhone" placeholder="Link here" name="cu_directPhone">
                                                                 <label for="cu_directPhone">Phone Number</label>
@@ -1837,7 +1835,7 @@
                                                         </div>
                                             
                                                         <!-- Whatsapp -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directWhatsapp" placeholder="Link here" name="cu_directWhatsapp">
                                                                 <label for="cu_directWhatsapp">Whatsapp Phone Number</label>
@@ -1854,7 +1852,7 @@
                                                         </div>
                                             
                                                         <!-- Email -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_diretEmail" placeholder="Link here" name="cu_diretEmail">
                                                                 <label for="cu_diretEmail">Email</label>
@@ -1871,7 +1869,7 @@
                                                         </div>
                                             
                                                         <!-- iMessage -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directImessages" placeholder="Link here" name="cu_directImessages">
                                                                 <label for="cu_directImessages">iMessages Phone Number</label>
@@ -1888,7 +1886,7 @@
                                                         </div>
                                             
                                                         <!-- Weibo -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directWeibo" placeholder="Link here" name="cu_directWeibo">
                                                                 <label for="cu_directWeibo">Weibo user ID</label>
@@ -1905,7 +1903,7 @@
                                                         </div>
                                             
                                                         <!-- Viber -->
-                                                        <div class="col-12 col-lg-6 col-md-6 d-flex gap-2">
+                                                        <div class="col-12 col-lg-6 d-flex gap-2">
                                                             <div class="form-floating-label w-100">
                                                                 <input type="text" class="form-control" id="cu_directViber" placeholder="Link here" name="cu_directViber">
                                                                 <label for="cu_directViber">Viber Phone Number</label>
@@ -1923,7 +1921,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center accordion-wrapper">
                                                 <div class="accordion" id="contactus_accordion">
                                                     <h2 class="accordion-header" id="contactus-show-hide-advanced-configuration">
                                                     <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#contactus_advanced_config_content" aria-expanded="true" aria-controls="collapseOne">
@@ -1936,7 +1934,7 @@
                                                     <div class="contactus-advnaced-config-section">
                                                         <div class="widget-subtitle my-3">Button Text & Animation</div>
                                                         <div class="row">
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="cu_Type" name="cu_Type">
                                                                         <option value="but-rounded" selected>Rounded</option>
@@ -1947,13 +1945,13 @@
                                                                     <label for="cu_Type">Type</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label" >
                                                                     <input type="text" class="form-control" id="cu_Text" name="cu_Text">
                                                                     <label for="cu_Text">Text</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="cu_desktopPosition" name="cu_desktopPosition">
                                                                         <option value="bottom-right" selected>Bottom-right</option>
@@ -1968,7 +1966,7 @@
                                                                     <label for="cu_desktopPosition">Desktop Position</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="cu_mobilePosition" name="cu_mobilePosition">
                                                                         <option value="bottom-right" selected>Bottom-right</option>
@@ -1985,19 +1983,19 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <input type="number" class="form-control" id="cu_verticalMargin" name="cu_verticalMargin" min="0" value="0">
                                                                     <label for="cu_verticalMargin">Vertical Margin</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label" >
                                                                     <input type="number" class="form-control" id="cu_horizontalMargin" name="cu_horizontalMargin" min="0" value="0">
                                                                     <label for="cu_horizontalMargin">Horizontal Margin</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="cu_smallButton" name="cu_smallButton">
                                                                         <option value="yes">Yes</option>
@@ -2006,7 +2004,7 @@
                                                                     <label for="cu_smallButton">Small Button</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="cu_waveAnimation" name="cu_waveAnimation">
                                                                         <option value="yes" selected>Yes</option>
@@ -2017,7 +2015,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="cu_shakeButton" name="cu_shakeButton">
                                                                         <option value="yes" selected>Yes</option>
@@ -2026,7 +2024,7 @@
                                                                     <label for="cu_shakeButton">Shake Button?</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="cu_redDot" name="cu_redDot">
                                                                         <option value="yes" selected>Yes</option>
@@ -2035,13 +2033,13 @@
                                                                     <label for="cu_redDot">Red Unread Dot</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="cu_bgColor" name="cu_bgColor" aria-label="cu_bgColor" value="#000000">
                                                                     <label for="cu_bgColor">Background</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-3">
+                                                            <div class="col-lg-3 col-6">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="cu_buttonColor" name="cu_buttonColor" aria-label="cu_buttonColor" value="#ffffff">
                                                                     <label for="cu_buttonColor">Button</label>
@@ -2052,7 +2050,7 @@
                                                             <hr>
                                                             <div class="widget-subtitle mb-3">Message</div>
                                                             <div class="row">
-                                                                <div class="col-md-6">
+                                                                <div class="col-lg-6">
                                                                     <div class="form-floating-label">
                                                                         <select class="form-select form-select-custom w-100" id="cu_firstMgrUsed" name="cu_firstMgrUsed">
                                                                             <option value="yes" selected>Yes</option>
@@ -2061,7 +2059,7 @@
                                                                         <label for="cu_firstMgrUsed">First Manager Used</label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-lg-6">
                                                                     <div class="form-floating-label">
                                                                         <input type="number" class="form-control" id="cu_dismissPeriod" name="cu_dismissPeriod" min="0" value="0">
                                                                         <label for="cu_dismissPeriod">Dismiss Period</label>
@@ -2110,19 +2108,19 @@
                                             </div>
                                             <div class="message-list mt-3 g-3">
                                                 <div class="message-item">
-                                                    <div class="col-12 py-1">
+                                                    <div class="col-12">
                                                         <div class="form-floating-label">
                                                             <input type="text" class="form-control" id="mbText_1" name="mbText_1" placeholder="">
                                                             <label for="mbText_1">Text</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 py-1">
+                                                    <div class="col-12">
                                                         <div class="form-floating-label">
                                                             <input type="text" class="form-control" id="mbLink_1" name="mbLink_1" placeholder="">
                                                             <label for="mbLink_1">Link</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 py-1">
+                                                    <div class="col-12">
                                                         <div class="form-floating-label">
                                                             <input type="text" class="form-control" id="mbButtonText_1" name="mbButtonText_1" placeholder="">
                                                             <label for="mbButtonText_1">Button Text</label>
@@ -2130,7 +2128,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center accordion-wrapper">
                                                 <div class="accordion" id="message_accordion">
                                                     <h2 class="accordion-header" id="message-show-hide-advanced-configuration">
                                                     <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#message_advanced_config_content" aria-expanded="true" aria-controls="collapseOne">
@@ -2161,18 +2159,18 @@
                                                         </div>
                                                         <div class="row option-container mb-3 mb-message-position-section">
                                                             <input type="hidden" name="mb_position" id="mb_position" value="top-bar"></input>
-                                                            <div class="col-12 col-lg-3 col-md-3">
+                                                            <div class="col-4 col-lg-3 col-md-6">
                                                                 <div class="option-card active" value="top-bar">
                                                                     <div class="option-icon">
                                                                         <svg width="78" height="62" viewBox="0 0 78 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path d="M73 0.97168H5C2.23858 0.97168 0 3.21026 0 5.97168V56.9717C0 59.7331 2.23858 61.9717 5 61.9717H73C75.7614 61.9717 78 59.7331 78 56.9717V5.97168C78 3.21026 75.7614 0.97168 73 0.97168Z" fill="#F5F0DD"/>
-                                                                            <path d="M13 0.97168H65V8.97168C65 10.2978 64.4732 11.5695 63.5355 12.5072C62.5979 13.4449 61.3261 13.9717 60 13.9717H18C16.6739 13.9717 15.4021 13.4449 14.4645 12.5072C13.5268 11.5695 13 10.2978 13 8.97168V0.97168Z" fill="#E1D8B6"/>
+                                                                            <path d="M73 0.97168H5C2.23858 0.97168 0 3.21026 0 5.97168V56.9717C0 59.7331 2.23858 61.9717 5 61.9717H73C75.7614 61.9717 78 59.7331 78 56.9717V5.97168C78 3.21026 75.7614 0.97168 73 0.97168Z" fill="#DDDFE2"/>
+                                                                            <path d="M13 0.97168H65V8.97168C65 10.2978 64.4732 11.5695 63.5355 12.5072C62.5979 13.4449 61.3261 13.9717 60 13.9717H18C16.6739 13.9717 15.4021 13.4449 14.4645 12.5072C13.5268 11.5695 13 10.2978 13 8.97168V0.97168Z" fill="#F0F1F2"/>
                                                                         </svg>                                                                            
                                                                     </div>
                                                                 </div>
                                                                 <div class="option-subtext">Top Bar</div>
                                                             </div>
-                                                            <div class="col-12 col-lg-3 col-md-3">
+                                                            <div class="col-4 col-lg-3 col-md-6">
                                                                 <div class="option-card" value="bottom-bar">
                                                                     <div class="option-icon">
                                                                         <svg width="78" height="62" viewBox="0 0 78 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2183,7 +2181,7 @@
                                                                 </div>
                                                                 <div class="option-subtext">Bottom Bar</div>
                                                             </div>
-                                                            <div class="col-12 col-lg-3 col-md-3">
+                                                            <div class="col-4 col-lg-3 col-md-6">
                                                                 <div class="option-card" value="over-top">
                                                                     <div class="option-icon">
                                                                         <svg width="78" height="62" viewBox="0 0 78 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2194,7 +2192,7 @@
                                                                 </div>
                                                                 <div class="option-subtext">Over Top</div>
                                                             </div>
-                                                            <div class="col-12 col-lg-3 col-md-3">
+                                                            <div class="col-4 col-lg-3 col-md-6">
                                                                 <div class="option-card" value="over-bottom">
                                                                     <div class="option-icon">
                                                                         <svg width="78" height="62" viewBox="0 0 78 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2207,7 +2205,7 @@
                                                             </div>
                                                         </div>    
                                                         <div class="row">
-                                                            <div class="col-md-6">
+                                                            <div class="col-md-6 col-4">
                                                                 <div class="form-floating-label">
                                                                     <select class="form-select form-select-custom w-100" id="mb_containerStyle" name="mb_containerStyle">
                                                                         <option value="prominent" selected>Prominent</option>
@@ -2216,7 +2214,7 @@
                                                                     <label for="mb_containerStyle">Container Style</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-6">
+                                                            <div class="col-md-6 col-8">
                                                                 <div class="form-floating-label">
                                                                     <input type="number" class="form-control" id="mb_dismissIn" name="mb_dismissIn" min="0" value="0">
                                                                     <label for="mb_dismissIn">Dismiss in</label>
@@ -2226,25 +2224,25 @@
                                                         <hr>
                                                         <div class="widget-subtitle">Colors</div>
                                                         <div class="row mt-3">
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-6 col-lg-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="mb_bgColor" name="mb_bgColor" value="#000000">
                                                                     <label for="mb_bgColor">Background</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-6 col-lg-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="mb_buttonColor" name="mb_buttonColor" value="#0000ff">
                                                                     <label for="mb_buttonColor">Button</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-6 col-lg-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="mb_textColor" name="mb_textColor" value="#ffffff">
                                                                     <label for="mb_textColor">Text</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                                                            <div class="col-4 col-md-6 col-lg-3">
                                                                 <div class="form-floating-label">
                                                                     <input type="color" class="form-control" id="mb_buttonTextColor" name="mb_buttonTextColor" value="#ffffff">
                                                                     <label for="mb_buttonTextColor">Button Text</label>
@@ -2256,10 +2254,10 @@
                                             </div>
                                         </div>
                                         <div class="row mt-3">
-                                            <div class="col-md-3">
+                                            <div class="col-3">
                                                 <a id="mb_saveDraft" class="btn btn-save-draft align-content-center">Save Draft</a>
                                             </div>
-                                            <div class="col-md-9">
+                                            <div class="col-9">
                                                 <div class="btn btn-publish" id="mb_publish">
                                                     <a><span style="color: #aaa;">Next Step &nbsp; |</span> &nbsp; Publish Message Bar</a>
                                                     <span><i class="fa fa-arrow-right"></i></span> 
@@ -2499,18 +2497,18 @@
                                 
                                         <div class="row option-container fu-bar-position-section">
                                             <input type="hidden" name="fu_barPosition" id="fu_barPosition" value="top-bar"></input>
-                                            <div class="col-12 col-lg-3 col-md-6">
+                                            <div class="col-4 col-lg-3 col-md-6">
                                                 <div class="option-card active" value="top-bar">
                                                     <div class="option-icon">
                                                         <svg width="78" height="61" viewBox="0 0 78 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M73 27H5C2.23858 27 0 29.2386 0 32V56C0 58.7614 2.23858 61 5 61H73C75.7614 61 78 58.7614 78 56V32C78 29.2386 75.7614 27 73 27Z" fill="#F5F0DD"/>
-                                                            <path d="M73 0H5C2.23858 0 0 2.23858 0 5V15C0 17.7614 2.23858 20 5 20H73C75.7614 20 78 17.7614 78 15V5C78 2.23858 75.7614 0 73 0Z" fill="#E1D8B6"/>
+                                                            <path d="M73 27H5C2.23858 27 0 29.2386 0 32V56C0 58.7614 2.23858 61 5 61H73C75.7614 61 78 58.7614 78 56V32C78 29.2386 75.7614 27 73 27Z" fill="#DDDFE2"/>
+                                                            <path d="M73 0H5C2.23858 0 0 2.23858 0 5V15C0 17.7614 2.23858 20 5 20H73C75.7614 20 78 17.7614 78 15V5C78 2.23858 75.7614 0 73 0Z" fill="#F0F1F2"/>
                                                         </svg>                                                            
                                                     </div>
                                                 </div>
                                                 <div class="option-subtext">Top Bar</div>
                                             </div>
-                                            <div class="col-12 col-lg-3 col-md-6">
+                                            <div class="col-4 col-lg-3 col-md-6">
                                                 <div class="option-card" value="left-bar">
                                                     <div class="option-icon">
                                                         <svg width="76" height="61" viewBox="0 0 76 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2521,7 +2519,7 @@
                                                 </div>
                                                 <div class="option-subtext">Left Bar</div>
                                             </div>
-                                            <div class="col-12 col-lg-3 col-md-6">
+                                            <div class="col-4 col-lg-3 col-md-6">
                                                 <div class="option-card" value="right-bar">
                                                     <div class="option-icon">
                                                         <svg width="77" height="61" viewBox="0 0 77 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2532,7 +2530,7 @@
                                                 </div>
                                                 <div class="option-subtext">Right Bar</div>
                                             </div>
-                                            <div class="col-12 col-lg-3 col-md-6">
+                                            <div class="col-4 col-lg-3 col-md-6">
                                                 <div class="option-card" value="bottom-bar">
                                                     <div class="option-icon">
                                                         <svg width="79" height="62" viewBox="0 0 79 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2549,7 +2547,7 @@
                                         <div class="widget-subtitle">Bar Design</div>
                                 
                                         <div class="row mt-3">
-                                            <div class="col-md-3">
+                                            <div class="col-lg-3 col-md-6 col-4">
                                                 <div class="form-floating-label">
                                                     <select class="form-select form-select-custom" id="fu_colorTheme" name="fu_colorTheme">
                                                         <option value="colored" selected>Colored</option>
@@ -2559,7 +2557,7 @@
                                                     <label for="fu_colorTheme">Color Theme</label>
                                                 </div>
                                             </div>                            
-                                            <div class="col-md-3">
+                                            <div class="col-lg-3 col-md-6 col-4">
                                                 <div class="form-floating-label">
                                                     <select class="form-select form-select-custom" id="fu_buttonShape" name="fu_buttonShape">
                                                         <option value="but-square" selected>Square</option>
@@ -2569,7 +2567,7 @@
                                                     <label for="fu_buttonShape">Buttons Shape</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-lg-3 col-md-6 col-4">
                                                 <div class="form-floating-label">
                                                     <select class="form-select form-select-custom" id="fu_animationType" name="fu_animationType">
                                                         <option value="grow" selected>Grow</option>
@@ -2578,7 +2576,7 @@
                                                     <label for="fu_animationType">Animation Type</label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3">
+                                            <div class="col-lg-3 col-md-6 col-4">
                                                 <div class="form-floating-label">
                                                     <select class="form-select form-select-custom" id="fu_buttonSpace" name="fu_buttonSpace">
                                                         <option value="small-space" selected>Small space</option>
@@ -2604,10 +2602,10 @@
                                         </div>
                                 
                                         <div class="row mt-3">
-                                            <div class="col-md-3">
+                                            <div class="col-3">
                                                 <a id="fu_saveDraft" class="btn btn-save-draft align-content-center">Save Draft</a>
                                             </div>
-                                            <div class="col-md-9">
+                                            <div class="col-9">
                                                 <div class="btn btn-publish" id="fu_publish">
                                                     <a><span style="color: #aaa;">Next Step &nbsp; |</span> &nbsp; Publish Follow Us Widget</a>
                                                     <span><i class="fa fa-arrow-right"></i></span> 
@@ -2637,7 +2635,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center align-items-center dotted-background py-5" style="height: 80vh;">
+                                <div class="d-flex justify-content-center align-items-center dotted-background py-5">
                                     <div class="site-preview preview-fullscreen" data-value="preview-fullscreen" id="sitePreviewDiv">
                                         <div id="widget_section">
                                         </div>
@@ -2852,8 +2850,9 @@
                 <option value="technology">Technology</option>
                 <!-- Add more categories as needed -->
             </select>
-            <div id="imageGrid" class="gallery-image-grid">
-            <!-- Images to select from will be dynamically loaded here -->
+            <div class="gallery-wrapper">
+                <div id="imageGrid" class="gallery-image-grid">
+                </div>
             </div>
         </div>
     </div>

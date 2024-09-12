@@ -1827,7 +1827,7 @@ body>#preview_widget {
 }
 
 .btnTouch {
-    position: fixed;
+    position: absolute;
     width: auto;
     padding: 16px 32px;
     font-size: 20px;

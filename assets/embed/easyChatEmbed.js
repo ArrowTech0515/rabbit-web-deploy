@@ -52,6 +52,20 @@ const g_properties = {
         mobile: true,
         hoverText: "Contact Form",
         hoverTextOnClose: "Close",
+        titleBGColor: '#3988D7',
+        titleTxtColor: '#ffffff',
+        closeIconColor: '#3988D7',
+        titleText: 'Contact Us Today!',
+        buttonBGColor: '#3988D7',
+        textColor: '#ffffff',
+        closeAfterSubmission: false,
+        closeAfterSec: 0,
+        redirect: false,
+        redirectUrl: '',
+        thankyou: '',
+        buttonRange: 100,
+        fieldSize: 100,
+        buttonSize: 100,
     },
     "Line": {
         color: '#38B900',
@@ -148,9 +162,58 @@ const g_properties = {
 
 // #endregion
 
+/////////////////////////////////////////////////////////////////////
+// #region (show/hide loading functions)
+
+function showLoading() {
+    $(".c-loading-lay").removeClass("d-none");
+}
+  
+function hideLoading() {
+    $(".c-loading-lay").addClass("d-none");
+}
+
+// #endregion
+
 $(document).ready(function() {
 
 //////////////////////////////////////////////////////////////////////
+// #region (read data from server)
+
+showLoading();
+
+let guid;
+let userSite = !(realSite === false);
+if (userSite) {
+    guid = new URL(document.currentScript.src).searchParams.get("guid");
+}
+
+var serverData;
+getWidgetsList(function (widgetList) {
+    serverData = widgetList;
+
+    if (serverData !== undefined) {
+        serverData.map(widget => {
+            g_properties[widget[2]] = JSON.parse(widget[4]);
+            g_properties[widget[2]].id = widget[0];
+            g_properties[widget[2]].createdDate = formatDate(widget[3]);
+            g_properties[widget[2]].visits = widget[6];
+            g_properties[widget[2]].clicks = widget[7];
+            g_properties[widget[2]].submissions = widget[8];
+            g_properties[widget[2]].state = widget[9];
+            selectChannel(widget[2]);
+        });
+    }
+    
+    // set widgets location
+    setWidgetPosition(g_properties["Whatsapp"].position);
+
+    hideLoading();
+});
+
+// #endregion
+
+/////////////////////////////////////////////////////////////////////
 // #region (draw pages using downloaded data)
 
 if (realSite) {
@@ -236,29 +299,6 @@ if (realSite) {
 
 // draw chat icons
 UpdateChatIcons();
-
-// #endregion
-
-//////////////////////////////////////////////////////////////////////
-// #region (read data from server)
-
-var serverData = getWidgetsList();
-
-if (serverData !== undefined) {
-    serverData.map(widget => {
-        g_properties[widget[2]] = JSON.parse(widget[4]);
-        g_properties[widget[2]].id = widget[0];
-        g_properties[widget[2]].createdDate = formatDate(widget[3]);
-        g_properties[widget[2]].visits = widget[6];
-        g_properties[widget[2]].clicks = widget[7];
-        g_properties[widget[2]].submissions = widget[8];
-        g_properties[widget[2]].state = widget[9];
-        selectChannel(widget[2]);
-    });
-}
-
-// set widgets location
-setWidgetPosition(g_properties["Whatsapp"].position);
 
 // #endregion
 

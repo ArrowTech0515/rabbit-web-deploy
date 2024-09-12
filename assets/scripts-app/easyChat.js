@@ -847,6 +847,24 @@ function selectChannel(widget) {
         $(`#iconColor${widget}`).val(g_properties[widget].color); // bg color
         $(`#iconHoverText${widget}`).val(g_properties[widget].hoverText); // hover text
         $(`#iconHoverTextOnClose${widget}`).attr("title", g_properties[widget].hoverTextOnClose); // hover text on close
+
+        // set for contact us
+        if (widget == "ContactForm") {
+            $("#contactFormTitleBgColor").val(g_properties[widget].titleBGColor);
+            $("#contactFormTitleTxtColor").val(g_properties[widget].titleTxtColor);
+            $("#contactFormCloseIconColor").val(g_properties[widget].closeIconColor);
+            $("#contactFormTitleText").val(g_properties[widget].titleText);
+            $("#contactFormButtonBgColor").val(g_properties[widget].buttonBGColor);
+            $("#contactFormTextColor").val(g_properties[widget].textColor);
+            $("#contactFormCloseAfterSubmission").val(g_properties[widget].closeAfterSubmission);
+            $("#contactFormCloseAfterSec").val(g_properties[widget].closeAfterSec);
+            $("#contactFormRedirect").val(g_properties[widget].redirect);
+            $("#contactFormRedirectUrl").val(g_properties[widget].redirectUrl);
+            $("#contactFormThankyou").val(g_properties[widget].thankyou);
+            $("#contactFormButtonRange").val(g_properties[widget].buttonRange);
+            $("#contactFormFieldSize").val(g_properties[widget].fieldSize);
+            $("#contactFormButtonSize").val(g_properties[widget].buttonSize);
+        }
     }
 
     UpdateChatIcons();
@@ -1037,6 +1055,24 @@ function selectWhatsappType(id) {
         $("#whatsappType0").removeClass("active");
     }
 };
+
+function setContactFormData() {
+    g_properties[item].titleBGColor = $("#contactFormTitleBgColor").val();
+    g_properties[item].titleTxtColor = $("#contactFormTitleTxtColor").val();
+    g_properties[item].closeIconColor = $("#contactFormCloseIconColor").val();
+    g_properties[item].titleText = $("#contactFormTitleText").val();
+    g_properties[item].buttonBGColor = $("#contactFormButtonBgColor").val();
+    g_properties[item].textColor = $("#contactFormTextColor").val();
+    g_properties[item].closeAfterSubmission = $("#contactFormCloseAfterSubmission").val();
+    g_properties[item].closeAfterSec = $("#contactFormCloseAfterSec").val();
+    g_properties[item].redirect = $("#contactFormRedirect").val();
+    g_properties[item].redirectUrl = $("#contactFormRedirectUrl").val();
+    g_properties[item].thankyou = $("#contactFormThankyou").val();
+    g_properties[item].buttonRange = $("#contactFormButtonRange").val();
+    g_properties[item].fieldSize = $("#contactFormFieldSize").val();
+    g_properties[item].buttonSize = $("#contactFormButtonSize").val();
+    UpdateChatIcons();
+}
 
 // #endregion
 

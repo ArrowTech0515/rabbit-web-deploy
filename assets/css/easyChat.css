@@ -109,10 +109,15 @@ label {
     height: 49px;
 }
 
+.form-check-input {
+    cursor: pointer;
+}
+
 .form-select {
     background: #DCE0EA33;
     border: none;
     border-radius: 14px;
+    cursor: pointer;
 }
 
 .select2-selection__rendered {
@@ -1160,6 +1165,41 @@ table.dataTable.no-footer {
 
 #sitePreview { transition: all 0.5s ease; }
 
+.c-loading-lay {
+    transition: all 0.5s ease;
+}
+
+.c-loading-lay-bg {
+    z-index: 100;
+    position: fixed;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-color: #000;
+}
+
+.c-loading-lay .c-progress-bar {
+    z-index: 101;
+    width: 100%;
+    height: 6px;
+    position: fixed;
+    top: 0;
+
+    --c:no-repeat linear-gradient(#6DCEF8 0 0);
+    background: var(--c),var(--c),#3A9DF9;
+    background-size: 60% 100%;
+    animation: l16 3s infinite;
+    opacity: 100%;
+}
+
+@keyframes l16 {
+    0%   {background-position:-150% 0,-150% 0}
+    66%  {background-position: 250% 0,-150% 0}
+    100% {background-position: 250% 0, 250% 0}
+}
+  
 /* responsive */
 @media screen and (max-width: 992px) {
     .c-content-block {
