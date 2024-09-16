@@ -1,6 +1,10 @@
 body {
     font-family: Plus Jakarta Sans, sans-serif, Arial;
+<<<<<<< HEAD
     background: url('/assets/images/signup/bg.svg') center/cover no-repeat;
+=======
+    background: url('/assets/images/signup/bg.svg') center/cover fixed no-repeat;
+>>>>>>> f086223e8760c4b0bafa7197732e62ac37f97cf0
     position: relative;
     overflow-x: hidden;
     height: 100vh;
@@ -922,6 +926,32 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     box-shadow: 0px 20px 30px #828B9D1F;
     padding: 1rem 0.5rem;
 }
+<<<<<<< HEAD
+=======
+
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi::before {
+    content: '';
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi {
+    width: 18px;
+    display: inline-block;
+    margin-right: 4px;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-envelope {
+    background-image: url('/assets/images/signup/icons/submission_small.svg');
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-sliders {
+    background-image: url('/assets/images/signup/icons/edit.svg');
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-pencil {
+    background-image: url('/assets/images/signup/icons/rename.svg');
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-trash {
+    background-image: url('/assets/images/signup/icons/delete.svg');
+}
+>>>>>>> f086223e8760c4b0bafa7197732e62ac37f97cf0
 
 .membership-demo-stats {
     background: #8FD3F429;
