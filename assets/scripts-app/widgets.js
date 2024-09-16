@@ -83,6 +83,7 @@ function getVisitorsSubmissionsList(widgetId, fromDate, toDate, orderBy, isAsc, 
     $.ajax({
         type: 'POST',
         url: getApiUrl('getMyJsonVisitorsSubmissionsWebsite'),
+        data: json,
         async: !!func, // If func is provided, use async mode
         success: function (result) {
             console.log('getVisitorsSubmissionsList ' + JSON.stringify(result));

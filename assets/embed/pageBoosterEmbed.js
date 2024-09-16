@@ -6,11 +6,11 @@ const pageBoosterSearchParams = new URL(document.currentScript.src).searchParams
 // let pageBoosterGuid = '5';
 let totalImages = 0;
 let missingImages = 0;
-let optImages = true;
+let optImages = pageBoosterSearchParams.get("ignoreOptimization") === null || pageBoosterSearchParams.get("ignoreOptimization") === 'false';
 let errorImages = [];
 let pageBoosterUserId = pageBoosterSearchParams.get("id");
 let pageBoosterGuid = pageBoosterSearchParams.get("guid");
-console.log('start pageBooster now pageBoosterUserId ' + pageBoosterUserId + ' pageBoosterGuid ' + pageBoosterGuid);
+console.log('start pageBooster now pageBoosterUserId ' + pageBoosterUserId + ' pageBoosterGuid ' + pageBoosterGuid + ' optImages ' + optImages);
 
 function getMinifiedLocation() {
     return location.href.replace('https://www.', '').replace('https://', '');
@@ -178,8 +178,8 @@ function isMobile() {
 
 function getPageBoosterUrl(apiName) {
     console.log('pageBooster location.toString() ' + location.toString())
-    let host = 'http://localhost:8080/';
-    // let host = location.toString().toLowerCase().indexOf("localhost") !== -1 ? 'http://localhost:8080/' : 'https://www.rabbitseo.com/';
+    // let host = 'http://localhost:8080/';
+    let host = 'https://www.rabbitseo.com/';
     let url = host + apiName;
     console.log('getPageBoosterUrl ' + url)
     return url;

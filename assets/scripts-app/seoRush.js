@@ -1706,9 +1706,9 @@ var WidgetComponentPanel = {
         });
 
         $('#pluginSizeSlider').slider({
-            min: 10,
-            max: 50,
-            value: 10,
+            min: 12,
+            max: 36,
+            value: 16,
             tooltip: 'hide'
         }).on('change', function (event) {
             PreviewWidget.update("pluginSize", event.value.newValue);
@@ -1725,7 +1725,7 @@ var WidgetComponentPanel = {
 
         $('#sideSpacingSlider').slider({
             min: 0,
-            max: 24,
+            max: 16,
             value: 0,
             tooltip: 'hide'
         }).on('change', function (event) {
@@ -3130,16 +3130,13 @@ var PreviewWidget = {
         } else if (target == 'spacing') {
             $(".blog-article-container .for-postTextSpacing").css('lineHeight', value + 'px');
         } else if (target == 'pluginSize') {
-            $('.btnTouch').css('paddingLeft', (value * 2) + 'px');
-            $('.btnTouch').css('paddingRight', (value * 2) + 'px');
-            $('.btnTouch').css('paddingTop', value + 'px');
-            $('.btnTouch').css('paddingBottom', value + 'px');
+            $('.btnTouch').css('fontSize', value + 'px');
 
         } else if (target == 'rounding') {
             $('.btnTouch').css('borderRadius', value + 'px');
 
         } else if (target == 'sideSpacing') {
-            $('.btnTouch>.icon').css('marginRight', value + 'px');
+            $('.btnTouch>.icon').css('padding', value + 'px');
         }
 
         // input text
@@ -3261,7 +3258,7 @@ var PreviewWidget = {
                 $(".btnTouch").css('left', 'auto').css('bottom', 'auto').css('top', '50%').css('right', '40px');
             }
         } else if (target == "touchIcon") {
-            $(".btnTouch>.icon").html("<i class='bi " + value + "'></i>");
+            $(".btnTouch>.icon").html("<i class='bi bi-svg " + value + "'></i>");
         }
 
         // additional
