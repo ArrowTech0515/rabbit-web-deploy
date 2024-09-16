@@ -1,4 +1,51 @@
-var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:function(data){var data=data.split("-"),type="",o=parseInt(data[1]);return this.type=data[0],"Contact_Us"==data[0]?type="contact_forms":"Join_Newsletter"==data[0]?type="join_newsletter":"Lead_Generation"==data[0]&&(type="lead_generation"),[type,o]},u:function(o){return o=o.replace(/^#/,""),{red:parseInt(o.substring(0,2),16),green:parseInt(o.substring(2,4),16),blue:parseInt(o.substring(4,6),16)}},p:function(type,o){if("contact_forms"==type){if(1==o)return`
+var SignupLandEmbeddedObject = {
+    guid: '',
+    isThankYouModal: false,
+    id: 0,
+    type: '',
+    plugin: '',
+
+    iconVSpacing: 0,
+    iconHSpacing: 0,
+
+    /**
+     * SignupUtilities
+     * @param data
+     * @returns {[string, number]}
+     */
+    getPluginType: function (data) {
+        var v = data.split("-");
+        var type = "";
+        var pluginId = parseInt(v[1]);
+
+        this.type = v[0];
+        // TODO - separate plugin type
+        if (v[0] == 'Contact_Us') {
+            type = "contact_forms"
+        } else if (v[0] == 'Join_Newsletter') {
+            type = "join_newsletter"
+        } else if (v[0] == 'Lead_Generation') {
+            type = "lead_generation"
+        }
+
+        return [type, pluginId]
+    },
+    hexToRgb: function (hex) {
+        // Remove the hash at the start if it's there
+        hex = hex.replace(/^#/, '');
+
+        // Parse the hex value into R, G, and B components
+        let r = parseInt(hex.substring(0, 2), 16);
+        let g = parseInt(hex.substring(2, 4), 16);
+        let b = parseInt(hex.substring(4, 6), 16);
+
+        return {red: r, green: g, blue: b};
+    },
+
+    getDefaultPlugin: function (type, widgetID) {
+        if (type == "contact_forms") {
+            if (widgetID == 1) {
+                return `
                     <div class="col-md-12 plugin-widget-container contact_forms form_1" data-plugin="1">
                         <div class="row">
                             <div class="col-xl-3 col-lg-2 col-md-1"></div>
@@ -38,7 +85,9 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                             <div class="col-xl-3 col-lg-2 col-md-1"></div>
                         </div>
                     </div>
-                  `;if(2==o)return`
+                  `;
+            } else if (widgetID == 2) {
+                return `
                     <div class="col-md-12 plugin-widget-container contact_forms form_2" data-plugin="2">
                         <div class="row">
                             <div class="col-xl-3 col-lg-2 col-md-1"></div>
@@ -77,7 +126,9 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                             <div class="col-xl-3 col-lg-2 col-md-1"></div>
                         </div>
                     </div>
-                  `;if(3==o)return`
+                  `;
+            } else if (widgetID == 3) {
+                return `
                             <div class="col-md-12 plugin-widget-container contact_forms form_3" data-plugin="3">
                                 <div class="row">
                                     <div class="col-xl-3 col-lg-2 col-md-1"></div>
@@ -127,7 +178,9 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                     <div class="col-xl-3 col-lg-2 col-md-1"></div>
                                 </div>
                             </div>
-                  `;if(4==o)return`
+                  `;
+            } else if (widgetID == 4) {
+                return `
                             <div class="col-md-12 plugin-widget-container contact_forms form_4" data-plugin="4">
                                 <div class="row">
                                     <div class="col-xl-3 col-lg-2 col-md-1"></div>
@@ -174,7 +227,11 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                     <div class="col-xl-3 col-lg-2 col-md-1"></div>
                                 </div>
                             </div>
-                  `}else if("join_newsletter"==type){if(1==o)return`
+                  `;
+            }
+        } else if (type == 'join_newsletter') {
+            if (widgetID == 1) {
+                return `
                                 <div class="col-md-12 plugin-widget-container join_newsletter form_1" data-plugin="1">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
@@ -208,7 +265,9 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
                                     </div>
                                 </div>
-                  `;if(2==o)return`
+                  `;
+            } else if (widgetID == 2) {
+                return `
                                 <div class="col-md-12 plugin-widget-container join_newsletter form_2" data-plugin="2">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
@@ -241,7 +300,9 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
                                     </div>
                                 </div>
-                  `;if(3==o)return`
+                  `;
+            } else if (widgetID == 3) {
+                return `
                                 <div class="col-md-12 plugin-widget-container join_newsletter form_3" data-plugin="3">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
@@ -280,7 +341,9 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
                                     </div>
                                 </div>
-                  `;if(4==o)return`
+                  `;
+            } else if (widgetID == 4) {
+                return `
                                 <div class="col-md-12 plugin-widget-container join_newsletter form_4" data-plugin="4">
                                     <div class="row">
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
@@ -313,7 +376,11 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                         <div class="col-xl-4 col-lg-3 col-md-2"></div>
                                     </div>
                                 </div>
-                  `}else if("lead_generation"==type&&5==o)return`
+                  `;
+            }
+        } else if (type == 'lead_generation') {
+            if (widgetID == 5) {
+                return `
                                 <div class="col-md-12 plugin-widget-container lead_generation form_5" data-plugin="5">
                                     <div class="row">
                                         <div class="col-xl-3 col-lg-2 col-md-1"></div>
@@ -350,7 +417,16 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                         <div class="col-xl-3 col-lg-2 col-md-1"></div>
                                     </div>
                                 </div>
-                  `;return'<div class="col-md-12 plugin-widget-container">'},m:function(o,color){color=`
+                  `;
+            }
+        }
+
+
+        return `<div class="col-md-12 plugin-widget-container">`
+    },
+
+    addThankYouModal: function (config, color) {
+        var modal = `
                     <div class="modal" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -361,13 +437,410 @@ var SignupLandEmbeddedObject={guid:"",o:!1,id:0,type:"",plugin:"",t:0,l:0,i:func
                                 </div>
                                 <div class="modal-body text-center">
                                     <img src="/assets/images/signup/thanks.png" style="margin: auto;">
-                                    <h5 class="modal-title mb-3" style="display: ${o.title.is?"block":"none"};">${o.title.text}</h5>
-                                    <p class="mb-1" style="display: ${o.text.is?"block":"none"};">${o.text.text}</p>
+                                    <h5 class="modal-title mb-3" style="display: ${config.title.is ? 'block' : 'none'};">${config.title.text}</h5>
+                                    <p class="mb-1" style="display: ${config.text.is ? 'block' : 'none'};">${config.text.text}</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <a href="#" class="btn" style="display: ${o.button.is?"block":"none"}; color: ${color.button};" >${o.button.text}</a>
+                                    <a href="#" class="btn" style="display: ${config.button.is ? 'block' : 'none'}; color: ${color.button};" >${config.button.text}</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-        `;$("body").append(color)},update:function(o,value){"backgroundColor"==o?$(".plugin-widget-container .for-backgroundColor").css("backgroundColor",value):"titleTextColor"==o?$(".plugin-widget-container .for-titleTextColor").css("color",value):"bodyTextColor"==o?$(".plugin-widget-container .for-bodyTextColor").css("color",value):"fieldTextColor"==o?($(".plugin-widget-container .for-fieldTextColor").css("color",value),$(".plugin-widget-container .for-fieldTextColor").css("--placeholderColor",value)):"accentColor"==o?($(".plugin-widget-container .for-accentBackgroundColor").css("backgroundColor",value),$(".plugin-widget-container .for-accentTextColor").css("color",value),$(".plugin-widget-container .for-accentBorderColor").css("borderColor",value)):"titleFont"==o?$(".plugin-widget-container .for-titleFont").css("fontFamily",value):"secondaryFont"==o?$(".plugin-widget-container .for-secondaryFont").css("fontFamily",value):"fieldFont"==o?$(".plugin-widget-container .for-fieldFont").css("fontFamily",value):"iconBackgroundColor"==o?$(".btnTouch").css("backgroundColor",value):"iconForeColor"==o?$(".btnTouch>.icon").css("color",value):"textColor"==o?$(".btnTouch>.text").css("color",value):"touchText"==o?$(".btnTouch>.text").html(value):"touchFont"==o?$(".btnTouch>.text").css("fontFamily",value):"touchIcon"==o?$(".btnTouch>.icon").html("<i class='bi "+value+"'></i>"):"touchType"!=o&&("touchPosition"==o?"left-top"==value?$(".btnTouch").css("right","auto").css("bottom","auto").css("top",this.t+"px").css("left",this.l+"px"):"right-top"==value?$(".btnTouch").css("left","auto").css("bottom","auto").css("top",this.t+"px").css("right",this.l+"px"):"left-bottom"==value?$(".btnTouch").css("top","auto").css("right","auto").css("left","24px").css("bottom",this.t+"px"):"right-bottom"==value?$(".btnTouch").css("top","auto").css("left","auto").css("right","40px").css("bottom",this.t+"px"):"left-middle"==value?$(".btnTouch").css("right","auto").css("bottom","auto").css("top","50%").css("left",this.l+"px"):"right-middle"==value&&$(".btnTouch").css("left","auto").css("bottom","auto").css("top","50%").css("right",this.l+"px"):"touchShow"==o?value?$(".btnTouch").show():$(".btnTouch").hide():"touchTextIs"==o?value?$(".btnTouch span.text").show():$(".btnTouch span.text").hide():"pluginSize"==o?$(".btnTouch").css("fontSize",value+"px"):"bottomSpacing"!=o&&"sideSpacing"!=o&&("rounding"==o?$(".btnTouch").css("borderRadius",value+"px"):"roundingX"==o?$(".btnTouch").css("borderRadius",value+"%"):"sizeWidth"==o?($(".plugin-widget-container .form-group>input").css("width",value+"%"),$(".plugin-widget-container .form-group>textarea").css("width",value+"%"),$(".plugin-widget-container .actions-area button").css("width",value+"%")):"sizeHeight"==o?($(".plugin-widget-container .form-group>input").css("height",value+"px"),$(".plugin-widget-container .form-group>textarea").css("height",2*value+"px"),$(".plugin-widget-container .actions-area button").css("height",value+"px")):"shadow"==o&&(o=this.u(value.color),$(".plugin-widget-container .form-group>input").css("boxShadow",value.size+"px "+value.size+"px "+2*parseInt(value.size)+"px rgba("+o.red+", "+o.green+", "+o.blue+", "+parseInt(value.opacity)/100+")"),$(".plugin-widget-container .form-group>textarea").css("boxShadow",value.size+"px "+value.size+"px "+2*parseInt(value.size)+"px rgba("+o.red+", "+o.green+", "+o.blue+", "+parseInt(value.opacity)/100+")"))))},g:function(data){var description,l=this,t={title:"#000",text:"#000",button:"#000"},i={size:0,opacity:0,color:"#000000"},e="";$(".plugin-widget-container .form-group-list").html(""),$.each(data.fields,function(index,o){e+='<div class="form-group">';var type=o.type,name=o.name,required=(""==name&&(name="Field "+parseInt(99999*Math.random())),o.required);o.hidden?e+='<input class="form-control for-fieldTextColor for-fieldFont" type="hidden" name="'+name+'" placeholder="'+name+'">':"short-text"==type?e+='<input class="form-control for-fieldTextColor for-fieldFont" '+(required?"required":"")+' type="text" name="'+name+'" placeholder="'+name+'">':"long-text"==type&&(e+='<textarea class="form-control for-fieldTextColor for-fieldFont" '+(required?"required":"")+' name="'+name+'" placeholder="'+name+'"></textarea>'),e+="</div>"}),$(".plugin-widget-container .form-group-list").html(e),null!=data.description&&""!=data.description&&(description=(description=(description=data.description.replace(/\n/g,"<br>")).replace(/(<br>\s*){2,}/g,"<br>")).replace(/(<br\s*\/?>\s*){2,}/g,"<br />"),$(".plugin-widget-container.active .editable.description").html(description)),$.each(data.colors,function(index,o){"shadowColor"==o.name&&(i.color=o.value),"thanksTitleColor"==o.name?t.title=o.value:"thanksTextColor"==o.name?t.text=o.value:"thanksButtonColor"==o.name&&(t.button=o.value),l.update(o.name,o.value)}),$.each(data.fonts,function(index,o){l.update(o.name,o.value)}),null!=data.advanced.plugin&&l.update("pluginSize",data.advanced.plugin),null!=data.advanced.bottomSpacing&&(l.t=data.advanced.bottomSpacing),null!=data.advanced.sideSpacing&&(l.l=data.advanced.sideSpacing),null!=data.plugin&&null!=data.position?(l.update("touchPosition",data.position),null!=data.advanced.rounding&&l.update("rect"==data.plugin?"rounding":"roundingX",data.advanced.rounding)):(l.update("touchPosition","right-bottom"),null!=data.advanced.rounding&&l.update("rounding",data.advanced.rounding)),null!=data.touch.is?l.update("touchTextIs",data.touch.is):l.update("touchTextIs",!1),null!=data.touch.icon&&l.update("touchIcon",data.touch.icon),null!=data.touch.text&&l.update("touchText",data.touch.text),null!=data.touch.open&&"button"==data.touch.open?l.update("touchShow",!0):l.update("touchShow",!1),null!=data.advanced.shadowSize?i.size=data.advanced.shadowSize:i.size=0,null!=data.advanced.shadowOpacity?i.opacity=data.advanced.shadowOpacity:i.opacity=0,l.update("shadow",i),null!=data.thanks&&!0===data.thanks.is&&(l.m(data.thanks,t),l.o=!0,$("body").on("click","#thankYouModal .close",function(o){o.preventDefault(),$("#thankYouModal").fadeOut(),$("#preview_widget").removeClass("overlay"),closeThankYouInSignupForm()}),$("body").on("click","#thankYouModal .btn",function(o){o.preventDefault(),$("#thankYouModal").fadeOut(),$("#preview_widget").removeClass("overlay"),doThankYouInSignupForm()})),$(".plugin-widget-container .close-button").on("click",function(o){o.preventDefault(),$(".plugin-widget-container").fadeOut(),$("#preview_widget").removeClass("overlay"),closeSignupForm()}),$(".plugin-widget-container .btn-submit").on("click",function(o){o.preventDefault();var t=!0;$(".plugin-widget-container .form-group-list .form-control").each(function(index,o){t&&$(o).attr("required")&&""==$(o).val()&&(alert('Please input "'+$(this).attr("name")+'"'),t=!1)}),t&&"Join_Newsletter"==l.type&&$(".plugin-widget-container .form-control").each(function(index,o){t&&""==$(o).val()&&(alert('Please input "'+$(this).attr("name")+'"'),t=!1)}),t&&confirm("Are you sure?")&&submitSignupForm($(this).closest("form").serializeArray())}),"button"==data.touch.open?$(".btnTouch").on("click",function(o){o.preventDefault(),$(".plugin-widget-container").fadeIn(),$("#preview_widget").addClass("overlay")}):setTimeout(function(){$(".plugin-widget-container").fadeIn(),$("#preview_widget").addClass("overlay")},1e3*data.touch.duration)},init:function(data,o){var t=this,l=this.i(data[2]),plugin=this.p(l[0],l[1]),l=(t.id=data[0],t.o=!1,t.plugin=l[1],data[4].replace(/\n/g,"<br>")),data=(l=(l=l.replace(/(<br>\s*){2,}/g,"<br>")).replace(/(<br\s*\/?>\s*){2,}/g,"<br />"),JSON.parse(l));console.log("Config------",data),$("#preview_widget").html(""),"button"==data.touch.open&&(l=$(`<button class="btnTouch"><span class="icon"><i class="bi ${data.touch.icon}"></i></span> <span class="text">${data.touch.text}</span></button>`),$("#preview_widget").append(l)),$("#preview_widget").append(plugin),o||$("#preview_widget .logo-area").remove(),t.g(data)}};function submitSignupForm(data){visitorSubmit(SignupLandEmbeddedObject.guid,SignupLandEmbeddedObject.id,data);var o="",t="";"Contact_Us"==SignupLandEmbeddedObject.type?(o="Contact US",t='<h2 style="color: #fff;">You&apos;ve got a new submission.</h2>'):"Join_Newsletter"==SignupLandEmbeddedObject.type&&(o="Join our Newsletter!",t='<h2 style="color: #fff;">You&apos;ve got a new subscription.</h2>'),$.each(data,function(index,o){t=(t+=`<p style="font-size: 12px; color: #ff6e90;">${o.name}</p>`)+`<p style="font-size: 12px; color: #fff;">${o.value}</p>`+"<hr>"}),console.log("Form",data),sendEmail(SignupLandEmbeddedObject.guid,o,t,SignupLandEmbeddedObject.id),$(".plugin-widget-container").fadeOut(),SignupLandEmbeddedObject.o?$("#thankYouModal").fadeIn():(alert("Form Submitted!"),$("#preview_widget").removeClass("overlay"))}function closeSignupForm(){console.log("Form closed")}function doThankYouInSignupForm(){console.log("Thank You Modal Action!")}function closeThankYouInSignupForm(){console.log("Thank you closed")}realSite&&(SignupLandEmbeddedObject.guid=getAppGuid(),loadCss(),loadCss("assets/css/bootstrap.min.css",SignupLandEmbeddedObject.guid),loadCss("assets/css/bootstrap-icons.min.css",SignupLandEmbeddedObject.guid),loadCss("assets/css/signUp.css",SignupLandEmbeddedObject.guid),$("body").prepend('<div id="preview_widget"></div>'),null!=widgets[SignupLandEmbeddedObject.guid])&&0<widgets[SignupLandEmbeddedObject.guid].length&&SignupLandEmbeddedObject.init(widgets[SignupLandEmbeddedObject.guid][0],addPoweredBy[SignupLandEmbeddedObject.guid]);
+        `;
+
+        $('body').append(modal)
+    },
+
+    update: function (target, value) {
+        // Color
+        if (target == 'backgroundColor') {
+            $(".plugin-widget-container .for-backgroundColor").css('backgroundColor', value);
+        } else if (target == 'titleTextColor') {
+            $(".plugin-widget-container .for-titleTextColor").css('color', value);
+        } else if (target == 'bodyTextColor') {
+            $(".plugin-widget-container .for-bodyTextColor").css('color', value);
+        } else if (target == 'fieldTextColor') {
+            $(".plugin-widget-container .for-fieldTextColor").css('color', value);
+            $(".plugin-widget-container .for-fieldTextColor").css('--placeholderColor', value);
+        } else if (target == "accentColor") {
+            $(".plugin-widget-container .for-accentBackgroundColor").css('backgroundColor', value);
+            $(".plugin-widget-container .for-accentTextColor").css('color', value);
+            $(".plugin-widget-container .for-accentBorderColor").css('borderColor', value);
+        }
+
+        // Font
+        else if (target == "titleFont") {
+            $(".plugin-widget-container .for-titleFont").css('fontFamily', value);
+        } else if (target == "secondaryFont") {
+            $(".plugin-widget-container .for-secondaryFont").css('fontFamily', value);
+        } else if (target == "fieldFont") {
+            $(".plugin-widget-container .for-fieldFont").css('fontFamily', value);
+        }
+
+        // Touch
+        else if (target == 'iconBackgroundColor') {
+            $(".btnTouch").css('backgroundColor', value);
+
+        } else if (target == 'iconForeColor') {
+            $(".btnTouch>.icon").css('color', value);
+        } else if (target == "textColor") {
+            $(".btnTouch>.text").css('color', value);
+        } else if (target == "touchText") {
+            $(".btnTouch>.text").html(value);
+        } else if (target == "touchFont") {
+            $(".btnTouch>.text").css('fontFamily', value);
+        } else if (target == "touchIcon") {
+            $(".btnTouch>.icon").html("<i class='bi " + value + "'></i>");
+        } else if (target == "touchType") {
+            // if (value=='rect') {
+            //     $(".btnTouch").css('borderRadius', '32px');
+            // } else if (value=='circle') {
+            //     $(".btnTouch").css('borderRadius', '50%');
+            // }
+        } else if (target == "touchPosition") {
+            if (value == "left-top") {
+                $(".btnTouch").css('right', 'auto').css('bottom', 'auto').css('top', this.iconVSpacing + 'px').css('left', this.iconHSpacing + 'px');
+            } else if (value == "right-top") {
+                $(".btnTouch").css('left', 'auto').css('bottom', 'auto').css('top', this.iconVSpacing + 'px').css('right', this.iconHSpacing + 'px');
+            } else if (value == "left-bottom") {
+                $(".btnTouch").css('top', 'auto').css('right', 'auto').css('left', '24px').css('bottom', this.iconVSpacing + 'px');
+            } else if (value == 'right-bottom') {
+                $(".btnTouch").css('top', 'auto').css('left', 'auto').css('right', '40px').css('bottom', this.iconVSpacing + 'px');
+            } else if (value == "left-middle") {
+                $(".btnTouch").css('right', 'auto').css('bottom', 'auto').css('top', '50%').css('left', this.iconHSpacing + 'px');
+            } else if (value == "right-middle") {
+                $(".btnTouch").css('left', 'auto').css('bottom', 'auto').css('top', '50%').css('right', this.iconHSpacing + 'px');
+            }
+        } else if (target == 'touchShow') {
+            if (value) {
+                $(".btnTouch").show();
+            } else {
+                $(".btnTouch").hide();
+            }
+        } else if (target == 'touchTextIs') {
+            if (value)
+                $(".btnTouch span.text").show();
+            else
+                $(".btnTouch span.text").hide();
+        } else if (target == "pluginSize") {
+            $(".btnTouch").css('fontSize', value + 'px');
+        } else if (target == "bottomSpacing") {
+        } else if (target == "sideSpacing") {
+        } else if (target == "rounding") {
+            $('.btnTouch').css('borderRadius', value + 'px');
+        } else if (target == "roundingX") {
+            $('.btnTouch').css('borderRadius', value + '%');
+        } else if (target == 'sizeWidth') {
+            $('.plugin-widget-container .form-group>input').css('width', value + '%');
+            $('.plugin-widget-container .form-group>textarea').css('width', (value) + '%');
+            $('.plugin-widget-container .actions-area button').css('width', value + '%');
+        } else if (target == 'sizeHeight') {
+            $('.plugin-widget-container .form-group>input').css('height', value + 'px');
+            $('.plugin-widget-container .form-group>textarea').css('height', (value * 2) + 'px');
+            $('.plugin-widget-container .actions-area button').css('height', value + 'px');
+        } else if (target == 'shadow') {
+            var color = this.hexToRgb(value.color);
+            // $('.plugin-widget-container .form-group>input').css('boxShadow', value.size + "px " + value.size + "px " + (parseInt(value.size)*2) + "px rgba(" + color.red + ", " + color.green + ", " + color.blue + ", " + (parseInt(value.opacity) / 100) + ")");
+            // $('.plugin-widget-container .form-group>textarea').css('boxShadow', value.size + "px " + value.size + "px " + (parseInt(value.size)*2) + "px rgba(" + color.red + ", " + color.green + ", " + color.blue + ", " + (parseInt(value.opacity) / 100) + ")");
+            $('.plugin-widget-container .form-wrapper').css('boxShadow', value.size + "px " + value.size + "px " + (parseInt(value.size) * 2) + "px rgba(" + color.red + ", " + color.green + ", " + color.blue + ", " + (parseInt(value.opacity) / 100) + ")");
+        }
+
+    },
+
+    updateAll: function (data) {
+        var me = this;
+        var thanksColor = {
+            title: '#000',
+            text: '#000',
+            button: '#000',
+        }
+        var shadow = {
+            size: 0,
+            opacity: 0,
+            color: '#000000',
+        };
+
+        var html = "";
+        $(".plugin-widget-container .form-group-list").html("");
+        $.each(data.fields, function (index, row) {
+            html += '<div class="form-group">';
+
+            var type = row.type;
+            var name = row.name;
+            if (name == "") {
+                name = "Field " + parseInt(Math.random() * 99999);
+            }
+
+            var required = row.required;
+            var hidden = row.hidden;
+
+            if (hidden) {
+                html += '<input class="form-control for-fieldTextColor for-fieldFont" type="hidden" name="' + name + '" placeholder="' + name + '">';
+            } else {
+                if (type == 'short-text') {
+                    html += '<input class="form-control for-fieldTextColor for-fieldFont" ' + (required ? 'required' : '') + ' type="text" name="' + name + '" placeholder="' + name + '">';
+                } else if (type == 'long-text') {
+                    html += '<textarea class="form-control for-fieldTextColor for-fieldFont" ' + (required ? 'required' : '') + ' name="' + name + '" placeholder="' + name + '"></textarea>';
+                }
+            }
+
+            html += '</div>';
+        });
+        $(".plugin-widget-container .form-group-list").html(html);
+
+        if (data.description != null && data.description != "") {
+            var description = data.description.replace(/\n/g, '<br>');
+            description = description.replace(/(<br>\s*){2,}/g, '<br>');
+            description = description.replace(/(<br\s*\/?>\s*){2,}/g, '<br />');
+            $(".plugin-widget-container.active .editable.description").html(description);
+        }
+
+
+        $.each(data.colors, function (index, row) {
+            if (row.name == 'shadowColor') {
+                shadow.color = row.value;
+            }
+
+            if (row.name == "thanksTitleColor") {
+                thanksColor.title = row.value;
+            } else if (row.name == "thanksTextColor") {
+                thanksColor.text = row.value;
+            } else if (row.name == "thanksButtonColor") {
+                thanksColor.button = row.value;
+            }
+
+            me.update(row.name, row.value);
+        });
+
+        $.each(data.fonts, function (index, row) {
+            me.update(row.name, row.value);
+        });
+
+        // icon advanced
+        if (data.advanced.plugin != null) {
+            me.update("pluginSize", data.advanced.plugin);
+        }
+        if (data.advanced.bottomSpacing != null) {
+            me.iconVSpacing = data.advanced.bottomSpacing;
+        }
+        if (data.advanced.sideSpacing != null) {
+            me.iconHSpacing = data.advanced.sideSpacing;
+        }
+
+        if (data.plugin != null && data.position != null) {
+            // me.update("touchType", data.plugin);
+            me.update("touchPosition", data.position);
+
+            if (data.advanced.rounding != null) {
+                me.update(data.plugin == 'rect' ? "rounding" : "roundingX", data.advanced.rounding);
+            }
+
+        } else {
+            // me.update("touchType", "rect");
+            me.update("touchPosition", 'right-bottom');
+
+            if (data.advanced.rounding != null) {
+                me.update("rounding", data.advanced.rounding);
+            }
+        }
+
+        if (data.touch.is != null) {
+            me.update("touchTextIs", data.touch.is);
+        } else {
+            me.update("touchTextIs", false);
+        }
+        if (data.touch.icon != null) {
+            me.update("touchIcon", data.touch.icon);
+        }
+        if (data.touch.text != null) {
+            me.update("touchText", data.touch.text);
+        }
+
+        if (data.touch.open != null && data.touch.open == 'button') {
+            me.update("touchShow", true);
+        } else {
+            me.update("touchShow", false);
+        }
+
+        if (data.advanced.shadowSize != null) {
+            shadow.size = data.advanced.shadowSize;
+        } else {
+            shadow.size = 0;
+        }
+
+        if (data.advanced.shadowOpacity != null) {
+            shadow.opacity = data.advanced.shadowOpacity;
+        } else {
+            shadow.opacity = 0;
+        }
+
+        me.update("shadow", shadow);
+
+
+        // TODO - thank you
+        if (data.thanks != null && data.thanks.is === true) {
+            me.addThankYouModal(data.thanks, thanksColor);
+            me.isThankYouModal = true;
+
+            $("body").on('click', '#thankYouModal .close', function (e) {
+                e.preventDefault();
+                $("#thankYouModal").fadeOut();
+                $("#preview_widget").removeClass('overlay');
+                closeThankYouInSignupForm();
+            });
+
+            $("body").on('click', '#thankYouModal .btn', function (e) {
+                e.preventDefault();
+                $("#thankYouModal").fadeOut();
+                $("#preview_widget").removeClass('overlay');
+                doThankYouInSignupForm();
+            });
+        }
+
+        // event
+        $(".plugin-widget-container .close-button").on('click', function (e) {
+            e.preventDefault();
+            $(".plugin-widget-container").fadeOut();
+            $("#preview_widget").removeClass('overlay');
+            closeSignupForm();
+        });
+
+        // submit
+        $(".plugin-widget-container .btn-submit").on('click', function (e) {
+            e.preventDefault();
+            // TODO - validate
+            var isValidated = true;
+            $(".plugin-widget-container .form-group-list .form-control").each(function (index, row) {
+                if (isValidated && $(row).attr('required')) {
+                    if ($(row).val() == '') {
+                        alert("Please input \"" + $(this).attr('name') + "\"");
+                        isValidated = false;
+                    }
+                }
+            });
+
+            // TODO - other type form validation such as "Join Newsletter"
+            if (isValidated) {
+                if (me.type == "Join_Newsletter") {
+                    $(".plugin-widget-container .form-control").each(function (index, row) {
+                        if (isValidated) {
+                            if ($(row).val() == '') {
+                                alert("Please input \"" + $(this).attr('name') + "\"");
+                                isValidated = false;
+                            }
+                        }
+                    });
+                }
+            }
+
+            if (isValidated) {
+                if (confirm("Are you sure?")) {
+                    submitSignupForm($(this).closest('form').serializeArray());
+                }
+            }
+        });
+
+        if (data.touch.open == 'button') {
+            $(".btnTouch").on('click', function (e) {
+                e.preventDefault();
+                $(".plugin-widget-container").fadeIn();
+
+                $("#preview_widget").addClass('overlay');
+            });
+        } else {
+            setTimeout(function () {
+                $(".plugin-widget-container").fadeIn();
+                $("#preview_widget").addClass('overlay');
+            }, data.touch.duration * 1000);
+        }
+    },
+
+    init: function (data, addPowerBy) {
+        var me = this;
+        var v = this.getPluginType(data[2])
+        var plugin = this.getDefaultPlugin(v[0], v[1]);
+
+        me.id = data[0];
+        me.isThankYouModal = false;
+        me.plugin = v[1];
+
+        var description = data[4].replace(/\n/g, '<br>');
+        description = description.replace(/(<br>\s*){2,}/g, '<br>');
+        description = description.replace(/(<br\s*\/?>\s*){2,}/g, '<br />');
+        var configs = JSON.parse(description);
+
+        console.log("Config------", configs);
+
+        $("#preview_widget").html("");
+        if (configs.touch.open == 'button') {
+            var button = $(`<button class="btnTouch"><span class="icon"><i class="bi ${configs.touch.icon}"></i></span> <span class="text">${configs.touch.text}</span></button>`);
+            $("#preview_widget").append(button);
+        }
+
+        $("#preview_widget").append(plugin)
+        if (!addPowerBy) {
+            $("#preview_widget .logo-area").remove();
+        }
+
+        me.updateAll(configs);
+    },
+};
+
+function submitSignupForm(data) {
+    visitorSubmit(SignupLandEmbeddedObject.guid, SignupLandEmbeddedObject.id, data);
+
+    var subject = "";
+    var message = "";
+    if (SignupLandEmbeddedObject.type == "Contact_Us") {
+        subject = "Contact US";
+        message = '<h2 style="color: #fff;">You&apos;ve got a new submission.</h2>';
+
+    } else if (SignupLandEmbeddedObject.type == "Join_Newsletter") {
+        subject = "Join our Newsletter!";
+        message = '<h2 style="color: #fff;">You&apos;ve got a new subscription.</h2>';
+    }
+
+    $.each(data, function (index, row) {
+        message += `<p style="font-size: 12px; color: #ff6e90;">${row.name}</p>`;
+        message += `<p style="font-size: 12px; color: #fff;">${row.value}</p>`;
+        message += '<hr>';
+    });
+
+    console.log("Form", data);
+
+    sendEmail(SignupLandEmbeddedObject.guid, subject, message, SignupLandEmbeddedObject.id);
+    $(".plugin-widget-container").fadeOut();
+
+    if (SignupLandEmbeddedObject.isThankYouModal) {
+        $("#thankYouModal").fadeIn();
+    } else {
+        alert("Form Submitted!");
+        $("#preview_widget").removeClass('overlay');
+    }
+}
+
+function closeSignupForm() {
+    console.log("Form closed");
+}
+
+function doThankYouInSignupForm() {
+    console.log("Thank You Modal Action!");
+}
+
+function closeThankYouInSignupForm() {
+    console.log("Thank you closed");
+}
+
+if (realSite) {
+    SignupLandEmbeddedObject.guid = getAppGuid();
+
+    loadCss()
+    loadCss('assets/css/bootstrap.min.css', SignupLandEmbeddedObject.guid);
+    loadCss('assets/css/bootstrap-icons.min.css', SignupLandEmbeddedObject.guid);
+    loadCss('assets/css/signUp.css', SignupLandEmbeddedObject.guid);
+
+    $('body').prepend('<div id="preview_widget"></div>');
+    if (widgets[SignupLandEmbeddedObject.guid] != null && widgets[SignupLandEmbeddedObject.guid].length > 0)
+        SignupLandEmbeddedObject.init(widgets[SignupLandEmbeddedObject.guid][0], addPoweredBy[SignupLandEmbeddedObject.guid])
+}
+

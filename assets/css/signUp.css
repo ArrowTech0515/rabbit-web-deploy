@@ -1,6 +1,6 @@
 body {
     font-family: Plus Jakarta Sans, sans-serif, Arial;
-    background: url('/assets/images/signup/bg.svg') center/cover no-repeat;
+    background: url('/assets/images/signup/bg.svg') center/cover fixed no-repeat;
     position: relative;
     overflow-x: hidden;
     height: 100vh;
