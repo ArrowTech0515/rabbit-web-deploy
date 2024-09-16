@@ -550,7 +550,6 @@ body {
 
 /* main content */
 .c-content {
-    overflow: auto;
     padding: 60px 60px 40px 60px;
     outline: none;
 }

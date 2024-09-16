@@ -204,15 +204,88 @@ function showRealPopupFormModal() {
     let data = $(this).closest('form').serializeArray();
     visitorSubmit(guid, widgetValue['widgetId'], data);
 
-    var message = '<h2 style="font-family: Poppins; font-size: 30px; font-weight: 800; line-height: 30px; text-align: center;">New submission received</h2>';
-    $.each(data, function(index, row) {
-        message += `
-        <div style="margin-bottom: 20px; padding: 10px; border-radius: 10px; border: 1px solid #e5e5e5;">
-            <p style="font-size: 14px; font-weight: bold; color: #ffcc66; margin: 0;">${row.name.charAt(0).toUpperCase() + row.name.slice(1)}:</p>
-            <p style="font-size: 16px; color: #333; margin-top: 5px;">${row.value}</p>
-        </div>
-        `;
-    });
+    var message = `
+            <table cellspacing="0" cellpadding="0" style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; border: none; background-image: radial-gradient(circle, #ccc 1px, rgba(255, 255, 255, 0) 1px); background-size: 20px 20px;">
+              <tbody style="background-color: transparent;">
+                <tr>
+                  <td style="padding: 30px; text-align: center;">
+                    <img src="https://dlnil54eooeso.cloudfront.net/user-files/359154-logo.pngGetLeads.png" alt="GetLeads Logo" width="21" height="20" style="display: inline-block; vertical-align: middle;">
+                    <span style="font-family: Chopin-Trial, sans-serif; font-size: 17px; font-weight: 700; color: #3B3B3B; display: inline-block; vertical-align: middle; padding-left: 7px;">
+                      GetLeads
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">
+                    <div style="font-family: Poppins, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; color: black;">
+                      Hello <span style="font-weight: 700;">Username!</span>
+                    </div>
+                    <div style="font-family: Poppins, sans-serif; font-size: 30px; font-weight: 800; color: #E7B902; padding: 10px 0;">
+                      <div style="margin-bottom: -10px;">New submission</div>
+                      <span>received</span>
+                    </div>
+                  </td> 
+                </tr>
+                <tr>
+                  <td>
+                    <div style="padding: 24px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); text-align: center;">
+                      <div style="font-family: Poppins, sans-serif; font-size: 12px; font-weight: 700; color: black;">
+                        Form Name
+                      </div>
+                      <div style="position: relative; margin-bottom: 10px;">
+                        <input type="text" style="width: 100%; padding: 0.6rem; height: auto; border-radius: 0.75rem; border: 1px solid #e3e3e3; box-shadow: none; font-size: 10px; font-weight: 400; line-height: 15px;" id="faq_buttonText" name="faq_buttonText" placeholder="Enter Title" value="Any questions?">
+                        <label style="position: absolute; top: -0.5rem; left: 0.5rem; padding: 0.2rem; color: #000; pointer-events: none; transition: all 0.2s; background-color: white; font-size: 8px; font-weight: 300; line-height: 12px;" for="faq_buttonText">Text</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+    `;
+    // var message = `
+    //    <table style="max-width: 600px; width: 100%; margin: 0 auto; text-align: left; border: none;" border="0" cellspacing="0" cellpadding="0">
+    //       <tbody>
+    //          <tr>
+    //             <td  style="background: #333333; padding:16px;  "><img src="https://dlnil54eooeso.cloudfront.net/assets/newsletter/images/emailtemplate/rabbitseo/logo.png" alt="" title=""/></td> 
+    //             <td  style="background: #333333; padding:16px; text-align: right;  ">
+    //             </td> 
+    //          </tr>
+    //           <br />
+    //          <tr>
+    //             <td colspan="5"> 
+    //             </td>
+    //          </tr>
+    //          <br />
+           
+    //          <tr>
+    //             <td colspan="5"  style=" padding:0px 35px 16px 33px;">
+    //                <div style="padding: 24px; background: #333333;border-radius: 8px;">
+    //                   <p style="margin: 0; font-size: 14px; color: #FFFFFF">Dear ,</p>
+    //                   <br />
+    //                   <p style="margin: 0; margin-bottom: 15px; font-size: 14px; color: #FFFFFF"></p>
+    //                   <p style="margin: 0; font-size: 14px; color: #FFFFFF">Thanks</p>
+    //                   <p style="margin: 0; font-size: 14px; color: #FFFFFF">Rabbit SEO Team.</p>
+    //                </div> 
+    //             </td>
+    //          </tr>
+        
+           
+    //          <tr>
+    //             <td colspan="5"  style="background: #333333; padding:15px; text-align: center;">
+    //                <p style="margin: 0; font-size: 14px; margin-bottom:5px; color: #ffffff">This email is being sent to you because you are a member of Rabbit SEO</p>
+    //             </td>
+    //          </tr> 
+    //       </tbody>
+    //    </table>
+    // `;
+    // $.each(data, function(index, row) {
+    //     message += `
+    //     <div style="margin-bottom: 20px; padding: 10px; border-radius: 10px; border: 1px solid #e5e5e5;">
+    //         <p style="font-size: 14px; font-weight: bold; color: #ffcc66; margin: 0;">${row.name.charAt(0).toUpperCase() + row.name.slice(1)}:</p>
+    //         <p style="font-size: 16px; color: #333; margin-top: 5px;">${row.value}</p>
+    //     </div>
+    //     `;
+    // });
 
     sendEmail(guid, 'GetLeads Popup', message, widgetValue['widgetId']);
     $('#puf_modalInputList').empty().append(`<p>${puf_successMessage}</p>`);

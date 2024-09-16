@@ -855,13 +855,14 @@ function selectChannel(widget) {
             $("#contactFormCloseIconColor").val(g_properties[widget].closeIconColor);
             $("#contactFormTitleText").val(g_properties[widget].titleText);
             $("#contactFormButtonBgColor").val(g_properties[widget].buttonBGColor);
-            $("#contactFormTextColor").val(g_properties[widget].textColor);
+            $("#contactFormButtonTxtColor").val(g_properties[widget].textColor);
+            $("#contactFormButtonText").val(g_properties[widget].buttonText);
             $("#contactFormCloseAfterSubmission").val(g_properties[widget].closeAfterSubmission);
             $("#contactFormCloseAfterSec").val(g_properties[widget].closeAfterSec);
             $("#contactFormRedirect").val(g_properties[widget].redirect);
             $("#contactFormRedirectUrl").val(g_properties[widget].redirectUrl);
             $("#contactFormThankyou").val(g_properties[widget].thankyou);
-            $("#contactFormButtonRange").val(g_properties[widget].buttonRange);
+            $("#contactFormTitleTxtSize").val(g_properties[widget].titleTxtSize);
             $("#contactFormFieldSize").val(g_properties[widget].fieldSize);
             $("#contactFormButtonSize").val(g_properties[widget].buttonSize);
         }
@@ -971,6 +972,8 @@ function changeChatMobile(obj) {
 
 function channelsSave(publish_type) { // publish_type: 0(draft), 1(publish)
     
+    showLoading();
+
     // Check all inputs
     for (let item of g_channels) {
         if (g_properties[item].contact === undefined || g_properties[item].contact === "") {
@@ -1002,6 +1005,8 @@ function channelsSave(publish_type) { // publish_type: 0(draft), 1(publish)
             deleteWidget(g_properties[key].id);
         }
     }
+
+    hideLoading();
 
     $('#saveChannelModal').modal('show');
 }
@@ -1057,20 +1062,21 @@ function selectWhatsappType(id) {
 };
 
 function setContactFormData() {
-    g_properties[item].titleBGColor = $("#contactFormTitleBgColor").val();
-    g_properties[item].titleTxtColor = $("#contactFormTitleTxtColor").val();
-    g_properties[item].closeIconColor = $("#contactFormCloseIconColor").val();
-    g_properties[item].titleText = $("#contactFormTitleText").val();
-    g_properties[item].buttonBGColor = $("#contactFormButtonBgColor").val();
-    g_properties[item].textColor = $("#contactFormTextColor").val();
-    g_properties[item].closeAfterSubmission = $("#contactFormCloseAfterSubmission").val();
-    g_properties[item].closeAfterSec = $("#contactFormCloseAfterSec").val();
-    g_properties[item].redirect = $("#contactFormRedirect").val();
-    g_properties[item].redirectUrl = $("#contactFormRedirectUrl").val();
-    g_properties[item].thankyou = $("#contactFormThankyou").val();
-    g_properties[item].buttonRange = $("#contactFormButtonRange").val();
-    g_properties[item].fieldSize = $("#contactFormFieldSize").val();
-    g_properties[item].buttonSize = $("#contactFormButtonSize").val();
+    g_properties['ContactForm'].titleBGColor = $("#contactFormTitleBgColor").val();
+    g_properties['ContactForm'].titleTxtColor = $("#contactFormTitleTxtColor").val();
+    g_properties['ContactForm'].closeIconColor = $("#contactFormCloseIconColor").val();
+    g_properties['ContactForm'].titleText = $("#contactFormTitleText").val();
+    g_properties['ContactForm'].buttonBGColor = $("#contactFormButtonBgColor").val();
+    g_properties['ContactForm'].buttonTxtColor = $("#contactFormButtonTxtColor").val();
+    g_properties['ContactForm'].buttonText = $("#contactFormButtonText").val();
+    g_properties['ContactForm'].closeAfterSubmission = $("#contactFormCloseAfterSubmission").val();
+    g_properties['ContactForm'].closeAfterSec = $("#contactFormCloseAfterSec").val();
+    g_properties['ContactForm'].redirect = $("#contactFormRedirect").val();
+    g_properties['ContactForm'].redirectUrl = $("#contactFormRedirectUrl").val();
+    g_properties['ContactForm'].thankyou = $("#contactFormThankyou").val();
+    g_properties['ContactForm'].titleTxtSize = $("#contactFormTitleTxtSize").val();
+    g_properties['ContactForm'].fieldSize = $("#contactFormFieldSize").val();
+    g_properties['ContactForm'].buttonSize = $("#contactFormButtonSize").val();
     UpdateChatIcons();
 }
 

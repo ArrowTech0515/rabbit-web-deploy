@@ -63,7 +63,7 @@ const g_properties = {
         redirect: false,
         redirectUrl: '',
         thankyou: '',
-        buttonRange: 100,
+        TitleTxtSize: 100,
         fieldSize: 100,
         buttonSize: 100,
     },
@@ -182,11 +182,11 @@ $(document).ready(function() {
 
 showLoading();
 
-let guid;
-let userSite = !(realSite === false);
-if (userSite) {
-    guid = new URL(document.currentScript.src).searchParams.get("guid");
-}
+// let guid;
+// let userSite = !(realSite === false);
+// if (userSite) {
+//     guid = new URL(document.currentScript.src).searchParams.get("guid");
+// }
 
 var serverData;
 getWidgetsList(function (widgetList) {
@@ -400,6 +400,7 @@ function submitContactUs(event) {
 //////////////////////////////////////////////////////////////////////
 // #region (utilites)
 
+
 function initTooltip() {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -477,11 +478,28 @@ function linkWithCommunicationApp(obj) {
             url = '/integration'; // Replace with actual URL for integrations
             break;
         case "ContactForm":
-            $("#contactusSubmitModal").modal("show");
+            displayContactFormDlg();
             return;
     }
     
     window.open(url, '_blank');
+}
+
+function displayContactFormDlg() {
+
+    // set title bg color and text color
+    $("#contactusSubmitModal .modal-header").css("background", g_properties['ContactForm'].titleBGColor);
+    $("#contactusSubmitModal .modal-header p").css("color", g_properties['ContactForm'].titleTxtColor);
+    $("#contactusSubmitModal .modal-header p").html(g_properties['ContactForm'].titleText);
+
+    $("#contactusSubmitModal #contactFormSubmitButton")[0].style.setProperty('background', g_properties['ContactForm'].buttonBGColor, 'important');
+    $("#contactusSubmitModal #contactFormSubmitButton").css("color", g_properties['ContactForm'].textColor);
+    $("#contactusSubmitModal #contactFormSubmitButton").html(g_properties['ContactForm'].buttonText);
+
+    $("#contactusSubmitModal .modal-header p").css("font-size", g_properties['ContactForm'].titleTxtSize + "px");
+    $("#contactusSubmitModal #contactFormSubmitButton").css("width", `${g_properties['ContactForm'].buttonSize}%`);
+
+    $("#contactusSubmitModal").modal("show");
 }
 
 function isMobile() {

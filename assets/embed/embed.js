@@ -184,7 +184,7 @@ function sendEmail(guid, subject, text, widgetId) {
         json['guid'] = window.guid[guid];
         json['widgetId'] = widgetId;
         json['subject'] = subject;
-        json['text'] = text;
+        json['text'] = encodeURIComponent(text);
 
         $.ajax({
             url: window.apiUrl[guid] + 'sendCustomEmailGuest',

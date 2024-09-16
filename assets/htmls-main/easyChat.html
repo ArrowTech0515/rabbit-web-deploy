@@ -1371,7 +1371,7 @@
                               <input type="color" class="form-control" id="contactFormTitleTxtColor" value="#ffffff" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
 
-                            <div class="d-flex">
+                            <div class="d-flex d-none">
                               <label for="contactFormCloseIconColor" class="form-label text-3-bold main-text-2 me-2">Close Icon</label>
                               <input type="color" class="form-control" id="contactFormCloseIconColor" value="#ffffff" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
@@ -1391,14 +1391,14 @@
                             </div>
                           
                             <div class="d-flex">
-                              <label for="contactFormTextColor" class="form-label text-3-bold main-text-2 me-2">Text</label>
-                              <input type="color" class="form-control" id="contactFormTextColor" value="#ffffff" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
+                              <label for="contactFormButtonTxtColor" class="form-label text-3-bold main-text-2 me-2">Text</label>
+                              <input type="color" class="form-control" id="contactFormButtonTxtColor" value="#ffffff" style="width: 20px; height: 20px; padding: 0" oninput="setContactFormData()">
                             </div>
                           </div>
                         </div>
           
                         <div class="mt-2">
-                          <input type="text" class="form-control" placeholder="Submit" value="Submit" oninput="setContactFormData()">
+                          <input type="text" class="form-control" placeholder="Submit" value="Submit" id="contactFormButtonText" value="Submit" oninput="setContactFormData()">
                         </div>
 
                         <!-- advanced form settings -->
@@ -1436,8 +1436,8 @@
 
                           <div class="d-flex flex-md-row flex-column gap-2 mt-3">
                             <div class="flex-grow-1">
-                              <label for="contactFormTitleSize" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Title Size';"></label>
-                              <input type="range" class="form-range" id="contactFormButtonRange" min="1" max="20" value="10" oninput="setContactFormData()">
+                              <label for="contactFormTitleTxtSize" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Title Size';"></label>
+                              <input type="range" class="form-range" id="contactFormTitleTxtSize" min="15" max="50" value="25" oninput="setContactFormData()">
                             </div>
                             <div class="flex-grow-1">
                               <label for="contactFormFieldSize" class="form-label btn-exclamation text-3-bold main-text-2" style="--button-text: 'Field Size';"></label>
@@ -1445,7 +1445,7 @@
                             </div>
                             <div class="flex-grow-1">
                               <label for="contactFormButtonSize" class="form-label text-3-bold main-text-2">Button Size</label>
-                              <input type="range" class="form-range" id="contactFormButtonSize" min="1" max="20" value="10" oninput="setContactFormData()">
+                              <input type="range" class="form-range" id="contactFormButtonSize" min="30" max="100" value="100" oninput="setContactFormData()">
                             </div>
                           </div>
 
@@ -1788,7 +1788,7 @@
 <div class="modal fade" id="saveChannelModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-body bg-white" style="border-radius: 36px; width: 568px">
+      <div class="modal-body bg-white pb-5" style="border-radius: 36px; width: 568px">
         <div class="d-flex justify-content-end">
           <p class="rounded-circle border m-3 lh-1 text-center" 
             style="width: 20px; height: 20px; font-size: 16px; cursor: pointer;" 
@@ -2422,7 +2422,7 @@
       <!-- Modal Header -->
       <div class="modal-header w-100 d-flex justify-content-between" 
         style="background: #3988D7; padding: 30px 40px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
-        <p class="text-modal-title text-white">Contact Us Today!</p>
+        <p class="text-modal-title" style="color: white;">Contact Us Today!</p>
         <img src="../assets/images/easychatty/close-circle.png" alt="close" style="cursor: pointer;" data-bs-dismiss="modal">
       </div>
 
@@ -2448,8 +2448,8 @@
         </div>
 
         <!-- submit button -->
-        <div style="padding-top: 40px;">
-          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        <div class="d-flex justify-content-center align-items-center" style="padding-top: 40px;">
+          <button id="contactFormSubmitButton" type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
         </div>
       </form>
 
