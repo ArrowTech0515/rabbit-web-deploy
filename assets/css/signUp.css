@@ -923,6 +923,29 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     padding: 1rem 0.5rem;
 }
 
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi::before {
+    content: '';
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi {
+    width: 18px;
+    display: inline-block;
+    margin-right: 4px;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-envelope {
+    background-image: url('/assets/images/signup/icons/submission_small.svg');
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-sliders {
+    background-image: url('/assets/images/signup/icons/edit.svg');
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-pencil {
+    background-image: url('/assets/images/signup/icons/rename.svg');
+}
+.welcome-page #my_widget_table .dropdown-menu .dropdown-item .bi-trash {
+    background-image: url('/assets/images/signup/icons/delete.svg');
+}
+
 .membership-demo-stats {
     background: #8FD3F429;
     font-size: 14px;

@@ -196,6 +196,7 @@ var SignupLandHome = {
     reportCountryChart: null,
     reportCityChart: null,
 
+    leadsByWidget: null,
     leadsByPlugin: null,
     leadsByRange: 'Day',
     leadsByDevice: 'All',
@@ -282,6 +283,11 @@ var SignupLandHome = {
             $.getJSON(getApiUrl('toggleWidgetStatusWebsite?widgetId=' + id + '&active=' + status), function (data) {
                 me.getWidgetList();
             });
+        });
+
+        $("#my_widget_table").on('click', '.action-submission', function () {
+            var row = me.myWidgetTable.row($(this).parent().parent().parent().parent()).data();
+            me.showLeadsPage(row.id);
         });
 
         $("#my_widget_table").on('click', '.action-edit', function () {
@@ -1352,7 +1358,7 @@ var SignupLandHome = {
         else if (me.leadsByRange == 'DayOfMonth6')
             from = SignupUtilities.getDateFewMonthsAgo(6);
 
-        getVisitorsSubmissionsList(null, from, to, 'dateCreated', false, me.refreshLeadsTable);
+        getVisitorsSubmissionsList(me.leadsByWidget, from, to, 'dateCreated', false, me.refreshLeadsTable);
     },
     refreshLeadsTable: function (list) {
         SignupUtilities.hideLoading();
@@ -1435,6 +1441,9 @@ var SignupLandHome = {
                                             <input type="checkbox" id="toggleStatus${row.index + 1}" ${row.status ? 'checked' : ''}>
                                             <span class="slider"></span>
                                         </div>
+                                    </li>
+                                    <li class="dropdown-item action-submission">
+                                        <span><i class="bi bi-envelope"></i> &nbsp; Submissions</span>
                                     </li>
                                     <li class="dropdown-item action-edit">
                                         <span><i class="bi bi-sliders"></i> &nbsp; Edit</span>
@@ -1624,7 +1633,9 @@ var SignupLandHome = {
         $("#dashboard_section .reports-page").hide();
     },
 
-    showLeadsPage: function () {
+    showLeadsPage: function (widgetId) {
+        this.leadsByWidget = widgetId;
+
         this.hideWelcomePage();
         this.hideSettingsPage();
         this.hideReportsPage();
@@ -1638,8 +1649,7 @@ var SignupLandHome = {
         $("#dashboard_section .leads-page").show();
         $("#dashboard_section").show();
 
-        SignupUtilities.showLoading();
-        getVisitorsSubmissionsList(null, "2024-09-01", "2024-09-30", 'dateCreated', false, this.refreshLeadsTable);
+        this.loadLeadsData();
     },
 
     hideLeadsPage: function () {
@@ -1975,7 +1985,7 @@ var WidgetComponentPanel = {
             $(".plugin-panel .item:not(.active) svg > g > g > g > rect:last-child").attr('fill', WidgetComponentPanel.POSITION_NON_SELECTED_COLOR);
         });
 
-        $(".widget-area .plugin-panel").on('click', '.item', function () {
+        $(".widget-area .plugin-panel").on('click', '.item:not(.active)', function () {
             var plugin = $(this).data('plugin');
             $(".widget-area .plugin-panel .item svg > g > g > path").attr('fill', WidgetComponentPanel.POSITION_NON_SELECTED_COLOR);
             $(".widget-area .plugin-panel .item svg > g > g > g > rect:last-child").attr('fill', WidgetComponentPanel.POSITION_NON_SELECTED_COLOR);
@@ -1987,6 +1997,11 @@ var WidgetComponentPanel = {
 
             $(".widget-area .plugin-panel .item").removeClass('active');
             $(this).addClass('active');
+
+            if (plugin=='circle')
+                $("#roundingSlider").val(50);
+            else
+                $("#roundingSlider").val(8);
 
             if ($(".widget-area .position-panel .item[data-plugin='" + plugin + "'].active").length == 0) {
                 $(".widget-area .position-panel .item[data-plugin='" + plugin + "'][data-position='" + "right-bottom" + "']").trigger('click');
@@ -2003,7 +2018,7 @@ var WidgetComponentPanel = {
             $(".widget-area .position-panel .item:not(.active) svg > g > g > path").attr('fill', WidgetComponentPanel.POSITION_NON_SELECTED_COLOR);
         });
 
-        $(".widget-area .position-panel").on('click', '.item', function () {
+        $(".widget-area .position-panel").on('click', '.item:not(.active)', function () {
             var position = $(this).data('position');
 
             $(".widget-area .position-panel .item svg > g > g > path").attr('fill', WidgetComponentPanel.POSITION_NON_SELECTED_COLOR);
@@ -3603,7 +3618,8 @@ var PreviewWidget = {
             $(".btnTouch>.icon").css('color', value);
         } else if (target == "textColor") {
             $(".btnTouch>.text").css('color', value);
-        } else if (target == "touchText") {
+        }
+        else if (target == "touchText") {
             $(".btnTouch>.text").text(value);
         } else if (target == "touchFont") {
             $(".btnTouch>.text").css('fontFamily', value);
@@ -3629,7 +3645,8 @@ var PreviewWidget = {
             } else if (value == "right-middle") {
                 $(".btnTouch").css('left', 'auto').css('bottom', 'auto').css('top', '50%').css('right', this.iconHSpacing + 'px');
             }
-        } else if (target == 'touchShow') {
+        }
+        else if (target == 'touchShow') {
             if (value) {
                 $(".btnTouch").show();
             } else {
@@ -3640,7 +3657,8 @@ var PreviewWidget = {
                 $(".btnTouch span.text").show();
             else
                 $(".btnTouch span.text").hide();
-        } else if (target == "pluginSize") {
+        }
+        else if (target == "pluginSize") {
             $(".btnTouch").css('fontSize', value + 'px');
         } else if (target == "bottomSpacing") {
             if (this.touchPosition.indexOf("top") > -1) {
@@ -3656,7 +3674,8 @@ var PreviewWidget = {
             }
         } else if (target == "rounding") {
             $('.btnTouch').css('borderRadius', value + (this.roundingType == 'X' ? '%' : 'px'));
-        } else if (target == 'sizeWidth') {
+        }
+        else if (target == 'sizeWidth') {
             $('.plugin-widget-container .form-group>input').css('width', value + '%');
             $('.plugin-widget-container .form-group>textarea').css('width', (value) + '%');
             $('.plugin-widget-container .actions-area button').css('width', value + '%');
@@ -3920,17 +3939,21 @@ var PreviewWidget = {
             me.apply("pluginSize", data.advanced.plugin);
         }
 
-        if (data.advanced.bottomSpacing != null) {
+        if (data.advanced.bottomSpacing != null)
             me.iconVSpacing = data.advanced.bottomSpacing;
-            me.update("bottomSpacing", data.advanced.bottomSpacing);
-            me.apply("bottomSpacing", data.advanced.bottomSpacing);
-        }
+        else
+            me.iconVSpacing = 0;
 
-        if (data.advanced.sideSpacing != null) {
+        me.update("bottomSpacing", me.iconVSpacing);
+        me.apply("bottomSpacing", me.iconVSpacing);
+
+        if (data.advanced.sideSpacing != null)
             me.iconHSpacing = data.advanced.sideSpacing;
-            me.update("sideSpacing", data.advanced.sideSpacing);
-            me.apply("sideSpacing", data.advanced.sideSpacing);
-        }
+        else
+            me.iconHSpacing = 0;
+
+        me.update("sideSpacing", me.iconHSpacing);
+        me.apply("sideSpacing", me.iconHSpacing);
 
         if (data.advanced.rounding != null) {
             me.update("rounding", data.advanced.rounding);
