@@ -117,8 +117,9 @@ function numberToOrdinal(n) {
 }
 
 $(document).ready(function () {
+  var widgetType;
+  var previewType = 'preview-fullscreen';
   var addPoweredBy = false;
-
   let siteToLoad = mainUserDetails ? mainUserDetails["wixUrl"] : "";
   let userSite = "https://rabbit-web-deploy.onrender.com/testSiteWithWidget.html?app=Get%20Leads";
   
@@ -413,10 +414,18 @@ $(document).ready(function () {
   });
 
   $('.preview-method button').on('click', function() {
-    let type = $(this).data('type');
-    $('#sitePreviewDiv').removeClass('preview-fullscreen preview-desktop preview-mobile').addClass(type);
-    $('#sitePreviewDiv').data('value', type);
+    $('.preview-method button').removeClass('active');
+    $(this).addClass('active');
+    previewType = $(this).data('type');
+    $('#sitePreviewDiv').removeClass('preview-fullscreen preview-desktop preview-mobile').addClass(previewType);
+    $('#sitePreviewDiv').data('value', previewType);
+
+    previewMethodChanged();
   });
+
+  function previewMethodChanged() {
+    
+  }
 
   // left panel color selector
   function initializeColorPicker(pickerId, inputId) {
@@ -528,6 +537,17 @@ $(document).ready(function () {
     $('#warningModal .modal-body .modal-title').text(title);
     $('#warningModal').modal('show');
   }
+  function showDeleteModal(widgetName, widgetId) {
+    $('#btnDeleteWidget').data('id', widgetId);
+    $('#deleteModal .widget-name').text(`'${widgetName}'?`);
+    $('#deleteModal').modal('show');
+  }
+  $('#btnDeleteWidget').on('click', function() {
+    let id = $(this).data('id');
+    deleteWidget(id);
+    $('#deleteModal').modal('hide');
+    setTimeout(function () { updateDashboard(); }, 500);
+  });
   function showPersonalModal() {
     $('#personalInfoModal #wixUrl').val('');
     $('#personalInfoModal #password').val('');
@@ -792,6 +812,7 @@ $(document).ready(function () {
   }
 
   function updateWidgets(selectedTab) {
+    widgetType = selectedTab;
     insertWidgets(selectedTab);
     switch (selectedTab) {
       case "popup":
@@ -1505,11 +1526,9 @@ $(document).ready(function () {
     setTimeout(function () { updateDashboard(); }, 500);
   });
   $('.widget-list').on('click', '.delete-widget', function () {
-    if (confirm("Are you sure you want to delete this widget?")) {
-      let id = $(this).closest('.widget-row').data('id');
-      deleteWidget(id);
-      setTimeout(function () { updateDashboard(); }, 500);
-    }
+    let id = $(this).closest('.widget-row').data('id');
+    let name = $(this).closest('.widget-row').data('name');
+    showDeleteModal(name, id);
   });
   $('.widget-list').on('click', '.update-widget', function () {
     let id = $(this).closest('.widget-row').data('id');
