@@ -237,6 +237,13 @@
             initPaymentForm(json['obj']);
         });
     }
+    function enableScriptEmbedded(id) {
+        console.log('start enableScriptEmbedded');
+
+        $.getJSON(apiUrl + 'enableScriptEmbeddedUser?userId=' + id, function (json) {
+            console.log('enableScriptEmbedded ' + JSON.stringify(json));
+        });
+    }
     function showActions(id) {
         console.log('start showActions');
 
@@ -260,6 +267,7 @@
                 'Email: ' + data["actualEmail"] + ', Domain ' + data["wixUrl"] +
                 ' <a class="superAdmin" href=\'javascript: showEditUserForm(' + data['id'] + ')\'>Edit</a> ' +
                 ' <a class="superAdmin" href=\'javascript: showPaymentUserForm(' + data['id'] + ')\'>Payment</a> ' +
+                ' <a class="superAdmin" href=\'javascript: enableScriptEmbedded(' + data['id'] + ')\'>Enable Script</a> ' +
                 ' <a href=\'javascript: showTest(' + data['id'] + ')\'>Status</a> ' +
                 ' <a href=\'javascript: outputUrlResultToModal(' + data["id"] + ',\"/removeUnsubscribeGuest?inApp=true&gift=freeFeatures&id=' + data['id'] + '")\'>Unscubscribe</a> ' +
                 '<br />Country: ' + data["country"] + ', Date Created: ' + data["dateCreated"] + ' Last Login: ' + data["lastLogin"] + ', Login Last 30 Days ' + data['loginCount30'] +

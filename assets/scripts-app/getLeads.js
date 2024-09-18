@@ -117,15 +117,16 @@ function numberToOrdinal(n) {
 }
 
 $(document).ready(function () {
+  var widgetType;
+  var previewType = 'preview-fullscreen';
   var addPoweredBy = false;
-
   let siteToLoad = mainUserDetails ? mainUserDetails["wixUrl"] : "";
-  let userSite = "http://127.0.0.1/testSiteWithWidget.html?app=Get%20Leads";
+  let userSite = "https://rabbit-web-deploy.onrender.com/testSiteWithWidget.html?app=Get%20Leads";
+  
   if (isTestingMode()) {
     siteToLoad = "https://www.rabbitseo.com";
-    userSite = "http://127.0.0.1/testSiteWithWidget.html?app=Get%20Leads";
+    userSite = "http://127.0.0.1:8080/testSiteWithWidget.html?app=Get%20Leads";
   }
-  siteToLoad = "https://www.rabbitseo.com";
   $("#sitePreview").attr("data", siteToLoad);
 
   $('[data-bs-toggle="tooltip"]').tooltip();
@@ -413,10 +414,18 @@ $(document).ready(function () {
   });
 
   $('.preview-method button').on('click', function() {
-    let type = $(this).data('type');
-    $('#sitePreviewDiv').removeClass('preview-fullscreen preview-desktop preview-mobile').addClass(type);
-    $('#sitePreviewDiv').data('value', type);
+    $('.preview-method button').removeClass('active');
+    $(this).addClass('active');
+    previewType = $(this).data('type');
+    $('#sitePreviewDiv').removeClass('preview-fullscreen preview-desktop preview-mobile').addClass(previewType);
+    $('#sitePreviewDiv').data('value', previewType);
+
+    previewMethodChanged();
   });
+
+  function previewMethodChanged() {
+    
+  }
 
   // left panel color selector
   function initializeColorPicker(pickerId, inputId) {
@@ -504,13 +513,13 @@ $(document).ready(function () {
   // Modal Functions
   function showSubmissionModal(title, content, liveSiteF = false) {
     if (liveSiteF) {
-      $('#btnSubmissionDone').removeClass('w-100').addClass('half-width-btn');
-      $('#btnCheckLiveSite').show();
+      $('#btnCheckLiveSite').parent().show();
       $('#btnCheckLiveSite').attr('href', userSite);
+      $('#btnSubmissionDone').parent().removeClass('col-12').addClass('col-4');
     }
     else {
-      $('#btnSubmissionDone').removeClass('half-width-btn').addClass('w-100');
-      $('#btnCheckLiveSite').hide();
+      $('#btnCheckLiveSite').parent().hide();
+      $('#btnSubmissionDone').parent().removeClass('col-4').addClass('col-12');
     }
     $('#submissionModal .modal-body .modal-title').text(title);
     $('#submissionModal .modal-body p').text(content);
@@ -528,8 +537,18 @@ $(document).ready(function () {
     $('#warningModal .modal-body .modal-title').text(title);
     $('#warningModal').modal('show');
   }
+  function showDeleteModal(widgetName, widgetId) {
+    $('#btnDeleteWidget').data('id', widgetId);
+    $('#deleteModal .widget-name').text(`'${widgetName}'?`);
+    $('#deleteModal').modal('show');
+  }
+  $('#btnDeleteWidget').on('click', function() {
+    let id = $(this).data('id');
+    deleteWidget(id);
+    $('#deleteModal').modal('hide');
+    setTimeout(function () { updateDashboard(); }, 500);
+  });
   function showPersonalModal() {
-    $('#personalInfoModal #email').val('');
     $('#personalInfoModal #wixUrl').val('');
     $('#personalInfoModal #password').val('');
     $('#personalInfoModal #extraEmails').val('');
@@ -731,11 +750,11 @@ $(document).ready(function () {
     $(".content-item").removeClass("active");
     $(target).addClass("active");
 
-    $(".mobile-menu a").removeClass('active');
-    $(`.mobile-menu a[data-target="${target}"]`).addClass('active');
+    $(".mobile-sidebar a").removeClass('active');
+    $(`.mobile-sidebar a[data-target="${target}"]`).addClass('active');
   });
 
-  $('.mobile-menu a').on('click', function(e) {
+  $('.mobile-sidebar a').on('click', function(e) {
     e.preventDefault();
 
     var target = $(this).data("target");
@@ -793,6 +812,7 @@ $(document).ready(function () {
   }
 
   function updateWidgets(selectedTab) {
+    widgetType = selectedTab;
     insertWidgets(selectedTab);
     switch (selectedTab) {
       case "popup":
@@ -1064,7 +1084,7 @@ $(document).ready(function () {
     options: {
       responsive: true,
       maintainAspectRatio: false, // Ensures the chart fits within the container
-      cutout: '70%', // Adjust the inner cutout to make it look like a donut
+      cutout: '55%', // Adjust the inner cutout to make it look like a donut
       plugins: {
         legend: {
           display: false // Hide default legend
@@ -1321,7 +1341,15 @@ $(document).ready(function () {
   $('#hd_integrationCode').on('click', function() {
     let dialog = $("#codeIntegrationDialog");
     if (dialog.hasClass('d-none')) {
-      dialog.find('.copy-btn').html('<i class="fa-solid fa-clone"></i> Copy');
+      dialog.find('.copy-btn').html(`
+          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.625 9V13.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.5 11.125H12.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.167 6.16675H7.08366C6.30126 6.16675 5.66699 6.80101 5.66699 7.58341V14.6667C5.66699 15.4492 6.30126 16.0834 7.08366 16.0834H14.167C14.9494 16.0834 15.5837 15.4492 15.5837 14.6667V7.58341C15.5837 6.80101 14.9494 6.16675 14.167 6.16675Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2.83366 11.8334C2.05449 11.8334 1.41699 11.1959 1.41699 10.4167V3.33341C1.41699 2.55425 2.05449 1.91675 2.83366 1.91675H9.91699C10.6962 1.91675 11.3337 2.55425 11.3337 3.33341" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>   
+          Copy
+        `);
     }
 
     if (mainUserDetails["embedScriptUrl"]) {
@@ -1331,6 +1359,7 @@ $(document).ready(function () {
       $('#codeIntegrationDialog input').val("<script id='script-getleads' src='https://link_to_code_here' async='true'></script>");
     }
     dialog.toggleClass('d-none');
+    $('#hd_integrationCode').toggleClass('active');
   });
   $("#codeIntegrationDialog").on('click', '.close-btn', function() {
     $("#codeIntegrationDialog .code-integration-header").fadeOut(200);
@@ -1342,7 +1371,15 @@ $(document).ready(function () {
       $('#codeIntegrationDialog .copy-btn').html('<i class="fa-solid fa-check"></i> Copied');
 
       setTimeout(function() {
-        $('#codeIntegrationDialog .copy-btn').html('<i class="fa-solid fa-clone"></i> Copy');
+        $('#codeIntegrationDialog .copy-btn').html(`
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.625 9V13.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.5 11.125H12.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14.167 6.16675H7.08366C6.30126 6.16675 5.66699 6.80101 5.66699 7.58341V14.6667C5.66699 15.4492 6.30126 16.0834 7.08366 16.0834H14.167C14.9494 16.0834 15.5837 15.4492 15.5837 14.6667V7.58341C15.5837 6.80101 14.9494 6.16675 14.167 6.16675Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2.83366 11.8334C2.05449 11.8334 1.41699 11.1959 1.41699 10.4167V3.33341C1.41699 2.55425 2.05449 1.91675 2.83366 1.91675H9.91699C10.6962 1.91675 11.3337 2.55425 11.3337 3.33341" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>   
+              Copy
+            `);
       }, 3000); // Reset after 3 seconds
     }).catch(function(err) {
       console.error('Error copying to clipboard: ', err);
@@ -1464,7 +1501,7 @@ $(document).ready(function () {
   }
 
   function showWidgetModal(id, oldName) {
-    $('#wgt_oldName').val(oldName);
+    // $('#wgt_oldName').val(oldName);
     $('#wgt_newName').val('');
     $('#wgt_updateBtn').data('wgtId', id);
     $('#updateWidgetModal').modal('show');
@@ -1489,11 +1526,9 @@ $(document).ready(function () {
     setTimeout(function () { updateDashboard(); }, 500);
   });
   $('.widget-list').on('click', '.delete-widget', function () {
-    if (confirm("Are you sure you want to delete this widget?")) {
-      let id = $(this).closest('.widget-row').data('id');
-      deleteWidget(id);
-      setTimeout(function () { updateDashboard(); }, 500);
-    }
+    let id = $(this).closest('.widget-row').data('id');
+    let name = $(this).closest('.widget-row').data('name');
+    showDeleteModal(name, id);
   });
   $('.widget-list').on('click', '.update-widget', function () {
     let id = $(this).closest('.widget-row').data('id');
@@ -1767,10 +1802,10 @@ $(document).ready(function () {
     let newSection = $(`
         <div class="col-md-6 puf-panel">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Input'}</div>
+                <div class="py-1 px-2 rounded-3 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Input'}</div>
                 <div class="justify-content-end">
                     <button type="button" class="btn btn-icon p-0 delete-panel">
-                        <i class="far fa-trash-alt" style="color: red;"></i>
+                        <i class="far fa-trash-alt"></i>
                     </button>
                 </div>
             </div>    
@@ -2046,10 +2081,10 @@ $(document).ready(function () {
     let newSection = $(`
           <div class="col-md-6 faq-panel">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Question'}</div>
+                <div class="py-1 px-2 rounded-3 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Question'}</div>
                 <div class="justify-content-end">
                     <button type="button" class="btn p-0 panel-close">
-                        <i class="far fa-trash-alt" style="color: red;"></i>
+                        <i class="far fa-trash-alt"></i>
                     </button>
                 </div>
             </div>
@@ -2188,7 +2223,7 @@ $(document).ready(function () {
     let newSection = $(`
             <div class="col-lg-6 story-item">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Story'}</div>
+                    <div class="py-1 px-2 rounded-3 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Story'}</div>
                     <div class="justify-content-end">
                         <button type="button" class="btn btn-sm btn-icon ml-2 close-panel">
                             <i class="far fa-trash-alt" style="color: #EF6F81;"></i>
@@ -2216,7 +2251,13 @@ $(document).ready(function () {
                       </div>
                       <div class="col-6">
                           <div class="file-container">
-                              <label for="stUploadStoryImg_${sectionCount}" class="custom-file-upload px-2 py-2"><i class="fas fa-upload"></i>Upload</label>
+                              <label for="stUploadStoryImg_${sectionCount}" class="custom-file-upload px-2 py-2">
+                                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path opacity="0.5" d="M0.955078 9.12207C0.955078 10.9831 0.955078 11.9141 1.53308 12.4921C2.11108 13.0701 3.04208 13.0701 4.90308 13.0701H8.85508C10.7161 13.0701 11.6471 13.0701 12.2251 12.4921C12.8031 11.9141 12.8031 10.9831 12.8031 9.12207" stroke="#1C274C" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.87712 9.7801V1.2251M6.87712 1.2251L9.50912 4.1041M6.87712 1.2251L4.24512 4.1041" stroke="#1C274C" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>  
+                                  Upload
+                              </label>
                               <input type="file" class="form-control image-upload" id="stUploadStoryImg_${sectionCount}">
                           </div>
                           <div class="form-floating-label">
@@ -2738,10 +2779,10 @@ $(document).ready(function () {
               <div class="col-md-6">
                 <div class="review-item">
                   <div class="d-flex justify-content-between align-items-center mb-2">
-                      <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Review'}</div>
+                      <div class="py-1 px-2 rounded-3 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Review'}</div>
                       <div class="justify-content-end">
                           <button type="button" class="btn btn-sm btn-icon ml-2 close-panel">
-                              <i class="far fa-trash-alt" style="color: red;"></i>
+                              <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                   </div>
@@ -2767,7 +2808,13 @@ $(document).ready(function () {
                       </div>
                       <div class="col-6">
                           <div class="file-container">
-                              <label for="rvImage_${sectionCount}" class="custom-file-upload px-2 py-2"><i class="fas fa-upload"></i>Upload</label>
+                              <label for="rvImage_${sectionCount}" class="custom-file-upload px-2 py-2">
+                                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path opacity="0.5" d="M0.955078 9.12207C0.955078 10.9831 0.955078 11.9141 1.53308 12.4921C2.11108 13.0701 3.04208 13.0701 4.90308 13.0701H8.85508C10.7161 13.0701 11.6471 13.0701 12.2251 12.4921C12.8031 11.9141 12.8031 10.9831 12.8031 9.12207" stroke="#1C274C" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M6.87712 9.7801V1.2251M6.87712 1.2251L9.50912 4.1041M6.87712 1.2251L4.24512 4.1041" stroke="#1C274C" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>  
+                                  Upload
+                              </label>
                               <input type="file" class="form-control review-item-file image-upload" id="rvImage_${sectionCount}" name="rvImage_${sectionCount}">
                           </div>
                           <div class="form-floating-label">
@@ -3086,10 +3133,10 @@ $(document).ready(function () {
                   <div class="row mb-2">
                       <div class="col-md-12">
                           <div class="d-flex justify-content-between align-items-center mb-4">
-                              <div class="py-1 px-2 rounded-2 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Input'}</div>
+                              <div class="py-1 px-2 rounded-3 contact-no" style="background-color: #dcdcdc;">${numberToOrdinal(sectionCount) + ' Input'}</div>
                               <div class="justify-content-end">
                                   <button type="button" class="btn btn-sm btn-icon ml-2 close-panel">
-                                      <i class="far fa-trash-alt" style="color: red;"></i>
+                                      <i class="far fa-trash-alt"></i>
                                   </button>
                               </div>
                           </div>
@@ -3112,7 +3159,13 @@ $(document).ready(function () {
                           <div class="row">
                               <div class="col-lg-8">
                                   <div class="file-container">
-                                      <label for="cuUploadImage_${sectionCount}" class="custom-file-upload px-2 py-2"><i class="fas fa-upload"></i>Upload</label>
+                                      <label for="cuUploadImage_${sectionCount}" class="custom-file-upload px-2 py-2">
+                                          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path opacity="0.5" d="M0.955078 9.12207C0.955078 10.9831 0.955078 11.9141 1.53308 12.4921C2.11108 13.0701 3.04208 13.0701 4.90308 13.0701H8.85508C10.7161 13.0701 11.6471 13.0701 12.2251 12.4921C12.8031 11.9141 12.8031 10.9831 12.8031 9.12207" stroke="#1C274C" stroke-linecap="round" stroke-linejoin="round"/>
+                                              <path d="M6.87712 9.7801V1.2251M6.87712 1.2251L9.50912 4.1041M6.87712 1.2251L4.24512 4.1041" stroke="#1C274C" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>  
+                                          Upload
+                                      </label>
                                       <input type="file" class="form-control image-upload" id="cuUploadImage_${sectionCount}">
                                   </div>
                               </div>
