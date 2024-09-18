@@ -1367,7 +1367,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
 .settings-subscription .pricing-card {
     border-radius: 24px;
     padding: 20px 16px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 40px 80px 0px #3949620A;
     border: 1px solid #FFFFFF5C;
     background: #FFFFFF5C;
     position: relative;
@@ -3268,7 +3268,7 @@ body>#preview_widget>.plugin-widget-container {
 }
 #popupModal .btn {
     border: 1px solid #e7e5f2;
-    border-radius: 16px;
+    border-radius: 36px;
     outline: none;
     box-shadow: none;
     font-size: 12px;
@@ -3277,10 +3277,13 @@ body>#preview_widget>.plugin-widget-container {
     letter-spacing: 0.01em;
     text-align: left;
     color: #2D324A;
-    padding: 0 16px;
+    padding: 0 20px;
 }
 #popupModal .btn:hover {
     background-color: transparent;
+    color: #F5576C;
+}
+#popupModal .btn.action-do {
     color: #F5576C;
 }
 
