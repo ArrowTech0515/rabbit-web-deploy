@@ -109,7 +109,8 @@
                 </div>
 
                 <p class="membership-demo-stats hidden">
-                    <span class="font-bold"><i class="bi bi-info-circle"></i> You are currently using the demo version of Signup.land</span><br>
+                    <i class="bi bi-info-circle"></i>
+                    <span class="font-bold">You are currently using the demo version of Signup.land</span><br>
                     <span class="description">Please note that some features may be limited in this mode. To unlock the full experience and access all functionalities, consider upgrading to the full version.</span>
                 </p>
             </div>
@@ -458,7 +459,8 @@
 
             <div class="reports-page ph-32 hidden mt-3">
                 <p class="membership-demo-stats hidden">
-                    <span class="font-bold"><i class="bi bi-info-circle"></i> You are currently using the demo version of Signup.land</span><br>
+                    <i class="bi bi-info-circle"></i>
+                    <span class="font-bold">You are currently using the demo version of Signup.land</span><br>
                     <span class="description">Please note that some features may be limited in this mode. To unlock the full experience and access all functionalities, consider upgrading to the full version.</span>
                 </p>
 
@@ -1208,7 +1210,7 @@
                                                             </div>
 
                                                             <div class="actions-area">
-                                                                <button type="button" class="btn btn-submit for-fieldFont for-accentBackgroundColor">Submit</button>
+                                                                <button type="button" class="btn btn-submit for-fieldFont for-accentBackgroundColor">SENT</button>
                                                             </div>
 
                                                             <div class="logo-area">
@@ -1600,15 +1602,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="row sub-area">
-                                                        <h6 class="sub-title-1">Field Font &nbsp; <span><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h6>
                                                         <div class="col">
-                                                            <div class="custom-select-wrapper">
-                                                                <select class="custom-select set-font" data-target="fieldFont">
-                                                                    <option value="Plus Jakarta Sans">Plus Jakarta Sans</option>
-                                                                    <option value="sans-serif">Sans Serif</option>
-                                                                    <option value="arial">Arial</option>
-                                                                </select>
-                                                            </div>
+                                                            <p class="closable-note">
+                                                                <i class="bi bi-info-circle"></i>
+                                                                <span class="font-bold">Edit the text content of Fields or another by directly clicking on the text you want to change in the Form preview.</span>
+                                                                <i class="bi bi-x"></i>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1660,7 +1659,7 @@
 
                                                             <div class="row mt-3 fields-container">
                                                                 <h6 class="sub-title mb-2" style="padding-left: 0;">Fields</h6>
-                                                                <div class="col px-4">
+                                                                <div class="col px-3">
                                                                     <div class="row">
                                                                         <div class="col">
                                                                             <table class="table" id="fields_table">
@@ -1721,6 +1720,45 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+
+                                                            <div class="row mt-3">
+                                                                <div class="col px-3">
+                                                                    <h6 class="sub-title-1">Size &nbsp; <span><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="Choose the size of input fields and form buttons"></i></span></h6>
+                                                                    <div class="d-flex justify-content-between fields-button-group">
+                                                                        <button class="btn" data-by="small">Small</button>
+                                                                        <button class="btn" data-by="medium">Medium</button>
+                                                                        <button class="btn" data-by="large">Large</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <div class="col d-flex justify-content-between">
+                                                                    <h6 class="sub-title-1">Stroke</h6>
+                                                                    <div class="custom-switch">
+                                                                        <div class="form-check form-switch">
+                                                                            <input class="form-check-input" type="checkbox" name="addThankYouScreen" id="strokeOption">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="d-flex justify-content-between" style="gap: 1rem;">
+                                                                    <div class="row w-100">
+                                                                        <div class="col position-relative" style="margin-top: 8px;">
+                                                                            <h6 class="sub-title-1">Thickness &nbsp; <span><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="Set the thickness for the outline of the form input fields."></i></span></h6>
+                                                                            <input id="thicknessSlider" type="text" style="display: block; width: 100%;"/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="color-display">
+                                                                        <div class="color-item">
+                                                                            <label>Color</label>
+                                                                            <div class="color-circle" data-color-target="thicknessColor" style="background: #000;"></div>
+                                                                            <input type="color" value="#000000">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
 
                                                             <div class="row mt-4">
                                                                 <div class="col d-flex justify-content-between">
@@ -2464,6 +2502,7 @@
                                 <object id="sitePreview2" style="width: 100%; height: 100vh; min-height: 100vh;"></object>
                                 <button class="btn btnTouch"><span class="icon"><i class="bi bi-svg bi-envelope-fill"></i></span> <span class="text">Get In Touch!</span></button>
                                 <div class="container-fluid" id="preview_widget">
+
                                     <div class="col-md-12 plugin-widget-container lead_generation form_5" data-plugin="5">
                                         <div class="row">
                                             <div class="col-xl-6 col-lg-8 col-md-10 form-wrapper for-accentBorderColor for-backgroundColor">
@@ -2472,8 +2511,8 @@
                                                     <div class="col-10">
                                                         <span class="close-button">&times;</span>
 
-                                                        <h1 class="title for-titleTextColor for-titleFont">GET IN <b>TOUCH</b></h1>
-                                                        <p class="description for-sizeHeightMarginBottom for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
+                                                        <h1 class="title editable for-editTitle for-titleTextColor for-titleFont">GET IN <b>TOUCH</b></h1>
+                                                        <p class="description editable for-editDescription for-sizeHeightMarginBottom for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
 
                                                         <form class="form-container" method="post">
                                                             <div class="form-group-list">
@@ -2507,8 +2546,8 @@
                                                     <div class="col-10">
                                                         <span class="close-button">&times;</span>
 
-                                                        <h1 class="title for-titleTextColor for-titleFont">Contact Us Today!</h1>
-                                                        <p class="description for-sizeHeightMarginBottom for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
+                                                        <h1 class="title editable for-editTitle for-titleTextColor for-titleFont">Contact Us Today!</h1>
+                                                        <p class="description editable for-editDescription for-sizeHeightMarginBottom for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
                                                         <form class="form-container" method="post">
                                                             <div class="form-group-list">
                                                                 <div class="form-group">
@@ -2546,8 +2585,8 @@
                                                 <div class="contact-form">
                                                     <span class="close-button">&times;</span>
 
-                                                    <h1 class="for-titleTextColor for-titleFont">Contact Us Today!</h1>
-                                                    <p class="for-sizeHeightMarginBottom for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
+                                                    <h1 class="editable for-editTitle for-titleTextColor for-titleFont">Contact Us Today!</h1>
+                                                    <p class="editable for-editDescription for-sizeHeightMarginBottom for-bodyTextColor for-secondaryFont">If you have any questions or want to know more about our service, contact us using the contact form below</p>
                                                     <form class="form-container" method="post">
                                                         <div class="form-group-list">
                                                             <div class="form-group">
@@ -2576,14 +2615,16 @@
 
                                     <div class="col-md-12 plugin-widget-container contact_forms form_3" data-plugin="3">
                                         <div class="row">
-                                            <div class="col-xl-8 col-lg-10 col-md-12 form-wrapper for-backgroundColor">
+                                            <div class="col-xl-8 col-lg-10 col-md-12 form-wrapper for-backgroundColor for-controlBorderBottomOnly">
                                                 <div class="contact-image">
                                                     <div class="corner-design for-accentBackgroundColor"></div>
-                                                    <div class="background-text-1"><h4>Get In<br>Touch!</h4></div>
-                                                    <h1 class="for-titleTextColor for-titleFont">Contact Us</h1>
-                                                    <h2 class="for-accentTextColor for-titleFont">Today!</h2>
+                                                    <div class="background-text-1">
+                                                        <h4>Get In<br>Touch!</h4>
+                                                    </div>
+                                                    <h1 class="editable for-editTitle for-titleTextColor for-titleFont">Contact Us</h1>
+                                                    <h2 class="editable for-editSubTitle for-accentTextColor for-titleFont">Today!</h2>
                                                     <div class="editable-area">
-                                                        <div class="editable description for-bodyTextColor for-secondaryFont">
+                                                        <div class="editable description for-editDescription for-bodyTextColor for-secondaryFont">
                                                             company@mail.com<br>
                                                             1-000-111-2222<br>
                                                             82323423 dsfas 23423 3343<br>
@@ -2626,9 +2667,9 @@
                                         <div class="row">
                                             <div class="col-xl-8 col-lg-10 col-md-12 form-wrapper for-backgroundColor">
                                                 <div class="contact-image for-accentBackgroundColor">
-                                                    <h1 class="for-titleTextColor for-titleFont">Get In<br>Touch!</h1>
+                                                    <h1 class="editable for-editTitle for-titleTextColor for-titleFont">Get In<br>Touch!</h1>
                                                     <div class="editable-area">
-                                                        <div class="editable description for-bodyTextColor for-secondaryFont">
+                                                        <div class="editable description for-editDescription for-bodyTextColor for-secondaryFont">
                                                             company@mail.com<br>
                                                             1-000-111-2222<br>
                                                             82323423 dsfas 23423 3343<br>
@@ -2678,8 +2719,8 @@
                                                         <div class="d-flex justify-content-center">
                                                             <span class="cover-icon for-accentTextColor"><i class="bi bi-envelope-paper-fill"></i></span>
                                                         </div>
-                                                        <h1 class="title for-titleTextColor for-titleFont">Subscribe Now</h1>
-                                                        <p class="description for-bodyTextColor for-secondaryFont">Enter your email to receive daily updates.</p>
+                                                        <h1 class="editable for-editTitle title for-titleTextColor for-titleFont">Subscribe Now</h1>
+                                                        <p class="editable for-editDescription description for-bodyTextColor for-secondaryFont">Enter your email to receive daily updates.</p>
 
                                                         <form class="form-container for-sizeHeightMarginTop" method="post">
                                                             <div class="form-group-list">
@@ -2704,14 +2745,14 @@
 
                                     <div class="col-md-12 plugin-widget-container join_newsletter form_2" data-plugin="2">
                                         <div class="row">
-                                            <div class="col-xl-6 col-lg-8 col-md-10 form-wrapper for-backgroundColor">
+                                            <div class="col-xl-6 col-lg-8 col-md-10 form-wrapper for-backgroundColor for-controlBorderBottomOnly">
                                                 <div class="row mt-5 mb-5">
                                                     <div class="col-1"></div>
                                                     <div class="col-10">
                                                         <span class="close-button">&times;</span>
 
-                                                        <h1 class="title for-titleTextColor for-titleFont">SUBSCRIBE</h1>
-                                                        <p class="description for-bodyTextColor for-secondaryFont">Get notified about the next update.</p>
+                                                        <h1 class="editable for-editTitle title for-titleTextColor for-titleFont">SUBSCRIBE</h1>
+                                                        <p class="editable for-editDescription description for-bodyTextColor for-secondaryFont">Get notified about the next update.</p>
 
                                                         <form class="form-container for-sizeHeightMarginTop" method="post">
                                                             <div class="form-group-list">
@@ -2735,7 +2776,7 @@
 
                                     <div class="col-md-12 plugin-widget-container join_newsletter form_3" data-plugin="3">
                                         <div class="row">
-                                            <div class="col-xl-6 col-lg-8 col-md-10 form-wrapper for-backgroundColor">
+                                            <div class="col-xl-6 col-lg-8 col-md-10 form-wrapper for-backgroundColor for-controlBorderBottomOnly">
                                                 <div class="row mt-5 mb-5">
                                                     <div class="col-1"></div>
                                                     <div class="col-10">
@@ -2743,8 +2784,8 @@
 
                                                         <div class="row">
                                                             <div class="col">
-                                                                <h1 class="title for-titleTextColor for-titleFont">Join Our Newsletter</h1>
-                                                                <p class="description for-bodyTextColor for-secondaryFont">Get notified about the next update.</p>
+                                                                <h1 class="title editable for-editTitle for-titleTextColor for-titleFont">Join Our Newsletter</h1>
+                                                                <p class="description editable for-editDescription for-bodyTextColor for-secondaryFont">Get notified about the next update.</p>
 
                                                                 <form class="form-container for-sizeHeightMarginTop" method="post">
                                                                     <div class="form-group-list">
@@ -2778,8 +2819,8 @@
                                                     <div class="col-10">
                                                         <span class="close-button">&times;</span>
 
-                                                        <h1 class="title for-titleTextColor for-titleFont">Keep in Touch</h1>
-                                                        <p class="description for-bodyTextColor for-secondaryFont">Join us for the finest holiday inspiration along with some exclusive deals - just between us</p>
+                                                        <h1 class="title editable for-editTitle for-titleTextColor for-titleFont">Keep in Touch</h1>
+                                                        <p class="description editable for-editDescription for-bodyTextColor for-secondaryFont">Join us for the finest holiday inspiration along with some exclusive deals - just between us</p>
 
                                                         <form class="form-container for-sizeHeightMarginTop" method="post">
                                                             <div class="form-group-list">
