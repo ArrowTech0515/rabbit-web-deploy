@@ -2933,7 +2933,7 @@ body>#preview_widget>.plugin-widget-container {
 #limitReachedModal .icon-container img {
 }
 #limitReachedModal .modal-content {
-    border-radius: 20px;
+    border-radius: 48px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border: 12px solid #ffffff33;
@@ -3234,13 +3234,13 @@ body>#preview_widget>.plugin-widget-container {
 #popupModal .icon-container img {
 }
 #popupModal .modal-content {
-    border-radius: 20px;
+    border-radius: 48px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border: 12px solid #ffffff33;
 }
 #popupModal .modal-header .close {
-    margin: -40px -20px -20px auto;
+    margin: -40px -15px -25px auto;
     color: #8e91a5;
 }
 #popupModal .modal-title {
