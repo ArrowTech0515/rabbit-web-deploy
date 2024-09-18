@@ -1366,7 +1366,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
 
 .settings-subscription .pricing-card {
     border-radius: 24px;
-    padding: 20px 12px;
+    padding: 20px 16px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #FFFFFF5C;
     background: #FFFFFF5C;
@@ -1382,7 +1382,8 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
 .settings-subscription .pricing-card .percent_box {
     position: absolute;
     right: 11px;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 700;
     top: 11px;
     border: 1px solid #F5576C;
     border-radius: 14px;
@@ -1390,7 +1391,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     padding: 1px 11px;
 }
 .settings-subscription .pricing-card .card-title {
-    margin: 0 0 8px 0;
+    margin: 0 0 10px 0;
     color: #2D324A;
     text-align: left;
     padding-left: 12px;
@@ -1411,29 +1412,32 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
 }
 .settings-subscription .pricing-card .card-features {
     list-style: none;
-    padding: 0 12px;
+    padding: 24px 12px 12px;
+    border-top: 1px solid #e7e5f2;
 }
 .settings-subscription .pricing-card .card-features li {
     margin-bottom: 10px;
     font-size: 14px;
+    font-weight: 700;
+    color: #2d324a;
     text-align: left;
-    padding-left: 24px;
+    padding-left: 2.5rem;
     position: relative;
 }
 .settings-subscription .pricing-card .card-features li::before {
-    content: "\f058";
-    content: "\f058"; /* FontAwesome check icon */
-    font-family: "Font Awesome 5 Free"; /* Specify FontAwesome font */
-    font-weight: 900; /* FontAwesome solid icon */
+    content: '';
     position: absolute;
-    left: 0;
+    left: 10px;
     top: 0;
-    color: #F5576C; /* Green color for the check icon */
+    background: url('/assets/images/signup/icons/check.svg') center / contain no-repeat;
+    width: 20px;
+    height: 20px;
 }
 .settings-subscription .pricing-card .btn {
     width: 100%;
     background-color: transparent;
     color: #2D324A;
+    font-weight: 700;
     border: 1px solid #2D324A;
     padding: 10px;
     border-radius: 24px;
@@ -1446,74 +1450,32 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     color: #fff;
 }
 
-.toggle-switch.for-subscription {
-    position: relative;
-    width: 100px;
-    display: inline-block;
-    text-align: left;
-    top: 10px;
-    margin-left: 20px;
+.settings-subscription .btn-group {
+    background: #E7E5F266;
+    border-radius: 24px;
+    padding: 4px;
 }
-.toggle-switch.for-subscription .toggle-switch-checkbox {
-    display: none;
+.settings-subscription .btn-group .btn {
+    color: #8E91A5;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border-radius: 24px !important;
+    padding: 8px 36px;
 }
-.toggle-switch.for-subscription .toggle-switch-label {
-    display: block;
-    overflow: hidden;
-    cursor: pointer;
-    border: 2px solid #ccc;
-    border-radius: 20px;
+.settings-subscription .btn-group .btn:hover {
+    background-color: #2D324A;
+    color: #fff;
+    border-radius: 24px;
 }
-.toggle-switch.for-subscription .toggle-switch-inner {
-    display: block;
-    width: 200%;
-    margin-left: -100%;
-    transition: margin 0.3s ease-in-out;
-}
-.toggle-switch.for-subscription .toggle-switch-inner:before,
-.toggle-switch.for-subscription .toggle-switch-inner:after {
-    display: block;
-    float: left;
-    width: 50%;
-    height: 30px;
-    padding: 0;
-    line-height: 30px;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-.toggle-switch.for-subscription .toggle-switch-inner:before {
-    content: attr(data-yearly);
-    padding-left: 10px;
-    background-color: #4CAF50; /* Green for "Yearly" */
-    color: white;
-}
-.toggle-switch.for-subscription .toggle-switch-inner:after {
-    content: attr(data-monthly);
-    padding-right: 10px;
-    background-color: #f44336; /* Red for "Monthly" */
-    color: white;
-    text-align: right;
-}
-.toggle-switch.for-subscription .toggle-switch-switch {
-    display: block;
-    width: 24px;
-    margin: 6px;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 64px;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-.toggle-switch.for-subscription .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
-    margin-left: 0;
-}
-.toggle-switch.for-subscription .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
-    right: 0px;
+.settings-subscription .btn-group .btn.selected {
+    background-color: #2D324A;
+    color: #fff;
+    border-radius: 24px;
 }
 
 .left-side {
@@ -3320,4 +3282,16 @@ body>#preview_widget>.plugin-widget-container {
 #popupModal .btn:hover {
     background-color: transparent;
     color: #F5576C;
+}
+
+#analyticsCanvas {
+    height: 380px !important;
+}
+#reportDeviceCanvas {
+    height: 350px !important;
+    width: 350px !important;
+    margin: auto;
+}
+#reportHourCanvas {
+    height: 380px !important;
 }

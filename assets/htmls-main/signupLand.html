@@ -313,14 +313,11 @@
 
                         <div class="content settings-subscription hidden">
                             <h2 style="margin-bottom: 12px;">Subscriptions</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur. Laoreet tellus magna vulputate vulputate amet fusce augue eleifend odio.</p>
+                            <p>Choose the best price solution for your needs! </p>
                             <div class="d-flex justify-content-end" style="padding-right: 12px;">
-                                <div class="toggle-switch for-subscription">
-                                    <input type="checkbox" id="subscriptionMode" class="toggle-switch-checkbox">
-                                    <label for="subscriptionMode" class="toggle-switch-label">
-                                        <span class="toggle-switch-inner" data-yearly="Yearly" data-monthly="Monthly"></span>
-                                        <span class="toggle-switch-switch"></span>
-                                    </label>
+                                <div class="btn-group" id="subscriptionMode">
+                                    <button class="btn btn-monthly selected">Monthly</button>
+                                    <button class="btn btn-yearly">Yearly</button>
                                 </div>
                             </div>
 
@@ -555,10 +552,10 @@
                         </div>
                     </div>
                     <div class="col-xl-4">
-                        <div class="chart-section graph-background">
+                        <div class="chart-section graph-background" style="padding-bottom: 2rem;">
                             <h6 class="font-bold">Devices</h6>
                             <p style="margin-bottom: 52px;">This graph shows which devices you have the most from visitors.</p>
-                            <canvas id="reportDeviceCanvas" style="width: 100%; height: 500px;"></canvas>
+                            <canvas id="reportDeviceCanvas" style="width: 100%; height: 400px;"></canvas>
                         </div>
                     </div>
                 </div>
