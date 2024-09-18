@@ -5,10 +5,10 @@ function drawPlans(){var e,t=$("#pricingCardList");for(e in t.empty(),allPlans){
                     ${yearly&&0<a?`<div class="percent_box">${l}% OFF</div>`:""}
                     <div class="d-flex montly-price" style="justify-content: center;">
                       ${yearly&&0<a?`<s class="fw-normal">${i.planPriceCurrency+a}</s>`:""}
-                      ${o&&0!==o?`<p class="card-price">${i.planPriceCurrency+o}/month</p>`:'<p class="card-price">Free</p>'}
+                      ${o&&0!==o?`<p class="card-price">${i.planPriceCurrency+o}<span>/month</span></p>`:'<p class="card-price">Free</p>'}
                     </div>
                     <div class="d-flex yearly-price" style="justify-content: center;">
-                      <p class="card-price">${0==n?"Free":i.planPriceCurrency+n+"/year"}</p>
+                      <p class="card-price">${0==n?"Free":i.planPriceCurrency+n+"<span>/year</span>"}</p>
                     </div>
                     <ul class="card-features">
                         ${-1!==appDomainName.indexOf("Wix")||-1!==appDomainName.indexOf("Shopify")?"":`<li> ${i.planWebsites+(1<i.planWebsites?" Websites":" Website")}</li>`}

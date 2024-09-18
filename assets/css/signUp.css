@@ -1388,12 +1388,20 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     color: #2D324A;
     text-align: left;
     padding-left: 12px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 700;
 }
 .settings-subscription .pricing-card .card-price {
-    font-size: 28px;
+    font-size: 40px;
+    color: #2D324A;
+    font-weight: 800;
     margin: 5px 10px 10px 0px;
+}
+.settings-subscription .pricing-card .card-price span {
+    color: #8E91A5;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
 }
 .settings-subscription .pricing-card .card-features {
     list-style: none;
