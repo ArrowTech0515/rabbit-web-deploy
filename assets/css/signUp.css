@@ -231,6 +231,9 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     font-size: 14px;
     color: #828B9D;
 }
+.sidebar-right .stat-graph svg {
+    width: 100px;
+}
 @media (max-width: 1300px) {
     .sidebar-right {
         display: none !important;
@@ -604,6 +607,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
+    opacity: .75;
 }
 .stats-section .stat-text {
     display: flex;
@@ -615,7 +619,9 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     position: absolute;
     right: 8px;
     bottom: 8px;
-    opacity: .5;
+}
+.sidebar-right .stats-section .stat-graph {
+    bottom: -8px;
 }
 
 .hidden {
@@ -1244,10 +1250,10 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     font-weight: 700;
 }
 .settings-page .sub-menu a.active {
-    color: #FD7E14;
+    color: #F5576C;
 }
 .settings-page .sub-menu a:hover {
-    color: #FD7E14;
+    color: #F5576C;
 }
 .settings-account .avatar {
     width: 100px;
@@ -2187,6 +2193,7 @@ body>#preview_widget {
 }
 body>#preview_widget>.plugin-widget-container {
     transform: translate(-50%, -50%) !important;
+    max-width: 62%;
 }
 .plugin-widget-container.active {
     display: block;
