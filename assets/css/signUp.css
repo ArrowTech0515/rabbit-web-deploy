@@ -654,7 +654,7 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px 20px;
+    padding: 6px 30px 20px;
     flex-flow: wrap;
 }
 
@@ -1848,14 +1848,15 @@ body>#preview_widget {
 .position-panel > .item > svg {
     margin: auto;
     border: 1px solid transparent;
+    border-radius: 8px;
 }
 
 .position-panel > .item > svg:hover {
-    border: 1px solid #FD7E14;
+    border: 1px solid #F5576C;
 }
 
 .position-panel > .item.active > svg {
-    border: 1px solid #FD7E14;
+    border: 1px solid #F5576C;
 }
 
 .plugin-panel > .item {
@@ -1866,14 +1867,15 @@ body>#preview_widget {
 .plugin-panel > .item > svg {
     margin: auto;
     border: 1px solid transparent;
+    border-radius: 8px;
 }
 
 .plugin-panel > .item > svg:hover {
-    border: 1px solid #FD7E14;
+    border: 1px solid #F5576C;
 }
 
 .plugin-panel > .item.active > svg {
-    border: 1px solid #FD7E14;
+    border: 1px solid #F5576C;
 }
 
 
@@ -2192,7 +2194,7 @@ body>#preview_widget {
 .btnTouch {
     position: fixed;
     width: auto;
-    padding: 16px;
+    padding: 16px 24px;
     font-size: 24px;
     font-weight: 700;
     background: #eb81e3;
@@ -2449,15 +2451,17 @@ body>#preview_widget>.plugin-widget-container {
     font-size: 30px;
     margin-bottom: 8px;
     color: #263040;
-    text-align: center;
+    text-align: left;
     margin-top: 12%;
+    padding: 0 1rem 0 8rem;
 }
 .plugin-widget-container.contact_forms.form_3 h2 {
     font-weight: bold;
     font-size: 30px;
     margin-bottom: 8px;
     color: #C493F3;
-    text-align: center;
+    text-align: left;
+    padding: 0 1rem 0 8rem;
 }
 .plugin-widget-container.contact_forms.form_3 .editable-area {
 }
@@ -2479,6 +2483,7 @@ body>#preview_widget>.plugin-widget-container {
     font-style: italic;
     font-weight: 500;
     background: transparent;
+    border-radius: 0;
 }
 .plugin-widget-container.contact_forms.form_3 textarea.form-control {
     height: 100px;
@@ -2566,6 +2571,7 @@ body>#preview_widget>.plugin-widget-container {
     border: 1px solid #414141;
     font-size: 12px;
     background: transparent;
+    border-radius: 0;
 }
 .plugin-widget-container.contact_forms.form_4 textarea.form-control {
     height: 100px;
