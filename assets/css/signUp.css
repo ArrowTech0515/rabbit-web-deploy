@@ -74,6 +74,13 @@ h1,h2,h3,h4,h5,h6,p,span,div,a,* {
     content: '';
 }
 
+.mt-10 {
+    margin-top: 6rem;
+}
+.mb-10 {
+    margin-bottom: 6rem;
+}
+
 .sidebar {
     position: fixed;
     height: 100vh;
@@ -2194,7 +2201,7 @@ body>#preview_widget {
 .btnTouch {
     position: fixed;
     width: auto;
-    padding: 16px 24px;
+    padding: 16px 24px 17px;
     font-size: 24px;
     font-weight: 700;
     background: #eb81e3;
@@ -2264,6 +2271,7 @@ body>#preview_widget>.plugin-widget-container {
 }
 .plugin-widget-container.contact_forms.form_1 .form-wrapper .title {
     font-size: 24px;
+    font-weight: 700;
     color: #fff;
 }
 .plugin-widget-container.contact_forms.form_1 .form-wrapper .description {
@@ -2447,7 +2455,7 @@ body>#preview_widget>.plugin-widget-container {
     justify-content: center;
 }
 .plugin-widget-container.contact_forms.form_3 h1 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 30px;
     margin-bottom: 8px;
     color: #263040;
@@ -2549,7 +2557,7 @@ body>#preview_widget>.plugin-widget-container {
     justify-content: center;
 }
 .plugin-widget-container.contact_forms.form_4 h1 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 30px;
     margin-bottom: 8px;
     color: #263040;
@@ -2611,12 +2619,162 @@ body>#preview_widget>.plugin-widget-container {
     margin-right: 8px;
 }
 
+
+.plugin-widget-container.lead_generation.form_3 .form-wrapper {
+    position: relative;
+}
+.plugin-widget-container.lead_generation.form_3 .form-wrapper .title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 35px;
+    left: -35px;
+    padding: 1.5rem 3.0rem;
+    z-index: 2;
+}
+.plugin-widget-container.lead_generation.form_3 .form-wrapper .description {
+    font-size: 14px;
+    color: #9747FF;
+    background: #F4F5F7;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin: 0;
+}
+.plugin-widget-container.lead_generation.form_3 .close-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 25px;
+    color: #A2ABBE;
+    background: #F4F5F7;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    padding: 2px 17px;
+}
+.plugin-widget-container.lead_generation.form_3 .form-container {
+    margin-top: 3.0rem;
+    margin-bottom: 3.0rem;
+}
+.plugin-widget-container.lead_generation.form_3 .form-group {
+    margin-bottom: 10px;
+}
+.plugin-widget-container.lead_generation.form_3 .form-group .form-control {
+    font-size: 14px;
+    color: #8790A0;
+    padding: 8px 20px;
+    box-shadow: none;
+    background: #F4F5F7;
+    border-radius: 0;
+}
+.plugin-widget-container.lead_generation.form_3 .form-group textarea.form-control {
+    height: 100px;
+    padding: 8px 20px;
+    resize: none;
+}
+.plugin-widget-container.lead_generation.form_3 .actions-area {
+    display: block;
+    margin-top: 1.0rem;
+}
+.plugin-widget-container.lead_generation.form_3 .btn-submit {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 0;
+}
+
+
+.plugin-widget-container.lead_generation.form_4 .form-wrapper {
+    position: relative;
+    background: url('/assets/images/signup/lead_generation/4_bg.svg') center/cover no-repeat;
+    border-radius: 3rem;
+}
+.plugin-widget-container.lead_generation.form_4 .form-wrapper .title {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #fff;
+    padding: 4px 8px;
+}
+.plugin-widget-container.lead_generation.form_4 .form-wrapper .sub-title {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+}
+.plugin-widget-container.lead_generation.form_4 .form-wrapper .description {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 1px 2px;
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+.plugin-widget-container.lead_generation.form_4 .close-button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 20px;
+    color: #24333b;
+    background: #F1EA7C;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 0px 10px;
+    display: block;
+    line-height: 24px;
+}
+.plugin-widget-container.lead_generation.form_4 .form-container {
+    margin-top: 3.0rem;
+    margin-bottom: 3.0rem;
+    padding: 0 2rem;
+}
+.plugin-widget-container.lead_generation.form_4 .form-group {
+    margin-bottom: 10px;
+}
+.plugin-widget-container.lead_generation.form_4 .form-group .form-control {
+    font-size: 14px;
+    color: #fff;
+    padding: 8px 20px;
+    box-shadow: none;
+    background: #FFFFFF63;
+    border-radius: 12px;
+}
+.plugin-widget-container.lead_generation.form_4 .form-group textarea.form-control {
+    height: 100px;
+    padding: 8px 20px;
+    resize: none;
+}
+.plugin-widget-container.lead_generation.form_4 .actions-area {
+    display: block;
+    margin-top: 1.0rem;
+}
+.plugin-widget-container.lead_generation.form_4 .btn-submit {
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 12px;
+    color: #263040;
+    background: #F1EA7C;
+}
+
+
 .plugin-widget-container.lead_generation.form_5 .form-wrapper {
     border-top: 10px solid #A0BE28;
     position: relative;
 }
 .plugin-widget-container.lead_generation.form_5 .form-wrapper .title {
     font-size: 36px;
+    font-weight: 700;
     color: #27383E;
     text-align: center;
 }
@@ -2663,6 +2821,74 @@ body>#preview_widget>.plugin-widget-container {
     width: 100%;
 }
 
+.plugin-widget-container.lead_generation.form_1 .form-wrapper {
+    position: relative;
+    border-radius: 24px;
+    background: #e7e5f2;
+}
+.plugin-widget-container.lead_generation.form_1 .form-wrapper .title {
+    font-size: 23px;
+    font-weight: 700;
+    color: #2d324a;
+    text-align: center;
+    width: 290px;
+    margin: auto;
+}
+.plugin-widget-container.lead_generation.form_1 .close-button {
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    font-size: 18px;
+    color: #2D324A;
+    cursor: pointer;
+    border: none;
+    padding: 0 12px;
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+.plugin-widget-container.lead_generation.form_1 .actions-area {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.plugin-widget-container.lead_generation.form_1 .btn {
+    background: #ffffff;
+    border-radius: 24px;
+    position: relative;
+    width: 170px;
+
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+
+    padding: 8px 1rem 8px 3rem;
+}
+.plugin-widget-container.lead_generation.form_1 .btn .desc {
+    color: #A3A6A9;
+    font-size: 10px;
+    display: block;
+    text-align: left;
+    padding-left: 4px;
+    padding-top: 1px;
+}
+.plugin-widget-container.lead_generation.form_1 .btn .label {
+    color: #232B31;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    display: block;
+    padding-left: 4px;
+}
+.plugin-widget-container.lead_generation.form_1 .btn:hover {
+}
+.plugin-widget-container.lead_generation.form_1 .btn img {
+    position: absolute;
+    left: 16px;
+    top: 10px;
+}
+
+
 .plugin-widget-container.join_newsletter.form_1 .form-wrapper {
     position: relative;
     border-radius: 24px;
@@ -2673,6 +2899,7 @@ body>#preview_widget>.plugin-widget-container {
 }
 .plugin-widget-container.join_newsletter.form_1 .form-wrapper .title {
     font-size: 36px;
+    font-weight: 700;
     color: #fff;
     text-align: center;
 }
@@ -2744,6 +2971,7 @@ body>#preview_widget>.plugin-widget-container {
 }
 .plugin-widget-container.join_newsletter.form_2 .form-wrapper .title {
     font-size: 30px;
+    font-weight: 700;
     color: #090919;
 }
 .plugin-widget-container.join_newsletter.form_2 .form-wrapper .description {
@@ -2808,6 +3036,7 @@ body>#preview_widget>.plugin-widget-container {
 }
 .plugin-widget-container.join_newsletter.form_3 .form-wrapper .title {
     font-size: 30px;
+    font-weight: 700;
     color: #090919;
 }
 .plugin-widget-container.join_newsletter.form_3 .form-wrapper .description {
@@ -2885,6 +3114,7 @@ body>#preview_widget>.plugin-widget-container {
 }
 .plugin-widget-container.join_newsletter.form_4 .form-wrapper .title {
     font-size: 30px;
+    font-weight: 700;
     color: #090919;
 }
 .plugin-widget-container.join_newsletter.form_4 .form-wrapper .description {
@@ -3277,11 +3507,6 @@ body>#preview_widget>.plugin-widget-container {
     content: "\e903";
 }
 .btnTouch .icon .bi-svg {
-    display: inline-block;
-    font-size: inherit;
-    width: 1em;
-    height: 1em;
-    margin: auto;
 }
 
 .leads-page .card {
