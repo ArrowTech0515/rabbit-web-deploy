@@ -89,6 +89,8 @@ if (typeof window.cdnUrl[getAppGuid()] === 'undefined') {
 
 if (location.toString().toLowerCase().indexOf("localhost:8080") !== -1) {
     window.apiUrl[getAppGuid()] = 'http://localhost:8080/';
+} else if (location.toString().toLowerCase().indexOf("https://rabbit-web-deploy.onrender.com/") !== -1) {
+    window.apiUrl[getAppGuid()] = 'https://www.rabbitseo.com/';
 }
 
 function preload(guid) {
@@ -231,7 +233,7 @@ function loadScript(src, guid, onLoad) {
     headTag.appendChild(jqTag);
 }
 function loadCss(href, guid) {
-    href = (isTestingMode() ? '/' : window.cdnUrl[guid]) + href;
+    href = href.indexOf("https://")>-1 ? href : (isTestingMode() ? '/' + href : window.cdnUrl[guid] + href)
     $('<link>')
         .appendTo('head')
         .attr({
