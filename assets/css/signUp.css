@@ -3392,7 +3392,8 @@ plugin-widget-container.leave_comment.form_1 {
     color: #24333b;
 }
 #thankYouModal .btn {
-    background: linear-gradient(327deg, #F093FB -28.54%, #F5576C 121.04%);
+    background: #F5576C;
+/*linear-gradient(327deg, #F093FB -28.54%, #F5576C 121.04%);*/
     color: #fff;
     border-radius: 30px;
     padding: 10px 24px;
