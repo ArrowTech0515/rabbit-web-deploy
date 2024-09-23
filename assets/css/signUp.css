@@ -1,14 +1,82 @@
 @font-face {
-    font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?qf5e3i');
-    src:  url('fonts/icomoon.eot?qf5e3i#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?qf5e3i') format('truetype'),
-    url('fonts/icomoon.woff?qf5e3i') format('woff'),
-    url('fonts/icomoon.svg?qf5e3i#icomoon') format('svg');
+    font-family: 'thanks_you_cover';
+    src:  url('fonts/thanks_you/icomoon.eot?fg94hm');
+    src:  url('fonts/thanks_you/icomoon.eot?fg94hm#iefix') format('embedded-opentype'),
+    url('fonts/thanks_you/icomoon.ttf?fg94hm') format('truetype'),
+    url('fonts/thanks_you/icomoon.woff?fg94hm') format('woff'),
+    url('fonts/thanks_you/icomoon.svg?fg94hm#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
 }
+
+@font-face {
+    font-family: 'leave_comment_template';
+    src:  url('fonts/leave_comment/icomoon.eot?5siv3f');
+    src:  url('fonts/leave_comment/icomoon.eot?5siv3f#iefix') format('embedded-opentype'),
+    url('fonts/leave_comment/icomoon.ttf?5siv3f') format('truetype'),
+    url('fonts/leave_comment/icomoon.woff?5siv3f') format('woff'),
+    url('fonts/leave_comment/icomoon.svg?5siv3f#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'request_quote_template';
+    src:  url('fonts/request_quote/icomoon.eot?qngp9o');
+    src:  url('fonts/request_quote/icomoon.eot?qngp9o#iefix') format('embedded-opentype'),
+    url('fonts/request_quote/icomoon.ttf?qngp9o') format('truetype'),
+    url('fonts/request_quote/icomoon.woff?qngp9o') format('woff'),
+    url('fonts/request_quote/icomoon.svg?qngp9o#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'support_ticket_template';
+    src:  url('fonts/support_ticket/icomoon.eot?9ie9ac');
+    src:  url('fonts/support_ticket/icomoon.eot?9ie9ac#iefix') format('embedded-opentype'),
+    url('fonts/support_ticket/icomoon.ttf?9ie9ac') format('truetype'),
+    url('fonts/support_ticket/icomoon.woff?9ie9ac') format('woff'),
+    url('fonts/support_ticket/icomoon.svg?9ie9ac#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'lead_generation_template';
+    src:  url('fonts/lead_generation/icomoon.eot?hom3kc');
+    src:  url('fonts/lead_generation/icomoon.eot?hom3kc#iefix') format('embedded-opentype'),
+    url('fonts/lead_generation/icomoon.ttf?hom3kc') format('truetype'),
+    url('fonts/lead_generation/icomoon.woff?hom3kc') format('woff'),
+    url('fonts/lead_generation/icomoon.svg?hom3kc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'join_newsletter_template';
+    src:  url('fonts/join_newsletter/icomoon.eot?72l5m6');
+    src:  url('fonts/join_newsletter/icomoon.eot?72l5m6#iefix') format('embedded-opentype'),
+    url('fonts/join_newsletter/icomoon.ttf?72l5m6') format('truetype'),
+    url('fonts/join_newsletter/icomoon.woff?72l5m6') format('woff'),
+    url('fonts/join_newsletter/icomoon.svg?72l5m6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: 'contact_forms_template';
+    src:  url('fonts/contact_forms/icomoon.eot?4fd9c7');
+    src:  url('fonts/contact_forms/icomoon.eot?4fd9c7#iefix') format('embedded-opentype'),
+    url('fonts/contact_forms/icomoon.ttf?4fd9c7') format('truetype'),
+    url('fonts/contact_forms/icomoon.woff?4fd9c7') format('woff'),
+    url('fonts/contact_forms/icomoon.svg?4fd9c7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
 @font-face {
     font-family: 'Wattauchimma';
     src: url('fonts/Wattauchimma.ttf') format('truetype');
@@ -3375,6 +3443,24 @@ plugin-widget-container.leave_comment.form_1 {
     justify-content: center;
     margin-bottom: 2rem;
 }
+#thankYouModal .cover-icon {
+    font-family: 'thanks_you_cover' !important;
+    font-size: 48px;
+
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#thankYouModal .cover-icon::before {
+    content: '\e900';
+}
 #thankYouModal h5 {
     font-size: 26px;
     font-weight: 700;
@@ -3393,7 +3479,7 @@ plugin-widget-container.leave_comment.form_1 {
 }
 #thankYouModal .btn {
     background: #F5576C;
-/*linear-gradient(327deg, #F093FB -28.54%, #F5576C 121.04%);*/
+    /*linear-gradient(327deg, #F093FB -28.54%, #F5576C 121.04%);*/
     color: #fff;
     border-radius: 30px;
     padding: 10px 24px;
@@ -3648,11 +3734,11 @@ plugin-widget-container.leave_comment.form_1 {
     content: "\f501";
 }
 .dataTables_wrapper .dt-buttons .dt-button {
-     border: 1px solid #737373;
-     background: transparent;
-     box-shadow: none;
-     border-radius: 20px;
- }
+    border: 1px solid #737373;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 20px;
+}
 .dataTables_wrapper .dt-buttons .button-custom {
     background: #fff;
     border-radius: 50%;
@@ -3673,21 +3759,61 @@ plugin-widget-container.leave_comment.form_1 {
 }
 
 .bi.bi-svg::before {
-    font-family: 'icomoon' !important;
     content: '';
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-.bi.bi-svg.bi-envelope-fill::before {
+
+.type-contact_forms.bi.bi-svg::before {
+    font-family: 'contact_forms_template' !important;
+}
+.type-join_newsletter.bi.bi-svg::before {
+    font-family: 'join_newsletter_template' !important;
+}
+.type-lead_generation.bi.bi-svg::before {
+    font-family: 'join_newsletter_template' !important;
+}
+.type-support_ticket.bi.bi-svg::before {
+    font-family: 'support_ticket_template' !important;
+}
+.type-request_quote.bi.bi-svg::before {
+    font-family: 'request_quote_template' !important;
+}
+.type-leave_comment.bi.bi-svg::before {
+    font-family: 'leave_comment_template' !important;
+}
+
+.bi.bi-svg.bi-mess-1::before {
     content: "\e900";
 }
-.bi.bi-svg.bi-tag-fill::before {
+.bi.bi-svg.bi-mess-2::before {
     content: "\e901";
 }
-.bi.bi-svg.bi-bookmark-fill::before {
+.bi.bi-svg.bi-mess-3::before {
     content: "\e902";
 }
 .bi.bi-svg.bi-mess-4::before {
     content: "\e903";
 }
+.bi.bi-svg.bi-mess-5::before {
+    content: "\e904";
+}
+.bi.bi-svg.bi-mess-6::before {
+    content: "\e905";
+}
+.bi.bi-svg.bi-mess-7::before {
+    content: "\e906";
+}
+
+
 .btnTouch .icon.bi-svg {
 }
 
