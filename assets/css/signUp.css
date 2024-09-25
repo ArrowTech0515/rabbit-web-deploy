@@ -4583,15 +4583,59 @@ plugin-widget-container.leave_comment.form_1 {
 .btnTouch .icon.bi-svg {
 }
 
+#my_submission_list {
+    min-height: 100vh;
+    overflow-y: auto;
+}
 .leads-page .card {
     background: #FFFFFF5C;
     box-shadow: 0px 40px 80px 0px #3949620A;
     border: none;
     border-radius: 36px;
+    margin-bottom: 1rem;
 }
-
 .leads-page .card .card-body {
     padding: 3rem;
+}
+.leads-page .card .card-body label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #8E91A5;
+}
+.leads-page .card .card-body h6 {
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #2D324A;
+}
+.leads-page .card .card-body .btn-remove {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    padding-top: 4px;
+    padding-left: 8px;
+    box-shadow: 0px 10.08px 21.6px -5.04px #828B9D2E;
+    cursor: pointer;
+}
+.leads-page .card .card-body .submission-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E7E5F2;
+    padding-bottom: 6px;
+}
+.leads-page .card .card-body .submission-content {
+    padding: 8px 0 0;
+}
+.leads-page .card .card-body .submission-content h6 {
+    font-size: 14px;
 }
 
 #submissionTable_wrapper h4 {
