@@ -95,8 +95,8 @@ if (location.toString().toLowerCase().indexOf("localhost:8080") !== -1) {
 
 function preload(guid) {
     if (typeof jQuery != 'undefined') {
-        console.log('timeout ------------ ', document.currentScript);      
-        onLoad(guid);  
+        console.log('timeout ------------ ', document.currentScript);
+        onLoad(guid);
     } else {
         setTimeout(preload.bind(null, guid), 1000);
     }

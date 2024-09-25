@@ -5272,16 +5272,26 @@ function getHoursDifference() {
 
 // query values - keywordResearch, title, metaDesc, landingPageText, titleAlternatives, metaDescAlternatives
 // If query is titleAlternatives or metaDescAlternatives, val should be the page url and add keyword too
-function getInsightsData(query, val, keyword) {
+function getInsightsData(query, val, keyword, func) {
     let result;
     $.ajax({
         type: 'POST',
         url: getApiUrl('getInsightsDataWebsite?query=' + query + '&val=' + val + '&keyword=' + keyword),
-        async: false,
-        success: function (result) {
-            if (result['data']) {
-                result = result['data'];
+        async: func!=null ? true : false,
+        success: function (res) {
+            if (res['data']) {
+                result = res['data'];
+
+                if (func)
+                    func(result);
+            } else {
+                if (func)
+                    func(result);
             }
+        },
+        error: function() {
+            if (func)
+                func(null);
         }
     });
     return result;
