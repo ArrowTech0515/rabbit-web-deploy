@@ -825,12 +825,12 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     font-weight: 900;
 }
 .card-notification p {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.01em;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    letter-spacing: 0.01em !important;
     text-align: left;
-    color: #2F596B;
+    color: #2F596B !important;
     margin: 0;
 }
 
@@ -2642,6 +2642,20 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     margin-bottom: 8px;
 }
 
+.plugin-widget-container .logo-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.0rem;
+    margin-bottom: 3.0rem;
+}
+.plugin-widget-container .logo-area.no-margin-top {
+    margin-top: 0;
+}
+.plugin-widget-container .logo-area.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+
 #edit-textarea {
     font-size: 14px;
     color: #000;
@@ -2720,18 +2734,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     width: 100%;
 }
 
-.plugin-widget-container.contact_forms.form_1 .logo-area {
-    display: flex;
-    justify-content: center;
-    margin-top: 3.0rem;
-}
-
-.plugin-widget-container.contact_forms.form_1 .logo-area span {
-    color: #c5c5c5;
-    font-size: 10px;
-    margin-top: 1px;
-    margin-right: 8px;
-}
 
 .plugin-widget-container.contact_forms.form_2 .form-wrapper {
     display: flex;
@@ -2818,19 +2820,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     font-size: 32px;
     color: #6c757d;
     cursor: pointer;
-}
-
-.plugin-widget-container.contact_forms.form_2 .logo-area {
-    display: flex;
-    justify-content: center;
-    margin-top: 3.0rem;
-}
-
-.plugin-widget-container.contact_forms.form_2 .logo-area span {
-    color: #c5c5c5;
-    font-size: 10px;
-    margin-top: 1px;
-    margin-right: 8px;
 }
 
 .plugin-widget-container.contact_forms.form_3 .form-wrapper {
@@ -2953,19 +2942,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     cursor: pointer;
 }
 
-.plugin-widget-container.contact_forms.form_3 .logo-area {
-    display: flex;
-    justify-content: center;
-    margin-top: 3.0rem;
-}
-
-.plugin-widget-container.contact_forms.form_3 .logo-area span {
-    color: #c5c5c5;
-    font-size: 10px;
-    margin-top: 1px;
-    margin-right: 8px;
-}
-
 .plugin-widget-container.contact_forms.form_4 .form-wrapper {
     display: flex;
     background-color: #f8f9fa;
@@ -3052,20 +3028,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     color: #d1d1d1;
     cursor: pointer;
 }
-
-.plugin-widget-container.contact_forms.form_4 .logo-area {
-    display: flex;
-    justify-content: center;
-    margin-top: 3.0rem;
-}
-
-.plugin-widget-container.contact_forms.form_4 .logo-area span {
-    color: #c5c5c5;
-    font-size: 10px;
-    margin-top: 1px;
-    margin-right: 8px;
-}
-
 
 .plugin-widget-container.lead_generation.form_3 .form-wrapper {
     position: relative;
@@ -4087,6 +4049,9 @@ plugin-widget-container.leave_comment.form_1 {
 
     border-radius: 32px;
     white-space: nowrap;
+
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
 }
 
 
@@ -4236,8 +4201,9 @@ plugin-widget-container.leave_comment.form_1 {
 }
 
 #publishSuccessModal .modal-content {
-    border-radius: 20px;
+    border-radius: 48px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     border: 12px solid #ffffff33;
 }
 
@@ -4974,20 +4940,16 @@ body > #preview_widget {
     position: fixed;
     z-index: 10001;
 }
-
 body > #preview_widget > .plugin-widget-container {
-    transform: translate(-50%, -50%) !important;
+    transform: translate(-50%, -50%);
     max-width: 62%;
 }
-
 body > #preview_widget > .plugin-widget-container.lead_generation.form_3 .close-button {
     padding: 4px 17px;
 }
-
 body > #thankYouModal {
     z-index: 10002;
 }
-
 body > #preview_widget > .plugin-widget-container .form-control {
     pointer-events: auto;
 }
