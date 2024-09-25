@@ -895,6 +895,9 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     display: flex;
     align-items: center;
 }
+.header-container .top-right-avatar>div:last-child {
+    line-height: 0;
+}
 
 .header-container .top-right-avatar .icon-toolbar {
     margin-right: 6px;
@@ -4245,6 +4248,39 @@ plugin-widget-container.leave_comment.form_1 {
     color: #fff;
 }
 
+
+#successModal .icon-container img {
+    width: 130px; /* Adjust size as needed */
+}
+#successModal .modal-content {
+    border-radius: 48px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 12px solid #ffffff33;
+}
+#successModal .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #2d324a;
+}
+#successModal .close {
+    color: #8e91a5;
+}
+#successModal .btn-outline-secondary {
+    border-radius: 26px;
+    padding: 10px 26px;
+    border-color: #e7e5f2;
+    color: #2d324a;
+    font-size: 12px;
+    height: 40px;
+    margin-top: 20px;
+}
+#successModal .btn-outline-secondary:hover {
+    color: #fff;
+}
+
+
 #limitReachedModal .icon-container img {
 }
 
@@ -4979,6 +5015,140 @@ plugin-widget-container.leave_comment.form_1 {
     font-size: 0.9rem;
 }
 
+.modal-psw .modal-content {
+    border-radius: 48px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 12px solid #ffffff33;
+}
+.modal-psw .modal-header .close {
+    margin: -40px -15px -25px auto;
+    color: #8e91a5;
+}
+.modal-psw .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #2D324A;
+}
+.modal-psw .btn {
+    border: 1px solid #e7e5f2;
+    border-radius: 36px;
+    outline: none;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #2D324A;
+    padding: 0 20px;
+}
+.modal-psw .btn:hover {
+    background-color: transparent;
+    color: #F5576C;
+}
+.modal-psw .btn.action-do {
+    color: #F5576C;
+}
+.modal-psw .form-wrapper {
+    padding: 0 6px;
+}
+.modal-psw .form-wrapper p.desc {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: right;
+    color: #8E91A5;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+.modal-psw .form-wrapper p.info {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    color: #2F596B;
+    background: #8FD3F429;
+
+    position: relative;
+    padding: 12px 24px 12px 40px;
+    border-radius: 16px;
+
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.modal-psw .form-wrapper p.info .icon {
+    position: absolute;
+    font-size: 14px;
+    left: 18px;
+    top: 10px;
+}
+.modal-psw .form-wrapper p.desc .btn-forgot {
+    color: #F5576C;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.modal-psw .form-wrapper p.desc .btn-forgot:hover {
+    text-decoration: none;
+}
+.modal-psw .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.modal-psw .form-group .control-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #8E91A5;
+    margin-bottom: 8px;
+}
+.modal-psw .form-group .form-control-wrapper {
+    position: relative;
+    margin-bottom: 4px;
+}
+.modal-psw .form-group .form-control-wrapper .toggle-icon {
+    position: absolute;
+    background: url('/assets/images/signup/icons/show.svg') center/contain no-repeat;
+    width: 24px;
+    height: 24px;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+    display: none;
+}
+.modal-psw .form-group .form-control-wrapper .toggle-icon.show {
+    background: url('/assets/images/signup/icons/hide.svg') center/contain no-repeat;
+}
+.modal-psw .form-group .form-control {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #434A63;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #E7E5F2;
+    border-radius: 24px;
+    padding: 12px 60px 12px 24px;
+}
+.modal-psw .form-group .form-control:focus {
+    border-color: #434A63;
+}
+.modal-psw .form-group .form-control:focus+.toggle-icon {
+    display: block;
+}
+.modal-psw .form-group .form-control+.toggle-icon.show {
+    display: block;
+}
 
 body > #preview_widget {
     position: fixed;

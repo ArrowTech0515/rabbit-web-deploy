@@ -258,9 +258,13 @@
                             <form class="mt-4" id="updateAccountDetailsUser" method="post">
                                 <h4>Personal Information</h4>
                                 <div class="row form-group">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <label for="">Your Full Name</label>
                                         <input type="text" name="firstName" class="form-control" value="">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="">Phone Number</label>
+                                        <input type="tel" name="phone" class="form-control" value="">
                                     </div>
                                 </div>
                                 <div class="row form-group">
@@ -271,12 +275,6 @@
                                     <div class="col-md-6">
                                         <label for="">Company Name</label>
                                         <input type="text" name="name" class="form-control" value="">
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <div class="col-md-6">
-                                        <label for="">Phone Number</label>
-                                        <input type="tel" name="phone" class="form-control" value="">
                                     </div>
                                 </div>
                                 <!--
@@ -290,14 +288,11 @@
                                                                                     </div>
                                                                                 </div>
                                 -->
-                                <div class="form-group mt-4">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <button type="button" class="btn btn-link danger delete-btn">Delete My Account</button>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                            <button type="button"  class="btn btn-link primary save-btn">Save Changes</button>
-                                        </div>
+                                <div class="row form-group mt-4">
+                                    <div class="col-md-6">
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <button type="button"  class="btn btn-link primary save-btn">Save Changes</button>
                                     </div>
                                 </div>
                             </form>
@@ -310,7 +305,16 @@
                                         <input type="email" name="email" class="form-control" value="">
                                     </div>
                                     <div class="col-md-6 text-right" style="padding-top: 30px;">
-                                        <button type="button" class="btn btn-link primary save-btn">Save Changes</button>
+                                        <button class="btn btn-outline-secondary change-password">Change Password</button>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group mt-4">
+                                    <div class="col-md-6">
+                                        <button type="button" class="btn btn-link danger delete-btn">Delete My Account</button>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <button type="button"  class="btn btn-link primary save-btn">Save Changes</button>
                                     </div>
                                 </div>
                             </form>
@@ -3656,6 +3660,99 @@
                     <button type="button" class="btn btn-outline-secondary action-cancel" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-outline-secondary action-do">Cancel</button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="icon-container">
+                    <img src="/assets/images/signup/check.png" alt="Success Icon">
+                </div>
+                <h5 class="modal-title mb-5">Your Plugin Published Successful!</h5>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-outline-secondary">Go to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-psw" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-psw modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <h5 class="modal-title mb-3">Change Password</h5>
+                <form id="updateAccountCredentialsUser">
+                <div class="form-wrapper">
+                    <div class="form-group">
+                        <label class="control-label">Enter Current Password</label>
+                        <div class="form-control-wrapper">
+                            <input class="form-control" type="password" name="oldPassword" id="E_current_password">
+                            <span class="toggle-icon"></span>
+                        </div>
+                        <p class="desc">Forgot your password? <a class="btn-forgot">Click here</a></p>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Enter New Password</label>
+                        <div class="form-control-wrapper">
+                            <input class="form-control" type="password" name="password" id="E_new_password">
+                            <span class="toggle-icon"></span>
+                        </div>
+                        <p class="info"><span class="icon"><i class="bi bi-info-circle"></i></span> The password must contain at least one uppercase letter and a number</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Confirm Password</label>
+                        <div class="form-control-wrapper">
+                            <input class="form-control" type="password" name="confirmPassword" id="E_confirm_password">
+                            <span class="toggle-icon"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between actions-wrapper" style="height: 38px; margin-top: 3rem;">
+                    <button type="button" class="btn btn-outline-secondary action-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-outline-secondary action-do">Change Password</button>
+                </div>
+                    <input type="hidden" name="email" value="">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-psw" id="passwordRecoveryModal" tabindex="-1" aria-labelledby="passwordRecoveryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <h5 class="modal-title mb-3">Password recovery</h5>
+                    <div class="form-wrapper">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                                <input class="form-control" type="email" name="email" id="E_email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center actions-wrapper" style="height: 38px; margin-top: 3rem;">
+                        <button type="button" class="btn btn-outline-secondary action-do">Recover my password</button>
+                    </div>
             </div>
         </div>
     </div>
