@@ -3048,16 +3048,17 @@ function refreshUserDetailsSync() {
     $.ajaxSetup({async: true});
 }
 
-function saveFormAndRefreshDetails(btn) {
-    saveForm(btn);
+function saveFormAndRefreshDetails(btn, showModal, func) {
+    saveForm(btn, func);
     $('#settingModalContent').remove();
-    fadeModalWithTime("", "Details Successfully Updated", 2000, true);
+    if (showModal==null || showModal===true)
+        fadeModalWithTime("", "Details Successfully Updated", 2000, true);
     setTimeout(function () {
         refreshUserDetails();
     }, 1000);
 }
 
-function saveForm(btn) {
+function saveForm(btn, func) {
     var form = $(btn).closest('form');
     let formId = form.attr("id");
     console.log("form id " + formId);
@@ -3076,10 +3077,19 @@ function saveForm(btn) {
             console.log('success ' + JSON.stringify(result));
             if (result.status && result.status != 'true') {
                 showModal("Message", result.status, "Close", "");
+
+                if (func!=null)
+                    func(result.status);
             } else {
                 refreshUserDetails();
                 $(responseDiv).show();
+                if (func!=null)
+                    func("");
             }
+        },
+        error: function() {
+            if (func!=null)
+                func(null);
         },
         complete: function (result) {
             // console.log('complete ' + JSON.stringify(result));
