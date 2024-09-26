@@ -2417,7 +2417,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 .widget-area .icon-group-container .icon-group {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
+    flex-flow: wrap;
 }
 
 .widget-area .icon-group-container .icon-group .icon-btn {
@@ -2610,11 +2611,22 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 }
 
 .plugin-widget-container select.form-control {
+    /*
     background-image: url(/assets/images/signup/icons/caret.svg);
     background-position: right 16px center;
     background-repeat: no-repeat;
     background-size: 12px 12px !important;
+    */
     padding-right: 30px !important;
+}
+.plugin-widget-container .form-group:has(select.form-control)::after {
+    font-family: bootstrap-icons !important;
+    content: "\F282";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    font-size: 14px;
+    transform: translate(0, -50%);
 }
 
 .plugin-widget-container .form-container .actions-area {
@@ -3460,7 +3472,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 
 .plugin-widget-container.join_newsletter.form_2 .form-custom-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: baseline;
     margin-top: -1rem;
 }
@@ -3628,10 +3640,10 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 
 .plugin-widget-container.join_newsletter.form_4 .close-button {
     position: absolute;
-    top: -5px;
-    right: 10px;
+    top: 0px;
+    right: 14px;
     font-size: 24px;
-    color: #090919;
+    color: #777777;
     cursor: pointer;
 }
 
@@ -4577,7 +4589,7 @@ plugin-widget-container.leave_comment.form_1 {
 }
 
 .type-lead_generation.bi.bi-svg::before {
-    font-family: 'join_newsletter_template' !important;
+    font-family: 'lead_generation_template' !important;
 }
 
 .type-support_ticket.bi.bi-svg::before {
