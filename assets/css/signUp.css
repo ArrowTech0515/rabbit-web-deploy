@@ -814,7 +814,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     background: #8FD3F429;
     border-radius: 20px;
     position: relative;
-    padding: 1rem 1rem 1rem 3rem !important
+    padding: 1rem 1rem 1rem 3rem !important;
+    display: none;
 }
 .card-notification .icon {
     position: absolute;
