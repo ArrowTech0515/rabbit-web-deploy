@@ -2519,7 +2519,16 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     color: #8e91a5;
     font-weight: 700;
 }
-
+.widget-area .fields-container .table td.cell-name ul.sub-fields {
+    list-style: auto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #8E91A5;
+    margin-top: 6px;
+}
 .widget-area .fields-container .table td, .widget-area .fields-container .table th {
     border-bottom: none;
     padding: 6px 2px;
@@ -2779,25 +2788,25 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 .plugin-widget-container.contact_forms.form_2 .form-control {
     padding: 8px 20px;
     border: 1px solid #F2F3F4;
-    background: #F2F3F4;
+    background-color: #F2F3F4;
     font-size: 12px;
     border-radius: 24px;
 }
 
 .plugin-widget-container.contact_forms.form_2 .form-control:focus {
-    background: #fff;
+    background-color: #fff;
 }
 
 .plugin-widget-container.contact_forms.form_2 textarea.form-control {
     height: 100px;
-    background: #F2F3F4;
+    background-color: #F2F3F4;
     border: 1px solid #F2F3F4;
     padding: 8px 20px;
     resize: none;
 }
 
 .plugin-widget-container.contact_forms.form_2 textarea.form-control:focus {
-    background: #fff;
+    background-color: #fff;
 }
 
 .plugin-widget-container.contact_forms.form_2 .actions-area {
@@ -2911,7 +2920,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     font-size: 12px;
     font-style: italic;
     font-weight: 500;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
 }
 
@@ -2963,6 +2972,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     background-repeat: no-repeat;
     width: 50%;
     background-color: #ffd700;
+    position: relative;
 }
 
 .plugin-widget-container.contact_forms.form_4 .contact-form {
@@ -2978,8 +2988,10 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     font-size: 30px;
     margin-bottom: 8px;
     color: #263040;
-    text-align: center;
     margin-top: 12%;
+    text-align: left;
+    margin-top: 12%;
+    padding-left: 45%;
 }
 
 .plugin-widget-container.contact_forms.form_4 .editable-area {
@@ -2989,17 +3001,23 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     font-size: 14px;
     color: #6c757d;
     line-height: 24px;
+    text-align: left;
+    padding-left: 46%;
+    bottom: 12%;
     position: absolute;
-    right: 57%;
-    bottom: 13%;
+    left: 0;
 }
 
 .plugin-widget-container.contact_forms.form_4 .form-control {
     padding: 8px 20px;
     border: 1px solid #414141;
     font-size: 12px;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.02em;
 }
 
 .plugin-widget-container.contact_forms.form_4 textarea.form-control {
@@ -3058,7 +3076,11 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     padding: 2rem 2rem;
     margin: 0;
 }
-
+.plugin-widget-container.lead_generation.form_3 .logo-area {
+    background: #F4F5F7;
+    margin: 0;
+    padding-bottom: 3rem;
+}
 .plugin-widget-container.lead_generation.form_3 .close-button {
     position: absolute;
     top: 0px;
@@ -3086,7 +3108,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     color: #8790A0;
     padding: 8px 20px;
     box-shadow: none;
-    background: #F4F5F7;
+    background-color: #F4F5F7;
     border-radius: 0;
 }
 
@@ -3175,7 +3197,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     color: #fff;
     padding: 8px 20px;
     box-shadow: none;
-    background: #FFFFFF63;
+    background-color: #FFFFFF63;
     border-radius: 12px;
 }
 
@@ -3290,51 +3312,21 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     width: 36px;
     height: 36px;
 }
+.plugin-widget-container.lead_generation.form_1 .close-button.medium {
+    font-size: 24px;
+    top: 0px;
+    right: 4px;
+}
+.plugin-widget-container.lead_generation.form_1 .close-button.large {
+    font-size: 32px;
+    top: -6px;
+    right: 6px;
+}
 
 .plugin-widget-container.lead_generation.form_1 .actions-area {
     display: flex;
-    gap: 1rem;
+    gap: 0rem;
     justify-content: center;
-}
-
-.plugin-widget-container.lead_generation.form_1 .btn {
-    background: #ffffff;
-    border-radius: 24px;
-    position: relative;
-    width: 170px;
-
-    cursor: pointer;
-    box-shadow: none;
-    outline: none;
-
-    padding: 8px 1rem 8px 3rem;
-}
-
-.plugin-widget-container.lead_generation.form_1 .btn .desc {
-    color: #A3A6A9;
-    font-size: 10px;
-    display: block;
-    text-align: left;
-    padding-left: 4px;
-    padding-top: 1px;
-}
-
-.plugin-widget-container.lead_generation.form_1 .btn .label {
-    color: #232B31;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: left;
-    display: block;
-    padding-left: 4px;
-}
-
-.plugin-widget-container.lead_generation.form_1 .btn:hover {
-}
-
-.plugin-widget-container.lead_generation.form_1 .btn img {
-    position: absolute;
-    left: 16px;
-    top: 10px;
 }
 
 
@@ -3472,6 +3464,9 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     align-items: baseline;
     margin-top: -1rem;
 }
+.plugin-widget-container.join_newsletter.form_2 .form-custom-wrapper .form-group {
+    margin-right: 1rem;
+}
 
 .plugin-widget-container.join_newsletter.form_2 .form-group {
     margin-bottom: 10px;
@@ -3486,7 +3481,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     border-left: none;
     border-top: none;
     border-right: none;
-    background: transparent;
+    background-color: transparent;
     width: 100%;
 }
 
@@ -3513,7 +3508,9 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 .plugin-widget-container.join_newsletter.form_3 .form-wrapper {
     position: relative;
     background: url('/assets/images/signup/join_newsletter/3_bg.svg') center/cover no-repeat;
+    border-radius: 20px;
 }
+
 
 .plugin-widget-container.join_newsletter.form_3 .form-wrapper .cover-icon {
     color: #ee609c;
@@ -3521,16 +3518,19 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 }
 
 .plugin-widget-container.join_newsletter.form_3 .form-wrapper .title {
-    font-size: 30px;
-    font-weight: 700;
-    color: #090919;
+    color: #fff;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 41.4px;
 }
 
 .plugin-widget-container.join_newsletter.form_3 .form-wrapper .description {
-    font-size: 16px;
-    color: #7A7A83;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.01em;
 }
-
 .plugin-widget-container.join_newsletter.form_3 .close-button {
     position: absolute;
     top: -12px;
@@ -3559,9 +3559,16 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 .plugin-widget-container.join_newsletter.form_3 .form-group {
     margin-bottom: 10px;
 }
-
+.plugin-widget-container.join_newsletter.form_3 .form-custom-wrapper .form-group {
+    margin-right: 1rem;
+}
 .plugin-widget-container.join_newsletter.form_3 .form-group .form-control {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
     color: #fff;
     padding: 8px 20px;
     box-shadow: none;
@@ -3569,7 +3576,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     border-left: none;
     border-top: none;
     border-right: none;
-    background: transparent;
+    background-color: transparent;
     width: 100%;
     border-radius: 0;
 }
@@ -3580,12 +3587,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     resize: none;
 }
 
-.plugin-widget-container.join_newsletter.form_3 .form-group .form-control::placeholder,
-.plugin-widget-container.join_newsletter.form_3 .form-group .form-control::-moz-placeholder,
-.plugin-widget-container.join_newsletter.form_3 .form-group .form-control::-ms-input-placeholder {
-    color: #e2e2e2;
-}
-
 .plugin-widget-container.join_newsletter.form_3 .actions-area {
     display: block;
     margin-top: 3.0rem;
@@ -3594,11 +3595,15 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 .plugin-widget-container.join_newsletter.form_3 .btn-submit {
     background: #fff;
     color: #E1774D;
-    font-size: 16px;
-    padding: 0 24px;
+    padding: 0 36px;
     width: 100%;
-    border-radius: 24px;
+    border-radius: 36px;
     height: 40px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
 }
 
 .plugin-widget-container.join_newsletter.form_4 .form-wrapper {
@@ -4099,7 +4104,7 @@ plugin-widget-container.leave_comment.form_1 {
     font-size: 14px;
     font-weight: 300;
     line-height: 21px;
-    max-width: 60%;
+    max-width: 80%;
 }
 
 .plugin-widget-container.request_quote.form_3 .form-container {
