@@ -5185,3 +5185,54 @@ body > .thankYouModal {
 body > #preview_widget > .plugin-widget-container .form-control {
     pointer-events: auto;
 }
+
+
+.modal.modal-1 .modal-content {
+    border-radius: 48px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 12px solid #ffffff33;
+}
+.modal.modal-1 .modal-header {
+    border-bottom: none;
+}
+.modal.modal-1 .modal-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+}
+.modal.modal-1 .modal-body {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    padding: 1rem 2rem 2rem;
+}
+.modal.modal-1 .modal-footer {
+    border-top: none;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.modal.modal-1 .modal-footer .btn {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    box-shadow: none;
+    background: transparent;
+    color: #2D324A;
+    border-radius: 24px;
+    padding: 6px 18px;
+    border: 1px solid #E7E5F2;
+}
+.modal.modal-1 .modal-footer .btn:hover {
+    border-color: #2D324A;
+}
+.modal.modal-1 .modal-footer .btn-primary {
+    color: #F5576C;
+}
+.modal.modal-1 .modal-footer .btn-primary:hover {
+    border-color: #F5576C;
+}

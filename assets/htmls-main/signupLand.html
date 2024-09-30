@@ -3581,6 +3581,57 @@
     </div>
 </div>
 
+<div id="modalMessage" class="modal fade modal-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        onclick="$('#modalMessage').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="modalFirstButton" type="button" class="btn btn-secondary btn-lg pageBtn"
+                        onclick="$('#modalMessage').modal('hide');">Close
+                </button>
+                <a id="modalConfirmBtn" style="cursor: pointer; display: none" class="btn pageBtn btn-primary">Yes</a>
+                <button id="modalSecondButton" type="button" class="btn btn-primary btn-lg pageBtn">Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="paymentModal" class="modal fade modal-1" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 30%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    New Payment
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#paymentModal').modal('hide');">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="createNewPayment">
+                    <input type="hidden" class="userId" name="payerId">
+                    <div class="settingForm">
+                        <div id="generalPayment" class="row">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="paymentStatus" />
+            <div class="modal-footer">
+                <button type="button" onclick="$('#paymentStatus').html(ajaxSubmitForm('createNewPayment'))" class="btn btn-primary btn-lg pageBtn">Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="publishSuccessModal" tabindex="-1" aria-labelledby="publishSuccessModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
