@@ -524,80 +524,91 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     left: 330px;
     transform: translateY(10px); /* Adds a small offset */
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     background-color: #f9f9fb;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0px 14px 60px 0px #0B131A0A;
     z-index: 1050; /* Ensures it appears above other elements */
 }
-
 #codeIntegrationDialog .code-integration-header {
-    background-color: #eaf4ff;
+    background: #8FD3F44D;
     padding: 10px 15px;
-    border-radius: 8px;
+    border-radius: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
-
 #codeIntegrationDialog .code-integration-header p {
+    color: #2F596B;
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
     margin: 0;
-    color: #2a76d2;
-    font-size: 1rem;
-    font-weight: 500;
+    padding: 0 6px;
 }
-
+#codeIntegrationDialog .code-integration-header p .bi {
+    font-size: 14px;
+    margin-right: 4px;
+}
 #codeIntegrationDialog .close-btn {
     background: transparent;
     border: none;
-    color: #888;
+    color: #2F596B;
     font-size: 1.2rem;
+    position: absolute;
+    right: 12px;
+    top: 1px;
 }
-
 #codeIntegrationDialog .code-snippet {
-    background-color: #f3f4f6;
-    border-radius: 8px;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px 0;
-    font-family: 'Courier New', Courier, monospace;
 }
-
 #codeIntegrationDialog .code-snippet code {
+    background: #E7E5F266;
+    border: 1px solid #EAEAED;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
     margin: 0;
-    font-size: 0.9rem;
-    color: #333;
-    max-width: calc(100% - 100px);
+    color: #2D324A;
+    padding: 12px 24px;
+
+    max-width: calc(100% - 120px);
     word-break: break-all;
 }
-
 #codeIntegrationDialog .copy-btn {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.5px;
+
     background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 5px 15px;
-    font-size: 1rem;
-    color: #333;
-    display: flex;
-    align-items: center;
+    border: 1px solid #E1E4E8;
+    border-radius: 36px;
+    padding: 10px 15px;
+    color: #2D324A;
 }
-
-#codeIntegrationDialog .copy-btn span {
-    margin-top: 2px;
-    margin-right: 4px;
-}
-
 #codeIntegrationDialog .copy-btn svg {
     margin-right: 5px;
+    vertical-align: top;
+    margin-top: 2px;
 }
-
 #codeIntegrationDialog .code-footer {
-    color: #888;
-    font-size: 0.9rem;
-    margin-top: 5px;
+    color: #828B9D;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin: 5px 0px 0 8px;
 }
 
 .header-container .page-title {
