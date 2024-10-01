@@ -570,6 +570,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     margin: 0;
     font-size: 0.9rem;
     color: #333;
+    max-width: calc(100% - 100px);
+    word-break: break-all;
 }
 
 #codeIntegrationDialog .copy-btn {
@@ -669,6 +671,9 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     font-size: 16px;
     font-weight: 700;
     color: #1C2028;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .profile-details p {
@@ -1628,6 +1633,10 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
 .settings-account .avatar-section .change-avatar-btn {
     border: 1px solid #8E91A5;
     color: #2D324A;
+    box-shadow: none;
+}
+.settings-account .avatar-section .change-avatar-btn:hover {
+    color: #fff;
 }
 
 .settings-account .btn-link {
@@ -4486,7 +4495,7 @@ plugin-widget-container.leave_comment.form_1 {
 #membership-upgrade-alert h2 {
     font-size: 16px;
     color: #fff;
-    margin: 6px 4rem 0 0;
+    margin: 4px 4rem 4px 0;
 }
 
 #membership-upgrade-alert .btn {
@@ -5236,3 +5245,4 @@ body > #preview_widget > .plugin-widget-container .form-control {
 .modal.modal-1 .modal-footer .btn-primary:hover {
     border-color: #F5576C;
 }
+
