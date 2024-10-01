@@ -4467,6 +4467,7 @@ plugin-widget-container.leave_comment.form_1 {
 
 .table-wrapper .dataTable.no-footer {
     border-bottom: 1px solid #e7e5f2;
+    width: 100% !important;
 }
 
 .table-wrapper .dataTables_info {
@@ -4483,6 +4484,41 @@ plugin-widget-container.leave_comment.form_1 {
 
 .table-wrapper .dataTables_wrapper div.dt-buttons {
     float: right;
+}
+
+.table-wrapper .dataTable>tbody>tr.child ul.dtr-details {
+    width: 100%;
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-title {
+    font-size: 12px;
+    padding: 10px 8px;
+    color: #8E91A5;
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-title ~ .dtr-data:has(.dropdown) {
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-data .dropdown {
+
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-data .dropdown .bi-three-dots-vertical {
+    display: none;
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-data .dropdown .dropdown-menu {
+    position: relative !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    background: transparent;
+    border: none;
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-data .dropdown .dropdown-menu .dropdown-item {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-data .dropdown .dropdown-menu .dropdown-item.dropdown-w-25 {
+    width: 25% !important;
+}
+.table-wrapper .dataTable>tbody>tr.child span.dtr-data .dropdown .dropdown-menu .dropdown-item.action-delete span {
+    border: none !important;
 }
 
 #membership-upgrade-alert {
@@ -4711,37 +4747,6 @@ plugin-widget-container.leave_comment.form_1 {
     float: left;
     margin-bottom: 2rem;
 }
-
-@media (max-width: 1820px) {
-    #my_widget_table thead th:nth-child(8), #my_widget_table tbody td:nth-child(8) {
-        display: none;
-    }
-}
-
-@media (max-width: 1680px) {
-    #my_widget_table thead th:nth-child(7), #my_widget_table tbody td:nth-child(7) {
-        display: none;
-    }
-}
-
-@media (max-width: 1540px) {
-    #my_widget_table thead th:nth-child(6), #my_widget_table tbody td:nth-child(6) {
-        display: none;
-    }
-}
-
-@media (max-width: 1430px) {
-    #my_widget_table thead th:nth-child(5), #my_widget_table tbody td:nth-child(5) {
-        display: none;
-    }
-}
-
-@media (max-width: 1330px) {
-    #my_widget_table thead th:nth-child(1), #my_widget_table tbody td:nth-child(1) {
-        display: none;
-    }
-}
-
 
 #popupModal .icon-container img {
 }
