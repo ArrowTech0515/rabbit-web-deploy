@@ -4646,7 +4646,10 @@ function applyBaseCDN() {
 }
 
 function isTestingMode() {
-    return location.toString().toLowerCase().indexOf("rabbitweb.test") !== -1 || location.toString().toLowerCase().indexOf(":8080") !== -1;
+    return location.toString().toLowerCase().indexOf("rabbitweb.test") !== -1 ||
+        location.toString().toLowerCase().indexOf("https://rabbit-web-deploy.onrender.com") !== -1 ||
+        location.toString().toLowerCase().indexOf("127.0.0.1") !== -1 ||
+        location.toString().toLowerCase().indexOf("localhost") !== -1;
 }
 
 function isStagingMode() {
