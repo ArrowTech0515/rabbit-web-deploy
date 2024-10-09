@@ -266,7 +266,7 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
     align-items: center;
 }
 .sidebar .logo {
-    margin-bottom: 20px;
+    margin-bottom: 4rem;
 }
 .sidebar .nav-item {
     width: 100%;
@@ -470,7 +470,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .content .page-wrapper {
     background: #fff;
     border-radius: 1.5rem;
-    padding: 3rem;
+    padding: 3rem 4rem;
 }
 .content .page-wrapper .page_title {
     font-size: 22px;
@@ -541,8 +541,12 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     background: #fff;
 }
 .welcome-page .top-nav .code-integration-btn:hover {
-    color: #24333b;
+    color: #4D5960;
 }
+.welcome-page .top-nav .code-integration-btn:focus {
+    color: #0F181C;
+}
+
 .welcome-page .top-nav .rate-us-btn {
     color: #fff;
     background: #24333b;
@@ -558,6 +562,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .welcome-page .dashboard-area .card {
     border-radius: 20px;
     margin-bottom: 1.5rem;
+    border-color: #EDEEF0;
 }
 .welcome-page .dashboard-area .card-header {
     display: flex;
@@ -566,6 +571,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 12px 30px;
+    border-color: #EDEEF0;
 }
 .welcome-page .dashboard-area .card-header h2 {
     font-size: 16px;
@@ -765,6 +771,21 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     margin-top: 60px;
     background: transparent !important;
 }
+
+.account-page .menu-content-profile .password-btn {
+    border: 1px solid #EDEEF0;
+    color: #2D324A;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    box-shadow: none;
+    background: transparent;
+    padding: 15px;
+}
+.account-page .menu-content-profile .password-btn:hover {
+    border-color: #2D324A;
+}
+
 .account-page .menu-content-profile .avatar-section .change-avatar-btn {
     border: 1px solid #EDEEF0;
     color: #2D324A;
@@ -776,6 +797,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .account-page .menu-content-profile .avatar-section .change-avatar-btn:hover {
     border-color: #2D324A;
 }
+
 .account-page .menu-content-profile .form-group {
     margin-bottom: 1rem;
 }
@@ -4882,4 +4904,268 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 }
 #popupModal .btn.action-do {
     color: #F5576C;
+}
+
+
+.modal-psw .modal-content {
+    border-radius: 48px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 12px solid #ffffff33;
+}
+.modal-psw .modal-header .close {
+    margin: -40px -15px -25px auto;
+    color: #8e91a5;
+}
+.modal-psw .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #2D324A;
+}
+.modal-psw .btn {
+    border: 1px solid #e7e5f2;
+    border-radius: 36px;
+    outline: none;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #2D324A;
+    padding: 0 20px;
+}
+.modal-psw .btn:hover {
+    background-color: transparent;
+    color: #F5576C;
+}
+.modal-psw .btn.action-do {
+    color: #F5576C;
+}
+.modal-psw .form-wrapper {
+    padding: 0 6px;
+}
+.modal-psw .form-wrapper p.desc {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: right;
+    color: #8E91A5;
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+.modal-psw .form-wrapper p.info {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    color: #2F596B;
+    background: #8FD3F429;
+
+    position: relative;
+    padding: 12px 24px 12px 40px;
+    border-radius: 16px;
+
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.modal-psw .form-wrapper p.info .icon {
+    position: absolute;
+    font-size: 14px;
+    left: 18px;
+    top: 10px;
+}
+.modal-psw .form-wrapper p.desc .btn-forgot {
+    color: #F5576C;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.modal-psw .form-wrapper p.desc .btn-forgot:hover {
+    text-decoration: none;
+}
+.modal-psw .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.modal-psw .form-group .control-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #8E91A5;
+    margin-bottom: 8px;
+}
+.modal-psw .form-group .form-control-wrapper {
+    position: relative;
+    margin-bottom: 4px;
+}
+.modal-psw .form-group .form-control-wrapper .toggle-icon {
+    position: absolute;
+    background: url('/assets/images/seoRush/icons/show.svg') center/contain no-repeat;
+    width: 24px;
+    height: 24px;
+    right: 20px;
+    top: 12px;
+    cursor: pointer;
+    display: none;
+}
+.modal-psw .form-group .form-control-wrapper .toggle-icon.show {
+    background: url('/assets/images/seoRush/icons/hide.svg') center/contain no-repeat;
+}
+.modal-psw .form-group .form-control {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #434A63;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #E7E5F2;
+    border-radius: 24px;
+    padding: 12px 60px 12px 24px;
+}
+.modal-psw .form-group .form-control:focus {
+    border-color: #434A63;
+}
+.modal-psw .form-group .form-control:focus+.toggle-icon {
+    display: block;
+}
+.modal-psw .form-group .form-control+.toggle-icon.show {
+    display: block;
+}
+
+#successModal .icon-container img {
+    width: 130px; /* Adjust size as needed */
+}
+#successModal .modal-content {
+    border-radius: 48px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 12px solid #ffffff33;
+}
+#successModal .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #2d324a;
+}
+#successModal .close {
+    color: #8e91a5;
+}
+#successModal .btn-outline-secondary {
+    border-radius: 26px;
+    padding: 10px 26px;
+    border-color: #e7e5f2;
+    color: #2d324a;
+    font-size: 12px;
+    height: 40px;
+    margin-top: 20px;
+}
+#successModal .btn-outline-secondary:hover {
+    color: #fff;
+}
+
+
+#codeIntegrationDialog.custom-dialog {
+    position: absolute;
+    top: 90px;
+    right: 159px;
+    transform: translateY(10px); /* Adds a small offset */
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0px 18px 120px 0px #E7E9F1;
+    z-index: 1050; /* Ensures it appears above other elements */
+}
+#codeIntegrationDialog .code-integration-header {
+    background: #FFF3CD66;
+    border-left: 2px solid #FD7E14;
+    padding: 10px 15px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+#codeIntegrationDialog .code-integration-header p {
+    color: #FD7E14;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0 6px;
+}
+#codeIntegrationDialog .code-integration-header p .bi {
+    font-size: 14px;
+    margin-right: 4px;
+}
+#codeIntegrationDialog .close-btn {
+    background: transparent;
+    border: none;
+    color: #FD7E14;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 12px;
+    top: 1px;
+}
+#codeIntegrationDialog .code-snippet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+#codeIntegrationDialog .code-snippet code {
+    background: #F5F7F9;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+
+    margin: 0;
+    color: #2D324A;
+    padding: 12px 24px;
+
+    max-width: calc(100% - 120px);
+    word-break: break-all;
+}
+#codeIntegrationDialog .copy-btn {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+
+    background-color: #24333B;
+    border: none;
+    border-radius: 36px;
+    padding: 10px 15px;
+    color: #fff;
+}
+#codeIntegrationDialog .copy-btn:hover {
+    background-color: #4D5960;
+}
+#codeIntegrationDialog .copy-btn:focus {
+    background-color: #0F181C;
+}
+#codeIntegrationDialog .copy-btn svg {
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+#codeIntegrationDialog .code-footer {
+    color: #6E8490;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin: 5px 0px 0 8px;
 }
