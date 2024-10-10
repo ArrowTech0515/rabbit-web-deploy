@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
     border: none;
     font-weight: 700;
     border-radius: 10px;
-    padding: 8px 16px;
+    padding: 4px 16px;
     display: flex;
     align-items: center;
     box-shadow: none !important;
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
     background: #FD7E141A;
     color: #FD7E14;
     border-radius: 12px;
-    padding: 12px 20px;
+    padding: 10px 20px;
     display: block;
     text-align: center;
     border: none;
@@ -359,7 +359,7 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
 }
 .sidebar .nav-link .icon .bi::before {
     font-family: 'sidebar_icon' !important;
-    font-size: 26px;
+    font-size: 24px;
 }
 .sidebar .nav-link .icon .bi-layout-wtf::before {
     content: "\e902";
@@ -509,12 +509,11 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .menu-area .list li.active::after {
     content: '';
     position: absolute;
-    right: -6px;
-    top: calc(50% - 3px);
-    transform: translate(0%, -50%) rotate(225deg);
-    border-top: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-left: 10px solid #FD7E14;
+    right: -10px;
+    top: calc(50% - 12.5px);
+    background: url('/assets/images/seoRush/icons/arrow.svg') center/contain no-repeat;
+    width: 10px;
+    height: 25px;
 }
 .menu-area .list li a {
     font-size: 14px;
@@ -641,7 +640,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     letter-spacing: -0.02em;
     text-align: left;
     color: #24333B;
-    margin-top: 18px;
+    margin-top: 14px;
 }
 .welcome-page .dashboard-area .card-body {
     padding: 1rem 24px;
@@ -675,6 +674,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 }
 
 .welcome-page .dashboard-area .card-body .table-wrapper {
+    margin-bottom: 8px;
 }
 .welcome-page .dashboard-area .card-body .table-wrapper table {
     table-layout: fixed;
@@ -1603,6 +1603,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 }
 .optimization-page .details-overview .card {
     border-radius: 12px;
+    border-color: #EDEEF0;
 }
 .optimization-page .details-overview .card-body {
     padding: 1.5rem;
@@ -1888,10 +1889,10 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 
 .optimization-page .outer-container {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 .optimization-page .landing-pages-table .outer-container {
-    padding: 12px;
+    padding: 0px;
 }
 .optimization-page .landing-page-details .card .custom-select-wrapper {
 
@@ -1938,10 +1939,14 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     width: 100%;
     height: 100px;
 }
-.optimization-page svg {
+.optimization-page .landing-pages-table .half-circle-container svg {
+    width: 60px;
+}
+.optimization-page .landing-page-details .half-circle-container svg {
     width: 100%;
     height: 100%;
 }
+
 .optimization-page .trail-path {
     stroke: #e6e6e6; /* Light gray for unfilled part */
     stroke-width: 16;
@@ -1971,18 +1976,28 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     padding-right: 1rem;
 }
 .optimization-page .landing-pages-table .center-text {
-    font-size: 18px;
-    bottom: -6px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 12.6px;
+    letter-spacing: -0.02em;
+    bottom: 10px;
 }
 .optimization-page .landing-pages-table .center-text .text-muted{
-    font-size: 12px;
+    font-size: 4px;
+    font-weight: 400;
+    line-height: 6px;
 }
 .optimization-page .landing-page-details .center-text {
-    font-size: 36px;
-    bottom: -12px;
+    font-size: 36.8px;
+    font-weight: 700;
+    line-height: 46.37px;
+    letter-spacing: -0.02em;
+    bottom: 0px;
 }
 .optimization-page .landing-page-details .center-text .text-muted{
-    font-size: 20px;
+    font-size: 14.72px;
+    font-weight: 400;
+    line-height: 22.08px;
 }
 
 .optimization-page .landing-pages-area .area-actions {
@@ -2067,17 +2082,28 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     float: right;
 }
 .optimization-page .landing-pages-table tbody tr {
-    border-top: none;
+    border-top: 8px solid #fff;
+    position: relative;
+}
+.optimization-page .landing-pages-table tbody tr.active {
+    box-shadow: 0px 11.2px 24px -5.6px #82959D2E;
+}
+.optimization-page .landing-pages-table tbody tr.active td {
+    background: #fff;
+    color: #FD7E14;
+}
+.optimization-page .landing-pages-table tbody tr.active td a {
+    color: #FD7E14 !important;
 }
 .optimization-page .landing-pages-table tbody tr.active td:last-child {
 }
 .optimization-page .landing-pages-table tbody tr.active td:last-child:before {
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 11px;
-    background: #F5F7F9;
+    top: 0px;
+    bottom: 0px;
+    width: 12px;
+    background: #fff;
     right: 0;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
@@ -2086,35 +2112,39 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .optimization-page .landing-pages-table tbody tr.active td:last-child:after {
     content: '';
     position: absolute;
-    right: -6px;
-    top: calc(50% - 3px);
-    transform: translate(0%, -50%) rotate(225deg);
-    border-top: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-left: 10px solid #FD7E14;
+    right: -8px;
+    top: calc(50% - 12.5px);
+    background: url('/assets/images/seoRush/icons/arrow.svg') center/contain no-repeat;
+    width: 10px;
+    height: 25px;
 }
 .optimization-page .landing-pages-table tbody tr td:nth-child(1) {
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 .optimization-page .landing-pages-table tbody td {
     font-size: 14px;
     font-weight: 700;
     color: #24333b;
     background: #F5F7F9;
-    white-space: normal;
-    border-bottom: 8px solid #fff;
     vertical-align: middle;
+
+    white-space: nowrap;
+    max-width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px;
 }
 .optimization-page .landing-pages-table tbody td a {
     text-decoration: none;
     color: #24333b !important;
 }
 .optimization-page .landing-pages-table tbody tr td:last-child {
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     padding-right: 16px;
-    position: relative;
+}
+.optimization-page .landing-pages-table tbody tr.active td:last-child {
 }
 
 #generateImprovedListDialog .modal-content {
