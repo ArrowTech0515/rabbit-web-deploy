@@ -4101,24 +4101,32 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
+
+    <div class="modal fade modal-popup" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0">
+                    <h5 class="modal-title">The maximum number of plugins has been reached</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <i class="bi bi-x-circle"></i>
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <h5 class="modal-title mb-5">The maximum number of plugins has been reached</h5>
-                    <p class="desc1 mb-4">
+                    <div class="icon-container icon-success hidden">
+                        <img src="/assets/images/seoRush/check.png" alt="Success Icon">
+                    </div>
+                    <div class="icon-container icon-delete hidden">
+                        <img src="/assets/images/seoRush/icons/warning.svg" alt="">
+                    </div>
+                    <p class="desc1 hidden">
                         You‘ve reached the maximum amount of Plugins in your current package.
                     </p>
-                    <p class="desc2 mb-3 hidden">
+                    <p class="desc2 hidden">
+                        You‘ve reached the maximum amount of Plugins in your current package.
                     </p>
-                    <div class="d-flex justify-content-between actions-wrapper" style="height: 38px; margin-top: 3rem;">
-                        <button type="button" class="btn btn-outline-secondary action-cancel" data-dismiss="modal">Cancel</button>
+                    <div class="actions-wrapper">
                         <button type="button" class="btn btn-outline-secondary action-do">Cancel</button>
+                        <button type="button" class="btn btn-outline-secondary action-cancel" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -4148,7 +4156,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row mt-3">
+                    <div class="row mt-3 for-firstArticle">
                         <div class="col">
                             <h4 class="normal-color">Let's Create Your First <span class="accent-color">Blog Post</span>!</h4>
                             <h5 class="normal-color">Select the desired keywords from the list to create a blog post for your website! Some features of your current account are limited, so to make the most of <b>SEOrush</b>, please upgrade your plan <a class="upgrade-link">here</a>.</h5>
@@ -4660,13 +4668,13 @@
     <div class="modal fade modal-psw" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header border-0 justify-content-end">
+                <div class="modal-header border-0 justify-content-between">
+                    <h5 class="modal-title">Change Password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <i class="bi bi-x-circle"></i>
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <h5 class="modal-title mb-3">Change Password</h5>
                     <form id="updateAccountCredentialsUser">
                         <div class="form-wrapper">
                             <div class="form-group">
@@ -4693,9 +4701,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-between actions-wrapper" style="height: 38px; margin-top: 3rem;">
+                        <div class="actions-wrapper">
+                            <button type="button" class="btn btn-outline-secondary action-do">Change</button>
                             <button type="button" class="btn btn-outline-secondary action-cancel" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-outline-secondary action-do">Change Password</button>
                         </div>
                         <input type="hidden" name="email" value="">
                     </form>
@@ -4707,42 +4715,22 @@
     <div class="modal fade modal-psw" id="passwordRecoveryModal" tabindex="-1" aria-labelledby="passwordRecoveryModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header border-0 justify-content-end">
+                <div class="modal-header border-0 justify-content-between">
+                    <h5 class="modal-title">Password recovery</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <i class="bi bi-x-circle"></i>
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <h5 class="modal-title mb-3">Password recovery</h5>
                     <div class="form-wrapper">
                         <div class="form-group">
-                            <label class="control-label">Email</label>
+                            <label class="control-label">Enter Your Email</label>
                             <input class="form-control" type="email" name="email" id="E_email">
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center actions-wrapper" style="height: 38px; margin-top: 3rem;">
+                    <div class="actions-wrapper">
                         <button type="button" class="btn btn-outline-secondary action-do">Recover my password</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-0 justify-content-end">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="icon-container">
-                        <img src="/assets/images/seoRush/check.png" alt="Success Icon">
-                    </div>
-                    <h5 class="modal-title mb-5">Your Plugin Published Successful!</h5>
-                    <div class="d-flex justify-content-center">
-                        <a href="#" class="btn btn-outline-secondary">Go to Dashboard</a>
+                        <button type="button" class="btn btn-outline-secondary action-cancel" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
             </div>

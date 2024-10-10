@@ -157,8 +157,8 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
 .text-btn {
     background: #FD7E141A;
     color: #FD7E14;
-    border-radius: 12px;
-    padding: 10px 20px;
+    border-radius: 14px;
+    padding: 15px 20px;
     display: block;
     text-align: center;
     border: none;
@@ -173,6 +173,18 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
 .text-btn.icon {
     padding: 5px 8px;
     border-radius: 8px;
+}
+.text-btn .bi-plus-lg::before {
+    content: '';
+    background: url('/assets/images/seoRush/icons/plus_2.svg') center/contain no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 0px;
+    vertical-align: sub;
+}
+.text-btn:hover .bi-plus-lg::before {
+    background: url('/assets/images/seoRush/icons/plus.svg') center/contain no-repeat;
 }
 
 .mr-1 {
@@ -4643,6 +4655,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 }
 .table-wrapper .dataTables_info {
     font-size: 12px;
+    padding-left: 4px;
 }
 .table-wrapper .dataTables_paginate {
     font-size: 12px;
@@ -4670,6 +4683,9 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 }
 .table-wrapper .dataTables_paginate .paginate_button.active a.page-link {
     color: #F5576C;
+}
+.table-wrapper table.dataTable {
+    border-bottom: 1px solid #edeef0;
 }
 .table-wrapper .dataTable tbody tr {
     background: transparent !important;
@@ -4876,7 +4892,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     left: auto !important;
     top: 50% !important;
     transform: translate(0, -50%) !important;
-    box-shadow: 10px 10px 80px -7px #829D9399 !important;
+    box-shadow: 16px 16px 84px -10px #829D9399 !important;
     border: none !important;
     border-radius: 16px;
     padding: 1rem 1rem;
@@ -4898,6 +4914,54 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     letter-spacing: 0.01em;
     text-align: center;
     cursor: pointer;
+}
+.table-wrapper .dropdown-menu .dropdown-item .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.table-wrapper .dropdown-menu .dropdown-item .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.table-wrapper .dropdown-menu .dropdown-item .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.table-wrapper .dropdown-menu .dropdown-item .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+.table-wrapper .dropdown-menu .dropdown-item input:checked + .slider {
+    background-color: #39CC70;
+
+}
+.table-wrapper .dropdown-menu .dropdown-item input:checked + .slider:before {
+    transform: translateX(20px);
+}
+.table-wrapper .dropdown-menu .dropdown-item.action-visible {
+    display: flex;
+    justify-content: space-between;
+    border-color: transparent !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 4px !important;
 }
 
 .table-wrapper .dataTable>tbody>tr.child ul.dtr-details {
@@ -5134,101 +5198,31 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     border-color: #F5576C;
 }
 
-#popupModal .modal-content {
-    border-radius: 48px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border: 12px solid #ffffff33;
-}
-#popupModal .modal-header .close {
-    margin: -40px -15px -25px auto;
-    color: #8e91a5;
-}
-#popupModal .modal-title {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 26px;
-    text-align: center;
-    color: #24333B;
-    padding: 0 1rem;
-}
-#popupModal .desc1 {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21.6px;
-    text-align: center;
-    color: #F5576C;
-}
-#popupModal .desc2 {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.01em;
-    text-align: center;
-    color: #24333b;
-}
-#popupModal .btn {
-    border: 1px solid #e7e5f2;
-    border-radius: 36px;
-    outline: none;
-    box-shadow: none;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    color: #2D324A;
-    padding: 0 20px;
-}
-#popupModal .btn:hover {
-    background-color: transparent;
-    color: #F5576C;
-}
-#popupModal .btn.action-do {
-    color: #F5576C;
-}
-
 
 .modal-psw .modal-content {
-    border-radius: 48px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border: 12px solid #ffffff33;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
 }
 .modal-psw .modal-header {
     padding-bottom: 0;
 }
 .modal-psw .modal-header .close {
-    margin: -40px -15px -25px auto;
-    color: #8e91a5;
+    color: #DADDE1;
+    font-size: 16px;
+}
+.modal-psw .modal-header .close:hover {
+    color: #90A1AB;
 }
 .modal-psw .modal-title {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0.01em;
+    line-height: 21px;
+
     text-align: left;
-    color: #2D324A;
+    color: #24333B;
 }
-.modal-psw .btn {
-    border: 1px solid #e7e5f2;
-    border-radius: 36px;
-    outline: none;
-    box-shadow: none;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    color: #2D324A;
-    padding: 0 20px;
-}
-.modal-psw .btn:hover {
-    background-color: transparent;
-    color: #F5576C;
-}
-.modal-psw .btn.action-do {
-    color: #F5576C;
+.modal-psw .modal-body {
+    padding: 1rem 2rem;
 }
 .modal-psw .form-wrapper {
     padding: 0 6px;
@@ -5239,35 +5233,35 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     line-height: 18px;
     letter-spacing: 0.01em;
     text-align: right;
-    color: #8E91A5;
+    color: #24333B;
     margin-bottom: 0;
     margin-top: 8px;
 }
 .modal-psw .form-wrapper p.info {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.01em;
+    line-height: 21px;
     text-align: left;
 
-    color: #2F596B;
-    background: #8FD3F429;
+    color: #FD7E14;
+    background: #FFF3CD66;
 
     position: relative;
-    padding: 12px 24px 12px 40px;
+    padding: 16px 24px 16px 48px;
     border-radius: 16px;
+    border-left: 1px solid #FD7E14;
 
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 .modal-psw .form-wrapper p.info .icon {
     position: absolute;
-    font-size: 14px;
-    left: 18px;
-    top: 10px;
+    font-size: 16px;
+    left: 22px;
+    top: 15px;
 }
 .modal-psw .form-wrapper p.desc .btn-forgot {
-    color: #F5576C;
+    color: #0D6EFD;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -5280,11 +5274,11 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 }
 .modal-psw .form-group .control-label {
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 18px;
-    letter-spacing: 0.01em;
     text-align: left;
-    color: #8E91A5;
+
+    color: #90A1AB;
     margin-bottom: 8px;
 }
 .modal-psw .form-group .form-control-wrapper {
@@ -5308,17 +5302,18 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     font-size: 14px;
     font-weight: 700;
     line-height: 21px;
-    letter-spacing: 0.01em;
     text-align: left;
-    color: #434A63;
+    color: #24333B;
+    background: #F5F7F9;
     box-shadow: none;
     outline: none;
-    border: 1px solid #E7E5F2;
-    border-radius: 24px;
+    border: 1px solid #F5F7F9;
+    border-radius: 14px;
     padding: 12px 60px 12px 24px;
 }
 .modal-psw .form-group .form-control:focus {
-    border-color: #434A63;
+    border-color: #90A1AB;
+    background: #fff;
 }
 .modal-psw .form-group .form-control:focus+.toggle-icon {
     display: block;
@@ -5326,6 +5321,132 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 .modal-psw .form-group .form-control+.toggle-icon.show {
     display: block;
 }
+.modal-psw .actions-wrapper .btn {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    padding: 16px 10px;
+}
+.modal-psw .actions-wrapper {
+    padding: 0 6px;
+    margin-top: 1.6rem;
+}
+.modal-psw .actions-wrapper .btn.action-do {
+    background: #24333B;
+    color: #fff;
+    border-radius: 14px;
+}
+.modal-psw .actions-wrapper .btn.action-do:hover {
+    background: #4D5960;
+}
+.modal-psw .actions-wrapper .btn.action-do:focus {
+    background: #0F181C;
+}
+.modal-psw .actions-wrapper .btn.action-cancel {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #90A1AB;
+    background: transparent !important;
+}
+.modal-psw .actions-wrapper .btn.action-cancel:hover {
+    color: #24333B;
+}
+
+.modal-popup .modal-content {
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+}
+.modal-popup .modal-header {
+    padding-bottom: 0;
+}
+.modal-popup .modal-header .close {
+    color: #DADDE1;
+    font-size: 16px;
+}
+.modal-popup .modal-header .close:hover {
+    color: #90A1AB;
+}
+.modal-popup .modal-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+
+    text-align: left;
+    color: #24333B;
+}
+.modal-popup .modal-body {
+    padding: 1rem 2rem;
+}
+.modal-popup .icon-container {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.modal-popup .desc1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: #24333B;
+    padding: 0 4rem;
+}
+.modal-popup .desc2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #90A1AB;
+    padding: 0 2rem;
+}
+.modal-popup .actions-wrapper .btn {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    padding: 16px 10px;
+}
+.modal-popup .actions-wrapper {
+    padding: 0 6px;
+    margin-top: 2.5rem;
+}
+.modal-popup .actions-wrapper .btn.action-do {
+    background: #24333B;
+    color: #fff;
+    border-radius: 14px;
+}
+.modal-popup .actions-wrapper .btn.action-do:hover {
+    background: #4D5960;
+}
+.modal-popup .actions-wrapper .btn.action-do:focus {
+    background: #0F181C;
+}
+.modal-popup .actions-wrapper .btn.action-cancel {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #90A1AB;
+    background: transparent !important;
+}
+.modal-popup .actions-wrapper .btn.action-cancel:hover {
+    color: #24333B;
+}
+
 
 #successModal .icon-container img {
     width: 130px; /* Adjust size as needed */
