@@ -703,6 +703,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     line-height: 18px;
     text-align: left;
     color: #90A1AB;
+    margin-bottom: 1.5rem;
 }
 .usage-stats.stats-wrapper .item {
     margin-bottom: 12px;
@@ -4961,6 +4962,9 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border: 12px solid #ffffff33;
+}
+.modal-psw .modal-header {
+    padding-bottom: 0;
 }
 .modal-psw .modal-header .close {
     margin: -40px -15px -25px auto;
