@@ -3544,7 +3544,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 
 .modal.adding-modal .select2-container {
     border: 1px solid #e7e5f2;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 .modal.adding-modal .no-select2-container .select2-container {
     border: none;
@@ -3556,7 +3556,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 }
 .modal.adding-modal .select2-container--default .select2-selection--single {
     border: 4px solid #fff;
-    border-radius: 10px;
+    border-radius: 14px;
     height: 50px;
     padding: 10px;
     font-size: 14px;
@@ -3579,7 +3579,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     right: 10px;
 }
 .modal.adding-modal .modal-body .select2-dropdown {
-    border-radius: 10px;
+    border-radius: 14px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     z-index: 1051; /* Ensuring it appears above the modal */
@@ -3591,14 +3591,14 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 .modal.adding-modal .select2-container--default .select2-search--dropdown .select2-search__field {
     border: 1px solid #e7e5f2;
     font-size: 14px;
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 12px 18px;
     color: #6c757d;
 }
 .modal.adding-modal .select2-results__options {
     font-size: 14px;
     padding: 8px 0px;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 .modal.adding-modal .select2-results__option {
     font-size: 14px;
@@ -3621,7 +3621,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     background-color: #fff;
     color: #24333B;
     padding: 0px 0px;
-    border-radius: 10px;
+    border-radius: 14px;
 }
 .modal.adding-modal .select2-container--focus .select2-selection--multiple {
     border-color: #24333B !important;
@@ -3701,7 +3701,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     align-items: center;
     padding: 16px;
     border: 1px solid #e0e0e0;
-    border-radius: 10px;
+    border-radius: 14px;
     background-color: #f8f9fa;
     font-size: 16px;
     color: #212529;
@@ -3744,16 +3744,17 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     border: 1px solid #edeef0;
     background-color: #fff;
     color: #24333b;
-    padding: 10px 20px;
+    padding: 10px 6px;
     width: 150px; /* Adjust width as needed */
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     box-shadow: none;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .modal.adding-modal .btn-group-2 .btn.active,
 .modal.adding-modal .btn-group-2 .btn:hover {
     color: #FD7E14;
+    font-weight: 700;
     border-color: #FD7E14;
 }
 .modal.adding-modal .btn-group-2 .btn.active {
