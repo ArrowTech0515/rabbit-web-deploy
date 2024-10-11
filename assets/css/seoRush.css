@@ -403,7 +403,10 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
     content: "\e905";
 }
 .bi-box-arrow-left::before {
+    content: '';
     background: url('/assets/images/seoRush/icons/logout.svg') center/contain no-repeat;
+    width: 20px;
+    height: 20px;
 }
 
 .sidebar .nav-link.active {
@@ -436,13 +439,31 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
     margin-bottom: 2px;
     text-align: center;
 }
+.sidebar .user-profile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.sidebar .user-profile div {
+    width: calc(100% - 60px);
+}
+.sidebar .user-profile img,
+.sidebar .profile img {
+    border-radius: 50%;
+    border: 3px solid #FFFFFF;
+    cursor: pointer;
+}
+.sidebar .user-profile img {
+    width: 45px;
+    height: 45px;
+    box-shadow: 0px 13.32px 28.54px -6.66px #82959D2E;
+}
 .sidebar .profile img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     box-shadow: 0px 11.2px 24px -5.6px #82959D2E;
-    border: 3px solid #FFFFFF;
-    cursor: pointer;
 }
 .sidebar .logout {
     margin-bottom: 20px;
@@ -450,6 +471,205 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
 }
 .sidebar .logout .icon {
     color: #FD7E14;
+}
+
+@media (min-width: 999px) {
+    .mobile {
+        display: none !important;
+    }
+    .mobile-header {
+        display: none;
+    }
+}
+@media (max-width: 998px) {
+    .mobile-header {
+        display: block;
+        height: 70px;
+    }
+
+    .sidebar {
+        width: 100%;
+        left: -100% !important;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        padding: 4px !important;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+.mobile-header .logo {
+    height: 28px;
+    margin-top: 1.3rem;
+    margin-left: 1rem;
+}
+.mobile-header .menu-toggle {
+    font-size: 24px;
+    padding: 1rem 1rem;
+    color: #90A1AB;
+}
+.mobile-header .menu-toggle:hover {
+    color: #24333b;
+}
+
+.sidebar.active {
+    left: auto !important;
+    right: 0;
+    background: #fff;
+    width: 270px;
+    z-index: 1;
+    box-shadow: 0px 7px 22px 0px #0B131A14;
+}
+.sidebar .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-top: 2rem;
+}
+.sidebar.active .nav-link.active .icon::before {
+    display: none;
+}
+.sidebar.active .nav-link {
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 2rem;
+}
+.sidebar.active .nav-link .icon {
+    width: 42px;
+}
+.sidebar.active .nav-link span {
+    padding-top: 3px;
+}
+
+.sidebar.active .buttons {
+    padding: 0 1rem;
+    width: 100%;
+}
+.sidebar.active .buttons .nav-integration {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #6E8490;
+    background: #fff;
+    box-shadow: 0px 10px 20px -7px #82939D1F;
+
+    cursor: pointer;
+    padding: 12px 20px;
+    white-space: nowrap;
+    border-radius: 12px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.sidebar.active .buttons .nav-integration:hover {
+    color: #24333b;
+}
+.sidebar.active .user-stats {
+    padding: 0 1rem;
+    width: 100%;
+}
+.sidebar.active .user-stats .accordion-button {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #24333B !important;
+    background: transparent;
+    box-shadow: none;
+    padding-right: 4px;
+}
+.sidebar.active .user-stats .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    background-size: 12px;
+    background-position: 4px 5px;
+}
+.sidebar.active .user-stats .accordion-button:not(.collapsed)::after {
+
+}
+.sidebar.active .user-stats .accordion-item {
+    border: none;
+    background: transparent;
+}
+.sidebar.active .user-stats .accordion-body {
+    padding: 0 1rem;
+}
+.sidebar.active .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+.sidebar.active .footer a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.sidebar.active .footer .nav-logout {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #DC3545;
+    margin-top: 10px;
+    margin-right: 1rem;
+}
+.sidebar.active .footer .nav-logout span {
+    vertical-align: top;
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.sidebar.active .footer .nav-logout:hover {
+
+}
+.sidebar.active .footer .nav-rate {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    background: #24333B;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 12px;
+}
+.sidebar.active .footer .nav-rate:hover {
+    background: #4D5960;
+}
+.sidebar.active .user-profile h6 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #24333B;
+    display: block;
+    padding-right: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 2px;
+    margin-top: 1px;
+}
+.sidebar.active .user-profile p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #828B9D;
+    display: block;
+    padding-right: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
 }
 
 .content {
@@ -613,6 +833,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     font-size: 12px;
     border-radius: 12px;
     padding: 12px 24px;
+    white-space: nowrap;
 }
 .welcome-page .top-nav .button-wrapper {
     margin-top: 12px;
@@ -636,7 +857,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     box-shadow: 0px 10px 20px -7px #82939D1F;
 }
 .welcome-page .top-nav .rate-us-btn:hover {
-    background: #152429;
+    background: #4D5960;
 }
 
 .welcome-page .dashboard-area .table-wrapper {
@@ -650,6 +871,8 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .welcome-page .dashboard-area .card-header {
     display: flex;
     justify-content: space-between;
+    flex-flow: wrap;
+
     background: #fff;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -666,7 +889,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     margin-top: 14px;
 }
 .welcome-page .dashboard-area .card-body {
-    padding: 1rem 24px;
+    padding: 0.5rem 24px 1rem;
 }
 .welcome-page .dashboard-area .card-body h6 {
     font-size: 14px;
@@ -1087,7 +1310,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 }
 .keywords-page .tab-wrapper .caret-select {
     font-size: 12px;
-    padding: 9px 20px;
+    padding: 9px 36px 9px 16px;
 }
 .keywords-page .tab-wrapper .border-bottom-2 {
     border-bottom: 2px solid #EDEEF0;
@@ -1471,6 +1694,10 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .sidebar-right .sidebar-content {
     padding: 1rem 3rem 1rem 2rem;
 }
+.sidebar-right .sidebar-content .table-container .table-header-wrapper .table-header.search-area {
+    width: calc(100% - 630px);
+}
+
 .sidebar-right .sidebar-content h3 {
     font-size: 20px;
     font-weight: 700;
@@ -4837,9 +5064,15 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     width: 180px;
     margin-right: 2rem;
 }
-@media (max-width: 965px) {
+@media (max-width: 1235px) {
     .table-container .table-header-wrapper {
         flex-flow: wrap;
+    }
+    .table-container .table-header-wrapper .table-header {
+        width: calc(100% - 50px) !important;
+    }
+    .table-container .table-header-wrapper .table-header.buttons-area {
+        margin-bottom: 0.5rem;
     }
     .table-container .table-header-wrapper .table-header.search-area {
         justify-content: start;
