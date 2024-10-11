@@ -4133,6 +4133,31 @@
         </div>
     </div>
 
+    <div class="modal fade adding-modal" id="limitDialog" tabindex="-1" aria-labelledby="limitDialogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="limitDialogLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between">
+                        <svg width="52" height="50" viewBox="0 0 52 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.9812 34.3334H26.0022M25.9998 27.3334V18M10.4178 19.5937C16.0482 9.62802 18.8645 4.64635 22.7285 3.36302C24.8524 2.65796 27.1473 2.65796 29.2712 3.36302C33.1352 4.64635 35.9515 9.62802 41.5818 19.5937C47.2145 29.557 50.0285 34.541 49.1862 38.601C48.7195 40.8364 47.5762 42.8617 45.9148 44.3877C42.8955 47.1667 37.2628 47.1667 25.9998 47.1667C14.7368 47.1667 9.10417 47.1667 6.08483 44.39C4.41706 42.8499 3.27315 40.8264 2.8135 38.6034C1.96883 34.5434 4.78517 29.5594 10.4178 19.5937Z" stroke="#DC3545" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h4>The maximum number of blog posts has been reached</h4>
+                    </div>
+                    <p class="desc1">You‘ve reached maximum amount of blog posts in your current package.</p>
+                    <p class="desc2">Unfortunately, you cannot add more until you upgrade your package. Consider upgrading to a higher plan to access additional features and expand your content.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-generate f-large">Upgrade Now</button>
+                    <button type="button" class="text btn-later">Maybe later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="fullscreenDialog" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
@@ -4458,53 +4483,6 @@
         </div>
     </div>
 
-    <div class="modal fade adding-modal" id="authorDialog" tabindex="-1" aria-labelledby="authorDialogLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="authorDialogLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row mt-3">
-                    </div>
-
-                    <div class="row mt-4">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-save">Save</button>
-                    <button type="button" class="btn btn-cancel">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade adding-modal" id="limitDialog" tabindex="-1" aria-labelledby="limitDialogLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="limitDialogLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="d-flex justify-content-between">
-                        <svg width="52" height="50" viewBox="0 0 52 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M25.9812 34.3334H26.0022M25.9998 27.3334V18M10.4178 19.5937C16.0482 9.62802 18.8645 4.64635 22.7285 3.36302C24.8524 2.65796 27.1473 2.65796 29.2712 3.36302C33.1352 4.64635 35.9515 9.62802 41.5818 19.5937C47.2145 29.557 50.0285 34.541 49.1862 38.601C48.7195 40.8364 47.5762 42.8617 45.9148 44.3877C42.8955 47.1667 37.2628 47.1667 25.9998 47.1667C14.7368 47.1667 9.10417 47.1667 6.08483 44.39C4.41706 42.8499 3.27315 40.8264 2.8135 38.6034C1.96883 34.5434 4.78517 29.5594 10.4178 19.5937Z" stroke="#DC3545" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <h4>The maximum number of blog posts has been reached</h4>
-                    </div>
-                    <p class="desc1">You‘ve reached maximum amount of blog posts in your current package.</p>
-                    <p class="desc2">Unfortunately, you cannot add more until you upgrade your package. Consider upgrading to a higher plan to access additional features and expand your content.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-generate f-large">Upgrade Now</button>
-                    <button type="button" class="text btn-later">Maybe later</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="modal fade" id="publishSuccessModal" tabindex="-1" aria-labelledby="publishSuccessModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -4559,7 +4537,7 @@
                     </div>
                     <div class="row author-information d-flex justify-content-between">
                         <div class="personal-info">
-                            <img src="" alt="" class="author-image">
+                            <img src="/assets/images/blank_10.png" alt="" class="author-image">
                             <div>
                                 <span class="author-name">Author Name</span>
                                 <br>
@@ -4608,10 +4586,10 @@
     <div id="managed_blog_modal" class="custom-popup">
         <div class="popover-body">
             <div class="d-flex justify-content-center align-items-center">
-                <h6>Automatic Posting <span><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h6>
+                <h6>Automatic Posting <span style="margin-left: 4px;"><i class="bi bi-info-circle tooltip-icon" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h6>
             </div>
             <div class="mt-2 custom-switch d-flex justify-content-center">
-                <input type="checkbox" checked>
+                <input type="checkbox" id="autoPilot">
             </div>
         </div>
     </div>
@@ -4736,6 +4714,52 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade modal-psw" id="authorDialog" tabindex="-1" aria-labelledby="authorDialogLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="authorDialogLabel"></h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-wrapper d-flex justify-content-between">
+                        <h6 class="form-wrapper-title">Add Avatar Image &nbsp; <span class="info-icon" data-bs-toggle="tooltip" title="This is a preview mode."><i class="bi bi-info-circle"></i></span></h6>
+                        <div class="custom-switch d-flex justify-content-center">
+                            <input type="checkbox" id="ad_avatar_option">
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper d-flex for-dAvatar">
+                        <img src="/assets/images/blank_10.png" alt="" class="author-image">
+                        <a class="btn_upload">Upload New Image</a>
+                    </div>
+
+                    <div class="form-wrapper d-flex justify-content-between mt-3">
+                        <h6 class="form-wrapper-title">Author Information &nbsp; <span class="info-icon" data-bs-toggle="tooltip" title="This is a preview mode."><i class="bi bi-info-circle"></i></span></h6>
+                        <div class="custom-switch d-flex justify-content-center">
+                            <input type="checkbox" id="ad_author_option">
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper for-dAuthorInfo">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="ad_name" placeholder="Author Name">
+                            <input class="form-control mt-2" type="text" id="ad_position" placeholder="Position">
+                        </div>
+                    </div>
+
+                    <div class="actions-wrapper">
+                        <button type="button" class="btn btn-outline-secondary action-do">Save</button>
+                        <button type="button" class="btn btn-outline-secondary action-cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <input type='file' name="fileInput" id="fileInput" style="display: none;">
 

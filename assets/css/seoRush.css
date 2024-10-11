@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6, p, button, span, div, a, *, ul, ol, li, input, textarea,
     text-align: center;
     justify-content: center;
     align-items: center;
-    z-index: 99999;
+    z-index: 100001;
 }
 #loading-overlay .circle-container {
     position: absolute;
@@ -1530,7 +1530,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     padding-top: 12px;
 }
 #managed_blog_modal.custom-popup .popover-body h6 span {
-    color: #FEC200;
+    color: #FD7E14;
 }
 #managed_blog_modal .custom-switch input:checked {
     background-color: #198754;
@@ -1588,12 +1588,13 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     display: flex;
     align-items: center;
     border: none;
-    font-weight: 700;
     font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    white-space: nowrap;
 }
 .optimization-page .rescan-btn:hover {
-    background-color: #FD7E14;
-    color: #fff;
+    color: #FD7E14;
 }
 .optimization-page .rescan-btn .icon {
     background-color: #FD7E14;
@@ -4877,7 +4878,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     content: "";
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: -19px;
     width: 0;
     height: 0;
     border-width: 10px;
@@ -4962,6 +4963,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     padding-left: 8px;
     padding-right: 8px;
     margin-bottom: 4px !important;
+    color: #24333B !important;
 }
 
 .table-wrapper .dataTable>tbody>tr.child ul.dtr-details {
@@ -5268,6 +5270,25 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 .modal-psw .form-wrapper p.desc .btn-forgot:hover {
     text-decoration: none;
 }
+.modal-psw .form-wrapper .btn_upload {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #6D7A75;
+    border: 1px solid #E5EDEA;
+    border-radius: 10px;
+
+    box-shadow: none;
+    outline: none;
+    text-decoration: none;
+    padding: 10px 16px;
+    height: 40px;
+    margin-top: auto;
+}
+.modal-psw .form-wrapper .btn_upload:hover {
+    border-color: #6D7A75;
+    color: #24333b;
+}
 .modal-psw .form-group {
     margin-bottom: 1rem;
     text-align: left;
@@ -5321,6 +5342,48 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 .modal-psw .form-group .form-control+.toggle-icon.show {
     display: block;
 }
+.modal-psw .custom-switch input:checked {
+    background-color: #198754;
+    border-color: #198754;
+}
+.modal-psw .custom-switch input {
+    width: 35px;
+    height: 20px;
+    margin-left: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background-color 0.3s ease;
+}
+.modal-psw .custom-switch input::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+.modal-psw .custom-switch input:checked::before {
+    transform: translateX(16px);
+}
+.modal-psw .custom-switch input:focus {
+    box-shadow: none;
+}
+.modal-psw .form-wrapper-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #24333B;
+}
+.modal-psw .form-wrapper-title .info-icon {
+    color: #FEC200;
+}
 .modal-psw .actions-wrapper .btn {
     font-size: 14px;
     font-weight: 700;
@@ -5359,6 +5422,19 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 }
 .modal-psw .actions-wrapper .btn.action-cancel:hover {
     color: #24333B;
+}
+
+#authorDialog.modal-psw .form-group .form-control {
+    font-size: 12px;
+}
+#authorDialog .author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+#authorDialog .custom-switch {
+    margin-top: 2px;
 }
 
 .modal-popup .modal-content {
