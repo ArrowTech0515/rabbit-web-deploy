@@ -4553,6 +4553,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 }
 .plugin-widget-container.template-3 .blog-sub-header {
     padding: 12px 8px;
+    margin-top: 3rem;
 }
 .plugin-widget-container.template-4 .blog-header {
     color: white;
