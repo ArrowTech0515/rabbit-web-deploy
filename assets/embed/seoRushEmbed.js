@@ -11,8 +11,8 @@ console.log("start seo rush embed");var obj,r="",i={id:"",type:"",o:"",t:0,i:0,l
                     </div>
                 `},C:function(){return`
         <div class="col-md-12 blog-article-container">
-                <div class="close_btn"><i class="bi bi-x-circle"></i></div>
                 <div class="container">
+                    <div class="close_btn"><i class="bi bi-arrow-left-short"></i> <span>Blog</span></div>
                     <div class="row article-wrapper">
                         <div class="article-cover-area col-12">
                             <img src="/assets/images/blank_10.png" class="cover-image">
