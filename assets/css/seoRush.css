@@ -4247,7 +4247,7 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     text-align: center;
     color: #90A1AB;
     padding: 0 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 #publishArticleSuccessModal .modal-body .btn-primary {
     background: #24333B;
