@@ -4932,6 +4932,14 @@ body>#preview_widget>.plugin-widget-container .close_btn {
 .blog-article-container .meta-info-wrapper .likes-info .bi-heart {
     margin-right: 2px;
 }
+.blog-article-container .article-footer-area {
+    display: flex;
+    justify-content: end;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.blog-article-container .article-footer-area img {
+}
 
 #publishSuccessModal .icon-container img {
     width: 130px; /* Adjust size as needed */
