@@ -2133,6 +2133,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     font-size: 14px;
     font-weight: 700;
     border-bottom: 1px solid #edeef0;
+    vertical-align: middle;
 }
 .optimization-page .details-keyword .card-links-table .table-wrapper {
     height: 400px;
@@ -2406,7 +2407,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 }
 
 #generateImprovedListDialog .modal-content {
-    border-radius: 2rem;
+    border-radius: 40px;
 }
 #generateImprovedListDialog .modal-header {
     padding: 2rem 2rem 1rem;
@@ -2421,11 +2422,16 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     color: #DADDE1;
     border: 1px solid #dadde1;
     border-radius: 50%;
-    font-size: 22px;
-    width: 32px;
-    height: 32px;
+    font-size: 18px;
+    width: 22px;
+    height: 22px;
     display: flex;
-    padding: 0px 8px;
+    position: relative;
+}
+#generateImprovedListDialog .modal-header .close>span{
+    position: absolute;
+    left: 5px;
+    top: -2px;
 }
 #generateImprovedListDialog .modal-body {
     padding: 0.5rem 2rem 2rem 2rem;
@@ -2442,14 +2448,16 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 #generateImprovedListDialog .modal-body ul {
     list-style: none;
     padding: 0;
+    margin-top: 1rem;
 }
 #generateImprovedListDialog .modal-body ul li {
     background: #F5F7F9;
     border-radius: 16px;
-    padding: 12px 8px;
+    padding: 15px 8px;
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    height: 64px;
+    margin-bottom: 0.5rem;
 }
 #generateImprovedListDialog .modal-body ul li p {
     font-size: 16px;
