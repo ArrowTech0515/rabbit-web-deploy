@@ -25,12 +25,17 @@
 <nav class="sidebar" id="sidebar">
     <div class="sidebar-sticky d-flex flex-column justify-content-between" style="height: 100%;">
         <div class="sidebar-container" style="position: relative">
-            <div class="d-flex sidebar-logo justify-content-center text-center my-4 gap-2">
+            <div class="d-flex sidebar-logo justify-content-center text-center desktop my-4 gap-2">
                 <img src="/assets/images/signup/signup-logo.png" alt="Signup.land Logo">
                 <h3 class="mt-2">Signup.<span>land</span></h3>
             </div>
-            <div class="close-btn">
-                <i class="fas fa-times"></i>
+
+            <div class="buttons-area mobile">
+                <button class="btn code-integration-btn"><span><i class="bi bi-code-slash"></i></span> Code to integration</button>
+            </div>
+
+            <div class="close-btn mobile">
+                <i class="bi bi-x"></i>
             </div>
 
             <ul class="nav flex-column">
@@ -65,6 +70,9 @@
         <div class="sidebar-footer">
             <img src="/assets/images/signup/rate_us.png" class="rate-us-btn">
             <div class="profile-section">
+                <a class="nav-link logout-btn text-danger" href="#">
+                    <i class="bi bi-box-arrow-right"></i>
+                </a>
                 <div class="p-2 profile-icon"><i class="bi bi-gear settings-icon"></i></div>
                 <div class="progress-circle-container">
                     <div class="progress-circle">
@@ -78,6 +86,7 @@
                 <div class="badge-active"></div>
                 <img src="" alt="" class="profile-img">
             </div>
+
             <a class="nav-link logout-btn text-danger" href="#">
                 <i class="bi bi-box-arrow-right"></i>
                 Log Out
@@ -96,7 +105,7 @@
                     <h3 class="mt-2"><b>Signup</b>.land</h3>
                 </div>
                 <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
+                    <i class="bi bi-text-paragraph"></i>
                 </div>
             </div>
         </div>
@@ -106,7 +115,7 @@
                 <h1 class="welcome-user font-bold">Hello </h1>
                 <div class="d-flex toolbar-buttons">
                     <button class="btn code-integration-btn font-bold mr-2"><span><i class="bi bi-code-slash"></i></span> Code to integration</button>
-                    <button class="btn new-plugin-btn font-bold"><span><i class="bi bi-plus"></i></span> New Plugin</button>
+                    <button class="btn new-plugin-btn font-bold desktop"><span><i class="bi bi-plus"></i></span> New Plugin</button>
                 </div>
             </div>
 
@@ -185,6 +194,93 @@
                 </div>
             </div>
         </div>
+
+        <div class="welcome-page mt-3 px-5 py-3 graph-background position-relative mobile">
+            <div class="stats-section">
+                <h6 class="font-bold" style="margin-top: 0.5rem;">Overview</h6>
+                <div class="stat-card card-notification mt-3">
+                    <span class="icon"><i class="bi bi-info-circle"></i></span>
+                    <p>The information in the graph is provided for reference only and serves as a sample of your future data. It does not have any value, as you are currently using a demo version of the application.</p>
+                </div>
+
+                <div class="stat-card card-active_plugins">
+                    <div class="stat-text">
+                        <h6>Active Plugins</h6>
+                        <div class="stat-number">2</div>
+                    </div>
+                    <div class="stat-graph">
+                        <svg width="155" height="85" viewBox="0 0 155 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.55436 64.3863C6.80498 69.095 3.04597 79.364 1 84H153.976V44.4161C138.867 55.8405 130.723 40.748 121.162 28.7123C113.229 18.7272 108.69 27.6425 102.04 44.4161C82.7612 93.0396 67.8769 49.3789 62.1431 26.5855C57.6577 8.75485 53.1723 24.0892 51.4018 33.7177C47.5065 54.0446 43.9654 82.5736 33.3421 49.7653C27.1542 30.6549 15.0464 46.9123 8.55436 64.3863Z" fill="url(#paint0_linear_1264_2353)" fill-opacity="0.5"/>
+                            <path d="M1.1496 84C3.19389 79.364 6.94982 69.095 8.69777 64.3863C15.1845 46.9123 27.2823 30.6549 33.4652 49.7653C44.0798 82.5736 47.618 54.0446 51.5101 33.7177C53.2792 24.0892 57.7609 8.75485 62.2426 26.5855C67.9717 49.3789 82.8438 93.0396 102.106 44.4161C108.751 27.6425 113.287 18.7272 121.213 28.7123C130.766 40.748 138.904 55.8405 154 44.4161" stroke="white" stroke-width="1.10185" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_1264_2353" x1="77.4879" y1="-7.5234" x2="77.4879" y2="88.8886" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white"/>
+                                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="stat-card card-visitors">
+                    <div class="stat-text">
+                        <h6>Visitors</h6>
+                        <div class="stat-number">124</div>
+                    </div>
+                    <div class="stat-graph">
+                        <svg width="155" height="85" viewBox="0 0 155 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.55436 64.3863C6.80498 69.095 3.04597 79.364 1 84H153.976V44.4161C138.867 55.8405 130.723 40.748 121.162 28.7123C113.229 18.7272 108.69 27.6425 102.04 44.4161C82.7612 93.0396 67.8769 49.3789 62.1431 26.5855C57.6577 8.75485 53.1723 24.0892 51.4018 33.7177C47.5065 54.0446 43.9654 82.5736 33.3421 49.7653C27.1542 30.6549 15.0464 46.9123 8.55436 64.3863Z" fill="url(#paint0_linear_1264_2354)" fill-opacity="0.5"/>
+                            <path d="M1.1496 84C3.19389 79.364 6.94982 69.095 8.69777 64.3863C15.1845 46.9123 27.2823 30.6549 33.4652 49.7653C44.0798 82.5736 47.618 54.0446 51.5101 33.7177C53.2792 24.0892 57.7609 8.75485 62.2426 26.5855C67.9717 49.3789 82.8438 93.0396 102.106 44.4161C108.751 27.6425 113.287 18.7272 121.213 28.7123C130.766 40.748 138.904 55.8405 154 44.4161" stroke="white" stroke-width="1.10185" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_1264_2354" x1="77.4879" y1="-7.5234" x2="77.4879" y2="88.8886" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white"/>
+                                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="stat-card card-clicks">
+                    <div class="stat-text">
+                        <h6>Clicks</h6>
+                        <div class="stat-number">122</div>
+                    </div>
+                    <div class="stat-graph">
+                        <svg width="155" height="85" viewBox="0 0 155 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.55436 64.3863C6.80498 69.095 3.04597 79.364 1 84H153.976V44.4161C138.867 55.8405 130.723 40.748 121.162 28.7123C113.229 18.7272 108.69 27.6425 102.04 44.4161C82.7612 93.0396 67.8769 49.3789 62.1431 26.5855C57.6577 8.75485 53.1723 24.0892 51.4018 33.7177C47.5065 54.0446 43.9654 82.5736 33.3421 49.7653C27.1542 30.6549 15.0464 46.9123 8.55436 64.3863Z" fill="url(#paint0_linear_1264_2355)" fill-opacity="0.5"/>
+                            <path d="M1.1496 84C3.19389 79.364 6.94982 69.095 8.69777 64.3863C15.1845 46.9123 27.2823 30.6549 33.4652 49.7653C44.0798 82.5736 47.618 54.0446 51.5101 33.7177C53.2792 24.0892 57.7609 8.75485 62.2426 26.5855C67.9717 49.3789 82.8438 93.0396 102.106 44.4161C108.751 27.6425 113.287 18.7272 121.213 28.7123C130.766 40.748 138.904 55.8405 154 44.4161" stroke="white" stroke-width="1.10185" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_1264_2355" x1="77.4879" y1="-7.5234" x2="77.4879" y2="88.8886" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white"/>
+                                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="stat-card card-submissions">
+                    <div class="stat-text">
+                        <h6>Submissions</h6>
+                        <div class="stat-number">122</div>
+                    </div>
+                    <div class="stat-graph">
+                        <svg width="155" height="85" viewBox="0 0 155 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.55436 64.3863C6.80498 69.095 3.04597 79.364 1 84H153.976V44.4161C138.867 55.8405 130.723 40.748 121.162 28.7123C113.229 18.7272 108.69 27.6425 102.04 44.4161C82.7612 93.0396 67.8769 49.3789 62.1431 26.5855C57.6577 8.75485 53.1723 24.0892 51.4018 33.7177C47.5065 54.0446 43.9654 82.5736 33.3421 49.7653C27.1542 30.6549 15.0464 46.9123 8.55436 64.3863Z" fill="url(#paint0_linear_1264_2356)" fill-opacity="0.5"/>
+                            <path d="M1.1496 84C3.19389 79.364 6.94982 69.095 8.69777 64.3863C15.1845 46.9123 27.2823 30.6549 33.4652 49.7653C44.0798 82.5736 47.618 54.0446 51.5101 33.7177C53.2792 24.0892 57.7609 8.75485 62.2426 26.5855C67.9717 49.3789 82.8438 93.0396 102.106 44.4161C108.751 27.6425 113.287 18.7272 121.213 28.7123C130.766 40.748 138.904 55.8405 154 44.4161" stroke="white" stroke-width="1.10185" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_1264_2356" x1="77.4879" y1="-7.5234" x2="77.4879" y2="88.8886" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white"/>
+                                    <stop offset="1" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="welcome-page mt-3 graph-background position-relative">
             <div class="toggle-switches for-graph">
                 <label class="switch">
@@ -210,6 +306,29 @@
                 </div>
 
                 <canvas id="analyticsCanvas" style="width: 100%; height: 400px;"></canvas>
+            </div>
+        </div>
+
+        <div class="welcome-page mt-3 px-5 py-3 graph-background position-relative mobile">
+            <div class="chart-section mt-3">
+                <h6 class="font-bold">Devices</h6>
+                <p>This graph shows which devices you have the most from visitors.</p>
+
+                <div class="stat-card card-notification">
+                    <span class="icon"><i class="bi bi-info-circle"></i></span>
+                    <p>The information in the graph is provided for reference only and serves as a sample of your future data. It does not have any value, as you are currently using a demo version of the application.</p>
+                </div>
+
+                <canvas id="deviceCanvas_Mobile" style="width: 100%; height: 300px; margin-top: 2rem;"></canvas>
+            </div>
+        </div>
+
+        <div class="welcome-page mt-3 py-3 position-relative mobile">
+            <div class="btn new-plugin-btn">
+                <span class="caption">New Plugin</span>
+                <div class="icon">
+                    <span><i class="bi bi-plus-lg"></i></span>
+                </div>
             </div>
         </div>
 
@@ -261,7 +380,7 @@
                         <div class="sub-content">
                             <div class="row mt-4 avatar-section">
                                 <h4>Avatar</h4>
-                                <div class="col d-flex">
+                                <div class="col d-flex flex-wrap">
                                     <img src="" alt="" class="avatar" style="margin-right: 1rem;">
                                     <button class="btn btn-outline-secondary change-avatar-btn">Change Image</button>
                                 </div>
@@ -316,7 +435,7 @@
                                         <label for="">Email</label>
                                         <input type="email" name="email" class="form-control" value="">
                                     </div>
-                                    <div class="col-md-6 text-right" style="padding-top: 30px;">
+                                    <div class="col-md-6 text-right" style="padding-top: 32px;">
                                         <button class="btn btn-outline-secondary change-password">Change Password</button>
                                     </div>
                                 </div>
@@ -443,7 +562,7 @@
             </div>
         </div>
         <div class="reports-page ph-32 hidden">
-            <div class="position-relative d-flex justify-content-between">
+            <div class="position-relative d-flex justify-content-between flex-warp-1">
                 <div class="dropdown datepicker by-plugin">
                     <button class="btn dropdown-toggle" type="button" id="reportsPickerDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         All Plugins
@@ -902,13 +1021,21 @@
 
     <div class="widget-section p-3 hidden" id="widget_section">
         <div class="container-fluid">
+            <div class="mobile-header">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex">
+                        <img src="/assets/images/signup/signup-logo.png" alt="Signup.land Logo" class="logo">
+                        <h3 class="mt-2"><b>Signup</b>.land</h3>
+                    </div>
+                    <div class="menu-toggle">
+                        <i class="bi bi-text-paragraph"></i>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <!-- Left Side -->
                 <div class="left-side col-xl-5 col-lg-6" style="height: 100%;">
-                    <div class="d-flex sidebar-logo justify-content-left text-center my-4 gap-2">
-                        <img src="/assets/images/signup/signup-logo.png" alt="Signup.land Logo">
-                        <h3 class="mt-2">Signup.<span>land</span></h3>
-                    </div>
                     <div class="p-2">
                         <div class="page-toolbar-part">
                             <i class="back-arrow bi bi-arrow-left"></i>
@@ -1102,22 +1229,22 @@
                                     -->
                                     <div class="col-md-6 p-2">
                                         <div class="template-item p-4" data-type="lead_generation" data-index="4">
-                                            <img class="w-100" src="/assets/images/signup/lead_generation/4_thumb.png" style="margin-top: 0px;">
+                                            <img class="w-100" src="/assets/images/signup/lead_generation/4_thumb.png">
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item p-4" data-type="lead_generation" data-index="1">
-                                            <img class="w-100" src="/assets/images/signup/lead_generation/1_thumb.png" style="margin-top: 100px;">
+                                        <div class="template-item tmt tmt-100 p-4" data-type="lead_generation" data-index="1">
+                                            <img class="w-100" src="/assets/images/signup/lead_generation/1_thumb.png">
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item p-4" data-type="lead_generation" data-index="3">
-                                            <img class="w-100" src="/assets/images/signup/lead_generation/3_thumb.png" style="margin-top: 35px;">
+                                        <div class="template-item tmt tmt-35 p-4" data-type="lead_generation" data-index="3">
+                                            <img class="w-100" src="/assets/images/signup/lead_generation/3_thumb.png">
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
                                         <div class="template-item p-4" data-type="lead_generation" data-index="5">
-                                            <img class="w-100" src="/assets/images/signup/lead_generation/5_thumb.png" style="margin-top: 0px;">
+                                            <img class="w-100" src="/assets/images/signup/lead_generation/5_thumb.png">
                                         </div>
                                     </div>
                                 </div>
@@ -1125,13 +1252,13 @@
                             <div class="tab-pane fade show active" id="contact-us-tab" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item" data-type="contact_forms" data-index="1">
-                                            <img class="w-100" style="margin-top: 8px;" src="/assets/images/signup/contact_forms/1_thumb.png" >
+                                        <div class="template-item tmt tmt-8" data-type="contact_forms" data-index="1">
+                                            <img class="w-100" src="/assets/images/signup/contact_forms/1_thumb.png" >
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item" data-type="contact_forms" data-index="2">
-                                            <img class="w-100" style="margin-top: 8px;" src="/assets/images/signup/contact_forms/2_thumb.png" >
+                                        <div class="template-item tmt tmt-8" data-type="contact_forms" data-index="2">
+                                            <img class="w-100" src="/assets/images/signup/contact_forms/2_thumb.png" >
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
@@ -1149,21 +1276,18 @@
                             <div class="tab-pane fade" id="request-quote-tab" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item p-4" data-type="request_quote" data-index="1">
-                                            <img class="w-100" src="/assets/images/signup/request_quote/1_thumb.png"
-                                                 style="margin-top: 10px;">
+                                        <div class="template-item tmt tmt-10 p-4" data-type="request_quote" data-index="1">
+                                            <img class="w-100" src="/assets/images/signup/request_quote/1_thumb.png">
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
                                         <div class="template-item p-4" data-type="request_quote" data-index="3">
-                                            <img class="w-100" src="/assets/images/signup/request_quote/3_thumb.png"
-                                                 style="margin-top: 0px;">
+                                            <img class="w-100" src="/assets/images/signup/request_quote/3_thumb.png">
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
                                         <div class="template-item p-4" data-type="request_quote" data-index="2">
-                                            <img class="w-100" src="/assets/images/signup/request_quote/2_thumb.png"
-                                                 style="margin-top: 0px;">
+                                            <img class="w-100" src="/assets/images/signup/request_quote/2_thumb.png">
                                         </div>
                                     </div>
                                 </div>
@@ -1172,7 +1296,7 @@
                                 <div class="row">
                                     <div class="col-md-6 p-2">
                                         <div class="template-item p-4" data-type="leave_comment" data-index="1">
-                                            <img class="w-100" src="/assets/images/signup/leave_comment/1_thumb.png" style="margin-top: 0px;">
+                                            <img class="w-100" src="/assets/images/signup/leave_comment/1_thumb.png">
                                         </div>
                                     </div>
                                 </div>
@@ -1181,7 +1305,7 @@
                                 <div class="row">
                                     <div class="col-md-6 p-2">
                                         <div class="template-item p-4" data-type="support_ticket" data-index="1">
-                                            <img class="w-100" src="/assets/images/signup/support_ticket/1_thumb.png" style="margin-top: 0px;">
+                                            <img class="w-100" src="/assets/images/signup/support_ticket/1_thumb.png">
                                         </div>
                                     </div>
                                 </div>
@@ -1194,18 +1318,18 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item" data-type="join_newsletter" data-index="2">
-                                            <img class="w-100" style="margin-top: 56px;" src="/assets/images/signup/join_newsletter/2_thumb.png" >
+                                        <div class="template-item tmt tmt-56" data-type="join_newsletter" data-index="2">
+                                            <img class="w-100" src="/assets/images/signup/join_newsletter/2_thumb.png" >
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item" data-type="join_newsletter" data-index="3">
-                                            <img class="w-100" style="margin-top: 6px; margin-left: 16px;" src="/assets/images/signup/join_newsletter/3_thumb.png" >
+                                        <div class="template-item tmt tmt-6 tml-16" data-type="join_newsletter" data-index="3">
+                                            <img class="w-100" src="/assets/images/signup/join_newsletter/3_thumb.png" >
                                         </div>
                                     </div>
                                     <div class="col-md-6 p-2">
-                                        <div class="template-item" data-type="join_newsletter" data-index="4">
-                                            <img class="w-100" style="margin-top: 12px;" src="/assets/images/signup/join_newsletter/4_thumb.png" >
+                                        <div class="template-item tmt tmt-12" data-type="join_newsletter" data-index="4">
+                                            <img class="w-100" src="/assets/images/signup/join_newsletter/4_thumb.png" >
                                         </div>
                                     </div>
                                 </div>
@@ -1217,7 +1341,7 @@
                 <!-- Right Side Placeholder -->
                 <div class="right-side col-xl-7 col-lg-6">
                     <div class="row">
-                        <div class="header-container" style="margin-top: 10px;">
+                        <div class="header-container desktop" style="margin-top: 10px;">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item" data-menu="home"><a href="#">Home</a></li>
@@ -1244,6 +1368,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="p-2 mobile">
+                            <div class="page-toolbar-part">
+                                <i class="back-arrow bi bi-arrow-left"></i>
+                                <h2>Back</h2>
+                            </div>
+                        </div>
                     </div>
                     <div class="d-flex justify-content-between preview-area flex-wrap mt-3 mb-3">
                         <h5 class="preview-subtitle">Preview <span style="color: #979eb1;"><i class="bi bi-question-circle tooltip-icon" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h5>
@@ -1256,6 +1386,11 @@
                             <button type="button" class="btn btn-customize" data-type="customize"><i class="bi bi-sliders"></i> Customize</button>
                             <button type="button" class="btn btn-publish" data-type="publish"><i class="bi bi-rocket"></i> Publish</button>
                         </div>
+                    </div>
+
+                    <div class="preview-actions mobile">
+                        <button type="button" class="btn btn-customize" data-type="customize"><i class="bi bi-sliders"></i> Customize</button>
+                        <button type="button" class="btn btn-publish" data-type="publish"><i class="bi bi-rocket"></i> Publish</button>
                     </div>
 
                     <div class="preview-wrapper">
@@ -1584,7 +1719,7 @@
 
                                                         <div class="form-custom-wrapper for-sizeHeightMarginBottom">
                                                             <div class="form-group for-sideSpacingMarginRight">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter your Email" style="min-width: 250px;">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter your Email">
                                                             </div>
 
                                                             <div class="actions-area">
@@ -1620,7 +1755,7 @@
                                                         </div>
                                                         <div class="form-custom-wrapper for-sizeHeightMarginBottom">
                                                             <div class="form-group for-sideSpacingMarginRight">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter Your Email" style="min-width: 250px;">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter Your Email">
                                                             </div>
 
                                                             <div class="actions-area">
@@ -1647,7 +1782,7 @@
                                                 <div class="col-1"></div>
                                                 <div class="col-10">
                                                     <div class="row p-5">
-                                                        <div class="col-6">
+                                                        <div class="col-sm-6">
                                                             <h1 class="title editable for-editTitle for-titleTextColor for-titleFont for-sizeHeightMarginTop">Join Our Newsletter</h1>
                                                             <p class="description editable for-editDescription for-bodyTextColor for-secondaryFont">Get notified about the next update.</p>
 
@@ -1656,7 +1791,7 @@
                                                                 </div>
                                                                 <div class="form-custom-wrapper">
                                                                     <div class="form-group for-sideSpacingMarginRight">
-                                                                        <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter Your Email" style="min-width: 250px;">
+                                                                        <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter Your Email">
                                                                     </div>
 
                                                                     <div class="actions-area">
@@ -1665,7 +1800,7 @@
                                                                 </div>
                                                             </form>
                                                         </div>
-                                                        <div class="col-6"></div>
+                                                        <div class="col-sm-6"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-1"></div>
@@ -1695,7 +1830,7 @@
                                                         </div>
                                                         <div class="form-custom-wrapper for-sizeHeightMarginBottom">
                                                             <div class="form-group for-sideSpacingMarginRight">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter Your Email" style="min-width: 250px;">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter Your Email">
                                                             </div>
 
                                                             <div class="actions-area">
@@ -1830,12 +1965,12 @@
                                             <span class="close-button">&times;</span>
 
                                             <div class="row position-relative for-sizeHeightMarginTop for-sizeHeightMarginBottom p-5">
-                                                <div class="col-md-6">
+                                                <div class="col-lg-6">
                                                     <h1 class="for-titleFont for-titleTextColor">Get a <span class="for-accentTextColor">Free</span> Quote</h1>
                                                     <p class="editable description for-editDescription for-bodyTextColor for-secondaryFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis moles tie, dictum est a, mattis tellus.</p>
                                                 </div>
 
-                                                <div class="col-md-6">
+                                                <div class="col-lg-6 mobile-pt-5">
                                                     <form class="form-container for-backgroundColor" method="post">
                                                         <div class="corner-design for-accentBorderColor"></div>
 
@@ -1961,20 +2096,32 @@
 
     <div class="plugin-section p-3 hidden" id="plugin_section">
         <div class="container-fluid">
-            <div class="row">
+            <div class="mobile-header">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex">
+                        <img src="/assets/images/signup/signup-logo.png" alt="Signup.land Logo" class="logo">
+                        <h3 class="mt-2"><b>Signup</b>.land</h3>
+                    </div>
+                    <div class="menu-toggle">
+                        <i class="bi bi-text-paragraph"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mobile-revert">
                 <div class="left-side col-xl-3 col-lg-4">
-                    <div class="d-flex sidebar-logo justify-content-left text-center my-4 gap-2">
+                    <div class="d-flex sidebar-logo justify-content-left text-center my-4 gap-2 desktop">
                         <img src="/assets/images/signup/signup-logo.png" alt="Signup.land Logo">
                         <h3 class="mt-2">Signup.<span>land</span></h3>
                     </div>
-                    <div class="p-2">
+                    <div class="p-2 desktop">
                         <div class="page-toolbar-part">
                             <i class="back-arrow bi bi-arrow-left"></i>
                             <h2>Back to All Plugins</h2>
                         </div>
                     </div>
                     <div class="p-4 widget-area">
-                        <div class="row">
+                        <div class="row desktop">
                             <div class="col">
                                 <h5 class="preview-subtitle">Plugin Customization</h5>
                                 <p class="preview-description">Customize plugin according to your needs.</p>
@@ -2827,7 +2974,21 @@
                 </div>
 
                 <div class="customization-side col-xl-9 col-lg-8">
-                    <div class="row">
+                    <div class="p-2 mobile">
+                        <div class="page-toolbar-part">
+                            <i class="back-arrow bi bi-arrow-left"></i>
+                            <h2>Back to All Plugins</h2>
+                        </div>
+                    </div>
+
+                    <div class="row preview-title-area mobile">
+                        <div class="col">
+                            <h5 class="preview-subtitle">Plugin Customization</h5>
+                            <p class="preview-description">Customize plugin according to your needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="row desktop">
                         <div class="header-container" style="margin-top: 10px;">
                             <nav aria-label="breadcrumb" class="mb-1">
                                 <ol class="breadcrumb">
@@ -2868,6 +3029,11 @@
                             <button type="button" class="btn btn-save-draft" data-type="draft">Cancel</button>
                             <button type="button" class="btn btn-publish" data-type="publish "><i class="bi bi-rocket"></i> Save Changes</button>
                         </div>
+                    </div>
+
+                    <div class="preview-actions mobile">
+                        <button type="button" class="btn btn-save-draft" data-type="draft">Cancel</button>
+                        <button type="button" class="btn btn-publish" data-type="publish "><i class="bi bi-rocket"></i> Save Changes</button>
                     </div>
 
                     <div class="preview-wrapper">
@@ -3197,7 +3363,7 @@
 
                                                         <div class="form-custom-wrapper for-sizeHeightMarginBottom">
                                                             <div class="form-group for-sideSpacingMarginRight">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter your Email" style="min-width: 250px;">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter your Email">
                                                             </div>
 
                                                             <div class="actions-area">
@@ -3233,7 +3399,7 @@
                                                         </div>
                                                         <div class="form-custom-wrapper for-sizeHeightMarginBottom">
                                                             <div class="form-group for-sideSpacingMarginRight">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter Your Email" style="min-width: 250px;">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter Your Email">
                                                             </div>
 
                                                             <div class="actions-area">
@@ -3260,7 +3426,7 @@
                                                 <div class="col-1"></div>
                                                 <div class="col-10">
                                                     <div class="row p-5">
-                                                        <div class="col-6">
+                                                        <div class="col-sm-6">
                                                             <h1 class="title editable for-editTitle for-titleTextColor for-titleFont for-sizeHeightMarginTop">Join Our Newsletter</h1>
                                                             <p class="description editable for-editDescription for-bodyTextColor for-secondaryFont">Get notified about the next update.</p>
 
@@ -3269,7 +3435,7 @@
                                                                 </div>
                                                                 <div class="form-custom-wrapper">
                                                                     <div class="form-group for-sideSpacingMarginRight">
-                                                                        <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter Your Email" style="min-width: 250px;">
+                                                                        <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter Your Email">
                                                                     </div>
 
                                                                     <div class="actions-area">
@@ -3278,7 +3444,7 @@
                                                                 </div>
                                                             </form>
                                                         </div>
-                                                        <div class="col-6"></div>
+                                                        <div class="col-sm-6"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-1"></div>
@@ -3308,7 +3474,7 @@
                                                         </div>
                                                         <div class="form-custom-wrapper for-sizeHeightMarginBottom">
                                                             <div class="form-group for-sideSpacingMarginRight">
-                                                                <input class="form-control for-fieldTextColor for-fieldFont" type="text" name="Email" placeholder="Enter Your Email" style="min-width: 250px;">
+                                                                <input class="form-control for-fieldTextColor for-fieldFont mw-250" type="text" name="Email" placeholder="Enter Your Email">
                                                             </div>
 
                                                             <div class="actions-area">
@@ -3443,12 +3609,12 @@
                                             <span class="close-button">&times;</span>
 
                                             <div class="row position-relative for-sizeHeightMarginTop for-sizeHeightMarginBottom p-5">
-                                                <div class="col-md-6">
+                                                <div class="col-lg-6">
                                                     <h1 class="for-titleFont for-titleTextColor">Get a <span class="for-accentTextColor">Free</span> Quote</h1>
                                                     <p class="editable description for-editDescription for-bodyTextColor for-secondaryFont">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis moles tie, dictum est a, mattis tellus.</p>
                                                 </div>
 
-                                                <div class="col-md-6">
+                                                <div class="col-lg-6 mobile-pt-5">
                                                     <form class="form-container for-backgroundColor" method="post">
                                                         <div class="corner-design for-accentBorderColor"></div>
 
@@ -3800,16 +3966,15 @@
             </div>
             <div class="modal-body text-center">
                 <h5 class="modal-title mb-3">Password recovery</h5>
-                    <div class="form-wrapper">
-                        <div class="form-group">
-                            <label class="control-label">Email</label>
-                                <input class="form-control" type="email" name="email" id="E_email">
-                            </div>
-                        </div>
+                <div class="form-wrapper">
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input class="form-control" type="email" name="email" id="E_email">
                     </div>
-                    <div class="d-flex justify-content-center actions-wrapper" style="height: 38px; margin-top: 3rem;">
-                        <button type="button" class="btn btn-outline-secondary action-do">Recover my password</button>
-                    </div>
+                </div>
+                <div class="d-flex justify-content-center actions-wrapper" style="height: 38px; margin-top: 3rem;">
+                    <button type="button" class="btn btn-outline-secondary action-do">Recover my password</button>
+                </div>
             </div>
         </div>
     </div>
