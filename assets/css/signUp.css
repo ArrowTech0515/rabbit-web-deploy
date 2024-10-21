@@ -573,7 +573,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     background: url('/assets/images/signup/icons/plus.svg') center/contain no-repeat;
 }
 
-.welcome-page>.new-plugin-btn {
+.common-page>.new-plugin-btn {
     display: none;
 
     border: none;
@@ -581,13 +581,15 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     cursor: pointer;
 }
 @media (max-width: 998px) {
-    .welcome-page>.new-plugin-btn {
+    .common-page>.new-plugin-btn {
         display: flex;
         justify-content: end;
+        position: fixed;
+        right: 4px;
+        bottom: 4px;
     }
 }
-
-.welcome-page>.new-plugin-btn .caption {
+.common-page>.new-plugin-btn .caption {
     font-size: 10px;
     font-weight: 700;
     line-height: 15px;
@@ -597,10 +599,10 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     margin-top: 18px;
     margin-right: 1rem;
 }
-.welcome-page>.new-plugin-btn:hover {
+.common-page>.new-plugin-btn:hover {
 
 }
-.welcome-page>.new-plugin-btn .icon {
+.common-page>.new-plugin-btn .icon {
     background: linear-gradient(129.54deg, #F093FB -17.57%, #F5576C 110.96%);
     border-radius: 50%;
     color: #fff;
@@ -608,7 +610,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, * {
     width: 54px;
     height: 54px;
 }
-.welcome-page>.new-plugin-btn .icon .bi::before {
+.common-page>.new-plugin-btn .icon .bi::before {
     display: inline-block;
     font-size: 24px;
     margin-top: 14px;

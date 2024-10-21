@@ -346,7 +346,7 @@
                                         <div class="icon">
                                             <span><i class="bi bi-plus-lg"></i></span>
                                         </div>
-                                        Add New Blog Post
+                                        <span>Add New Blog Post</span>
                                     </button>
                                 </div>
                                 <div class="card-body">
@@ -371,7 +371,7 @@
                                         <div class="icon">
                                             <span><i class="bi bi-plus-lg"></i></span>
                                         </div>
-                                        Add New Local Listing
+                                        <span>Add New Local Listing</span>
                                     </button>
                                 </div>
                                 <div class="card-body">
@@ -396,7 +396,7 @@
                                         <div class="icon">
                                             <span><i class="bi bi-plus-lg"></i></span>
                                         </div>
-                                        Add New Guest Blog
+                                        <span>Add New Guest Blog</span>
                                     </button>
                                 </div>
                                 <div class="card-body">
@@ -421,7 +421,7 @@
                                         <div class="icon">
                                             <span><i class="bi bi-plus-lg"></i></span>
                                         </div>
-                                        Add New Keywords
+                                        <span>Add New Keywords</span>
                                     </button>
                                 </div>
                                 <div class="card-body">
@@ -462,7 +462,7 @@
                     <h4 class="page_title sub-1"><span class="back-btn"><i class="bi bi-arrow-left"></i></span> Account</h4>
                 </div>
 
-                <div class="d-flex mt-3">
+                <div class="d-flex mobile-column-direction mt-3">
                     <div class="menu-area">
                         <ul class="list">
                             <li class="active"><a href="#" class="" data-menu="profile"><i class="ami ami-1"></i> <span>Profile Settings</span></a></li>
@@ -594,7 +594,7 @@
                                     </div>
                                 </div>
                                 <div class="row mt-4">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 mobile-text-right">
                                         <button type="button" class="btn btn-link danger delete-btn" style="margin-top: 5px;">Delete My Account</button>
                                     </div>
                                     <div class="col-md-6 text-right">
@@ -638,15 +638,19 @@
             <div class="page-wrapper">
                 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
                     <h4 class="page_title" id="my_blog_post_count">My Blog Posts <span class="text-muted"></span></h4>
-                    <div class="d-flex">
+                    <div class="d-flex-layout desktop">
                         <button class="text-btn manage-blog-btn mr-1">Manage Blog</button>
                         <button class="text-btn blog-customization-btn">Blog Customization</button>
                     </div>
                 </div>
+                <div class="header-buttons-area mobile">
+                    <button class="text-btn manage-blog-btn">Manage Blog</button>
+                    <button class="text-btn blog-customization-btn">Blog Customization</button>
+                </div>
 
                 <div class="table-container" id="my_blog_table_container">
                     <div class="table-header-wrapper">
-                        <div class="table-header buttons-area">
+                        <div class="table-header buttons-area desktop">
                             <button class="add-btn publish-new-blog-post-btn">
                                 <div class="icon">
                                     <span><i class="bi bi-plus-lg"></i></span>
@@ -666,6 +670,7 @@
                                 <option value="Month3">Last 3 Months</option>
                                 <option value="Month6" selected>Last 6 Months</option>
                             </select>
+
                             <a class="button-custom button-pdf">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2.221V7H4.221C4.31598 6.8154 4.43912 6.64671 4.586 6.5L8.5 2.586C8.64664 2.43877 8.81533 2.31628 9 2.221ZM11 2V7C11 7.53043 10.7893 8.03914 10.4142 8.41421C10.0391 8.78929 9.53043 9 9 9H4C3.46957 9 2.96086 9.21071 2.58579 9.58579C2.21071 9.96086 2 10.4696 2 11V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V11C22 10.4696 21.7893 9.96086 21.4142 9.58579C21.0391 9.21071 20.5304 9 20 9V4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2H11ZM5 11C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12V17C4 17.2652 4.10536 17.5196 4.29289 17.7071C4.48043 17.8946 4.73478 18 5 18C5.26522 18 5.51957 17.8946 5.70711 17.7071C5.89464 17.5196 6 17.2652 6 17V16H6.5C7.16304 16 7.79893 15.7366 8.26777 15.2678C8.73661 14.7989 9 14.163 9 13.5C9 12.837 8.73661 12.2011 8.26777 11.7322C7.79893 11.2634 7.16304 11 6.5 11H5ZM6.5 14H6V13H6.5C6.63261 13 6.75979 13.0527 6.85355 13.1464C6.94732 13.2402 7 13.3674 7 13.5C7 13.6326 6.94732 13.7598 6.85355 13.8536C6.75979 13.9473 6.63261 14 6.5 14ZM11 11C10.7348 11 10.4804 11.1054 10.2929 11.2929C10.1054 11.4804 10 11.7348 10 12V17C10 17.2652 10.1054 17.5196 10.2929 17.7071C10.4804 17.8946 10.7348 18 11 18H12.376C13.0719 17.9995 13.7392 17.7227 14.2312 17.2305C14.7232 16.7383 14.9997 16.0709 15 15.375V13.625C14.9997 12.9289 14.7231 12.2614 14.2309 11.7691C13.7386 11.2769 13.0711 11.0003 12.375 11H11ZM12 16V13H12.375C12.5409 13.0003 12.6998 13.0663 12.817 13.1837C12.9342 13.3011 13 13.4601 13 13.626V15.374C13.0001 15.4562 12.984 15.5377 12.9526 15.6137C12.9212 15.6897 12.8751 15.7588 12.8169 15.8169C12.7588 15.8751 12.6897 15.9212 12.6137 15.9526C12.5377 15.984 12.4562 16.0001 12.374 16H12ZM17 11C16.7348 11 16.4804 11.1054 16.2929 11.2929C16.1054 11.4804 16 11.7348 16 12V17C16 17.2652 16.1054 17.5196 16.2929 17.7071C16.4804 17.8946 16.7348 18 17 18C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V16H19C19.2652 16 19.5196 15.8946 19.7071 15.7071C19.8946 15.5196 20 15.2652 20 15C20 14.7348 19.8946 14.4804 19.7071 14.2929C19.5196 14.1054 19.2652 14 19 14H18V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11H17Z" fill="url(#paint0_linear_1240_3255)"/>
@@ -690,11 +695,11 @@
                                 </svg>
                             </a>
                             <a class="button-custom button-copy">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z" fill="#DADDE1"/>
-                                    <path d="M6.59961 11.397C6.59961 8.67101 6.59961 7.30801 7.44361 6.46101C8.28661 5.61401 9.64361 5.61401 12.3596 5.61401H15.2396C17.9546 5.61401 19.3126 5.61401 20.1566 6.46101C21.0006 7.30801 20.9996 8.67101 20.9996 11.397V16.217C20.9996 18.943 20.9996 20.306 20.1566 21.153C19.3126 22 17.9546 22 15.2396 22H12.3596C9.64461 22 8.28661 22 7.44361 21.153C6.59961 20.306 6.59961 18.943 6.59961 16.217V11.397Z" fill="#90A1AB"/>
-                                </svg>
-                            </a>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z" fill="#DADDE1"/>
+                                        <path d="M6.59961 11.397C6.59961 8.67101 6.59961 7.30801 7.44361 6.46101C8.28661 5.61401 9.64361 5.61401 12.3596 5.61401H15.2396C17.9546 5.61401 19.3126 5.61401 20.1566 6.46101C21.0006 7.30801 20.9996 8.67101 20.9996 11.397V16.217C20.9996 18.943 20.9996 20.306 20.1566 21.153C19.3126 22 17.9546 22 15.2396 22H12.3596C9.64461 22 8.28661 22 7.44361 21.153C6.59961 20.306 6.59961 18.943 6.59961 16.217V11.397Z" fill="#90A1AB"/>
+                                    </svg>
+                                </a>
                         </div>
                     </div>
                     <div class="table-wrapper" style="padding-right: 12px;">
@@ -2918,7 +2923,7 @@
     <div class="content optimization-page hidden">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-5 col-lg-5">
+                <div class="col-xl-5 col-lg-5 left-side">
                     <div class="page-wrapper">
                         <div class="row">
                             <div class="col d-flex justify-content-between">
@@ -2957,16 +2962,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-7">
+                <div class="col-xl-7 col-lg-7 right-side">
                     <div class="page-wrapper" style="min-height: 100vh;">
+                        <div class="d-flex justify-content-between align-items-center mb-4 mobile">
+                            <h4 class="page-title"><span class="back-btn" style="margin-right: 4px;"><i class="bi bi-arrow-left"></i></span> Landing Page Details</h4>
+                        </div>
+
                         <div class="row landing-page-details details-header">
-                            <div class="col d-flex justify-content-between">
+                            <div class="col d-flex justify-content-between position-relative">
                                 <div class="" style="display: block;">
                                     <p class="title">Results for:</p>
                                     <h2 class="page-title">ellyqueen14.com/blog/categories/african-kaftans</h2>
                                     <p class="description">African Kaftans</p>
                                 </div>
-                                <div class="" style="padding-top: 8px;">
+                                <div class="mobile-align-top" style="padding-top: 8px;">
                                     <button class="rescan-btn">
                                         <div class="icon">
                                             <img src="/assets/images/seoRush/rescan.png">
@@ -3467,14 +3476,18 @@
             <div class="page-wrapper hidden" data-page="main">
                 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
                     <h4 class="page_title" id="local_listing_count">Local Listings <span class="text-muted"></span></h4>
-                    <div class="d-flex">
+                    <div class="d-flex-layout desktop">
                         <button class="text-btn my-details-btn">My Details</button>
                     </div>
                 </div>
 
+                <div class="header-buttons-area mobile">
+                    <button class="text-btn my-details-btn w-100">My Details</button>
+                </div>
+
                 <div class="table-container" id="local_listing_table_container">
                     <div class="table-header-wrapper">
-                        <div class="table-header buttons-area">
+                        <div class="table-header buttons-area desktop">
                             <button class="add-btn add-new-local-listing-btn">
                                 <div class="icon">
                                     <span><i class="bi bi-plus-lg"></i></span>
@@ -3552,18 +3565,22 @@
             <div class="page-wrapper hidden" data-page="details" id="ll_detail_page">
                 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
                     <h4 class="page_title sub-1"><span class="back-btn"><i class="bi bi-arrow-left"></i></span> My Details</h4>
-                    <div class="d-flex">
+                    <div class="d-flex-layout desktop">
                         <button class="text-btn update-my-details-btn">Update My Details</button>
                     </div>
                 </div>
 
-                <div class="d-flex mt-3">
+                <div class="d-flex mobile-column-direction mt-3">
                     <div class="menu-area">
                         <ul class="list">
                             <li class="active"><a href="#" class="" data-menu="company-info"><i class="mdmi mdmi-1"></i> <span>Company Info</span></a></li>
                             <li><a href="#" class="" data-menu="keywords"><i class="mdmi mdmi-2"></i> <span>Keywords and Pages</span></a></li>
                             <li><a href="#" class="" data-menu="media"><i class="mdmi mdmi-3"></i> <span>Media</span></a></li>
                         </ul>
+
+                        <div class="header-buttons-area mobile">
+                            <button class="text-btn update-my-details-btn w-100">Update My Details</button>
+                        </div>
                     </div>
 
                     <div class="content-area">
@@ -3758,6 +3775,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -3787,7 +3805,7 @@
 
                 <div class="table-container" id="guest_post_table_container">
                     <div class="table-header-wrapper">
-                        <div class="table-header buttons-area">
+                        <div class="table-header buttons-area desktop">
                             <button class="add-btn add-new-guest-post-btn">
                                 <div class="icon">
                                     <span><i class="bi bi-plus-lg"></i></span>
@@ -3882,15 +3900,20 @@
             <div class="page-wrapper hidden" data-page="main">
                 <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
                     <h4 class="page_title" id="keyword_count">Keywords <span class="text-muted"></span></h4>
-                    <div class="d-flex buttons-area">
+                    <div class="d-flex-layout buttons-area desktop">
                         <button class="text-btn view-competitor-btn mr-1"><i class="bi bi-cup"></i> My Competitors</button>
                         <button class="text-btn view-insight-btn"><i class="bi bi-filter-right"></i> Insights</button>
                     </div>
                 </div>
 
+                <div class="header-buttons-area mobile">
+                    <button class="text-btn view-competitor-btn mr-1"><i class="bi bi-cup"></i> My Competitors</button>
+                    <button class="text-btn view-insight-btn"><i class="bi bi-filter-right"></i> Insights</button>
+                </div>
+
                 <div class="table-container" id="keyword_table_container">
                     <div class="table-header-wrapper">
-                        <div class="table-header buttons-area">
+                        <div class="table-header buttons-area desktop">
                             <button class="add-btn add-new-keyword-btn">
                                 <div class="icon">
                                     <span><i class="bi bi-plus-lg"></i></span>
@@ -3983,46 +4006,51 @@
                             <a class="tab-btn" data-tab="enter">Enter Another Competitor</a>
                         </div>
                         <div class="table-header search-area">
-                            <div class="search-container">
-                                <input type="text" class="search-input" placeholder="Search..." />
-                                <button class="search-icon">
-                                    <img src="/assets/images/seoRush/icons/search.svg" alt="Search">
-                                </button>
+                            <div class="d-flex">
+                                <div class="search-container">
+                                    <input type="text" class="search-input" placeholder="Search..." />
+                                    <button class="search-icon">
+                                        <img src="/assets/images/seoRush/icons/search.svg" alt="Search">
+                                    </button>
+                                </div>
+                                <select class="caret-select">
+                                    <option value="Month1">This Month</option>
+                                    <option value="Month3">Last 3 Months</option>
+                                    <option value="Month6" selected>Last 6 Months</option>
+                                </select>
                             </div>
-                            <select class="caret-select">
-                                <option value="Month1">This Month</option>
-                                <option value="Month3">Last 3 Months</option>
-                                <option value="Month6" selected>Last 6 Months</option>
-                            </select>
-                            <a class="button-custom button-pdf">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2.221V7H4.221C4.31598 6.8154 4.43912 6.64671 4.586 6.5L8.5 2.586C8.64664 2.43877 8.81533 2.31628 9 2.221ZM11 2V7C11 7.53043 10.7893 8.03914 10.4142 8.41421C10.0391 8.78929 9.53043 9 9 9H4C3.46957 9 2.96086 9.21071 2.58579 9.58579C2.21071 9.96086 2 10.4696 2 11V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V11C22 10.4696 21.7893 9.96086 21.4142 9.58579C21.0391 9.21071 20.5304 9 20 9V4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2H11ZM5 11C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12V17C4 17.2652 4.10536 17.5196 4.29289 17.7071C4.48043 17.8946 4.73478 18 5 18C5.26522 18 5.51957 17.8946 5.70711 17.7071C5.89464 17.5196 6 17.2652 6 17V16H6.5C7.16304 16 7.79893 15.7366 8.26777 15.2678C8.73661 14.7989 9 14.163 9 13.5C9 12.837 8.73661 12.2011 8.26777 11.7322C7.79893 11.2634 7.16304 11 6.5 11H5ZM6.5 14H6V13H6.5C6.63261 13 6.75979 13.0527 6.85355 13.1464C6.94732 13.2402 7 13.3674 7 13.5C7 13.6326 6.94732 13.7598 6.85355 13.8536C6.75979 13.9473 6.63261 14 6.5 14ZM11 11C10.7348 11 10.4804 11.1054 10.2929 11.2929C10.1054 11.4804 10 11.7348 10 12V17C10 17.2652 10.1054 17.5196 10.2929 17.7071C10.4804 17.8946 10.7348 18 11 18H12.376C13.0719 17.9995 13.7392 17.7227 14.2312 17.2305C14.7232 16.7383 14.9997 16.0709 15 15.375V13.625C14.9997 12.9289 14.7231 12.2614 14.2309 11.7691C13.7386 11.2769 13.0711 11.0003 12.375 11H11ZM12 16V13H12.375C12.5409 13.0003 12.6998 13.0663 12.817 13.1837C12.9342 13.3011 13 13.4601 13 13.626V15.374C13.0001 15.4562 12.984 15.5377 12.9526 15.6137C12.9212 15.6897 12.8751 15.7588 12.8169 15.8169C12.7588 15.8751 12.6897 15.9212 12.6137 15.9526C12.5377 15.984 12.4562 16.0001 12.374 16H12ZM17 11C16.7348 11 16.4804 11.1054 16.2929 11.2929C16.1054 11.4804 16 11.7348 16 12V17C16 17.2652 16.1054 17.5196 16.2929 17.7071C16.4804 17.8946 16.7348 18 17 18C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V16H19C19.2652 16 19.5196 15.8946 19.7071 15.7071C19.8946 15.5196 20 15.2652 20 15C20 14.7348 19.8946 14.4804 19.7071 14.2929C19.5196 14.1054 19.2652 14 19 14H18V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11H17Z" fill="url(#paint13_linear_1240_3255)"/>
-                                    <defs>
-                                        <linearGradient id="paint13_linear_1240_3255" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#FB8A90"/>
-                                            <stop offset="1" stop-color="#EA5D6E"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </a>
-                            <a class="button-custom button-excel">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2.221V7H4.221C4.31598 6.8154 4.43912 6.64671 4.586 6.5L8.5 2.586C8.64664 2.43877 8.81533 2.31628 9 2.221ZM11 2V7C11 7.53043 10.7893 8.03914 10.4142 8.41421C10.0391 8.78929 9.53043 9 9 9H4C3.46957 9 2.96086 9.21071 2.58579 9.58579C2.21071 9.96086 2 10.4696 2 11V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V11C22 10.4696 21.7893 9.96086 21.4142 9.58579C21.0391 9.21071 20.5304 9 20 9V4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2H11Z" fill="url(#paint13_linear_1240_3260)"/>
-                                    <path d="M4.5 12L8.71875 16.6875M4.5 16.6875L8.71875 12M16.3359 16.1016C16.3359 16.425 16.6903 16.6875 17.127 16.6875H18.4453C18.725 16.6875 18.9933 16.6052 19.1911 16.4587C19.3889 16.3122 19.5 16.1135 19.5 15.9062V15.125C19.5 14.9178 19.3889 14.7191 19.1911 14.5726C18.9933 14.4261 18.725 14.3438 18.4453 14.3438H17.3906C17.1109 14.3438 16.8426 14.2614 16.6448 14.1149C16.4471 13.9684 16.3359 13.7697 16.3359 13.5625V12.7812C16.3359 12.574 16.4471 12.3753 16.6448 12.2288C16.8426 12.0823 17.1109 12 17.3906 12H18.709C18.9188 12 19.12 12.0617 19.2683 12.1716C19.4167 12.2815 19.5 12.4305 19.5 12.5859M10.9453 12V16.6875H14.1094" stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <defs>
-                                        <linearGradient id="paint13_linear_1240_3260" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#85CB74"/>
-                                            <stop offset="1" stop-color="#65AC54"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </a>
-                            <a class="button-custom button-copy">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z" fill="#DADDE1"/>
-                                    <path d="M6.59961 11.397C6.59961 8.67101 6.59961 7.30801 7.44361 6.46101C8.28661 5.61401 9.64361 5.61401 12.3596 5.61401H15.2396C17.9546 5.61401 19.3126 5.61401 20.1566 6.46101C21.0006 7.30801 20.9996 8.67101 20.9996 11.397V16.217C20.9996 18.943 20.9996 20.306 20.1566 21.153C19.3126 22 17.9546 22 15.2396 22H12.3596C9.64461 22 8.28661 22 7.44361 21.153C6.59961 20.306 6.59961 18.943 6.59961 16.217V11.397Z" fill="#90A1AB"/>
-                                </svg>
-                            </a>
+
+                            <div class="d-flex">
+                                <a class="button-custom button-pdf">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2.221V7H4.221C4.31598 6.8154 4.43912 6.64671 4.586 6.5L8.5 2.586C8.64664 2.43877 8.81533 2.31628 9 2.221ZM11 2V7C11 7.53043 10.7893 8.03914 10.4142 8.41421C10.0391 8.78929 9.53043 9 9 9H4C3.46957 9 2.96086 9.21071 2.58579 9.58579C2.21071 9.96086 2 10.4696 2 11V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V11C22 10.4696 21.7893 9.96086 21.4142 9.58579C21.0391 9.21071 20.5304 9 20 9V4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2H11ZM5 11C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12V17C4 17.2652 4.10536 17.5196 4.29289 17.7071C4.48043 17.8946 4.73478 18 5 18C5.26522 18 5.51957 17.8946 5.70711 17.7071C5.89464 17.5196 6 17.2652 6 17V16H6.5C7.16304 16 7.79893 15.7366 8.26777 15.2678C8.73661 14.7989 9 14.163 9 13.5C9 12.837 8.73661 12.2011 8.26777 11.7322C7.79893 11.2634 7.16304 11 6.5 11H5ZM6.5 14H6V13H6.5C6.63261 13 6.75979 13.0527 6.85355 13.1464C6.94732 13.2402 7 13.3674 7 13.5C7 13.6326 6.94732 13.7598 6.85355 13.8536C6.75979 13.9473 6.63261 14 6.5 14ZM11 11C10.7348 11 10.4804 11.1054 10.2929 11.2929C10.1054 11.4804 10 11.7348 10 12V17C10 17.2652 10.1054 17.5196 10.2929 17.7071C10.4804 17.8946 10.7348 18 11 18H12.376C13.0719 17.9995 13.7392 17.7227 14.2312 17.2305C14.7232 16.7383 14.9997 16.0709 15 15.375V13.625C14.9997 12.9289 14.7231 12.2614 14.2309 11.7691C13.7386 11.2769 13.0711 11.0003 12.375 11H11ZM12 16V13H12.375C12.5409 13.0003 12.6998 13.0663 12.817 13.1837C12.9342 13.3011 13 13.4601 13 13.626V15.374C13.0001 15.4562 12.984 15.5377 12.9526 15.6137C12.9212 15.6897 12.8751 15.7588 12.8169 15.8169C12.7588 15.8751 12.6897 15.9212 12.6137 15.9526C12.5377 15.984 12.4562 16.0001 12.374 16H12ZM17 11C16.7348 11 16.4804 11.1054 16.2929 11.2929C16.1054 11.4804 16 11.7348 16 12V17C16 17.2652 16.1054 17.5196 16.2929 17.7071C16.4804 17.8946 16.7348 18 17 18C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V16H19C19.2652 16 19.5196 15.8946 19.7071 15.7071C19.8946 15.5196 20 15.2652 20 15C20 14.7348 19.8946 14.4804 19.7071 14.2929C19.5196 14.1054 19.2652 14 19 14H18V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11H17Z" fill="url(#paint13_linear_1240_3255)"/>
+                                        <defs>
+                                            <linearGradient id="paint13_linear_1240_3255" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FB8A90"/>
+                                                <stop offset="1" stop-color="#EA5D6E"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a class="button-custom button-excel">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2.221V7H4.221C4.31598 6.8154 4.43912 6.64671 4.586 6.5L8.5 2.586C8.64664 2.43877 8.81533 2.31628 9 2.221ZM11 2V7C11 7.53043 10.7893 8.03914 10.4142 8.41421C10.0391 8.78929 9.53043 9 9 9H4C3.46957 9 2.96086 9.21071 2.58579 9.58579C2.21071 9.96086 2 10.4696 2 11V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V11C22 10.4696 21.7893 9.96086 21.4142 9.58579C21.0391 9.21071 20.5304 9 20 9V4C20 3.46957 19.7893 2.96086 19.4142 2.58579C19.0391 2.21071 18.5304 2 18 2H11Z" fill="url(#paint13_linear_1240_3260)"/>
+                                        <path d="M4.5 12L8.71875 16.6875M4.5 16.6875L8.71875 12M16.3359 16.1016C16.3359 16.425 16.6903 16.6875 17.127 16.6875H18.4453C18.725 16.6875 18.9933 16.6052 19.1911 16.4587C19.3889 16.3122 19.5 16.1135 19.5 15.9062V15.125C19.5 14.9178 19.3889 14.7191 19.1911 14.5726C18.9933 14.4261 18.725 14.3438 18.4453 14.3438H17.3906C17.1109 14.3438 16.8426 14.2614 16.6448 14.1149C16.4471 13.9684 16.3359 13.7697 16.3359 13.5625V12.7812C16.3359 12.574 16.4471 12.3753 16.6448 12.2288C16.8426 12.0823 17.1109 12 17.3906 12H18.709C18.9188 12 19.12 12.0617 19.2683 12.1716C19.4167 12.2815 19.5 12.4305 19.5 12.5859M10.9453 12V16.6875H14.1094" stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                            <linearGradient id="paint13_linear_1240_3260" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#85CB74"/>
+                                                <stop offset="1" stop-color="#65AC54"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a class="button-custom button-copy">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.24 2H11.346C9.582 2 8.184 2 7.091 2.148C5.965 2.3 5.054 2.62 4.336 3.341C3.617 4.062 3.298 4.977 3.147 6.107C3 7.205 3 8.608 3 10.379V16.217C3 17.725 3.92 19.017 5.227 19.559C5.16 18.649 5.16 17.374 5.16 16.312V11.302C5.16 10.021 5.16 8.916 5.278 8.032C5.405 7.084 5.691 6.176 6.425 5.439C7.159 4.702 8.064 4.415 9.008 4.287C9.888 4.169 10.988 4.169 12.265 4.169H15.335C16.611 4.169 17.709 4.169 18.59 4.287C18.3261 3.61329 17.8653 3.03474 17.2678 2.62678C16.6702 2.21883 15.9635 2.00041 15.24 2Z" fill="#DADDE1"/>
+                                        <path d="M6.59961 11.397C6.59961 8.67101 6.59961 7.30801 7.44361 6.46101C8.28661 5.61401 9.64361 5.61401 12.3596 5.61401H15.2396C17.9546 5.61401 19.3126 5.61401 20.1566 6.46101C21.0006 7.30801 20.9996 8.67101 20.9996 11.397V16.217C20.9996 18.943 20.9996 20.306 20.1566 21.153C19.3126 22 17.9546 22 15.2396 22H12.3596C9.64461 22 8.28661 22 7.44361 21.153C6.59961 20.306 6.59961 18.943 6.59961 16.217V11.397Z" fill="#90A1AB"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="component-wrapper mb-4 hidden" data-tab="show" id="competitor_keywords_select_container">
@@ -4062,11 +4090,11 @@
                     </div>
                 </div>
 
-                <div class="d-block sub-part-area">
+                <div class="d-block-layout sub-part-area" id="insight_keyword_area">
                     <h5 class="sub_title">Keywords</h5>
                     <div class="border-1">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-5 col-md-6">
+                            <div class="col-xl-4 col-lg-5 col-md-6 left-side">
                                 <ul class="list" id="insight_keyword_list">
                                     <li class="active" data-item="competitive">Competitive keywords</li>
                                     <li class="" data-item="non-competitive">Non-competitive keywords</li>
@@ -4077,7 +4105,7 @@
                                     <li class="" data-item="action">Action keywords</li>
                                 </ul>
                             </div>
-                            <div class="col-xl-8 col-lg-7 col-md-6">
+                            <div class="col-xl-8 col-lg-7 col-md-6 right-side">
                                 <div class="border-0">
                                     <h6 id="insight_keyword_title"><span class="text">Competitive keywords</span> <span class="tooltip-icon"><i class="bi bi-info-circle" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h6>
                                     <ul class="p-action-list" id="insight_keyword_details">
@@ -4104,18 +4132,18 @@
                     </div>
                 </div>
 
-                <div class="d-block sub-part-area">
+                <div class="d-block-layout sub-part-area" id="insight_content_area">
                     <h5 class="sub_title">Page Content</h5>
                     <div class="border-1">
                         <div class="row">
-                            <div class="col-xl-4 col-lg-5 col-md-6">
+                            <div class="col-xl-4 col-lg-5 col-md-6 left-side">
                                 <ul class="list" id="insight_content_list">
-                                    <li class="active" data-item="title">Improved landing page title</li>
+                                    <li class="" data-item="title">Improved landing page title</li>
                                     <li class="" data-item="metaDesc">Improved meta description</li>
                                     <li class="" data-item="landingPageText">Add more content to landing page</li>
                                 </ul>
                             </div>
-                            <div class="col-xl-8 col-lg-7 col-md-6">
+                            <div class="col-xl-8 col-lg-7 col-md-6 right-side">
                                 <div class="border-0">
                                     <h6 id="insight_content_title"><span class="text">Competitive keywords</span> <span class="tooltip-icon"><i class="bi bi-info-circle" data-bs-toggle="tooltip" title="This is a preview mode."></i></span></h6>
                                     <p id="insight_content_details" class="description">Indulge in a divine selection of premium cheeses at Les Fromages Divins. Explore our wide range of artisanal and imported cheeses, including brie, camembert, and blue cheese. Discover the perfect pairing for your next wine and cheese gathering. Shop online for gourmet cheeses and elevate your culinary experience with Les Fromages Divins.</p>
