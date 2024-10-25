@@ -3497,6 +3497,7 @@ publishNewLocalListingDialog .demo-stats .description strong b {
     width: 100%;
     height: 165px;
     border-radius: 0px;
+    object-fit: cover;
 }
 #galleryDialog .image-grid img:hover {
     border: 1px solid #FD7E14;
