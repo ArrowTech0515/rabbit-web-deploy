@@ -1930,9 +1930,19 @@ publishNewLocalListingDialog .demo-stats .description strong b {
 .optimization-page .details-keyword .card.card-keyword {
     padding: 0.1rem 1.5rem 1rem;
     position: relative;
+    border-color: #EDEEF0;
+}
+.optimization-page .details-keyword .card.card-keyword hr {
+    background: #EDEEF0;
+    opacity: 1;
 }
 .optimization-page .details-keyword .card.card-links-table {
     position: relative;
+    border-color: #EDEEF0;
+}
+.optimization-page .details-keyword .card.card-links-table hr {
+    background: #EDEEF0;
+    opacity: 1;
 }
 .optimization-page .details-keyword .card .overlay {
     position: absolute;
