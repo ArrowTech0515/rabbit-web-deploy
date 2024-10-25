@@ -6172,6 +6172,54 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     border-color: #FD7E14;
     color: #fff;
 }
+.popover .usage-stats .account-btn {
+    margin-bottom: 1rem;
+}
+.popover .usage-stats img.profile-image {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+
+    box-shadow: 0px 11.2px 24px -5.6px #82959D2E;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.popover .usage-stats .profile-user {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: center;
+
+    padding: 0 8px;
+}
+.popover .usage-stats .plan-name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 15px;
+}
+.popover .usage-stats .plan-value {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+}
 
 @media (max-width: 1342px) {
     #keywords_details_sidebar .table-container .table-header-wrapper {
