@@ -5922,6 +5922,9 @@ body>#preview_widget>.plugin-widget-container .close_btn {
     margin-top: 2px;
 }
 
+.modal-popup {
+    z-index: 10000000;
+}
 .modal-popup .modal-content {
     padding: 1rem 1rem;
     border-radius: 2rem;
